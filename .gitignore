@@ -1,0 +1,12 @@
+*~
+.DS_Store
+._*
+*~
+*#
+.#*
+_book
+node_modules
+*.log
+book.pdf
+book.mobi
+book.epub

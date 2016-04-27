@@ -1,0 +1,34 @@
+.book-body p , .book-body h1,.book-body h2,.book-body h3,.book-body h4,.book-body h5,.book-body h6,.book-body div,.book-body span ,  .summary , .summary li , .summary li a  {
+    font-family : "Ubuntu", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal code {
+    font-family: "Ubuntu Mono", Consolas, Menlo, Courier, monospace;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Place thin green boarder around code blocks & increase font size from 85% to 108% */
+.book .book-body .page-wrapper .page-inner section.normal .highlight pre, .book .book-body .page-wrapper .page-inner section.normal pre {
+    background-color: #f7f7f7;
+    border: 5px solid #D9EDF7;
+    border-radius: 3px;
+    font-size: 108%;
+    line-height: 1.45;
+    overflow: auto;
+    padding: 16px;
+}
+
+/* red text for all non-language specific code sections & increased font size to 108% */
+.book .book-body .page-wrapper .page-inner section.normal code {
+    background-color: #f7f7f7;
+    color: #FF0077;
+    border-radius: 3px;
+    font-size: 108%;
+    margin: 0;
+    padding: 0.2em 0;
+}

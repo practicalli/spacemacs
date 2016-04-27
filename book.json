@@ -1,0 +1,27 @@
+{
+    "gitbook": ">=2.0.0",
+    "title": "Clojure development with Spacemacs & Cider",
+    "styles": {
+        "website": "styles/website.css",
+        "ebook": "styles/ebook.css",
+        "pdf": "styles/pdf.css",
+        "mobi": "styles/mobi.css",
+        "epub": "styles/epub.css"
+    },
+    "plugins": [
+        "toggle-chapters",
+        "codeblock-disable-glossary",
+        "richquotes",
+        "disqus",
+        "exercises",
+        "quizzes"
+    ],
+    "pluginsConfig": {
+        "richquotes": {
+            "todos": true
+        },
+        "disqus": {
+            "shortName": "clojure-development-with-spacemacs-practicalli"
+        }
+    }
+}
