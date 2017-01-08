@@ -1,44 +1,55 @@
-# Clojure development with Spacemacs & CIDER
+# Clojure development with Spacemacs
 
-![Clojure-cider-spacemacs-logo](images/clojure-practicalli-banner.png)
-
-This work is licensed under a Creative Commons Attribution 3.0 Unported License (including images & stylesheets).
+![Clojure-cider-spacemacs-logo](images/spacemacs-practicalli-banner.png)
 
 This is an introduction to developing Clojure applications using Emacs, specifically based on the Spacemacs configuration for Emacs and CIDER.  The aim is to help you be productive with those tools as quickly as possible.
 
-This is not a guide to customising Emacs for Clojure development, except were there are useful additions to be made to Spacemacs.  Please see ... if you are using Emacs without Spacemacs
+Spacemacs is a community-driven project that provides a simple way to add lots of extra functionality to Emacs, without having to manage packages yourself or spend time writing common configuration code.
+
+[![Join the conversation on Gitter](images/gitter-chat-badge-practicalli.png)](https://gitter.im/practicalli/chat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+This workshop will cover the following topics:
+
+* Adding the Clojure layer 
+* Running the REPL & evaluating code 
+* Running tests & test reports 
+* Structural editing (smartparens/paredit fun) 
+* Emacs common commands 
+* Emacs cool stuff (multiple cursors, kill-ring / visual undo 
+* Clojure docs, auto-completion, snippets 
+* Clojure refactoring with clj-refactor
+* Clojurescript development, figwheel and chestnut template
+* Org-mode for project documentation, literate programming & presentations 
+* debugging basics (I rarely use the debugger so if anyone is willing to show how they use the debugger, please speak up).
+
+> This is not a guide to customising Emacs for Clojure development, except were there are useful additions to be made to Spacemacs and the Clojure layer.
 
 
+## Configuration
 
-## Requirements 
+> **Fixme** work in progress, no git repository available as yet.
 
-  * A working Java runtime environment (JRE) - test with `java -version` in a command line window
-  * [Leiningen](http://leiningen.org/) - test with `lein version` in a command line window
-  * A Clojure aware editor with REPL
-    - [LightTable](http://lighttable.com/)
-    - [Emacs](http://www.gnu.org/software/emacs/) with either [Emacs Live](https://github.com/overtone/emacs-live), [Spacemacs](https://github.com/syl20bnr/spacemacs) or [CIDER](https://github.com/clojure-emacs/cider)
-  * A [Git client](http://git-scm.com/) (optional)
-  * [A free Heroku account](http://heroku.com) for running Postgres database (alternatively install Posgtres database on your laptop)
+My [spacemacs configuration file is published as a gist](https://gist.github.com/jr0cket/065ab83a0ddf6da9848d7847b7dd7704)
 
-
-  See the [setup](/setup/) section for details on how to get your environment ready
-
-## Code for the workshop
-The code for this workshop is contained in the Github repository [Clojure Webapps example](https://github.com/practicalli/clojure-webapps-example), the code for each section is in a specific branch.
+Any customisations made to the standard Spacemacs install are contained in the Github repository [Spacemacs configuration](https://github.com/practicalli/spacemacs-configuration)
 
 To get a copy of the repository, use the following git clone command which creates a new directory called clojure-webapps-example that contains the cloned code. 
 
-`git clone https://github.com/practicalli/clojure-webapps-example.git`
+`git clone https://github.com/practicalli/spacemacs-configuration.git`
 
-Once you have the repository, use `git checkout branch-name` to get the code for each section.  Each branch is a working application with all the features covered in that section
-
-Use `git branch` to show all the branches available, they should match the names of the sections in this workshop.
-
-Enjoy.
 
 ## Additional Resources
 
-**Getting Started**
+**Spacemacs**
+* [Spacemacs](http://spacemacs.org/)
+* [Spacemacs ABC](https://www.youtube.com/playlist?list=PLrJ2YN5y27KLhd3yNs2dR8_inqtEiEweE) - screencast walk-through of features in alphabetical order
+* [SimpleTutorials: Spacemacs](https://simpletutorials.com/c/2883/Spacemacs)
+* [Example spacemacs.el with emms and external packages](https://github.com/microamp/.spacemacs.d) **bongo**
+* [Learn Spacemacs in 30 days](http://learn-spacemacs-in-30-days-challenge.readthedocs.io/) - build up your Vim skills
+
+> Note: I use bongo for music now... added as an external package
+
+**Clojure Getting Started**
 * [ClojureBridge London curiculum](http://clojurebridgelondon.github.io/curriculum)
 * [Clojure through code](https://github.com/practicalli/clojure-through-code/tree/drafts) - many examples of basic Clojure code
 * [Getting started with Clojure](http://jr0cket.co.uk/slides/getting-started-with-clojure.html) - a general guide to Clojure (work in progress)
@@ -47,7 +58,7 @@ Enjoy.
 * [Brave Clojure](http://www.braveclojure.com/) - a Clojure tutorial (using Emacs)
 * [Getting started with Clojure on Heroku](https://github.com/jr0cket/clojure-getting-started)
 
-**Clojure**
+**Clojure Reference**
 * [Clojure.org](http://clojure.org), [features](http://clojure.org/features) and [rational](http://clojure.org/rationale)
 * [Clojure documentation](http://clojure.org/documentation)
 * [Clojure cheetsheet](http://clojure.org/cheatsheet)
@@ -56,22 +67,12 @@ Enjoy.
 
 **Tooling**
 * [Leiningen](http://leiningen.org/), [tutorial](https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md), [faq](https://github.com/technomancy/leiningen/blob/stable/doc/FAQ.md), [plugins list](https://github.com/technomancy/leiningen/wiki/Plugins) & [sample project file](https://github.com/technomancy/leiningen/blob/stable/sample.project.clj)
-* [LightTable](http://lighttable.com/), [docs](http://docs.lighttable.com/), [blog](http://www.lighttable.com/blog/), [announcements](https://groups.google.com/forum/#!forum/light-table) and [discussions](https://groups.google.com/forum/#!forum/light-table-discussion).
-* [Emacs Live discussion group](https://groups.google.com/forum/#!forum/emacs-live)
-* [Gorilla REPL](http://gorilla-repl.org/) - browser based REPL & tool for creating documents with live running Clojure code
 
-**Community**
-* [Clojure-docs](http://clojure-doc.org/) - community docs 
-* [CrossCLJ](http://crossclj.info/) - cross-referencing the Clojure ecosystem
-* [London Clojurians]() and their [Google group](https://groups.google.com/forum/#!forum/london-clojurians)
-* [Uncle Bob presents Clojure](https://www.youtube.com/watch?v=SYeDxWKftfA)
 
 **Books & Tutorials**
 * [Clojure cookbook](https://github.com/clojure-cookbook/clojure-cookbook)
 
 
-**Database** 
-* [Testing databases faster - using rollbacks](http://www.lispcast.com/clojure-database-test-faster)
 
 
 
