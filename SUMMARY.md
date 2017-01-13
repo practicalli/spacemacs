@@ -31,6 +31,8 @@
     * [Evaluate Region](evaluate-clojure/region.md)
     * [Inspect](evaluate-clojure/inspect.md)
 * [Navigating code](navigating-code/code.md)
+    * [Navigating Namespaces](navigating-code/namespaces.md)
+    * [Navigating Expressions](navigating-code/navigating-expressions.md)
 * [Documentation](documentation/index.md)
   * [Cider doc](documentation/cider-doc.md)
   * [Grimoire](documentation/grimoire.md)
