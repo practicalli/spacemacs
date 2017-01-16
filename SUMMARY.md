@@ -5,6 +5,7 @@
     * [Why Spacemacs](introduction/why-spacemacs.md)
     * [Spacemacs Overview](introduction/spacemacs-overview.md)
     * [CIDER Overview](introduction/cider-overview.md)
+    * [Emacs Terminology](introduction/emacs-terminology.md)
     * [Contributing](introduction/contributing.md)
 * [Getting Started](getting-started/index.md)
     * [Installing](getting-started/installing.md)
