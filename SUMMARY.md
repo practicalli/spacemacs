@@ -93,6 +93,8 @@
     * [Rebasing](magit/rebasing.md)
     * [Stashing changes](magit/remote-repositories.md)
     * [Git Timemachine](magit/git-timemachine.md)
+* [Github](github/index.md)
+    * [Gists](github/gists.md)
 * [Debugging](debugging/index.md)
 * [Literate Programming](literate-programming.md)
   * [Literate Programming](literate-programming.md)
