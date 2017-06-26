@@ -52,6 +52,7 @@
 * [Navigating code](navigating-code/index.md)
     * [Navigating Namespaces](navigating-code/namespaces.md)
     * [Navigating Expressions](navigating-code/expressions.md)
+    * [Code Folding](navigating-code/code-folding.md)
 * [Structured Editing](structured-editing/index.md)
 * [Documentation](documentation/index.md)
   * [Cider doc](documentation/cider-doc.md)
