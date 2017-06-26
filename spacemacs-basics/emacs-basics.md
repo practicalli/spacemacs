@@ -113,6 +113,20 @@ C-_        (undo)                     : undoes the last change
            (man)                      : invokes the manual in the next window
 ```
 
+
+# Managing case
+
+| Spacemacs | Major mode | Emacs     | Evil | Command           | Description                          |
+|-----------|------------|-----------|------|-------------------|--------------------------------------|
+|           |            | `C-x C-l` |      | `downcase-region` | Convert region to lower case         |
+|           |            | `C-x C-u` |      | `upcase-region`   | Convert region to upper case         |
+|           |            | `M-c`     |      | `capitalize-word` | Capitalize the following word        |
+|           |            | `M-u`     |      | `upcase-word`     | Convert following word to upper case |
+|           |            | `M-l`  ** |      | `downcase-word`   | Convert following word to lower case |
+
+** The keybinding `M-l` is bound to `markdow-demote` in spacemacs
+
+
 # The ~/.emacs file
 
 You can assign hot-keys for frequently used commands:
@@ -227,8 +241,24 @@ C-M-%      (query-replace-regexp)     : replaces a regexp wherever it
                                         diary - press ? for commands
 ```
 
+# Describe a Function
+
+Display the full documentation of an elisp function.
+
+| Spacemacs   | Major mode  | Emacs   | Evil | Command             |
+|-------------|-------------|---------|------|---------------------|
+| `SPC h d f` | `M-m h d f` | `C-h f` |      | `describe-function` |
+
+Use one of the above keybindings and then type the name of the function you wish to describe.
+
+
 # Did you know?
 
 * You can complete minibuffer commands with TAB. If you press it twice, completions appear in the next window.
 * You can hide most of the 'information' buffers (like info, man, completions, help etc.) with q.
 * If you press enter on a directory when typing an address in the minibuffer, a friendly navigator appears.
+
+
+## Reference 
+
+* [Mastering Emacs](https://www.masteringemacs.org/)

@@ -1,13 +1,14 @@
 # Emacs Terminology
 
-
-
 | Emacs Term | Description                                                                      |
 |------------|----------------------------------------------------------------------------------|
 | File       | A file on the file system                                                        |
 | Buffer     | A container to display a file or other information                               |
 | Window     | A section of Emacs that holds a buffer, allowing you to display multiple buffers |
 | Frame      | Holds one or more windows                                                        |
+| Minibuffer | A command line for Emacs - shows commands and some results                       |
+
+![Emacs Terminology - Structure of Emacs](/images/emacs-terminology-structure.png)
 
 
 ## Working with Frames
@@ -36,3 +37,5 @@ Spacemacs include the [golden-ratio](https://github.com/roman/golden-ratio.el) p
 ![Spacemacs - Golden Ratio in action](https://camo.githubusercontent.com/26b1ac5fec67a2c557cfbe87382a0134d3443fd0/68747470733a2f2f7261772e6769746875622e636f6d2f726f6d616e2f676f6c64656e2d726174696f2e656c2f6173736574732f676f6c64656e5f726174696f5f656c2e676966)
 
 ## Additional features in Spacemacs
+
+> TODO
