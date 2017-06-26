@@ -1,14 +1,20 @@
 # Fullscreen at startup
 
+You can configure Emacs to start in maximised mode (just like maximising an applications window) or in fullscreen mode for minimum distraction. 
 
-You can configure Emacs to start in full screen mode for minimum distraction, so I changed the following option in the `dotspacemacs/init` function of `~/.spacemacs`
+Changed one of the following option in the `dotspacemacs/init` function of `~/.spacemacs`, the fullscreen option overrides the maximised option.
 
 ```lisp
 dotspacemacs-fullscreen-at-startup t
+
+dotspacemacs-maximized-at-startup t
 ```
 
+> To find these lines quickly, use `SPC /` to search (or the Emacs command `C-s`)
 
+Here are the relevant default settings 
 
+```elisp
    ;; If non nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
    dotspacemacs-fullscreen-at-startup nil
@@ -19,13 +25,7 @@ dotspacemacs-fullscreen-at-startup t
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
    dotspacemacs-maximized-at-startup t
-   ;; A value from the range (0..100), in increasing opacity, which describes
-   ;; the transparency level of a frame when it's active or selected.
-   ;; Transparency can be toggled through `toggle-transparency'. (default 90)
-   dotspacemacs-active-transparency 90
-   ;; A value from the range (0..100), in increasing opacity, which describes
-   ;; the transparency level of a frame when it's inactive or deselected.
-   ;; Transparency can be toggled through `toggle-transparency'. (default 90)
+```
+> The character `t` for true is used as the non-nil value when these are either a true or false configuration option, with false value represented as `nil`.
 
-
-
+> If a name is used for a value it should be preceded with a single quote character
