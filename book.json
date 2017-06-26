@@ -15,17 +15,26 @@
     "plugins": [
         "toggle-chapters",
         "codeblock-disable-glossary",
-        "richquotes",
         "disqus",
         "gist",
         "exercises",
         "quizzes",
         "toolbar",
-        "ga"
+        "ga",
+        "callouts",
+        "sectionx",
+        "klipse"
     ],
     "pluginsConfig": {
-        "richquotes": {
-            "todos": true
+        "callouts": {
+            "showTypeInHeader": false,
+            "star": {
+                "alert": "warning",
+                "picto": "fa-star"
+            }
+        },
+        "sectionx": {
+            "tag": "b"
         },
         "disqus": {
             "shortName": "spacemacs-practicalli"
