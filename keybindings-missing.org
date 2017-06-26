@@ -1,0 +1,22 @@
+;;  keybindings changes
+
+
+
+;; keybindings potentials
+
+
+k 'clojure-toggle-keyword-string  - C-:
+
+or k t  - keyword toggle
+or r c k
+
+
+
+
+;;;;;;;;;;;;;;;;
+;; missing
+
+cider-pprint-eval-defun-at-point
+
+C-c C-r n s     clojure-sort-ns
+C-c C-r n u     clojure-update-ns

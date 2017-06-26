@@ -15,6 +15,7 @@ lein new project-name
 lein new template-name project-name
 ```
 
+<hr />
 
 ## `eshell` - The Emacs Shell
 
