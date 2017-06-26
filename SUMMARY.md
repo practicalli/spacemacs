@@ -1,11 +1,12 @@
 # Summary
 
 * [Introduction](introduction.md)
+* [About this workshop](introduction/about-this-workshop.md)
+    * [Workshop conventions](introduction/workshop-conventions.md)
+    * [Spacemacs documentation](introduction/spacemacs-documentation.md)
+    * [Sample Configuration](introduction/sample-configuration.md)
+    * [Additional resources](introduction/additional-resources.md)
     * [Pre-requisites](introduction/pre-requisites.md)
-    * [Why Spacemacs](introduction/why-spacemacs.md)
-    * [Spacemacs Overview](introduction/spacemacs-overview.md)
-    * [CIDER Overview](introduction/cider-overview.md)
-    * [Emacs Terminology](introduction/emacs-terminology.md)
     * [Contributing](introduction/contributing.md)
 * [Getting Started](getting-started/index.md)
     * [Installing](getting-started/installing.md)

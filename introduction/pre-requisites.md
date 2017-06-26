@@ -42,7 +42,7 @@ The first time you run this script it downloads a Java archive file (JAR) of the
 Running `lein` once installed will show you a list of available commands.
 
 
-## Clojure 
+## Clojure
 
 There is no specific install for Clojure.
 
@@ -56,7 +56,7 @@ When you create a project with Leiningen, the configuration is created in a file
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.7.0"]])
+  :dependencies [[org.clojure/clojure "1.8.0"]])
 ```
   
-> **Hint** The Clojure library is very small (~3.7Mb) and Leiningen caches it and oll other libraries locally in the same folder structure that Maven uses, eg  Clojure version 0.1.7 would be cached in ` ~/.m2/repository/org/clojure/clojure/0.1.7/`
+> **Hint** The Clojure library is very small (~3.6Mb) and Leiningen caches it and oll other libraries locally in the same folder structure that Maven uses, eg  Clojure version 0.1.8 would be cached in `.m2/repository/org/clojure/clojure/1.8.0` 
