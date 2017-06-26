@@ -1,3 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body {
+    font-family: Raleway;
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+kbd {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.1em 0.5em;
+    margin: 0 0.2em;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+    color: #000000;
+    background-color: #f7f7f7;
+}
+
+
 .book-body p , .book-body h1,.book-body h2,.book-body h3,.book-body h4,.book-body h5,.book-body h6,.book-body div,.book-body span ,  .summary , .summary li , .summary li a  {
     font-family : "Ubuntu", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
