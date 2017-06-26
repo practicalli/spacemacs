@@ -2,51 +2,77 @@
 
 Why would you use Spacemacs over configuring your own Emacs setup?  Here are a few hightlights
 
+* Batteries included configuration
+* Fast startup & lazy loading of modes
+* [Add features with layers](layers.html) (rather than configuring individual packages)
+    * Clojure layer provides full CIDER & clj-refactor support
+* [Easily discover commands with which-key](which-key.html)
+* [Helm narrowing & completion](helm.html)
+* [Simplifying keybindings with multiple states](states.html)
+* [Structured editing with Smartparens and Lisp mode](structured-editing.html)
+* Project management with Projectile, simple window & buffer management
+    * Numbered buffers
+* [Transient State menus for repetitive actions](transient-state-menus.html)
+
+
+# Batteries Included configuration
+
+Once you have installed Spacemacs then there is little or no configuration actually needed.
+
+You can of course customise Spacemacs quite heavily, although its worth spending a little time getting to know all the features before changing too much.
+
 # Spacemacs is fast
 
-The startup for Spacemacs is really quick, less than 2 seconds, even after adding a whole host of features (layers).  Some of this speed may be due to the lazy loading approach that Spacemacs takes.  In the best tradition of Lisp, some things are only loaded in Spacemacs when they are first used.  For example, when you open a Clojure source code file for the first time, the Clojure layer is loaded and clojure mode is applied.
+The startup for Spacemacs is really quick, usually less than 2 seconds, even after adding a whole host of features have been added.  This speed is due to Spacemacs only loading in the configuration for modes when you use them.  For example, when you open a Clojure source code file for the first time, the Clojure layer is loaded and clojure mode is applied.
+
+You can also use `emacsclient` command in a terminal to open files instantly, using the Emacs server.
 
 
-# Navigating with Which Key & Helm
-
-![Spacemacs Helm File Edit](/images/spacemacs-helm-file-edit.png)
-
-Developers drive Emacs with keybindings or use commands via `M-x`.  The more features you add to Emacs, the more keybindings and commands you have at your fingertips.  So to manage all this power, Spacemacs uses Which Key & Helm to organise these keybindings and commands into groups.
-
-Helm also helps you navigate the file system too, minimising the need to type directory and file names in full.
-
-Commands are grouped by their nemonic character, for example
-
-- `S` - spelling
-- `T` - themes
-- `a` - applications
-- `b` - buffers
-- `f` - files
-- `g` - git/version control
-
-[Helm](https://github.com/emacs-helm/helm) is an incremental completion and selection narrowing framework.  Its the central control tower of Spacemacs, it is used to manage buffers, projects, search results, configuration layers, toggles and more.
-
-Once you have learnt the Spacemacs groupings for Helm its really fast to do anything, so take a look at the [Helm documentation wiki](https://github.com/emacs-helm/helm/wiki).
-
-You can still type in command names using `M-x command-name` too, if you know the name of the command you are looking for.
-
-> ido mode is still available in Spacemacs but by default it is over-ridden by Helm.  You can enable ido using `dotspacemacs-use-ido t` in the `dotspacemacs/init` section of `.spacemacs`, however this only replaces a few commands.
+The rest of this section goes into more details as to why you would choose Spacemacs for your developer life.
 
 
-# Other features of Spacemacs
 
-![Spacemacs - other features](/images/spacemacs-other-features.png)
+# Miscellaneous features
+
+## Smooth scrolling
+
+Unlike the traditional jump-scrolling of Emacs, Spacemacs uses smooth scrolling as you fing in most other text editors.
+
+
+
+# Navigating windows, buffers & projects
+
+Navigating is quick and simple with the use of window, buffer and project management menus
 
 ## Numbered buffers
 
 Each buffer gets a number in the status bar, allowing you to jump to any buffer using `SPC` and the buffer number, eg. `SPC 3` jumps to buffer number 3.
 
 
-## Smartparens and symbol balancing/highlighting
+## Projectile
 
-Smartparents helps speed up typing and reducing errors due to unmatched symbols.  For most symbols in most modes a matching symbol is created.  So if you type `(` then a matching `)` is created too.  If you want to surround some existing text with a symbol pair, then simply highlight the text and press the opening symbol.  A closing symbol is also highlighted when the cursor is at the opening symbol.  Spacemacs also highlights the surrounding symbols, including any parents.  So if you are in a nested list, `(parent code (nested code))`, then if the cursor is on the nested code, both nested & parent symbols are highlighted.
+[Projectile](https://github.com/bbatsov/projectile) is a project interaction library for Emacs. Its goal is to provide a nice set of features operating on a project level without introducing external dependencies (when feasible). For instance - finding project files has a portable implementation written in pure Emacs Lisp without the use of GNU find (but for performance sake an indexing mechanism backed by external commands exists as well).
 
+Projectile tries to be practical - portability is great, but if some external tools could speed up some task substantially and the tools are available, Projectile will leverage them.
 
-## Smooth scrolling
+This library provides easy project management and navigation. The concept of a project is pretty basic - just a folder containing special file. Currently git, mercurial, darcs and bazaar repos are considered projects by default. So are lein, maven, sbt, scons, rebar and bundler projects. If you want to mark a folder manually as a project just create an empty .projectile file in it. Some of Projectile's features:
 
-Unlike the traditional jump-scrolling of Emacs, Spacemacs uses smooth scrolling as you fing in most other text editors.
+* jump to a file in project
+* jump to files at point in project
+* jump to a directory in project
+* jump to a file in a directory
+* jump to a project buffer
+* jump to a test in project
+* toggle between files with same names but different extensions (e.g. `.h` <-> `.c/.cpp`, `Gemfile` <-> `Gemfile.lock`)
+* toggle between code and its test (e.g. `main.service.js` <-> `main.service.spec.js`)
+* jump to recently visited files in the project
+* switch between projects you have worked on
+* kill all project buffers
+* replace in project
+* multi-occur in project buffers
+* grep in project
+* regenerate project etags or gtags (requires [ggtags](https://github.com/leoliu/ggtags)).
+* visit project in dired
+* run make in a project with a single key chord
+* check for dirty repositories
+

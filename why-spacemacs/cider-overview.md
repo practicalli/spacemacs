@@ -33,9 +33,10 @@ By adding the Clojure layer to spacemacs you get the latest version of CIDER.
   With an active Clojure buffer you can use one of the following keybindings or command
   
   
-| `M-RET s i`         | helm nemonic keybinding |
-| `C-c M-j`           | CIDER mode keybinding   |
-| `M-x cider-jack-in` | command                 |
+| Spacemacs   | Major mode  | Emacs     | Command                           | Description              |
+|-------------|-------------|-----------|-----------------------------------|--------------------------|
+| `SPC m s i` | `M-RET s i` | `C-c M-j` | `M-x cider-jack-in`               | Start Clojure repl       |
+| `SPC m s I` | `M-RET s I` |           | `M-x cider-jack-in-clojurescript` | Start Clojurescript repl |
 
 ![Emacs Live - CIDER jack in - C-c M-j](/images/emacs-cider-started.png)
 
