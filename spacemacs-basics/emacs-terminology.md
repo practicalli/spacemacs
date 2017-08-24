@@ -28,6 +28,8 @@ There can be one or more windows in Emacs.  Windows are used to split up the Ema
 
 Opening a new window to the left, `SPC w `
 
+Switch between windows with `SPC w ` followed by a direction. Both `SPC w l` and `SPC w →` will move focus one window to the right.
+
 Once you have finished with a window you can close it `SPC w d`.  Alternatively, If you just want one window open you can maximise that window, `SPC w m`, (although confusingly this uses the function maximise-buffer) and all other windows are closed.
 
 ## Golden Ratio
