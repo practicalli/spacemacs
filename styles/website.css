@@ -1,7 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+/* @import url(https://fonts.googleapis.com/css?family=Raleway); */
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
 
+/* Use Ubuntu font instead of the default Raleway font */
 body {
-    font-family: Raleway;
+    font-family: Ubuntu;
     margin: 2rem;
     font-size: 2rem;
 }
