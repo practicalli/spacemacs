@@ -11,12 +11,12 @@ With relative numbering, the current line number is shown in the gutter and all 
 
 ## Toggling line numbers per buffer
 
-You can toggle line numbers with `SPC t n` or relative line numbers (linum) with `SPC t n`
+You can toggle line numbers with `SPC t n` or relative line numbers (linum) with `SPC t r`
 
 | Spacemacs | Emacs     | Description                  |
 |-----------|-----------|------------------------------|
-| `SPC T n` | `M-m t n` | Toggle line numbers          |
-| `SPC T r` | `M-m t r` | Toggle relative line numbers |
+| `SPC t n` | `M-m t n` | Toggle line numbers          |
+| `SPC t r` | `M-m t r` | Toggle relative line numbers |
 
 [![Spacemacs - Toggle menu](../images/spacemacs-toggle-menu.png)](../images/spacemacs-toggle-menu.png)
 
