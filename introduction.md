@@ -2,9 +2,7 @@
 
 ![Clojure-cider-spacemacs-logo](images/spacemacs-practicalli-banner.png)
 
-[Spacemacs](https://spacemacs.org) is a powerful tool for Clojure & Clojurescript development, folding the raw speed of Vim into the flexibility & wealth of features of [Emacs](https://www.gnu.org/software/emacs/).
-
-Spacemacs provides the easiest way to unleash all the power of [Emacs](https://www.gnu.org/software/emacs/), providing an extensive configuration whilst still maintaining the flexibility of Emacs.
+[Spacemacs](http://spacemacs.org/) is a community built configuration for [Emacs](https://www.gnu.org/software/emacs/) providing the simplest way to use all the features and power of Emacs.  [Spacemacs](https://spacemacs.org) also integrates the raw text manipulation speed of Vim into the Emacs experience, enabling you to be even more productive.
 
 Emacs has been a shining beacon of Free and Open Source software from the early 1970's and has grown to be a versatile set of tools to not just for writing code but for helping you interact with almost every aspect of your digital life.
 
