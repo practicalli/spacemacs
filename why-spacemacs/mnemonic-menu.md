@@ -1,11 +1,11 @@
-# Discoverable commands with Which-Key
+# Mnemonic Menu with Which-Key
 
 ![Spacemacs Which-Key](/images/spacemacs-home-which-key.png)
 
 The more features you add to Emacs, the more keybindings and commands you have at your fingertips.  To manage all this power, Spacemacs uses [which-key](https://github.com/justbur/emacs-which-key) to organise these keybindings and commands into groups.
 
 
-Commands are grouped by their nemonic character, for example
+Commands are grouped by their mnemonic character, for example
 
 | Which-key nemonic menu        |                              |
 |-------------------------------|------------------------------|
