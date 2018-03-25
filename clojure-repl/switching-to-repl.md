@@ -19,7 +19,7 @@ Although a REPL buffer is created it is not displayed by default.
 
 You can toggle between a Clojure code buffer and a REPL buffer with `M-RET s s`.  As this is the same binding for both switching to a REPL and switching to the last code buffer, this enables you to toggle between the two quickly.
 
-The Emacs keybinding 
+The Emacs keybinding
 
 
 ## Select the REPL namespace
@@ -27,5 +27,3 @@ The Emacs keybinding
 When in a Clojure code buffer you can switch the namespace of the REPL using `cider-repl-set-ns`.
 
 With the REPL buffer active,  `cider-repl-set-ns` will display a pop-up buffer and list all the available namespaces.
-
-
