@@ -9,6 +9,7 @@ body {
     font-size: 2rem;
 }
 
+/* Show keybindings to look like keys on a keyboard */
 kbd {
     display: inline-block;
     border: 1px solid #ccc;
@@ -18,6 +19,13 @@ kbd {
     box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
     color: #000000;
     background-color: #f7f7f7;
+}
+
+/* Over-ride maximum page width - default 800px
+ - if over-ridden then paging arrows can appear over text*/
+
+.page-inner {
+    max-width: 1000px;
 }
 
 
@@ -35,7 +43,7 @@ img {
     margin-right: auto;
 }
 
-/* Place thin green boarder around code blocks & increase font size from 85% to 108% */
+/* Code blocks: boarder & increased font size from 85% to 108% */
 .book .book-body .page-wrapper .page-inner section.normal .highlight pre, .book .book-body .page-wrapper .page-inner section.normal pre {
     background-color: #f7f7f7;
     border: 5px solid #D9EDF7;
@@ -46,10 +54,12 @@ img {
     padding: 16px;
 }
 
-/* red text for all non-language specific code sections & increased font size to 108% */
+/* Inline code:
+ - highlight colour and background
+ - increased font size to 108% */
 .book .book-body .page-wrapper .page-inner section.normal code {
     background-color: #f7f7f7;
-    color: #FF0077;
+    color: #ba6ec5;             /* Spacemacs purple*/
     border-radius: 3px;
     font-size: 108%;
     margin: 0;
