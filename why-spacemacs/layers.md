@@ -1,30 +1,56 @@
-# Spacemacs Layers & Configuration
+# Simple Layers and Configuration
 
-Spacemacs has a feature rich configuration file that makes customising your experience very easy.  The layer system make adding features and language support trivial.
+Most language support and many other amazing features can be added to Emacs from many hundreds of packages created by the community. It does seem that there is a package for just about everything you want to do.
 
-# Configuration
+Spacemacs uses Layers that organise these packages and the configuration to make them work seamlessly together.  For example, the Clojure layer is composed of 9 different packages that you would otherwise have to know about and install and then get them to work together with a bit of configuration code.  Layers make things very simple, requiring only one word to be added to the Spacemacs configuration file.
 
-Spacemacs creates a `~/.spacemacs` configuration file.  Think of this as the init.el file you would otherwise create for your own configuation.
+> ####TODO::Add commic strip about this
+> was this xkd or something similar... the one where butterflies flap their wings and a storm is created the other side of the world.
 
-You can add your own Emacs configuration in the `dotspacemacs/user-config` section of the `~/.spacemacs` file.
+Spacemacs provides a well tested configuration file called `~/.spacemacs` that provides lots of sensible defaults and makes customising your experience very easy.  This file is created during the Spacemacs installation.
 
 
-# Spacemacs Layers
+## Simple Configuration
 
-A layer can be one or more Emacs pacakges and associated configuration to make all those packages work nicely together.  Layers are typically around languages or major modes for Emacs.
+The `~/.spacemacs` configuration file is composed of three important sections
 
-For example there is a Clojure layer that adds packages like CIDER, cljs-refactor, paredit/smartparens support, autocompletion for Clojure, etc.
+| Section                      | Purpose                                                                                                                                                                                                           |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **dotspacemacs/layers**      | Layers provide a simple way to add language support and tooling to Spacemacs.  A layer can contain elisp configuration and packages from Melpa/Elpa.  Individual Emacs packages can also be added (if they do not exist in any layer) |
+| **dotspacemacs/init**        | configuration applied when Spacemacs first starts, eg evil or holy mode(emacs), themes, fonts, full screen, recent files, etc                                                                                     |
+| **dotspacemacs/user-config** | Add your own customisation here                                                                                                                                                                                   |
 
-See the Spacemacs documentation for a [list of layers](http://spacemacs.org/layers/LAYERS.html) or open the help in Spacemacs `SPC h SPC` to list all the layers, pressing `RET` on a layer name to read about it.
+> ####Info::Example .spacemacs configuration
+> Review the authors [current .spacemacs configuration file](https://gist.github.com/jr0cket/2cbe91668b904c5a42a8f08a583e9242) for examples of changes and the [dotfile configuration](http://spacemacs.org/doc/DOCUMENTATION.html#dotfile-configuration) section of the Spacemacs documentation for a complete overview.
 
+
+## Opening and reloading the configuration file
+
+Spacemacs provides specific keybindings for opening and reloading the `~/.spacemacs` configuration file.
+
+| Vim Normal  | Emacs       | Description                                  |
+|-------------|-------------|----------------------------------------------|
+| `SPC f e d` | `M-m f e d` | open the `~/.spacemacs` file                 |
+| `SPC f e R` | `M-m f e R` | reload the configuration from `~/.spacemacs` |
+
+> ####Hint::Restart after changing configuration
+> The bigger a change you are making in the `~/.spacemacs` configuration file, the more desirable it is to restart Emacs.  For example, if you are adding a large layer or multiple layers and pulling in a number of packages.
+> Unless its a small change, then restart Emacs with `SPC q r`
+>
 
 ## Adding a Layer
 
-To add a layer, edit the Spacemacs configuration file, `~/.spacemacs` and in the function `dotspacemacs/layers` and section `dotspacemacs-configuration-layers` add the name of the layer you want to include.
+Simply open the `~/.spacemacs` file and add the name of the layer you want in the section `dotspacemacs-configuration-layers`.  Some layers also take additional configuration in the form of variables in the layer definition.
 
-For example, see [my full Spacemacs configuration](https://gist.github.com/jr0cket/) to see my layers configuration.
+See the Spacemacs documentation for a [list of layers](http://spacemacs.org/layers/LAYERS.html) or open the help in Spacemacs `SPC h SPC` to list all the layers, pressing `RET` on a layer name to read about it.
 
-> #### Note;: Emacs package manager is not used directly
-> Trying to use `packages-list-packages` to install packages directly is ignored by Spacemacs.
+------------------------------------------
+
+> #### Note:: Notes for existing Emacs users
+> If you have configured Emacs before, you can consider the `.spacmacs` file as a replacement for the `init.el` file you would otherwise use to define your Emacs configuration.
 >
-> If no layer exists for a package, you can still [use a package without a layer](http://spacemacs.org/doc/DOCUMENTATION.html#without-a-layer)
+> Installing packages via the `packages-list-packages` method is ignored by Spacemacs.  Any packages installed in this way will be ignored.
+>
+> If no layer exists for a package, you can [use a package without a layer](http://spacemacs.org/doc/DOCUMENTATION.html#without-a-layer)
+>
+> You can add what ever elisp you like to the **dotspacemacs/user-config** section of the `~/.spacemacs` configuration file.

@@ -8,4 +8,8 @@ For example, Helm helps you navigate files and directory names, only showing the
 
 If you have a rough idea of a command name, you can start to type it after `SPC SPC` or `M-x` and Helm will show you all the matching commands using fuzzy matching (matches anything that contains the pattern you have typed).
 
-Once you have learnt the Spacemacs groupings for Helm its really fast to do anything, so take a look at the [Helm documentation wiki](https://github.com/emacs-helm/helm/wiki).
+![Spacemacs - Helm narrowing and completion](http://tuhdo.github.io/static/part3/helm-mini.gif)
+
+Once you have learnt the Spacemacs groupings for Helm its really fast to do anything, so take a look at the [Helm project page](https://emacs-helm.github.io/helm/).
+
+![Helm - narrowing and completion framework](/images/helm-logo.png)
