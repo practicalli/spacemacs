@@ -2,8 +2,9 @@
 
 * [Introduction](introduction.md)
     * [Why Spacemacs](why-spacemacs/index.md)
-        * [Layers & Configuration](why-spacemacs/layers.md)
-            * [CIDER Overview](why-spacemacs/cider-overview.md)
+        * [Extensive Language Support](why-spacemacs/extensive-language-support.md)
+        * [Simple Layers](why-spacemacs/layers.md)
+            * [Clojure Layer](why-spacemacs/clojure-layer.md)
         * [Mnemonic Menu](why-spacemacs/mnemonic-menu.md)
         * [Narrowing results with Helm](why-spacemacs/helm.md)
         * [A State for everything](why-spacemacs/states.md)
