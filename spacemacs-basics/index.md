@@ -1,164 +1,70 @@
-# Spacemacs Basics 
+# Spacemacs Basics
 
-> TODO: Expand following content into sections
+Understanding the [Emacs basic concepts and terminology](emacs-basics.html) will help speed your adoption of Spacemacs.
 
+You will gradually discover the power and pleasure of using [Vim and modal editing](vim-basics.html), using different states for specific tasks and reducing your cognitive load (and strain from keybinding combinations).  The [Vim Quick Reference](vim-quick-reference.html) will help you use Spacemacs more effectively.
 
-## Manipulating words 
+The two most important things to learn about Spacemacs first are the Space menu and the Help system.
 
-| Spacemacs | Major mode | Emacs | Evil  | Command | Description                                 |
-|-----------|------------|-------|-------|---------|---------------------------------------------|
-|           |            | `C-t` | `x p` |         | Transpose characters                        |
-|           |            | `M-c` |       |         | Capitalise word                             |
-|           |            | `M-l` |       |         | Lowercase word (no keybinding in Spacemacs) |
-|           |            | `M-u` |       |         | Uppercase word                              |
+## Space bar - main menu
 
+All of the features of Spacemacs are available through the Space bar menu.
 
-## Escaping Insert state and commands
+Press `SPC` and you get a mnemonic menu to easily navigate through the multitude of functions you can call.
 
-Typing quickly `fd` takes me out of insert state. What is going on?
+If a function does not have a menu item, you can still find it using `SPC SPC` and start typing its name.  Thanks to the helm completion framework, you will see a list of functions that are a _fuzzy_ match for what you typed.
 
-This is a feature of Spacemacs, enabling you to easily escape from a lot of situations, like escaping from insert state to normal state.
+[![Spacemacs - space menu](/images/spacemacs-main-menu.png)](/images/spacemacs-main-menu.png)
 
-The sequence of characters used can be customized. See the documentation for more information.
 
-If you don't like this feature, you can Deactivate it by adding evil-escape to dotspacemacs-excluded-packages in your init file.
+## Spacemacs Help system
 
-## Selecting 
+Spacemacs has a built in help system to help you find out what functions and keybindings do.
 
-You can select text from Vim normal state by entering the visual state
 
-| Spacemacs | Major mode | Emacs   | Evil normal | Command | Description                    |
-|-----------|------------|---------|-------------|---------|--------------------------------|
-|           |            | `C-SPC` | `v`         |         | Toggle visual mode / selection |
+Comprehensive documentation is available on the [Spacemacs website](https://spacemacs.org) and built in to Spacemacs itself, so you can always access it when you are offline.
 
+Every function has a description of how to use it as well as a link to its source code (in case you need more than the description).
 
+Many functions have a keybinding (keyboard short-cut) and you can also get a description of the keybinding.
 
-## Add comment / Toggle comment 
+| Keybinding  | Action                                                                             |
+|-------------|------------------------------------------------------------------------------------|
+| `SPC h SPC` | helm popup lists Spacemacs documentation and layer guides                          |
+| `SPC h d f` | helm popup lists functions and shows the description of the specified function     |
+| `SPC h d k` | helm popup lists keybindings and shows the description of the specified keybinding |
 
-In Vim normal mode you can comment out a single line using `g c c`.
+Substitute `M-m` for `SPC` in the keybindings if you are only using Emacs holy mode.
 
-To comment multiple lines you can use the repeat command style, especially if you are using relative line numbers.  So using `g c 3 j` will comment out the current line and the following two lines below.  You can comment out in reverse using `g c 3 k`.
 
-In Visual state, `v`, select the lines you wish to comment and use `g c` to comment all the marked lines.  Partially marked lines are not commented.
 
-| Spacemacs | Visual State | Emacs | Evil Normal | Command | Description                           |
-|-----------|--------------|-------|-------------|---------|---------------------------------------|
-|           | `g c`        | `M-;` |             |         | Comment marked region                 |
-|           |              |       | `g c c`     |         | Comment line                          |
-|           |              |       | `g c 5 j`   |         | Comment 5 lines forward from current  |
-|           |              |       | `g c 5 k`   |         | Comment 5 lines backward from current |
+> #### Comment::Keybinding guide
+> `SPC` means press the spacebar
+>
+> A character by itself means press that key by itself, eg. `h` means press the <kbd>h</kbd> key
+>
+> `M-m` means to hold the meta key down and press the <kbd>m</kbd> key
+>
+> `M-x` means hold the meta key down and press the <kbd>x</kbd> key
+>
+> The meta key is typically <kbd>Alt</kbd> on Linux/PC, <kbd>Opt</kbd> on MacOSX
 
-http://spacemacs.org/layers/+vim/evil-commentary/README.html
+------------------------------------------
 
+> ####Hint:: Spacemacs Documentation Online
+> The [Spacemacs online documentation](http://spacemacs.org/doc/DOCUMENTATION.html) contains the same information as the built in help system.
+>
+> The [Spacemacs Quick Start guide](http://spacemacs.org/doc/QUICK_START.html) gives an overview of how to configure Spacemacs.
 
-## Spelling
 
-As you are typing in any(?) buffer then Spacemacs is checking your spelling as you type.  If you type a word that Spacemacs does not recognise then that word is underscored in red.  To correct a spelling:
 
-* Move to the word that is incorrectly spelt
-* `SPC S c` to change the word and show a list of suggested words
-* Either type in a new spelling or use `C-j` and `C-k` keys to move down and back up the list of words, using `RET` to select that word.
+## Spacemacs in action
 
+If you like to see Spacemacs in action, then you should watch the series of [Spacemacs ABC]() videos on Youtube.  These videos walk you thought the common features of Spacemacs in alphabetical order.
 
+There are also [short screencasts of Spacemacs]() that accompany this book (work in progress).
 
-## Scrolling 
 
-in vim command mode you can scroll just the text using the classic vi bindings.  This does not scroll the cursor unless the cursor hist the top or bottom of the window, in which case the cursor stays at that window boundry.
+## Emacs Wiki
 
-`C-y` - scroll down
-`C-e` - scroll text up
-
-
-
-## Inserting a character multiple times 
-
-In Vim normal mode (yellow) type the number of times to repeat the character followed immediately followed by `i`, then the character or word you want to reapeat.  Then press `ESC` or `fd` and the character will be printed repeatedly
-
-redrum redrum redrum redrum redrum redrum redrum redrum redrum redrum 
-
-
-## jump around... 
-
-`SPC j i` shows imenu that lists all the def and defn expressions in the current buffer, allowing you to jump to one of these definitions directly by typing its name or using `C-j` and `C-k` to select the name and pressing `RET` to jump to the name in the buffer
-
-
-`SPC j l` labels each line of the buffer with a short, unique character code.  By entering the character code you are taken directly to the specific line.  This is the `avy goto line` function and this works on all visible buffers by default, although it can be just shown on the current buffer (TODO: how is this set).
-
-## searching 
-
-search with `SPc /`
-
-Matching only within a boundary by wrapping your search term with `\b`.
-
-So if you want to match `or` and not word, then you would do 
-
-```
-SPC / \bor\b
-```
-
-## getting stuff done - vim basics 
-
-http://paul-gowder.com/emacs.html
-
-
-## changing escape sequence for vim
-
-(setq evil-escape-key-sequence "jk")
-
-
-
-
-## Working with Buffers
-
-To work with files in Emacs, they are first loaded into a **Buffer**.
-
-So when you open a file with `M-x find file` or `SPC f f` a new buffer is created so you can manage that file.
-
-Buffers are displayed in a window and you can change the window to show any of the current buffers.
-
-Here are the most commonly used buffer commands
-
-| Keybinding | Command                        | Description                               |
-|------------|--------------------------------|-------------------------------------------|
-| `SPC b b`  | helm-mini                      | List current buffers                      |
-| `SPC b d`  | kill-this-buffer               | Kill current buffer                       |
-| `SPC b h`  | home                           | Switch to Spacemacs home page             |
-| `SPC b n`  | next-buffer                    | Switch to next buffer                     |
-| `SPC b p`  | previous-buffer                | Switch to previous buffer                 |
-| `SPC b s`  | switch-to-scratch-buffer       | Switch to the **scratch** buffer          |
-| `SPC b Y`  | copy-whole-buffer-to-clipboard | Copy current buffer contents to kill ring |
-  
-See the full buffer menu via `SPC b`
-
-![Spacemacs Buffer Menu](/images/spacemacs-buffer-menu.png)
-
-
-## Managing Files
-
-| Spacemacs | Emacs     | Evil    | Command                    |
-|-----------|-----------|---------|----------------------------|
-| `SPC f R` | `M-m f R` | `, f R` | rename-current-buffer-file |
-
-
-Also consider using:
-
-* dird
-* neotree
-* projectile
-
-
-## Editing text (especially in Evil mode)
-
-See Vim section 
-
-## Working with Windows
-
-| Keybinding   | Command | Description                       |
-|--------------|---------|-----------------------------------|
-| `C-x 1`      |         | Close current window              |
-| `C-x 2`      |         | Vertically split current window   |
-| `C-x 3`      |         | Horizontally split current window |
-| `SPC number` |         | Jump to window number             |
-
-
-> You can also create layouts that are a collection of windows
+Most of the classic documentation about Emacs is also relevant to Spacemacs, after all its Emacs underneath.  Many of the packages used in Spacemacs are also documentation on the Emacs Wiki, so its devinately worth browsing (especially if you are going to customise Spacemacs).
