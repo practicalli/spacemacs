@@ -53,6 +53,8 @@
     * [Navigating Namespaces](navigating-code/namespaces.md)
     * [Navigating Expressions](navigating-code/expressions.md)
     * [Code Folding](navigating-code/code-folding.md)
+* [Editing - Vim and iedit](editing/index.md)
+    * [iedit - Multiple Cursors](editing/iedit-multiple-cursors.md)
 * [Structured Editing](structured-editing/index.md)
     * [Smartparens](structured-editing/smartparens.md)
         * [Smartparens Strict Mode](structured-editing/smartparens-strict-mode.md)
