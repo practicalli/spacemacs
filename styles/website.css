@@ -5,7 +5,6 @@
 /* Use Ubuntu font instead of the default Raleway font */
 body {
     font-family: Ubuntu;
-    margin: 2rem;
     font-size: 2rem;
 }
 
@@ -21,23 +20,28 @@ kbd {
     background-color: #f7f7f7;
 }
 
-/* Over-ride maximum page width - default 800px
- - if over-ridden then paging arrows can appear over text*/
+/* Over-ride maximum page width - default 800px */
+/*  - if over-ridden then paging arrows can appear over text */
 
 .page-inner {
     max-width: 1000px;
 }
 
 
-.book-body p , .book-body h1,.book-body h2,.book-body h3,.book-body h4,.book-body h5,.book-body h6,.book-body div,.book-body span ,  .summary , .summary li , .summary li a  {
+.book-body h1,.book-body h2,.book-body h3,.book-body h4,.book-body h5,.book-body h6 {
     font-family : "Ubuntu", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.book-body p, .book-body div, .book-body span, .summary, .book-body li, .summary li a  {
+    font-family : "Ubuntu", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2rem;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal code {
     font-family: "Ubuntu Mono", Consolas, Menlo, Courier, monospace;
 }
 
-img {
+img, div, table {
     display: block;
     margin-left: auto;
     margin-right: auto;
