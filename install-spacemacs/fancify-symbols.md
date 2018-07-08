@@ -9,4 +9,5 @@ dotspacemacs-configuration-layers
               clojure-enable-fancify-symbols nil))
 ```
 
-> **Hint** Although this seems like a cool idea, its an inconvienience especially when demonstrating or explaining code to others.
+> ####Hint::
+> Although fancy symbols does seems like a cool idea, it can be an inconvenience especially when demonstrating or explaining code to others.

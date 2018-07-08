@@ -1,27 +1,34 @@
-# Installing Spacemacs
+# Choose your Spacemacs experience
 
 Once you have a copy of Spacemacs in `~/.emacs.d`, then run Emacs to install and configure the basics of Spacemacs.
 
-## Evil or Holy mode
+For this workshop I recommend **Evil style**, **standard distribution** and **helm completion**.
 
-You are prompted to select either the Evil or Holy mode.  Selecting Evil mode will set Vi to be the default way of using Emacs, however Emacs mode is also available via `C-z`.
+## Editing style (Evil / Vim)
+
+This workshop uses Evil style editing, although does include Emacs keybindings too.
+
+Selecting Evil mode will set Vim to be the default way of using Emacs, however, all the typical Emacs keybindings will be available (via `C-z`).
 
 If you select just holy mode then only Emacs mode is available as Evil mode will not be installed.
 
-If you definately do not want Vi or Evil mode, then select **Holy Mode**.
-
-![Spacemacs - selecting Holy mode](/images/spacemacs-install-holy-mode.png)
+![Spacemacs - selecting Evil mode](/images/spacemacs-first-run-vim.png)
 
 
-> Note:  If you use Holy Mode then you should use `M-x` to bring up the commands menu, rather than `SPC`
+> ####Hint::
+> In Holy Mode (Emacs keybindings) the keybinding `M-x` is used to access the Spacemacs menu, rather than `SPC`
 
 
-## Spacemacs Full or Light 
+## Spacemacs distribution (Standard)
 
-The full version of Spacemacs is still really lightweight, so I suggest sticking with that unless you are going to do some major customisation of Spacemacs configuration itself.
+Choose the standard distribution of Spacemacs to get all the standard features.
 
 
-## Spacemacs is ready for action 
+## Completion Framework (Helm)
+
+A completion framework helps you type less and find commands and file names quickly.  Helm is the framework that is the most common and has more features than Ivy.
+
+## Spacemacs is ready for action
 
 Now you should have Spacemacs up and running and ready to take on the world.
 
