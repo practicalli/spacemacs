@@ -1,4 +1,4 @@
-# Why Spacemacs: Structured Editing
+# Structured Editing
 
 Structured editing is an invaluable tool when working with Lisp languages (elsip, lisp, clojure, etc) as it enables you to easily move code around without breaking the structural syntax of the language.
 
@@ -12,8 +12,10 @@ This well defined structure also makes it trivial to move expressions around, gi
 
 Spacemacs uses [smartparens](https://github.com/Fuco1/smartparens) to help you write structured code really fast and also move expressions around.  Smartparens is a newer implementation of the classic _paredit_ package.
 
-> ####HINT::Evil-smartparens package
-> For structural editing designed for Vim, try [Evil-smartparens](https://github.com/expez/evil-smartparens). This package ensures that you do not accidentally delete parenthesis and keeps the structure of your Clojure intact.
+> ####HINT::Evil-cleverparens
+> [Evil-cleverparens](https://github.com/luxbock/evil-cleverparens) configures Vim states to respect smartparens rules. This ensures that you do not accidentally delete parenthesis and keeps the structure of your Clojure intact.
+>
+> See the section on [Evil Clojure Editing](/install-spacemacs/evil-structural-editing.html).
 
 ## Lisp State For Manipulating Structured Text
 

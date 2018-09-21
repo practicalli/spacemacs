@@ -1,14 +1,14 @@
 # Clojure Layer Overview
 
-The [Clojure layer](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/clojure) provides a range of tools and full languages support for the Clojure functional programming language.
+The [Clojure layer](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/clojure) provides and full language support and tooling including, autocomplete, refactor, inspector and debugger, etc.
 
-The Clojure layer supports [Leiningen](https://leiningen.org), [Boot](http://boot-clj.com/) and [Clojure CLI tools](https://clojure.org/guides/deps_and_cli).
+This layer supports Clojure projects managed by [Leiningen](https://leiningen.org), [Boot](http://boot-clj.com/) and [Clojure CALI tools](https://clojure.org/guides/deps_and_cli) (`deps.edn`).
 
-The layer is a collection of Emacs packages and curated configuration to ensure all those packages work well together in Spacemacs. The biggest part of the Clojure layer is the CIDER package.
 
 [[![CIDER logo](/images/cider-logo.png)](https://github.com/clojure-emacs/cider)](https://github.com/clojure-emacs/cider)
 
-> ####Hint::CIDER is part of the Clojure layer
+> ####Hint::CIDER is part of the [Clojure layer](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/clojure)
+> The [Clojure layer](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/clojure) is a collection of Emacs packages and curated configuration to ensure those packages work well together in Spacemacs. The biggest part of the [Clojure layer](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/clojure) is the [CIDER](https://github.com/clojure-emacs/cider) package.
 > [Opening a Clojure file](/install-spacemacs/clojure-layer.html) or [adding the Clojure layer](/install-spacemacs/manually-add-clojure-layer.html) to Spacemacs will install the latest version of CIDER.
 
 

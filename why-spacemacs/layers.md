@@ -4,13 +4,16 @@ Most language support and many other amazing features can be added to Emacs from
 
 Spacemacs uses Layers that organise these packages and the configuration to make them work seamlessly together.  For example, the Clojure layer is composed of 9 different packages that you would otherwise have to know about and install and then get them to work together with a bit of configuration code.  Layers make things very simple, requiring only one word to be added to the Spacemacs configuration file.
 
-> ####TODO::Add commic strip about this
-> was this xkd or something similar... the one where butterflies flap their wings and a storm is created the other side of the world.
 
-Spacemacs provides a well tested configuration file called `~/.spacemacs` that provides lots of sensible defaults and makes customising your experience very easy.  This file is created during the Spacemacs installation.
+[![Emacs - butterfly mode](https://imgs.xkcd.com/comics/real_programmers.png)](https://imgs.xkcd.com/comics/real_programmers.png)
+
+> ####Hint::
+> `SPC SPC butterfly` to activate in Spacemacs.  Use this great power very carefully.
 
 
 ## Simple Configuration
+
+Spacemacs provides a well tested configuration file called `~/.spacemacs` that provides lots of sensible defaults and makes customising your experience very easy.  This file is created during the Spacemacs installation.
 
 The `~/.spacemacs` configuration file is composed of three important sections
 
