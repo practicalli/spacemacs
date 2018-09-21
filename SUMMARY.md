@@ -85,7 +85,7 @@
 * [Snippets](snippets/index.md)
     * [Clojure Snippets](snippets/clojure-snippets.md)
     * [Add your own Snippets](snippets/add-your-own-snippets.md)
-    * [Autocompletion](creating-clojure-code/autocompletion.md)
+    * [Autocompletion](snippets/autocompletion.md)
 * [Refactor code](clj-refactor/index.md)
     * [Managing Library Dependencies](clj-refactor/managing-library-dependencies.md)
     * [Managing Namespaces](clj-refactor/managing-namespaces.md)
