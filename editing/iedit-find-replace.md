@@ -1,4 +1,4 @@
-# iedit - Multiple Cursors
+# iedit example - multiple find and replace
 
 If you have text you want to edit in multiple places at the same time, rather than the traditional find/replace, you can select all the regions and use multiple cusors to edit all regions simultaneously.
 
@@ -15,7 +15,5 @@ If you have text you want to edit in multiple places at the same time, rather th
     * `S` substitute text in all regions
     * `D` delete all selected regions
 
-
-general iedit stuff
 
 `SPC s e` matches all instances of a region under the cursor (iedit state)
