@@ -1,29 +1,33 @@
 # Clojure Repl
 
-The Clojure REPL is the live execution environment in which your Clojure code runs.  Having a REPL connected during development of your code gives you instant feedback on its behaviour.  Clojure developers always code with a REPL.
+The Clojure REPL is a live environment in which your Clojure code runs.  Using a REPL to develop your code gives you instant feedback on its behaviour and supports rapidly evolving design.
 
-![Spacemacs Clojure REPL Start Up](/images/spacemacs-clojure-project-repl-start-up.gif)
+Clojure developers can use the REPL to run a whole file of code, or just a single expression
 
-## Quick start
+Clojure developers always code with a REPL.
 
-You can run a Clojure REPL from Emacs or connect to an existing REPL (ie. run from a command line).
+{% youtube %}
+https://www.youtube.com/watch?v=KZjFVdU8VLI?autoplay=1loop=1
+{% endyoutube %}
 
-To run a Clojure or Clojurescript REPL:
 
-| Spacemacs   | Major mode  | Emacs     | Evil    | Command                      |
-|-------------|-------------|-----------|---------|------------------------------|
-| `SPC m s i` | `M-RET s i` | `C-c M-j` | `, s i` | cider-jack-in                |
-| `SPC m s I` | `M-RET s I` |           | `, s I` | cider-jack-in-clojurescript  |
-| `SPC m s s` | `M-RET s s` | `C-c C-z` | `, s s` | switch between repl and code |
-| `SPC m s q` | `M-RET s q` | `C-c C-q` | `, s q` | cider-quit                   |
+## Quick start (Vim normal state)
 
-There are shortcut versions of the following keybindings, as these commands are called so often.
+`, '` or `, s i` to start a REPL from a Clojure code file, `*.clj`.
 
-* **SPC m '** - for a Clojure REPL
-* **SPC m "** - for a Clojurescript REPL
+`. e e` to evaluate the previous Clojure expression
+
+`, e f` to show the results of evaluating the current Clojure expression
+
+
+## REPL keybindings
+
+| Spacemacs   | Major mode  | Emacs     | Vim Normal       | Command                      |
+|-------------|-------------|-----------|------------------|------------------------------|
+| `SPC m s i` | `M-RET s i` | `C-c M-j` | `, '` or `, s i` | cider-jack-in                |
+| `SPC m s I` | `M-RET s I` |           | `, "` or `, s I` | cider-jack-in-clojurescript  |
+| `SPC m s s` | `M-RET s s` | `C-c C-z` | `, s s`          | switch between repl and code |
+| `SPC m s q` | `M-RET s q` | `C-c C-q` | `, s q`          | cider-quit                   |
+
 
 This section contains more information on running REPL's
-
-## Example of running REPL
-
-![Spacemacs Clojure REPL Buffer](/images/spacemacs-clojure-cider-repl-buffer.png )
