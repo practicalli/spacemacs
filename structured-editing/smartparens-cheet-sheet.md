@@ -1,5 +1,11 @@
 # Smartparens cheetsheet
 
+`SPC SPC sp-cheet-sheet`  lists all the smartparens commands available
+
+
+> ####TODO::Break out common commands into their own sections with examples
+
+
     (sp-cheat-sheet &optional ARG)
 
 Generate a cheat sheet of all the smartparens interactive functions.

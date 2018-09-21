@@ -1,5 +1,7 @@
 ## Emacs: Killing code softly
 
+> ####TODO::Move to reference section
+
 Emacs contains functions for manipulating lisp that are also useful for Clojure.
 
 `C-M k` deletes text without breaking the structure.  So you can:
@@ -7,9 +9,10 @@ Emacs contains functions for manipulating lisp that are also useful for Clojure.
 * delete a clojure expression (and paste intact elsewhere)
 * delete the contents of a string without deleting the double quotes.  The same applies to a list, map or any other structure.
 
-<p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HuufiBXXz14" frameborder="0" allowfullscreen></iframe>
-</p>
+
+{% youtube %}
+https://www.youtube.com/embed/HuufiBXXz14?autoplay=1&loop=1
+{% endyoutube %}
 
 
 | Emacs   | Command       | Description                              |
