@@ -1,8 +1,9 @@
 # Open and creating Files (and directories)
 
-<p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oOzzkUjtgZc" frameborder="0" allowfullscreen></iframe>
-</p>
+{% youtube %}
+https://www.youtube.com/embed/oOzzkUjtgZc?autoplay=1loop=1
+{% endyoutube %}
+
 
 ## Opening a File
 
@@ -15,7 +16,6 @@ Using the **File** menu you can open files from anywhere on your file space.  Ne
 ![Spacemacs - File menu - Find File helm popup](/images/spacemacs-file-menu-find-helm-popup.png)
 
 As you type the name you are looking for, the list of matching directory and file names narrows to just those that match.
-
 
 | Keybindings | Description                                      |
 |-------------|--------------------------------------------------|
@@ -59,4 +59,5 @@ In find file, the following key bindings are available
 * `C-k` - move up list of files & directories
 * `RET` - open a file (or dird if a directory)
 
-> **Hint** When creating a new file in a new directory, you can simply type in the full path and file name and Spacemacs will prompt you to confirm the creation of the new directory and the file name.
+> ####Hint::Creating files and directories
+> When creating a new file in a new directory, you can simply type in the full path and file name and Spacemacs will prompt you to confirm the creation of the new directory and the file name.
