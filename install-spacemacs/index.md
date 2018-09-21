@@ -1,6 +1,6 @@
 # Getting started with Spacemacs
 
-With Emacs version 25 installed, simply clone or download the Spacemacs configuration, first moving any existing `~/.emacs.d` Emacs configuration out of the way.
+With Emacs version 25.1 (or greater) installed, simply clone or download the Spacemacs configuration, first moving any existing `~/.emacs.d` Emacs configuration out of the way.
 
 Use your favourite git client or the following command in a terminal window:
 
