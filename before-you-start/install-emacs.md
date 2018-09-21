@@ -2,7 +2,12 @@
 
 [![GNU Emacs banner](/images/emacs-logo-text.png)](/images/emacs-logo-text.png)
 
-Emacs is available for Linux, MacOSX and Windows.  Here are the suggested ways to install Emacs on these operating systems
+Emacs is available for Linux, MacOSX and Windows.  The [Spacemacs Readme suggested ways to install Emacs](https://github.com/syl20bnr/spacemacs/tree/develop#emacs)
+
+> ####Info::Minimum Emacs Version - 25.1
+> This guide used the `develop` version of Spacemacs which requires Emacs 25.1 or greater
+
+Here is a summary of the Emacs installation process for several operating system.
 
 ### Ubuntu Linux
 
@@ -18,12 +23,12 @@ sudo apt-get install emacs25
 
 ### MacOSX
 
-For a self-contained install, download Emacs 25 from the [Emacs for OSX website]().
+For a self-contained install, download Emacs 25 from the [Emacs for OSX website](https://emacsformacosx.com/).
 
 Alternative, if you use Homebrew, run the following command:
 
 ```bash
-brew install emacs --with-cocoa
+brew cask install emacs
 ```
 
 ### Windows (version 7 or 10)
