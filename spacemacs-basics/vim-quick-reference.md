@@ -1,5 +1,8 @@
 # Vim Quick Reference
 
+> ####TODO::
+> This section is still under development, sorry
+
 ## Moving around
 
 In **normal** mode you can keep your fingers resting on the main row of your keyboard to move around.
@@ -11,7 +14,7 @@ In **normal** mode you can keep your fingers resting on the main row of your key
 | `l`        | move cursor right one character |
 | `h`        | move cursor left one character |
 
-In menus such as helm you can move around uisng `Ctrl` and these keybindings.  So `C-j` will move the cursor down one item in a menu.
+In menus such as helm you can move around using `Ctrl` and these keybindings.  So `C-j` will move the cursor down one item in a menu.
 
 ### Jumping the cursor
 
@@ -40,6 +43,8 @@ Search a buffer for characters or words / text pattern.
 
 | Command | Action                             |
 | ---     | ---                                |
+| `*`     | search forwards for the word under the cursor   |
+| `#`     | search backwards for the word under the cursor |
 | `/`     | search forwards in current buffer  |
 | `?`     | search backwards in current buffer |
 | `n`     | once searching: find forward       |
@@ -51,6 +56,59 @@ Search a buffer for characters or words / text pattern.
 > Use `SPC /` for a project wide search.
 >
 > Additional search commands are available under `SPC s`, including the powerful iedit mode, `SPC s e` which provides features like multiple cursors.
+
+
+
+## Movement of cursor
+
+| keybinding | action                                                           |
+|------------|------------------------------------------------------------------|
+| `H`        | move cursor to head of buffer                                    |
+| `M`        | move cusror to middle of buffer                                  |
+| `L`        | move cursor to bottom line of buffer                             |
+| `}`        | move cursor forward by paragraph or block                        |
+| `{`        | move cursor backward by paragraph or block                       |
+| `%`        | find matching brace, paren, etc                                  |
+| `ma`       | mark a line in a file with marker "a"                            |
+| ``a`       | after moving around, go back to the exact position of marker "a" |
+| `'a`       | after moving around, go back to line of marker "a"               |
+| `:marks`   | view all the marks                                               |
+| `''`       | go to the last place you were                                    |
+| `[{`       | jump back to the "{" at the beginning of the current code block  |
+
+
+## editing
+
+X - delete char before cursor
+A - add to end of line
+I - insert at the beginning of the line
+dd - delete line
+D - delete from cursor to end of line
+di' - delete text inside single quotes
+yy - copy line
+Y - copy from cursor to end of line
+cc - change line
+C - change from cursor to end of line
+cit - change text inside html tag
+ci' - change text inside single quotes
+ci{ - change text inside curly brackets.
+ci... - etc
+p - paste after cursor
+P = paste before cursor
+o - add line below
+O - add line above
+. = repeat last comment
+r - replace character
+R - replace. (overwrite) (good for columns of text)
+J - join line (cursor can be anywhere on line)
+
+visual state
+-----------
+v - visual char state
+V - visual line state
+C-v - block visual state
+
+
 
 
 
@@ -125,6 +183,25 @@ Switching from **insert** to **normal** state:
 
 
 
+## Repeat commands
+
+| Command          | Action                           |
+| -------          | -----------------                |
+| `.`              | repeat last command again        |
+| `<number> <cmd>` | repeat command a number of times |
+
+The `.` keybinding will repeat the last command in normal mode or the last text edit in insert mode.
+
+Type a number before a command and that command will run that number of times.
+
+>####Hint::Inserting a comment border
+> Use the number repeat to create a border of 42 `;` characters.
+> Type `42` to repeat the command 42 times
+> Press `i` for insert mode
+> Press `;` as the character to repeat insert
+> Press `ESC` or `fd` to leave insert mode and insert all 42 `;` characters
+
+
 ## Quit or Restart Emacs
 
 I recommend using the Spacemacs menu from **normal** mode to quit / restart Spacemacs.
@@ -164,78 +241,7 @@ You can run external commands using `:!` followed by a command.  For example:
 
 
 
-Useful Spacemacs commands
-
-SPC w / - split window vertically
-SPC w - - split window horizontally
-SPC 1   - switch to window 1
-SPC 2   - switch to window 2
-SPC w c - delete current window
-SPC TAB - switch to previous buffer
-SPC b b - switch buffers
-SPC f f - find a file
-SPC f s - save a file (:w also works)
-SPC p p - open project
-SPC p h - find a file in current project
-SPC b d - kill current buffer
-SPC b M - move buffer to another window
-SPC v   - enter expand-region state
-
 Useful Vim key bindings
-
-## movement
-
-
-. - repeat that command again
-H - head of the screen
-M - middle of the screen
-L - last of the screen
-} - move forward by paragraph or block
-{ - move backwards by paragraph or block
-* - search for word under the cursor
-    n - search again forward
-    N - search again backwards
-# - search backwards for word under cursor
-/ - search forward
-? - search backward
-% - find matching brace, paren, etc
-ma - mark a line in a file with marker "a"
-`a - after moving around, go back to the exact position of marker "a"
-'a - after moving around, go back to line of marker "a"
-:marks - view all the marks
-'' - go to the last place you were
-[{ - jump back to the "{" at the beginning of the current code block
-
-## editing
-
-X - delete char before cursor
-A - add to end of line
-I - insert at the beginning of the line
-dd - delete line
-D - delete from cursor to end of line
-di' - delete text inside single quotes
-yy - copy line
-Y - copy from cursor to end of line
-cc - change line
-C - change from cursor to end of line
-cit - change text inside html tag
-ci' - change text inside single quotes
-ci{ - change text inside curly brackets.
-ci... - etc
-p - paste after cursor
-P = paste before cursor
-o - add line below
-O - add line above
-. = repeat last comment
-r - replace character
-R - replace. (overwrite) (good for columns of text)
-J - join line (cursor can be anywhere on line)
-
-visual state
------------
-v - visual char state
-V - visual line state
-C-v - block visual state
 
 
 
@@ -401,3 +407,24 @@ See Vim section
 
 
 > You can also create layouts that are a collection of windows
+
+
+
+
+
+## Useful Spacemacs commands
+
+SPC w / - split window vertically
+SPC w - - split window horizontally
+SPC 1   - switch to window 1
+SPC 2   - switch to window 2
+SPC w c - delete current window
+SPC TAB - switch to previous buffer
+SPC b b - switch buffers
+SPC f f - find a file
+SPC f s - save a file (:w also works)
+SPC p p - open project
+SPC p h - find a file in current project
+SPC b d - kill current buffer
+SPC b M - move buffer to another window
+SPC v   - enter expand-region state

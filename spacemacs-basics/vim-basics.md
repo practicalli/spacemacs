@@ -12,6 +12,7 @@ Vim style editing uses multiple states for specific tasks, enabling simple keybi
 
 First get familiar with **normal**, **insert** and **visual** states.  Then when you are comfortable, move on to **iedit** and **lisp** states.
 
+
 ## Learning Vim
 
 Start learning the basics of Vim in Spacemacs by following the built-in Evil tutorial: `SPC h T`
@@ -27,3 +28,7 @@ Other learning resource for Vim include:
 * [Vim Casts](http://vimcasts.org/)
 * [Editing as a power user - Vim to Spacemacs](https://steemit.com/vim/@hansvb/text-editing-as-a-power-user-from-vim-to-spacemacs-or-how-to-get-things-done)
 * [Vim verses Spacemacs](https://www.slant.co/versus/42/69/~vim_vs_spacemacs)
+
+
+
+6379

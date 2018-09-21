@@ -4,6 +4,9 @@ Understanding the [Emacs basic concepts and terminology](emacs-basics.html) will
 
 You will gradually discover the power and pleasure of using [Vim and modal editing](vim-basics.html), using different states for specific tasks and reducing your cognitive load (and strain from keybinding combinations).  The [Vim Quick Reference](vim-quick-reference.html) will help you use Spacemacs more effectively.
 
+> ####Hint::Spacemacs for Vim users
+> [Migrating from Vim](https://github.com/syl20bnr/spacemacs/blob/master/doc/VIMUSERS.org) article helps Vimmers get up to speed with Spacemacs.
+
 The two most important things to learn about Spacemacs first are the Space menu and the Help system.
 
 ## Space bar - main menu
