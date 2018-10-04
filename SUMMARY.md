@@ -34,6 +34,7 @@
     * [Emacs Quick Reference](spacemacs-basics/emacs-quick-reference.md)
     * [Vim Basics](spacemacs-basics/vim-basics.md)
     * [Speaking Vim](spacemacs-basics/speaking-vim.md)
+    * [Spacemacs Vim](spacemacs-basics/spacemacs-vim.md)
     * [Vim Quick Reference](spacemacs-basics/vim-quick-reference.md)
 * [Create a Clojure Project](create-a-project/index.md)
     * [Using Emacs Eshell](create-a-project/using-emacs-eshell.md)
