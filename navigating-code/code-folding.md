@@ -4,15 +4,15 @@ Code folding allows you to collapse a code block onto one line, allowing you to 
 
 > **FIXME** TODO: Add a video of Code folding in action
 
-## Fold Transient State
+## Code Fold Transient State
 
 You can use a transient state for folding code via `SPC z .`, which seems to be most useful when reviewing code.
 
-![Spacemacs - Zoom - Code Fold transient state](../images/spacemacs-zoom-fold-transient-state.png)
+![Spacemacs - Zoom - Code Fold transient state](/images/spacemacs-zoom-fold-transient-state.png)
 
-## Evil state
+## Evil Normal state
 
-When actively developing or refactoring code, the Vim normal state has a zoom menu via the `z` key as follows
+When actively developing or refactoring code, the Vim normal state has code folding commands via the `z` key as follows
 
 | Evil state  | Command            | Description                        |
 |-------------|--------------------|------------------------------------|
@@ -22,5 +22,15 @@ When actively developing or refactoring code, the Vim normal state has a zoom me
 | `z r`       | `evil-open-folds`  | Opens all folded code blocs        |
 | `z m`       | `evil-close-folds` | Folds all code blocks in buffer    |
 
-[![Spacemacs - Zoom - Evil normal state menu - `z`](../images/spacemacs-zoom-menu.png)](../images/spacemacs-zoom-menu.png)
 
+[![Spacemacs Zoom menu](/images/spacemacs-vim-normal-z-menu.png)](/images/spacemacs-vim-normal-z-menu.png)
+
+
+> ####Info::Code folding options
+> Spacemacs uses evil folding by default and you can easily switch to use [origami](https://github.com/gregsexton/origami.el).  Origami adds a recursive open and close, and what it calls an org-mode header collapse (although these didnt seem to work on my Clojure code).
+>
+> Edit your `.spacemacs` file and update `dotspacemacs-folding-method 'origami`.
+>
+>  Changing this setting will download the origami package, so I suggest restarting Emacs, `SPC q r`, rather than just reloading the configuration.
+>
+> If Origami allows you to [write your own parser](https://github.com/gregsexton/origami.el#does-it-support-my-favourite-major-mode) should you need to teach it a different way to folding your code.  The  website
