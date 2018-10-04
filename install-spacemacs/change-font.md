@@ -2,9 +2,9 @@
 
 You can change the font to any currently installed on your computer.  The default font is [Source Code Pro](https://adobe-fonts.github.io/source-code-pro/).
 
-I set the default font to Ubuntu Mono from the freely available [Ubuntu Font Family](http://font.ubuntu.com/).
+Ubuntu Mono is also a great font to use for code.  This font is available in the [Ubuntu Font Family](http://font.ubuntu.com/) and on all Ubuntu operating systems (and derivatives).
 
-Edit the `dotspacemacs-default-font` settting in the `~/.spacemacs` file
+To change font, open the `~/.spacemacs` file (`SPC f e d`) and edit the `dotspacemacs-default-font`
 
 ```lisp
    dotspacemacs-default-font '("Ubuntu Mono"
@@ -13,25 +13,22 @@ Edit the `dotspacemacs-default-font` settting in the `~/.spacemacs` file
                                :width normal)
 ```
 
-> ####Hint:: Powerline graphics adjustment
-> If the powerline graphics looks a little corrupted, then adjust the `:powerline-scale` value by `0.1` either way until it looks correct.
-
 
 ## Zooming - Emacs Frame and Font Size
 
-Changing font size of your buffer or zooming the size of your frame is useful for demos and presentation or other times you share your screen.
+If you attach an external monitor, share your screen, give demos or presentations in Emacs, then you may need to scale the font size of your buffer or if using multiple buffers, zoom the size of your Emacs frame.
 
-Use the Spacemacs Zoom menu to enter a transient state that will let you zoom text or frame size
+Use the Spacemacs Zoom menu to enter a transient state that will let you zoom text or frame size.
 
 | Spacemacs | Emacs     | Description                   |
 |-----------|-----------|-------------------------------|
-| `SPC z f` | `M-m z f` | Zoom Frame Transient State    |
-| `SPC z x` | `M-m z x` | Font Scalling Transient State |
+| `SPC z f` | `M-m z f` | Zoom all the buffers in the current frame        |
+| `SPC z x` | `M-m z x` | Scale the font of the current buffer                 |
 
-[![Spacemacs - Zoom Text Transient State - Font Scalling](../images/spacemacs-zoom-text-transient-state-font-scaling.png)](../images/spacemacs-zoom-text-transient-state-font-scaling.png)
+[![Spacemacs - Zoom Text Transient State - Font Scalling](/images/spacemacs-zoom-text-transient-state-font-scaling.png)](/images/spacemacs-zoom-text-transient-state-font-scaling.png)
 
 
-[![Spacemacs - Zoom Text Transient State - Font Scalling](../images/spacemacs-zoom-frame-scale-transient-state.png)](../images/spacemacs-zoom-frame-scale-transient-state.png)
+[![Spacemacs - Zoom Frame Transient State](/images/spacemacs-zoom-frame-scale-transient-state.png)](/images/spacemacs-zoom-frame-scale-transient-state.png)
 
 > ####Hint::
-> Adjusting the font size of a buffer is not permanent and only applies to the currently highlighted buffer.  If the font size is often too big or to small, then adjust the default font size as shown above.
+> Adjusting the font size of a buffer is not permanent.  If the font size is often too big or to small, then change the `dotspacemacs-default-font` setting for `:size`.
