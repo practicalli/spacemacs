@@ -14,4 +14,5 @@ For example, if you want to write a guide to your project, you could create an o
 If you want to see many of the things Org-mode can do, take a look at one of these videos on youtube.
 
 * [Getting started with Org Mode](https://www.youtube.com/watch?v=SzA2YODtgK4) - covers more than what you need to start with
+* [Org-mode todo states](https://www.youtube.com/watch?v=Ck9HXMkNGGY) - interesting ideas with org-mode todo states
 * [Overview of Org Mode - Hack Emacs](https://www.youtube.com/watch?v=SzA2YODtgK4) - older, but has more examples
