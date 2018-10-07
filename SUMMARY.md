@@ -43,6 +43,7 @@
     * [NeoTree](working-with-projects/neotree.md)
     * [Ranger](working-with-projects/ranger.md)
     * [Managing Buffers](working-with-projects/managing-buffers.md)
+        * [Tidying up Buffers](working-with-projects/tidying-up-buffers.md)
     * [Managing Windows](working-with-projects/managing-windows.md)
     * [Layouts](working-with-projects/layouts.md)
 * [Clojure Repl](clojure-repl/index.md)
