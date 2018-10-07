@@ -27,10 +27,15 @@ When actively developing or refactoring code, the Vim normal state has code fold
 
 
 > ####Info::Code folding options
-> Spacemacs uses evil folding by default and you can easily switch to use [origami](https://github.com/gregsexton/origami.el).  Origami adds a recursive open and close, and what it calls an org-mode header collapse (although these didnt seem to work on my Clojure code).
+> Spacemacs uses evil folding by default and you can easily switch to use [origami](https://github.com/gregsexton/origami.el).  Origami adds a recursive open and close, and what it calls an org-mode header collapse (although these didnt seem to work on my Clojure code). Origami seems less useful for Clojure than evil-fold, as folding seems to only work at the top level.
 >
 > Edit your `.spacemacs` file and update `dotspacemacs-folding-method 'origami`.
 >
 >  Changing this setting will download the origami package, so I suggest restarting Emacs, `SPC q r`, rather than just reloading the configuration.
 >
 > If Origami allows you to [write your own parser](https://github.com/gregsexton/origami.el#does-it-support-my-favourite-major-mode) should you need to teach it a different way to folding your code.  The  website
+>
+> There is also [evil-vimish-fold](https://github.com/mrkkrp/vimish-fold/blob/master/vimish-fold.el) which some have commented to be really good for every language, however, I dont think this has been added to Spacemacs as a layer yet.    I could be doing something wrong, or the Clojure parser for origami needs tweeking.  I would love to see the argument list still shown when folding, as an example.
+> To try the evil-vimish-fold package without a layer, you can add it to your `.spacemacs` file as follows
+> 1) add the package name `evil-vimish-fold` to `dotspacemacs-additional-packages`
+> 2) add `(evil-vimish-fold-mode 1)` to `user-config`

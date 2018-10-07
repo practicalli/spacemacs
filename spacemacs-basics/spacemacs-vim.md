@@ -1,13 +1,11 @@
 # Spacemacs Vim
 
-> ####TODO::Work in progress
+> #### TODO::Work in progress
 > Adding neat things Spacemacs adds to the vim experience here, as I learn them.  Here are a few powerful menus for vim normal state.
-
 
 ## The power of g
 
 `g` in Vim normal mode brings up a menu of neat shortcuts
-
 
 [![Spacemacs Vim Normal - g menu](/images/spacemacs-vim-normal-g-menu.png)](/images/spacemacs-vim-normal-g-menu.png)
 
@@ -18,16 +16,11 @@ I mainly use this for changing the case of letters, e.g.:
 `u` or `U` to change to lower or upper case
 
 
-
-
-
 ## `#` or `*` to navigate by words / symbols
 
 `#` or `*` enters **symbol highlight transient state** allowing you to jump between the current symbol name and any other instance in the buffer.
 
-
 [![Spacemacs Vim Normal - Symbol highlight transient state](/images/spacemacs-vim-normal-symbol-highlight-transient-state.png)](/images/spacemacs-vim-normal-symbol-highlight-transient-state.png)
-
 
 `e` to start iedit state and edit all the symbols concurrently.  This is so amazing.
 

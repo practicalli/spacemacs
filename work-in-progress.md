@@ -1,5 +1,16 @@
 # Work in Progress
 
+
+# Keyboard characters
+
+`SPC i u` - helm-ucs
+
+Will load all unicode characters the first time its called, as spacemacs doesnt load them in by default.
+
+or use classic `C-c 8 RET` (which seems to show different symbols, is that unicode 8 and the other unicode 16 perhaps).
+
+type arrow to see all the different types of arrows
+
 ## comments
 
 `SPC ;`

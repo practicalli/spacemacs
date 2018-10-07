@@ -1,13 +1,13 @@
 # Clojure Snippets
 
-Using snippets saves you time typing common coding structures and helps you avoid silly typos too.  Simply typing in a snippet name and pressing `M-/` or using `SPC SPC yas-expand` gives you the full text & code structure from the snippet template.
+Using snippets saves you time typing common coding structures and helps you avoid silly typos too.  Simply typing in a snippet name and pressing `TAB` or using `SPC SPC yas-expand` gives you the full text & code structure from the snippet template.
 
-For example, if you are defining a new function in Clojure then type `defn` and press `M-/` to expand to the full definition structure, including all parens.  Then use `TAB` to move through the structure to complete the name, doc-string, arguments and behaviour of the function.
+For example, if you are defining a new function in Clojure then type `defn` and press `TAB` to expand to the full definition structure, including all parens.  Then use `TAB` to move through the structure to complete the name, doc-string, arguments and behaviour of the function.
 
 Lets look at the built-in snippets that come with the Clojure layer in [Spacemacs](https://spacemacs.org) (and should be the default in Emacs YASnippet package).
 
 > ####Hint::Write your own snippets
-> Its easy to [wrtie your own snippets](http://jr0cket.co.uk/2016/07/spacemacs-adding-your-own-yasnippets.html) for Clojure or any other language you use with [Spacemacs](https://spacemacs.org) / Emacs
+> Its easy to [wrtie your own snippets](add-your-own-snippets.html) for Clojure or any other language you use with [Spacemacs](https://spacemacs.org) / Emacs
 
 
 # Where do Snippets fit in
