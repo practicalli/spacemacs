@@ -1,21 +1,20 @@
 # Enhancing the Clojure experience
 
-Adding the **clojure** layer provides a featured Clojure development experience based on [CIDER](https://docs.cider.mx)
+Adding the **clojure** layer provides a Clojure development experience based on [CIDER](https://docs.cider.mx)
 
-We can make the development experience even better by adding a few more layers:
+We can make the development experience even better by adding a few more layers and some optional packages for the clojure layer:
 
 Layers are defined in the `dotspacemacs-configuration-layers` section of the `~/.spacemacs` configuration file.
 
-| Layer name        | Description                                                        |
-|-------------------|--------------------------------------------------------------------|
-| `auto-completion` | to complete  names of functions, symbols, etc.                     |
-| `git`             | git  based version control with [Magit](https://magit.vc/)         |
-| `markdown`        | writing project descriptions in README.md and other markdown files |
-| `org-mode`        | write project documentaion, organise tasks                         |
-| `syntax-checking` | spell checking words as you type                                   |
-| `version control` | general version control features, eg. diff margins                 |
-
-
+| Layer name        | Description                                                                                                                                                           |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `auto-completion` | to complete  names of functions, symbols, etc.                                                                                                                        |
+| `clojure`         | [CIDER](https://docs.cider.mx) with [clj-refactor](https://github.com/clojure-emacs/clj-refactor.el/wiki) and [sayid](http://clojure-emacs.github.io/sayid/) debugger |
+| `git`             | git version control with [Magit](https://magit.vc/)                                                                                                            |
+| `markdown`        | writing project descriptions in README.md and other markdown files                                                                                                    |
+| `org-mode`        | write project documentaion, organise tasks                                                                                                                            |
+| `syntax-checking` | spell checking words as you type                                                                                                                                      |
+| `version control` | general version control features, eg. diff margins                                                                                                                    |
 
 > ####Note::Edit .spacemacs and add layers
 > Open the `.spacemacs` file.  Spacemacs provides a mnemonic keybinding for this:
@@ -33,7 +32,9 @@ Layers are defined in the `dotspacemacs-configuration-layers` section of the `~/
                       auto-completion-enable-help-tooltip t
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-enable-sort-by-usage t)
-     clojure
+     (clojure :variables
+              clojure-enable-sayid t
+              clojure-enable-clj-refactor t)
      emacs-lisp
      (git :variables
           git-magit-status-fullscreen t
