@@ -122,6 +122,7 @@
 * [Github](github/index.md)
     * [Gists](github/gists.md)
 * [Debugging](debugging/index.md)
+    * [Inspect values](debugging/inspect-values.md)
 * [Org-mode](org-mode/index.md)
     * [Headings](org-mode/headings.md)
     * [TODO States](org-mode/todo-states.md)
