@@ -154,6 +154,7 @@
 * [Additional Features](clojurescript/additional-features.md)
     * [CSS Rainbow Colors](clojurescript/css-rainbow-colors.md)
 * [Troubleshooting](troubleshooting/index.md)
+* [Writing Emacs Lisp](writing-emacs-lisp/index.md)
 * [Reference](reference/index.md)
     * [Vim - Getting Comfortable](reference/vim/getting-comfortable.md)
     * [Keybindings](reference/keybindings/index.md)
