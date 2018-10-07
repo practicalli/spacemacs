@@ -120,7 +120,7 @@
 * [Debugging](debugging/index.md)
 * [Org-mode](org-mode/index.md)
     * [Tables](org-mode/tables.md)
-    * [Easy templates](org-mode/easy-templates.md)
+    * [Code Blocks](org-mode/code-blocks.md)
     * [Yasnippets](org-mode/yasnippets.md)
     * [Org-mode tweaks](org-mode/org-mode-tweaks.md)
     * [Literate Programming](org-mode/literate-programming/index.md)
