@@ -174,6 +174,7 @@
     * [Local Assignment](reference/local-assignement.md)
 * [Misc](misc/index.md)
     * [Artist mode](misc/artist-mode.md)
+    * [Unicode Characters](misc/unicode-characters.md)
 * [Contributors](contributors.md)
 * [About this workshop](introduction/about-this-workshop.md)
     * [Workshop conventions](introduction/workshop-conventions.md)
