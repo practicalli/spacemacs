@@ -154,7 +154,7 @@ All the languages...
     </td>
     <td>
       <a href="http://spacemacs.org/layers/+lang/yaml/README.html">
-        <img src="/images/yaml-logo.png.png" alt="YAML"/>
+        <img src="/images/yaml-logo.png" alt="YAML"/>
       </a>
     </td>
   </tr>
