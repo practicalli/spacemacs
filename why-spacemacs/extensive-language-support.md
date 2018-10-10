@@ -75,6 +75,23 @@ All the languages...
   </tr>
   <tr>
     <td>
+      <a href="http://spacemacs.org/layers/+lang/csharp/README.html">
+        <img src="/images/logo_CSharp.png" alt="C#"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://spacemacs.org/layers/+lang/elixir/README.html">
+        <img src="/images/elixir-logo.png" alt="Elixir"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://spacemacs.org/layers/+lang/elm/README.html">
+        <img src="/images/200px-Elm_logo.png" alt="Elm"/>
+      </a>
+    </td>
+  </tr>  
+  <tr>
+    <td>
       <a href="http://spacemacs.org/layers/+frameworks/react/README.html">
         <img src="/images/200px-React-icon.png" alt="React"/>
       </a>
@@ -91,13 +108,6 @@ All the languages...
     </td>
   </tr>
 </table>
-
-
-csharp layers
-
-elixr
-
-elm
 
 purescript
 
