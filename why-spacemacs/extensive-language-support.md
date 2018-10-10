@@ -141,6 +141,23 @@ All the languages...
       </a>
     </td>
   </tr>
+  <tr>
+    <td>
+      <a href="http://spacemacs.org/layers/+lang/markdown/README.html">
+        <img src="/images/200px-Markdown.png" alt="Markdown"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://spacemacs.org/layers/+lang/asciidoc/README.html">
+        <img src="/images/asciidoctor-logo.png" alt="AsciiDoc"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://spacemacs.org/layers/+lang/yaml/README.html">
+        <img src="/images/yaml-logo.png.png" alt="YAML"/>
+      </a>
+    </td>
+  </tr>
 </table>
 
 purescript
