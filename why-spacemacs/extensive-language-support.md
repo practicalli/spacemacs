@@ -124,6 +124,40 @@ All the languages...
   </tr>  
   <tr>
     <td>
+      <a href="http://spacemacs.org/layers/+lang/swift/README.html">
+        <img src="/images/200px-Swift_logo.png" alt="Swift"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://spacemacs.org/layers/+lang/ruby/README.html">
+        <img src="/images/200px-Ruby_logo.png" alt="Ruby"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://spacemacs.org/layers/+lang/fsharp/README.html">
+        <img src="/images/Fsharp_logo.png" alt="F#"/>
+      </a>
+    </td>
+  </tr> 
+  <tr>
+    <td>
+      <a href="http://spacemacs.org/layers/+lang/lua/README.html">
+        <img src="/images/200px-Lua-logo.png" alt="Lua"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://spacemacs.org/layers/+lang/ocaml/README.html">
+        <img src="/images/ocaml-logo.png" alt="OCaml"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://spacemacs.org/layers/+lang/idris/README.html">
+        <img src="/images/idris-logo.png" alt="Idris"/>
+      </a>
+    </td>
+  </tr> 
+  <tr>
+    <td>
       <a href="http://spacemacs.org/layers/+frameworks/react/README.html">
         <img src="/images/200px-React-icon.png" alt="React"/>
       </a>
