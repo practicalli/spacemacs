@@ -7,9 +7,12 @@ All the languages...
 <table>
   <tr>
     <td>
-      <a href="http://spacemacs.org/layers/+lang/clojure/README.html">
-        <img src="/images/clojure-logo-3d.png" alt="Clojure Layer"/>
-      </a>
+      <figure>
+        <a href="http://spacemacs.org/layers/+lang/clojure/README.html">
+          <img src="/images/clojure-logo-3d.png" alt="Clojure Layer"/>
+        </a>
+        <figcaption>Clojure</figcaption>
+      </figure>
     </td>
    <td>
       <a href="http://spacemacs.org/layers/+lang/emacs-lisp/README.html">
@@ -81,7 +84,7 @@ All the languages...
     </td>
     <td>
       <a href="http://spacemacs.org/layers/+frameworks/django/README.html">
-        <img src="/images/Django-Logo.png" alt="Django"/>
+        <img src="/images/django-logo.png" alt="Django"/>
       </a>
     </td>
     <td>
