@@ -54,6 +54,6 @@ See the Spacemacs documentation for a [list of layers](http://spacemacs.org/laye
 >
 > Installing packages via the `packages-list-packages` method is ignored by Spacemacs.  Any packages installed in this way will be ignored.
 >
-> If no layer exists for a package, you can [use a package without a layer](http://spacemacs.org/doc/DOCUMENTATION.html#without-a-layer)
+> If no layer exists for a package, you can [use a package without a layer](http://spacemacs.org/doc/DOCUMENTATION.html#without-a-layer).
 >
 > You can add what ever elisp you like to the **dotspacemacs/user-config** section of the `~/.spacemacs` configuration file.
