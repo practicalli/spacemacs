@@ -109,6 +109,23 @@ All the languages...
   </tr>  
   <tr>
     <td>
+      <a href="http://spacemacs.org/layers/+lang/erlang/README.html">
+        <img src="/images/200px-Erlang_logo.png" alt="Erlang"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://spacemacs.org/layers/+lang/php/README.html">
+        <img src="/images/200px-PHP-logo.png" alt="PHP"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://spacemacs.org/layers/+lang/go/README.html">
+        <img src="/images/golang-logo.png" alt="Golang"/>
+      </a>
+    </td>
+  </tr>  
+  <tr>
+    <td>
       <a href="http://spacemacs.org/layers/+frameworks/react/README.html">
         <img src="/images/200px-React-icon.png" alt="React"/>
       </a>
