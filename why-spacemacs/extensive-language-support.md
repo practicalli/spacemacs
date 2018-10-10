@@ -32,8 +32,8 @@ All the languages...
       </a>
     </td>
     <td>
-      <a href="http://develop.spacemacs.org/layers/+lang/groovy/README.html">
-        <img src="/images/200px-Groovy-logo.png" alt="Groovy"/>
+      <a href="http://spacemacs.org/layers/+lang/java/README.html">
+        <img src="/images/200px-Java-Logo.png" alt="Java"/>
       </a>
     </td>
   </tr>
@@ -44,8 +44,8 @@ All the languages...
       </a>
     </td>
     <td>
-      <a href="http://spacemacs.org/layers/+lang/java/README.html">
-        <img src="/images/200px-Java-Logo.png" alt="Java"/>
+      <a href="http://spacemacs.org/layers/+lang/php/README.html">
+        <img src="/images/200px-PHP-logo.png" alt="PHP"/>
       </a>
     </td>
     <td>
@@ -112,8 +112,8 @@ All the languages...
       </a>
     </td>
     <td>
-      <a href="http://spacemacs.org/layers/+lang/php/README.html">
-        <img src="/images/200px-PHP-logo.png" alt="PHP"/>
+      <a href="http://spacemacs.org/layers/+lang/ruby/README.html">
+        <img src="/images/200px-Ruby_logo.png" alt="Ruby"/>
       </a>
     </td>
     <td>
@@ -129,8 +129,8 @@ All the languages...
       </a>
     </td>
     <td>
-      <a href="http://spacemacs.org/layers/+lang/ruby/README.html">
-        <img src="/images/200px-Ruby_logo.png" alt="Ruby"/>
+      <a href="http://spacemacs.org/layers/+lang/yaml/README.html">
+        <img src="/images/yaml-logo.png" alt="YAML"/>
       </a>
     </td>
     <td>
@@ -185,10 +185,66 @@ All the languages...
       </a>
     </td>
     <td>
-      <a href="http://spacemacs.org/layers/+lang/yaml/README.html">
-        <img src="/images/yaml-logo.png" alt="YAML"/>
+      <a href="http://spacemacs.org/layers/+lang/latex/README.html">
+        <img src="/images/200px-LaTeX_logo.png" alt="LaTeX"/>
       </a>
     </td>
   </tr>
 </table>
 
+And in the `develop` branch even more...
+
+<table>
+  <tr>
+    <td>
+      <a href="http://develop.spacemacs.org/layers/+lang/groovy/README.html">
+        <img src="/images/200px-Groovy-logo.png" alt="Groovy"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://develop.spacemacs.org/layers/+lang/kotlin/README.html">
+        <img src="/images/kotlin-logo.png" alt="Kotlin"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://develop.spacemacs.org/layers/+lang/coffeescript/README.html">
+        <img src="/images/coffeescript-logo.png" alt="Coffeescript"/>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="http://develop.spacemacs.org/layers/+lang/julia/README.html">
+        <img src="/images/julia-logo.png" alt="Julia"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://develop.spacemacs.org/layers/+lang/perl5/README.html">
+        <img src="/images/perl5-logo.png" alt="Perl 5"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://develop.spacemacs.org/layers/+lang/perl6/README.html">
+        <img src="/images/perl6-logo.png" alt="Perl 6"/>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="http://develop.spacemacs.org/layers/+frameworks/emberjs/README.html">
+        <img src="/images/ember-logo.png" alt="EmberJS"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://develop.spacemacs.org/layers/+frameworks/phoenix/README.html">
+        <img src="/images/phoenix-logo.png" alt="Phoenix/>
+      </a>
+    </td>
+    <td>
+      <a href="http://develop.spacemacs.org/layers/+lang/restructuredtext/README.html">
+        <img src="/images/rst-logo.png" alt="reStructuredText"/>
+      </a>
+    </td>
+  </tr>
+</table>
+  
