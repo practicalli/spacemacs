@@ -124,6 +124,7 @@
     * [Gists](github/gists.md)
 * [Debugging](debugging/index.md)
     * [Inspect values](debugging/inspect-values.md)
+    * [Sayid debugger](debugging/sayid-debugger.md)
 * [Markdown documentation](markdown-mode/index.md)
 * [Org-mode](org-mode/index.md)
     * [Headings](org-mode/headings.md)
