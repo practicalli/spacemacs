@@ -1,7 +1,5 @@
 # Extensive Language Support
 
-> ####Todo::Icons or graphics for all the languages supported
-
 All the languages...
 
 <table>
@@ -160,12 +158,3 @@ All the languages...
   </tr>
 </table>
 
-purescript
-
-rust
-
-scheme
-
-yml
-
-sql
