@@ -237,7 +237,7 @@ And in the `develop` branch even more...
     </td>
     <td>
       <a href="http://develop.spacemacs.org/layers/+frameworks/phoenix/README.html">
-        <img src="/images/phoenix-logo.png" alt="Phoenix/>
+        <img src="/images/phoenix-logo.png" alt="Phoenix"/>
       </a>
     </td>
     <td>
