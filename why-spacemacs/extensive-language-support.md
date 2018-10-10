@@ -7,12 +7,9 @@ All the languages...
 <table>
   <tr>
     <td>
-      <figure>
-        <a href="http://spacemacs.org/layers/+lang/clojure/README.html">
-          <img src="/images/clojure-logo-3d.png" alt="Clojure Layer"/>
-        </a>
-        <figcaption>Clojure</figcaption>
-      </figure>
+      <a href="http://spacemacs.org/layers/+lang/clojure/README.html">
+        <img src="/images/clojure-logo-3d.png" alt="Clojure Layer"/>
+      </a>
     </td>
    <td>
       <a href="http://spacemacs.org/layers/+lang/emacs-lisp/README.html">
