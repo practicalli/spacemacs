@@ -63,13 +63,30 @@ All the languages...
       </a>
     </td>
     <td>
-      <a href="http://spacemacs.org/layers/+lang/javascript/README.html">
-        <img src="/images/200px-Unofficial_JavaScript_logo.png" alt="JavaScript"/>
+      <a href="http://spacemacs.org/layers/+lang/rust/README.html">
+        <img src="/images/200px-Rust_logo.png" alt="Rust"/>
       </a>
     </td>
     <td>
       <a href="http://spacemacs.org/layers/+lang/c-c++/README.html">
         <img src="/images/200px-ISO_C++_Logo.png" alt="C/C++"/>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="http://spacemacs.org/layers/+lang/javascript/README.html">
+        <img src="/images/200px-Unofficial_JavaScript_logo.png" alt="JavaScript"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://spacemacs.org/layers/+lang/purescript/README.html">
+        <img src="/images/PureScript_Logo.png" alt="Purescript"/>
+      </a>
+    </td>
+    <td>
+      <a href="http://spacemacs.org/layers/+lang/typescript/README.html">
+        <img src="/images/typescript-logo.png" alt="Typescript"/>
       </a>
     </td>
   </tr>
