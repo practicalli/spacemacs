@@ -1,0 +1,31 @@
+* Why Spacemacs
+** Community support
+** Mnemonic menu / keybindings
+** Layers
+** Navigating around
+** Multi-model editing
+** Manipulating text
+** Buffers, Windows, Layouts
+* Clojure Layer
+** dotspacemacs
+** Build tool support
+* Clojure REPL
+** Starting the repl
+** Showing the repl buffer
+** Switching namespaces
+** REPL command menu
+* Vim in Emacs
+this is vim insert mode and this is where you do al the creative writing.
+* Evaluating Clojure
+** Inline or In REPL
+* Code snippets
+* Structural Editing
+* Clojure Refactor
+* Testing
+* Clojure inspection / debugging
+* Magit - version control
+* Github
+** Gists
+* Org-mode
+** `, RET` - new
+* Vim in Emacs

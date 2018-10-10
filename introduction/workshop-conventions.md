@@ -2,36 +2,54 @@
 
 ## Keybinding conventions
 
-Spacemacs provides a global menu where you can access all the features using a mnemonic, text based menu.  Its the recommended starting point for those new to Spacemacs.
+General menu and commands
 
-| Spacemacs           | Emacs            | Major mode               | Evil                         | Command               | Description            |
-|---------------------|------------------|--------------------------|------------------------------|-----------------------|------------------------|
-| Spacemacs main menu | Emacs keybinding | Major mode specific menu | Emacs normal mode keybinding | Name of Emacs command | Description of command |
+| Spacemacs           | Major mode            | Normal                 | Insert                 | Command               |
+|---------------------|-----------------------|------------------------|------------------------|-----------------------|
+| `SPC` - global menu | `,` - major mode menu | Evil (Vim) normal mode | Evil (Vim) insert mode | Name of Emacs command |
 
-### Spacemacs
 
-Access the global menu from Vim normal mode, via `SPC`
+Vim Mode specific keybindings
 
-### Emacs (any mode)
+| Normal           | Insert                | Visual             | Motion | Lisp               | Iedit             | Evilified | Emacs                     |
+|------------------|-----------------------|--------------------|--------|--------------------|-------------------|-----------|---------------------------|
+| The default mode | Mode for writing text | Mode for selection | ?      | Structured Editing | Text manipulation |           | Classic Emacs keybindings |
+|                  |                       |                    |        |                    |                   |           |                           |
 
-Access the global menu as with the Spacemacs bindings, available in any mode via `M-m`
 
-### Major Mode
 
-Access features specific to the current major mode.  
+### Spacemacs - `SPC`
+
+Spacemacs provides a global menu where you can access commands using a mnemonic, text based menu.  Its the recommended starting point for those new to Spacemacs.
+
+Access the global menu via `SPC` in Evil Normal mode or via `M-m` in all other modes
+
+> ####Info
+> The use of `SPC`
+
+
+### Major Mode - `,`
+
+Access features specific to the current major mode.
 
 For example when you have a Clojure file or REPL buffer open you can access a Clojure specific menu using `M-RET` in Emacs mode or `,` in Vim normal mode.
 
 Having a major mode specific menu removes the need to use `SPC m` in Vim normal mode or `M-m` in Emacs mode.
 
+
 ### Evil (normal mode)
 
-Vim normal mode specific short-cuts to access Spacemacs features
+Vim arranges keybindings across multiple modes, reducing the number of key presses required to carry out commands normal mode specific short-cuts to access Spacemacs features
 
-### Command
 
-The name of the command.
+### Command - `SPC SPC`
 
-Use this approach there is no menu item or if you want to know what command a keybinding calls.
+Every menu item and keybinding in Spacemacs is calling a function, collectively called commands.
 
 Use commands with `SPC SPC` in Vim normal mode or `M-x` in any mode.
+
+Use a command when there is no menu item or keybinding.
+
+## Classic Emacs Keybindings
+
+The keybindings used in Emacs (holy mode) are also available, many of which start with `C-c` or `C-x`.  If you are familiar with these then its fine to stick with them.  However, if you have trouble learning or remembering them, then switch to the Spacemacs mnemonic alternatives.

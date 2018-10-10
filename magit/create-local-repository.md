@@ -9,3 +9,6 @@ If you run git status from a file that is not currently in a git project, magit 
 * confirm you want to create a git repository
 * specify where to create the repository, the root directory for the git repository
 
+{% youtube %}
+https://www.youtube.com/embed/AdEOazt1rD0?autoplay=1loop=1
+{% endyoutube %}

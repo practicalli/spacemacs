@@ -5,10 +5,10 @@
 /* Use Ubuntu font instead of the default Raleway font */
 body {
     font-family: Ubuntu;
-    margin: 2rem;
     font-size: 2rem;
 }
 
+/* Show keybindings to look like keys on a keyboard */
 kbd {
     display: inline-block;
     border: 1px solid #ccc;
@@ -20,22 +20,34 @@ kbd {
     background-color: #f7f7f7;
 }
 
+/* Over-ride maximum page width - default 800px */
+/*  - if over-ridden then paging arrows can appear over text */
 
-.book-body p , .book-body h1,.book-body h2,.book-body h3,.book-body h4,.book-body h5,.book-body h6,.book-body div,.book-body span ,  .summary , .summary li , .summary li a  {
+.page-inner {
+    max-width: 1000px;
+}
+
+
+.book-body h1,.book-body h2,.book-body h3,.book-body h4,.book-body h5,.book-body h6 {
     font-family : "Ubuntu", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.book-body p, .book-body div, .book-body span, .summary, .book-body li, .summary li a  {
+    font-family : "Ubuntu", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2rem;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal code {
     font-family: "Ubuntu Mono", Consolas, Menlo, Courier, monospace;
 }
 
-img {
+img, div, table {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Place thin green boarder around code blocks & increase font size from 85% to 108% */
+/* Code blocks: boarder & increased font size from 85% to 108% */
 .book .book-body .page-wrapper .page-inner section.normal .highlight pre, .book .book-body .page-wrapper .page-inner section.normal pre {
     background-color: #f7f7f7;
     border: 5px solid #D9EDF7;
@@ -46,12 +58,14 @@ img {
     padding: 16px;
 }
 
-/* red text for all non-language specific code sections & increased font size to 108% */
+/* Inline code:
+ - highlight colour and background
+ - increased font size to 108% */
 .book .book-body .page-wrapper .page-inner section.normal code {
     background-color: #f7f7f7;
-    color: #FF0077;
+    color: #ba6ec5;             /* Spacemacs purple*/
     border-radius: 3px;
-    font-size: 108%;
+    font-size: 128%;
     margin: 0;
     padding: 0.2em 0;
 }

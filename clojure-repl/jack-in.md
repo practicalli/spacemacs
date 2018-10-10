@@ -1,20 +1,12 @@
-# `clojure-jack-in` - Start a new Clojure REPL
+# Start a new Clojure REPL - `clojure-jack-in`
 
-To run a Clojure or Clojurescript REPL:
+In any buffer containing a Clojure file, use the following keybindings to run a REPL:
 
-| Spacemacs   | Major mode  | Emacs     | Evil    | Command                     |
-|-------------|-------------|-----------|---------|-----------------------------|
-| `SPC m s i` | `M-RET s i` | `C-c M-j` | `, s i` | cider-jack-in               |
-| `SPC m s I` | `M-RET s I` |           | `, s I` | cider-jack-in-clojurescript |
+| Vim Normal       | Emacs Major mode | Command                     |
+|------------------|------------------|-----------------------------|
+| `, '` or `, s i` | `M-RET s i`      | cider-jack-in               |
+| `, "` or `, s I` | `M-RET s I`      | cider-jack-in-clojurescript |
 
-There are also shortcut keybindings as these commands are called so often.
+Once the REPL starts you can evaluate your code in the buffer.
 
-* **SPC m '** - for a Clojure REPL
-* **SPC m "** - for a Clojurescript REPL
-
-
-> **NOTE** Start up the Clojure REPL in the workshop project.
-
-
-![Spacemacs - Open the core.clj file from spacemacs-workshop project](/images/spacemacs-clojure-project-repl-start-up.gif)
-
+![Spacemacs Clojure REPL Start Up](/images/spacemacs-clojure-project-repl-start-up.gif)

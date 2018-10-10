@@ -1,21 +1,31 @@
-# Clojure development with Spacemacs
+# Spacemacs: Clojure development made simple
+
+<iframe width="800" height="420" src="https://www.youtube.com/embed/Uuwg-069NYE?ecver=1" frameborder="0" allowfullscreen></iframe>
+
+<table>
+  <tr>
+    <td>
+      <a href="why-spacemacs/index.html"><img src="images/button-why-spacemacs.png" /></a>
+    </td>
+   <td>
+      <a href="before-you-start/index.html"><img src="images/button-before-you-start.png" /></a>
+    </td>
+    <td>
+      <a href="install-spacemacs/index.html"><img src="images/button-install-spacemacs.png" /></a>
+    </td>
+   <td>
+      <a href="create-a-project/index.html"><img src="images/button-code-with-clojure.png" /></a>
+    </td>
+  </tr>
+</table>
+
+[Emacs](https://www.gnu.org/software/emacs/) is an operating system disguised as a development tool, giving you the ability to interact with every aspect of your development life.
+
+[Spacemacs](http://spacemacs.org/) is the simplest way to use all the features and power of [Emacs](https://www.gnu.org/software/emacs/).  [Spacemacs](https://spacemacs.org) also integrates the raw text manipulation speed of Vim into the Emacs experience, enabling you to be even more productive.
+
+[Emacs](https://www.gnu.org/software/emacs/) has been a shining beacon of Free and Open Source software from the early 1970's and has grown to be a versatile set of development tools for all languages.  This long history has given [Emacs](https://www.gnu.org/software/emacs/) the ability to interact with almost every aspect of your digital life.
 
 ![Clojure-cider-spacemacs-logo](images/spacemacs-practicalli-banner.png)
-
-[Spacemacs](https://spacemacs.org) is a powerful tool for Clojure & Clojurescript development, folding the raw speed of Vim into the flexibility & wealth of features of [Emacs](https://www.gnu.org/software/emacs/).
-
-Spacemacs provides the easiest way to unleash all the power of [Emacs](https://www.gnu.org/software/emacs/), providing an extensive configuration whilst still maintaining the flexibility of Emacs.
-
-Emacs has been a shining beacon of Free and Open Source software from the early 1970's and has grown to be a versatile set of tools to not just for writing code but for helping you interact with almost every aspect of your digital life.
-
-## From first install to Clojure development
-
-In a few minutes you can go from install to Clojure development:
-
-<p align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Uuwg-069NYE?ecver=1" frameborder="0" allowfullscreen></iframe>
-</p>
-
 
 <hr />
 

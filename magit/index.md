@@ -1,5 +1,7 @@
 # MaGit - Version Control
 
+> #### TODO::work in progress, sorry
+
 Magit is a very powerful and simple to use client for Git version control.
 
 Here is a quick demonstration of Magit in action where we stage and commit changes locally, then push those commits to [Github](https://github.com)

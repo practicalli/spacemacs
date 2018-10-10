@@ -5,6 +5,10 @@ You can connect to a REPL started elsewhere, for example the command line with `
 * host name / ip address
 * port the repl is listening too
 
+| Spacemacs   | Major mode  | Emacs     | Evil    | Command         |
+|-------------|-------------|-----------|---------|-----------------|
+| `SPC m s c` | `M-RET s c` | `C-c M-c` | `, s c` | `cider-connect` |
+
 
 Use the `lein repl` command to run a new REPL on the command line.  Then connect to that REPL using `M-x cider-connect`
 

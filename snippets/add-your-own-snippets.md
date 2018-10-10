@@ -1,5 +1,24 @@
 # Add your own Snippets
 
+Spacemacs has lots of snippets for most of the languages and modes it supports.  However, YASnippets also uses a simple template system in plain text, so its pretty easy to learn.  Lets look at how to add your own snippets with Spacemacs.
+
+## automatically create snippets
+
+Select a code block that you often create and using the yasnippets tools to create your own generic template
+
+1. Press `v` for visual mode and move the cursor around to select the text, or `SPC v` to grow the selected region
+2. `SPC SPC helm-yas-create-snippet-on-region` creates a new snippet
+3. Enter the name you wish to refer to this snippet
+4. Select the major mode you want to add the snippet too (eg. clojure, markdown, html)
+5. Edit the text and delete any text that is not required
+6. Add tab points in the snippet if relevant
+     - `$1` initial cursor position, `$2` next cursor position on tab, `$0` end cursor position.
+7. `SPC SPC yas-tryout-snippet` to test the snippet has the right behaviour
+8. `SPC SPC yas-load-snippet-buffer` to load the snippet into the defined mode
+
+
+## Manually adding snippets
+
 The easiest place to add your own snippet definitions is in the `~/.emacs.d/private/snippets` directory.  Under this directory structure you should create a folder named after the relevant mode for your snippets, eg `markdown-mode`.  Inside this mode folder, create files whos names are based on the snippet alias you wish.
 
 So for a work in progress snipped called `wip` in markdown mode I created `~/.emacs.d/private/snippets/markdown-mode/wip` file.

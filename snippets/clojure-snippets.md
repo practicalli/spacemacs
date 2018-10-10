@@ -1,15 +1,16 @@
 # Clojure Snippets
 
-Using snippets saves you time typing common coding structures and helps you avoid silly typos too.  Simply typing in a snippet name and pressing `M-/` or using `M-x yas-expand` gives you the full text & code structure from the snippet template.
+Using snippets saves you time typing common coding structures and helps you avoid silly typos too.  Simply typing in a snippet name and pressing `TAB` or using `SPC SPC yas-expand` gives you the full text & code structure from the snippet template.
 
-For example, if you are defining a new function in Clojure then type `defn` and press `M-/` to expand to the full definition structure, including all parens.  Then use `TAB` to move through the structure to complete the name, doc-string, arguments and behaviour of the function.
+For example, if you are defining a new function in Clojure then type `defn` and press `TAB` to expand to the full definition structure, including all parens.  Then use `TAB` to move through the structure to complete the name, doc-string, arguments and behaviour of the function.
 
 Lets look at the built-in snippets that come with the Clojure layer in [Spacemacs](https://spacemacs.org) (and should be the default in Emacs YASnippet package).
 
-> Its easy to [wrtie your own snippets](http://jr0cket.co.uk/2016/07/spacemacs-adding-your-own-yasnippets.html) for Clojure or any other language you use with [Spacemacs](https://spacemacs.org) / Emacs
+> ####Hint::Write your own snippets
+> Its easy to [wrtie your own snippets](add-your-own-snippets.html) for Clojure or any other language you use with [Spacemacs](https://spacemacs.org) / Emacs
 
 
-# Where do Snippets fit in 
+# Where do Snippets fit in
 
 There are several ways to speed up typing your Clojure code, Leiningen Templates, autocompletion, clj-refactor and YASnippets.
 
@@ -17,10 +18,9 @@ Snippets are a great way to create much of the common code structures you typica
 
 Some of the snippets are made redundant by other Clojure layer features in Spacemacs.  For example, when I create a new file then the namespace is automatically added, so I rarely use the `ns` snippet.  I also use **clj-refactor** which takes care of adding require statements for me, so the `require` snippet is rarely used.
 
-> Note: Smartparens does not work when you are completing an expanded snippet the first time.  However, as soon as you tab out of the end of the snippet then smartparens works again.  I havent determined if this is simply a missing config or some conflict between YASnippets & Smartparens.
 
 
-# Default snippets for Clojure 
+# Default snippets for Clojure
 
 The snippets that are available in [Spacemacs](https://spacemacs.org) can be found in the [yasnippet github repository](https://github.com/AndreaCrotti/yasnippet-snippets) or in the ` ~/.emacs.d/elpa/yasnippet-20160501.1841/snippets/clojure-mode` directory on your laptop (when yasnippet package is updated then name of that directory will change).
 
@@ -59,6 +59,7 @@ All the current snippets for Clojure mode are in the following table, indicating
 | whenl      | `when-let` - local binding on when condition                                                                                   | binding, body                          |
 
 
-> Hint: The above table was created in Emacs markdown mode by enabling the minor mode: `orgtbl-mode`.  Start the table with a | character followed by a word and use `TAB` to create and align the table as you go through.  If you already have content, use the function `orgtbl-create-or-convert-from-region`.  To enable `orgtbl-mode` by default when in markdown major mode, edit your `~/.spacemacs` file, in the `dotspacemacs/user` section add the line `(add-hook 'markdown-mode-hook 'turn-on-orgtbl)`.
+> #### Hint:: Writing org-mode tables in markdown
+> The above table was created in Emacs markdown mode by enabling the minor mode: `orgtbl-mode`.  Start the table with a | character followed by a word and use `TAB` to create and align the table as you go through.  If you already have content, use the function `orgtbl-create-or-convert-from-region`.  To enable `orgtbl-mode` by default when in markdown major mode, edit your `~/.spacemacs` file, in the `dotspacemacs/user` section add the line `(add-hook 'markdown-mode-hook 'turn-on-orgtbl)`.
 
 Hope you have fun speeding up the writing of your Clojure code (and any other common text) in [Spacemacs](https://spacemacs.org) / [Emacs](https://www.gnu.org/software/emacs/).

@@ -1,14 +1,16 @@
 # Interactive Rebasing
 
-Magit makes it easy to do interactive rebasing 
+> #### TODO::work in progress, sorry
 
-Open the git log view with `l l` and select the point in history you want to rebase from 
+Magit makes it easy to do interactive rebasing
 
-
-
-## Fixing up 
+Open the git log view with `l l` and select the point in history you want to rebase from
 
 
-## Squashing 
+
+## Fixing up
+
+
+## Squashing
 
 Open th e

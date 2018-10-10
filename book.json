@@ -1,5 +1,5 @@
 {
-    "gitbook": ">=2.0.0",
+    "gitbook": ">=3.0.0",
     "title": "Clojure development with Spacemacs & Cider",
     "description": "Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code",
     "structure": {
@@ -13,17 +13,16 @@
         "epub": "styles/epub.css"
     },
     "plugins": [
-        "toggle-chapters",
+        "callouts",
         "codeblock-disable-glossary",
         "disqus",
-        "gist",
-        "exercises",
-        "quizzes",
-        "toolbar",
         "ga",
-        "callouts",
+        "gist",
+        "klipse",
         "sectionx",
-        "klipse"
+        "toggle-chapters",
+        "toolbar",
+        "youtube"
     ],
     "pluginsConfig": {
         "callouts": {

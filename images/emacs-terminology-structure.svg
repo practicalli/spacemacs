@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="143.77716mm"
+   width="194.88066mm"
+   viewBox="0 0 690.52203 509.44663"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="emacs-terminology-structure.svg"
+   inkscape:export-filename="/home/jr0cket/projects/practicalli/spacemacs-content/images/emacs-terminology-structure.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1053"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="1.2685914"
+     inkscape:cx="417.54201"
+     inkscape:cy="224.34855"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     fit-margin-top="8"
+     fit-margin-left="8"
+     fit-margin-right="8"
+     fit-margin-bottom="8" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect
+     style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:6.29687881;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect3195"
+     width="627.53223"
+     height="341.39078"
+     x="31.494896"
+     y="31.494896"
+     rx="0.32153443"
+     ry="0.77026588" />
+  <rect
+     style="fill:#ffffff;fill-opacity:0;stroke:#0000ff;stroke-width:6.6979537;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect3197-6"
+     width="314.78772"
+     height="266.85178"
+     x="332.29764"
+     y="43.621067"
+     rx="0.40179932"
+     ry="0.6974169" />
+  <rect
+     style="fill:#ffffff;fill-opacity:0;stroke:#0000ff;stroke-width:6.2788105;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect3197-6-1"
+     width="276.18921"
+     height="267.2709"
+     x="45.125534"
+     y="43.411495"
+     rx="0.35253167"
+     ry="0.69851232" />
+  <rect
+     style="fill:#ffffff;fill-opacity:0;stroke:#008000;stroke-width:6;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect3229"
+     width="245.25391"
+     height="235.22079"
+     x="60.465172"
+     y="61.108738"
+     rx="0.352532"
+     ry="0.69851202" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="79.875771"
+     y="92.748924"
+     id="text3231"><tspan
+       sodipodi:role="line"
+       id="tspan3233"
+       x="79.875771"
+       y="92.748924"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">(ns spacemacs-workshop.core)</tspan><tspan
+       sodipodi:role="line"
+       x="79.875771"
+       y="111.49892"
+       id="tspan3235"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"> </tspan><tspan
+       sodipodi:role="line"
+       x="79.875771"
+       y="130.24892"
+       id="tspan3237"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">(defn foo</tspan><tspan
+       sodipodi:role="line"
+       x="79.875771"
+       y="148.99892"
+       id="tspan3239"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">  &quot;I dont do a lot&quot;</tspan><tspan
+       sodipodi:role="line"
+       x="79.875771"
+       y="167.74892"
+       id="tspan3241"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">  [x]</tspan><tspan
+       sodipodi:role="line"
+       x="79.875771"
+       y="186.49892"
+       id="tspan3243"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">  (println x &quot;Hello World&quot;)</tspan><tspan
+       sodipodi:role="line"
+       x="79.875771"
+       y="205.24892"
+       id="tspan3245"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"> </tspan><tspan
+       sodipodi:role="line"
+       x="79.875771"
+       y="223.99892"
+       id="tspan3247"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">(foo &quot;Spacemacs Workshop, &quot;)</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:12.79495049px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.06624591px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="419.09756"
+     y="72.571304"
+     id="text3231-0"
+     transform="scale(0.84225514,1.1872887)"><tspan
+       sodipodi:role="line"
+       x="419.09756"
+       y="72.571304"
+       id="tspan3247-4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66245937px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.06624591px">;; Connected to nREPL server - nrepl://localhost:33789</tspan><tspan
+       sodipodi:role="line"
+       x="419.09756"
+       y="85.899376"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66245937px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.06624591px"
+       id="tspan3323">;; CIDER 0.15.0snapshot (package: 20161013.811), nREPL 0.2.12</tspan><tspan
+       sodipodi:role="line"
+       x="419.09756"
+       y="99.227455"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66245937px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.06624591px"
+       id="tspan3325">;; Clojure 1.8.0, Java 1.8.0_111</tspan><tspan
+       sodipodi:role="line"
+       x="419.09756"
+       y="112.55553"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66245937px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.06624591px"
+       id="tspan3327">;;     Docs: (doc function-name)</tspan><tspan
+       sodipodi:role="line"
+       x="419.09756"
+       y="125.8836"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66245937px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.06624591px"
+       id="tspan3329">;;           (find-doc part-of-name)</tspan><tspan
+       sodipodi:role="line"
+       x="419.09756"
+       y="139.21167"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66245937px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.06624591px"
+       id="tspan3331">;;   Source: (source function-name)</tspan><tspan
+       sodipodi:role="line"
+       x="419.09756"
+       y="152.53975"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66245937px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.06624591px"
+       id="tspan3333">;;  Javadoc: (javadoc java-object-or-class)</tspan><tspan
+       sodipodi:role="line"
+       x="419.09756"
+       y="165.86783"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66245937px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.06624591px"
+       id="tspan3335">;;     Exit: &lt;C-c C-q&gt;</tspan><tspan
+       sodipodi:role="line"
+       x="419.09756"
+       y="179.19589"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66245937px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.06624591px"
+       id="tspan3337">;;  Results: Stored in vars *1, *2, *3, an exception in *e;</tspan><tspan
+       sodipodi:role="line"
+       x="419.09756"
+       y="192.52397"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66245937px;line-height:125%;font-family:'Ubuntu Mono';-inkscape-font-specification:'Ubuntu Mono, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.06624591px"
+       id="tspan3339"> </tspan></text>
+  <g
+     id="g8310"
+     transform="translate(115.38639,22.864766)">
+    <rect
+       ry="0.69741702"
+       rx="0.40179899"
+       y="368.54657"
+       x="310.60486"
+       height="27.869762"
+       width="27.869762"
+       id="rect3341"
+       style="fill:#ffffff;fill-opacity:0;stroke:#008000;stroke-width:6;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       id="text3345"
+       y="392.84238"
+       x="343.21689"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-size:25px;line-height:1.25"
+         y="392.84238"
+         x="343.21689"
+         id="tspan3347"
+         sodipodi:role="line">Buffer</tspan></text>
+  </g>
+  <g
+     id="g8305"
+     transform="translate(115.38639,21.667744)">
+    <rect
+       ry="0.69741702"
+       rx="0.40179899"
+       y="369.74359"
+       x="151.13716"
+       height="27.869762"
+       width="27.869762"
+       id="rect3341-8"
+       style="fill:#ffffff;fill-opacity:0;stroke:#0000ff;stroke-width:6;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       id="text3345-0"
+       y="391.88373"
+       x="185.66621"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-size:25px;line-height:1.25"
+         y="391.88373"
+         x="185.66621"
+         id="tspan3347-9"
+         sodipodi:role="line">Window</tspan></text>
+  </g>
+  <g
+     id="g8300"
+     transform="translate(115.38639,25.350148)">
+    <rect
+       ry="0.69741702"
+       rx="0.40179899"
+       y="366.06119"
+       x="16.383787"
+       height="27.869762"
+       width="27.869762"
+       id="rect3341-8-1"
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:6;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       id="text3345-0-7"
+       y="388.20132"
+       x="49.162838"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-size:25px;line-height:1.25"
+         y="388.20132"
+         x="49.162838"
+         id="tspan3347-9-4"
+         sodipodi:role="line">Frame</tspan></text>
+  </g>
+  <rect
+     style="fill:#ffffff;fill-opacity:0;stroke:#800080;stroke-width:6.92808294;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect3422"
+     width="603.33759"
+     height="18.323387"
+     x="44.023792"
+     y="318.66296"
+     rx="0.39111209"
+     ry="0.95526487" />
+  <rect
+     style="fill:#ff0000;fill-opacity:0;stroke:#ff0000;stroke-width:6.92808342;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect3422-3"
+     width="603.33765"
+     height="18.323387"
+     x="44.630302"
+     y="345.75244"
+     rx="0.39111209"
+     ry="0.95526493" />
+  <g
+     id="g8333"
+     transform="translate(-221.60156,-23.371842)">
+    <text
+       id="text3345-0-7-6"
+       y="496.85718"
+       x="627.46155"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-size:25px;line-height:1.25"
+         y="496.85718"
+         x="627.46155"
+         id="tspan3347-9-4-8"
+         sodipodi:role="line">Minibuffer</tspan></text>
+    <rect
+       ry="0.69741702"
+       rx="0.40179902"
+       y="473.60223"
+       x="595.00824"
+       height="27.869762"
+       width="27.869762"
+       id="rect3341-8-1-8-6"
+       style="fill:#ffffff;fill-opacity:0;stroke:#ff0000;stroke-width:6;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  </g>
+  <rect
+     style="fill:#ffffff;fill-opacity:0;stroke:#008000;stroke-width:6.54106951;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect3229-7"
+     width="292.00967"
+     height="234.79535"
+     x="344.11664"
+     y="61.424885"
+     rx="0.41973948"
+     ry="0.69724864" />
+  <g
+     id="g8338"
+     transform="translate(131.35104,94.453778)">
+    <rect
+       ry="0.69741702"
+       rx="0.40179899"
+       y="355.77661"
+       x="47.773399"
+       height="27.869762"
+       width="27.869762"
+       id="rect3341-8-1-8"
+       style="fill:#ffffff;fill-opacity:0;stroke:#800080;stroke-width:6;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       id="text3345-0-7-6-5"
+       y="379.03156"
+       x="84.282906"
+       style="font-style:normal;font-weight:normal;font-size:12px;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00000012px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-size:25.00000191px;line-height:1.25;stroke-width:1.00000012px"
+         y="379.03156"
+         x="84.282906"
+         id="tspan3347-9-4-8-3"
+         sodipodi:role="line">Status bar</tspan></text>
+  </g>
+</svg>
