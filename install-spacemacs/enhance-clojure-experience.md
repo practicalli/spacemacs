@@ -17,13 +17,11 @@ Layers are defined in the `dotspacemacs-configuration-layers` section of the `~/
 | `version control` | general version control features, eg. diff margins                                                                                                                    |
 
 > ####Note::Edit .spacemacs and add layers
-> Open the `.spacemacs` file.  Spacemacs provides a mnemonic keybinding for this:
->
->`SPC f e d`  (or `M-m f e d` in Emacs mode)
+> Open the `.spacemacs` file via `SPC f e d`  (`M-m f e d` Emacs state)
 >
 > Use `/` and start typing `configuration-layers` to search for the `dotspacemacs-configuration-layers` section.  `RTN` confirms the search text and `n` jumps to the next occurance, `N` jumps to the previous occurrence.
 >
-> Open the `.spacemacs` file and add the layers and configuration to `dotspacemacs-configuration-layers`
+> Add the following layers to `dotspacemacs-configuration-layers`
 >
 ```lisp
    dotspacemacs-configuration-layers
@@ -52,17 +50,20 @@ Layers are defined in the `dotspacemacs-configuration-layers` section of the `~/
     )
 ```
 
-> ####Hint::Nemonic keybindings and menus
-> The Spacemacs menu system use a nemonic system for organising its menus and commands.  So to access a menu of file related commands, you press `SPC f` and for a menu of buffer commands you would use `SPC b`.
+------------------------------------------
+
+> #### Hint:: Configuring layers with :variables
+> Using the `:variables` directive on layers allows you to add features from named packages, e.g. `clojure-enable-sayid` to include the Sayid debugger when opening Clojure projects.
 >
-> The keybindings to open the **file** of the **emacs** **dotfile** (.spacemacs) are therefore: `SPC f e d`
+> `:variables` also allow you to configure options for layers, e.g. `git-gutter-use-fringe` to display changed lines in your working file in the fringe (margin) of the current buffer.
+
 
 
 ## Reload Configuration or Restart Emacs
 
 You can either reload the `~/.spacemacs` configuration using `SPC f e R` or quit Emacs `C-x C-c` and restart Emacs again.
 
-> Hint: If adding a new layer, I recommend restarting Emacs to ensure all the new packages are installed and configured.
+I recommend restarting Emacs to ensure all the new packages are installed and configured.
 
 
 ## Available Layers
@@ -74,7 +75,14 @@ You can either reload the `~/.spacemacs` configuration using `SPC f e R` or quit
 Create your own layers with `SPC SPC configuration-layer/create-layer`.  See the Spacemacs docs and [Configuring Spacemacs, a tutorial](http://thume.ca/howto/2015/03/07/configuring-spacemacs-a-tutorial/) for more information.
 
 
-> ####Hint::Spacemacs Clojure configuration example
+> #### Hint:: Spacemacs Clojure configuration example
 [My Spacemacs configuration](https://gist.github.com/jr0cket/065ab83a0ddf6da9848d7847b7dd7704) is an example of which layers I use and how I have configured them.
 >
 > Trying to use packages-list-packages to install packages directly is simply ignored by Spacemacs.  See how to [configure a package without a layer](http://spacemacs.org/doc/DOCUMENTATION.html#without-a-layer) in the Spacemacs documentation.
+
+------------------------------------------
+
+> #### Hint:: Mnemonic keybindings and menus
+> The Spacemacs menu system use a nemonic system for organising its menus and commands.  So to access a menu of file related commands, you press `SPC f` and for a menu of buffer commands you would use `SPC b`.
+>
+> The keybindings to open the **file** of the **emacs** **dotfile** (.spacemacs) are therefore: `SPC f e d`
