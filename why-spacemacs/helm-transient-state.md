@@ -38,6 +38,15 @@ Enter this transient state with `M-SPC` or `s-M-SPC` while in a Helm buffer, for
 
 ## Helm actions for Buffer list
 
-Selecting `a`, switch to actions page, or using `C-z` displays the list off all the available actions for a buffer.
+The transient state menu is really great for running actions over multiple files.
+
+In this example Helm Transient State menu is used to select and kill multiple buffers easily.  Combining the pattern based searching with marking files (`T` marks all files listed for a particular pattern) makes it really easy to kill lots of Magit buffers that are no longer needed.
+
+{% youtube %}
+https://youtu.be/cadXnbAEfUo
+{% endyoutube %}
+
+
+Select `a` switches to the actions page, or using `C-z` displays the list off all the available actions for a buffer.
 
 [![Spacemacs Buffers - Helm Actionsd](/images/spacemacs-buffers-helm-actions.png)](/images/spacemacs-buffers-helm-actions.png)
