@@ -1,7 +1,8 @@
 # Vim Quick Reference
 
-> ####TODO::
-> This section is still under development, sorry
+A reference of the most common keybindings available in Vim Normal mode.
+
+`.` repeats the last keybinding sequence used in Vim Normal mode or a change made within a complete Vim Insert session.
 
 ## Moving around
 
@@ -16,25 +17,48 @@ In **normal** mode you can keep your fingers resting on the main row of your key
 
 In menus such as helm you can move around using `Ctrl` and these keybindings.  So `C-j` will move the cursor down one item in a menu.
 
-### Jumping the cursor
+### Navigating the current line
 
-| Command | Action                            |
-| ------- | -----------------                 |
-| `f`     | to next character (you specify)   |
-| `t`     | to just before the next character |
-| `w`     | start of next word                |
-| `e`     | end of current word               |
-| `b`     | start of previous word            |
-| `*`     | to next matching symbol name      |
-| `$`     | end of current line               |
-| `0`     | start of current line             |
-| `^`     | start of non-whitespace           |
-| `gg`    | start of buffer                   |
-| `G`     | end of buffer                     |
-| `: 4`   | go to line 4                      |
-| `%`     | jump to matching parentheses      |
-| `C-u`   | jump up half a page               |
-| `C-d`   | jump down half a page             |
+| Command | Action                                       |
+| ------- | -----------------                            |
+| `f`     | to next character (you specify)              |
+| `t`     | to just before the next character            |
+| `w`     | start of next word                           |
+| `W`     | start of next word, white space delimited    |
+| `e`     | end of current word                          |
+| `b`     | start of previous word                       |
+| `W`     | end of next word, white space delimited      |
+| `*`     | to next matching symbol name                 |
+| `$`     | end of current line                          |
+| `0`     | start of current line                        |
+| `^`     | start of non-whitespace                      |
+| `%`     | jump to matching parens or next closed paren |
+
+
+### Navigating the current buffer
+
+| keybinding | action                                                           |
+|------------|------------------------------------------------------------------|
+| `gg`       | start of buffer                                                  |
+| `G`        | end of buffer                                                    |
+| `H`        | move cursor to head of buffer                                    |
+| `M`        | move cusror to middle of buffer                                  |
+| `L`        | move cursor to bottom line of buffer                             |
+| `C-u`      | jump up half a page                                              |
+| `C-d`      | jump down half a page                                            |
+| `}`        | move cursor forward by paragraph or block                        |
+| `{`        | move cursor backward by paragraph or block                       |
+| `ma`       | mark a line in a file with marker "a"                            |
+| ``a`       | after moving around, go back to the exact position of marker "a" |
+| `'a`       | after moving around, go back to line of marker "a"               |
+| `:marks`   | view all the marks                                               |
+| `''`       | go to the last place you were                                    |
+| `[{`       | jump back to the "{" at the beginning of the current code block  |
+| `SPC j i`  | avy-jump to character (specify)                                  |
+| `SPC j j`  | avy-jump to character (specify)                                  |
+| `SPC j l`  | jump using helm list of headings / functions                     |
+| `: 4`      | go to line 4                                                     |
+
 
 
 ## Searching
@@ -56,59 +80,6 @@ Search a buffer for characters or words / text pattern.
 > Use `SPC /` for a project wide search.
 >
 > Additional search commands are available under `SPC s`, including the powerful iedit mode, `SPC s e` which provides features like multiple cursors.
-
-
-
-## Movement of cursor
-
-| keybinding | action                                                           |
-|------------|------------------------------------------------------------------|
-| `H`        | move cursor to head of buffer                                    |
-| `M`        | move cusror to middle of buffer                                  |
-| `L`        | move cursor to bottom line of buffer                             |
-| `}`        | move cursor forward by paragraph or block                        |
-| `{`        | move cursor backward by paragraph or block                       |
-| `%`        | find matching brace, paren, etc                                  |
-| `ma`       | mark a line in a file with marker "a"                            |
-| ``a`       | after moving around, go back to the exact position of marker "a" |
-| `'a`       | after moving around, go back to line of marker "a"               |
-| `:marks`   | view all the marks                                               |
-| `''`       | go to the last place you were                                    |
-| `[{`       | jump back to the "{" at the beginning of the current code block  |
-
-
-## editing
-
-X - delete char before cursor
-A - add to end of line
-I - insert at the beginning of the line
-dd - delete line
-D - delete from cursor to end of line
-di' - delete text inside single quotes
-yy - copy line
-Y - copy from cursor to end of line
-cc - change line
-C - change from cursor to end of line
-cit - change text inside html tag
-ci' - change text inside single quotes
-ci{ - change text inside curly brackets.
-ci... - etc
-p - paste after cursor
-P = paste before cursor
-o - add line below
-O - add line above
-. = repeat last comment
-r - replace character
-R - replace. (overwrite) (good for columns of text)
-J - join line (cursor can be anywhere on line)
-
-visual state
------------
-v - visual char state
-V - visual line state
-C-v - block visual state
-
-
 
 
 
@@ -155,13 +126,22 @@ Switching from **insert** to **normal** state:
 
 ## Replace and changing text
 
-| Command | Action                                  |
-| ------- | -----------------                       |
-| `r`     | replace the character under cursor      |
-| `R`     | replace multiple characters until `ESC` |
-| `cw`    | change word from cursor to end          |
-| `4 c w` | change 4 words                          |
+| Command        | Action                                  |
+| -------        | -----------------                       |
+| `r`            | replace the character under cursor      |
+| `R`            | replace multiple characters until `ESC` |
+| `cw`           | change word from cursor to end          |
+| `4 c w`        | change 4 words                          |
+| `v (select) c` | change region                           |
+| `SPC v c`      | change current word/region              |
+| `SPC v d`      | delete current word/region              |
+| `d w`          | delete from cursor to end of word       |
+| `C`            | change from cursor to end of line       |
+| `D`            | delete from cursor to end of line       |
+| `d $`          | delete from cursor to end of line      |
 
+
+Combine d | c | v | r with avy-goto
 
 ## Delete commands
 
@@ -211,6 +191,46 @@ I recommend using the Spacemacs menu from **normal** mode to quit / restart Spac
 | `SPC q q` | Quit Spacemacs                                             |
 | `SPS q r` | Restart Spacemacs keeping current window and buffer layout |
 | `SPS q R` | Restart Spacemacs                                          |
+
+
+
+
+## Editing
+```
+X - delete char before cursor
+A - add to end of line
+I - insert at the beginning of the line
+dd - delete line
+D - delete from cursor to end of line
+di' - delete text inside single quotes
+yy - copy line
+Y - copy from cursor to end of line
+cc - change line
+C - change from cursor to end of line
+cit - change text inside html tag
+ci' - change text inside single quotes
+ci{ - change text inside curly brackets.
+ci... - etc
+p - paste after cursor
+P = paste before cursor
+o - add line below
+O - add line above
+. = repeat last comment
+r - replace character
+R - replace. (overwrite) (good for columns of text)
+J - join line (cursor can be anywhere on line)
+```
+
+
+## visual state ##
+
+```
+v - visual char state
+V - visual line state
+C-v - block visual state
+```
+
+
 
 
 
