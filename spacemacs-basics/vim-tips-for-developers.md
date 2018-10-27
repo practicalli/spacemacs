@@ -5,15 +5,18 @@
 Vim keybindings that drive Vim editing tools that are common for developers
 
 
-## Commenting code
+## Comments and Commenting code
 
-`g c c`  comment line
+
+#`g c c`  comment line
 
 `SPC ; ;` comment current line
 
-`SPC ; p` comment current paragraph
+`SPC ; p` comment current paragraph / code structure
 
 `v (select) g c`  comment region
+
+`g c 9 j`  comment 9 lines from current, downwards
 
 `SPC v v g c`  select line and comment it
 
