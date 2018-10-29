@@ -120,6 +120,7 @@
     * [Stashing changes](magit/stashing.md)
     * [Changing History](magit/changing-history.md)
     * [Rebasing](magit/rebasing.md)
+    * [Git blame](magit/blame.md)
     * [Timemachine](magit/timemachine.md)
     * [Testing Pull Requests](magit/testing-pull-requests.md)
     * [Highlight Changes in file](magit/version-highlighting.md)
