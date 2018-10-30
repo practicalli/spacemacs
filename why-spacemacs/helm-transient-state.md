@@ -2,16 +2,16 @@
 
 Use the Helm transient state to navigate the Helm results using Vim keybindings (`hjkl`) and call additional actions on those results.
 
-Enter this transient state with `M-SPC` or `s-M-SPC` while in a Helm buffer, for example, when navigating the results such as file find `SPC f f`, buffer list `SPC b b`, or Emacs commands list `SPC SPC`.
+Enter this transient state with `M-SPC` or `S-M-SPC` while in a Helm buffer, for example, when navigating the results such as file find `SPC f f`, buffer list `SPC b b`, or Emacs commands list `SPC SPC`.
 
 [![Spacemacs - Helm Transient State menu](/images/spacemacs-helm-transient-state-menu.png)](/images/spacemacs-helm-transient-state-menu.png)
 
 > ####Info::Gnome desktop binding clash
-> `M-SPC` is used by the Gnome desktop for the window menu, so recommend you change the Gnome keyboard settings to use a different binding, i.e. `SPC w`.
+> `M-SPC` is used by the Gnome desktop for the window menu, so recommend you change the Gnome keyboard settings to use a different binding, i.e. `Super w`.
 
 | Key Binding          | Description                                          |
 |----------------------|------------------------------------------------------|
-| `M-SPC` or `s-M-SPC` | initiate the transient state                         |
+| `M-SPC` or `S-M-SPC` | initiate the transient state                         |
 | `q`                  | quit transient state                                 |
 | `TAB`                | switch to actions page and leave the transient state |
 | `1`                  | execute action 0                                     |
@@ -49,4 +49,4 @@ https://youtu.be/cadXnbAEfUo
 
 Select `a` switches to the actions page, or using `C-z` displays the list off all the available actions for a buffer.
 
-[![Spacemacs Buffers - Helm Actionsd](/images/spacemacs-buffers-helm-actions.png)](/images/spacemacs-buffers-helm-actions.png)
+[![Spacemacs Buffers - Helm Actions](/images/spacemacs-buffers-helm-actions.png)](/images/spacemacs-buffers-helm-actions.png)
