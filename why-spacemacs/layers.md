@@ -50,10 +50,10 @@ See the Spacemacs documentation for a [list of layers](http://spacemacs.org/laye
 ------------------------------------------
 
 > #### Note:: Notes for existing Emacs users
-> If you have configured Emacs before, you can consider the `.spacmacs` file as a replacement for the `init.el` file you would otherwise use to define your Emacs configuration.
+> If you have configured Emacs before, you can consider the `.spacemacs` file as a replacement for the `init.el` file you would otherwise use to define your Emacs configuration.
 >
 > Installing packages via the `packages-list-packages` method is ignored by Spacemacs.  Any packages installed in this way will be ignored.
 >
-> If no layer exists for a package, you can [use a package without a layer](http://spacemacs.org/doc/DOCUMENTATION.html#without-a-layer)
+> If no layer exists for a package, you can [use a package without a layer](http://spacemacs.org/doc/DOCUMENTATION.html#without-a-layer).
 >
 > You can add what ever elisp you like to the **dotspacemacs/user-config** section of the `~/.spacemacs` configuration file.
