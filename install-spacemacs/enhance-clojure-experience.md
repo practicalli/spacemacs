@@ -12,9 +12,9 @@ Layers are defined in the `dotspacemacs-configuration-layers` section of the `~/
 | `clojure`         | [CIDER](https://docs.cider.mx) with [clj-refactor](https://github.com/clojure-emacs/clj-refactor.el/wiki) and [sayid](http://clojure-emacs.github.io/sayid/) debugger |
 | `git`             | git version control with [Magit](https://magit.vc/)                                                                                                            |
 | `markdown`        | writing project descriptions in README.md and other markdown files                                                                                                    |
-| `org-mode`        | write project documentaion, organise tasks                                                                                                                            |
+| `org-mode`        | write project documentation, organise tasks                                                                                                                            |
 | `syntax-checking` | spell checking words as you type                                                                                                                                      |
-| `version control` | general version control features, eg. diff margins                                                                                                                    |
+| `version-control` | general version control features, eg. diff margins                                                                                                                    |
 
 > ####Note::Edit .spacemacs and add layers
 > Open the `.spacemacs` file via `SPC f e d`  (`M-m f e d` Emacs state)
