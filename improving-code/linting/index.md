@@ -1,8 +1,11 @@
-# Linting - automatically highlighting code issues
+# Linting
 
 > #### TODO::Work in progress
 
-Common linting tools includes
+Recomendation:
+* Joker for fast feedback during coding
+* Eastwood for more comprehensive feedback before committing code
+
 
 * [Joker](https://github.com/candid82/joker) - standalone tool, simple to use, not Clojure complete though.
 * [Eastwood](https://github.com/jonase/eastwood) - leiningen plugin
