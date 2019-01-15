@@ -20,9 +20,11 @@
         "gist",
         "klipse",
         "sectionx",
+        "simpletabs",
         "toggle-chapters",
         "toolbar",
-        "youtube"
+        "youtube",
+        "wide-page"
     ],
     "pluginsConfig": {
         "callouts": {
