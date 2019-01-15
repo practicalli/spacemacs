@@ -1,11 +1,10 @@
-/* @import url(https://fonts.googleapis.com/css?family=Raleway); */
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
 
-/* Use Ubuntu font instead of the default Raleway font */
+/* Use Ubuntu font as default font for all content */
 body {
     font-family: Ubuntu;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 /* Show keybindings to look like keys on a keyboard */
@@ -34,7 +33,7 @@ kbd {
 
 .book-body p, .book-body div, .book-body span, .summary, .book-body li, .summary li a  {
     font-family : "Ubuntu", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal code {
