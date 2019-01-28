@@ -1,6 +1,8 @@
 # Spacemacs: Clojure development made simple
 
-<iframe width="800" height="420" src="https://www.youtube.com/embed/Uuwg-069NYE?ecver=1" frameborder="0" allowfullscreen></iframe>
+{% youtube %}
+https://www.youtube.com/watch?v=Uuwg-069NYE
+{% endyoutube %}
 
 <table>
   <tr>
