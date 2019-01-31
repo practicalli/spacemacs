@@ -13,6 +13,7 @@
         * [Structured editing](why-spacemacs/structured-editing.md)
         * [Project & File navigation](why-spacemacs/project-file-navigation.md)
         * [Layouts](why-spacemacs/layouts.md)
+    * [Clojure Cheatsheet](clojure-cheatsheet.md)
     * [Contributing](introduction/contributing.md)
 * [Before you start](before-you-start/index.md)
     * [Install Emacs](before-you-start/install-emacs.md)
