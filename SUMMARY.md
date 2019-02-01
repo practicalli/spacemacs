@@ -30,6 +30,7 @@
     * [Themes](install-spacemacs/themes.md)
         * [Add another theme](install-spacemacs/add-another-theme.md)
     * [Line Numbers](install-spacemacs/line-numbers.md)
+    * [Update Spacemacs](install-spacemacs/update.md)
 * [Spacemacs Basics](spacemacs-basics/index.md)
     * [Emacs Basics](spacemacs-basics/emacs-basics.md)
     * [Emacs Quick Reference](spacemacs-basics/emacs-quick-reference.md)
