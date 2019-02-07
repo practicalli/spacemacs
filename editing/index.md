@@ -4,11 +4,11 @@
 
 ![iedit - Edit multiple regions in the same way simultaneously](https://github.com/victorhge/iedit/raw/master/iedit-demo.gif)
 
-Spacemacs uses the powerful [iedit](https://github.com/tsdh/iedit) mode through [[https://github.com/syl20bnr/evil-iedit-state][evil-iedit-state]] to quickly edit multiple occurrences of a symbol or selection.
+Spacemacs uses the powerful [iedit](https://github.com/tsdh/iedit) mode through [`evil-iedit-state`](https://github.com/syl20bnr/evil-iedit-state) to quickly edit multiple occurrences of a symbol or selection.
 
-iedit also integrates with [[https://github.com/magnars/expand-region.el][expand-region]] for quick editing of the currently selected text by pressing `e`.
+iedit also integrates with [`expand-region`](https://github.com/magnars/expand-region.el) for quick editing of the currently selected text by pressing `e`.
 
-**** iedit states key bindings
+## iedit states key bindings
 
 | Key Binding | From             | To     |
 |-------------|------------------|--------|
@@ -22,10 +22,11 @@ iedit also integrates with [[https://github.com/magnars/expand-region.el][expand
 | `fd`        | iedit-insert     | normal |
 
 
-*Note*: evil commands which switch to =insert state= will switch in =iedit-insert state=.
+> #### Note::Switching edit states
+> Evil commands which switch to `insert state` will switch in `iedit-insert state`.
 
-***** In iedit state
-=iedit state= inherits from =normal state=, the following key bindings are specific to =iedit state=.
+## In iedit state
+`iedit state` inherits from `normal state`, the following key bindings are specific to `iedit state`.
 
 | Key Binding | Description                                                                             |
 |-------------|-----------------------------------------------------------------------------------------|
@@ -53,7 +54,7 @@ iedit also integrates with [[https://github.com/magnars/expand-region.el][expand
 
 *Note*: `0`, `$`, `A` and `I` have the default Vim behavior when used outside of an `occurrence`.
 
-***** In iedit-insert state
+## In iedit-insert state
 
 | Key Binding | Description               |
 |-------------|---------------------------|
