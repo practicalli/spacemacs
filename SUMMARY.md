@@ -39,6 +39,7 @@
     * [Spacemacs Vim](spacemacs-basics/spacemacs-vim.md)
     * [Vim Quick Reference](spacemacs-basics/vim-quick-reference.md)
     * [Vim Tips for developers](spacemacs-basics/vim-tips-for-developers.md)
+* [REPL Driven Development](repl-driven-development/index.md)
 * [Create a Clojure Project](create-a-project/index.md)
     * [Using Emacs Eshell](create-a-project/using-emacs-eshell.md)
 * [Working with Projects](working-with-projects/index.md)
