@@ -12,8 +12,8 @@ Layers are defined in the `dotspacemacs-configuration-layers` section of the `~/
 | `clojure`         | [CIDER](https://docs.cider.mx) with [clj-refactor](https://github.com/clojure-emacs/clj-refactor.el/wiki) and [sayid](http://clojure-emacs.github.io/sayid/) debugger |
 | `git`             | git version control with [Magit](https://magit.vc/)                                                                                                            |
 | `markdown`        | writing project descriptions in README.md and other markdown files                                                                                                    |
-| `org-mode`        | write project documentation, organise tasks                                                                                                                            |
-| `syntax-checking` | spell checking words as you type                                                                                                                                      |
+| `org`        | write project documentation, organise tasks with[org-mode](https://orgmode.org/)                                                                                                                         |
+| `syntax-checking` | spell checking words as you type using [Fly Spell](https://www.emacswiki.org/emacs/FlySpell)                                                                                                                                 |
 | `version-control` | general version control features, eg. diff margins                                                                                                                    |
 
 > ####Note::Edit .spacemacs and add layers
@@ -31,7 +31,6 @@ Layers are defined in the `dotspacemacs-configuration-layers` section of the `~/
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-enable-sort-by-usage t)
      (clojure :variables
-              clojure-enable-sayid t
               clojure-enable-clj-refactor t)
      emacs-lisp
      (git :variables
@@ -40,7 +39,7 @@ Layers are defined in the `dotspacemacs-configuration-layers` section of the `~/
           git-gutter-use-fringe t)
      helm
      markdown
-     neotree
+     treemacs
      org
      spell-checking
      syntax-checking
@@ -53,10 +52,18 @@ Layers are defined in the `dotspacemacs-configuration-layers` section of the `~/
 ------------------------------------------
 
 > #### Hint:: Configuring layers with :variables
-> Using the `:variables` directive on layers allows you to add features from named packages, e.g. `clojure-enable-sayid` to include the Sayid debugger when opening Clojure projects.
+> Using the `:variables` directive on layers allows you to add features from named packages, e.g. `clojure-enable-clj-refactor` to include `clj-refactor` Clojure projects.
 >
 > `:variables` also allow you to configure options for layers, e.g. `git-gutter-use-fringe` to display changed lines in your working file in the fringe (margin) of the current buffer.
-
+>
+> I have not included the sayid debugger in this enhanced setup for Clojure as I find the `cider-debugger`, `, d b`, to be most useful.
+>
+> If you wish use extensive debugging for the whole project, then enable sayid by adding the variable `clojure-enable-sayid`.  So your layer definition for Clojure would look like:
+```
+     (clojure :variables
+              clojure-enable-sayid t
+              clojure-enable-clj-refactor t)
+```
 
 
 ## Reload Configuration or Restart Emacs

@@ -1,17 +1,12 @@
 # Line Numbers
 
-Line numbers can be toggled for individual buffers via the Spacemacs toggle menu or can be set permanently on in the `.spacemacs` file so all buffers show line numbers.
+Line numbers can be toggled for individual buffers via the Spacemacs toggle menu or configured in your `.spacemacs` file.
 
-Line numbers can be the normal sequential numbers or be relative to the current position.
+Relative numbering is useful when using Vim style editing as it allows you to jump a relative number of lines from the current line.
+
+`10 j` in **Vim normal** mode will jump 10 lines forward.
 
 With relative numbering, the current line number is shown in the gutter and all other numbers are relative to the number of lines away they are from the current number.  Relative numbering is useful for jumping to different parts of your file or running commands on a number of lines (eg. delete, indent)
-
-> Avy goto line is an efficient alternative to line numbers, allowing you to jump to any visible line in any visible buffer.  Run avy goto line with `SPC j i` and then use the character line number to jump to the line you want.
-
-
-## Toggling line numbers per buffer
-
-You can toggle line numbers with `SPC t n` or relative line numbers (linum) with `SPC t r`
 
 | Spacemacs | Emacs     | Description                  |
 |-----------|-----------|------------------------------|
@@ -20,32 +15,39 @@ You can toggle line numbers with `SPC t n` or relative line numbers (linum) with
 
 [![Spacemacs - Toggle menu](../images/spacemacs-toggle-menu.png)](../images/spacemacs-toggle-menu.png)
 
+> ####Hint::Jumping to a line without line numbers
+> `SPC j l` will jump the cursor to the specified line by temporarily labelling each line with a unique letter combination.  This allows you to jump quickly to a line even if you are not using line numbers.
 
-## Setting Line numbers for all buffers
-
-If the value of `dotspacemacs-line-numbers` is set to something other than `nil` then line numbers are turned on in all modes that are in either `prog-mode` or `text-mode`  If the value is set to `relative`, then relative line numbers are turned on for all these modes.
+## Configure Line numbers for all buffers
 
 Open the `.spacemacs` file (`SPC f e d`) and search (`/` or `C-s`) for `dotspacemacs-line-numbers`
 
-For line numbers, set the value to true
+Set the value to true to show line numbers for all buffers that are in `prog-mode` and `text-mode`, this includes any programming languages or text files.
 
 ```elisp
 dotspacemacs-line-numbers t
 ```
-
-
 For relative line numbers, set the value to relative
 
 ```elisp
 dotspacemacs-line-numbers 'relative
 ```
-
-
 If you want to turn line numbers off for all buffers by default, set the value back to the default `nil` value.
 
 ```elisp
 dotspacemacs-line-numbers nil
 ```
 
-
- 
+## Vim style line number configuration
+This is my approach to line numbers, using relative numbering and disabling line numbers for buffers that are not for coding
+Line numbers are also disabled for large files, as it can slow Emacs down considerably.
+```
+dotspacemacs-line-numbers '(:relative t
+                            :disabled-for-modes dired-mode
+                                                doc-view-mode
+                                                markdown-mode
+                                                org-mode
+                                                pdf-view-mode
+                                                text-mode
+                            :size-limit-kb 1000)
+```
