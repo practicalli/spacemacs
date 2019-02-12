@@ -57,6 +57,8 @@ In menus such as helm you can move around using `Ctrl` and these keybindings.  S
 | `SPC j i`  | avy-jump to character (specify)                                  |
 | `SPC j j`  | avy-jump to character (specify)                                  |
 | `SPC j l`  | jump using helm list of headings / functions                     |
+| `C-o`      | jump back to previous cursor location (`evil-jump-backwards`)    |
+| `C-i`      | Go to newer position in jump list (opposite of `C-o`)            |
 | `: 4`      | go to line 4                                                     |
 
 
@@ -111,14 +113,17 @@ Switching from **insert** to **normal** state:
 > The character sequence can be [customized](http://spacemacs.org/doc/DOCUMENTATION.html#commands) or deactivated by adding `evil-escape` to `dotspacemacs-excluded-packages` in the `~/.spacemacs` configuration file.
 
 
-## Cut, paste, undo, redo
+## Copy, cut, paste, undo, redo
 
-| Command  | Action                                |
-| -------  | -----------------                     |
-| `x`      | delete character and add to kill ring |
-| `p`      | paste (put)                           |
-| `u`      | undo                                  |
-| `Ctrl-r` | redo                                  |
+`v` in Vim normal mode changes to Visual select mode.  Use the navigation keys or any other movement keys to select text to copy or cut.
+
+| Command  | Action                                     |
+| -------  | -----------------                          |
+| `y`      | copy (yank) selection and add to kill ring |
+| `x`      | delete character and add to kill ring      |
+| `p`      | paste (put)                                |
+| `u`      | undo                                       |
+| `Ctrl-r` | redo                                       |
 
 > ####Hint:: Undo tips
 > Undo will revert the last action in normal mode or all the changes you made in **insert** state
