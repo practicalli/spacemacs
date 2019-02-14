@@ -46,6 +46,11 @@ In this example Helm Transient State menu is used to select and kill multiple bu
 https://youtu.be/cadXnbAEfUo
 {% endyoutube %}
 
+> #### Hint::Prompt when using layouts
+> Using layouts in Spacemacs will show a prompt when you kill a buffer that is not in the current layout.
+> You can see this prompt at the end of the video as I kill all the magit buffers.
+> I separate projects into their own groups of buffers to make it easier to work on multiple projects through out the month.
+
 
 Select `a` switches to the actions page, or using `C-z` displays the list off all the available actions for a buffer.
 

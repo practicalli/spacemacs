@@ -6,7 +6,13 @@ Clojure has very precise syntax as everything is contained in a list or similar 
 
 This well defined structure also makes it trivial to move expressions around, giving you a simple way to develop and refactor your code.
 
-> ####TODO::Add animated gifs / videos to show these features
+{% youtube %}
+https://www.youtube.com/watch?v=PmSPKvlJk74
+{% endyoutube %}
+
+> ####Hint::Structured Editing Section
+> Read the [Structured editing section](/structured-editing/) for a detailed guide to using Lisp mode, Smartparens, Paredit and Evil mode to manage your Clojure (and elsip) code.
+
 
 ## Smartparents For Writing Structured Text
 
@@ -20,6 +26,3 @@ Spacemacs uses [smartparens](https://github.com/Fuco1/smartparens) to help you w
 ## Lisp State For Manipulating Structured Text
 
 Spacemacs includes **lisp-state**, `SPC k .` for refactoring Lisp base languages like Clojure.  In this **lisp-state** you can use the normal Vim keys to navigate your code by its structure.  You can also move symbols and expressions around without risking unmatched parenthesis or other structure characters (using `slurp`, `barf`, `wrap`, `unwrap`, etc.).
-
-> ####Hint::Structured Editing Section
-> Read the [Structured editing section](/structured-editing/) for a detailed guide to using Lisp mode, Smartparens, Paredit and Evil mode to manage your Clojure (and elsip) code.
