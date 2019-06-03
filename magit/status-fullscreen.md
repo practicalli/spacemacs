@@ -1,17 +1,25 @@
 # Magit Status Fullscreen
 
-Magit status in fullscreen mode provides lots of space to work with changes.  Leaving Magit status, `q`, returns you to the window layout from which you came.
+Magit status in fullscreen mode provides lots of space to work with changes, look at logs and compare diffs.
 
-Fullscreen is configured by adding the `git-magit-status-fullscreen` variable to the `git` layer.
+| Keybinding | Description                                                                   |
+|------------|-------------------------------------------------------------------------------|
+| `q`        | returns to previous window layout, keeping the Magit status buffer available. |
+| `SPC u q`  | kills the magit status buffer and returns to previous layout                  |
 
-If you are using the [Enhance Clojure experience](install-spacemacs/enhance-clojure-experience.md) then this is already configured.
+
+> ####Hint::Already configured in Enhanced Clojure experience
+Magit fullscreen is already configured if you followed the [Enhance Clojure experience](install-spacemacs/enhance-clojure-experience.md).
 
 
-> ####Note:: Configure fullscreen for Magit Status
-> Open the `.spacemacs` file via `SPC f e d`  (`M-m f e d` Emacs state)
->
-> Use `/` and start typing `configuration-layers` to search for the `dotspacemacs-configuration-layers` section.  `RTN` confirms the search text and `n` jumps to the next occurance, `N` jumps to the previous occurrence.
->
+## Configure fullscreen for Magit Status
+
+Add the `git-magit-status-fullscreen t` variable to the `git` layer in `.spacemacs` to enable Magit fullscreen.
+
+Open the `.spacemacs` file via `SPC f e d`  (`M-m f e d` Emacs state)
+
+Use `/` and start typing `configuration-layers` to search for the `dotspacemacs-configuration-layers` section.  `RTN` confirms the search text and `n` jumps to the next occurance, `N` jumps to the previous occurrence.
+
 ```lisp
    dotspacemacs-configuration-layers
    '(
