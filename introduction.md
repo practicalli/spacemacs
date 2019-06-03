@@ -19,7 +19,7 @@ https://www.youtube.com/watch?v=Uuwg-069NYE
       <a href="create-a-project/index.html"><img src="images/button-code-with-clojure.png" /></a>
     </td>
     <td>
-    <a href="https://github.com/practicalli/spacemacs-config/blob/master/init.el"><img src="images/button-my-spacemacs-config.png" /></a>
+      <a href="https://github.com/practicalli/spacemacs-config/blob/master/.spacemacs.d/init.el"><img src="images/button-my-spacemacs-config.png" /></a>
     </td>
   </tr>
 </table>
@@ -30,7 +30,7 @@ https://www.youtube.com/watch?v=Uuwg-069NYE
 
 [Emacs](https://www.gnu.org/software/emacs/) has been a shining beacon of Free and Open Source software from the early 1970's and has grown to be a versatile set of development tools for all languages.  This long history has given [Emacs](https://www.gnu.org/software/emacs/) the ability to interact with almost every aspect of your digital life.
 
-**[My current `.spacemacs` configuration file](https://github.com/practicalli/spacemacs-config/blob/master/init.el)**
+**[My current `.spacemacs` configuration file](https://github.com/practicalli/spacemacs-config/blob/master/.spacemacs.d/init.el)**
 
 ![Clojure-cider-spacemacs-logo](images/spacemacs-practicalli-banner.png)
 
