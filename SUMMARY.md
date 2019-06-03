@@ -119,6 +119,7 @@
 * [Testing](testing/index.md)
     * [Run tests](testing/run-tests.md)
 * [MaGit Version Control](magit/index.md)
+    * [List local repositories](magit/list-local-repositories.md)
     * [Create local repository](magit/create-local-repository.md)
     * [Git Status](magit/status.md)
         * [MaGit Status Fullscreen](magit/status-fullscreen.md)
