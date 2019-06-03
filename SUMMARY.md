@@ -138,6 +138,7 @@
 * [Markdown documentation](markdown-mode/index.md)
 * [Org-mode](org-mode/index.md)
     * [Headings](org-mode/headings.md)
+    * [Linking](org-mode/linking.md)
     * [TODO States](org-mode/todo-states.md)
     * [Customise TODO States](org-mode/todo-states-customise.md)
     * [Get Things Done](org-mode/get-things-done.md)
