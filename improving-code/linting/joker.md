@@ -2,7 +2,7 @@
 
 Joker is a small Clojure interpreter and linter that can be used with the `clojure-lint` layer to give instant feedback on the code you are writing.
 
-![Linter Joker screenshot](/images/linter-joker-screenshot.png)
+![Spacemacs Clojure Linter Joker - Ubuntu screenshot](/images/spacemacs-clojure-linter-jocker-examples-ubuntu.png)
 
 Joker indicates how many issues and warnings its generated and puts a red dot at the left of each line.  Navigating the cursor to the underlined word or character will describe the issue.
 
@@ -41,6 +41,16 @@ brew install candid82/brew/joker
 
 {% endtabs %}
 <!-- End of Clojure editors -->
+
+
+## Add the syntax-checking layer
+
+The flycheck package in the `syntax-checking` layer provides general syntax checking in Emacs and the `flycheck-joker` package in `clojure-lint` layer adds Clojure specific syntax rules.
+
+Ensure the `syntax-checking` layer is enabled in `.spacemacs`
+
+   dotspacemacs-configuration-layers
+   '(syntax-checking)
 
 
 ## Clone the Joker layer to your Spacemacs configuration
