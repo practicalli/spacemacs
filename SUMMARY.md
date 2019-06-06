@@ -50,7 +50,7 @@
         * [Tidying up Buffers](working-with-projects/tidying-up-buffers.md)
     * [Managing Windows](working-with-projects/managing-windows.md)
     * [Layouts](working-with-projects/layouts.md)
-* [Clojure Repl](clojure-repl/index.md)
+* [Starting the REPL](clojure-repl/index.md)
     * [Start a REPL - Jack-In](clojure-repl/jack-in.md)
         * [What does jack-in do](clojure-repl/what-does-jackin-do.md)
     * [Connect to existing REPL](clojure-repl/connect-to-running-repl.md)
