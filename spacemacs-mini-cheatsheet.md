@@ -1,4 +1,4 @@
-# Clojure Cheetsheet
+# Spacemacs Mini Cheetsheet
 
 `Ctrl-g` two times will cancel most actions in Spacemacs
 
