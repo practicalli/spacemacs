@@ -1,4 +1,6 @@
-# Spacemacs: Clojure development made simple
+# Practicalli Spacemacs
+
+A practical guide to getting the most out of Clojure development with Spacemacs, an Emacs community configuration.
 
 {% youtube %}
 https://www.youtube.com/watch?v=Uuwg-069NYE
@@ -24,13 +26,10 @@ https://www.youtube.com/watch?v=Uuwg-069NYE
   </tr>
 </table>
 
-[Emacs](https://www.gnu.org/software/emacs/) is an operating system disguised as a development tool, giving you the ability to interact with every aspect of your development life.
-
-[Spacemacs](http://spacemacs.org/) is the simplest way to use all the features and power of [Emacs](https://www.gnu.org/software/emacs/).  [Spacemacs](https://spacemacs.org) also integrates the raw text manipulation speed of Vim into the Emacs experience, enabling you to be even more productive.
 
 [Emacs](https://www.gnu.org/software/emacs/) has been a shining beacon of Free and Open Source software from the early 1970's and has grown to be a versatile set of development tools for all languages.  This long history has given [Emacs](https://www.gnu.org/software/emacs/) the ability to interact with almost every aspect of your digital life.
 
-**[My current `.spacemacs` configuration file](https://github.com/practicalli/spacemacs-config/blob/master/.spacemacs.d/init.el)**
+[Spacemacs](http://spacemacs.org/) is a community configuration providing a consistent and simple to learn approach to using all the features and power of [Emacs](https://www.gnu.org/software/emacs/).  [Spacemacs](https://spacemacs.org) also integrates the raw text manipulation speed of Vim and multi-modal editing into the Emacs experience, enabling you to be even more productive.
 
 ![Clojure-cider-spacemacs-logo](images/spacemacs-practicalli-banner.png)
 
