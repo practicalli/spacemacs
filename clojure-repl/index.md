@@ -29,5 +29,9 @@ https://www.youtube.com/watch?v=KZjFVdU8VLI?autoplay=1loop=1
 | `SPC m s s` | `M-RET s s` | `C-c C-z` | `, s s`          | switch between repl and code |
 | `SPC m s q` | `M-RET s q` | `C-c C-q` | `, s q`          | cider-quit                   |
 
+> #### Hint:: Clojure REPL tools
+> `doc` and `source` functions are only available in the `user` namespace by default.
+> `M-x cider-repl-require-repl-utils`  requires the standard REPL util functions into the current REPL.
+
 
 This section contains more information on running REPL's
