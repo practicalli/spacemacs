@@ -123,6 +123,7 @@ To help Joker work with Clojure common code, then create the file `~/.jokerd/lin
 
 ```clojure
 (declare deftest)
+(declare deftest-)
 (declare use-fixtures)
 (declare testing)
 (declare is)
