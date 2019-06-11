@@ -19,6 +19,15 @@ Type in a suitable commit message
 ![Spacemacs Magit - commit or cancel](/images/spacemacs-magit-commit-message-menu.png)
 
 
+> #### Hint::GitHub Issues and commits
+> Including a reference to an issue, e.g. `GH-42` or `#42`, you can link a commit to a GitHub issue.
+>
+> Include the phrase `Resolves #42` or `Closes #42` anywhere in the commit message to automatically close an issue when a commit is pushed to GitHub.
+>
+> Avoid using the `#42` short form at the start of the line in Magit, as it will treated as a comment line and not included in the commit message.
+
+
+
 ## Amend a commit
 
 `a` in the commit menu allows you to change the commit message and include any additional changes staged.
