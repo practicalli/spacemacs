@@ -11,7 +11,7 @@ Create separate layouts to group buffers for projects or other tasks.  Each layo
 
 | Key Binding  | Description                                                |
 |--------------|------------------------------------------------------------|
-| `PC l`       | activate the transient- state                              |
+| `SPC l`      | activate the transient- state                              |
 | `?`          | toggle the documentation                                   |
 | `[0..9]`     | switch to nth layout                                       |
 | `[C-0..C-9]` | switch to nth layout and keep the transient state active   |
