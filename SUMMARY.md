@@ -124,6 +124,7 @@
     * [Remote repositories](magit/remote-repositories.md)
     * [Stashing changes](magit/stashing.md)
     * [Changing History](magit/changing-history.md)
+    * [Reset Commits](magit/reset-commit-history.md)
     * [Rebasing](magit/rebasing.md)
     * [Git blame](magit/blame.md)
     * [Timemachine](magit/timemachine.md)
