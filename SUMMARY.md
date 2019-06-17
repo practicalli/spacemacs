@@ -94,7 +94,7 @@
     * [Add your own Snippets](snippets/add-your-own-snippets.md)
     * [Autocompletion](snippets/autocompletion.md)
 * [Improving Code](improving-code/index.md)
-    * [Idiomatic code checking](improving-code/idiomatic-code-checking.md)
+    * [Formatting](improving-code/formatting/index.md)
         * [Automatic Indenting](improving-code/formatting/automatic-indenting.md)
         * [Aligning forms](improving-code/formatting/aligning-forms-expressions.md)
     * [Linting](improving-code/linting/index.md)
