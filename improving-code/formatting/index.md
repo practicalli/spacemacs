@@ -1,34 +1,23 @@
 # Formatting code
 
-Consistent formatting really aids the readability of a code base.
+[The Clojure Style Guide](https://guide.clojure.style/) is a very complete guide to the best practices in writing Clojure code, ensuring it is as easy as possible to read and maintain by Clojure developers.
 
-Spacemacs Clojure layer will format the code as you type.  When pressing `RET` the cursor correctly indents.  `TAB` key will also left align the current line of code.
+Spacemacs Clojure layer will carry out basic formatting as you type using .
+
+* `RET` the cursor correctly indents on new lines.
+* `TAB` key will left align the current line of code or selected region.
 
 
-> #### Hint::Discussion on formatting
-> Interesting [discussion on formatting code on Clojureverse forum](https://clojureverse.org/t/clj-commons-building-a-formatter-like-gofmt-for-clojure/3240).
+## Recommended Formatting configuration
 
-## cljfmt
+These are the recommended settings to add to the `dotspacemacs/user-config` section of `.spacemacs`
 
-[cljfmt](https://github.com/weavejester/cljfmt) is a tool for formatting Clojure code idiomatically.
-
-The following piece of code is hard to read as it is not cleanly formatted
-
-```clojure
-( let [x 3
-    y 4]
-  (+ (* x x
-  )(* y y)
-  ))
+```elisp
+(add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+(setq clojure-indent-style 'align-arguments)
+(setq clojure-align-forms-automatically t)
 ```
 
-Using `cljfmt` will convert this into nicely formatted Clojure code
+Read the rest of this section for a deeper explanation of the above configuration.
 
-```clojure
-(let [x 3
-      y 4]
-  (+ (* x x) (* y y)))
-```
-
-> #### Hint::
-> It is not the goal of cljfmt to provide a canonical format.
+Alternatively, jump to the section on [Linting](/improving-code/linting/)
