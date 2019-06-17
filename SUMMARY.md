@@ -95,6 +95,7 @@
     * [Autocompletion](snippets/autocompletion.md)
 * [Improving Code](improving-code/index.md)
     * [Idiomatic code checking](improving-code/idiomatic-code-checking.md)
+        * [Aligning forms](improving-code/formatting/aligning-forms-expressions.md)
     * [Linting](improving-code/linting/index.md)
         * [Joker](improving-code/linting/joker.md)
         * [Eastwood](improving-code/linting/eastwood.md)
