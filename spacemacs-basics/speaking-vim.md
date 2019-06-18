@@ -8,7 +8,7 @@ First learn some verbs:
 
 Then use those verbs with some modifiers
 
-`'` mark, `i` inside, `s` surround, `t` till (just before a character)
+`'` mark, `{ }` begining/end of paragraph, `a` around, `f` find (includes character), `i` inside, `s` surround, `t` till (just before a character)
 
 Then learn the text objects you can apply verbs and modifiers too
 
@@ -21,19 +21,37 @@ Practice speaking vim with these examples
 
 | Keybinding  | Description                                                           |
 |-------------|-----------------------------------------------------------------------|
-| `g c c`     | go comment current (line)                                             |
-| `v a p`     | visually select around current paragraph                              |
-| `c t X`     | change till the character X                                           |
-| `c /foo`    | change until the first search result of ‘foo’                         |
+| `c i s`     | change inside sentence                                                |
 | `c i "`     | change inside double quotes                                           |
 | `c i s`     | change inside current sentence (change the whole sentence)            |
+| `c f )`     | change from cursor to next `)` character                              |
+| `c s ' "`   | change by the surrounding single quotes with double quotes            |
+| `c t X`     | change till the character `X` (not including `X`)                     |
+| `c /foo`    | change until the first search result of ‘foo’                         |
+| `d d`       | delete current line                                                   |
 | `d i w`     | delete inside the current word (delete word)                          |
 | `v t SPC`   | visual select till the next `Space` character                         |
 | `v s ]`     | visually select and surround with `[]` without spaces                 |
-| `SPC v s "` | visually select current work and surround with `""`                   |
 | `g v`       | go to last visual selection                                           |
-| `c s ' "`   | change by the surrounding single quotes with double quotes            |
+| `v a p`     | visually select around current paragraph                              |
+| `SPC v s "` | visually select current work and surround with `""`                   |
 | `v i w s "` | visually select, insert around current word, and surround with quotes |
+| `y y`       | yank (copy) current line                                              |
+| `y w`       | yank (copy) current word                                              |
+| `y ' a`     | yank (copy) to mark `a` (`m a` creates a mark called `a`)                 |
+|             |                                                                       |
+
+
+### Using marks
+
+The name of the mark is a character, so you can have 26 of them.  In general practice no more than 4 marks are ever used.  A recommended use of marks is:
+
+| Keybinding | Description |
+|------------|-------------|
+| `a`        | First mark  |
+| `b`        | Next mark   |
+| `c`        | Another mark |
+| `z`        | Last mark   |
 
 
 > #### Hint:: Vim Reference and Tips
