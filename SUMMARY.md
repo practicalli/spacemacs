@@ -115,6 +115,7 @@
         * [Automatic Indenting](improving-code/formatting/automatic-indenting.md)
         * [Aligning forms](improving-code/formatting/aligning-forms-expressions.md)
     * [Linting](improving-code/linting/index.md)
+        * [clj-kondo](improving-code/linting/clj-kondo.md)
         * [Joker](improving-code/linting/joker.md)
         * [Eastwood](improving-code/linting/eastwood.md)
     * [Idiomatic code checking](improving-code/idiomatic-code-checking.md)
