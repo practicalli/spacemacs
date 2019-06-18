@@ -37,15 +37,15 @@ img, div, table {
     font-family: "Ubuntu Mono", Consolas, Menlo, Courier, monospace;
     background-color: #f7f7f7;
     color: #ba6ec5;             /* Spacemacs purple*/
-    font-size: 1.4em;
+    font-size: 1.1em;
     margin: 0;
-    padding: 0.2em 0.1em;
+    padding: 0.1em 0.1em;
 }
 
 
 
 .CodeMirror pre {
-    font-size: 2em;
+    font-size: 1.4em;
 }
 
 
