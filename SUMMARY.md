@@ -15,6 +15,9 @@
         * [Layouts](why-spacemacs/layouts.md)
     * [Spacemacs mini cheatsheet](spacemacs-mini-cheatsheet.md)
     * [Contributing](introduction/contributing.md)
+
+## Installing Spacemacs
+
 * [Before you start](before-you-start/index.md)
     * [Install Emacs](before-you-start/install-emacs.md)
     * [Install Clojure](before-you-start/install-clojure.md)
@@ -31,6 +34,9 @@
         * [Add another theme](install-spacemacs/add-another-theme.md)
     * [Line Numbers](install-spacemacs/line-numbers.md)
     * [Update Spacemacs](install-spacemacs/update.md)
+
+## Understanding Spacemacs concepts
+
 * [Spacemacs Basics](spacemacs-basics/index.md)
     * [Emacs Basics](spacemacs-basics/emacs-basics.md)
     * [Emacs Quick Reference](spacemacs-basics/emacs-quick-reference.md)
@@ -42,6 +48,9 @@
 * [REPL Driven Development](repl-driven-development/index.md)
 * [Create a Clojure Project](create-a-project/index.md)
     * [Using Emacs Eshell](create-a-project/using-emacs-eshell.md)
+
+## Using Spacemacs
+
 * [Working with Projects](working-with-projects/index.md)
     * [Open and Create Files](working-with-projects/open-and-create-files.md)
     * [NeoTree](working-with-projects/neotree.md)
@@ -120,6 +129,9 @@
     * [Comments](documentation/comments.md)
 * [Testing](testing/index.md)
     * [Run tests](testing/run-tests.md)
+
+## Version control
+
 * [MaGit Version Control](magit/index.md)
     * [List local repositories](magit/list-local-repositories.md)
     * [Create local repository](magit/create-local-repository.md)
@@ -153,6 +165,9 @@
     * [Yasnippets](org-mode/yasnippets.md)
     * [Org-mode tweaks](org-mode/org-mode-tweaks.md)
     * [Literate Programming](org-mode/literate-programming/index.md)
+
+## ClojureScript features
+
 * [Clojurescript Overview](clojurescript/index.md)
     * [Why Clojurescript](clojurescript/why-clojurescript.md)
     * [Build Process](clojurescript/build-process.md)
@@ -172,8 +187,17 @@
     * [Starting Figwheel (Emacs)](using-figwheel/starting-chestnut-emacs.md)
 * [Additional Features](clojurescript/additional-features.md)
     * [CSS Rainbow Colors](clojurescript/css-rainbow-colors.md)
+
+## Org mode
+
+
+## Troubleshooting
+
 * [Troubleshooting](troubleshooting/index.md)
 * [Writing Emacs Lisp](writing-emacs-lisp/index.md)
+
+
+## Reference
 * [Reference](reference/index.md)
     * [Vim - Getting Comfortable](reference/vim/getting-comfortable.md)
     * [Keybindings](reference/keybindings/index.md)
