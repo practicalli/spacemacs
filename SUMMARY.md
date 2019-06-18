@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](introduction.md)
+    * [REPL Driven Development](repl-driven-development/index.md)
     * [Why Spacemacs](why-spacemacs/index.md)
         * [Extensive Language Support](why-spacemacs/extensive-language-support.md)
         * [Simple Layers](why-spacemacs/layers.md)
@@ -45,13 +46,12 @@
     * [Spacemacs Vim](spacemacs-basics/spacemacs-vim.md)
     * [Vim Quick Reference](spacemacs-basics/vim-quick-reference.md)
     * [Vim Tips for developers](spacemacs-basics/vim-tips-for-developers.md)
-* [REPL Driven Development](repl-driven-development/index.md)
-* [Create a Clojure Project](create-a-project/index.md)
-    * [Using Emacs Eshell](create-a-project/using-emacs-eshell.md)
 
 ## Using Spacemacs
 
 * [Working with Projects](working-with-projects/index.md)
+    * [Create a Clojure Project](create-a-project/index.md)
+        * [Using Emacs Eshell](create-a-project/using-emacs-eshell.md)
     * [Open and Create Files](working-with-projects/open-and-create-files.md)
     * [NeoTree](working-with-projects/neotree.md)
     * [Ranger](working-with-projects/ranger.md)
@@ -100,6 +100,12 @@
     * [Enlighten](evaluating-clojure/enlighten.md)
     * [Inspect](evaluating-clojure/inspect.md)
     * [Evaluate in REPL buffer](evaluating-clojure/evaluate-in-repl-buffer.md)
+* [Testing](testing/index.md)
+    * [Run tests](testing/run-tests.md)
+* [Debugging](debugging/index.md)
+    * [Inspect values](debugging/inspect-values.md)
+    * [Cider debugger](debugging/cider-debugger.md)
+    * [Sayid debugger](debugging/sayid-debugger.md)
 * [Navigating code](navigating-code/index.md)
     * [Navigating Namespaces](navigating-code/namespaces.md)
     * [Navigating Expressions](navigating-code/expressions.md)
@@ -111,8 +117,6 @@
     * [Linting](improving-code/linting/index.md)
         * [Joker](improving-code/linting/joker.md)
         * [Eastwood](improving-code/linting/eastwood.md)
-    * [Formatting](improving-code/formatting/index.md)
-        * [clj-format](improving-code/formatting/index.md)
     * [Idiomatic code checking](improving-code/idiomatic-code-checking.md)
 * [Refactor code](refactor/index.md)
     * [clj-refactor code](refactor/clj-refactor/index.md)
@@ -127,8 +131,7 @@
     * [Grimoire](documentation/grimoire.md)
     * [Javadoc](documentation/javadoc.md)
     * [Comments](documentation/comments.md)
-* [Testing](testing/index.md)
-    * [Run tests](testing/run-tests.md)
+    * [Markdown documentation](markdown-mode/index.md)
 
 ## Version control
 
@@ -149,22 +152,6 @@
     * [Highlight Changes in file](magit/version-highlighting.md)
 * [Github](github/index.md)
     * [Gists](github/gists.md)
-* [Debugging](debugging/index.md)
-    * [Inspect values](debugging/inspect-values.md)
-    * [Cider debugger](debugging/cider-debugger.md)
-    * [Sayid debugger](debugging/sayid-debugger.md)
-* [Markdown documentation](markdown-mode/index.md)
-* [Org-mode](org-mode/index.md)
-    * [Headings](org-mode/headings.md)
-    * [Linking](org-mode/linking.md)
-    * [TODO States](org-mode/todo-states.md)
-    * [Customise TODO States](org-mode/todo-states-customise.md)
-    * [Get Things Done](org-mode/get-things-done.md)
-    * [Tables](org-mode/tables.md)
-    * [Code Blocks](org-mode/code-blocks.md)
-    * [Yasnippets](org-mode/yasnippets.md)
-    * [Org-mode tweaks](org-mode/org-mode-tweaks.md)
-    * [Literate Programming](org-mode/literate-programming/index.md)
 
 ## ClojureScript features
 
@@ -190,6 +177,17 @@
 
 ## Org mode
 
+* [Org-mode](org-mode/index.md)
+    * [Headings](org-mode/headings.md)
+    * [Linking](org-mode/linking.md)
+    * [TODO States](org-mode/todo-states.md)
+    * [Customise TODO States](org-mode/todo-states-customise.md)
+    * [Get Things Done](org-mode/get-things-done.md)
+    * [Tables](org-mode/tables.md)
+    * [Code Blocks](org-mode/code-blocks.md)
+    * [Yasnippets](org-mode/yasnippets.md)
+    * [Org-mode tweaks](org-mode/org-mode-tweaks.md)
+    * [Literate Programming](org-mode/literate-programming/index.md)
 
 ## Troubleshooting
 
