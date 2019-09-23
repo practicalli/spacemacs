@@ -1,5 +1,8 @@
 # Joker
 
+> #### DANGER::Adding clojure-lint layer breaks recommended linter
+> [clj-kondo](improving-code/linters/clj-kondo.md) is the recommended linter for Clojure in Spacemacs.  Adding the unofficial `clojure-linter` layer will break `clj-kondo`
+
 Joker is a small Clojure interpreter and linter that can be used with the `clojure-lint` layer to give instant feedback on the code you are writing.
 
 ![Spacemacs Clojure Linter Joker - Ubuntu screenshot](/images/spacemacs-clojure-linter-jocker-examples-ubuntu.png)

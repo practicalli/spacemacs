@@ -15,9 +15,9 @@ Clojure code should be kept readable and consistently use idiomatic style, which
 
 ## Linting
 
-Linting tools can be configures with `flycheck` to continually check your code as you are writing it.  Continuously linting your code picks up little bugs as you type and reduces the ammount of debugging required, as you are changing errors as you make them.
+Linting tools can be added as a `flycheck` service so code is continually checked as you are writing it.  Continuously linting picks up little bugs as you type and reduces the ammount of debugging required, as you are changing errors as you make them.
 
-Linting will not pick up everything, however, it will get rid of all the little errors and typos that are easily made yet take time to find and fix.
+Linting will get rid of all the little errors and typos that are easily made, yet take time to find and fix.
 
 
 ## Static analyser
