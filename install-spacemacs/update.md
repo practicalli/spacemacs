@@ -25,7 +25,7 @@ Open a file in the `.emacs.d` directory, for example `.emacs.d/README.md`
 
 `SPC g s` opens Magit status for the Spacemacs project
 
-`P` pop-ups the pull menu, use `-f` to set rebase to `true`
+`F` pop-ups the pull menu, use `-r` to set rebase to `true`
 
 `u` to pull from upstream.
 
