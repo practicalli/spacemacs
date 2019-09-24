@@ -1,28 +1,35 @@
 # Enhancing the Clojure experience
 
-Adding the **clojure** layer provides a Clojure development experience based on [CIDER](https://docs.cider.mx)
+Enhance the **clojure** layer by adding automatic linting and additional refactoring and add several packages for general development features. [`.spacemacs` file](https://github.com/practicalli/spacemacs-config/blob/master/.spacemacs.d/init.el) provides a documented configuration of the layers currently recommended.
 
-We can make the development experience even better by adding a few more layers and some optional packages for the clojure layer:
+| Layer name         | Description                                                                                                                                                             |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `auto-completion`  | to complete names of functions and symbol names, also list snippets.                                                                                                  |
+| `clojure`          | [CIDER](https://docs.cider.mx) with [clj-refactor](https://github.com/clojure-emacs/clj-refactor.el/wiki) and [clj-kondo](https://github.com/borkdude/clj-kondo) linter |
+| `elisp`            | to edit `.spacemacs` configuration and any other Emacs configuration or package.                                                                                        |
+| `git`              | git version control with [Magit](https://magit.vc/) in full screen, with fringe highlighting of changes in buffers                                                      |
+| `helm`             | completion and selection narrowing framework                                                                                                                            |
+| `markdown`         | writing project descriptions in README.md and other markdown files                                                                                                      |
+| `multiple-cursors` | editing a buffer using multiple cursors                                                                                                                                 |
+| `org`              | write project documentation, organise tasks with[org-mode](https://orgmode.org/)                                                                                        |
+| `spell-checking`   | spell checking using your Operating System spell checker (`SPC S s`)                                                                                                    |
+| `syntax-checking`  | spell checking words as you type using [Fly Spell](https://www.emacswiki.org/emacs/FlySpell)                                                                            |
+| `treemacs`         | visual file system browser (file explorer)                                                                                                                              |
+| `version-control`  | general version control features, eg. ediff, fringe highlights                                                                                                          |
 
-Layers are defined in the `dotspacemacs-configuration-layers` section of the `~/.spacemacs` configuration file.
+> ####WARNING::Install clj-kondo binary
+>`clj-kondo` automatic linting requires the binary of `clj-kondo` installed on the operating system path in order to work.
+> Please read the [clj-kondo install guide](https://github.com/borkdude/clj-kondo/blob/master/doc/install.md) for details.
 
-| Layer name        | Description                                                                                                                                                           |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `auto-completion` | to complete  names of functions, symbols, etc.                                                                                                                        |
-| `clojure`         | [CIDER](https://docs.cider.mx) with [clj-refactor](https://github.com/clojure-emacs/clj-refactor.el/wiki) and [sayid](http://clojure-emacs.github.io/sayid/) debugger |
-| `git`             | git version control with [Magit](https://magit.vc/)                                                                                                            |
-| `markdown`        | writing project descriptions in README.md and other markdown files                                                                                                    |
-| `org`        | write project documentation, organise tasks with[org-mode](https://orgmode.org/)                                                                                                                         |
-| `syntax-checking` | spell checking words as you type using [Fly Spell](https://www.emacswiki.org/emacs/FlySpell)                                                                                                                                 |
-| `version-control` | general version control features, eg. diff margins                                                                                                                    |
 
-> ####Note::Edit .spacemacs and add layers
-> Open the `.spacemacs` file via `SPC f e d`  (`M-m f e d` Emacs state)
->
-> Use `/` and start typing `configuration-layers` to search for the `dotspacemacs-configuration-layers` section.  `RTN` confirms the search text and `n` jumps to the next occurance, `N` jumps to the previous occurrence.
->
-> Add the following layers to `dotspacemacs-configuration-layers`
->
+## Edit .spacemacs and add layers
+
+Open the `.spacemacs` file via `SPC f e d`  (`M-m f e d` holy mode)
+
+Use `/` and start typing `configuration-layers` to search for the `dotspacemacs-configuration-layers` section.  `RTN` confirms the search text and `n` jumps to the next occurance, `N` jumps to the previous occurrence.
+
+Add the following layers to `dotspacemacs-configuration-layers` ensuring there are no duplicates
+
 ```lisp
    dotspacemacs-configuration-layers
    '(
@@ -31,7 +38,8 @@ Layers are defined in the `dotspacemacs-configuration-layers` section of the `~/
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-enable-sort-by-usage t)
      (clojure :variables
-              clojure-enable-clj-refactor t)
+              clojure-enable-clj-refactor t
+              clojure-enable-linters 'clj-kondo)
      emacs-lisp
      (git :variables
           git-magit-status-fullscreen t
@@ -39,43 +47,48 @@ Layers are defined in the `dotspacemacs-configuration-layers` section of the `~/
           git-gutter-use-fringe t)
      helm
      markdown
-     treemacs
+     multiple-cursors
      org
      spell-checking
      syntax-checking
+     treemacs
      (version-control :variables
                       version-control-diff-tool 'diff-hl
                       version-control-global-margin t)
     )
 ```
 
-------------------------------------------
+`SPC f s` to save the file.
 
-> #### Hint:: Configuring layers with :variables
-> Using the `:variables` directive on layers allows you to add features from named packages, e.g. `clojure-enable-clj-refactor` to include `clj-refactor` Clojure projects.
+
+> #### Hint:: Optional layer features with :variables
+> Using the `:variables` directive on layers allows you to include optional features and packages for a particular layer.
 >
-> `:variables` also allow you to configure options for layers, e.g. `git-gutter-use-fringe` to display changed lines in your working file in the fringe (margin) of the current buffer.
+> In the Clojure layer the `clj-refactor` package is included by setting the variable `clojure-enable-clj-refactor` to true.  This provides specific refactor commands for the Clojure language.
 >
-> I have not included the sayid debugger in this enhanced setup for Clojure as I find the `cider-debugger`, `, d b`, to be most useful.
+> In the `version-control` layer The `:variables`  `git-gutter-use-fringe` to display changed lines in your working file in the fringe (margin) of the current buffer.
+>
+> I have not included the sayid debugger in this enhanced setup for Clojure as I find the `cider-debugger `, d b` sufficient.
 >
 > If you wish use extensive debugging for the whole project, then enable sayid by adding the variable `clojure-enable-sayid`.  So your layer definition for Clojure would look like:
 ```
      (clojure :variables
               clojure-enable-sayid t
-              clojure-enable-clj-refactor t)
+              clojure-enable-clj-refactor t
+              clojure-enable-linters 'clj-kondo)
 ```
 
 
 ## Reload Configuration or Restart Emacs
 
-You can either reload the `~/.spacemacs` configuration using `SPC f e R` or quit Emacs `C-x C-c` and restart Emacs again.
+`SPC q r` to restart Emacs with the new configuration.  This is the recommended approach when making a big change or adding layers to ensure all the new packages are installed and configured.
 
-I recommend restarting Emacs to ensure all the new packages are installed and configured.
+For smaller changes you can reload the `~/.spacemacs` configuration using `SPC f e R`.
 
 
 ## Available Layers
 
-`SPC h SPC` (or `M-m f e h` in Emacs state) displays a list of all layers available in Spacemacs.  Type the layer name or scroll down (`C-j`) to a layer name and press `TAB` to preview the documentation for that layer or `RTN` to open the docs for that layer in a buffer.
+`SPC h SPC` (or `M-m f e h` in holy mode) displays a list of all layers available in Spacemacs.  Type the layer name or scroll down (`C-j`) to a layer name and press `TAB` to preview the documentation for that layer or `RTN` to open the docs for that layer in a buffer.
 
 ![Helm layers](/images/spacemacs-helm-layers-list.png)
 
@@ -83,13 +96,9 @@ Create your own layers with `SPC SPC configuration-layer/create-layer`.  See the
 
 
 > #### Hint:: Spacemacs Clojure configuration example
-[My Spacemacs configuration](https://gist.github.com/jr0cket/065ab83a0ddf6da9848d7847b7dd7704) is an example of which layers I use and how I have configured them.
 >
 > Trying to use packages-list-packages to install packages directly is simply ignored by Spacemacs.  See how to [configure a package without a layer](http://spacemacs.org/doc/DOCUMENTATION.html#without-a-layer) in the Spacemacs documentation.
-
-------------------------------------------
-
-> #### Hint:: Mnemonic keybindings and menus
+>
 > The Spacemacs menu system use a nemonic system for organising its menus and commands.  So to access a menu of file related commands, you press `SPC f` and for a menu of buffer commands you would use `SPC b`.
 >
 > The keybindings to open the **file** of the **emacs** **dotfile** (.spacemacs) are therefore: `SPC f e d`
