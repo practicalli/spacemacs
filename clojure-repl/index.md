@@ -1,10 +1,11 @@
 # Clojure Repl
 
+Clojure developers always code with a running REPL.
+
 The Clojure REPL is a live environment in which your Clojure code runs.  Using a REPL to develop your code gives you instant feedback on its behaviour and supports rapidly evolving design.
 
 Clojure developers can use the REPL to run a whole file of code, or just a single expression
 
-Clojure developers always code with a REPL.
 
 {% youtube %}
 https://www.youtube.com/watch?v=KZjFVdU8VLI?autoplay=1loop=1
@@ -22,16 +23,16 @@ https://www.youtube.com/watch?v=KZjFVdU8VLI?autoplay=1loop=1
 
 ## REPL keybindings
 
-| Spacemacs   | Major mode  | Emacs     | Vim Normal       | Command                      |
-|-------------|-------------|-----------|------------------|------------------------------|
-| `SPC m s i` | `M-RET s i` | `C-c M-j` | `, '` or `, s i` | cider-jack-in                |
-| `SPC m s I` | `M-RET s I` |           | `, "` or `, s I` | cider-jack-in-clojurescript  |
-| `SPC m s s` | `M-RET s s` | `C-c C-z` | `, s s`          | switch between repl and code |
-| `SPC m s q` | `M-RET s q` | `C-c C-q` | `, s q`          | cider-quit                   |
+| Vim Normal       | Command                      |
+|------------------|------------------------------|
+| `, '` or `, s i` | cider-jack-in                |
+| `, "` or `, s I` | cider-jack-in-clojurescript  |
+| `, s s`          | switch between repl and code |
+| `, s q`          | cider-quit                   |
 
 > #### Hint:: Clojure REPL tools
-> `doc` and `source` functions are only available in the `user` namespace by default.
-> `M-x cider-repl-require-repl-utils`  requires the standard REPL util functions into the current REPL.
-
-
-This section contains more information on running REPL's
+> `M-x cider-repl-require-repl-utils` adds the REPL utility functions
+> `apropos`, `dir`, `dir-fn`, `doc`, `find-doc` and `source` into the current REPL namespace.
+>
+> These REPL utility functions are included in the `user` namespace by default.
+> See the [`clojure.repl` api documentation](https://clojure.github.io/clojure/clojure.repl-api.html) for full details

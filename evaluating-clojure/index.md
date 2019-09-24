@@ -29,3 +29,4 @@ Evaluation commands for Clojure are:
 
 > ####HINT::Displaying large results
 > `, e P` opens a separate buffer and pretty prints the results.  This is excellent for evaluating expressions that return a large result, eg. a large map.
+> `, d v` the [`cider-inspector`](inspect.html) is a great way to navigate through a large data structure, especially if it is nested.
