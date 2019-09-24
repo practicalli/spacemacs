@@ -1,9 +1,23 @@
 # Navigating Expressions
 
-Jumping between expressions and within nested expressions is an effective way to navigate your Clojure code
+> #### TODO::work in progress, sorry
+
+Jumping between expression boundaries, parentheses, espcially with nested expressions is an effective way to navigate your Clojure code
+
+`SPC k .` enters [Lisp State](../structured-editing/lisp-state.html) transient state.  `hjkl` will now navigate on expression boundaries.  `S-hjkl` will navigate as the usual Evil movement.
 
 
-Some emacs keybinding
+> TODO: Video of jumping around
+
+
+## Jumping around
+
+Avvy Jump ?
+
+
+
+
+## Emacs keybinding
 
 | Emacs     | Command           | Description                                                           |
 |-----------|-------------------|-----------------------------------------------------------------------|
@@ -16,13 +30,6 @@ Some emacs keybinding
 | `C-k`     |                   | Kill to end of line (kill to end of expression in smartparens strict) |
 | `C-M-k`   | kill-sexp         | Kill balanced expression forward                                      |
 | `C-M-SPC` | mark-sexp         | Put the mark at the end of the sexp                                   |
-
-## Jumping around
-
-> TODO: Video of jumping around
-
-
-> **HINT** Also see [Lisp State](../structured-editing/lisp-state.html) and avvy-jump
 
 
 ## Reference
