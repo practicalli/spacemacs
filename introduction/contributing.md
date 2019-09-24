@@ -6,9 +6,7 @@ Contributions to the content of this workshop are welcome, either via
 
 * Issues or Pull requests (once the markdown is published)
 
-* [The Gitter chat room](https://gitter.im/practicalli/chat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
-[![Join the conversation on Gitter](/images/gitter-chat-badge-practicalli.png)](https://gitter.im/practicalli/chat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+* [#practicalli channel on Clojurians Slack community](http://clojurians.slack.com/messages/practicalli) - [sign up for a free account](https://clojurians.net/)
 
 By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](http://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed in the [contributors](contributors.html) section of this workshop.
 
