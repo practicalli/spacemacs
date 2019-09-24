@@ -90,7 +90,6 @@
             * [Paredit keybindings](structured-editing/paredit-keybindings.md)
             * [Using Paredit](structured-editing/paredit.md)
             * [Paredit: Killing code softly](structured-editing/emacs-killing-code-softly.md)
-    * [Snippets (docs)](documentation/snippets.md)
     * [Snippets](snippets/index.md)
         * [Clojure Snippets](snippets/clojure-snippets.md)
         * [Add your own Snippets](snippets/add-your-own-snippets.md)
