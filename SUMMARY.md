@@ -36,16 +36,11 @@
     * [Line Numbers](install-spacemacs/line-numbers.md)
     * [Update Spacemacs](install-spacemacs/update.md)
 
-## Understanding Spacemacs concepts
+## Basic concepts
 
 * [Spacemacs Basics](spacemacs-basics/index.md)
     * [Emacs Basics](spacemacs-basics/emacs-basics.md)
-    * [Emacs Quick Reference](spacemacs-basics/emacs-quick-reference.md)
     * [Vim Basics](spacemacs-basics/vim-basics.md)
-    * [Speaking Vim](spacemacs-basics/speaking-vim.md)
-    * [Spacemacs Vim](spacemacs-basics/spacemacs-vim.md)
-    * [Vim Quick Reference](spacemacs-basics/vim-quick-reference.md)
-    * [Vim Tips for developers](spacemacs-basics/vim-tips-for-developers.md)
 
 ## Using Spacemacs
 
@@ -69,6 +64,11 @@
         * [REPL History](clojure-repl/repl-history.md)
     * [Reset the REPL](clojure-repl/reset-the-repl.md)
 * [Editing](editing/index.md)
+    * [Vim Style](editing/vim-style/index.md)
+        * [Speaking Evil](editing/vim-style/speaking-evil.md)
+        * [Vim Quick Reference](editing/vim-style/vim-quick-reference.md)
+        * [Vim Tips for developers](editing/vim-style/vim-tips-for-developers.md)
+        * [Keybinding reference](editing/vim-style/keybindng-reference.md)
     * [Evil tools](editing/evil-tools/index.md)
         * [iedit](editing/evil-tools/iedit.md)
         * [iedit a function](editing/evil-tools/iedit-a-function.md)
@@ -76,6 +76,7 @@
         * [iedit replace multiple words](editing/evil-tools/iedit-replace-multiple-words.md)
         * [Narrowing](editing/evil-tools/narrowing.md)
         * [Replace text across files](editing/evil-tools/replacing-text-across-files.md)
+    * [go menu](editing/evil-tools/g-menu.md)
     * [Structured Editing](structured-editing/index.md)
         * [Smartparens](structured-editing/smartparens.md)
             * [Smartparens Strict Mode](structured-editing/smartparens-strict-mode.md)

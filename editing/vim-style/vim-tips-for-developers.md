@@ -8,7 +8,7 @@ Vim keybindings that drive Vim editing tools that are common for developers
 ## Comments and Commenting code
 
 
-#`g c c`  comment line
+`g c c`  comment line
 
 `SPC ; ;` comment current line
 
@@ -31,8 +31,8 @@ Vim keybindings that drive Vim editing tools that are common for developers
 | `c i (`    | change in (                                                                     |
 | `c a (`    | change “around” (                                                               |
 | `%`        | jump forwards to next paren, further `%` toggles between open and close parens. |
+| `x p`      | transpose characters (cut current, paste after)                                        |
 
-`M-t` transpose words (that may be Emacs keybinding),
 
 
 ## multi-replace with iedit and narrowing.
