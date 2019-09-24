@@ -213,6 +213,7 @@
     * [Control flow](reference/control-flow.md)
     * [Local Assignment](reference/local-assignement.md)
 * [Alternative tooling](alternative-tooling/index.md)
+    * [Parinfer](alternative-tooling/parinfer.md)
     * [Joker](alternative-tooling/joker.md)
 * [Misc](misc/index.md)
     * [Artist mode](misc/artist-mode.md)
