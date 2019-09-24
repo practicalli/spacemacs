@@ -2,6 +2,8 @@
 
 `Ctrl-g` two times will cancel most actions in Spacemacs
 
+**Spacemacs Holy Mode**: use `M-m` instead of `SPC` and `M-RET` instead of `,` in the keybindings below
+
 ## Clojure
 
 | keybinding | action                                     |
@@ -40,23 +42,26 @@
 | `%`        | jump to matching parens or next closed paren |
 | `gg`       | start of buffer                              |
 | `G`        | end of buffer                                |
+| `v`        | visual select                                |
+| `y`        | yank - copy selected text                    |
+| `y y`      | yank line - copy entire line                 |
 | `/`        | search forwards in current buffer            |
 
 ### Changing Text
 
 | Command  | Action                                          |
 | ---      | ---                                             |
-| `i`      | edit at cursor                                  |
+| `i`      | insert - edit at cursor                         |
 | `a`      | append - edit after cursor                      |
 | `o`      | new line after cursor                           |
 | `O`      | new line before cursor                          |
-| `ESC`    | normal mode                                     |
+| `ESC`    | return to normal mode                           |
 | `x`      | delete character and add to kill ring           |
 | `p`      | paste (put)                                     |
 | `u`      | undo                                            |
 | `Ctrl-r` | redo                                            |
 | `g c c`  | comment current line                            |
-| `d$`     | delete to end of line                           |
+| `D`     | delete to end of line                           |
 | `dd`     | delete the current line                         |
 | `dt`     | delete to a character (not including character) |
 
