@@ -49,12 +49,12 @@
                {
                    "label": "Gitter Chat",
                    "icon": "fa fa-comments-o",
-                   "url": "https://gitter.im/practicalli/chat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"
+                   "url": "http://clojurians.slack.com/messages/practicalli"
                },
                {
                    "label": "GitHub",
                    "icon": "fa fa-github",
-                   "url": "https://github.com/practicalli"
+                   "url": "https://github.com/practicalli/spacemacs-gitbook/projects/1"
                },
                {
                    "label": "Search page title on StackOverflow",
