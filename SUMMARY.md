@@ -226,3 +226,4 @@
     * [Sample Configuration](introduction/sample-configuration.md)
     * [Additional resources](introduction/additional-resources.md)
 * [Work in progress - messy](work-in-progress.md)
+    * [Emacs Quick Reference](spacemacs-basics/emacs-quick-reference.md)
