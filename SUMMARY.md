@@ -48,6 +48,7 @@
     * [Create a Clojure Project](create-a-project/index.md)
         * [Using Emacs Eshell](create-a-project/using-emacs-eshell.md)
     * [Open and Create Files](working-with-projects/open-and-create-files.md)
+    * [Searching Projects](working-with-projects/searching-projects.md)
     * [NeoTree](working-with-projects/neotree.md)
     * [Ranger](working-with-projects/ranger.md)
     * [Managing Buffers](working-with-projects/managing-buffers.md)
