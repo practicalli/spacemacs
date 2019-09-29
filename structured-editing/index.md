@@ -23,13 +23,24 @@ Spacemacs includes an Evil **lisp-state**, `SPC k .` for refactoring Lisp base l
 
 The **lisp-state** uses smartparens commands, so its a great way to learn structural editing.
 
+The common commands I use are
+
+| Lisp state `SPC k` | Description                                                          |
+|--------------------|----------------------------------------------------------------------|
+| `s` /  `S`         | slurp forwards / backwards - pull in code from the right / left      |
+| `b` / `B`          | barf forwards / backwards - push out code to the right / left        |
+| `d x`              | delete expression                                                    |
+| `r`                | raise expression - replace parent expression with current expression |
+
+
 [![Spacemacs - Lisp State for Structural Editing](/images/spacemacs-structural-editing-lisp-state-menu.png)](/images/spacemacs-structural-editing-lisp-state-menu.png)
+
 
 ## Alternatives: paredit and parinfer
 
 [Paredit](https://www.emacswiki.org/emacs/ParEdit) was the original structural editing mode just for lisps, however, it is not actively maintained.  The Clojure layer in Spacemacs actually includes paredit, however no keybindings are defined, so you either have to use commands via `SPC SPC` or add your own keybindings to `dotspacemacs/user-config`, preferably using hooks on the Clojure mode.
 
-[Parinfer](https://shaunlebron.github.io/parinfer/) is relatively new and self describes as a bit of an experiment.  It does provide a bit more indentation automation which for some is great and for others quite confusing or annoying.
+[Parinfer](https://shaunlebron.github.io/parinfer/) is relatively new and self describes as a bit of an experiment.  It does provide a bit more indentation automation which for some is great and for others quite confusing or annoying.  Smartparens and Clojure mode formatting does everything that Parinfer does, its just parinfer works a little differently and needs some configuration.
 
 
 

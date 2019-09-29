@@ -87,6 +87,7 @@
             * [Slurp Barf](structured-editing/lisp-state-slurp-barf.md)
             * [Deleting](structured-editing/lisp-state-deleting.md)
             * [Splicing](structured-editing/lisp-state-splicing.md)
+            * [Raising](structured-editing/lisp-state-raising.md)
         * [Classic Emacs](structured-editing/classic-emacs.md)
             * [Paredit keybindings](structured-editing/paredit-keybindings.md)
             * [Using Paredit](structured-editing/paredit.md)
