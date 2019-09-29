@@ -76,7 +76,7 @@
         * [iedit find replace](editing/evil-tools/iedit-find-replace.md)
         * [iedit replace multiple words](editing/evil-tools/iedit-replace-multiple-words.md)
         * [Narrowing](editing/evil-tools/narrowing.md)
-        * [Replace text across files](editing/evil-tools/replacing-text-across-files.md)
+        * [Replace text across projects](editing/evil-tools/replacing-text-across-projects.md)
     * [go menu](editing/evil-tools/g-menu.md)
     * [Structured Editing](structured-editing/index.md)
         * [Smartparens](structured-editing/smartparens.md)
