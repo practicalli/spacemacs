@@ -26,6 +26,8 @@ https://youtu.be/ZKuQDrQLAnc
   </tr>
 </table>
 
+> #### TODO::Images not always loading
+> Unfortunately there is a bug with this website in that it doesn't always load images.  If you see a broken image, please try refresh the page.  If you know how to solve this bug, please let me know :)
 
 [Emacs](https://www.gnu.org/software/emacs/) has been a shining beacon of Free and Open Source software from the early 1970's and has grown to be a versatile set of development tools for all languages.  This long history has given [Emacs](https://www.gnu.org/software/emacs/) the ability to interact with almost every aspect of your digital life.
 
