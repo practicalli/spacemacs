@@ -17,9 +17,26 @@ Many programming language layers come with their own pre-defined snippets and th
 
 ## Snippets in Auto-completion popups
 
-You can include yasnippets in the autocompletion popup menus too.
+Snippets can be configured to appear in the auto-complete menu, so when you are typing you will see any matching snippet names.
+
+For example, if you type `defn` then in the menu you will see the snippet as a `defn -> defn` menu item.  Selecting that menu item expands the snippet.
 
 ![Spacemacs - Snippets - Markdown example](/images/spacemacs-snippets-example-markdown-code.png)
+
+Edit your `~/.spacemacs` configuration file and locate the `dotspacemacs/layers > dotspacemacs-configuration-layers` variable.  Add the variable `auto-completion-enable-snippets-in-popup t` to the auto-completion layer.
+
+For example:
+
+```elisp
+(defun dotspacemacs/layers ()
+  (
+  ;;; some code ommitted here...
+  dotspacemacs-configuration-layers
+   '(
+    (auto-completion :variables
+                     auto-completion-enable-help-tooltip t
+                     auto-completion-enable-snippets-in-popup t)
+```
 
 
 ## Resources

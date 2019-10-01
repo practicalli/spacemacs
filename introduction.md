@@ -1,6 +1,10 @@
-# Spacemacs: Clojure development made simple
+# Practicalli Spacemacs
 
-<iframe width="800" height="420" src="https://www.youtube.com/embed/Uuwg-069NYE?ecver=1" frameborder="0" allowfullscreen></iframe>
+A practical guide to Clojure development with Spacemacs, an Emacs community driven configuration.
+
+{% youtube %}
+https://youtu.be/ZKuQDrQLAnc
+{% endyoutube %}
 
 <table>
   <tr>
@@ -13,24 +17,29 @@
     <td>
       <a href="install-spacemacs/index.html"><img src="images/button-install-spacemacs.png" /></a>
     </td>
-   <td>
+    <td>
       <a href="create-a-project/index.html"><img src="images/button-code-with-clojure.png" /></a>
+    </td>
+    <td>
+      <a href="https://github.com/practicalli/spacemacs-config/blob/master/.spacemacs.d/init.el"><img src="images/button-my-spacemacs-config.png" /></a>
     </td>
   </tr>
 </table>
 
-[Emacs](https://www.gnu.org/software/emacs/) is an operating system disguised as a development tool, giving you the ability to interact with every aspect of your development life.
-
-[Spacemacs](http://spacemacs.org/) is the simplest way to use all the features and power of [Emacs](https://www.gnu.org/software/emacs/).  [Spacemacs](https://spacemacs.org) also integrates the raw text manipulation speed of Vim into the Emacs experience, enabling you to be even more productive.
+> #### TODO::Images not always loading
+> Unfortunately there is a bug with this website in that it doesn't always load images.  If you see a broken image, please try refresh the page.  If you know how to solve this bug, please let me know :)
 
 [Emacs](https://www.gnu.org/software/emacs/) has been a shining beacon of Free and Open Source software from the early 1970's and has grown to be a versatile set of development tools for all languages.  This long history has given [Emacs](https://www.gnu.org/software/emacs/) the ability to interact with almost every aspect of your digital life.
 
-![Clojure-cider-spacemacs-logo](images/spacemacs-practicalli-banner.png)
+[Spacemacs](http://spacemacs.org/) is a community configuration providing a consistent and simple to learn approach to using all the features and power of [Emacs](https://www.gnu.org/software/emacs/).  [Spacemacs](https://spacemacs.org) also integrates the raw text manipulation speed of Vim and multi-modal editing into the Emacs experience, enabling you to be even more productive.
 
-<hr />
+![Clojure-cider-spacemacs-logo](images/practicalli-spacemacs-book-cover.png)
 
-<div style="width:80%; margin:auto;">
+---
+
+<div style="width:95%; margin:auto;">
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 This work is licensed under a Creative Commons Attribution 4.0 ShareAlike License (including images & stylesheets).
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Spacemacs, Practicalli</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="spacemacs.practical.li" property="cc:attributionName" rel="cc:attributionURL">John Stevenson</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/practicalli/spacemacs" rel="dct:source">Spacemacs, Practicalli on Gitub</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>.
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Spacemacs, Practicalli</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="spacemacs.practical.li" property="cc:attributionName" rel="cc:attributionURL">John Stevenson</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/practicalli/spacemacs" rel="dct:source">Spacemacs, Practicalli on Gitub</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://twitter.com/jr0cket" rel="cc:morePermissions">@jr0cket</a>.
 </div>

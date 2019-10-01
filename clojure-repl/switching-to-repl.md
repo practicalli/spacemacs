@@ -28,6 +28,15 @@ A running REPL is required.
 (require '[my-custom-code-time :as time])
 ```
 
+## Setting the default REPL namespace
+
+Set the namespace used when starting the REPL in the `project.clj` file by adding `:init-ns` to the `:repl-options`
+
+```clojure
+:repl-options {:init-ns the-default.namespace}
+
+```
+
 
 ## Keybindings
 

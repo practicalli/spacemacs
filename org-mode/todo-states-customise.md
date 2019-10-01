@@ -15,16 +15,23 @@ Define states and workflow for all `.org` files in the `.spacemacs` file, inside
 
 ## Setting colours (faces) for todo states to give clearer view of work
 
+Setting a different colour for each TODO state makes it easier to see the status at a glance. Using the [X11 color names](https://en.wikipedia.org/wiki/Web_colors) gives colours that are easy to notice but are not to strong.
+
+Add the following code to the `dotspacemacs\user-config` section of the `.spacemacs` file:
+
 ```elisp
-  (with-eval-after-load 'org
-    (setq org-todo-keyword-faces
-         '(("todo" . org-warning)
-           ("doing" . "yellow")
-           ("blocked" . "red")
-           ("review" . "orange")
-           ("done" . "green")
-           ("archived" .  "blue"))))
+(with-eval-after-load 'org
+  (setq org-todo-keyword-faces
+        '(("todo" . "SlateGray")
+          ("doing" . "DarkOrchid")
+          ("blocked" . "Firebrick")
+          ("review" . "Teal")
+          ("done" . "ForestGreen")
+          ("archived" .  "SlateBlue"))))
 ```
+
+>####HINT::Use simpler names or colour codes
+> If the above codes do not work for you, try simpler colour names such as `green`, `blue`, `yellow`.  Alternatively, use the specific colour codes, such as `#242424`.
 
 ## Automatically log completion date-time
 

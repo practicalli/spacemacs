@@ -7,6 +7,17 @@ Lisp state provides and Evil mode for structural editing Clojure code and for ot
 > ####Hint::
 > In __Lisp State__ you do not need to use the `SPC k` keybinding, just the single character keybings.
 
+The common lisp state commands I use are
+
+| Lisp state `SPC k` | Description                                                          |
+|--------------------|----------------------------------------------------------------------|
+| `s` /  `S`         | slurp forwards / backwards - pull in code from the right / left      |
+| `b` / `B`          | barf forwards / backwards - push out code to the right / left        |
+| `d x`              | delete expression                                                    |
+| `r`                | raise expression - replace parent expression with current expression |
+
+
+
 ## Using Lisp State
 
 In a buffer containing a Clojure file, open the **lisp-state** using `SPC k .`

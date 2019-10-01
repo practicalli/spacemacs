@@ -7,7 +7,7 @@ For this guide I recommend **Evil style**, **standard distribution** and **helm 
 
 Evil editing style provides [multi-modal editing](/why-spacemacs/states.html), so different types of editing is carried out by specific states.  One advantage of many states is that single characters can be used for key bindings which puts less strain on your hands whilst typing.
 
-![Spacemacs - Evil states](/images/spacemacs-states--vertical.png)
+![Spacemacs - Evil states](/images/spacemacs-states-vim.png)
 
 
 Selecting Evil mode will set Vim to be the default way of using Emacs, however, all the default Emacs keybindings will be available.

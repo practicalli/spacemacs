@@ -1,39 +1,32 @@
 # Evaluating Clojure
 
-Your Clojure code can be evaluated in the REPL buffer or in the code buffer itself.
+Spacemacs encourages you to evaluate Clojure expressions in the source code buffer, which shows the results next to the expression.
 
-Some common workflows are to write code in the clojure buffer and then either:
+`, e f` will evaluate the current expression / function.
 
-* Evaluate expressions in the clojure code buffer (results inline)
-* Evaluate expressions in the clojure code buffer and send to REPL buffer
-* Evaluate expressions in the REPL buffer
-* Live evaluation with Enlighten mode
+`, e ;` will evaluate the current expression and show the result as a comment
 
-This section will give examples of these common workflows.
-
-> ####HINT::
-> I prefer to evaluate in the code buffer.  I also have a section at the bottom of the file for REPL experiment code.
 
 ## Quick reference
 
-The evaluation menu for Clojure is available via `, e` or `M-RET e`.
+The evaluation menu for Clojure is available via `, e` (or `M-RET e` in holy mode).
 
 ![Spacemacs - Clojure - Evaluate menu](/images/spacemacs-clojure-evaluate-menu.png)
 
 Evaluation commands for Clojure are:
 
-| Vim Normal | Major mode  | Description                                                       |
-|------------|-------------|-------------------------------------------------------------------|
-| `, e b`    | `M-RET e b` | Evaluate all the code in the current buffer                       |
-| `, e r`    | `M-RET e r` | Evaluate code within the highlighted region                       |
-| `, e e`    | `M-RET e e` | Evaluate the previous expression and print the result             |
-| `, e f`    | `M-RET e f` | Evaluate the current expression and print the result              |
-| `, e ;`    |             | Evaluate the current expression and print the result as a comment |
-| `, e P`    |             | Open a new buffer and print the result of the previous expression |
-| `, T e`     | `M-RET T e`  | Toggle CIDER Enlighten mode, showing intermediate values      |
+| Evil Normal | Description                                                       |
+|-------------|-------------------------------------------------------------------|
+| `, e ;`     | Evaluate the current expression and print the result as a comment |
+| `, e b`     | Evaluate all the code in the current buffer                       |
+| `, e e`     | Evaluate the previous expression and print the result             |
+| `, e f`     | Evaluate the current expression and print the result              |
+| `, e P`     | Open new buffer and pretty print result of the previous expression |
+| `, e r`     | Evaluate code within the highlighted region                       |
+| `,e w`      | Evaluate the previous expression and replace it with the result   |
+| `, T e`     | Toggle Enlighten mode, showing intermediate values                |
 
 
 > ####HINT::Displaying large results
-> If the evaluation of a function or symbol returns a large result, eg. a large map, then use `cider-pprint-eval-last-sexp` to show the result in a separate buffer.
->
-> `, e P`
+> `, e P` opens a separate buffer and pretty prints the results.  This is excellent for evaluating expressions that return a large result, eg. a large map.
+> `, d v` the [`cider-inspector`](inspect.html) is a great way to navigate through a large data structure, especially if it is nested.

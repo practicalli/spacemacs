@@ -1,14 +1,9 @@
-# Create local repositry
+# Create a local Git repository
 
-You can create a git local repostitory on the command line or in your favorite Git client, or simply create it using Magit.
+`SPC g i` creates a local git repository and you are prompted for root directory in which to create it.
 
-## Magit status
+![Spacemacs Magit - create local repository](/images/spacemacs-magit-init.png)
 
-If you run git status from a file that is not currently in a git project, magit will prompt you to create a git project, allowing you to select the root of the project directory
+Once magit created the git repository it automatically opens `magit-status`.
 
-* confirm you want to create a git repository
-* specify where to create the repository, the root directory for the git repository
-
-{% youtube %}
-https://www.youtube.com/embed/AdEOazt1rD0?autoplay=1loop=1
-{% endyoutube %}
+![Spacemacs Magit - status](/images/spacemacs-magit-status.png)

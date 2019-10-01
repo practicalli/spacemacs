@@ -19,23 +19,22 @@ Some of Projectile's features:
 [![Spacemacs - Project menu](/images/spacemacs-project-menu.png)](/images/spacemacs-project-menu.png)
 
 
-> ####Hint::Looking for a file browser
-> If you are looking for a file browser to explore your directories and files, then try Neotree or Ranger.
 
-## Neotree
+## Treemacs
 
-Neotree provides a quick and simple way to navigate all the directories and files in a project.
+> #### TODO::Treemacs has now replaced Neotree
+> Treemacs is now the default visual file browser in Spacemacs.  It works in the same way as Neotree for the basic file navigation.
 
-To toggle the NeoTree buffer, press `SPC f t` or `SPC p t` (the latter opens NeoTree with the root set to the projectile project root).
+Treemacs provides a quick and simple way to navigate all the directories and files in a project.  Visit the [Treemacs project for details of all its features](https://github.com/Alexander-Miller/treemacs#detailed-feature-list)
 
-To select the NeoTree window at any time, press `SPC 0`. The NeoTree window always has the number 0.
+`SPC f t` or `SPC p t` to toggle the Treemacs buffer, the latter opens Treemacs with the root set to the projectile project root.
 
-![Spacemacs - Neotree example](/images/spacemacs-neotree-example.png)
+To select the Treemacs window at any time, press `SPC 0`. The Treemacs window always has the number 0.
 
-Version control is supported and file colours will change depending on its current state, e.g. green for new files, purple for modified files.
+![Spacemacs - Treemacs example](http://develop.spacemacs.org/layers/+filetree/treemacs/img/treemacs.png)
 
-* [Using Neotree in Spacemacs](/working-with-projects/neotree.html)
-* [Spacemacs Neotree Layer](http://develop.spacemacs.org/layers/+filetree/neotree/README.html)
+* [Spacemacs Treemacs Layer](http://develop.spacemacs.org/layers/+filetree/treemacs/README.html)
+
 
 ## Ranger
 

@@ -10,19 +10,23 @@ Transient-states are usually triggered by using a keybinding with the following 
 
 When in a transient-state you will see documentation at the bottom of your window. To exit a transient-state press q.
 
-  Examples of transient state menus
+## Examples of transient state menus
 
-* `SPC b .` - buffer management
-* `SPC e .` - errors
-* `SPC k .` - lisp state
-* `SPC w .` - window management
-* `SPC z .` - code folding
-* `SPC z f` - zoom frame size
-* `SPC z x` - Font Scaling (x for text)
+| Keybindings   | Transient state description  |
+|---------------|------------------------------|
+| `SPC b .`   | buffer management            |
+| `SPC e .`   | errors                       |
+| `SPC k .`   | lisp state                   |
+| `SPC w .`   | window management            |
+| `SPC z .`   | code folding                 |
+| `SPC z f`   | zoom frame size              |
+| `SPC z x`   | Font Scaling (x for text)    |
+| `SPC n +/-` | Change the value of a number |
+
 
 ## Hydra menus
 
-Spacemacs uses [hydra]() to create these transient states. Some packages also include their own Hydra menus. An example of this is the Clojure refactor hyrda menu.
+Spacemacs uses [hydra](https://github.com/abo-abo/hydra) to create these transient states. Some packages also include their own Hydra menus. An example of this is the Clojure refactor hyrda menu.
 
 * `C-c C-f h h` - clj-refactor (hydra menu)
 

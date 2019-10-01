@@ -5,7 +5,7 @@
 Emacs is available for Linux, MacOSX and Windows.  The [Spacemacs Readme suggested ways to install Emacs](https://github.com/syl20bnr/spacemacs/tree/develop#emacs)
 
 > ####Info::Minimum Emacs Version - 25.1
-> This guide used the `develop` version of Spacemacs which requires Emacs 25.1 or greater
+> This guide used the `develop` version of Spacemacs which requires Emacs 25.1 or greater.
 
 Here is a summary of the Emacs installation process for several operating system.
 
@@ -18,12 +18,12 @@ sudo apt-get install emacs25
 ```
 
 > ####Hint::Ubuntu Personal Package Archives
-> If the version of Emacs is not available in your version of Ubuntu, add the Personal Package Archive from the [Ubuntu Emacs Team](https://launchpad.net/~ubuntu-elisp/+archive/ubuntu/ppa)
+> If the version of Emacs is not available in your version of Ubuntu, add the Personal Package Archive from the [Ubuntu Emacs Team](https://launchpad.net/~ubuntu-elisp/+archive/ubuntu/ppa).  Personally I use `emacs-snapshot` from this package archive which installs a recent snapshot of Emacs 27.
 
 
 ### MacOSX
 
-For a self-contained install, download Emacs 25 from the [Emacs for OSX website](https://emacsformacosx.com/).
+For a self-contained install, download Emacs 26.3 or later from the [Emacs for OSX website](https://emacsformacosx.com/).
 
 Alternative, if you use Homebrew, run the following command:
 
@@ -33,9 +33,9 @@ brew cask install emacs
 
 ### Windows (version 7 or 10)
 
-Download Emacs25 from the [GNU repository](http://ftp.gnu.org/gnu/emacs/windows/) and extract the zip file to `%AppData%/local/Programs/emacs`.
+Download Emacs-26.3 from the [GNU repository](http://ftp.gnu.org/gnu/emacs/windows/emacs-26) and extract the zip file to `%AppData%/local/Programs/emacs`.
 
-Alternatively, if you are using the [Chocolatey package manager](https://chocolatey.org/) then install [Emacs 64bit version 25](https://chocolatey.org/packages/emacs64)
+Alternatively, if you are using the [Chocolatey package manager](https://chocolatey.org/) then install [Emacs version 26](https://chocolatey.org/packages/emacs)
 
 Add the Emacs directory to the PATH variable in your user account environment variables.
 

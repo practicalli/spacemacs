@@ -29,6 +29,15 @@ You can push changes to any repositories your local git repository is connected 
 
 ## Connecting to your Github account
 
+> #### TODO:: Determine correct location of personal token
+> Confirm if `~/.gitconfig` or `.authinfo` is the right file for personal token
+>
+> It seems that Ghub is used now by Magit to connect to Github via its API (including GraphQL)
+> https://emacsair.me/2018/03/20/ghub-2.0/
+> Spacemacs should generate the token for you and add it to your Github account, after prompting you for username, password and 2FA.
+> The personal token is saved in the `~/.authinfo`.  I will remove the token from `.gitconfig` and test.
+> The following section needs updating.
+
 When you first run any of the Gist or Github commands you will be prompted for your username, password and 2Factor code.
 
 Entering correct account details will [create a personal access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) on your Github account.  This personal access token is also copied to your local Git config, `~/.gitconfig`, avoiding the need to prompt for your Github login details each time.

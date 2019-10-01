@@ -1,24 +1,23 @@
 # Layouts
 
-Layouts enable you to switch between different projects and other tasks you wish to seperate (email, irc, org-agenda, etc.)
+Layouts enable you to switch between different projects.  Each layout keeps its own list of open buffers, making it quick to navigate to specific buffers.
 
-Each
-
-> ####Hint::Spacemacs Layouts documentation
-> [Layouts - Spacemacs documentation](https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#layouts-and-workspaces)
+`SPC l l` shows a menu where you can create a new layer, typing the name for the layer.  The new layer name shows in the left corner of the Spacemacs power bar.
 
 ![Spacemacs - Layouts - practicalli spacemacs layout](/images/spacemacs-layouts-example-practicalli-spacemacs.png)
-
-![Spacemacs - Layouts - jr0cket blog layout](/images/spacemacs-layouts-example-jr0cket-blog.png)
-
-![Spacemacs - Layouts - Clojure through code layout](/images/spacemacs-layouts-clojure-code-hhgttg.png)
 
 
 ## Layouts Transient State
 
 `SPC l` opens the Layouts transient state, allowing you to create, delete and select layouts with a single character keybinding.
 
-The most common commands are:
+The transient state also lists all the current layers.
+
+![Spacemacs Layers - example layer list](/images/spacemacs-layouts-transient-state-list.png)
+
+
+
+The most layer common commands are:
 
 | Keybindings | Action                                                     |
 |-------------|------------------------------------------------------------|
@@ -31,3 +30,7 @@ The most common commands are:
 
 
 ![Spacemacs - Layouts - transient state menu - `SPC l` ](/images/spacemacs-layouts-transient-state-menu.png)
+
+
+> ####Hint::Spacemacs Layouts documentation
+> [Layouts - Spacemacs documentation](https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#layouts-and-workspaces)

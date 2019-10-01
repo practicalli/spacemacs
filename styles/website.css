@@ -1,12 +1,55 @@
-/* @import url(https://fonts.googleapis.com/css?family=Raleway); */
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
 
-/* Use Ubuntu font instead of the default Raleway font */
+/* Use Ubuntu font as default font for all content */
 body {
     font-family: Ubuntu;
-    font-size: 2rem;
+    font-size: 1.6rem;
 }
+
+.book-body h1,.book-body h2,.book-body h3,.book-body h4,.book-body h5,.book-body h6 {
+    font-family : "Ubuntu", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.book-body p, .book-body div, .book-body span, .summary, .book-body li, .summary li a  {
+    font-family : "Ubuntu", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.6rem;
+}
+
+/* .book .book-body .page-wrapper .page-inner section.normal code { */
+/* } */
+
+/* Center images and tables */
+img, div, table {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Over-ride the wide-page plugin  */
+.book .book-body .page-wrapper .page-inner {
+    max-width: 72%;
+}
+
+
+/* Make inline and code blocks stand out   */
+.markdown-section pre>code, .markdown-section code {
+    font-family: "Ubuntu Mono", Consolas, Menlo, Courier, monospace;
+    background-color: #f7f7f7;
+    color: #ba6ec5;             /* Spacemacs purple*/
+    font-size: 1.1em;
+    margin: 0;
+    padding: 0.1em 0.1em;
+}
+
+
+
+.CodeMirror pre {
+    font-size: 1.4em;
+}
+
+
+/* Deprecated styles */
 
 /* Show keybindings to look like keys on a keyboard */
 kbd {
@@ -18,54 +61,4 @@ kbd {
     box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
     color: #000000;
     background-color: #f7f7f7;
-}
-
-/* Over-ride maximum page width - default 800px */
-/*  - if over-ridden then paging arrows can appear over text */
-
-.page-inner {
-    max-width: 1000px;
-}
-
-
-.book-body h1,.book-body h2,.book-body h3,.book-body h4,.book-body h5,.book-body h6 {
-    font-family : "Ubuntu", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.book-body p, .book-body div, .book-body span, .summary, .book-body li, .summary li a  {
-    font-family : "Ubuntu", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 2rem;
-}
-
-.book .book-body .page-wrapper .page-inner section.normal code {
-    font-family: "Ubuntu Mono", Consolas, Menlo, Courier, monospace;
-}
-
-img, div, table {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Code blocks: boarder & increased font size from 85% to 108% */
-.book .book-body .page-wrapper .page-inner section.normal .highlight pre, .book .book-body .page-wrapper .page-inner section.normal pre {
-    background-color: #f7f7f7;
-    border: 5px solid #D9EDF7;
-    border-radius: 3px;
-    font-size: 108%;
-    line-height: 1.45;
-    overflow: auto;
-    padding: 16px;
-}
-
-/* Inline code:
- - highlight colour and background
- - increased font size to 108% */
-.book .book-body .page-wrapper .page-inner section.normal code {
-    background-color: #f7f7f7;
-    color: #ba6ec5;             /* Spacemacs purple*/
-    border-radius: 3px;
-    font-size: 128%;
-    margin: 0;
-    padding: 0.2em 0;
 }
