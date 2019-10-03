@@ -24,10 +24,10 @@ Starting a REPL (Clojure runtime environment) from Spacemacs allows you to evalu
 > Add animated gifs or video of main features
 
 
-* inline error and warning highlighting
+* inline error and warning highlighting, supporting [joker](https://joker-lang.org/) and [clj-kondo](https://github.com/borkdude/clj-kondo) linters
 * human-friendly stack traces
 * smart code completion - [auto-complete-mode](https://github.com/clojure-emacs/ac-cider)
-* definition & documentation lookup, including [Grimoire](http://conj.io/) integration
+* definition & documentation lookup
 * value inspector & function tracing
 * interactive macroexpansion
 * Run tests and generate reports - with `clojure.test` integration
