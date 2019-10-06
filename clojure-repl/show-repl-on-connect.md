@@ -1,6 +1,6 @@
 # Show REPL Buffer on Connect
 
-Spacemacs does not show the Clojure REPL buffer once you have connected (cider-jack-in).  You can open and jump to the REPL buffer using `. s s`.  This keybinding toggles focus between the repl and code buffers.
+Spacemacs does not show the Clojure REPL buffer once you have connected (cider-jack-in).  You can open and jump to the REPL buffer using `, s s`.  This keybinding toggles focus between the repl and code buffers.
 
 You can also open the buffer list, `SPC b b` and if there are many open buffers narrow the list by typing `repl`.  This is useful when you are using ClojureScript, which has two repls (Clojure REPL & ClojureScript REPL).
 
