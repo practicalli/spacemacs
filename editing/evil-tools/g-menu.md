@@ -4,18 +4,18 @@
 
 [![Spacemacs Vim Normal - g menu](/images/spacemacs-vim-normal-g-menu.png)](/images/spacemacs-vim-normal-g-menu.png)
 
-I mainly use this for changing the case of letters, e.g.:
+## Most used commands from the menu
 
+| Keybindings | Description                                       |
+|-------------|---------------------------------------------------|
+| `c c`     | Comment line                                      |
+| `c`       | Comment selected region (select first)            |
+| `U`         | Upper case current character or selected text     |
+| `u`         | Lower case current character or selected text     |
+| `g`       | Go to first line of buffer                        |
+| `j`       | join next line with current by joining whitespace |
+| `v`       | restore last visual select region                 |
+| `r`       | [multiple cursors](multiple-cursors.md) menu                            |
 
-|         |                                               |
-|---------|-----------------------------------------------|
-| `g c c` | Comment line                                  |
-| `g c`   | Comment selected region (select first)        |
-| `U`     | Upper case current character or selected text |
-| `u`     | Lower case current character or selected text |
-|         |                                               |
-
-
-`v` to select the characters I want to change
 
 > #### TODO::Move to navigation section
