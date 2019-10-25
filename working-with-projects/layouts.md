@@ -31,6 +31,10 @@ dotspacemacs-auto-resume-layouts t
 
 `SPC b b` in the `default` layout shows all open buffers as this layout has global scope.
 
+This layout is useful to check if there are unsaved files or for killing unwanted or temporary buffers.
+
+`M-SPC` when helm popup is active opens the [helm transient state](/why-spacemacs/helm-transient-state.md).  `t` will mark (tag) an item in the list, `T` will mark all items.  `M-D` will kill all marked buffers.
+
 
 
 ## Workspaces
