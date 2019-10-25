@@ -4,9 +4,10 @@
 
 ![iedit - Edit multiple regions in the same way simultaneously](https://github.com/victorhge/iedit/raw/master/iedit-demo.gif)
 
-Spacemacs uses the powerful [iedit](https://github.com/tsdh/iedit) mode through [`evil-iedit-state`](https://github.com/syl20bnr/evil-iedit-state) to quickly edit multiple occurrences of a symbol or selection.
+Use [iedit](https://github.com/tsdh/iedit) mode through [`evil-iedit-state`](https://github.com/syl20bnr/evil-iedit-state) to quickly edit multiple occurrences of a symbol or selection.
 
 iedit also integrates with [`expand-region`](https://github.com/magnars/expand-region.el) for quick editing of the currently selected text by pressing `e`.
+
 
 ## iedit states key bindings
 

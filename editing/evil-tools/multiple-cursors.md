@@ -2,12 +2,12 @@
 
 Create multiple cursors in a buffer to concurrently edit or output text from calling an Emacs function.
 
-Multiple cursors allows you to call Emacs functions and have the results output to each cursor you have created.
+[Multiple cursors](http://develop.spacemacs.org/layers/+misc/multiple-cursors/README.html) allows you to call Emacs functions and have the results output to each cursor you have created.
 
 > #### Hint::iedit or multiple cursors
-> iedit is excellent for all kinds of search and replace editing of a buffer.  iedit finds all matches in a buffer although the scope can be limited by first using narrowing.
+> iedit is excellent for all kinds of search and replace actions using the Evil editing commands.  iedit finds all matches in a buffer and the scope can be limited by first using narrowing.
 >
-> Multiple cursors is more flexible as you can create multiple editing points without having to match specific text.  You can also apply Emacs functions for each of the cursors you created, extending the types of changes you can make.
+> Multiple cursors can create multiple editing points on matching text or in adhoc positions. It can also apply Emacs functions at each of the cursors you created, expanding on the types of changes you can make.
 
 ## Basic usage
 
