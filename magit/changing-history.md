@@ -1,7 +1,5 @@
 # Changing History
 
-> #### TODO::work in progress, sorry
-
 The need to change history in Git should be minimal and should limited to fixing errors made in previous commits on your local repository.
 
 Here are a few simple tools to help you change your local history.
@@ -11,20 +9,14 @@ Here are a few simple tools to help you change your local history.
 >
 > It is much simpler to commit a new change that fixes the omission or error and let others pull that additional change.
 
+## Tools for changing history
 
-## Amend commit
-
-This creates a new commit with both the currently staged changes and the change in the previous commit.
-
-If you forgot to include some changes in the last commit, then this is a way to avoid two commits for the same logical change.
-
-{% youtube %}
-https://youtu.be/2NNrc61RVx4?autoplay=1loop=1
-{% endyoutube %}
-
-
-## Squash commits
-
-> Also see interactive rebasing
-
-## Fixing up
+| Tool        | Magit | Description                                                                                        |
+|-------------|-------|----------------------------------------------------------------------------------------------------|
+| Amend       | `c a` | including all staged changes to the HEAD commit and edit the commit message (replaces HEAD commit) |
+| Reword      | `c w` | edit the commit message, ignore any staged changes                          (replaces HEAD commit) |
+| Extend      | `c e` | immediately add all staged files to the HEAD commit  (replaces HEAD commit)                        |
+| Squash      | `c s` | see [interactive rebasing](interactive-rebasing.md)                                                |
+| Auto-squash | `c S` | see [interactive rebasing](interactive-rebasing.md)                                                |
+| Fixup       | `c f` | see [interactive rebasing](interactive-rebasing.md)                                                |
+| Auto-fixup  | `c F` | see [interactive rebasing](interactive-rebasing.md)                                                |

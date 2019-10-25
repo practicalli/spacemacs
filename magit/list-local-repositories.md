@@ -20,8 +20,8 @@ In the following example the Git repositories are all under a directory called `
 The number represents the depth of subdirectories in which magit searches for Git repositories in the specified directory.
 
 > ####Hint:: Setting repository directories changes Magit Status behaviour
-> `SPC g i` should be used to initialize a new git repository once `magit-repository-directories` is set, as `SPC g s` will just list all the existing git repositories.
+> `SPC g i` should be used to initialize a new git repository once `magit-repository-directories` is set.
 >
->  If you use `SPC g s` to initialise a new git repository in the current project, then you will need to enter `.` and magit will prompt you to confirm you want to create a new git repository for the current project.
+>  If you use `SPC g s` on a project that has no git version control, magit will prompt you for a git repository.  Enter `.` to initialise a new git repository in the current project.  Magit will prompt you in the mini-buffer to confirm you wish to create this git repository.
 >
 ![Spacemacs Magit: git status list of existing repositories](/images/spacemacs-magit-git-status-helm-list-of-repositories.png)
