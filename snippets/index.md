@@ -41,4 +41,4 @@ For example:
 
 ## Resources
 
-For more examples on where snippets are useful, read Sacha Chua's article on {how to make better use of Yasnippet in my Emacs workflow}(http://sachachua.com/blog/2015/01/thinking-make-better-use-yasnippet-emacs-workflow/)
+For more examples on where snippets are useful, read Sacha Chua's article on [how to make better use of Yasnippet in my Emacs workflow](http://sachachua.com/blog/2015/01/thinking-make-better-use-yasnippet-emacs-workflow/)

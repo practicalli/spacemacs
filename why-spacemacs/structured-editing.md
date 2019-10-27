@@ -11,7 +11,7 @@ https://www.youtube.com/watch?v=PmSPKvlJk74
 {% endyoutube %}
 
 > ####Hint::Structured Editing Section
-> Read the [Structured editing section](/structured-editing/) for a detailed guide to using Lisp mode, Smartparens, Paredit and Evil mode to manage your Clojure (and elsip) code.
+> Read the [Structured editing section](/structured-editing/) for a detailed guide to using Lisp mode, Smartparens, Paredit and Evil mode to manage your Clojure (and elisp) code.
 
 
 ## Smartparents For Writing Structured Text

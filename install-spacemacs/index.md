@@ -16,7 +16,7 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 ```
 
 > ####Hint::Using Spacemacs develop branch for latest fixes
-> The latest updates and fixes are available much sooner if you use the `develop` branch of Spacemacs. > In a terminal window, change to the `develop` branch using the following commands:
+> The latest updates and fixes are available much sooner if you use the `develop` branch of Spacemacs. In a terminal window, change to the `develop` branch using the following commands:
 ```bash
 cd ~/.emacs.d/
 git checkout develop

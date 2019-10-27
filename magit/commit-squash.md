@@ -6,7 +6,7 @@
 
 The top buffer shows the local Git log, listing all the commit history.
 
-The bottom buffer shows the magit-diff output, so you can see all the changes of the current commit.
+The bottom buffer shows the `magit-diff output`, so you can see all the changes of the current commit.
 
 ![Spacemacs Magit - Commit Squash](/images/spacemacs-magit-commit-squash-example.png)
 

@@ -2,7 +2,7 @@
 
 The Clojure layer also includes [evil-cleverparens](http://spacemacs.org/layers/+vim/evil-cleverparens/README.html) which ensures Clojure code structure is respected.
 
-Safe Structural editing in Vim normal state respects structural editing too, meaning the standard vim commands can be used for cutting and deleting text without breaking Clojure or Lisp code structures.
+Safe structural editing in Vim normal state respects structural editing too, meaning the standard vim commands can be used for cutting and deleting text without breaking Clojure or Lisp code structures.
 
 Safe structural editing is provided by the package [evil-cleverparens](https://github.com/luxbock/evil-cleverparens) which is included in the Clojure layer. By default this mode is not activated.
 

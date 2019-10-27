@@ -70,4 +70,4 @@ Keybindings available in Evil normal mode and the resultant state they leave you
 
 Run documentation lookup command specific to the major mode.
 
-Use command bound to ‘SPC m h h‘ if defined, otherwise fall back to ‘evil-lookup’
+Use command bound to `SPC m h h` if defined, otherwise fall back to `evil-lookup`

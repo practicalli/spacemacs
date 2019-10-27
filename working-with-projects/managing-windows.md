@@ -1,6 +1,6 @@
 # Managing Windows
 
-Windows in Spacemacs allow you to organise your buffers, splitting horizontally and vertically with multiple rows and columns.  Windows can also be move around and resized without resorting to using the mouse.
+Windows in Spacemacs allow you to organise your buffers, splitting them horizontally and vertically with multiple rows and columns.  Windows can also be moved around and resized without resorting to using the mouse.
 
 The windows menu is `SPC w`.
 
@@ -15,6 +15,6 @@ The windows menu is `SPC w`.
 
 ## Windows Transient menu
 
-Use the Windows Transient state menu `SPC W .` to re-arrange windows multiple times.
+Use the Windows Transient state menu `SPC w .` to re-arrange windows multiple times.
 
 ![Spacemacs - window menu - transient state](/images/spacemacs-window-menu-transient-state.png)

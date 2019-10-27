@@ -8,7 +8,7 @@ You can see the value of a value in clojure using inspection, `SPC d i`
 
 When you inspect a collection you see the last evaluated value of that collection.
 
-Here is the result of inpsecting a simple persistent map - **{:name "John" :coding "Clojure" :tool "Spacemacs"}**
+Here is the result of inspecting a simple persistent map - **{:name "John" :coding "Clojure" :tool "Spacemacs"}**
 
 ![Spacemacs - Clojure - Inspect persistent map](/images/spacemacs-clojure-inspect-persistent-map.png)
 

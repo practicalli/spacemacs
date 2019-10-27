@@ -45,7 +45,7 @@
 | `v`        | visual select                                |
 | `y`        | yank - copy selected text                    |
 | `y y`      | yank line - copy entire line                 |
-| `/`        | search forwards in current buffer            |
+| `/`        | search forward in current buffer            |
 
 ### Changing Text
 

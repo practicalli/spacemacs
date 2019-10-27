@@ -72,6 +72,7 @@ V - visual line mode
 C-v - block visual mode
 </pre>
 
+<pre>
 v - visual char mode
 V - visual line mode
 C-v - block visual mode

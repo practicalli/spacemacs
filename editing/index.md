@@ -5,7 +5,7 @@ Spacemacs has many tools you can use to boost editing of code and documentation.
 | Tools             | Description                                                                                                             |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------|
 | Vim modal editing | [Vim Basics](/spacemacs-basics/vim-basics.html)                                                                         |
-| Visual select state | Techiques on selecting text                                                                                             |
+| Visual select state | Techniques on selecting text                                                                                            |
 | Vim Normal state | [Vim Basics](/spacemacs-basics/speaking-vim.html) and [Vim Quick Reference](/spacemacs-basics/vim-quick-reference.html) |
 | iedit state       | Concurrent find and replace of a search text in a buffer                                                     |
 | Narrowing         | [Selective editing of a buffer](/editing/evil-tools/narrowing.html) (region, function)                                  |

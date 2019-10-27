@@ -45,9 +45,9 @@ Vim keybindings that drive Vim editing tools that are common for developers
 
 `[count]G` Jump to line number
 
-gf Jump to file name under the cursor - try this in the summary.md file
+`gf` Jump to file name under the cursor - try this in the summary.md file
 
-<C-]> Jump to definition of keyword under the cursor
+`<C-]>` Jump to definition of keyword under the cursor
 
 
 
@@ -69,7 +69,7 @@ gf Jump to file name under the cursor - try this in the summary.md file
 
 `M-t` transpose words before and after cursor position
 
-`{`, `}` motions jump to next and previous empty lines.  This motion makes it simple to rearranging paragraphs
+`{`, `}` motions jump to next and previous empty lines.  This motion makes it simple to rearrange paragraphs
 
 `{ d }` will kill the paragraph (or multiple paragraphs)
 

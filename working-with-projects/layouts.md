@@ -14,7 +14,7 @@ The current layout name appears on the far left of the mode-line.
 
 ![Spacemacs layers - practicalli spacemacs](/images/spacemacs-layers-name.png)
 
-`SPC l s` saves the current layouts to a file, `SPC l L` to load layouts from a file.  Layouts are kept when restarting Spacemacs with `SPC q r` and can be configured to auto-resume when starting Emacs.
+`SPC l s` saves the current layouts to a file, `SPC l L` loads layouts from a file.  Layouts are kept when restarting Spacemacs with `SPC q r` and can be configured to auto-resume when starting Emacs.
 
 ```elisp
 dotspacemacs-auto-resume-layouts t

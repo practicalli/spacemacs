@@ -3,7 +3,7 @@
 You can connect to a REPL started elsewhere, for example the command line with `lein repl`, then connect to it from inside Spacemacs.  You will need to know:
 
 * host name / ip address
-* port the repl is listening too
+* port the REPL is listening too
 
 | Spacemacs   | Major mode  | Emacs     | Evil    | Command         |
 |-------------|-------------|-----------|---------|-----------------|
@@ -18,7 +18,7 @@ Use the `lein repl` command to run a new REPL on the command line.  Then connect
 
 ## Configuration Required
 
-If you are going to connect to an external repl from Spacemacs, you will need to add the Leiningen plugin called `cider-nrepl` and the Clojure `tools.nrepl` library.  Rather than add this to all projects, you add these to your Leiningen configuration `~/.lein/profiles.clj` file.  The versions of each library also had to be kept in sync with updates in the Spacemacs Clojure layer.
+If you are going to connect to an external REPL from Spacemacs, you will need to add the Leiningen plugin called `cider-nrepl` and the Clojure `tools.nrepl` library.  Rather than add this to all projects, you add these to your Leiningen configuration `~/.lein/profiles.clj` file.  The versions of each library also had to be kept in sync with updates in the Spacemacs Clojure layer.
 
 ```clojure
 {:dev {:plugins      [[cider/cider-nrepl "0.15.0-SNAPSHOT"]
@@ -26,6 +26,6 @@ If you are going to connect to an external repl from Spacemacs, you will need to
         :dependencies [[org.clojure/tools.nrepl "0.2.12"]]}}
 ```
 
-Without this configuration, you will see warning messages in the repl buffer stating that the versions of ... are out of sync.
+Without this configuration, you will see warning messages in the REPL buffer stating that the versions of ... are out of sync.
 
 ![Spacemacs - Cider connect - Warning - `cider-repl` & `tools-nrepl` out of sync](/images/spacemacs-cider-connect-warning-versions-out-of-sync.png)

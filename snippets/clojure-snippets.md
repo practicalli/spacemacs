@@ -7,7 +7,7 @@ For example, if you are defining a new function in Clojure then type `defn` and 
 Lets look at the built-in snippets that come with the Clojure layer in [Spacemacs](https://spacemacs.org) (and should be the default in Emacs YASnippet package).
 
 > ####Hint::Write your own snippets
-> Its easy to [wrtie your own snippets](add-your-own-snippets.html) for Clojure or any other language you use with [Spacemacs](https://spacemacs.org) / Emacs
+> Its easy to [write your own snippets](add-your-own-snippets.html) for Clojure or any other language you use with [Spacemacs](https://spacemacs.org) / Emacs
 
 
 # Where do Snippets fit in
@@ -29,7 +29,7 @@ All the current snippets for Clojure mode are in the following table, indicating
 | Snippet    | Description                                                                                                                    | Tab Stops                              |
 | ----       | ----                                                                                                                           | ----                                   |
 | bench      | benchmark an expression, using the `time` function                                                                             | body                                   |
-| bp         | depreciated: break point in swank                                                                                              |                                        |
+| bp         | deprecated: break point in swank                                                                                              |                                        |
 | def        | `def` expression                                                                                                               | N/A                                    |
 | defm       | `defmacro` expression, with name, doc-string, arguments & body tabstops                                                        | name, docstring, args, body            |
 | defn       | `defn` expression, with name, doc-string, arguments & body tabstops                                                            | name, docstring, args, body            |

@@ -21,7 +21,7 @@ There are a range of actions you can run from the Helm transient state or even w
 
 `a` switches to the actions page
 
-`C-z` displays the list off all the available actions for a buffer.
+`C-z` displays the list of all the available actions for a buffer.
 
 [![Spacemacs Buffers - Helm Actions](/images/spacemacs-buffers-helm-actions.png)](/images/spacemacs-buffers-helm-actions.png)
 

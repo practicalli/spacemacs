@@ -1,6 +1,6 @@
 # Alternative Tooling
 
-Alternatives tooling that can be used with Spacemancs but it not the recommended approach of Practicalli Spaceamcs
+Alternatives tooling that can be used with Spacemancs but it not the recommended approach of Practicalli Spacemacs
 
 * [Joker for linting](joker.md)
 * Parinfer for structural editing

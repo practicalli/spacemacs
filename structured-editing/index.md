@@ -54,11 +54,11 @@ Safe structural editing is provided by the package [evil-cleverparens](https://g
 |-------------|---------|------------------------------------------------------------|
 | `SPC m T s` | `, T s` | Enable evil safe structural editing for the current buffer |
 
-When enabled the symbol =🆂= is displayed in the mode-line.
+When enabled the symbol 🆂 is displayed in the mode-line.
 
 ![Spacemacs - Clojure - Safe Structural Editing mode enabled](/images/spacemacs-clojure-safe-structural-editing-mode.png)
 
-Enable for all =clojure= buffers by adding the following function in =dotspacemacs/user-config=
+Enable for all `clojure` buffers by adding the following function in `dotspacemacs/user-config`
 
 ```
 (spacemacs/toggle-evil-safe-lisp-structural-editing-on-register-hook-clojure-mode)

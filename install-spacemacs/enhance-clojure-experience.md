@@ -24,7 +24,7 @@ Enhance the **clojure** layer by adding automatic linting and additional refacto
 
 ## Edit .spacemacs and add layers
 
-Open the `.spacemacs` file via `SPC f e d`  (`M-m f e d` holy mode)
+Open the `.spacemacs` file via `SPC f e d`  (`M-m f e d` in holy mode)
 
 Use `/` and start typing `configuration-layers` to search for the `dotspacemacs-configuration-layers` section.  `RTN` confirms the search text and `n` jumps to the next occurance, `N` jumps to the previous occurrence.
 
@@ -68,7 +68,7 @@ Add the following layers to `dotspacemacs-configuration-layers` ensuring there a
 >
 > In the `version-control` layer The `:variables`  `git-gutter-use-fringe` to display changed lines in your working file in the fringe (margin) of the current buffer.
 >
-> I have not included the sayid debugger in this enhanced setup for Clojure as I find the `cider-debugger `, d b` sufficient.
+> I have not included the sayid debugger in this enhanced setup for Clojure as I find the cider-debugger `, d b` sufficient.
 >
 > If you wish use extensive debugging for the whole project, then enable sayid by adding the variable `clojure-enable-sayid`.  So your layer definition for Clojure would look like:
 ```
@@ -99,6 +99,6 @@ Create your own layers with `SPC SPC configuration-layer/create-layer`.  See the
 >
 > Trying to use packages-list-packages to install packages directly is simply ignored by Spacemacs.  See how to [configure a package without a layer](http://spacemacs.org/doc/DOCUMENTATION.html#without-a-layer) in the Spacemacs documentation.
 >
-> The Spacemacs menu system use a nemonic system for organising its menus and commands.  So to access a menu of file related commands, you press `SPC f` and for a menu of buffer commands you would use `SPC b`.
+> The Spacemacs menu system use a mnemonic system for organising its menus and commands.  So to access a menu of file related commands, you press `SPC f` and for a menu of buffer commands you would use `SPC b`.
 >
 > The keybindings to open the **file** of the **emacs** **dotfile** (.spacemacs) are therefore: `SPC f e d`

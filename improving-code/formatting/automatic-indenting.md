@@ -1,6 +1,6 @@
 # Automatic indenting
 
-`aggressive-indent-mode` will automatically adjusted indentation as you type.
+`aggressive-indent-mode` will automatically adjust indentation as you type.
 
 Edit `.spacemacs` and add this line one of these settings into the `dotspacemacs/user-config` section
 

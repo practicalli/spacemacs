@@ -35,4 +35,4 @@ Other learning resource for Vim include:
 * [Vim quick reference guide](http://vimhelp.appspot.com/quickref.txt.html)
 * [Vim Casts](http://vimcasts.org/)
 * [Editing as a power user - Vim to Spacemacs](https://steemit.com/vim/@hansvb/text-editing-as-a-power-user-from-vim-to-spacemacs-or-how-to-get-things-done)
-* [Vim verses Spacemacs](https://www.slant.co/versus/42/69/~vim_vs_spacemacs)
+* [Vim versus Spacemacs](https://www.slant.co/versus/42/69/~vim_vs_spacemacs)

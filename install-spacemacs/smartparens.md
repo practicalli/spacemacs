@@ -1,18 +1,18 @@
 # Smartparens
 
-Clojure and other lisp languages are defined as data structures, so expressions always start with parentheses, `( )`.  If there is an imbalance pairing of open and closing parentheses, then the code fails to work and causes an error.
+Clojure and other lisp languages are defined as data structures, so expressions always start with parentheses, `( )`.  If there is an imbalanced pairing of open and closing parentheses, then the code fails to work and causes an error.
 
-To , [smartparens](https://github.com/Fuco1/smartparens/wiki#getting-started) in strict mode ensures balanced parentheses by adding a closing parentheses when you type an open parentheses.  This works for `()`, `[]`, `{}` and `""`.
+[Smartparens](https://github.com/Fuco1/smartparens/wiki#getting-started) in strict mode ensures balanced parentheses by adding a closing parenthesis when you type an open parenthesis.  This works for `()`, `[]`, `{}` and `""`.
 
 ## Configure Smartparens
 
 Smartparens is part of the standard distribution of Spacemacs, so no install is necessary.
 
-I recommend enabling smartparens strict mode, so structure cannot be deleted without the content of that structure being deleted first.
+I recommend enabling smartparens strict mode (`dotspacemacs-smartparens-strict-mode`), so structure cannot be deleted without the content of that structure being deleted first.
 
-Smart closing parentheses means you can jump over closing structure characters by typing `)`
+Smart closing parenthesis (`dotspacemacs-smart-closing-parenthesis`) means you can jump over closing structure characters by typing `)`
 
-Highlighting all delimiters gives a visual guide to pairs of structural characters, to complement the rainbow parens that also comes with the Clojure layer.
+Highlighting all delimiters (`dotspacemacs-highlight-delimiters`) gives a visual guide to pairs of structural characters, to complement the rainbow parens that also comes with the Clojure layer.
 
 
 ```clojure

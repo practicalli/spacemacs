@@ -19,7 +19,7 @@ The total number of errors and warnings are show in in the Space bar.
 
 ## Configure Spacemacs Clojure layer with clj-kondo
 
-Add a variable called `clojure-enable-linters` to the `clojure` with the value 'clj-kondo.
+Add a variable called `clojure-enable-linters` to the `clojure` with the value `'clj-kondo`.
 
 ```elisp
 dotspacemacs-configuration-layers
@@ -33,4 +33,4 @@ dotspacemacs-configuration-layers
 
 
 > #### Hint::Conflicts
-> This configuration approach for clj-kondo is broken if you also include the unofficial `clojure-lint` layer that can provide Joker.  clj-kondo has superseded joker in functionality.
+> This configuration approach for clj-kondo is broken if you also include the unofficial `clojure-lint` layer that can provide Joker.  clj-kondo has superseded Joker in functionality.

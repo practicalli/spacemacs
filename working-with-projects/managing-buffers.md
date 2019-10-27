@@ -18,7 +18,7 @@ You can also delete any of the currently open buffers when you no longer need th
 
 ## Buffer Transient State
 
-If you want to manage multiple buffers then the buffer transient state is idea, `SPC b .`
+If you want to manage multiple buffers then the buffer transient state is ideal, entered using `SPC b .`
 
 With a single key you can cycle quickly through all open buffers, forward with `n` or backwards with either `N` or `p`.
 
@@ -38,7 +38,7 @@ Use `k` to kill the current buffer.
 
 ## Kill buffers using buffer menu
 
-The buffer transient state is the simplest way to delete buffers, however if there are a large number of buffers you wish to delete then using the buffer helm-mini menu.
+The buffer transient state is the simplest way to delete buffers, however if there are a large number of buffers you wish to delete then using the buffer helm-mini menu has its advantages.
 
 Open the buffer helm-mini menu with `SPC b b`.
 

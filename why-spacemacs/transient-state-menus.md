@@ -26,7 +26,7 @@ When in a transient-state you will see documentation at the bottom of your windo
 
 ## Hydra menus
 
-Spacemacs uses [hydra](https://github.com/abo-abo/hydra) to create these transient states. Some packages also include their own Hydra menus. An example of this is the Clojure refactor hyrda menu.
+Spacemacs uses [hydra](https://github.com/abo-abo/hydra) to create these transient states. Some packages also include their own hydra menus. An example of this is the Clojure refactor hydra menu.
 
 * `C-c C-f h h` - clj-refactor (hydra menu)
 

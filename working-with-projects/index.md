@@ -1,6 +1,6 @@
 # Working with Projects
 
-Spacemacs gives you several options for managing the files in your project and you will use commands from the following menus
+Spacemacs gives you several options for managing the files in your project and you will use commands from the following menus:
 
 
 ## File menu

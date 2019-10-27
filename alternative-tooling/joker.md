@@ -52,9 +52,10 @@ The flycheck package in the `syntax-checking` layer provides general syntax chec
 
 Ensure the `syntax-checking` layer is enabled in `.spacemacs`
 
+```
    dotspacemacs-configuration-layers
    '(syntax-checking)
-
+```
 
 ## Clone the Joker layer to your Spacemacs configuration
 

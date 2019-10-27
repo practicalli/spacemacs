@@ -69,9 +69,9 @@ Search a buffer for characters or words / text pattern.
 
 | Command | Action                                         |
 |---------|------------------------------------------------|
-| `*`     | search forwards for the word under the cursor  |
+| `*`     | search forward for the word under the cursor  |
 | `#`     | search backwards for the word under the cursor |
-| `/`     | search forwards in current buffer              |
+| `/`     | search forward in current buffer              |
 | `?`     | search backwards in current buffer             |
 | `n`     | once searching: find forward                   |
 | `N`     | once searching: find backwards                 |
@@ -335,7 +335,7 @@ in vim command mode you can scroll just the text using the classic vi bindings. 
 
 ### searching ###
 
-search with `SPc /`
+search with `SPC /`
 
 Matching only within a boundary by wrapping your search term with `\b`.
 
@@ -350,6 +350,8 @@ SPC / \bor\b
 http://paul-gowder.com/emacs.html
 
 
-### changing escape sequence for vim ###
+### changing the escape sequence for vim ###
 
+```
 (setq evil-escape-key-sequence "jk")
+```
