@@ -4,7 +4,6 @@ You can look up the documenation for Clojure functions from within Spacemacs usi
 
 * `ha` - cider-apropos
 * `hh` - cider-doc
-* `hg` - cider-grimoire
 * `hj` - cider-javadoc
 * `hn` - cider-browse-ns
 
