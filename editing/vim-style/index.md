@@ -24,7 +24,7 @@ To help make Vim style editing become a sub-conscious act you should [learn to s
 Other learning resource for Vim include:
 
 * [Spacemacs: Migrating from Vim](http://spacemacs.org/doc/VIMUSERS.html)
-* [Spacemancs Vim Cheatsheet](https://simpletutorials.com/c/3036/Spacemacs)
+* [Spacemacs Vim Cheatsheet](https://simpletutorials.com/c/3036/Spacemacs)
 * [Graphical cheat sheet tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
 * [Vim quick reference guide](http://vimhelp.appspot.com/quickref.txt.html)
 * [Vim Casts](http://vimcasts.org/)
