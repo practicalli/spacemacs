@@ -1,7 +1,5 @@
 # Vim editing for Clojure developers
 
-> #### TODO::work in progress, sorry
-
 Vim keybindings that drive Vim editing tools that are common for developers
 
 

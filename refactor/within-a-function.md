@@ -16,5 +16,13 @@ Make the changes to the highlighted text and all instances of that text will cha
 
 `ESC` or `fd` to leave iedit mode (twice if you are in Evil Insert).
 
+`SPC n w` to return to the full view of the buffer.
+
 
 > #### TODO::Add video
+
+---
+
+> #### Hint::Narrowing a region of text
+> You can select a range to narrow to using `v` for the visual select mode.  Then use `SPC n r` to narrow to just the selected text for editing.
+> `SPC n w` to return to the full view of the buffer.

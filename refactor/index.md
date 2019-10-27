@@ -1,6 +1,6 @@
 # Refactor Clojure Code
 
-Common refactoring, such as changing names, can be done with the [Evil tools](/evil-tools/index.md), `iedit`, `narrowing` and `helm-ag`. These have been covered in previous Editing sections.
+Common refactoring, such as changing names, can be done with the [Evil tools](/editing/evil-tools/), `iedit`, `narrowing` and `helm-ag`. These have been covered previously in the [Evil tools](/editing/evil-tools/) section.
 
 Specific examples of using evil tools for refactoring Clojure code:
 
