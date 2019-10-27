@@ -61,7 +61,7 @@ To get a copy of the repository, use the following git clone command which creat
 **Clojure Reference**
 * [Clojure.org](http://clojure.org), [features](http://clojure.org/features) and [rational](http://clojure.org/rationale)
 * [Clojure documentation](http://clojure.org/documentation)
-* [Clojure cheetsheet](http://clojure.org/cheatsheet)
+* [Clojure cheatsheet](http://clojure.org/cheatsheet)
 * [Official Google group](https://groups.google.com/forum/#!forum/clojure)
 * [CrossClj](http://crossclj.info/) - cross-referencing the Clojure ecosystem
 

@@ -30,8 +30,8 @@ Read the sections under [Vim Style editing](/editing/vim-style/) to take you bey
 Other learning resource for Vim include:
 
 * [Spacemacs: Migrating from Vim](http://spacemacs.org/doc/VIMUSERS.html)
-* [Spacemancs Vim Cheetsheet](https://simpletutorials.com/c/3036/Spacemacs)
-* [Graphical cheet sheet tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
+* [Spacemacs Vim Cheatsheet](https://simpletutorials.com/c/3036/Spacemacs)
+* [Graphical cheat sheet tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
 * [Vim quick reference guide](http://vimhelp.appspot.com/quickref.txt.html)
 * [Vim Casts](http://vimcasts.org/)
 * [Editing as a power user - Vim to Spacemacs](https://steemit.com/vim/@hansvb/text-editing-as-a-power-user-from-vim-to-spacemacs-or-how-to-get-things-done)
