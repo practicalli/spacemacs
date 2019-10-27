@@ -11,7 +11,7 @@ You can quickly jump between the start and end of expressions.  It is easy to mo
 
 Spacemacs uses [smart parens](https://github.com/Fuco1/smartparens) to help you write structured code really fast and also move expressions around.
 
-`SPC SPC sp-cheet-sheet`  lists all the smartparens commands available and we will cover the most common commands in this section.
+`SPC SPC sp-cheat-sheet`  lists all the smartparens commands available and we will cover the most common commands in this section.
 
 > ####Hint::Smartparens is not just for lisps
 > Smartparens is the default package that supports all languages in Spacemacs.  So as well as all lisp languages, it also support closing & matching for things like tags in HTML.

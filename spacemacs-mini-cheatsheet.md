@@ -1,4 +1,4 @@
-# Spacemacs Mini Cheetsheet
+# Spacemacs Mini Cheatsheet
 
 `Ctrl-g` two times will cancel most actions in Spacemacs
 
