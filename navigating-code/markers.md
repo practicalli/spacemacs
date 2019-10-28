@@ -6,7 +6,9 @@ Markers are used to create adhoc places to jump to in your buffer.
 
 `'` and a character jumps to that marker, so `' a` jumps to the marker called `a`
 
-> #### Hint::
+`' '` will jump back to the point where the last change was made.
+
+> #### Hint::Only one marker, use the same character
 > Marker names are case-specific, so in theory you have have up to 52 markers.
 >
-> In practice, its likely you will only use less than 7 (after which you may forget what those markers were for).
+> Recommend only using one marker and the same character for the marker each time, as this will ingrain the action.  Using `a` as the marker is quicker as its on the opposite hand to `m` and `'`
