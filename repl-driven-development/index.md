@@ -44,19 +44,23 @@ Use Pretty Print to view data structures that are the result of evaluating your 
 
 Cider Inspector is also a great way to navigate through a nested data structure.
 
+Cider debugger also provides a way to inspect data structures during the evaluation of a Clojure function call.
+
 > #### Hint::View large data sets
 > `, e P` with open a new buffer with the results of the current function and so it very useful for larger data results.
 
 
 ## Code Style and idiomatic Clojure
 
-> #### TODO::work in progress, sorry
+Your editor should automatically apply formatting that follows the [Clojure Style guide](https://github.com/bbatsov/clojure-style-guide).
 
-Joker for continuous Linting
+Continuous linting significantly reduces a wide range of bugs and syntax errors as they happen, speeding up the development process.
 
-Eastwood for Linting coverage
+[clj-kondo](https://github.com/borkdude/clj-kondo) is a Clojure project that provides continuous Linting
 
-Kibit for idiomatic Clojure suggestions
+[Eastwood](https://github.com/jonase/eastwood) also provides linting, although its more effective as a batch process before commit or as part of cont inuous integration.
+
+Kibit provides feedback on the use of Clojure in your code, providing idiomatic Clojure suggestions.
 
 
 ## Test Driven Development and REPL Driven Development
@@ -69,6 +73,7 @@ At some point before production you should have unit tests around the public API
 
 > #### Hint::Automate local test runner
 > Set up an automated test runner that will run on each file save
+> Tools: [eftest](https://github.com/weavejester/eftest), [kaocha](https://github.com/lambdaisland/kaocha)
 
 ## Continuous Integration
 
@@ -77,3 +82,7 @@ At some point before production you should have unit tests around the public API
 Wire up a continuous integration server that runs tests and builds code on every shared commit (or every commit if you run a CI server locally).
 
 Spin up testable deployments of your application or service based on pre-defined branch commits or every commit if you do not share branches (i.e. push to shared master or develop branch), eg. Heroku Pipelines.
+
+> #### Hint::Tools
+> CircleCI
+> GitHub Actions
