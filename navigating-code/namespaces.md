@@ -1,4 +1,4 @@
-# Navigating Namespaces
+# Navigating Clojure Namespaces
 
 Browse or find a namespace in the current project
 
