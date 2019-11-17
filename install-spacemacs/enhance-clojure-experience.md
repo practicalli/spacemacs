@@ -8,6 +8,7 @@ Enhance the **clojure** layer by adding automatic linting and additional refacto
 | `clojure`          | [CIDER](https://docs.cider.mx) with [clj-refactor](https://github.com/clojure-emacs/clj-refactor.el/wiki) and [clj-kondo](https://github.com/borkdude/clj-kondo) linter |
 | `elisp`            | to edit `.spacemacs` configuration and any other Emacs configuration or package.                                                                                        |
 | `git`              | git version control with [Magit](https://magit.vc/) in full screen, with fringe highlighting of changes in buffers                                                      |
+| `github`           | working with remote repositories and gists on GitHub                                                                                                                    |
 | `helm`             | completion and selection narrowing framework                                                                                                                            |
 | `markdown`         | writing project descriptions in README.md and other markdown files                                                                                                      |
 | `multiple-cursors` | editing a buffer using multiple cursors                                                                                                                                 |
@@ -38,13 +39,11 @@ Add the following layers to `dotspacemacs-configuration-layers` ensuring there a
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-enable-sort-by-usage t)
      (clojure :variables
-              clojure-enable-clj-refactor t
               clojure-enable-linters 'clj-kondo)
      emacs-lisp
      (git :variables
-          git-magit-status-fullscreen t
-          git-enable-github-support t
-          git-gutter-use-fringe t)
+          git-magit-status-fullscreen t)
+     github
      helm
      markdown
      multiple-cursors
