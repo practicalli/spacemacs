@@ -2,7 +2,7 @@
 
 You can change the font to any currently installed on your computer.  The default font is [Source Code Pro](https://adobe-fonts.github.io/source-code-pro/).
 
-Ubuntu Mono is also a great font to use for code.  This font is available in the [Ubuntu Font Family](http://font.ubuntu.com/) and on all Ubuntu operating systems (and derivatives).
+Ubuntu Mono is also a great font to use for code.  This font is available from the [Ubuntu Font Family](http://font.ubuntu.com/) and on all Ubuntu operating systems (and derivatives).
 
 To change font, open the `~/.spacemacs` file (`SPC f e d`) and edit the `dotspacemacs-default-font`
 
@@ -22,8 +22,8 @@ Use the Spacemacs Zoom menu to enter a transient state that will let you zoom te
 
 | Spacemacs | Emacs     | Description                   |
 |-----------|-----------|-------------------------------|
-| `SPC z f` | `M-m z f` | Zoom all the buffers in the current frame        |
-| `SPC z x` | `M-m z x` | Scale the font of the current buffer                 |
+| `SPC z f` | `M-m z f` | Zoom all the buffers in the current frame, including the which-key and helm pop-up buffers |
+| `SPC z x` | `M-m z x` | Scale the font of only the current buffer            |
 
 [![Spacemacs - Zoom Text Transient State - Font Scalling](/images/spacemacs-zoom-text-transient-state-font-scaling.png)](/images/spacemacs-zoom-text-transient-state-font-scaling.png)
 
@@ -31,4 +31,4 @@ Use the Spacemacs Zoom menu to enter a transient state that will let you zoom te
 [![Spacemacs - Zoom Frame Transient State](/images/spacemacs-zoom-frame-scale-transient-state.png)](/images/spacemacs-zoom-frame-scale-transient-state.png)
 
 > ####Hint::
-> Adjusting the font size of a buffer is not permanent.  If the font size is often too big or to small, then change the `dotspacemacs-default-font` setting for `:size`.
+> Adjusting the font size of a buffer is not permanent.  If font or frame size is often changed, edit your `.spacemacs` configuration, `SPC f e d` and change the `:size` setting in `dotspacemacs-default-font`.
