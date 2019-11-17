@@ -1,7 +1,5 @@
 # Improving Clojure code
 
-> #### TODO::Work in progress
-
 Clojure code should be kept readable and consistently use idiomatic style, which can be managed by using a few additional tools
 
 | Tool            | Description                       | Usage                      |
