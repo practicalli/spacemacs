@@ -17,7 +17,7 @@ Then learn the text objects you can apply verbs and modifiers too
 
 ## Examples of speaking Evil (Vi)
 
-Practice speaking vim with these examples
+Practice speaking evil with these examples
 
 | Keybinding  | Description                                                           |
 |-------------|-----------------------------------------------------------------------|
@@ -54,7 +54,7 @@ The name of the mark is a character, so you can have 26 of them.  In general pra
 | `z`        | Last mark   |
 
 
-> #### Hint:: Vim Reference and Tips
-> [Vim quick reference guide](vim-quick-reference.html)
-> [Vim tips for developers](vim-tips-for-developers.html)
+> #### Hint:: Evil Reference and Tips
+> [Evil quick reference guide](vim-quick-reference.html)
+> [Evil tips for developers](vim-tips-for-developers.html)
 > [Speaking Vim](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)

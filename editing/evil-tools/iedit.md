@@ -66,7 +66,7 @@ iedit also integrates with [`expand-region`](https://github.com/magnars/expand-r
 ------------------------------------------
 
 > ####Hint::Vim Editing
-> [Vim Basics](/spacemacs-basics/vim-basics.html) and [Vim Quick Reference](/spacemacs-basics/vim-quick-reference.html) covers a lot of the power of Vim editing.
+> [Vim Basics](/spacemacs-basics/vim-basics.html) and [Vim Quick Reference](/spacemacs-basics/vim-quick-reference.html) covers a lot of the power of Evil editing.
 
 
 `SPC s e` calls evil-iedit-state/iedit-mode, which in turn calls iedit-mode - this is done for integration with evil

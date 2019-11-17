@@ -318,7 +318,7 @@ As you are typing in any(?) buffer then Spacemacs is checking your spelling as y
 
 ### Scrolling ###
 
-in vim command mode you can scroll just the text using the classic vi bindings.  This does not scroll the cursor unless the cursor hist the top or bottom of the window, in which case the cursor stays at that window boundry.
+in evil command mode you can scroll just the text using the classic vi bindings.  This does not scroll the cursor unless the cursor hist the top or bottom of the window, in which case the cursor stays at that window boundry.
 
 `C-y` - scroll down
 `C-e` - scroll text up
@@ -345,11 +345,11 @@ So if you want to match `or` and not word, then you would do
 SPC / \bor\b
 ```
 
-### getting stuff done - vim basics ###
+### getting stuff done - evil basics ###
 
 http://paul-gowder.com/emacs.html
 
 
-### changing escape sequence for vim ###
+### changing escape sequence for evil ###
 
 (setq evil-escape-key-sequence "jk")

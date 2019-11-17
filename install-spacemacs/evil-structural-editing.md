@@ -2,11 +2,11 @@
 
 The Clojure layer also includes [evil-cleverparens](http://spacemacs.org/layers/+vim/evil-cleverparens/README.html) which ensures Clojure code structure is respected.
 
-Safe Structural editing in Vim normal state respects structural editing too, meaning the standard vim commands can be used for cutting and deleting text without breaking Clojure or Lisp code structures.
+Safe Structural editing in Evil normal state respects structural editing too, meaning the standard evil commands can be used for cutting and deleting text without breaking Clojure or Lisp code structures.
 
 Safe structural editing is provided by the package [evil-cleverparens](https://github.com/luxbock/evil-cleverparens) which is included in the Clojure layer. By default this mode is not activated.
 
-| Spacemacs   | Vim     | Description                                                |
+| Spacemacs   | Evil     | Description                                                |
 |-------------|---------|------------------------------------------------------------|
 | `SPC m T s` | `, T s` | Enable evil safe structural editing for the current buffer |
 
@@ -29,7 +29,7 @@ Or to enable evil safe structural editing for all supported major modes, use thi
 
 ## Manually managing structure
 
-Although it is not structural editing, in Vim you can delete to a particular character. Clojure code inside of `()` can be deleted without deleting the closing `)`
+Although it is not structural editing, in Evil you can delete to a particular character. Clojure code inside of `()` can be deleted without deleting the closing `)`
 
 1. Enter **normal** mode
 2. Move to the starting point of the text you wish to delete

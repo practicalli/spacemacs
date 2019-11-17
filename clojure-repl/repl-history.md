@@ -31,15 +31,15 @@ A new buffer opens in Vim normal mode and shows all the previous history, separa
 > #### Hint:: Switch to Vim insert or Emacs state
 > The REPL History buffer only accepts commands when in Vim insert or Emacs state
 >
-> `i` vim insert state
+> `i` evil insert state
 > `C-z` emacs state
 
-In Vim Insert or Emacs state:
+In Evil Insert or Emacs state:
 
 `RTN` or `SPC` will send the current expression under the cursor to the REPL buffer and close the repl-history buffer.
 
 
-In Vim Normal state:
+In Evil Normal state:
 
 `SPC SPC cider-history-use-and-quit` sends the current expression to the REPL buffer and closes the REPL history.
 
@@ -48,6 +48,6 @@ In Vim Normal state:
 
 
 > #### TODO:: Pull Request to support Evil
-> [#11431](https://github.com/syl20bnr/spacemacs/pull/11431) is a pull request to add Evil keybindings to the REPL buffer, so you can press `RTN` to evaluate code when in Vim Normal mode.  It will also add Vim Normal keybindings to send the current expression to the REPL.
+> [#11431](https://github.com/syl20bnr/spacemacs/pull/11431) is a pull request to add Evil keybindings to the REPL buffer, so you can press `RTN` to evaluate code when in Evil Normal mode.  It will also add Evil Normal keybindings to send the current expression to the REPL.
 
 [![Spacemacs Clojure REPL History - keybindings code](/images/spacemacs-clojure-repl-history-keybindings-code.png)](/images/spacemacs-clojure-repl-history-keybindings-code.png)
