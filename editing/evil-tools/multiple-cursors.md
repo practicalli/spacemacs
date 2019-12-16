@@ -17,6 +17,12 @@ Create multiple cursors in a buffer to concurrently edit or output text from cal
 
 > #### TODO::Add video of most commonly used features
 
+
+## Multiple cursor tips
+
+`24 g r j` will create multiple cursors for 24 consecutive lines.
+
+
 ## Keybindings
 
 | Evil normal | Description                                                                   |
