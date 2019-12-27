@@ -1,6 +1,8 @@
 # Github Gists
 
- Lets see just how easy it is to use Gists with Spacemacs.
+[Github Gists](https://gist.github.com/) are really useful when you want to share a piece of code or configuration without setting up or sharing a complete a git project.  Rather than copy & paste into a [Github Gists](https://gist.github.com/) website, you can create a Gist from any [Spacemacs](https://github.com/syl20bnr/spacemacs) buffer with a single command.
+
+[![Spacemacs Git menu](/images/spacemacs-git-gist-menu.png)](/images/spacemacs-git-menu.png)
 
 ## Creating a Gist from Spacemacs
 
