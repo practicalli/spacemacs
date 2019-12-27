@@ -25,15 +25,13 @@ Enhance the **clojure** layer by adding automatic linting and additional refacto
 
 ## Edit .spacemacs and add layers
 
-Open the `.spacemacs` file via `SPC f e d`  (`M-m f e d` holy mode)
+`SPC f e d` opens the `.spacemacs` configuration file (`M-m f e d` holy mode)
 
 Use `/` and start typing `configuration-layers` to search for the `dotspacemacs-configuration-layers` section.  `RTN` confirms the search text and `n` jumps to the next occurance, `N` jumps to the previous occurrence.
 
 Add the following layers to `dotspacemacs-configuration-layers` ensuring there are no duplicates
 
 ```lisp
-   dotspacemacs-configuration-layers
-   '(
      (auto-completion :variables
                       auto-completion-enable-help-tooltip t
                       auto-completion-enable-snippets-in-popup t
@@ -54,10 +52,11 @@ Add the following layers to `dotspacemacs-configuration-layers` ensuring there a
      (version-control :variables
                       version-control-diff-tool 'diff-hl
                       version-control-global-margin t)
-    )
 ```
 
 `SPC f s` to save the file.
+
+`SPC q r` to restart Spacemacs which will load and configure all the new layers and their Emacs packages.
 
 
 > #### Hint:: Optional layer features with :variables
