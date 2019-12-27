@@ -6,7 +6,9 @@ Updating Spacemacs comes in three sections:
 * `.spacemacs` configuration file
 * Packages installed
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PmSPKvlJk74?start=5412" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% youtube %}
+https://youtu.be/XC7LGI0Q2u8
+{% endyoutube %}
 
 
 ## Update Spacemacs project files
