@@ -2,7 +2,13 @@
 
 [Layouts](http://develop.spacemacs.org/doc/DOCUMENTATION.html#layouts-and-workspaces) provide an easy way to group buffers for a project or any arbitrary buffer grouping you wish.  Workspaces define window arrangements within a particular layout.
 
+## Working with buffers in a layout
 `SPC b b` shows only the buffers for the current layout, making it easy to switch between them.  `SPC b B` will show all buffers.
+
+`SPC TAB` will toggle between the previous buffer and current buffer.  Add `(spacemacs-layouts :variables spacemacs-layouts-restrict-spc-tab t)` to the `dotspacemacs-configuration-layers` in your `.spacemacs` file to enable.
+
+
+## Managing Layouts
 
 `SPC l` enters the layout transient state
 
@@ -25,6 +31,8 @@ dotspacemacs-auto-resume-layouts t
 `SPC l ?` will show the help menu
 
 ![Spacemacs Layouts - transient state](/images/spacemacs-layouts-help.png)
+
+
 
 
 ## Global layout
