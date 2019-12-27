@@ -2,20 +2,23 @@
 
 Contributions to the content of this workshop are welcome, either via
 
-* Disqus comment on each page
+* Disqus comments on each page
 
-* Pull requests (once the markdown is published)
+* [Issues](https://github.com/practicalli/spacemacs-gitbook/projects/1) or [Pull requests](https://github.com/practicalli/spacemacs-gitbook/pulls) (small and ideally page specific, avoid changes over multiple pages)
 
-* [The Gitter chat room](https://gitter.im/practicalli/chat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
-[![Join the conversation on Gitter](images/gitter-chat-badge-practicalli.png)](https://gitter.im/practicalli/chat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+* [#practicalli channel on Clojurians Slack community](http://clojurians.slack.com/messages/practicalli) - [sign up for a free account](https://clojurians.net/)
 
 By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](http://creativecommons.org/licenses/by-sa/4.0/).
 
+
 ## All contributors
+
+Special mentions
+* [duianto](https://github.com/duianto) - for discussions and accepting my pull requests to Spacemacs
 
 In no specific order, the following people have provided input to this work
 
 * Chris Howe-Jones - [@agile-geek](https://twitter.com/agile_geek)
 * Colin Yates - [@yatesco](https://twitter.com/yatesco)
 * [Jun Tian](https://disqus.com/by/juntian/)
+* [Stefan Pfeiffer](https://github.com/dl1ely)
