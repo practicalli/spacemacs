@@ -2,12 +2,11 @@
 
  Using [iedit](https://github.com/victorhge/iedit) you can edit multiple, identical string occurrences at the same time.
 
-![iedit - Edit multiple regions in the same way simultaneously](https://github.com/victorhge/iedit/raw/master/iedit-demo.gif)
+{% youtube %}
+https://youtu.be/VCxJy8abkfA
+{% endyoutube %}
 
-Use [iedit](https://github.com/tsdh/iedit) mode through [`evil-iedit-state`](https://github.com/syl20bnr/evil-iedit-state) to quickly edit multiple occurrences of a symbol or selection.
-
-iedit also integrates with [`expand-region`](https://github.com/magnars/expand-region.el) for quick editing of the currently selected text by pressing `e`.
-
+`SPC s e` to use [`evil-iedit-state`](https://github.com/syl20bnr/evil-iedit-state) to quickly edit multiple occurrences of a symbol or selection.
 
 ## iedit states key bindings
 
@@ -21,6 +20,8 @@ iedit also integrates with [`expand-region`](https://github.com/magnars/expand-r
 | `ESC`       | iedit-insert     | iedit  |
 | `C-g`       | iedit-insert     | normal |
 | `fd`        | iedit-insert     | normal |
+
+iedit also integrates with [`expand-region`](https://github.com/magnars/expand-region.el) for quick editing of the currently selected text by pressing `e`.
 
 
 > #### Note::Switching edit states
@@ -53,7 +54,8 @@ iedit also integrates with [`expand-region`](https://github.com/magnars/expand-r
 | `U`         | Up-case the occurrences                                                                 |
 | `C-U`       | down-case the occurrences                                                               |
 
-*Note*: `0`, `$`, `A` and `I` have the default Vim behavior when used outside of an `occurrence`.
+> #### Hint::
+> `0`, `$`, `A` and `I` have the default Vim behavior when used outside of an `occurrence`.
 
 ## In iedit-insert state
 
@@ -61,12 +63,3 @@ iedit also integrates with [`expand-region`](https://github.com/magnars/expand-r
 |-------------|---------------------------|
 | `ESC`       | go back to =iedit state=  |
 | `C-g`       | go back to =normal state= |
-
-
-------------------------------------------
-
-> ####Hint::Vim Editing
-> [Vim Basics](/spacemacs-basics/vim-basics.html) and [Vim Quick Reference](/spacemacs-basics/vim-quick-reference.html) covers a lot of the power of Evil editing.
-
-
-`SPC s e` calls evil-iedit-state/iedit-mode, which in turn calls iedit-mode - this is done for integration with evil
