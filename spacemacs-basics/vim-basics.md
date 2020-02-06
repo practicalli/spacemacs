@@ -16,7 +16,7 @@ Spacemacs Evil providing multiple editing states, minimising the keybindings req
 
 First get familiar with **normal**, **insert** and **visual** states.  Then when you are comfortable, move on to **iedit** and **lisp** states.
 
-Read the sections under [Vim Style editing](/editing/vim-style/) to take you beyond the basic Vim editing covered in the tutorial. The more often you use these keybindings, the sooner they will become ingrained.
+Read the sections under [Vim Style editing](/editing/vim-style/index.html) to take you beyond the basic Vim editing covered in the tutorial. The more often you use these keybindings, the sooner they will become ingrained.
 
 ## Learning Vim basics
 
