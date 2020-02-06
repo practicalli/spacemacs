@@ -83,6 +83,7 @@
     * [Multiple Cursors](editing/evil-tools/multiple-cursors.md)
     * [go menu](editing/evil-tools/g-menu.md)
     * [Structured Editing](structured-editing/index.md)
+        * [cleverparens](structured-editing/cleverparens.md)
         * [Smartparens](structured-editing/smartparens.md)
             * [Smartparens Strict Mode](structured-editing/smartparens-strict-mode.md)
             * [Smartparens cheetsheet](structured-editing/smartparens-cheet-sheet.md)
