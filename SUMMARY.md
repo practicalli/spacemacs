@@ -117,6 +117,7 @@
     * [Names - Symbols](navigating-code/names-symbols.md)
     * [Expressions](navigating-code/expressions.md)
     * [Code Folding](navigating-code/code-folding.md)
+        * [Folding methods](navigating-code/code-folding-methods.md)
 * [Evaluating Clojure](evaluating-clojure/index.md)
     * [Evaluate Expressions](evaluating-clojure/expressions.md)
     * [Un-define names](evaluating-clojure/undefine.md)
