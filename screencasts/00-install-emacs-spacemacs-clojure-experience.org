@@ -20,16 +20,16 @@ git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
 #+END_SRC
 
 -----
-If you want to simplify the rest of the install and trust my recommendations,
-then clone my Spacemacs configuration too.
+If you want to simplify the install and trust my recommendations,
+then clone the Practicalli Spacemacs configuration too.
 
 #+BEGIN_SRC shell
 git clone https://github.com/practicalli/spacemacs.d/ ~/.spacemacs.d/
 #+END_SRC
 
-Then just start Emacs and take a break for a few minutes.
-If it all works, then skip the rest of this guide,
-unless you want to know what you have just installed
+Then just start Emacs and take a break for a few minutes while all the Emacs packages are installed.
+If it all works, then you can skip the rest of this guide,
+unless you want to know more about what you have just installed
 -----
 
 * Configuring Spacemacs manually
@@ -44,7 +44,7 @@ or a =.spacemacs.d/init.el= configuration file.
 
 You are prompted to select the default editing style.
 Practicalli recommends the Vim style editing provided by Evil.
-If you have a lot of experience with Emacs, then Holy option will be more familiar.
+If you have a lot of experience with Emacs, then the Holy option will be more familiar.
 
 The next prompt is to choose the Spacemacs distribution
 Practicalli recommends the Full distribution.
