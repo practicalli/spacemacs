@@ -21,12 +21,13 @@ Evaluation commands for Clojure are:
 | `, e b`     | Evaluate all the code in the current buffer                       |
 | `, e e`     | Evaluate the previous expression and print the result             |
 | `, e f`     | Evaluate the current expression and print the result              |
-| `, e P`     | Open new buffer and pretty print result of the previous expression |
+| `, e p`     | Pretty print result of the top-level expression in a new buffer   |
+| `, e P`     | Pretty print result of the last expression in a new buffer        |
 | `, e r`     | Evaluate code within the highlighted region                       |
-| `,e w`      | Evaluate the previous expression and replace it with the result   |
+| `, e w`     | Evaluate the previous expression and replace it with the result   |
 | `, T e`     | Toggle Enlighten mode, showing intermediate values                |
 
 
 > ####HINT::Displaying large results
-> `, e P` opens a separate buffer and pretty prints the results.  This is excellent for evaluating expressions that return a large result, eg. a large map.
+> `, e p` or `, e P` pretty prints the results into a new buffer.  This is excellent for evaluating expressions that return a large result, eg. a large map.
 > `, d v` the [`cider-inspector`](inspect.html) is a great way to navigate through a large data structure, especially if it is nested.

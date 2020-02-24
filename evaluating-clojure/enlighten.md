@@ -2,6 +2,10 @@
 
 As a homage to [LightTable](https://lighttable.com) live evaluation, you can enable `enlighten` minor mode to show the intermediary values during evaluation.
 
-This provides a basic version of the Clojure inspector which is always on (until you toggle it off).
+| Evil Normal | Description                                                       |
+|-------------|-------------------------------------------------------------------|
+| `, T e`     | Toggle Enlighten mode, showing intermediate values                |
+
+This provides a basic version of the [Cider inspector](inspect.html) which is always on (until you toggle it off).
 
 [![Spacemacs - Clojure Enlighten mode](/images/spacemacs-clojure-evaluation-enlighten-example.png)](/images/spacemacs-clojure-evaluation-enlighten-example.png)
