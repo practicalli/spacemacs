@@ -150,7 +150,6 @@
 ## Source Control
 
 * [Source Control](source-control/index.md)
-* [Install source control](source-control/install-source-control.md)
     * [Add Layers](source-control/add-layers.md)
     * [Git Configuration](source-control/git-configuration.md)
     * [GitHub Configuration](source-control/github-configuration.md)
