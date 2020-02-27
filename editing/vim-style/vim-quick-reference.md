@@ -77,12 +77,11 @@ Search a buffer for characters or words / text pattern.
 | `N`     | once searching: find backwards                 |
 
 > ####Hint::Searching tips
-> Search will wrap around a buffer when it reaches the end
+> `SPC s s` - helm-swoop - shows a buffer with all search results, `C-j` and `C-k` navigates through results.
 >
-> Use `SPC /` for a project wide search.
+> `SPC s p` for a project wide search.
 >
-> Additional search commands are available under `SPC s`, including the powerful iedit mode, `SPC s e` which provides features like multiple cursors.
-
+> `\b` defines a boundary around the search term. For example `search\b` will match search, but not searching.
 
 
 ## Text Editing
