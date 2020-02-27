@@ -8,21 +8,22 @@ A reference of the most common keybindings available in Vim Normal mode.
 
 In **normal** mode you can keep your fingers resting on the main row of your keyboard to move around.
 
-| keybinding | action                    |
-|------------|---------------------------|
-| `j`        | move cursor down one line |
-| `k`        | move cursor up one line   |
+| keybinding | action                          |
+|------------|---------------------------------|
+| `j`        | move cursor down one line       |
+| `k`        | move cursor up one line         |
 | `l`        | move cursor right one character |
-| `h`        | move cursor left one character |
+| `h`        | move cursor left one character  |
 
 In menus such as helm you can move around using `Ctrl` and these keybindings.  So `C-j` will move the cursor down one item in a menu.
 
 ### Navigating the current line
 
 | Command | Action                                       |
-| ------- | -----------------                            |
+| ------- | ---------------------------------------------|
 | `f`     | to next character (you specify)              |
 | `t`     | to just before the next character            |
+| `;`     | repeat `f` or `t` search                     |
 | `w`     | start of next word                           |
 | `W`     | start of next word, white space delimited    |
 | `e`     | end of current word                          |
@@ -101,7 +102,7 @@ The following commands put you into the Evil Insert state
 ## Return to Normal state
 
 Regularly switch between **normal** and **insert** states is normal practice in Spacemacs.  As soon as you finish typing some new text, it should become second nature to go back to **normal** state.
-
+c
 Switching from **insert** to **normal** state:
 
 `ESC` or press `f d` keys in extremely quick succession.
@@ -119,7 +120,7 @@ Switching from **insert** to **normal** state:
 `v` in Vim normal mode changes to Visual select mode.  Use the navigation keys or any other movement keys to select text to copy or cut.
 
 | Command  | Action                                             |
-| -------  | -----------------                                  |
+| -------  | -------------------------------------------------- |
 | `y`      | copy (yank) selection and add to kill ring         |
 | `x`      | delete character at point and add to kill ring     |
 | `X`      | delete character before point and add to kill ring |
@@ -133,19 +134,19 @@ Switching from **insert** to **normal** state:
 
 ## Replace and changing text
 
-| Command        | Action                                  |
-| -------        | -----------------                       |
-| `r`            | replace the character under cursor      |
-| `R`            | replace multiple characters until `ESC` |
-| `cw`           | change word from cursor to end          |
-| `4 c w`        | change 4 words                          |
-| `v (select) c` | change region                           |
-| `SPC v c`      | change current word/region              |
-| `SPC v d`      | delete current word/region              |
-| `d w`          | delete from cursor to end of word       |
-| `C`            | change from cursor to end of line       |
-| `D`            | delete from cursor to end of line       |
-| `d $`          | delete from cursor to end of line      |
+| Command        | Action                                   |
+| -------        | ---------------------------------------- |
+| `r`            | replace the character under cursor       |
+| `R`            | replace multiple characters until `ESC`  |
+| `cw`           | change word from cursor to end           |
+| `4 c w`        | change 4 words                           |
+| `v (select) c` | change region                            |
+| `SPC v c`      | change current word/region               |
+| `SPC v d`      | delete current word/region               |
+| `d w`          | delete from cursor to end of word        |
+| `C`            | change from cursor to end of line        |
+| `D`            | delete from cursor to end of line        |
+| `d $`          | delete from cursor to end of line        |
 
 Combine d | c | v | r with avy-goto
 
@@ -336,19 +337,6 @@ in evil command mode you can scroll just the text using the classic vi bindings.
 
 search with `SPc /`
 
-Matching only within a boundary by wrapping your search term with `\b`.
-
-So if you want to match `or` and not word, then you would do
-
-```
-SPC / \bor\b
-```
-
-### getting stuff done - evil basics ###
+## getting stuff done - evil basics ###
 
 http://paul-gowder.com/emacs.html
-
-
-### changing escape sequence for evil ###
-
-(setq evil-escape-key-sequence "jk")
