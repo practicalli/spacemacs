@@ -54,9 +54,9 @@ In menus such as helm you can move around using `Ctrl` and these keybindings.  S
 | `:marks`   | view all the marks                                               |
 | `''`       | go to the last place you were                                    |
 | `[{`       | jump back to the "{" at the beginning of the current code block  |
-| `SPC j i`  | avy-jump to character (specify)                                  |
+| `SPC j i`  | jump using helm list of headings / functions                     |
 | `SPC j j`  | avy-jump to character (specify)                                  |
-| `SPC j l`  | jump using helm list of headings / functions                     |
+| `SPC j l`  | avy-jump to line                                                 |
 | `C-o`      | jump back to previous cursor location (`evil-jump-backwards`)    |
 | `C-i`      | Go to newer position in jump list (opposite of `C-o`)            |
 | `: 4`      | go to line 4                                                     |
