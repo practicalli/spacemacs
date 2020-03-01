@@ -1,35 +1,20 @@
 # Highlight Version Control Changes
 
-There are several ways to highlight changes in the files working copy against git commits in Spacemacs.
-
-Git fringe indicates the difference between the working copy and the last commit.  As you add code or refactor, the lines that you change are marked in the right hand fringe.  Added lines are marked green, deleted lines are marked red.
-
-[Smeargle](https://github.com/syohex/emacs-smeargle) highlights change history over time and incrementally fades unchange lines to grey based on the time they last were changed.  The concept is that lines changes most recently are the most relevant to the work you are doing.  Lines that have not changed in a long time are less likely to be worked on.
-
-
-## Git Fringe
+Fringe markers show the difference between the working copy and the last commit.  As you add code or refactor, the lines that you change are marked in the fringe.
 
 `SPC T d` toggles git fringe marks to indicate changes between working copy and latest commit.  Default is off.
 
-Add the following to your `.spacemacs` to configure fringe in Git layer to display by default.
+![Spacemacs - Magit - Fringe markers](/images/spacemacs-magit-fringe-markers.png)
 
+To display fringe marks by default, add the following to the `dotspacemacs-configuration-layers` in your `.spacemacs` file
 
 ```elisp
-   dotspacemacs-configuration-layers
-   '(
-     (git :variables
-          git-gutter-use-fringe t)
-
      (version-control :variables
                       version-control-diff-tool 'diff-hl
                       version-control-global-margin t)
-    )
 ```
 
-
-> TODO: choose approach
-> Can use either git or version-control layers to add a fringe
-
+See [version control layer configuration](https://develop.spacemacs.org/layers/+source-control/version-control/README.html#configuration)  for other options.
 
 ## Highlighting with Smeargle
 
