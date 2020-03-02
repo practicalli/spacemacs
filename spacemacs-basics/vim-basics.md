@@ -1,10 +1,20 @@
-# Evil Basics
+# Evil Basics - Vim Style Editing
 
-Evil is an Emacs package that provides Vim style editing and provide Vim keybindings throughout all major modes.
+Evil provides Vim style multi-modal editing and Spacemacs provides Vim keybindings throughout all major modes.
 
 Vim style editing is arguably the most effective way for touch typists to use a text editor and you can easily edit much faster once you are practised.
 
+The only way to learn vim style editing is to practice and ideally use it for everything you do.
+
+## Normal state by default
+
 Spacemacs Evil providing multiple editing states, minimising the keybindings required for specific tasks as well as adding great power and flexibility when editing text.
+
+Keep in the Evil normal state for most of the time, unless you are writing code or creating lots of text.
+
+Normal mode is where you run all the Spacemacs commands.
+
+To help make Vim style editing become a sub-conscious act you should [learn to speak Evil](speaking-evil.md)
 
 ![Spacemacs States](/images/spacemacs-states-vim.png)
 
@@ -16,7 +26,7 @@ Spacemacs Evil providing multiple editing states, minimising the keybindings req
 
 First get familiar with **normal**, **insert** and **visual** states.  Then when you are comfortable, move on to **iedit** and **lisp** states.
 
-Read the sections under [Vim Style editing](/editing/vim-style/index.html) to take you beyond the basic Vim editing covered in the tutorial. The more often you use these keybindings, the sooner they will become ingrained.
+The following pages in this sections take you beyond the basics covered in the Vim tutorial.
 
 ## Learning Vim basics
 

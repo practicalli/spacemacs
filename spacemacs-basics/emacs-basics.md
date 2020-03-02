@@ -1,13 +1,15 @@
-# Emacs Basics
+# Emacs Basics - Frames Buffers Windows
 
-| Terminology | Description                                                                                             |
-|------------|---------------------------------------------------------------------------------------------------------|
-| File       | A file on the file system                                                                               |
-| Buffer     | A container to display a file or other information                                                      |
-| Window     | Contains a buffer, allowing you to organise multiple buffers in a frame                                 |
-| Frame      | Holds one or more windows. Opening another frame gives you another instance of Emacs                    |
-| Status     | Information about current window and buffer, e.g. window number, buffer mode & name, location of cursor |
-| Minibuffer | A command line for Emacs - shows commands and some results                                              |
+Understanding the basic terminology will help you make the most out of Spacemacs and allow very efficient use.
+
+| Terminology | Description                                                                                                                                 |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| File        | A file on the file system                                                                                                                   |
+| Buffer      | A container to display a file or other information                                                                                          |
+| Window      | Contains a buffer, allowing you to organise multiple buffers in a frame                                                                     |
+| Frame       | Holds one or more windows. Opening another frame gives you another instance of Emacs                                                        |
+| Status bar  | Information about current window and buffer, e.g. window number, buffer mode & name, location of cursor. Also referred to as the mode line. |
+| Mini-buffer | A command line for Emacs - shows commands and some results, acts as an interactive prompt for some commands                                 |
 
 ![Emacs Terminology - Structure of Emacs](/images/emacs-terminology-structure.png)
 
@@ -16,9 +18,9 @@
 
 When you open Emacs for the first time you are presented with a frame that contains a single window.
 
-If you run Emacs again, or if you make a new frame `SPC w F `, then a second frame will appear containing a single window.
+If you run Emacs again, or if you make a new frame `SPC F n`, then a second frame will appear containing a single window.
 
-If you kill a frame, only that frame closes unless it is the last Emacs frame running, then Emacs itself closes.
+If you kill a frame, only that frame closes unless its the last Emacs frame running, then Emacs itself closes.
 
 If you quit Emacs, then all frames are closed.
 
@@ -39,6 +41,7 @@ Some of the common windows functions include:
 | `SPC w 3`  | 3 window layout - shows current buffer in new windows |
 | `SPC w m`  | maximise the current buffer                           |
 | `SPC w d`  | delete current window                                 |
+| `SPC t g`  | toggles golden ratio view of windows                  |
 
 
 ## Golden Ratio
