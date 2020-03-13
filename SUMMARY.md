@@ -21,6 +21,7 @@
 
 * [Before you start](before-you-start/index.md)
     * [Install Emacs](before-you-start/install-emacs.md)
+    * [Install Java](before-you-start/install-java.md)
     * [Install Clojure](before-you-start/install-clojure.md)
 * [Install Spacemacs](install-spacemacs/index.md)
     * [Holy or Evil Editing](install-spacemacs/holy-or-evil-editing.md)
