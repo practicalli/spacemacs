@@ -1,6 +1,9 @@
 # Switching to the REPL
 
-`, s s` toggles between a Clojure code file buffer and the REPL buffer, opening the REPL buffer where required.
+> #### Todo::re-write this section
+> Update for Clojure CLI tools
+
+`, s a` toggles between a Clojure code file buffer and the REPL buffer, opening the REPL buffer where required.
 
 `, s n` evaluates the namespace of the current Clojure file in the REPL, changing the REPL to be in that namespace.
 
@@ -40,20 +43,14 @@ Set the namespace used when starting the REPL in the `project.clj` file by addin
 
 ## Keybindings
 
-| Vim Normal | Major mode    | Command                               | Description                                                     |
-|------------|---------------|---------------------------------------|-----------------------------------------------------------------|
-| `, s s`    | `M-RET s s`   | `cider-switch-to-repl-buffer`         | Switch to REPL buffers (when in a code buffer)                  |
-| `, s s`    | `M-RET s s`   | `cider-switch-to-last-clojure-buffer` | Switch to last active Clojure code buffer (when in REPL buffer) |
-| `, s S` *  | `M-RET s S` * | `cider-repl-set-ns`                   | * Proposed change: Select a namespace and switch to it.         |
-| `, s o`    | `M-RET s o`   | `cider-repl-switch-to-other`          | Switch between CLJ & CLJS REPLs in current project              |
-
-> * I've proposed a change to create a new menu entry for switching the repl to the current namespace of the code buffer, `cider-repl-set-ns`: S - cider-repl-set-ns
+| Keybinding | Description                                        |
+|------------|----------------------------------------------------|
+| `, s a`    | toggle between source code and REPL buffer         |
+| `, s o`    | Switch between CLJ & CLJS REPLs in current project |
 
 
 ## REPL Buffer
 
 The REPL buffer contains a detailed welcome message describing how to use the basics of the REPL.
-
-> ####HINT::Switch to Vim insert state to write code in the REPL
 
 ![Spacemacs Clojure REPL Buffer](/images/spacemacs-clojure-cider-repl-buffer.png )
