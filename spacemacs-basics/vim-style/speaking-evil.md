@@ -8,7 +8,7 @@ First learn some verbs:
 
 Then use those verbs with some modifiers
 
-`'` mark, `{ }` begining/end of paragraph, `a` around, `f` find (includes character), `i` inside, `s` surround, `t` till (just before a character)
+`'` mark, `{ }` beginning/end of paragraph, `a` around, `f` find (includes character), `i` inside, `s` surround, `t` till (just before a character)
 
 Then learn the text objects you can apply verbs and modifiers too
 

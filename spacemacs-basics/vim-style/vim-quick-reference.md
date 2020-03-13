@@ -65,24 +65,29 @@ In menus such as helm you can move around using `Ctrl` and these keybindings.  S
 
 
 ## Searching
+Searching buffers and projects with `helm-swoop` is recommended.
 
-Search a buffer for characters or words / text pattern.
+`SPC s s` - helm-swoop - shows a buffer with all search results, `C-j` and `C-k` navigates through results.
 
-| Command | Action                                         |
-|---------|------------------------------------------------|
-| `*`     | search forwards for the word under the cursor  |
-| `#`     | search backwards for the word under the cursor |
-| `/`     | search forwards in current buffer              |
-| `?`     | search backwards in current buffer             |
-| `n`     | once searching: find forward                   |
-| `N`     | once searching: find backwards                 |
+`SPC s p` for a project wide search.
 
-> ####Hint::Searching tips
-> `SPC s s` - helm-swoop - shows a buffer with all search results, `C-j` and `C-k` navigates through results.
+`\b` defines a boundary around the search term. For example `search\b` will match search, but not searching.
+
+
+
+| Command | Action                                        |
+|---------|-----------------------------------------------|
+| `*`     | search forward for the word under the cursor  |
+| `#`     | search backward for the word under the cursor |
+| `/`     | search forward in current buffer              |
+| `?`     | search backward in current buffer             |
+| `n`     | once searching: find forward                  |
+| `N`     | once searching: find backwards                |
+
+> #### Hint::Ensure `RET` is pressed after `/` search
+> Using `/` to search should be completed by pressing `RET` or deleting the search term in the mini-buffer before using Evil keybindings.  When in the search state the Evil keybindings act more destructively.
 >
-> `SPC s p` for a project wide search.
->
-> `\b` defines a boundary around the search term. For example `search\b` will match search, but not searching.
+> Use `SPC s s` for helm swoop rather than `/`
 
 
 ## Text Editing

@@ -6,15 +6,15 @@ Start with the built in Emacs EVil Tutor - `SPC h T`
 
 ## Helpful websites for Vim commands and keybindings
 
-https://vim-adventures.com/
-http://www.openvim.com/
-https://www.shortcutfoo.com/
-http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
-http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
-http://www.vimgenius.com/
-https://www.labnol.org/internet/learning-vim-for-beginners/28820/
-http://codecondo.com/vim-commands/
-https://scotch.io/tutorials/getting-started-with-vim-an-interactive-guide
+* https://vim-adventures.com/
+* http://www.openvim.com/
+* https://www.shortcutfoo.com/
+* http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
+* http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/
+* http://www.vimgenius.com/
+* https://www.labnol.org/internet/learning-vim-for-beginners/28820/
+* http://codecondo.com/vim-commands/
+* https://scotch.io/tutorials/getting-started-with-vim-an-interactive-guide
 
 
 ## Basic Movement
@@ -24,9 +24,9 @@ Keys in Evil Normal mode for moving the cursor around the buffer.
 
 | Keybinding      | Action                                                 |
 |-----------------|--------------------------------------------------------|
-| `w`             | Move to start of next word                             |
-| `b`             | Move to start of previous word                         |
-| `e`             | Move to end of current word                            |
+| `w`             | move to start of next word                             |
+| `b`             | move to start of previous word                         |
+| `e`             | move to end of current word                            |
 | `j`             | move one line down                                     |
 | `k`             | move one line up                                       |
 | `l`             | move one character right                               |

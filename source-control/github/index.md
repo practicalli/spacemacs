@@ -6,12 +6,12 @@ You can push and pull changes to any repositories your local git repository is c
 
 ## Using GitHub
 
-`SPC g h` opens the GitHub menu 
+`SPC g h` opens the GitHub menu
 
 Browsing and cloning remote repositories is via the Git Github menu, `SPC g h`.
 
 [![Spacemacs Git menu](/images/spacemacs-git-github-menu.png)](/images/spacemacs-git-menu.png)
 
-And there is a specific menu for Cloning remote Github repositories.
+And there is a specific menu for cloning remote Github repositories.
 
 [![Spacemacs Git menu](/images/spacemacs-git-github-clone-menu.png)](/images/spacemacs-git-menu.png)

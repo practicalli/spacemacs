@@ -73,4 +73,4 @@ There are also [short screencasts of Spacemacs]() that accompany this book (work
 
 ## Emacs Wiki
 
-Most of the classic documentation about Emacs is also relevant to Spacemacs, after all its Emacs underneath.  Many of the packages used in Spacemacs are also documentation on the Emacs Wiki, so its devinately worth browsing (especially if you are going to customise Spacemacs).
+Most of the classic documentation about Emacs is also relevant to Spacemacs, after all its Emacs underneath.  Many of the packages used in Spacemacs are also documentation on the Emacs Wiki, so its definitely worth browsing (especially if you are going to customise Spacemacs).

@@ -22,9 +22,7 @@ Send a (require ’ns :reload) to the REPL.
 > `, e u` will [undefine](/evaluating-clojure/undefine.md) a specific function or symbol name, removing it from the REPL.
 
 
-
 Reload all modified files on the classpath. If invoked with a prefix argument, reload all files on the classpath. If invoked with a double prefix argument, clear the state of the namespace tracker before reloading.
-
 
 
 ## Restarting the REPL

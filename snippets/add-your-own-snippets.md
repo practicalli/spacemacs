@@ -27,7 +27,7 @@ You need to load this new snippet into Spacemacs by either restarting or using t
 
 ## Managing your snippets
 
-Although the private snippets directory is easy to use, it is not under version control.  So although its not over-riddend by Spacemacs it also means your private snippets are not backed up anywhere.
+Although the private snippets directory is easy to use, it is not under version control.  So although its not over-ridden by Spacemacs it also means your private snippets are not backed up anywhere.
 
 If you use the `~/.spacemacs.d/snippets/modename-mode/` directory structure for your snippets then you can version them with Git or similar versioning tools.
 

@@ -1,8 +1,10 @@
 # Live linting with clj-kondo
 
-[clj-kondo](https://github.com/borkdude/clj-kondo) is a linter that can be called from flycheck, providing live static code analysis on your Clojure code as you type.  Simple open any Clojure file (`.clj`, `.cljs`, `.cljc`, `.edn`) and start typing.  clj-kondo does not need a running Clojure REPL to work.
+[clj-kondo](https://github.com/borkdude/clj-kondo) is a linter that can be called from flycheck, providing live static code analysis on your Clojure code as you type.  Simple open any Clojure file (`.clj`, `.cljs`, `.cljc`, `.edn`) and start typing.
 
-When errors are detected by the linter a red dot appears in the margin showing the line.  A red underscore shows where on the line the issue is.  Moving the cursor to the underscore will show a pop-up describing the error.
+[clj-kondo](https://github.com/borkdude/clj-kondo) does not need a running Clojure REPL to work.
+
+When errors are detected by the lint tool, a mark appears in the margin showing the line.  A wavy underscore shows where on the line the issue is.  Moving the cursor to the underscore will show a pop-up describing the error.
 
 The total number of errors and warnings are show in in the Space bar.
 
@@ -21,6 +23,7 @@ Keeping the flycheck buffer open will update as you move to linting errors in th
 
 > #### Hint::Not all error menu commands work
 > Some commands in the error menu [do not currently work with linting in Clojure](https://github.com/syl20bnr/spacemacs/issues/12919).
+
 
 ## Configure Spacemacs Clojure layer with clj-kondo
 

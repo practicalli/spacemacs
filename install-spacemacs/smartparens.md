@@ -1,8 +1,8 @@
 # Smartparens
 
-Clojure and other lisp languages are defined as data structures, so expressions always start with parentheses, `( )`.  If there is an imbalance pairing of open and closing parentheses, then the code fails to work and causes an error.
+Clojure and other lisp languages are defined as data structures, so expressions always start with parentheses, `( )`.  If there is an imbalanced pairing of open and closing parentheses, then the code fails to work and causes an error.
 
-To , [smartparens](https://github.com/Fuco1/smartparens/wiki#getting-started) in strict mode ensures balanced parentheses by adding a closing parentheses when you type an open parentheses.  This works for `()`, `[]`, `{}` and `""`.
+[smartparens](https://github.com/Fuco1/smartparens/wiki#getting-started) in strict mode ensures balanced parentheses by adding a closing parentheses when you type an open parentheses.  This works for `()`, `[]`, `{}` and `""`.
 
 ## Configure Smartparens
 

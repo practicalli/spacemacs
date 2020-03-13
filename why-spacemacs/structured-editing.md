@@ -1,6 +1,6 @@
 # Structured Editing
 
-Structured editing is an invaluable tool when working with Lisp languages (elsip, lisp, clojure, etc) as it enables you to easily move code around without breaking the structural syntax of the language.
+Structured editing is an invaluable tool when working with Lisp languages (elisp, lisp, clojure, etc) as it enables you to easily move code around without breaking the structural syntax of the language.
 
 Clojure has very precise syntax as everything is contained in a list or similar structure.  It is very simple to navigate the structure of Clojure code by jumping from expression to expression.
 

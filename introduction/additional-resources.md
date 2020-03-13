@@ -10,12 +10,12 @@
 * [Clojure through code](https://github.com/practicalli/clojure-through-code/tree/drafts) - many examples of basic Clojure code
 * [Getting started with Clojure](http://jr0cket.co.uk/slides/getting-started-with-clojure.html) - a general guide to Clojure (work in progress)
 * [4Clojure](https://www.4clojure.com/) exercises & [4Clojure Google group](https://groups.google.com/forum/#!forum/4clojure)
-* [Clojurescript Koans](http://clojurescriptkoans.com/) or [Lighttable Koans](https://github.com/practicalli/lighttable-koans) - exercises to help you discover Clojure 
+* [Clojurescript Koans](http://clojurescriptkoans.com/) or [Lighttable Koans](https://github.com/practicalli/lighttable-koans) - exercises to help you discover Clojure
 
 **Clojure Reference**
 * [Clojure.org](http://clojure.org), [features](http://clojure.org/features) and [rational](http://clojure.org/rationale)
 * [Clojure documentation](http://clojure.org/documentation)
-* [Clojure cheetsheet](http://clojure.org/cheatsheet)
+* [Clojure Cheatsheet](http://clojure.org/cheatsheet)
 * [Official Google group](https://groups.google.com/forum/#!forum/clojure)
 * [CrossClj](http://crossclj.info/) - cross-referencing the Clojure ecosystem
 
@@ -29,4 +29,3 @@
 * [Practicalli, Clojurescript](http://practicalli.github.io/clojurescript/)
 * [Clojure cookbook](https://github.com/clojure-cookbook/clojure-cookbook)
 * [Brave Clojure](http://www.braveclojure.com/) - a Clojure tutorial (using Emacs)
-

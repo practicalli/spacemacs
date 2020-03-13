@@ -32,7 +32,7 @@ Once the REPL starts you can evaluate your code in the buffer.
 
 ![Spacemacs Clojure REPL send to menu](/images/spacemacs-clojure-repl-send-to-menu.png)
 
-### Clojure send to repl - quit sub menu
+### Clojure send to REPL - quit sub menu
 
 ![Spacemacs Clojure REPL send to menu](/images/spacemacs-clojure-repl-send-to-menu-quit.png)
 
