@@ -6,31 +6,40 @@ When errors are detected by the linter a red dot appears in the margin showing t
 
 The total number of errors and warnings are show in in the Space bar.
 
-![clj-kondo linter](https://raw.githubusercontent.com/borkdude/clj-kondo/b310605dc23689424e2f2d273e6e4b402f7138d7/screenshots/vscode.png)
+![Spacemacs live lintking - clj-kondo and flycheck errors](/images/spacemacs-clojure-linting-code-marks-and-flycheck-list-errors.png)
 
-> #### TODO::Add spacemacs specific images
 
-## Requirements
+## Navigating linting errors
+
+`SPC e L` opens a window with a buffer containing the list of linting errors for the current file. Navigate between linting errors using `j` and `k`. `RET` to select an error, focusing the cursor in the other buffer on that error
+
+`SPC b x` to close the buffer and window when you have finished.
+
+![Spacemacs - Clojure Linting - flycheck list errors](/images/spacemacs-clojure-linting-flycheck-list-errors.png)
+
+Keeping the flycheck buffer open will update as you move to linting errors in the source code buffer.
+
+> #### Hint::Not all error menu commands work
+> Some commands in the error menu [do not currently work with linting in Clojure](https://github.com/syl20bnr/spacemacs/issues/12919).
+
+## Configure Spacemacs Clojure layer with clj-kondo
+
+Requirements for using clj-kondo as a live linter:
 
 1. `syntax-checking` layer is present in `dotspacemacs-configuration-layers`, which provides flycheck.
 2. `clj-kondo` is available on PATH (see [clj-kondo install instructions](https://github.com/borkdude/clj-kondo/blob/master/doc/install.md)).
 3. Spacemacs `develop` branch as of September 2019 or later
 
 
-## Configure Spacemacs Clojure layer with clj-kondo
-
 Add a variable called `clojure-enable-linters` to the `clojure` with the value 'clj-kondo.
 
 ```elisp
-dotspacemacs-configuration-layers
-'(...
     (clojure :variables
              clojure-enable-linters 'clj-kondo)
- )
 ```
 
 `SPC q r` to restart Spacemacs (or simply `SPC f e R` to reload the configuration)
 
 
 > #### Hint::Conflicts
-> This configuration approach for clj-kondo is broken if you also include the unofficial `clojure-lint` layer that can provide Joker.  clj-kondo has superseded joker in functionality.
+> Using the unofficial `clojure-lint` layer will cause conflicts and may interfere with clj-kondo live linting.
