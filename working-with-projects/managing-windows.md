@@ -1,20 +1,21 @@
 # Managing Windows
 
-Windows in Spacemacs allow you to organise your buffers, splitting horizontally and vertically with multiple rows and columns.  Windows can also be move around and resized without resorting to using the mouse.
+Windows in Spacemacs allow you to organise your buffers, splitting horizontally and vertically with multiple rows and columns.  Windows can also be moved around and resized without resorting to using the mouse.
 
-The windows menu is `SPC w`.
+`SPC w` is the windows menu.
 
 [![Spacemacs - window menu](/images/spacemacs-window-menu.png)](/images/spacemacs-window-menu.png)
 
 `SPC w u` will undo a change to the windows.
 
-> ####Hint::Golden Ratio
-> Using the golden ratio mode automatically increases the size of the active window, which is very useful when you have multiple windows open.
-> Toggle golden ratio mode using `SPC t g`
+## Golden Ratio - added focus for multiple windows
+`SPC t g` toggles golden ratio mode
+
+Golden ratio automatically makes the active window the largest in the frame.  Chainging windows will resize all windows to make the new active window the largest
 
 
 ## Windows Transient menu
 
-Use the Windows Transient state menu `SPC W .` to re-arrange windows multiple times.
+`SPC W .` opens the Windows Transient state menu, enabling single character keybindings for window commands, simplifying multiple commands.
 
 ![Spacemacs - window menu - transient state](/images/spacemacs-window-menu-transient-state.png)
