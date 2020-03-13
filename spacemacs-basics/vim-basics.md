@@ -6,6 +6,21 @@ Vim style editing is arguably the most effective way for touch typists to use a 
 
 The only way to learn vim style editing is to practice and ideally use it for everything you do.
 
+
+Evil editing style provides [multi-modal editing](/why-spacemacs/states.html), so different types of editing is carried out by specific states.  One advantage of many states is that single characters can be used for key bindings which puts less strain on your hands whilst typing.
+
+![Spacemacs - Evil states](/images/spacemacs-states-vim.png)
+
+
+Selecting Evil mode will set Vim to be the default way of using Emacs, however, all the default Emacs keybindings will be available.
+
+If you select holy mode then only the Emacs editing mode is available as Evil is not installed.
+
+![Spacemacs - selecting Evil mode](/images/spacemacs-first-run-vim.png)
+
+
+
+
 ## Normal state by default
 
 Spacemacs Evil providing multiple editing states, minimising the keybindings required for specific tasks as well as adding great power and flexibility when editing text.

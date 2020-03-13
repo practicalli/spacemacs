@@ -19,6 +19,9 @@ If a function does not have a menu item, you can still find it using `SPC SPC` a
 
 [![Spacemacs - space menu](/images/spacemacs-main-menu.png)](/images/spacemacs-main-menu.png)
 
+> ####Hint::Main Emacs keybindings
+> In Holy Mode (Emacs keybindings) the keybinding `M-m` is used to access the Spacemacs menu, rather than `SPC`.
+> `M-RET` is used to open the Major Mode menu (e.g. Clojure specific menu in clojure-mode), the equivalent of `,` in Evil.
 
 ## Spacemacs Help system
 
