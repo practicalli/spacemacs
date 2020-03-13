@@ -4,7 +4,7 @@
 /* Use Ubuntu font as default font for all content */
 body {
     font-family: Ubuntu;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 .book-body h1,.book-body h2,.book-body h3,.book-body h4,.book-body h5,.book-body h6 {
@@ -13,7 +13,7 @@ body {
 
 .book-body p, .book-body div, .book-body span, .summary, .book-body li, .summary li a  {
     font-family : "Ubuntu", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 /* .book .book-body .page-wrapper .page-inner section.normal code { */
@@ -45,7 +45,7 @@ img, div, table {
 
 
 .CodeMirror pre {
-    font-size: 1.4em;
+    font-size: 1.6em;
 }
 
 
