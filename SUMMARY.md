@@ -71,8 +71,6 @@
 
 ## Clojure Development
 
-* [Create a Clojure Project](create-a-project/index.md)
-        * [Using Emacs Eshell](create-a-project/using-emacs-eshell.md)
 * [Clojure Projects](clojure-projects/index.md)
     * [Adding Files](clojure-projects/adding-files.md)
     * [Rename - Delete Files](clojure-projects/rename-delete-files.md)
