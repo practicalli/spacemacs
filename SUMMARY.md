@@ -168,7 +168,7 @@
     * [Testing Pull Requests](source-control/magit/testing-pull-requests.md)
     * [Highlight Changes in file](source-control/magit/version-highlighting.md)
     * [Clean up Magit sessions](source-control/magit/clean-up-magit-sessions.md)
-* [Github](source-control/github/index.md)
+* [GitHub](source-control/github/index.md)
     * [Gists](source-control/github/gists.md)
 
 ## ClojureScript features
