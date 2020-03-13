@@ -1,62 +1,63 @@
 # Install Clojure
 
- Install a Java runtime environment, preferably version 1.8 and [Leiningen](http://leiningen.org/) to create, manage and run Clojure projects.
+Establish a Clojure environment by installing the following:
 
-## Java
+* rlwrap, a read line tool for an interactive command line
+* Clojure CLI tools (Leiningen and Boot should also work)
+* clj-new to create projects
 
-  Check you have a Java runtime on your system path by typing the following in a terminal window:
+## Clojure CLI tools
 
-```bash
-java -version
+<!-- Operating System specific instructions -->
+{% tabs ubuntu="Debian/Ubuntu", homebrew="Homebrew", windows="Windows" %}
+
+<!-- Ubuntu install -->
+{% content "ubuntu" %}
+
+Use [Homebrew on Linux or Windows with WSL](https://docs.brew.sh/Homebrew-on-Linux)
+```shell
+brew install clojure/tools/clojure
 ```
 
-If Java is not found, please install it from [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html) or [OpenJDK](http://openjdk.java.net/projects/jdk8/).
+Or use the Linux script installer:
 
-Java may also be available via your operating systems package manger, for example on Ubuntu / Debian systems this would be installed via:
-
-`sudo apt-get install openjdk-8-jre`
-
-
-## Leiningen
-
-[Leiningen](http://leiningen.org/) is the most commonly used build automation tool used to manage Clojure projects.  Install by [saving the Leiningen install script](https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein) and running it inside a terminal window.
-
-* [Install script for Linux & MacOSX](https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein)
-* [Install script for Microsoft Windows](https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein.bat) or use the Linux script from [GitBash](https://git-scm.com/) (recommended).
-
-Save the `lein` file to somewhere on your operating system path, eg `~/bin`
-
-```bash
-chmod a+x ~/bin/lein
-lein
+```shell
+sudo apt install curl rlwrap
+curl -O https://download.clojure.org/install/linux-install-1.10.1.536.sh
+chmod +x linux-install-1.10.1.536.sh
+sudo ./linux-install-1.10.1.536.sh
 ```
 
-Now run this script on the command line
+The installation creates `/usr/local/bin/clj`, `/usr/local/bin/clojure`, and `/usr/local/lib/clojure`
 
-```bash
-lein
+<!-- Homebrew (MacOSX) install -->
+{% content "homebrew" %}
+
+Install the command line tools with brew from the clojure/tools tap:
+
+```shell
+brew install clojure/tools/clojure
 ```
 
-The first time you run this script it downloads a Java archive file (JAR) of the latest version of Leiningen.  When you run the script again, you have a working Leiningen build tool.
 
-Running `lein` once installed will show you a list of available commands.
+<!-- Windows install -->
+{% content "windows" %}
+
+An early release version of [clj on Windows is available](https://github.com/clojure/tools.deps.alpha/wiki/clj-on-Windows).
 
 
-## Clojure
+{% endtabs %}
+<!-- End of Operating System specific instructions -->
 
-If you are using Leiningen then there is no specific install for Clojure.
 
-Clojure comes as a library, a JAR file, managed by the build tool Leiningen just like any other dependency.
+## Install clj-new
 
-When you create a project with Leiningen, the configuration is created in a file called `project.clj`.  Inside this `project.clj` is a `dependencies` entry where the version of clojure is specified along with any other dependencies.  Here is an example of a `project.clj` configuration with just Clojure as a dependency
+Save the [practicalli/deps-edn-examples deps.edn file](https://github.com/practicalli/deps-edn-examples/blob/master/deps.edn) to `~/.clojure/deps.edn`
 
+Or edit `~/.clojure/deps.edn` and add an alias called new that runs the `clj-new` project.
+
+```clojure
+  :new
+  {:extra-deps {seancorfield/clj-new {:mvn/version "0.8.6"}}
+   :main-opts  ["-m" "clj-new.create"]}
 ```
-(defproject project-name "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.8.0"]])
-```
-
-> **Hint** The Clojure library is very small (~3.6Mb) and Leiningen caches it and all other libraries locally in the same folder structure that Maven uses, eg  Clojure version 0.1.8 would be cached in `.m2/repository/org/clojure/clojure/1.8.0`
