@@ -2,7 +2,7 @@
 
 You can configure Emacs to start in maximised mode (just like maximising an applications window) or in fullscreen mode for minimum distraction.
 
-Changed one of the following option in the `dotspacemacs/init` function of `~/.spacemacs`, the fullscreen option overrides the maximised option.
+Change one of the following option in the `dotspacemacs/init` function of `~/.spacemacs`. The fullscreen option overrides the maximised option.
 
 ```lisp
 dotspacemacs-fullscreen-at-startup t
@@ -10,9 +10,9 @@ dotspacemacs-fullscreen-at-startup t
 dotspacemacs-maximized-at-startup t
 ```
 
-> To find these lines quickly, use `SPC /` to search (or the Emacs command `C-s`)
+> To find these lines quickly, use `SPC s s to search and start typing the name of the option.  `C-j` to move down the matches, `C-k` to move up. `RET` to jump to the current line.
 
-Here are the relevant default settings
+Practicalli uses the following settings for these options:
 
 ```elisp
    ;; If non nil the frame is fullscreen when Emacs starts up. (default nil)
@@ -28,7 +28,7 @@ Here are the relevant default settings
 ```
 
 
-> ####Hint::
-> The character `t` for true is used as the non-nil value when these are either a true or false configuration option, with false value represented as `nil`.
+> ####Hint::Option values
+> For all options, `t`  represents true, `nil` represents false.
 >
-> If a name is used for a value it should be preceded with a single quote character
+> Where a name is used for a value it should be preceded with a single quote character, eg, `'all`

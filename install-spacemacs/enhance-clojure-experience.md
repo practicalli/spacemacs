@@ -27,7 +27,7 @@ Enhance the **clojure** layer by adding automatic linting and additional refacto
 
 `SPC f e d` opens the `.spacemacs` configuration file (`M-m f e d` holy mode)
 
-Use `/` and start typing `configuration-layers` to search for the `dotspacemacs-configuration-layers` section.  `RTN` confirms the search text and `n` jumps to the next occurance, `N` jumps to the previous occurrence.
+Use `SPC s s` and start typing `configuration-layers` to search for the `dotspacemacs-configuration-layers` section.  `RTN` to jump to the highlighted line, `C-j` to move down the matching lines, `C-k` to move up.
 
 Add the following layers to `dotspacemacs-configuration-layers` ensuring there are no duplicates
 
@@ -40,7 +40,8 @@ Add the following layers to `dotspacemacs-configuration-layers` ensuring there a
               clojure-enable-linters 'clj-kondo)
      emacs-lisp
      (git :variables
-          git-magit-status-fullscreen t)
+          git-magit-status-fullscreen t
+          magit-diff-refine-hunk 'all)
      github
      helm
      markdown
@@ -71,9 +72,9 @@ Add the following layers to `dotspacemacs-configuration-layers` ensuring there a
 > If you wish use extensive debugging for the whole project, then enable sayid by adding the variable `clojure-enable-sayid`.  So your layer definition for Clojure would look like:
 ```
      (clojure :variables
+              clojure-enable-linters 'clj-kondo
               clojure-enable-sayid t
-              clojure-enable-clj-refactor t
-              clojure-enable-linters 'clj-kondo)
+              clojure-enable-clj-refactor t)
 ```
 
 
