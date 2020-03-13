@@ -22,33 +22,3 @@ When in a transient-state you will see documentation at the bottom of your windo
 | `SPC z f`   | zoom frame size              |
 | `SPC z x`   | Font Scaling (x for text)    |
 | `SPC n +/-` | Change the value of a number |
-
-
-## Hydra menus
-
-Spacemacs uses [hydra](https://github.com/abo-abo/hydra) to create these transient states. Some packages also include their own Hydra menus. An example of this is the Clojure refactor hyrda menu.
-
-* `C-c C-f h h` - clj-refactor (hydra menu)
-
-
-> ####TODO::Propose transient state keybinding for Clojure layer - cljr-refactor
-> hydra-cljr-help-menu/body is an interactive compiled Lisp function in `clj-refactor.el'.
-```
-(hydra-cljr-help-menu/body)
-```
->
->For more information check the manuals.
->
->Call the body in the "hydra-cljr-help-menu" hydra.
->
-> The heads for the associated hydra are:
->
-> "n":    ‘hydra-cljr-ns-menu/body’,
-> "c":    ‘hydra-cljr-code-menu/body’,
-> "p":    ‘hydra-cljr-project-menu/body’,
-> "t":    ‘hydra-cljr-toplevel-form-menu/body’,
-> "s":    ‘hydra-cljr-cljr-menu/body’,
-> "q":    ‘nil’
->
-> The body can be accessed via ‘hydra-cljr-help-menu/body’.
-```
