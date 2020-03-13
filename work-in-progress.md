@@ -620,3 +620,166 @@ Checking SPC t s turns on syntax checking
 Future layers to explore OrgMode + Capture mode Abbrev mode
 
 Editorconfig layer to manage things like indent and such
+
+
+
+
+# Literate programming
+
+## Why Literate Programming
+
+In Spacemacs and Clojure development, it means you could write a document explaining your project or library and include code that can execute and give results in the document itself.
+
+So, if you wanted contributors to help with you open source project or are on-boarding a developer onto you team, you could give them a literate programming document that explains how all the important aspects work, including real code examles that they can experiment with.
+
+## How to do it
+
+Emacs has Org-mode with can do amazing things with documents, simply open a file with a `.org` filename extension.  Alternatively you can start the org-mode major mode with the command `M-x org-mode`
+
+Emacs also has bable, which can take code and run it in an Emacs buffer of the correct major-mode for the language and automoaticaly return the result back to the org-mode file.
+
+
+## Examples
+
+The following are Clojure code block examples.
+Basic Functionality
+
+Let's start really simple. We will test the evaluation of a simple Clojure form. Insert the following into the org file:
+```
+#+begin_src clojure :results silent
+  (+ 1 4)
+#+end_src
+```
+Now place the cursor in the code block and enter the command:
+
+C-c C-c
+
+This should evaluate the Clojure form, and echo the results: "5" in the mini-buffer.
+
+Now let's insert the results into the buffer immediately after the Clojure code block. Insert the following into your org file:
+
+#+begin_src clojure :results value
+  [ 1 2 3 4]
+#+end_src
+
+Execute as before:
+
+C-c C-c
+
+Now, immediately following the code block, the following results block will be inserted:
+
+#+RESULTS
+[ 1 2 3 4]
+
+The result of the last form evaluated will be inserted into the results block.
+
+Here is another simple example, with the results of evaluation included:
+
+#+begin_src clojure :results value
+  (def small-map {:a 2 :b 4 :c 8})
+  (:b small-map)
+#+end_src
+
+#+RESULTS:
+: 4
+
+A More Complicated Example- Make a Graph and Insert It into the Document
+
+The next example will use an interesting Clojure based library called Incanter. The code will demonstrate the creation of a basic x-y line plot using the Incanter xy-plot function. There is a preliminary step which is required to download the Incanter library into your machine. In the Leiningen project, there is a file called project.clj which must have the Incanter library dependency added to it as follows:
+```clojure
+(defproject clojure-examples "0.1.0-SNAPSHOT"
+  :description "FIXME: write description"
+  :url "http://example.com/FIXME"
+  :license {:name "Eclipse Public License"
+            :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :dependencies [[org.clojure/clojure "1.5.0"]
+                 [incanter "1.5.4"]])
+```
+
+After the project.clj file is modified, issue the command lein deps at the command line. You must have an internet connection for this to successfully download the dependencies into your local machine.
+
+The following code block shows how the Incanter library is used to create an x-y line plot. The view function will display the plot. The plot is also saved to both PDF and PNG format image files.
+
+```
+#+begin_src clojure
+  (use '(incanter core charts pdf))
+  ;;; Create the x and y data:
+  (def x-data [0.0 1.0 2.0 3.0 4.0 5.0])
+  (def y-data [2.3 9.0 2.6 3.1 8.1 4.5])
+  (def xy-line (xy-plot x-data y-data))
+  (view xy-line)
+  (save-pdf xy-line "incanter-xy-line.pdf")
+  (save xy-line "incanter-xy-line.png")
+#+end_src
+```
+
+To insert the image into the exported document, add this code:
+
+```
+#+CAPTION: A basic x-y line plot
+#+NAME: fig:xy-line
+[[./incanter-xy-line.pdf]]
+```
+
+Note that the file will be saved to the highest level of the Leiningen project. Depending on where you created the org file, the path to the file may have to be different than shown.
+Export to LaTeX or HTML
+
+To export to LaTeX, C-c C-e l l. To export to HTML, C-c C-e h h.
+
+Note that the exported HTML will hyperlink the PDF file; to embed the image in the HTML, switch to the PNG image file. The exported LaTeX (.tex) file will embed either the PDF or PNG file. Graphical quality will be superior with the PDF file.
+
+## Session Evaluation
+
+By default, each individual code block will execute by starting a Clojure process. Each code block will execute in isolation from the others. Due to the start-up time of a Java virtual machine, this can make execution of many blocks slow. The :session option will allow control of the process assigned to each code block. Please refer to the org manual for details on :session usage.
+Specify namespace
+
+By default, each individual code block will execute under CIDER connection session's current namespace. But you can specify a namespace like bellowing:
+
+```
+#+begin_src clojure :results pp
+(ns kk.test)
+(def he "hi")
+#+end_src
+
+#+RESULTS:
+: #'kk.test/he
+```
+
+You can see the second code block still us individual namespace.
+
+```
+#+begin_src clojure :results value :ns kk2
+(def he "hi")
+*ns*
+#+end_src
+
+#+RESULTS:
+: nil#'kk2/he#namespace[kk2
+
+Change Clojure cwd in Org-mode way
+```
+
+As this blog post Clojure Plotting to Org inline image in ob-clojure mentioned.
+
+Because Clojure is based on JVM, can JVM does not allow to dynamically change current working directory (cwd). So if you use ob-clojure in Org-mode, and need to interact with path, directory, file etc. You need to figure other ways. Here is an Org-mode way, use header argument :var to pass current buffer's path into Clojure, then use this dir variable in Clojure to construct a correct path.
+
+```
+#+begin_src clojure :results graphics :dir "data/images" :file "ob-clojure-literate.png" :var dir=(concat (file-name-directory (buffer-file-name)) "data/images/")
+(use '(incanter core stats datasets charts io pdf))
+(def hist (histogram (sample-normal 1000)))
+(save hist (str dir "ob-clojure-literate.png"))
+#+end_src
+```
+
+## Additional Examples
+
+The above set-up and examples were intended for the beginner to achieve success with Clojure code blocks in org mode documents.
+
+Please refer to the documentation for emacs, Clojure-mode, and CIDER which are referenced in the requirements session for details on how to enhance the system beyond the basics described in this tutorial.
+
+More examples of Clojure code blocks can be found at these sites:
+
+    Emacs Org and Overtone
+    Literate Programming Solution to the Potter Kata
+    Incanter Chart Customizations
+    thi.ng/geom: Comprehensive geometry toolkit for Clojure/ClojureScript developed in a literate programming style.
