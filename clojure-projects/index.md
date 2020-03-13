@@ -32,7 +32,7 @@ lein new lib playground
 ```
 
 > #### Hint::Leiningen build tool required?
-> See the [install Clojure section](/before-you-start/install-clojure.html) for details
+> See [Leiningen](/alternative-tooling/leiningen.html) for details
 
 {% endtabs %}
 <!-- End of  -->
