@@ -18,10 +18,10 @@ https://youtu.be/ZKuQDrQLAnc
       <a href="install-spacemacs/index.html"><img src="images/button-install-spacemacs.png" /></a>
     </td>
     <td>
-      <a href="create-a-project/index.html"><img src="images/button-code-with-clojure.png" /></a>
+      <a href="clojure-projects/index.html"><img src="images/button-code-with-clojure.png" /></a>
     </td>
     <td>
-      <a href="https://github.com/practicalli/spacemacs-config/blob/master/.spacemacs.d/init.el"><img src="images/button-my-spacemacs-config.png" /></a>
+      <a href="https://github.com/practicalli/spacemacs.d/"><img src="images/button-my-spacemacs-config.png" /></a>
     </td>
   </tr>
 </table>
