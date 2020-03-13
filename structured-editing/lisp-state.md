@@ -5,14 +5,16 @@
 Lisp state provides and Evil mode for structural editing Clojure code and for other lisps too.  This mode provides a fast an convienient way to manipulate the structure of your Clojure whist keeping it valid, i.e. avoiding unbalanced parenthesis.
 
 > ####Hint::
-> In __Lisp State__ you do not need to use the `SPC k` keybinding, just the single character keybings.
+> Once in __Lisp State__ you do not need to use `SPC k`, just the single character keybings.
 
 The common lisp state commands I use are
 
 | Lisp state `SPC k` | Description                                                          |
 |--------------------|----------------------------------------------------------------------|
-| `s` /  `S`         | slurp forwards / backwards - pull in code from the right / left      |
-| `b` / `B`          | barf forwards / backwards - push out code to the right / left        |
+| `s` /  `S`         | slurp forward / backward (pull in code from the right / left)        |
+| `b` / `B`          | barf forward / backward (push out code to the right / left)          |
+| `d s`              | delete symbol                                                        |
+| `d w`              | delete word                                                |
 | `d x`              | delete expression                                                    |
 | `r`                | raise expression - replace parent expression with current expression |
 
@@ -65,50 +67,50 @@ Examples:
 
 ## Key Bindings
 
-| Key Binding | Function                                                            |
-|-------------|---------------------------------------------------------------------|
-| `SPC k %`   | evil jump item                                                      |
-| `SPC k :`   | ex command                                                          |
-| `SPC k (`   | insert expression before (same level as current one)                |
-| `SPC k )`   | insert expression after (same level as current one)                 |
-| `SPC k $`   | go to the end of current sexp                                       |
-| `SPC k 0`   | go to the beginning of current sexp                                 |
-| `SPC k a`   | absorb expression                                                   |
-| `SPC k b`   | forward barf expression                                             |
-| `SPC k B`   | backward barf expression                                            |
-| `SPC k c`   | convolute expression                                                |
-| `SPC k ds`  | delete symbol                                                       |
-| `SPC k Ds`  | backward delete symbol                                              |
-| `SPC k dw`  | delete word                                                         |
-| `SPC k Dw`  | backward delete word                                                |
-| `SPC k dx`  | delete expression                                                   |
-| `SPC k Dx`  | backward delete expression                                          |
-| `SPC k e`   | unwrap current expression and kill all symbols after point          |
-| `SPC k E`   | unwrap current expression and kill all symbols before point         |
-| `SPC k h`   | previous symbol                                                     |
-| `SPC k H`   | go to previous sexp                                                 |
-| `SPC k i`   | switch to =insert state=                                            |
-| `SPC k I`   | go to beginning of current expression and switch to =insert state=  |
-| `SPC k j`   | next closing parenthesis                                            |
-| `SPC k J`   | join expression                                                     |
-| `SPC k k`   | previous opening parenthesis                                        |
-| `SPC k l`   | next symbol                                                         |
-| `SPC k L`   | go to next sexp                                                     |
-| `SPC k p`   | paste after                                                         |
-| `SPC k P`   | paste before                                                        |
-| `SPC k r`   | raise expression (replace parent expression by current one)         |
-| `SPC k s`   | forward slurp expression                                            |
-| `SPC k S`   | backward slurp expression                                           |
-| `SPC k t`   | transpose expression                                                |
-| `SPC k u`   | undo                                                                |
-| `SPC k U`   | got to parent sexp backward                                         |
-| `SPC k C-r` | redo                                                                |
-| `SPC k v`   | switch to =visual state=                                            |
-| `SPC k V`   | switch to =visual line state=                                       |
-| `SPC k C-v` | switch to =visual block state=                                      |
-| `SPC k w`   | wrap expression with parenthesis                                    |
-| `SPC k W`   | unwrap expression                                                   |
-| `SPC k y`   | copy expression                                                     |
+| Key Binding | Function                                                           |
+|-------------|--------------------------------------------------------------------|
+| `SPC k %`   | evil jump item                                                     |
+| `SPC k :`   | ex command                                                         |
+| `SPC k (`   | insert expression before (same level as current one)               |
+| `SPC k )`   | insert expression after (same level as current one)                |
+| `SPC k $`   | go to the end of current sexp                                      |
+| `SPC k 0`   | go to the beginning of current sexp                                |
+| `SPC k a`   | absorb expression                                                  |
+| `SPC k b`   | forward barf expression                                            |
+| `SPC k B`   | backward barf expression                                           |
+| `SPC k c`   | convolute expression                                               |
+| `SPC k ds`  | delete symbol                                                      |
+| `SPC k Ds`  | backward delete symbol                                             |
+| `SPC k dw`  | delete word                                                        |
+| `SPC k Dw`  | backward delete word                                               |
+| `SPC k dx`  | delete expression                                                  |
+| `SPC k Dx`  | backward delete expression                                         |
+| `SPC k e`   | unwrap current expression and kill all symbols after point         |
+| `SPC k E`   | unwrap current expression and kill all symbols before point        |
+| `SPC k h`   | previous symbol                                                    |
+| `SPC k H`   | go to previous sexp                                                |
+| `SPC k i`   | switch to `insert state`                                           |
+| `SPC k I`   | go to beginning of current expression and switch to `insert state` |
+| `SPC k j`   | next closing parenthesis                                           |
+| `SPC k J`   | join expression                                                    |
+| `SPC k k`   | previous opening parenthesis                                       |
+| `SPC k l`   | next symbol                                                        |
+| `SPC k L`   | go to next sexp                                                    |
+| `SPC k p`   | paste after                                                        |
+| `SPC k P`   | paste before                                                       |
+| `SPC k r`   | raise expression (replace parent expression by current one)        |
+| `SPC k s`   | forward slurp expression                                           |
+| `SPC k S`   | backward slurp expression                                          |
+| `SPC k t`   | transpose expression                                               |
+| `SPC k u`   | undo                                                               |
+| `SPC k U`   | got to parent sexp backward                                        |
+| `SPC k C-r` | redo                                                               |
+| `SPC k v`   | switch to =visual state=                                           |
+| `SPC k V`   | switch to =visual line state=                                      |
+| `SPC k C-v` | switch to =visual block state=                                     |
+| `SPC k w`   | wrap expression with parenthesis                                   |
+| `SPC k W`   | unwrap expression                                                  |
+| `SPC k y`   | copy expression                                                    |
 
 
 ## Manual Configuration (optional)
@@ -125,13 +127,12 @@ Key bindings are set only for `emacs-lisp-mode` by default. It is possible to
 add major modes with the variable `evil-lisp-state-major-modes'.
 
 It is also possible to define the key bindings globally by setting
-`evil-lisp-state-global` to t. In this case `evil-lisp-state-major-modes' has no
+`evil-lisp-state-global` to `t`. In this case `evil-lisp-state-major-modes' has no
 effect.
 
 If you don't want commands to enter in `lisp state` by default set the variable
-`evil-lisp-state-enter-lisp-state-on-command` to nil. Then use the
-<kbd><leader> .</kbd> to enter manually in `lisp state`
+`evil-lisp-state-enter-lisp-state-on-command` to `nil`. `SPC k .` will be the only keybinding to switch to lisp state.
 
-[evil-link]: https://gitorious.org/evil/pages/Home
-[smartparens-link]: https://github.com/Fuco1/smartparens/wiki
-[melpa-link]: http://melpa.org/
+* [evil-link]: https://gitorious.org/evil/pages/Home
+* [smartparens-link]: https://github.com/Fuco1/smartparens/wiki
+* [melpa-link]: http://melpa.org/

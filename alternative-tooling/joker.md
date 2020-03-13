@@ -1,9 +1,11 @@
 # Joker
 
-> #### DANGER::Adding clojure-lint layer breaks recommended linter
-> [clj-kondo](improving-code/linters/clj-kondo.md) is the recommended linter for Clojure in Spacemacs.  Adding the unofficial `clojure-linter` layer will break `clj-kondo`
+Spacemacs recommends only using [clj-kondo](improving-code/live-linting.md) linter as it is the most comprehensive and fastest linter available.  You can run both clj-kondo and joker, however, you will need to manage many additional false positives.
 
-Joker is a small Clojure interpreter and linter that can be used with the `clojure-lint` layer to give instant feedback on the code you are writing.
+> #### DANGER::Adding clojure-lint layer breaks recommended linter
+> [clj-kondo](improving-code/live-linting.md) is the recommended linter for Clojure in Spacemacs.
+
+Joker is a small Clojure interpreter and linter
 
 ![Spacemacs Clojure Linter Joker - Ubuntu screenshot](/images/spacemacs-clojure-linter-jocker-examples-ubuntu.png)
 
@@ -48,28 +50,22 @@ brew install candid82/brew/joker
 
 ## Add the syntax-checking layer
 
-The flycheck package in the `syntax-checking` layer provides general syntax checking in Emacs and the `flycheck-joker` package in `clojure-lint` layer adds Clojure specific syntax rules.
+The flycheck package in the `syntax-checking` layer provides general syntax checking in Emacs.
 
 Ensure the `syntax-checking` layer is enabled in `.spacemacs`
 
+```elisp
    dotspacemacs-configuration-layers
-   '(syntax-checking)
-
-
-## Clone the Joker layer to your Spacemacs configuration
-
-The `clojure-lint` layer is not yet part of Spacemacs, so copy the layer into the private area of your local Spacemacs configuration
-
-```bash
-git clone https://github.com/n2o/clojure-lint-spacemacs-layer ~/.emacs.d/private/clojure-lint
+   '(
+   syntax-checking
+   )
 ```
 
-## Add clojure-lint layer
+## Configure the Clojure layer
 
-Edit the `.spacemacs` file and in the `dotspacemacs/layers` section, add the following line:
-
-```
-clojure-lint
+```elisp
+(clojure :variables
+              clojure-enable-linters 'joker)
 ```
 
 ## Removing false positives

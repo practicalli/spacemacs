@@ -16,7 +16,7 @@ Using `SPC o` ensures that your keybindings will not clash with any others provi
 You could use the classic Emacs style keybindings for paredit as follows
 
 > ####TODO::Should provide examples of using web hook
-> define-key on the global-map will set the keybindings for every mode.  For paredit it makes sense to set these keybindings foronly clojure-mode
+> define-key on the global-map will set the keybindings for every mode.  For paredit it makes sense to set these keybindings for only clojure-mode
 
 For example, you can define keybindings for slurping and barfing in the `dotspacemacs/user-config` section of the `.spacemacs` file.
 
