@@ -33,21 +33,19 @@ Vim keybindings that drive Vim editing tools that are common for developers
 
 
 
-## multi-replace with iedit and narrowing.
+## multi-replace with iedit and narrowing
 
 `SPC v` select whatever you're at. Press `v` to widen region and `S-v` to narrow region.
-
-
 
 
 `zt`, `zz`, and `zb` to pull the current line to the top/middle/bottom of the screen.
 
 
-`[count]G` Jump to line number
+`[count]G` jump to line number
 
-gf Jump to file name under the cursor - try this in the summary.md file
+`gf` jump to file name under the cursor - try this in the summary.md file
 
-<C-]> Jump to definition of keyword under the cursor
+`C-]` Jump to definition of keyword under the cursor
 
 
 
@@ -69,7 +67,7 @@ gf Jump to file name under the cursor - try this in the summary.md file
 
 `M-t` transpose words before and after cursor position
 
-`{`, `}` motions jump to next and previous empty lines.  This motion makes it simple to rearranging paragraphs
+`{`, `}` motions jump to next and previous empty lines.  This motion makes it simple to rearrange paragraphs
 
 `{ d }` will kill the paragraph (or multiple paragraphs)
 
