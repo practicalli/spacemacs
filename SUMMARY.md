@@ -148,6 +148,8 @@
     * [Add Layers](source-control/add-layers.md)
     * [Git Configuration](source-control/git-configuration.md)
     * [GitHub Configuration](source-control/github-configuration.md)
+    * [Forge Configuration](source-control/forge-configuration.md)
+        * [Forge Configuration](source-control/forge-self-hosted-configuration.md)
 * [MaGit Git Client](source-control/magit/index.md)
     * [Create local repository](source-control/magit/create-local-repository.md)
     * [List local repositories](source-control/magit/list-local-repositories.md)
