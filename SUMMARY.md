@@ -162,6 +162,7 @@
     * [Remote repositories](source-control/magit/remote-repositories.md)
     * [Stashing changes](source-control/magit/stashing.md)
     * [Changing History](source-control/magit/changing-history.md)
+        * [Squash commits](source-control/magit/commit-squash.md)
         * [Interactve Rebasing](source-control/magit/interactive-rebasing.md)
         * [Reset Commits](source-control/magit/reset-commit-history.md)
     * [Git blame](source-control/magit/blame.md)
