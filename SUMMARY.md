@@ -210,6 +210,11 @@
     * [Org-mode tweaks](org-mode/org-mode-tweaks.md)
     * [Literate Programming](org-mode/literate-programming/index.md)
 
+## Encryption
+
+* [Encryption](encryption/index.md)
+    * [Create gpg key](encryption/create-gpg-key.md)
+
 ## Troubleshooting
 
 * [Troubleshooting](troubleshooting/index.md)
