@@ -15,8 +15,18 @@ Any contributors will be noted in the [contributors](/contributors.html) section
 Thank you.
 
 ## Contributing to Spacemacs
+The [Spacemacs contribution guidelines](https://github.com/syl20bnr/spacemacs/blob/develop/CONTRIBUTING.org) details how to get help, report issues and contribute to the project.
 
-Create pull requests on the `develop` branch, which can be done with Spacemacs and GitHub
+`SPC h I` to raise an issue on the [Spacemacs GitHub issue tracker](https://github.com/syl20bnr/spacemacs/issues), automatically including your Spacemacs and Operating system details.
+
+Please review issues and leave feedback, especially confirming issues are reproducible on your Spacemacs configuration. `SPC h d s` to include your system configuration.
+
+Contribute changes via pull requests:
+1) Fork the Spacemacs project on GitHub and clone your fork
+2) Create a new branch from the `develop` branch (`SPC g s` for magit status, `b c` to create a new branch)
+3) Make changes and update relevant README files and the CHANGELOG.develop file
+4) Commit changes to the new branch and push to your fork.
+5) Visit your fork on GitHub and create a pull request (or [setup forge](source-control/forge-configuration.md) and create PR from Magit)
 
 {% youtube %}
 https://youtu.be/OMS-3Jl05mE
