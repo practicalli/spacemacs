@@ -1,6 +1,6 @@
 # Code folding
 
-Code folding allows you to collapse a code block onto one line, allowing you to see more of your code in the window.  A code block for Clojure includes comments, **def**, **defn** and the threading macros **->** and **-->**.
+Code folding allows you to collapse a code block onto one line, allowing you to see more of your code in the window.  A code block for Clojure includes comments, `def`, `defn` and the threading macros `->` and `-->`.
 
 > #### Hint::Overview of a namespace
 > `z m` shows just the names of all function definitions and vars in a namespace, providing a quick way to review all namespace api.

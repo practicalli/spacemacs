@@ -109,6 +109,8 @@
     * [Markers](navigating-code/markers.md)
     * [Namespaces](navigating-code/namespaces.md)
     * [Names - Symbols](navigating-code/names-symbols.md)
+    * [Function Definitions](navigating-code/function-definitions.md)
+    * [Java Definitions](navigating-code/java-definitions.md)
     * [Expressions](navigating-code/expressions.md)
     * [Code Folding](navigating-code/code-folding.md)
         * [Folding methods](navigating-code/code-folding-methods.md)

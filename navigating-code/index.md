@@ -10,13 +10,13 @@ Use Evil normal mode to quickly jump around your code.
 
 | Keybindings        | Description                                                                                                            |
 |--------------------|------------------------------------------------------------------------------------------------------------------------|
-| `SPC j j`          | Jump to given character(s) in any window of current frame - more characters narrow matches                             |
+| `SPC j j`          | Search across all windows for given character(s), type highlighted character(s) to jump to location |
 | `SPC j C`          | Jump to first unbalanced parens                                                                                        |
 | `SPC j c` or `' '` | Jump to last change                                                                                                    |
 | `m x` , `' x`      | Create marker called `x`, jump to marker called `x` (use any alphabet character) (see [markers section](markers.html)) |
 | `#`                | Symbol highlight transient state - navigate symbol names, iedit, swoop                                                 |
-| `/`                | Search in current buffer - `RTN` to confirm search pattern, `n/N` to navigate between matches                          |
-| `SPC /`            | Search in project - use `C-j/k` to navigate in results                                                                 |
+| `SPC s s         | Search in current buffer, `C-j`/`C-k` to navigate results                                                               |
+| `SPC s p`          | Search in project, `C-j/k` to navigate results                                                                         |
 
 
 
