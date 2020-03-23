@@ -54,6 +54,7 @@
     * [Treemacs](working-with-projects/treemacs.md)
     * [Ranger](working-with-projects/ranger.md)
 * [Vim Basics](spacemacs-basics/vim-basics.md)
+    * [Evil States](spacemacs-basics/evil-states.md)
     * [Speaking Evil](spacemacs-basics/vim-style/speaking-evil.md)
     * [Vim Quick Reference](spacemacs-basics/vim-style/vim-quick-reference.md)
     * [Vim Tips for developers](spacemacs-basics/vim-style/vim-tips-for-developers.md)
