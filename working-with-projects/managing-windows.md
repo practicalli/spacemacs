@@ -4,7 +4,7 @@ Windows in Spacemacs allow you to organise your buffers, splitting horizontally 
 
 `SPC w` is the windows menu.
 
-[![Spacemacs - window menu](/images/spacemacs-window-menu.png)](/images/spacemacs-window-menu.png)
+[![Spacemacs - window menu](/images/spacemacs-window-menu-zoomed.png)](/images/spacemacs-window-menu.png)
 
 `SPC w u` will undo a change to the windows.
 

@@ -1,13 +1,12 @@
 # Searching Projects
 
-`SPC /` will do a fuzzy logic search of all the files in the current project.  A helm pop-up displays and allows you to type in a search term.
-
-![Spacemacs Helm-Ag ripgrep pattern search results](/images/spacemacs-helm-ag-ripgrep-pattern-search.png)
+`SPC s p` enables a a fuzzy logic search through the content of all the files in the current project.  A helm pop-up displays, typing a pattern shows matching lines from all the files in the project.
 
 Use `C-j` and `C-k` to move down and up through the search results.
 
 `RET` selects the search result and shows the file and line in the current buffer.
 
+![Spacemacs Helm-Ag ripgrep pattern search results](/images/spacemacs-helm-ag-ripgrep-pattern-search.png)
 
 ## Requirements - ripgrep search tool
 
