@@ -1,8 +1,8 @@
-# Testing Pull Requests with Magit
+# Try Pull Requests with Magit
 
 [Magit](https://magit.vc/) provides an easy way to try out pull requests from remote repositories, e.g. Github, Gitlab.
 
-`SPC g s`  to open Magit in the git project the current file belongs to.
+`SPC g s`  to open Magit in the git project the current file belongs to.  A popup displays selector displays if the current buffer is not part of a Git project.
 
 `b y`  in Magit will popup the current list of pull request from the git project.  Selecting a pull request will open git a local branch for that pull request.  You can now test all the changes you wish.
 
