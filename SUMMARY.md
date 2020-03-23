@@ -39,7 +39,7 @@
 * [Starting Emacs instantly](install-spacemacs/emacsclient-server.md)
 * [Update Spacemacs](install-spacemacs/update.md)
 
-## Basic concepts
+## Using Spacemacs
 
 * [Spacemacs Basics](spacemacs-basics/index.md)
     * [Frames Windows Buffers](spacemacs-basics/emacs-basics.md)
