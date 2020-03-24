@@ -9,20 +9,17 @@ Establish a Clojure environment by installing the following:
 ## Clojure CLI tools
 
 <!-- Operating System specific instructions -->
-{% tabs ubuntu="Debian/Ubuntu", homebrew="Homebrew", windows="Windows" %}
+{% tabs linux="Linux", homebrew="Homebrew", windows="Windows" %}
 
 <!-- Ubuntu install -->
-{% content "ubuntu" %}
+{% content "linux" %}
+Install the `rlwrap` package to add readline support for the `clj` command line.
 
-Use [Homebrew on Linux or Windows with WSL](https://docs.brew.sh/Homebrew-on-Linux)
-```shell
-brew install clojure/tools/clojure
-```
-
-Or use the Linux script installer:
+Use the Linux script installer from [Clojure.org](https://clojure.org/guides/getting_started#_installation_on_linux)
 
 ```shell
 sudo apt install curl rlwrap
+
 curl -O https://download.clojure.org/install/linux-install-1.10.1.536.sh
 chmod +x linux-install-1.10.1.536.sh
 sudo ./linux-install-1.10.1.536.sh
@@ -33,12 +30,13 @@ The installation creates `/usr/local/bin/clj`, `/usr/local/bin/clojure`, and `/u
 <!-- Homebrew (MacOSX) install -->
 {% content "homebrew" %}
 
+Use [Homebrew on Linux or Windows with WSL](https://docs.brew.sh/Homebrew-on-Linux)
+
 Install the command line tools with brew from the clojure/tools tap:
 
 ```shell
 brew install clojure/tools/clojure
 ```
-
 
 <!-- Windows install -->
 {% content "windows" %}
