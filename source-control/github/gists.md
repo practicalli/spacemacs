@@ -1,65 +1,49 @@
-# Github Gists
+# GitHub Gists
+[GitHub Gists](https://gist.github.com/) are used to share code or configuration without the need of a git project.
 
-[Github Gists](https://gist.github.com/) are really useful when you want to share a piece of code or configuration without setting up or sharing a complete a git project.  Rather than copy & paste into a [Github Gists](https://gist.github.com/) website, you can create a Gist from any [Spacemacs](https://github.com/syl20bnr/spacemacs) buffer with a single command.
+`SPC g g b` to create a Gist from the current buffer.
 
 [![Spacemacs Git menu](/images/spacemacs-git-gist-menu.png)](/images/spacemacs-git-menu.png)
 
-## Creating a Gist from Spacemacs
+> #### Hint::Prompt for GitHub account details
+> The first time using GitHub from Spacemacs you will be prompted for your GitHub username & password.
+>  If you have already used GitHub from Spacemacs, then your account details will have been saved so you do not need to enter them each time.
 
-The current buffer can be copied into a Github Gist using the command `M-x gist-buffer`.
-
-![Gist - create a Gist from the current buffer](/images/spacemacs-gist-create-from-buffer.png)
-
-You can also create a gist just from a selected region of the buffer.  First select the region using `C-SPC` and run the command `M-x gist-region`.
-
-> #### Hint::Prompt for Github account details
-> If this is the first time using Github from Spacemacs, you will be prompted for your Github username & password.
->  If you have already used Github from Spacemacs, then your account details will have been saved so you do not need to enter them each time.
-
-**Keyboard shortcuts**
-- `SPC g g b` : create a public gist from the current Spacemacs buffer
-- `SPC g g B` : create a private gist from the current Spacemacs buffer
-- `SPC g g r` : create a public gist from the highlighted region
-- `SPC g g R` : create a private gist from the highlighted region
-- `SPC g g l` : list all gists on your github account
-
-> Replace `SPC` with `M-m` if you are using Holy mode
-
-## Updating a Gist
-
-When you create a Gist from a buffer there is no direct link between your buffer and the Gist.  So if you make changes to your buffer you want to share, you can generate a new gist using `M-x gist-buffer` & delete the original one (see listing & managing gists below).
-
-Alternatively, once you have created a Gist, you can open that Gist in a buffer and make changes.  When you save your changes in the Gist buffer, `C-x C-s`, the gist on gist.github.com is updated.
-
-
-## Listing & managing Gists
-
-Use the command `M-x gist-list` or keybinding `M-m g g l` to show a list of your current Gists.
+## Listing your Gists
+`SPC g g l` will display a buffer listing all Gists for your account.
 
 ![Spacemacs - Gist list](/images/spacemacs-gist-list.png)
 
-In the buffer containing the list of your gists, you can use the following commands in **Emacs** mode.
+Use the following commands in the Gist list buffer.
 
-* `RETURN` : opens the gist in a new buffer
-* `g` : reload the gist list from server
-* `e` : edit the gist description, so you know what this gist is about
-* `k` : delete current gist
-* `b` : opens the gist in the current web browser
-* `y` : show current gist url & copies it into the clipboard
-* `*` : star gist (stars do not show in gist list, only when browsing them on github)
-* `^` : unstar gist
-* `f` : fork gist - create a copy of your gist on gist.github.com
-* `+` : add a file to the current gist, creating an additional snippet on the gist
-* `-` : remove a file from the current gist
+| Normal | Description                                   |
+|--------|-----------------------------------------------|
+| `RET`  | open gist                                     |
+| `f`    | open gist in another buffer                   |
+| `K`    | delete current gist                           |
+| `o`    | open gist in your web browser                 |
+| `g`    | reload gist list                              |
+| `e`    | edit the gist description                     |
+| `y`    | copy gist URL                                 |
+| `*`    | star (favorite) a gist (shows only on GitHub) |
+| `^`    | remove star from gist                         |
+| `f`    | fork gist on GitHub                           |
+| `+`    | add file to current gist                      |
+| `-`    | remove a file from current gist               |
 
-The Spacemacs Github layer adds the following key bindings for **Vim**
 
-| Normal | Description                   | Command                 |
-|--------|-------------------------------|-------------------------|
-| `f`    | open gist in another buffer   | gist-fetch-current      |
-| `K`    | delete current gist           | gist-kill-current       |
-| `o`    | open gist in your web browser | gist-browse-current-url |
+## Updating a Gist
+`SPC g g l` to show the list of gists.
 
+`RET` opens the gist in Spacemacs and make changes.
+
+`SPC f s` prompts to save a local copy of the file, saving there and creating a new version on gist.github.com.
+
+
+> #### Hint::Gists created from a buffer are not updated
+> Creating a Gist from a buffer has no direct link between that buffer and the Gist.  Any changes to the buffer is not updated.
+>
+> Once the gist is created, delete the original file and open the Gist (as described above).  Then changes to the file will be saved
 
 ## Creating Gists from files with `dird`
 
