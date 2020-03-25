@@ -39,6 +39,7 @@
     * [Switch to develop](install-spacemacs/switch-to-develop.md)
 * [Starting Emacs instantly](install-spacemacs/emacsclient-server.md)
 * [Update Spacemacs](install-spacemacs/update.md)
+* [Troubleshooting](install-spacemacs/troubleshooting.md)
 
 ## Using Spacemacs
 
