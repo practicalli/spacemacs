@@ -1,24 +1,26 @@
 # Inspect Clojure
+`, d v` opens a cider inspector buffer showing the value of the current think under the point.
 
-You can see the value of a value in clojure using inspection, `SPC d i`
+`q` to quit the cider inspector buffer
+
+## Inspecting simple values
+Inpecting a number or character shows the underlying type, the value and properties of that type
 
 ![Spacemacs - Clojure - Inspect value - java.lang.Long](/images/spacemace-clojure-inspect-java-lang-long.png)
 
 ## Inspecting Collections
+Inspect a collection shows the underlying type, contents of that collection and index (where applicable)
 
-When you inspect a collection you see the last evaluated value of that collection.
-
-Here is the result of inspecting a simple persistent map - **{:name "John" :coding "Clojure" :tool "Spacemacs"}**
-
-![Spacemacs - Clojure - Inspect persistent map](/images/spacemacs-clojure-inspect-persistent-map.png)
+![Spacemacs - Clojure - Inspect persistent map](/images/spacemace-clojure-inspect-java-lang-persistentvector.png)
 
 And if there are collections within collections then those values are shown too
 
-![Spacemacs - Clojure - Inspect persistent map with vector](/images/spacemacs-clojure-inspect-persistent-map-with-vector.png)
+![Spacemacs - Clojure - Inspect persistent map with vector](/images/spacemacs-clojure-inspect-persistent-map-nested.png)
 
 
 # Inspecting mutable values
+Stateful containers, `atom`, `ref`, can also be inspected.  The value of
 
-This should be were lots of fun is.  Inspecting an atom or ref and having a buffer watching the changing values.
+![Spacemacs - Clojure - Inspect atom containing a vector](/images/spacemacs-clojure-inspect-atom-containing-persistent-vector.png)
 
-You need to inspect the value each time using `SPC d i`.
+Inspecting an atom or ref gives the value at the current time.  The inspector does not update if the value of the atom or ref is updated. `, d v` to inspect the value and see if it has changed.
