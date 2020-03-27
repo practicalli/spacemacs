@@ -8,17 +8,17 @@ Use `C-j` and `C-k` to move down and up through the search results.
 
 ![Spacemacs Helm-Ag ripgrep pattern search results](/images/spacemacs-helm-ag-ripgrep-pattern-search.png)
 
-## Requirements - ripgrep search tool
-Searching requires an external tool to be available on your system PATH. [Ripgrep](https://github.com/BurntSushi/ripgrep) is the recommended search tool, although you can use [silver searcher (ag)](/reference/silversearcher-ag.html) and grep.
+## Search tool binary
+Searching requires an external tool to be available on your system PATH. [Ripgrep](https://github.com/BurntSushi/ripgrep) is the recommended search tool, although [silver searcher (ag)](/alternative-tooling/silversearcher-ag.md) is a viable alternative.  Using `grep` is noticeably slower and has fewer options for searching.
 
-[Ripgrep install instructions](https://github.com/BurntSushi/ripgrep#installation)
+* [Ripgrep install instructions](https://github.com/BurntSushi/ripgrep#installation)
+* [silver searcher (ag)](/alternative-tooling/silversearcher-ag.md)
 
 
 ## Searching specific files
+Include or exclude specific files by their names or filename extensions.
 
-To narrow the results you can specify a filename extension that you want to search through or ignore.
-
-Ripgrep takes the `-g` option for a filename to search (globbing), or `-g!` for a filename to ignore.
+Use the `-g` option for a filename to search (globbing), or `-g!` for a filename to ignore.
 
 `-g*.clj map` shows only results of searching for `map` from files ending in `.clj`
 
@@ -29,7 +29,7 @@ Ripgrep takes the `-g` option for a filename to search (globbing), or `-g!` for 
 ![Spacemacs Helm-Ag ripgrep globbing not .md files](/images/spacemacs-heml-ag-ripgrep-globbing-not-md.png)
 
 ## Example search patterns
-With ripgrep or ag installed you can use the following patterns in your search
+Additional search patterns that work with `ripgrep` or `ag`.
 
 `-G*.cljs -w time` - search for the word "time" in all `.cljs` files
 
@@ -39,8 +39,7 @@ With ripgrep or ag installed you can use the following patterns in your search
 
 `-C5 foo` - search for "foo" but show 5 lines of context before and after the match
 
-`(?:^|[^\w-])time(?:[^\w-]|$)` - search for lisp-word "time", i.e. search for the full word "time"
-while considering "-" to be a word character
+`(?:^|[^\w-])time(?:[^\w-]|$)` - search for "time" even in kebab-case words. i.e. search for the full word "time" including "-" to be a word character
 
 ## References
 * https://github.com/BurntSushi/ripgrep
