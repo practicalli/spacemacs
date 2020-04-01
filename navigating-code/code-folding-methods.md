@@ -11,7 +11,7 @@ Origami allows you to [write your own parser](https://github.com/gregsexton/orig
 
 `SPC f e d` to open the `.spacemacs` file
 
-`/ dotspacemacs-folding-method` to find the code folding setting, `RTN` to end the search.
+`SPC s s dotspacemacs-folding-method` to find the code folding setting, `RTN` to end the search.
 
 Change the code folding method: `dotspacemacs-folding-method 'origami`
 
