@@ -227,11 +227,6 @@
 * [Encryption](encryption/index.md)
     * [Create gpg key](encryption/create-gpg-key.md)
 
-## Troubleshooting
-
-* [Troubleshooting](troubleshooting/index.md)
-* [Writing Emacs Lisp](writing-emacs-lisp/index.md)
-
 
 ## Reference
 * [Reference](reference/index.md)
@@ -291,3 +286,4 @@
     * [Additional resources](introduction/additional-resources.md)
 * [Work in progress - messy](work-in-progress.md)
     * [Emacs Quick Reference](spacemacs-basics/emacs-quick-reference.MD)
+    * [Writing Emacs Lisp](writing-emacs-lisp/index.md)

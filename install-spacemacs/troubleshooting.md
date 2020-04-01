@@ -1,8 +1,10 @@
 # Troubleshooting
 
-`SPC q r` is a quick way to resolve some issues, especially when installing multiple packages.  Some Emacs packages depend on others being present, which may not be the case when first installing.
+`SPC q r` (`restart-emacs`) is a quick way to resolve some issues, especially when installing multiple packages.  Some Emacs packages depend on others being present, which may not be the case when first installing.
 
-Use the [Spacemacs develop branch](switch-to-develop.md) to get the latest fixes and features (until version 0.300 is release to master).
+`SPC f e D` (`ediff`) to compare your `.spacemacs` configuration with the default Spacemacs configuration. `j` and `k` to navigate the differences, `b` to copy a change from the Spacemacs configuration to your own.  `q` to quit comparing, `?` for more help.
+
+[Switch to the Spacemacs develop branch](switch-to-develop.md) to get the latest fixes and features (until version 0.300 is release to master).
 
 Read the latest docs at [develop.spacemacs.org](https://develop.spacemacs.org/) or the [layer specific README.org files on GitHub](https://github.com/syl20bnr/spacemacs/tree/develop/layers)
 
