@@ -8,6 +8,7 @@
 # Trigger a clean and new build
 gitbook build .
 
+touch _book/.nojekyll
+
 # Deploy new build
 cd _book && rm -rf .git && git init && git add . && git commit -m "initial commit" && git branch -m master gh-pages && git remote add practicalli git@github.com:practicalli/spacemacs.git && git push -f practicalli gh-pages
-
