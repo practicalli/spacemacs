@@ -47,7 +47,7 @@
            "buttons":
            [
                {
-                   "label": "Gitter Chat",
+                   "label": "Clojurians Slack",
                    "icon": "fa fa-comments-o",
                    "url": "http://clojurians.slack.com/messages/practicalli"
                },
