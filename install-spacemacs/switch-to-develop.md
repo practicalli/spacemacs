@@ -9,13 +9,13 @@ If you made changes to the  `~/.spacemacs` file, them move the file or rename it
 Delete the `~/.emacs.d` directory or just the `~/emacs.d/elpa/` directory.
 
 ## Install the Spacemacs develop branch
-Clone the Spacemacs develop branch
+If you deleted the `~/.emacs.d` directory, clone the Spacemacs develop branch
 
 ```shell
 git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
 ```
 
-Or just change the Git branch if you did not delete the `~/.emacs.d/` directory.
+If you did not delete the `~/.emacs.d/` directory, change the Git branch to `develop`
 
 ```shell
 cd ~/.emacs.d/
@@ -29,5 +29,9 @@ If you have changes from the original Spacemacs install:
 
 Copy changes to the new `~/.spacemacs`.
 
-## Restart Spacemacs
-`SPC q r` to restart Spacemacs and ensure that all packages downloaded successfully and are loaded in the correct order.
+## Start / Restart Spacemacs
+Start (or restart) Emacs to use the `develop` version of Spacemacs.  This will download a large number of packages and may take a few minutes.
+
+Once all the packages are downloaded, `SPC q r` (`emacs-restart`) to ensure all packages downloaded successfully and are loaded in the correct order.
+
+You are now ready to enjoy Spacemacs `develop`.
