@@ -20,7 +20,7 @@ git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 
 ##  Clone Practicalli Spacemacs configuration
-Open [practicalli/spacemacs.d] GitHub website and fork the repository to your own account (this makes it easier to save your own configuration).
+Open [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/) GitHub website and fork the repository to your own account (this makes it easier to save your own configuration).
 
 Clone your fork of Practicalli Spacemacs configuration to `.spacemacs.d` directory, substituting your own github account name for `my-github-account` in the command below.
 
