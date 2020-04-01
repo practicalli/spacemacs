@@ -183,27 +183,30 @@
     * [Gists](source-control/github/gists.md)
 * [GitLab](source-control/gitlab/index.md)
 
-## ClojureScript features
+<!-- ## ClojureScript features -->
 
-* [Clojurescript Overview](clojurescript/index.md)
-    * [Why Clojurescript](clojurescript/why-clojurescript.md)
-    * [Build Process](clojurescript/build-process.md)
-* [Figwheel Overview](figwheel/index.md)
-    * [ClojureScript REPL](figwheel/clojurescript-repl.md)
-    * [Live Code Reload](figwheel/live-code-reload.md)
-    * [Live CSS Reload](figwheel/live-css-reload.md)
-    * [Error Reporting](figwheel/error-reporting.md)
-    * [Multiple Environments (repl)](figwheel/multiple-environments.md)
-    * [Static Content](figwheel/static-content.md)
-    * [Heads up display](figwheel/heads-up-display.md)
-    * [Broadcasting](figwheel/braodcasting.md)
-    * [Other Options](figwheel/other-options.md)
-* [Using Figwheel](using-figwheel/index.md)
-    * [Chestnut Template](using-figwheel/chestnut-template.md)
-    * [Starting Figwheel (Terminal)](using-figwheel/starting-chestnut-terminal.md)
-    * [Starting Figwheel (Emacs)](using-figwheel/starting-chestnut-emacs.md)
-* [Additional Features](clojurescript/additional-features.md)
-    * [CSS Rainbow Colors](clojurescript/css-rainbow-colors.md)
+<!-- * [Clojurescript Overview](clojurescript/index.md) -->
+<!--     * [Why Clojurescript](clojurescript/why-clojurescript.md) -->
+<!--     * [Build Process](clojurescript/build-process.md) -->
+<!-- * [Figwheel-main](figwheel/index.md) -->
+<!--     * [ClojureScript REPL](figwheel/clojurescript-repl.md) -->
+<!--     * [Live Code Reload](figwheel/live-code-reload.md) -->
+<!--     * [Live CSS Reload](figwheel/live-css-reload.md) -->
+<!--     * [Error Reporting](figwheel/error-reporting.md) -->
+<!--     * [Multiple Environments (repl)](figwheel/multiple-environments.md) -->
+<!--     * [Static Content](figwheel/static-content.md) -->
+<!--     * [Heads up display](figwheel/heads-up-display.md) -->
+<!--     * [Broadcasting](figwheel/braodcasting.md) -->
+<!--     * [Other Options](figwheel/other-options.md) -->
+<!-- * [Using Figwheel-main](using-figwheel/index.md) -->
+<!--     * [Template](using-figwheel/figwheel-main-template.md) -->
+<!--     * [Chestnut Template](using-figwheel/chestnut-template.md) -->
+<!--     * [Starting Figwheel (Terminal)](using-figwheel/starting-chestnut-terminal.md) -->
+<!--     * [Starting Figwheel (Emacs)](using-figwheel/starting-chestnut-emacs.md) -->
+<!-- * [Additional Features](clojurescript/additional-features.md) -->
+<!--     * [CSS Rainbow Colors](clojurescript/css-rainbow-colors.md) -->
+
+<!-- TODO: shadow-cljs section -->
 
 ## Org mode
 
