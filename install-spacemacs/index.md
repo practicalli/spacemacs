@@ -1,8 +1,8 @@
 # Getting started with Spacemacs
 
-* [Install Emacs version 26.3 (or greater)](/before-you-start/install-emacs.html).
-* Clone or download the Spacemacs, first removing `~/.emacs.d` if it already exists.
-* Clone the [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/) configuration, or run the Spacemacs install wizzard.
+1. [Install Emacs version 26.3 (or greater)](/before-you-start/install-emacs.html).
+2. Clone or download the Spacemacs, first removing `~/.emacs.d` if it already exists.
+3. Clone the [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/) configuration, or run the Spacemacs install wizard and follow the [additional configuration section](additional-configuration.md).
 
 {% youtube %}
 https://youtu.be/rZNYLGw1qFk
