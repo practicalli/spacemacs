@@ -41,6 +41,8 @@ Additional search patterns that work with `ripgrep` or `ag`.
 
 `(?:^|[^\w-])time(?:[^\w-]|$)` - search for "time" even in kebab-case words. i.e. search for the full word "time" including "-" to be a word character
 
+Ripgrep documentation has many [regular expression examples](https://docs.rs/regex/1.3.6/regex/#syntax)
+
 ## References
 * https://github.com/BurntSushi/ripgrep
 * https://blog.burntsushi.net/ripgrep/
