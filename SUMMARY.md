@@ -91,7 +91,14 @@
     * [Inspect](evaluating-clojure/inspect.md)
     * [REPL buffer](evaluating-clojure/evaluate-in-repl-buffer.md)
 * [Testing](testing/index.md)
-    * [Run tests](testing/run-tests.md)
+    * [Unit Testing](testing/unit-testing/index.md)
+        * [Running Tests](testing/unit-testing/running-tests.md)
+        * [Configure deps.edn projects](testing/unit-testing/configure-deps-edn-projects.md)
+    <!-- * [Contract Testing](testing/contract-testing/index.md) -->
+    <!-- * [Generative Testing](testing/generative-testing/index.md) -->
+    <!-- * [Integration Testing](testing/integration-testing/index.md) -->
+    <!-- * [Performance Testing](testing/performance-testing/index.md) -->
+    <!-- * [Load/Stress Testing](testing/load-stress-testing/index.md) -->
 * [Structured Editing](structured-editing/index.md)
     * [cleverparens](structured-editing/cleverparens.md)
     * [Smartparens](structured-editing/smartparens.md)

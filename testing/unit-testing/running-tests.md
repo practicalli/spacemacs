@@ -1,22 +1,28 @@
-# Run tests
+# Running unit tests in Cider
+Run tests from the buffer containing the test source code buffer, as this ensures all test code is loaded and the latest version of the tests are run.
 
-> ####Bug::Re-write for Spacemacs
-> From cider documentation: [running tests](https://github.com/clojure-emacs/cider/blob/master/doc/running_tests.md)
+`SPC p a` switches between source and test buffers.
 
-You can run `clojure.test` tests pretty quickly in CIDER. Pressing <kbd>C-c C-t
-n</kbd> or <kbd>C-c C-t C-n</kbd> in a source buffer or a REPL buffer will run
-the tests for the namespace you're currently in. CIDER is smart enough to figure
-out the namespace containing the tests. You can also run all loaded tests with
-<kbd>C-c C-t l</kbd> or <kbd>C-c C-t C-l</kbd> and all tests within a project
-with <kbd>C-c C-t p</kbd> or <kbd>C-c C-t C-p</kbd> (note that this will load
-**all** namespaces in your project). Using <kbd>C-c C-t t</kbd> or <kbd>C-c C-t
-C-t</kbd>, you can execute only the test a point.
+| Keybinding | description               |
+|------------|---------------------------|
+| `, t a`    | load buffer and run tests |
 
-All test commands are available in REPL buffers as well. There you can also use
-<kbd>,</kbd> to invoke some of the testing commands.
+Tests can be run from the source code buffer, however, only test code that has been evaluated in the REPL will run.
 
-In the buffer displaying the test execution results (`*cider-test-results*`)
-you'll have a bit of additional functionality at your disposal.
+<kbd>,</kbd> to invoke tests commands from the REPL buffer
+
+## Auto Unit Test Mode
+
+* `, T t` to toggle auto test mode
+
+ e b` will automatically run tests.
+
+by re-evaluating the buffer with auto test mode on it to automatically run tests whenever that namespace is loaded.
+
+
+
+## Cider test results buffer
+Tests can be run from the `*cider-test-results*` buffer
 
 Keyboard shortcut               | Description
 --------------------------------|-------------------------------
@@ -31,6 +37,13 @@ Keyboard shortcut               | Description
 <kbd>d</kbd>                    | Display diff of actual vs expected.
 <kbd>e</kbd>                    | Display test error cause and stacktrace info.
 
+
+
+> ####Bug::Re-write for Spacemacs
+> From cider documentation: [running tests](https://github.com/clojure-emacs/cider/blob/master/doc/running_tests.md)
+
+
+## Additional configuration
 Certain aspects of the test execution behavior are configurable:
 
 * If your tests are not following the `some.ns-test` naming convention you can
@@ -80,5 +93,3 @@ As a test framework author, supporting the built-in `clojure.test` machinery
 The `test.check` library is a good example here. It was also designed completely
 independently of `clojure.test`. It just adds compatibility in this
 [namespace](https://github.com/clojure/test.check/blob/24f74b83f1c7a032f98efdcc1db9d74b3a6a794d/src/main/clojure/clojure/test/check/clojure_test.cljc).
-
-

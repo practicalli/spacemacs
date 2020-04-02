@@ -1,32 +1,44 @@
 # Testing
+There are many aspects to testing software including
+* Unit testing
+* Contract testing - clojure.spec
+* Generative testing
+* Integration testing
+* Performance testing
+* Load testing
 
+## Unit testing
 [`clojure.test`](https://clojure.github.io/clojure/clojure.test-api.html) is the default 'unit' testing framework for Clojure, as it has a simple syntax for writing tests and it is part of the Clojure.core library.
 
-## Example of `clojure.test` syntax
+Other interesting unit testing frameworks include midje,
 
-```clojure
-(deftest public-function-in-namespace-test
-  (testing "A description of the test"
-    (is (= 1 (public-function arg)))
-    (is (predicate-function? arg))))
-```
+## Contract testing - `clojure.spec`
+Establish contracts around functions and data structures, testing to ensure those contracts are not broken.
 
-For full details, visit the [API for `clojure.test`](https://clojure.github.io/clojure/clojure.test-api.html)
+## Generative Testing
+Tests are only as good as the thought that goes into them.  Generative testing can create a wider range of testing scenarios by providing generated data for tests.  This approach is very good at catching conditions that were not considered.
 
-# Running tests in Cider
+## Integration testing
+Using Continuous Integration (CI) tools: CircleCI, Travis, GitLabs, etc.
 
-| Spacemacs   | Vim Major mode | Emacs Major mode | command                    |
-|-------------|----------------|------------------|----------------------------|
-| `SPC m t a` | `, t a`        | `M-RET t a`      | `cider-test-run-all-tests` |
+Clojure has several test runners that can be used with CI servers
+* cognitect-labs test runner
+* Koacha
+* eftest
+* midje test runner
 
-Tests can be run from a Clojure buffer containing the test code itself, or from the Clojure source code (in which case CIDER will look up the corresponding test namespace).
+[deps.edn aliases for Clojure test runners](https://github.com/practicalli/clojure-deps-edn/blob/master/deps.edn#L97-L136)
 
-Tests can also be run from the REPL buffer, using the `,` menu.
+## Performance testing
+Tesing the execution time of specific functions or groups of functions, typically within a namespace.
 
-## Auto Test Mode
+`time` is a quick and easy tool to give a rough comparison of performance.
 
-* `, T t` to toggle auto test mode
+`criterium` provides more accurate guidance on performance
 
-after which you can just `, e b` and it will automatically run tests every time.
+## Load / Stress Testing
+Testing the whole system under loads to simulate the stress the system would be placed under in normal production environments.
 
-by re-evaluating the buffer with auto test mode on it to automatically run tests whenever that namespace is loaded.
+`Gattling` is a JVM load tool.
+
+There are many on-line load testing tools if you have a web facing application.
