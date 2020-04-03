@@ -1,19 +1,19 @@
 # Evaluating Clojure
+Practicalli recommends evaluating Clojure expressions in the source code buffer, which displays the results next to the expression until you move the cursor.  The most common
 
-Spacemacs encourages you to evaluate Clojure expressions in the source code buffer, which shows the results next to the expression.
+![Spacemacs - Clojure evaluation in source code buffer](/images/spacemacs-cider-evaluate-source-code-buffer-defun.png)
 
-`, e f` will evaluate the current expression / function.
+`, e f` evaluates the top-level expression at cursor.
 
-`, e ;` will evaluate the current expression and show the result as a comment
+`, e p` evaluates the top-level expression at cursor and pretty prints the result in a separate buffer. Useful for results that are collections and nested collections.
 
+`, e ;` evaluates the top-level expression at cursor and add the result as a comment. Useful for a design journal and when exploring a code base.
 
 ## Quick reference
-
-The evaluation menu for Clojure is available via `, e` (or `M-RET e` in holy mode).
+`, e` menu provides many different ways of evaluating parts of an expression, or a complete expression.  `M-RET e` in holy mode.
 
 ![Spacemacs - Clojure - Evaluate menu](/images/spacemacs-clojure-evaluate-menu.png)
 
-Evaluation commands for Clojure are:
 
 | Evil Normal | Description                                                       |
 |-------------|-------------------------------------------------------------------|
