@@ -38,6 +38,7 @@
         * [Emacs Eshell](install-spacemacs/eshell.md)
     * [Switch to develop](install-spacemacs/switch-to-develop.md)
 * [Starting Emacs instantly](install-spacemacs/emacsclient-server.md)
+    * [Git commit messages](install-spacemacs/emacsclient-git-commit-messages.md)
 * [Update Spacemacs](install-spacemacs/update.md)
 * [Troubleshooting](install-spacemacs/troubleshooting.md)
 
