@@ -254,7 +254,7 @@
         * [Control flow](reference/clojure/control-flow.md)
         * [Local Assignment](reference/clojure/local-assignement.md)
 * [Alternative tooling](alternative-tooling/index.md)
-    * [NeoTree](working-with-projects/neotree.md)
+    * [NeoTree](alternative-tooling/neotree.md)
     * [Silver Searcher - ag](alternative-tooling/silversearcher-ag.md)
     * [Parinfer](alternative-tooling/parinfer.md)
     * [Paredit](alternative-tooling/paredit.md)
