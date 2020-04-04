@@ -1,5 +1,5 @@
 # Evaluating Clojure
-Practicalli recommends evaluating Clojure expressions in the source code buffer, which displays the results next to the expression until you move the cursor.  The most common
+Practicalli recommends evaluating Clojure expressions in the source code buffer, which displays the results next to the expression until you move the cursor.
 
 ![Spacemacs - Clojure evaluation in source code buffer](/images/spacemacs-cider-evaluate-source-code-buffer-defun.png)
 
@@ -8,6 +8,8 @@ Practicalli recommends evaluating Clojure expressions in the source code buffer,
 `, e p` evaluates the top-level expression at cursor and pretty prints the result in a separate buffer. Useful for results that are collections and nested collections.
 
 `, e ;` evaluates the top-level expression at cursor and add the result as a comment. Useful for a design journal and when exploring a code base.
+
+Review the [evaluating expressions](evaluating-expressions.md) page for more examples and a deeper explanation.
 
 ## Quick reference
 `, e` menu provides many different ways of evaluating parts of an expression, or a complete expression.  `M-RET e` in holy mode.
