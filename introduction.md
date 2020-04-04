@@ -1,6 +1,6 @@
 ![Clojure-cider-spacemacs-logo](images/practicalli-spacemacs-book-banner.png)
 
-A practical guide to Clojure development with Spacemacs, a community driven Emacs configuration that makes it easy to use all the power of Emacs and Vim.
+A practical guide to Spacemacs, a community driven Emacs configuration that makes it easy to use all the power of Emacs and Vim.  The guide contains specific sections on Clojure development, although the majority of the content is applicable to any language.
 
 {% youtube %}
 https://youtu.be/rZNYLGw1qFk
