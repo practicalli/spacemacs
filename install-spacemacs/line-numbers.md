@@ -1,53 +1,45 @@
 # Line Numbers
-
 Line numbers can be toggled for individual buffers via the Spacemacs toggle menu or configured in your `.spacemacs` file.
 
 Relative numbering is useful when using Vim style editing as it allows you to jump a relative number of lines from the current line.
 
-`10 j` in **Vim normal** mode will jump 10 lines forward.
+`10 j` in **Evil normal** mode will jump 10 lines forward.
 
-With relative numbering, the current line number is shown in the gutter and all other numbers are relative to the number of lines away they are from the current number.  Relative numbering is useful for jumping to different parts of your file or running commands on a number of lines (eg. delete, indent)
+With relative numbering, the current line number is shown and all other numbers are relative to the number of lines away they are from the current line.  Relative numbering is useful for jumping to different parts of your file or running commands on a number of lines, eg. delete, indent, multiple cursors (`g r`)
 
-| Spacemacs | Emacs     | Description                  |
-|-----------|-----------|------------------------------|
-| `SPC t n` | `M-m t n` | Toggle line numbers          |
-| `SPC t r` | `M-m t r` | Toggle relative line numbers |
+| Keybindings | Description                  |
+|-------------|------------------------------|
+| `SPC t n`   | Toggle line numbers          |
+| `SPC t r`   | Toggle relative line numbers |
 
 [![Spacemacs - Toggle menu](../images/spacemacs-toggle-menu.png)](../images/spacemacs-toggle-menu.png)
 
-> ####Hint::Jumping to a line without line numbers
-> `SPC j l` will jump the cursor to the specified line by temporarily labelling each line with a unique letter combination.  This allows you to jump quickly to a line even if you are not using line numbers.
+## Vim style line number configuration
+Practicalli recommends using visual line numbers for Vim style editing, which provides relative numbering that does not count hidden or folded code (`z a`).
 
-## Configure Line numbers for all buffers
+`SPC f e d` to open the `.spacemacs` file and `SPC s s`dotspacemacs-line-numbers` to jump to the configuration option.
 
-Open the `.spacemacs` file (`SPC f e d`) and search (`/` or `C-s`) for `dotspacemacs-line-numbers`
-
-Set the value to true to show line numbers for all buffers that are in `prog-mode` and `text-mode`, this includes any programming languages or text files.
+Add this configuration and `SPC f s` to save the file.  `SPC f e R` to reload the configuration (or `SPC q r` to restart Spacemacs).
 
 ```elisp
-dotspacemacs-line-numbers t
+dotspacemacs-line-numbers '(:visual t
+                            :disabled-for-modes dired-mode
+                                                doc-view-mode
+                                                pdf-view-mode
+                            :size-limit-kb 1000)
 ```
-For relative line numbers, set the value to relative
 
-```elisp
-dotspacemacs-line-numbers 'relative
-```
+The configuration provides visual line numbers for buffers all buffers except dired, doc-view and pdf-view buffers.
+
+Line numbers are also disabled for large files, as it can slow Emacs down considerably (although this may be less of a problem with Emacs 26.3 and native line numbers).
+
+
 If you want to turn line numbers off for all buffers by default, set the value back to the default `nil` value.
 
 ```elisp
 dotspacemacs-line-numbers nil
 ```
 
-## Vim style line number configuration
-This is my approach to line numbers, using relative numbering and disabling line numbers for buffers that are not for coding
-Line numbers are also disabled for large files, as it can slow Emacs down considerably.
-```
-dotspacemacs-line-numbers '(:relative t
-                            :disabled-for-modes dired-mode
-                                                doc-view-mode
-                                                markdown-mode
-                                                org-mode
-                                                pdf-view-mode
-                                                text-mode
-                            :size-limit-kb 1000)
-```
+
+> ####Hint::Jumping to a line without line numbers
+> `SPC j l` will jump the cursor to the specified line by temporarily labelling each line with a unique letter combination.  This allows you to jump quickly to a line even if you are not using line numbers.
