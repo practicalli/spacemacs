@@ -31,8 +31,13 @@ git clone git@github.com:my-github-account/spacemacs.d.git ~/.spacemacs.d
 This configuration is used instead of `~/.spacemacs`, so ensure no file of that name exists before running Spacemacs.
 
 
-## Spacemacs is ready for action
+> #### Hint::
+> `.spacemacs` is the default Spacemacs configuration file created when Spacemacs is first run. This file can be backed up at a GitHub Gist, `SPC g g b`.
+> `.spacemacs.d/init.el` file is an alternative Spacemacs configuration location. If a ~/.spacemacs file is not found when Emacs starts, ~/.spacemacs.d/init.el is used if present.
+> Using .spacemacs.d makes it easier to create a git repository, especially if you would like to version other files such as snippets, layouts, etc.
 
+
+## Spacemacs is ready for action
 Spacemacs is now up and running and ready to take on the world.
 
 If you already know how to use Spacemacs, jump to the [Clojure Projects section](/clojure-projects/index.html), otherwise look through the [Spacemacs Basics section](/spacemacs-basics/index.html) to learn how to use Vim style editing and work with files, buffers and windows in Spacemacs.
