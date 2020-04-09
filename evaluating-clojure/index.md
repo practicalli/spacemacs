@@ -9,7 +9,7 @@ Practicalli recommends evaluating Clojure expressions in the source code buffer,
 
 `, e ;` evaluates the top-level expression at cursor and add the result as a comment. Useful for a design journal and when exploring a code base.
 
-Review the [evaluating expressions](evaluating-expressions.md) page for more examples and a deeper explanation.
+Review the [evaluating expressions](expressions.md) page for more examples and a deeper explanation.
 
 ## Quick reference
 `, e` menu provides many different ways of evaluating parts of an expression, or a complete expression.  `M-RET e` in holy mode.
