@@ -49,3 +49,21 @@ If a package has an issue in its newest version, you can configure spacemacs to 
 ## Debugging Spacemacs
 
 The [Spacemacs debugging page](https://github.com/syl20bnr/spacemacs/wiki/Debugging) explains concepts needed to debug Spacemacs and to report issues in an useful way.
+
+
+## Issues with spawnd processes
+`SPC p a` (`list-processes`) lists the processes started by or from within Spacemacs, eg. for Clojure its `nrepl-server` and `nrepl-connection` processes when running `cider-jack-in`. Use `SPC a P` (`proced`) to see all operating system processes.
+
+![Spacemacs Applications - Process list](/images/spacemacs-application-processes-buffer.png)
+
+`d` to immediately kill a process (no prompt is given to confirm kill action).
+
+The process list shows the command used to start the process, which can be useful in diagnosing issues.
+
+`RET` on buffer name in the process list will open that buffer in a separate window.
+
+If there are problems shutting down the REPL, `, s q q` (`cider-quit`),  check to see if the CIDER nrepl-server or nrepl-connection process has been killed.
+
+`q` to quit the process list buffer.
+
+> #### Hint::`SPC a P` lists all operating system processes
