@@ -1,12 +1,14 @@
 # Restart the REPL
+You can keep a REPL open for days or even weeks for the same project, especially if you keep your REPL clean by un-defining vars, `, e u`, before changing their name - `def`, `defn`, `deftest`, etc.).
 
-You can keep a REPL open for days or even weeks for the same project.
+Code can be reloaded into the REPL and stale definitions dropped before loading in new versions of code.  This enables the application state to be maintained.
 
-Occasionally you want to start from scratch and remove all of the evaluated code from the REPL.
+Projects may use reloading techniques for components, minimising the need to restart the REPL.  [Component lifecycle](component-lifecycle.md) libraries (mount, integrant, component, etc.) provide ways to start and stop the major components of an application without restarting the REPL.
+
+Occasionally you want to start from scratch and remove all of the evaluated code from the REPL.  This is usually a good idea where major refactoring has taken place.
 
 
 ## Resetting the contents of the REPL
-
 You can remove all the Vars (def and defn expressions) from the REPL without having to restart
 
 `, e n` refresh uses `clojure.tools.namespace.repl`, a smarter way to reload code
@@ -26,21 +28,20 @@ Reload all modified files on the classpath. If invoked with a prefix argument, r
 
 
 ## Restarting the REPL
-
 `SPC s q r` calls the `cider-restart` which is a convenience function that simply stops and starts the REPL.
 
 Its essentially the same as doing `, s q q` (`cider-quit`) followed by `, '` (`cider-jack-in`).
 
 
 ## Issues with Clojure reload
-If you modify two namespaces which depend on each other, you must remember to reload them in the correct order to avoid compilation errors.
+When modifing two namespaces that depend on each other, the namespaces must be reload in the correct order to avoid compilation errors.
 
-If you remove definitions from a source file and then reload it, those definitions are still available in memory.  If other code depends on those definitions, it will continue to work but will break the next time you restart the JVM.
+Removing definitions from a source file does not remove those stale definitions from a running REPL.  Code that uses those stale definitions will continue to work, but will break the next time you restart the REPL.
 
-If the reloaded namespace contains defmulti, you must also reload all of the associated defmethod expressions.
+A reloaded namespace containing `defmulti` must reload all of the associated `defmethod` expressions.
 
-If the reloaded namespace contains defprotocol, you must also reload any records or types implementing that protocol and replace any existing instances of those records/types with new instances.
+A reloaded namespace containing `defprotocol` must reload any records or types implementing that protocol,  replacing any existing instances of those records/types with new instances.
 
-If the reloaded namespace contains macros, you must also reload any namespaces which use those macros.
+All namespaces that use a macro in a reloaded namespace must be reloaded.
 
-If the running program contains functions which close over values in the reloaded namespace, those closed-over values are not updated (This is common in web applications which construct the "handler stack" as a composition of functions.)
+For functions that close over values in a reloaded namespace, those values are not updated (e.g. web applications which construct the "handler stack" as a composition of functions.)
