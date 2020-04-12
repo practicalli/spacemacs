@@ -1,37 +1,19 @@
 # Navigating Expressions
+Jumping between symbols and expressions is an effective way to navigate your Clojure code, especially where you have nested expressions.
 
-> #### TODO::work in progress, sorry
-`SPC k .` enters [Lisp State](/structural-editing/lisp-state.html) transient state.
+`SPC k .` enters [Lisp State](/structural-editing/lisp-state.html) transient state, where you can easily navigate around symbols and expressions.
 
-Jumping between expression boundaries, parentheses, espcially with nested expressions is an effective way to navigate your Clojure code
+| Key bindings | Description                                 |
+|--------------|---------------------------------------------|
+| `$`          | jump to end of current expression           |
+| `0`          | jump to the beginning of current expression |
+| `j` /  `k`   | next close paren / previous open paren      |
+| `l` /  `h`   | next symbol / previous symbol               |
+| `L` /  `H`   | next expression / previous expression       |
+| `t`          | transpose expression                        |
+| `U`          | got to parent sexp backward                 |
+| `w`          | wrap expression with parenthesis            |
+| `W`          | unwrap expression                           |
+| `y`          | copy expression                             |
 
-
-
-> TODO: Video of jumping around
-
-
-## Jumping around
-
-Avvy Jump ?
-
-
-
-
-## Emacs keybinding
-
-| Emacs     | Command           | Description                                                           |
-|-----------|-------------------|-----------------------------------------------------------------------|
-| `C-M-a`   | backward-sentence | Jump to start or previous sentence (expression or comment)            |
-| `C-M-e`   | forward-sentence  | Jump to end of or next sentence (expression or comment)               |
-| `C-M-n`   | forward-list      | Move forward over a parenthetical group                               |
-| `C-M-p`   | backward-list     | Move backward over a parenthetical group                              |
-| `C-M-f`   | forward-sexp      | Move forward over a balanced expression                               |
-| `C-M-b`   | backward-sexp     | Move backward over a balanced expression                              |
-| `C-k`     |                   | Kill to end of line (kill to end of expression in smartparens strict) |
-| `C-M-k`   | kill-sexp         | Kill balanced expression forward                                      |
-| `C-M-SPC` | mark-sexp         | Put the mark at the end of the sexp                                   |
-
-
-## Reference
-
-* [Emacs Wiik: Navigating Parentheses](https://www.emacswiki.org/emacs/NavigatingParentheses)
+[Lisp state](/structural-editing/lisp-state.md) has many more examples of structural editing.
