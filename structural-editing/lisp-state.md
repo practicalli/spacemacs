@@ -3,7 +3,6 @@
 
 `SPC k` opens the lisp state menu, providing commands for structural editing with Smartparens.  Any command will put the current buffer into lisp state, a transient state where you can use single character keybindings for the commands (no need to use `SPC k` each time).
 
-> #### TODO::Video of Structural editing with Lisp State
 
 ## Common commands
 
@@ -11,7 +10,7 @@
 |-----------------------|----------------------------------------------------------------------|
 | `j` /  `k`            | next close paren / previous open paren                               |
 | `l` /  `h`            | next symbol / previous symbol                                        |
-| `L` /  `H`            | next expression / previous expression                    |
+| `L` /  `H`            | next expression / previous expression                                |
 | `s` /  `S`            | slurp forward / backward (pull in code from the right / left)        |
 | `b` / `B`             | barf forward / backward (push out code to the right / left)          |
 | `d s` / `d w` / `d x` | delete symbol / word / expression                                    |
@@ -19,6 +18,8 @@
 
 This section provides further examples of the most common lisp state commands.  The [Spacemacs ABC](https://youtu.be/fYsqaAL8HSU?t=710) video also covers examples of Lisp State.
 
+
+> #### TODO::TODO: Video of Structural editing with Lisp State
 
 ## Key Bindings
 
