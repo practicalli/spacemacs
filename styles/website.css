@@ -36,16 +36,15 @@ img, div, table {
 .markdown-section pre>code, .markdown-section code {
     font-family: "Ubuntu Mono", Consolas, Menlo, Courier, monospace;
     background-color: #f7f7f7;
-    color: #ba6ec5;             /* Spacemacs purple*/
+    color: #702b70;             /* Spacemacs purple*/
     font-size: 1.1em;
     margin: 0;
     padding: 0.1em 0.1em;
-}
-
+ }
 
 
 .CodeMirror pre {
-    font-size: 1.6em;
+    font-size: 1.8em;
 }
 
 
