@@ -105,8 +105,7 @@
 * [Structural Editing](structural-editing/index.md)
     * [cleverparens](structural-editing/cleverparens.md)
     * [Smartparens](structural-editing/smartparens.md)
-        * [Smartparens Strict Mode](structural-editing/smartparens-strict-mode.md)
-        * [Smartparens cheatsheet](structural-editing/smartparens-cheatsheet.md)
+        <!-- * [Smartparens cheatsheet](structural-editing/smartparens-cheatsheet.md) -->
     * [Lisp State](structural-editing/lisp-state.md)
         * [Wrap Unwrap](structural-editing/lisp-state-wrap-unwrap.md)
         * [Slurp Barf](structural-editing/lisp-state-slurp-barf.md)
