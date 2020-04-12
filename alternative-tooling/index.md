@@ -10,7 +10,7 @@ Alternative tooling that can be used with Spacemacs but it not the main focus of
 
 
 
-## Structured Editing Alternatives
+## Structural Editing Alternatives
 
 [Paredit](https://www.emacswiki.org/emacs/ParEdit) was the original structural editing mode just for lisps, however, it is not actively maintained.  The Clojure layer in Spacemacs actually includes paredit, however no keybindings are defined, so you either have to use commands via `SPC SPC` or add your own keybindings to `dotspacemacs/user-config`, preferably using hooks on the Clojure mode.
 

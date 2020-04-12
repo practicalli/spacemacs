@@ -38,10 +38,10 @@ Folding code hides away details, so you can just look at the function definition
 See the [code folding](/navigating-code/code-folding.html) section for more details.
 
 
-## Structured Editing
+## Structural Editing
 
 `SPC k` - navigating structure (also see structural editing)
 
 `hjkl` to navigate the cursor along the parens
 
-![Spacemacs Structured Editing - Lisp state menu](/images/spacemacs-lisp-state-menu.png)
+![Spacemacs Structural Editing - Lisp state menu](/images/spacemacs-lisp-state-menu.png)

@@ -1,10 +1,10 @@
 # Navigating Expressions
 
 > #### TODO::work in progress, sorry
+`SPC k .` enters [Lisp State](/structural-editing/lisp-state.html) transient state.
 
 Jumping between expression boundaries, parentheses, espcially with nested expressions is an effective way to navigate your Clojure code
 
-`SPC k .` enters [Lisp State](../structured-editing/lisp-state.html) transient state.  `hjkl` will now navigate on expression boundaries.  `S-hjkl` will navigate as the usual Evil movement.
 
 
 > TODO: Video of jumping around

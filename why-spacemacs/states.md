@@ -40,7 +40,7 @@ Here is the list of all the possible states, some of which are automatically app
 | `replace`      | chocolate     | Evil - overwrites the character under point instead of inserting a new one           |
 | `hybrid`       | blue          | Spacemacs - use Emacs state instead of the Vim insert                                |
 | `evilified`    | light brown   | Spacemacs - an `emacs` state modified to bring Vim navigation, selection and search.               |
-| `lisp`         | pink          | Spacemacs - structured editing for Lisp code (and Clojure)                           |
+| `lisp`         | pink          | Spacemacs - structural editing for Lisp code (and Clojure)                           |
 | `iedit`        | red           | Spacemacs - navigate between multiple regions of text                                |
 | `iedit-insert` | red           | Spacemacs - replace multiple regions of text                                         |
 

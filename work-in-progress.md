@@ -12,7 +12,7 @@
 `M-;` - Emacs comment line
 
 
-## lisp mode - structured editing
+## lisp mode - structural editing
 
 Create a new separate expression either side of the current expression
 
@@ -143,7 +143,7 @@ You can delete a surrounding with ds<textobject>.
 
 
 
-## structured editing
+## structural editing
 
 `C-M k` - kills sexp / balanced expression
 `C-M SPC` - selects sexp / balanced expression
@@ -296,7 +296,7 @@ nevermind, I think I found it: ahs-plugin-whole-buffer-face
 
 
 
-Deleting structured text in vim
+Deleting structural text in vim
 
 For vanilla evil-mode, `di[` will do it, ie `delete-in-[`.
 

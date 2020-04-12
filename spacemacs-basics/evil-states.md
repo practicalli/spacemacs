@@ -12,7 +12,7 @@ Evil normal is the default state and where you should spend most of your time.
 
 `SPC s e` opens iedit and selects all matching instances of the highlighted text for editing
 
-`SPC k` opens Lisp state, allowing you to do [structured editing](structured-editing/)
+`SPC k` opens Lisp state, allowing you to do [structural editing](structural-editing/)
 
 
 > #### Hint::Refactor code tools

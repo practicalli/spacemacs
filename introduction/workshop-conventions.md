@@ -13,7 +13,7 @@ Vim Mode specific keybindings
 
 | Normal           | Insert                | Visual             | Motion | Lisp               | Iedit             | Evilified | Emacs                     |
 |------------------|-----------------------|--------------------|--------|--------------------|-------------------|-----------|---------------------------|
-| The default mode | Mode for writing text | Mode for selection | ?      | Structured Editing | Text manipulation |           | Classic Emacs keybindings |
+| The default mode | Mode for writing text | Mode for selection | ?      | Structural Editing | Text manipulation |           | Classic Emacs keybindings |
 |                  |                       |                    |        |                    |                   |           |                           |
 
 

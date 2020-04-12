@@ -2,7 +2,7 @@
 
 The Spacemacs [Clojure layer](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/clojure) includes comprehensive support for refactoring Clojure and ClojureScript code.  Refactoring mainly comes from the [clj-refactor](https://github.com/clojure-emacs/clj-refactor.el) package.
 
-The refactor commands extend the code management tools you get with clojure-mode, [CIDER]() and [structured editing](structured-editing/).
+The refactor commands extend the code management tools you get with clojure-mode, [CIDER]() and [structural editing](structural-editing/).
 
 This section covers the most commonly used refactor commands, there is also a [full list of refactorings](https://github.com/clojure-emacs/clj-refactor.el/wiki) on the [clj-refactor wiki](https://github.com/clojure-emacs/clj-refactor.el/wiki).
 

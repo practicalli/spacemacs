@@ -20,5 +20,5 @@ The rest of this section goes into more details as to why you would choose Space
 * [Helm narrowing & completion](helm.html)
 * [Simplifying keybindings with multiple states](states.html)
     * [Transient State menus for repetitive actions](transient-state-menus.html)
-* [Structured editing with Smartparens and Lisp mode](structured-editing.html)
+* [Structural editing with Smartparens and Lisp mode](structural-editing.html)
 * [Fast project & file management with Projectile](project-file-navigation.html), simple window & buffer management too
