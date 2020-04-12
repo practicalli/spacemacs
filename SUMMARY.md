@@ -85,7 +85,7 @@
 * [The REPL](clojure-repl/index.md)
     * [Start a REPL](clojure-repl/start-repl.md)
     * [Reset the REPL](clojure-repl/reset-the-repl.md)
-    * [Component Services](clojure-repl/component-services.md)
+    * [Component Services](clojure-repl/component-lifecycle.md)
 * [Evaluating Clojure](evaluating-clojure/index.md)
     * [Evaluate Expressions](evaluating-clojure/expressions.md)
     * [Un-define names](evaluating-clojure/undefine.md)
