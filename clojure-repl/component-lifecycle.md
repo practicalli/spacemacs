@@ -1,18 +1,13 @@
-# Component services libraries
-
-> #### TODO::work in progress, sorry
-> Example project and component services code.
-> Video showing reloading in action.
-
+# Component Lifecycle Services
 Clojure has several library to manage the lifecycle of components that make up the application, especially those components with state. Components can be started and stopped in a specific order.
 
-Example component services libraries included
+Example component lifecycle libraries included
 
 * [mount](https://github.com/tolitius/mount)
 * [integrant](https://github.com/weavejester/integrant)
 * [component](https://github.com/stuartsierra/component)
 
-## Example project with component services
+## Example project with component lifecycle
 
 {% tabs mount="Mount", integrant="Integrant", component="Component" %}
 
@@ -56,12 +51,12 @@ The reset function that calls `stop`, refreshes the namespaces so that stale def
 
 * [Example dev.clj file for mount](https://github.com/tolitius/mount/blob/master/dev/clj/dev.clj)
 
-## Configure cider-refresh to use component services
-To use mount component services automatically with CIDER, then create a `.dir-locals.el` file that configures the mount functions to call during a `cider-refresh`.
+## Configure cider-refresh to use component lifecycle
+Create a `.dir-locals.el` file that calls the relevant mount functions when using `cider-refresh`.
 
 `SPC p e` to open a `.dirs.locals.el` in the current project, creating the file if it does not exist.
 
-During development, then simply call the `reset` function to stop services, clean the namespace and start all services again.
+During development call the `reset` function to stop components, clean the namespace and start all components again.
 
 ```elisp
 ((clojure-mode . ((cider-refresh-before-fn . "practicalli.dev/reset"))))
@@ -70,15 +65,14 @@ During development, then simply call the `reset` function to stop services, clea
 `SPC f s` to save the file.  Refresh a buffer from the project or open a new file to trigger the reading of the `.deir-locals.el` configuration by Emacs.
 
 
-If a namespace refresh is not required, configure the `.dirs-local.el` file to call `stop` then `start`.
+Alternatively, if a namespace refresh is not required, configure the `.dirs-local.el` file to call `stop` then `start`.
 
 ```elisp
 ((clojure-mode . ((cider-refresh-before-fn . "practicalli.dev/stop")
          (cider-refresh-after-fn . "practicalli.dev/start"))))
 ```
 
-This code calls the `stop` function from the component services library at the start of the `cider-refresh` function.  At the end of `cider-refesh`, the `start` function is called to restart all the components in the defined order in the project.
-
+This code calls the `stop` function from the component lifecycle library at the start of the `cider-refresh` function.  At the end of `cider-refesh`, the `start` function is called to restart all the components in the defined order in the project.
 
 
 <!-- Integrant example -->
