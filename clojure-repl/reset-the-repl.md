@@ -27,9 +27,9 @@ Reload all modified files on the classpath. If invoked with a prefix argument, r
 
 ## Restarting the REPL
 
-`cider-restart` is a convenience function that stops and starts the REPL.
+`SPC s q r` calls the `cider-restart` which is a convenience function that simply stops and starts the REPL.
 
-Its essentially the same as doing `, s q q` followed by `, ''`.
+Its essentially the same as doing `, s q q` (`cider-quit`) followed by `, '` (`cider-jack-in`).
 
 
 ## Issues with Clojure reload
