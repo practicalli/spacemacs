@@ -1,4 +1,4 @@
-# Structured Editing
+# Structural Editing
 
 Structural Editing is a way to navigate and refactor your code without breaking parenthesis or other characters that define the structure of your code: `() [] {} ""`.
 
@@ -7,9 +7,9 @@ You can quickly jump between the start and end of expressions.  It is easy to mo
 > ####TODO::Add video of structural editing in practice
 > Watch [Parens of the Dead](http://www.parens-of-the-dead.com/) to see live coding with structural editing
 
-## Smartparens - writing structured text
+## Smartparens - writing structural text
 
-Spacemacs uses [smart parens](https://github.com/Fuco1/smartparens) to help you write structured code really fast and also move expressions around.
+Spacemacs uses [smart parens](https://github.com/Fuco1/smartparens) to help you write structural code really fast and also move expressions around.
 
 `SPC SPC sp-cheat-sheet`  lists all the smartparens commands available and we will cover the most common commands in this section.
 
@@ -17,7 +17,7 @@ Spacemacs uses [smart parens](https://github.com/Fuco1/smartparens) to help you 
 > Smartparens is the default package that supports all languages in Spacemacs.  So as well as all lisp languages, it also support closing & matching for things like tags in HTML.
 > Smart parens is a newer implementation of the classic _paredit_ package.
 
-## Lisp mode - manipulating structured text
+## Lisp mode - manipulating structural text
 
 Spacemacs includes an Evil **lisp-state**, `SPC k .` for refactoring Lisp base languages like Clojure.  In this **lisp-state** you can use single character commands to move symbols and expressions around without risking unmatched parenthesis or other structure characters.
 

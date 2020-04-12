@@ -1,6 +1,6 @@
-# Smartparens - Writing structured text
+# Smartparens - Writing structural text
 
-Spacemacs uses [Smartparens](https://github.com/Fuco1/smartparens) to help you write structured code really fast and also move expressions around.  Smart parens is a newer implementation of the classic _paredit_ package.
+Spacemacs uses [Smartparens](https://github.com/Fuco1/smartparens) to help you write structural code really fast and also move expressions around.  Smart parens is a newer implementation of the classic _paredit_ package.
 
 > **Hint** Take a look at the [smart parens](https://github.com/Fuco1/smartparens) readme file for instructions on how to use Smartparens (I will incorporate that information in this workshop at a later date).
 
