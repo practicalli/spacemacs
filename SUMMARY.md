@@ -112,6 +112,7 @@
         * [Slurp Barf](structural-editing/lisp-state-slurp-barf.md)
         * [Deleting](structural-editing/lisp-state-deleting.md)
         * [Raising](structural-editing/lisp-state-raising.md)
+        * [Repeating Commands](structural-editing/repeating-commands.md)
         <!-- * [Splicing](structural-editing/lisp-state-splicing.md) -->
 * [Snippets](snippets/index.md)
     * [Clojure Snippets](snippets/clojure-snippets.md)
