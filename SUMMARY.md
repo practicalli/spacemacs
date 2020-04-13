@@ -30,6 +30,7 @@
             * [Smartparens](install-spacemacs/smartparens.md)
             * [Evil Structural editing](install-spacemacs/evil-structural-editing.md)
             * [Clojure Fancify Symbols](install-spacemacs/fancify-symbols.md)
+            * [Clojure LSP](install-spacemacs/clojure-lsp.md)
         * [Font size and Zooming](install-spacemacs/change-font.md)
         * [Open Maximised / Full Screen](install-spacemacs/maximised-full-screen.md)
         * [Themes](install-spacemacs/themes.md)
