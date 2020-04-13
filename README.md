@@ -2,7 +2,7 @@
 
 [![GitHub version](https://badge.fury.io/gh/practicalli%2Fspacemacs-content.svg)](https://badge.fury.io/gh/practicalli%2Fspacemacs-content)
 
-![Practicalli Spacemacs - interactive development with Clojure and Emacs, using CIDER](images/practicalli-spacemacs-book-cover.png)
+![Spacemacs Practicalli - interactive development with Clojure and Emacs, using CIDER](images/practicalli-spacemacs-book-banner.png)
 
 This is an introduction to developing Clojure applications using Emacs, specifically based on the Spacemacs configuration for Emacs and CIDER.  The aim is to help you be productive with those tools as quickly as possible.
 
