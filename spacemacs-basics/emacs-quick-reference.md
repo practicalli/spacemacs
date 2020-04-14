@@ -170,7 +170,7 @@ I advise to use IRChat in a new frame (i.e. in another window):
 ```
            (shell)                    : starts a terminal in the window
            (ediff)                    : compares two files and makes changes
-           (gdb)                      : runs the GNU Debugger
+           (gdb)                      : runs the GNU Debug tool
 ```
 
 # Simple editing (2)

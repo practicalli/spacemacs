@@ -1,6 +1,6 @@
 # Clojure Layer Overview
 
-The [Clojure layer](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/clojure) provides and full language support and tooling including, autocomplete, refactor, inspector and debugger, etc.
+The [Clojure layer](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/clojure) provides and full language support and tooling including, autocomplete, refactor, inspector and debug, etc.
 
 This layer supports Clojure projects managed by [Leiningen](https://leiningen.org), [Boot](http://boot-clj.com/) and [Clojure CALI tools](https://clojure.org/guides/deps_and_cli) (`deps.edn`).
 

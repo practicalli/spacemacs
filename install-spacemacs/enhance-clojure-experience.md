@@ -67,7 +67,7 @@ Add the following layers to `dotspacemacs-configuration-layers` ensuring there a
 >
 > In the `version-control` layer The `:variables`  `git-gutter-use-fringe` to display changed lines in your working file in the fringe (margin) of the current buffer.
 >
-> I have not included the sayid debugger in this enhanced setup for Clojure as I find the `cider-debugger `, d b` sufficient.
+> I have not included the sayid debug in this enhanced setup for Clojure as I find the `cider-debug` tool, d b`, sufficient.
 >
 > If you wish use extensive debugging for the whole project, then enable sayid by adding the variable `clojure-enable-sayid`.  So your layer definition for Clojure would look like:
 ```
