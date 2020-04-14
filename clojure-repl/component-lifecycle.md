@@ -92,7 +92,8 @@ TODO:
 
 
 > #### Hint::Prevent cider-ns-refresh calling component lifecycle functions
-> `SPC - , e n` calls `cider-ns-refresh` but prevents refresh functions defined in `cider-ns-refresh-before-fn` and `cider-ns-refresh-after-fn` from being invoked.
+> `C-- , e n` or `SPC u - 1 , e n` calls `cider-ns-refresh` but prevents the refresh functions defined in `cider-ns-refresh-before-fn` and `cider-ns-refresh-after-fn` from being invoked.
+
 
 
 ## Reference
