@@ -7,8 +7,8 @@ Example component lifecycle libraries included
 * [integrant](https://github.com/weavejester/integrant)
 * [component](https://github.com/stuartsierra/component)
 
-## Example project with component lifecycle
 
+## Example project with component lifecycle
 {% tabs mount="Mount", integrant="Integrant", component="Component" %}
 
 <!-- Mount example -->
@@ -51,6 +51,7 @@ The reset function that calls `stop`, refreshes the namespaces so that stale def
 
 * [Example dev.clj file for mount](https://github.com/tolitius/mount/blob/master/dev/clj/dev.clj)
 
+
 ## Configure cider-refresh to use component lifecycle
 Create a `.dir-locals.el` file that calls the relevant mount functions when using `cider-refresh`.
 
@@ -90,6 +91,10 @@ TODO:
 
 
 
+> #### Hint::Prevent cider-ns-refresh calling component lifecycle functions
+> `SPC - , e n` calls `cider-ns-refresh` but prevents refresh functions defined in `cider-ns-refresh-before-fn` and `cider-ns-refresh-after-fn` from being invoked.
+
 
 ## Reference
-https://spin.atomicobject.com/2018/01/20/reload-clojure-spacemacs/
+* [Easily Reloading your Clojure Project in Spacemacs](https://spin.atomicobject.com/2018/01/20/reload-clojure-spacemacs/)
+* [Reloading Woes - Lambda island](https://lambdaisland.com/blog/2018-02-09-reloading-woes)
