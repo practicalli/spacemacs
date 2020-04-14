@@ -1,7 +1,11 @@
 # Inspect Clojure
-`, d v` opens a cider inspector buffer showing the value of the current think under the point.
+`, d v` runs the `cider-inspector` command which opens a buffer with a pretty printed value of the current symbol under the cursor.  This provides a very readable way to understand the value and browse through larger data sets.
 
-`q` to quit the cider inspector buffer
+`n`  and `p` will page through the data if the number of elements in the data set is greater than the page size (default 32).
+
+`s` interactively sets the page size, updating how many elements are shown in one page of the cider inspector buffer.
+
+`q` quits the cider inspector buffer
 
 ## Inspecting simple values
 Inpecting a number or character shows the underlying type, the value and properties of that type
@@ -9,18 +13,32 @@ Inpecting a number or character shows the underlying type, the value and propert
 ![Spacemacs - Clojure - Inspect value - java.lang.Long](/images/spacemace-clojure-inspect-java-lang-long.png)
 
 ## Inspecting Collections
-Inspect a collection shows the underlying type, contents of that collection and index (where applicable)
+Inspect a collection shows the underlying type, contents of that collection and index (where applicable).  Only the elemnents are shown.  The characters of the overall collection itself are not show, only the underlying type of collection (vector, map, lazy sequence, etc.).
 
 ![Spacemacs - Clojure - Inspect persistent map](/images/spacemace-clojure-inspect-java-lang-persistentvector.png)
 
-And if there are collections within collections then those values are shown too
+If there are collections within collections then those values can be navigated too.
+
+`RET` on an nested element in a collection will inspect that element in the same detail.
 
 ![Spacemacs - Clojure - Inspect persistent map with vector](/images/spacemacs-clojure-inspect-persistent-map-nested.png)
 
 
 # Inspecting mutable values
-Stateful containers, `atom`, `ref`, can also be inspected.  The value of
+Mutable containers, `atom`, `ref`, can also be inspected.  The class of the container is shown, along with the class of the value it contains along with its elements.
 
 ![Spacemacs - Clojure - Inspect atom containing a vector](/images/spacemacs-clojure-inspect-atom-containing-persistent-vector.png)
 
-Inspecting an atom or ref gives the value at the current time.  The inspector does not update if the value of the atom or ref is updated. `, d v` to inspect the value and see if it has changed.
+Inspecting an atom or ref gives the value at the current time.  The inspector does not update if the value of the atom or ref is updated. `, d v` each time you want to check if the value has changed.
+
+
+## Inspecting Var meta data
+`cider-inspect-last-result` shows the result of the the last expression evaluated.  When this is a var from a `def` expression then meta information is shown as well as the class type and summary of the value.
+
+Meta data includes the file and position of the code, the name of the var and which namespace it is defined in.
+
+![Spacemacs Clojure Cider Inspector - inspect last value - def](/images/spacemacs-clojure-cider-inspect-last-result.png)
+
+Inspecting a `defn` also shows the argument list as part of the meta data.
+
+![Spacemacs Clojure Cider Inspector - inspect last value - defn](/images/spacemacs-clojure-cider-inspector-inspect-last-value-defn.png)

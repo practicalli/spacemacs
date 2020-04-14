@@ -5,7 +5,7 @@ Practicalli recommends evaluating Clojure expressions in the source code buffer,
 
 `, e f` evaluates the top-level expression at cursor.
 
-`, e p` evaluates the top-level expression at cursor and pretty prints the result in a separate buffer. Useful for results that are collections and nested collections.
+`, e p` evaluates the top-level expression at cursor and pretty prints the result in a separate buffer. Useful for results that are collections and nested collections.  Use the [cider inspector](inspect.md) for large data sets.
 
 `, e ;` evaluates the top-level expression at cursor and add the result as a comment. Useful for a design journal and when exploring a code base.
 
