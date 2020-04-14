@@ -13,18 +13,15 @@ Spacemacs is a community-driven project that provides a simple way to add lots o
 [Create a free Clojurians Slack community account](http://clojurians.net/).
 
 This workshop will cover the following topics:
-
-* Adding the Clojure layer
-* Running the REPL & evaluating code
+* Emacs basics, common commands and tools
+* Powerful editing and refactor tools (iedt, narrowing, helm-ag, multiple cursors, visual undo)
+* Adding and enhancing the Clojure layer
+* Running the REPL, evaluating code, inspecting data, debug, reloaded workflow
 * Running tests & test reports
-* Structural editing (smartparens/paredit fun)
-* Emacs common commands
-* Emacs cool stuff (multiple cursors, kill-ring / visual undo
+* Structural editing (smartparens/evil-cleverparens)
 * Clojure docs, auto-completion, snippets
-* Clojure refactoring with clj-refactor
-* Clojurescript development, figwheel and chestnut template
+* Clojurescript development, figwheel-main and reagent
 * Org-mode for project documentation, literate programming & presentations
-* debugging basics (I rarely use the debugger so if anyone is willing to show how they use the debugger, please speak up).
 
 > This is not a guide to customising Emacs for Clojure development, except were there are useful additions to be made to Spacemacs and the Clojure layer.
 
