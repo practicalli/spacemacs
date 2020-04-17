@@ -1,9 +1,15 @@
 # Inspect Clojure
 `, d v` runs the `cider-inspector` command which opens a buffer with a pretty printed value of the current symbol under the cursor.  This provides a very readable way to understand the value and browse through larger data sets.
 
-`n`  and `p` will page through the data if the number of elements in the data set is greater than the page size (default 32).
+`n`  and `p` will page through the data if the number of elements in the data set is greater than the page size (default 32), (`cider-inspector-next-page`, `cider-inspector-prev-page`)
 
-`s` interactively sets the page size, updating how many elements are shown in one page of the cider inspector buffer.
+`TAB` and `S-TAB` to navigate forward and backward through the elements that can be further inspected, (`cider-inspector-next-inspectable-object`, `cider-inspector-previous-inspectable-object`).
+
+`RET` to inspect the current value under the cursor (`cider-inspector-operate-on-point`)
+
+`r` to refresh the inspector view (`cider-inspector-refresh`)
+
+`s` interactively sets the page size, updating how many elements are shown in one page of the cider inspector buffer, (`cider-inspector-set-page-size`).
 
 `q` quits the cider inspector buffer
 
@@ -19,17 +25,18 @@ Inspect a collection shows the underlying type, contents of that collection and 
 
 If there are collections within collections then those values can be navigated too.
 
-`RET` on an nested element in a collection will inspect that element in the same detail.
+`RET` on an nested element in a collection will inspect that element in the same detail (`cider-inspector-operate-on-point`).
 
 ![Spacemacs - Clojure - Inspect persistent map with vector](/images/spacemacs-clojure-inspect-persistent-map-nested.png)
 
+`L` to back to parent of a nested element (`cider-inspector-pop`).
 
 # Inspecting mutable values
 Mutable containers, `atom`, `ref`, can also be inspected.  The class of the container is shown, along with the class of the value it contains along with its elements.
 
 ![Spacemacs - Clojure - Inspect atom containing a vector](/images/spacemacs-clojure-inspect-atom-containing-persistent-vector.png)
 
-Inspecting an atom or ref gives the value at the current time.  The inspector does not update if the value of the atom or ref is updated. `, d v` each time you want to check if the value has changed.
+Inspecting an atom or ref gives the value at the current time.  The inspector does not update if the value of the atom or ref is updated. Use `r` in the inspector buffer or restart the inspector with `, d v` each time you want to check if the value has changed.
 
 
 ## Inspecting Var meta data
