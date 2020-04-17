@@ -1,15 +1,14 @@
 # Interactive Rebasing
-
-> #### TODO::work in progress, sorry
-
-Magit provides an excellent tool to change history using interactive rebasing.
-
-You can go back through your commit history and add changes to commits, update commit messages, etc on commits that are not the current HEAD.
+Magit provides an excellent tool to change history using interactive rebasing.  By navigating back through the commit history changes can be made to commits or simply updating commit messages for commits that are not the current HEAD.
 
 During the interactive rebasing you can use other Git commands such as Amend, Write and Extend to update commits anywhere in the history.
 
 ![Spacemacs Magit Rebase menu](/images/spacemacs-magit-rebase-menu.png)
 
+<!-- Editing required for this video -->
+<!-- {% youtube %} -->
+<!-- https://youtu.be/On0PqSCdKR4 -->
+<!-- {% endyoutube %} -->
 
 
 
@@ -19,6 +18,7 @@ Open the git log view with `l l` and select the point in history you want to reb
 
 
 
+> #### TODO::work in progress, sorry
 
 ## Fixing up
 
