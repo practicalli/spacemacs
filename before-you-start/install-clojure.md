@@ -1,15 +1,15 @@
 # Install Clojure
-
 Establish a Clojure environment by installing the following:
-
 * rlwrap, a read line tool for an interactive command line
-* Clojure CLI tools (Leiningen and Boot should also work)
-* clj-new to create projects
+* Clojure CLI tools to run the REPL and projects (Leiningen and Boot should also work)
+* clj-new to create projects from templates
+* clj-kondo to lint your code and show syntax errors / idioms as you type
 
 ## Clojure CLI tools
+Clojure CLI tools provides the simplest way to run the Clojure REPL and Clojure projects.
 
 <!-- Operating System specific instructions -->
-{% tabs linux="Linux", homebrew="Homebrew", windows="Windows" %}
+{% tabs linux="Linux Script", homebrew="Homebrew", windows="Windows(powershell)" %}
 
 <!-- Ubuntu install -->
 {% content "linux" %}
@@ -30,9 +30,9 @@ The installation creates `/usr/local/bin/clj`, `/usr/local/bin/clojure`, and `/u
 <!-- Homebrew (MacOSX) install -->
 {% content "homebrew" %}
 
-Use [Homebrew on Linux or Windows with WSL](https://docs.brew.sh/Homebrew-on-Linux)
+With [Mac OSX Homebrew](https://brew.sh/) or [Homebrew on Linux or Windows with WSL](https://docs.brew.sh/Homebrew-on-Linux) installed.
 
-Install the command line tools with brew from the clojure/tools tap:
+Open a terminal window and run the following command line to install Clojure from the official clojure/tools tap:
 
 ```shell
 brew install clojure/tools/clojure
@@ -40,7 +40,6 @@ brew install clojure/tools/clojure
 
 <!-- Windows install -->
 {% content "windows" %}
-
 An early release version of [clj on Windows is available](https://github.com/clojure/tools.deps.alpha/wiki/clj-on-Windows).
 
 
@@ -48,14 +47,43 @@ An early release version of [clj on Windows is available](https://github.com/clo
 <!-- End of Operating System specific instructions -->
 
 
-## Install clj-new
+## Clojure CLI - additional tools
+Fork and clone the [practicalli/clojure-deps-ed](https://github.com/practicalli/clojure-deps-edn)) to `~/.clojure`
 
-Save the [practicalli/deps-edn-examples deps.edn file](https://github.com/practicalli/deps-edn-examples/blob/master/deps.edn) to `~/.clojure/deps.edn`
+```
+;; fork on GitHub to version your own configuration
+git clone git@github.com:your-fork/clojure-deps-edn.git ~/.clojure
+```
 
-Or edit `~/.clojure/deps.edn` and add an alias called new that runs the `clj-new` project.
+Or edit `~/.clojure/deps.edn` and add the alias called `:new` to create new Clojure projects from templates.
 
 ```clojure
   :new
-  {:extra-deps {seancorfield/clj-new {:mvn/version "0.8.6"}}
+  {:extra-deps {seancorfield/clj-new {:mvn/version "1.0.199"}}
    :main-opts  ["-m" "clj-new.create"]}
 ```
+
+
+## Install clj-kondo lint tool
+[clj-kondo](https://github.com/borkdude/clj-kondo) performs static analysis on Clojure, ClojureScript and EDN, without the need of a running REPL. It informs you about potential errors while you are typing.
+
+Install the [clj-kondo binary](https://github.com/borkdude/clj-kondo/blob/master/doc/install.md#installation-script-macos-and-linux).  `clj-kondo --version` should run in a terminal shell.
+
+[Spacemacs integration](https://github.com/borkdude/clj-kondo/blob/master/doc/editor-integration.md#spacemacs) requires the `syntax-checking` layer and the `clojure-enable-linters` variable added to the clojure layer, within the `dotspacemacs-configuration-layers` of the `.spacemacs` file.
+
+`SPC f e d` opens the `.spacemacs` file
+
+`SPC s s dotspacemacs-configuration-layers RET` to jump to that section of the file
+
+Add `clojure-enable-linters` variable to the clojure layer
+
+```elisp
+(clojure :variables
+             clojure-enable-linters 'clj-kondo)
+```
+
+Add the `syntax-checking` layer
+
+`SPC f s` to save and `SPC q r` to restart Emacs and download any additional packages.
+
+clj-kondo has sensible default configuration, however its simple to [add your own configuration](https://github.com/borkdude/clj-kondo/blob/master/doc/config.md)
