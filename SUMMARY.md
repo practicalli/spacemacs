@@ -232,8 +232,8 @@
     * [Code Blocks](org-mode/code-blocks.md)
     * [Yasnippets](org-mode/yasnippets.md)
     * [Org-mode tweaks](org-mode/org-mode-tweaks.md)
-    * [Literate Programming](org-mode/literate-programming/index.md)
 * [Org-journal](org-mode/org-journal.md)
+* [Literate Programming](org-mode/literate-programming/index.md)
 
 ## Encryption
 
