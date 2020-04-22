@@ -34,7 +34,6 @@
         * [Font size and Zooming](install-spacemacs/change-font.md)
         * [Open Maximised / Full Screen](install-spacemacs/maximised-full-screen.md)
         * [Themes](install-spacemacs/themes.md)
-            * [Adding themes](install-spacemacs/adding-themes.md)
         * [Line Numbers](install-spacemacs/line-numbers.md)
         * [Emacs Eshell](install-spacemacs/eshell.md)
 * [Starting Emacs instantly](install-spacemacs/emacsclient-server.md)
