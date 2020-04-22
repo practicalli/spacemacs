@@ -1,21 +1,17 @@
-# Org-mode Easy Templates
+# Org blocks - source code and more
+Block are used to highlight source code and other areas of text that should be highlight differently.
 
-Org-mode has a [number of templates](http://orgmode.org/manual/Easy-Templates.html) that create common structural elements such as code block sections.  Type the `<` character followed by the template name and press the `TAB` key to expand the template.
+`, b d` calls (`org-babel-demarcate-block`) opens a list of programming languages to select from, pasting an org source code block with the chosen language.
 
-For example, type `<s` then press `TAB` to create an empty Source block
+![Spacemacs Org mode - babel demarcate block language list](/images/spacemacs-org-babel-demarcate-block-language.png)
 
-| Name | Template                          | Description          |
-| ---  | ---                               | ---                  |
-| s    | #+BEGIN_SRC ... #+END_SRC         | Adds a source block  |
-| e    | #+BEGIN_EXAMPLE ... #+END_EXAMPLE |                      |
-| q    | #+BEGIN_QUOTE ... #+END_QUOTE     |                      |
-| v    | #+BEGIN_VERSE ... #+END_VERSE     |                      |
-| c    | #+BEGIN_CENTER ... #+END_CENTER   |                      |
-| l    | #+BEGIN_LaTeX ... #+END_LaTeX     | LaTeX markup section |
-| L    | #+LaTeX:                          |                      |
-| h    | #+BEGIN_HTML ... #+END_HTML       | HTML sectiion        |
-| H    | #+HTML:                           |                      |
-| a    | #+BEGIN_ASCII ... #+END_ASCII     |                      |
-| A    | #+ASCII:                          |                      |
-| i    | #+INDEX: line                     |                      |
-| I    | #+INCLUDE: line                   |                      |
+When choosing clojure as the language, a source code block is added with the label clojure to indicate the language.
+
+```elisp
+#+BEGIN_SRC clojure
+#+END_SRC
+```
+
+`, i b` displays the currently available templates to use as blocks (`org-insert-structure-template`).  These templates provide a wider range than only the source code block.
+
+![Spacemacs Org mode - structure template menu](/images/spacemacs-org-structure-templates.png)
