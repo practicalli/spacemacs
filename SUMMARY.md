@@ -227,10 +227,10 @@
     * [Linking](org-mode/linking.md)
     * [TODO States](org-mode/todo-states.md)
     * [Customise TODO States](org-mode/todo-states-customise.md)
-    * [Get Things Done](org-mode/get-things-done.md)
+    <!-- * [Get Things Done](org-mode/get-things-done.md) -->
     * [Tables](org-mode/tables.md)
     * [Code Blocks](org-mode/code-blocks.md)
-    * [Yasnippets](org-mode/yasnippets.md)
+    <!-- * [Yasnippets](org-mode/yasnippets.md) -->
     * [Org-mode tweaks](org-mode/org-mode-tweaks.md)
 * [Org-journal](org-mode/org-journal.md)
 * [Literate Programming](org-mode/literate-programming/index.md)
