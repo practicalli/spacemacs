@@ -1,5 +1,7 @@
 # Evil Keybinding Reference
+An alphabetically ordered reference of Evil key bindings.
 
+[Spacemacs DOCUMENTATION key bindings section](https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#key-bindings) contains full details
 
 ## Normal mode keybindings
 

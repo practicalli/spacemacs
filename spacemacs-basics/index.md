@@ -38,6 +38,7 @@ Many functions have a keybinding (keyboard short-cut) and you can also get a des
 Online help
 
 * [Spacemacs online documentation](https://develop.spacemacs.org/doc/DOCUMENTATION.html)
+* [Spacemacs key bindings](https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#key-bindings)
 * [Spacemacs Quick Start guide](https://develop.spacemacs.org/doc/QUICK_START.html)
 * [Spacemacs Layers](https://develop.spacemacs.org/layers/LAYERS.html)
 * [Practicalli Spacemacs YouTube playlist](https://www.youtube.com/playlist?list=PLpr9V-R8ZxiCHMl2_dn1Fovcd34Oz45su)
