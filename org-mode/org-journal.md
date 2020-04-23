@@ -21,6 +21,14 @@ An effective way to keep a daily record of discovery from work, personal study, 
 > `-` is a list and `- [ ]` adds a checkbox to the list.  `, T c` will toggle the mark in the checkbox, ticked or empty, for the current line.
 
 
+## Tracking progress
+Headings can be assigned [TODO states](/org-mode/todo-states.md) to demonstrate progress and use the journal to manage tasks for the day.
+
+`, L` or `S-🡆` (`org-shiftright`) cycles through the states, which are `TODO` `DOING` and `DONE` by default.  `, H` or `S-🡄` to cycle the states in reverse.
+
+If Headings are not in a DONE state are automatically carried over when creating the next days journal.
+
+
 ## Configure org-journal
 [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/) includes this configuration
 
