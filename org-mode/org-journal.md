@@ -1,7 +1,7 @@
 # Org Journal
 [Org-journal](https://develop.spacemacs.org/layers/+emacs/org/README.html#org-journal-support) is an effective way to keep a daily record of discovery from work, personal study, hobbies or even a mood diary to help with mental wellness.
 
-`SPC a o j j` opens a new journal entry for the current day in a new buffer.
+`SPC a o j j` opens a new journal entry for the current day in a new buffer.  `SPC u SPC a o j j` to view the journal without adding a new entry.
 
 `o` creates a new line automatically indented, or a new list item, `-` or check box list, `- [ ]`, if the previous line was that type.
 
