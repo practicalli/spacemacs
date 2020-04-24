@@ -32,7 +32,8 @@ Headings not in a DONE state are automatically carried over when creating the ne
 > Practicalli recommends reviewing each days journal at the end of the day, before creating the next day.  This is a great opportunity to take a few moments to reflect on the day.
 
 ---
-> #### WARN::Stateless headings not carried over
+
+> #### WARNING::Stateless headings not carried over
 > Headings without a state or that do not contain a sub-heading with a state are not automatically carried over to the next day.  So ensure a TODO state is somewhere in the heading hierarchy.
 >
 > `, p` jumps to the previous days journal, so checking all items have moved across is easy.  Kill entries you want to move into today's journal, `, n` to view today's journal and paste.
