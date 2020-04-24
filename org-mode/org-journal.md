@@ -1,5 +1,5 @@
 # Org Journal
-An effective way to keep a daily record of discovery from work, personal study, hobbies or even a mood diary to help with mental wellness.
+[Org-journal](https://develop.spacemacs.org/layers/+emacs/org/README.html#org-journal-support) is an effective way to keep a daily record of discovery from work, personal study, hobbies or even a mood diary to help with mental wellness.
 
 `SPC a o j j` opens a new journal entry for the current day in a new buffer.
 
@@ -22,11 +22,20 @@ An effective way to keep a daily record of discovery from work, personal study, 
 
 
 ## Tracking progress
-Headings can be assigned [TODO states](/org-mode/todo-states.md) to demonstrate progress and use the journal to manage tasks for the day.
+Any Heading level can be assigned a [TODO state](/org-mode/todo-states.md) to demonstrate progress and use the journal to manage tasks for the day.
 
 `, L` or `S-🡆` (`org-shiftright`) cycles through the states, which are `TODO` `DOING` and `DONE` by default.  `, H` or `S-🡄` to cycle the states in reverse.
 
-If Headings are not in a DONE state are automatically carried over when creating the next days journal.
+Headings not in a DONE state are automatically carried over when creating the next days journal.  Sub-heading with TODO states are carried over along with their parent heading(s).
+
+> #### Hint::End of day review
+> Practicalli recommends reviewing each days journal at the end of the day, before creating the next day.  This is a great opportunity to take a few moments to reflect on the day.
+
+---
+> #### WARN::Stateless headings not carried over
+> Headings without a state or that do not contain a sub-heading with a state are not automatically carried over to the next day.  So ensure a TODO state is somewhere in the heading hierarchy.
+>
+> `, p` jumps to the previous days journal, so checking all items have moved across is easy.  Kill entries you want to move into today's journal, `, n` to view today's journal and paste.
 
 
 ## Configure org-journal
