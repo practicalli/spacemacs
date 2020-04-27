@@ -3,6 +3,8 @@ Spacemacs included the [yasnippet official snippets repository](https://github.c
 
 * [Datomic snippets package](https://github.com/magnars/datomic-snippets) contains specific snippets for [Cognitect Datomic database](https://www.datomic.com/).
 
+> #### Hint::deftest snippet is called test
+
 | Snippet    | Description                                                                                                                    | Tab Stops                              |
 | ----       | ----                                                                                                                           | ----                                   |
 | bench      | benchmark an expression, using the `time` function                                                                             | body                                   |
