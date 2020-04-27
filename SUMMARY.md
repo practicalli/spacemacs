@@ -116,7 +116,6 @@
 * [Snippets](snippets/index.md)
     * [Clojure Snippets](snippets/clojure-snippets.md)
     * [Add your own Snippets](snippets/add-your-own-snippets.md)
-    * [Autocompletion](snippets/autocompletion.md)
 * [Navigating code](navigating-code/index.md)
     * [Markers](navigating-code/markers.md)
     * [Namespaces](navigating-code/namespaces.md)
