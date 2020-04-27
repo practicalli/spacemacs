@@ -24,6 +24,11 @@ With snippets added to the auto-completion tooltip, typing `def` show the matchi
 > ####Hint::Write your own snippets
 > Its easy to [write your own snippets](add-your-own-snippets.html) for Clojure or any other language you use with Spacemacs / Emacs
 
+## Clojure namespace snippet
+The `ns` snippet adds a namespace expression with the namespace of the current file, this requires a running REPL.
 
+`SPC f f` to create a new file, using underscores in the file name to separate words. Any underscores in the file name are converted into dashes in the `ns` definition
 
+Type `ns` and then `M-/` to expand the snippet, which included the namespace of the current file.
 
+If using snippets with auto-completion tool-tips, `TAB` or arrow keys to select `ns -> ns` snippet, `RET` to insert snippet using the buffer file name
