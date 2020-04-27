@@ -18,6 +18,8 @@ Add `auto-completion` to the `dotspacemacs-configuration-layers` list in `.space
 
 The [clojure layer](https://develop.spacemacs.org/layers/+lang/clojure/README.html) providing additional snippet templates from the [clojure-snippets](https://github.com/mpenet/clojure-snippets) package.
 
+> #### Hint::[practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/) includes this configuration
+
 
 ## Snippets in Auto-completion popups
 Snippets can be included in the auto-complete pop-up menu.
