@@ -1,44 +1,44 @@
 # Snippets - Common code templates
+Speed up the creation of common code blocks with easy to define text templates provided by [yasnippet](https://github.com/joaotavora/yasnippet/blob/master/doc/index.org).
 
-Speed up the creation of common blocks of code using snippets, an easy to define text template system provided by the Emacs package called [yasnippets](https://www.emacswiki.org/emacs/Yasnippet)
+`M-/` expands the text under the point by any of the methods registered with hippie-expand. Yasnippets is one of the methods registered.
 
-YASnippet comes with a number of mode-specific snippets that expand to anything from a simple text replacement to a code block structure that allows you to skip through parameters and other sections of the code block.
+`TAB` will jump through the expanded snippet if it contains markers.
 
-For example, in html-mode typing `div` and pressing `M-/` expands to `<div id=" " class=" "> </div>` and places the cursor so you can type the `id` name.  Press `TAB` to move the cursor through the other sections, i.e. the `class` name and the contents of the div.
+## Example using snippets
+In `web` major mode, typing `link` and pressing `M-/` expands to `<link rel="stylesheet" href="url" type="text/css" media="screen" />` placing the cursor on `stylesheet`.  `TAB` to move the cursor to `url` to change the name of the CSS file. `TAB` again until the end marker is reached.
 
-Many programming language layers come with their own pre-defined snippets and there are snippet commands for creating your own.
-
-[![Spacemacs - Yasnippet - Crank out boilerplate code - Alex Miller](https://blog.alex-miller.co/assets/images/yasnippet_angular_component_demo.gif)](https://blog.alex-miller.co/emacs/spacemacs/2017/05/28/yasnippets.html)
+![Spacemacs - Snippets - Web html link expanded](/images/spacemacs-auto-completion-snippets-html-link-expanded.png)
 
 
-> ####Hint::Snippet expand keybinding
-> To expand a snippet simply type its name and press `M-/`.
+## Configure yasnippet
+The [auto-completion](https://develop.spacemacs.org/layers/+completion/auto-completion/README.html) layer adds yasnippet and the official snippet collection, yasnippet-snippets.
+
+Add `auto-completion` to the `dotspacemacs-configuration-layers` list in `.spacemacs`
+
+The [clojure layer](https://develop.spacemacs.org/layers/+lang/clojure/README.html) providing additional snippet templates from the [clojure-snippets](https://github.com/mpenet/clojure-snippets) package.
 
 
 ## Snippets in Auto-completion popups
+Snippets can be included in the auto-complete pop-up menu.
 
-Snippets can be configured to appear in the auto-complete menu, so when you are typing you will see any matching snippet names.
+![Spacemacs - Snippets - Web html link](/images/spacemacs-auto-completion-snippets-html-link.png)
 
-For example, if you type `defn` then in the menu you will see the snippet as a `defn -> defn` menu item.  Selecting that menu item expands the snippet.
+`TAB` to navigate through the list of menu items.
 
-![Spacemacs - Snippets - Markdown example](/images/spacemacs-snippets-example-markdown-code.png)
+`RET` to select the snippet and add the template to the buffer.
 
-Edit your `~/.spacemacs` configuration file and locate the `dotspacemacs/layers > dotspacemacs-configuration-layers` variable.  Add the variable `auto-completion-enable-snippets-in-popup t` to the auto-completion layer.
+Add the layer variable `auto-completion-enable-snippets-in-popup t` to the `auto-completion` layer in `.spacemacs`.
 
-For example:
+Practicalli also recommends adding `auto-completion-enable-sort-by-usage t` to show the most commonly used snippets at the top of the auto-completion pop-up menu.
 
 ```elisp
-(defun dotspacemacs/layers ()
-  (
-  ;;; some code ommitted here...
-  dotspacemacs-configuration-layers
-   '(
-    (auto-completion :variables
-                     auto-completion-enable-help-tooltip t
-                     auto-completion-enable-snippets-in-popup t)
+(auto-completion :variables
+                 auto-completion-enable-help-tooltip t
+                 auto-completion-enable-snippets-in-popup t
+                 auto-completion-enable-sort-by-usage t)
 ```
 
 
 ## Resources
-
-For more examples on where snippets are useful, read Sacha Chua's article on [how to make better use of Yasnippet in my Emacs workflow](http://sachachua.com/blog/2015/01/thinking-make-better-use-yasnippet-emacs-workflow/)
+* [How to make better use of Yasnippet in my Emacs workflow](http://sachachua.com/blog/2015/01/thinking-make-better-use-yasnippet-emacs-workflow/) - Sacha Chua
