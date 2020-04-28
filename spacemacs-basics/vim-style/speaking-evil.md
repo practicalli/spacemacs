@@ -42,18 +42,6 @@ Practice speaking evil with these examples
 |             |                                                                       |
 
 
-### Using marks
-
-The name of the mark is a character, so you can have 26 of them.  In general practice no more than 4 marks are ever used.  A recommended use of marks is:
-
-| Keybinding | Description |
-|------------|-------------|
-| `a`        | First mark  |
-| `b`        | Next mark   |
-| `c`        | Another mark |
-| `z`        | Last mark   |
-
-
 > #### Hint:: Evil Reference and Tips
 > [Evil quick reference guide](vim-quick-reference.html)
 > [Evil tips for developers](vim-tips-for-developers.html)
