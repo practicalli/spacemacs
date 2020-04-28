@@ -1,12 +1,12 @@
 # Editing with Vim and iedit
+`SPC s e` to use [`evil-iedit-state`](https://github.com/syl20bnr/evil-iedit-state) to quickly edit multiple occurrences of a symbol or selection.
 
- Using [iedit](https://github.com/victorhge/iedit) you can edit multiple, identical string occurrences at the same time.
+`e` within visual state and symbol highlight transient state also enables iedit.
 
 {% youtube %}
 https://youtu.be/VCxJy8abkfA
 {% endyoutube %}
 
-`SPC s e` to use [`evil-iedit-state`](https://github.com/syl20bnr/evil-iedit-state) to quickly edit multiple occurrences of a symbol or selection.
 
 ## iedit states key bindings
 
@@ -59,7 +59,12 @@ iedit also integrates with [`expand-region`](https://github.com/magnars/expand-r
 
 ## In iedit-insert state
 
-| Key Binding | Description               |
-|-------------|---------------------------|
+| Key binding | Description             |
+|-------------|-------------------------|
 | `ESC`       | go back to iedit state  |
 | `C-g`       | go back to normal state |
+
+
+## Reference
+* [iedit GitHub project](https://github.com/victorhge/iedit)
+* [evil-iedit-state](https://github.com/syl20bnr/evil-iedit-state)
