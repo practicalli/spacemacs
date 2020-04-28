@@ -1,7 +1,7 @@
 # Navigating to function definitions
-`g g` go to the source code definition of the Clojure function under the cursor.  If the cursor is not on a function name, a prompt displays asking for the function name.
+`, g g` go to the source code definition of the Clojure function under the cursor.  If the cursor is not on a function name, a prompt displays asking for the function name.
 
-`g G` to open the definition in another window
+`, g G` to open the definition in another window
 
 `' '` returns to the point in the code you originally jumped from.
 
