@@ -46,4 +46,4 @@ The current snippets for org-mode from the [yasnippet official snippet collectio
 | video               | <vi         | org link to video file                  |
 
 ## Reference
-* [Create your own snippets](snippets/add-your-own-snippets.md)
+* [Create your own snippets](/snippets/add-your-own-snippets.md)
