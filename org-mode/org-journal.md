@@ -3,6 +3,8 @@
 
 `SPC a o j j` opens a new journal entry for the current day in a new buffer.  `SPC u SPC a o j j` to view the journal without adding a new entry.
 
+`SPC o j` is a user binding as a short-cut for `SPC a o j j`, added in the [practcialli/spacemacs.d](https://github.com/practicalli/spacemacs.d/) configuration
+
 `o` creates a new line automatically indented, or a new list item, `-` or check box list, `- [ ]`, if the previous line was that type.
 
 `C-RET` creates a new heading at the same level.  `M-right-arrow` demotes the current heading (smaller heading) and `M-left-arrow` promotes the current heading. `M-up/down-arrow` moved heading up or down the list of headings.
