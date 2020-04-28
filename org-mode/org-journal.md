@@ -28,17 +28,13 @@ Any Heading level can be assigned a [TODO state](/org-mode/todo-states.md) to de
 
 `, L` or `S-🡆` (`org-shiftright`) cycles through the states, which are `TODO` `DOING` and `DONE` by default.  `, H` or `S-🡄` to cycle the states in reverse.
 
-Headings not in a DONE state are automatically carried over when creating the next days journal.  Sub-heading with TODO states are carried over along with their parent heading(s).
+Headings in the TODO state are automatically carried over when creating the next days journal.  Sub-heading with TODO states are carried over along with their parent heading(s).
 
 > #### Hint::End of day review
 > Practicalli recommends reviewing each days journal at the end of the day, before creating the next day.  This is a great opportunity to take a few moments to reflect on the day.
-
----
-
-> #### WARNING::Stateless headings not carried over
-> Headings without a state or that do not contain a sub-heading with a state are not automatically carried over to the next day.  So ensure a TODO state is somewhere in the heading hierarchy.
 >
-> `, p` jumps to the previous days journal, so checking all items have moved across is easy.  Kill entries you want to move into today's journal, `, n` to view today's journal and paste.
+> `, p` jumps to the previous days journal if items seem to be missing. Manually copy any missing items. `, n` to view today's journal and paste those missing items.
+
 
 
 ## Configure org-journal
