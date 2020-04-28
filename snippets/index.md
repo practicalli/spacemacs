@@ -41,6 +41,13 @@ Practicalli also recommends adding `auto-completion-enable-sort-by-usage t` to s
                  auto-completion-enable-sort-by-usage t)
 ```
 
+## Snippet save locations
+Snippets are saved in `~/.emacs.d/private/snippets/`.  When `~/.spacemacs.d` is used for the Spacemacs configuration, snippets are saved in `~/.spacemacs.d/snippets/` directory.
+
+Each snippet is saved in its own file, named after the alias of the snippet.  The snippet file is located in a directory named after the Emacs major mode it belongs to.
+
+A snippet called `wip` for Clojure has a file name `wip` and is in saved in directory named `clojure`.
+
 
 ## Resources
 * [How to make better use of Yasnippet in my Emacs workflow](http://sachachua.com/blog/2015/01/thinking-make-better-use-yasnippet-emacs-workflow/) - Sacha Chua
