@@ -1,13 +1,15 @@
 # Org-mode TODO states
-TODO's can be added to any org document by simply typing them, or using commands to cycle through the states.
+Show progress by adding TODO states to the headings of an .org document.  The default states are `TODO` `DOING` and `DONE`.  States can be added to any org document by simply typing them, or using commands to cycle through the states.
 
-`, L` or `S-🡆` (`org-shiftright`) will move the current item to the next state, which by default are  `TODO` `DOING` and `DONE`.  `, H` or `S-🡄` to cycle the states in reverse.
+`t` calls `org-todo` which cycles through all the TODO states for the current heading. If the current line is not a heading, the parent heading is updated.
+
+`, L` or `S-🡆` (`org-shiftright`) move the current TODO state forward to the next. `, H` or `S-🡄` move to the previous TODO states.
 
 
 ## Custom TODO States
 A custom set of states can be configured, although it seems useful to keep the defaults and simply add custom states.
 
-[Practicalli/spacemacs.d](https://github.com/practcialli/spacemacs.d) includes a simple [kanban](https://en.wikipedia.org/wiki/Kanban_(development)) style of states.  The `|` character
+[Practicalli/spacemacs.d](https://github.com/practcialli/spacemacs.d) includes a simple kanban style of states.  The `|` character denotes closed TODO states.
 
 In `dotspacemacs/user-config` in the `.spacemacs` file, define states and workflow for all `.org` files
 
@@ -16,7 +18,18 @@ In `dotspacemacs/user-config` in the `.spacemacs` file, define states and workfl
     (setq org-todo-keywords
          '((sequence "TODO" "DOING" "BLOCKED" "REVIEW" "|" "DONE" "ARCHIVED"))))
 ```
-Use `with-eval-after-load` as a hook to call this setting when org-mode is run
+Use `with-eval-after-load` as a hook to call this setting when org-mode is first run by Spacemacs.
+
+
+## Automatically log completion date-time
+Commands can be triggered when entering a specific TODO state.
+
+To add a `closed:` property with current date-time stamp when the status is `DONE`.  Changing the status will remove the closed property.
+
+```elisp
+  (with-eval-after-load 'org
+    (setq org-log-done 'time))
+```
 
 
 ## Custom colors (faces)
@@ -40,14 +53,3 @@ In `dotspacemacs/user-config` in the `.spacemacs` file, add following to configu
 > `SPC h d F` will list all the faces used with the current buffer. `RET` on a face name to find out where it is defined.
 >
 > Use the `SPC SPC customize` command to explore and change faces
-
-
-## Automatically log completion date-time
-Commands can be triggered when entering a specific TODO state.
-
-To add a `closed:` property with current date-time stamp when the status is `DONE`.  Changing the status will remove the closed property.
-
-```elisp
-  (with-eval-after-load 'org
-    (setq org-log-done 'time))
-```
