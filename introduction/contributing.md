@@ -22,11 +22,11 @@ The [Spacemacs contribution guidelines](https://github.com/syl20bnr/spacemacs/bl
 Please review issues and leave feedback, especially confirming issues are reproducible on your Spacemacs configuration. `SPC h d s` to include your system configuration.
 
 Contribute changes via pull requests:
-1) Fork the Spacemacs project on GitHub and clone your fork
-2) Create a new branch from the `develop` branch (`SPC g s` for magit status, `b c` to create a new branch)
-3) Make changes and update relevant README files and the CHANGELOG.develop file
-4) Commit changes to the new branch and push to your fork.
-5) Visit your fork on GitHub and create a pull request (or [setup forge](source-control/forge-configuration.md) and create PR from Magit)
+1. Fork the Spacemacs project on GitHub and clone your fork
+2. Create a new branch from the `develop` branch (`SPC g s` for magit status, `b c` to create a new branch)
+3. Make changes and update relevant README files and the CHANGELOG.develop file
+4. Commit changes to the new branch and push to your fork.
+5. Visit your fork on GitHub and create a pull request (or [setup forge](source-control/forge-configuration.md) and create PR from Magit)
 
 {% youtube %}
 https://youtu.be/OMS-3Jl05mE
