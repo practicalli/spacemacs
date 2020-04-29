@@ -4,7 +4,7 @@ Contributions to the content of this workshop are welcome, either via
 
 * Disqus comments on each page
 
-* [Issues](https://github.com/practicalli/spacemacs-gitbook/projects/1) or [Pull requests](https://github.com/practicalli/spacemacs-gitbook/pulls) (small and ideally page specific, avoid changes over multiple pages)
+* [Issues](https://github.com/practicalli/spacemacs-content/projects/1) or [Pull requests](https://github.com/practicalli/spacemacs-content/pulls) (small and ideally page specific, avoid changes over multiple pages)
 
 * [#practicalli channel on Clojurians Slack community](http://clojurians.slack.com/messages/practicalli) - [sign up for a free account](https://clojurians.net/)
 
