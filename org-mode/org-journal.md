@@ -28,7 +28,7 @@ Any Heading level can be assigned a [TODO state](/org-mode/todo-states.md) to de
 
 `, L` or `S-🡆` (`org-shiftright`) cycles through the states, which are `TODO` `DOING` and `DONE` by default.  `, H` or `S-🡄` to cycle the states in reverse.
 
-Headings in the TODO state are automatically carried over when creating the next days journal.  Sub-heading with TODO states are carried over along with their parent heading(s).
+Headings in the TODO state are automatically carried over when creating the next days journal.  Sub-heading with TODO states are carried over along with their parent heading(s).  See the configure section below to change this.
 
 > #### Hint::End of day review
 > Practicalli recommends reviewing each days journal at the end of the day, before creating the next day.  This is a great opportunity to take a few moments to reflect on the day.
@@ -36,9 +36,8 @@ Headings in the TODO state are automatically carried over when creating the next
 > `, p` jumps to the previous days journal if items seem to be missing. Manually copy any missing items. `, n` to view today's journal and paste those missing items.
 
 
-
 ## Configure org-journal
-[practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/) includes this configuration
+[practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/) includes the configuration below
 
 To manually add org-journal, edit `.spacemacs` and add these org layer variable with suggested settings from [Spacemacs org layer documentation](https://develop.spacemacs.org/layers/+emacs/org/README.html#org-journal-support)
 
