@@ -50,3 +50,9 @@ org-journal-date-format "%A, %B %d %Y"
 org-journal-time-prefix "* "
 org-journal-time-format ""
 ```
+
+The TODO states carried over can be configured using the `org-journal-carryover-items` variable on the `org` layer in `.spacemacs`
+
+```elisp
+org-journal-carryover-items "TODO=\"TODO\"|TODO=\"DOING\"|TODO=\"BLOCKED\"|TODO=\"REVIEW\"")
+```
