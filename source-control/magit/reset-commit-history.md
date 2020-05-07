@@ -1,17 +1,26 @@
 # Reset Commit History
-
-Reset allows you to roll back commit history.  The local commit history can be changed by deleting one or more commits and either keeping or discarding the changes.
+Reset allows you to roll back commit history.  The local commit history can be changed by removing one or more commits and either keeping or discarding staged and local working copy changes.
 
 `O` (capital 0) in the Magit Status buffer opens the reset menu
 
-![Spacemacs Magit - reset menu](/images/spacemacs-magit--reset-menu.png)
+| Key bindings | Description                                                      |
+|--------------|------------------------------------------------------------------|
+| `s`          | remove the commit, keep the staged and working directory changes |
+| `h`          | remove the commit, staged and working directory changes          |
+| `m`          | remove the commit and staged changes, keep the working directory |
+| `i`          | remove staged changes only                                       |
+| `w`          | remove working directory changes only                            |
+| `f`          | reset a specific file                                            |
 
-| Keybindings | Description                                                                    |
-|-------------|--------------------------------------------------------------------------------|
-| `s`         | delete the commit, keep the index (staged files) and working directory changes |
-| `h`         | remove the commit, index and working directory changes                         |
-| `m`         | delete the commit and staged changes (index), keep the working directory       |
+## Using recent commits or log
+Navigating the recent commits or log list, `l l`, is a simple way to reset to a commit, especially further back in the history.
 
+`j` and `k` to navigate to the commit in the history to reset to,the commit that will be the new HEAD.
+
+`O` to initiate a reset and choose the scope of the reset to carry out (commit, staging, working directory).
+
+
+## Specifying a commit to reset to
 Specify or select where to reset the commit history to
 
 ![Spacemacs Magit - revert master to HEAD~1](/images/spacemacs-magit--reset-to-head-1.png)
