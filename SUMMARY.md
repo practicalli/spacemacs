@@ -260,7 +260,8 @@
     * [Silver Searcher - ag](alternative-tooling/silversearcher-ag.md)
     * [Parinfer](alternative-tooling/parinfer.md)
     * [Paredit](alternative-tooling/paredit.md)
-    * [Paredit keybindings](alternative-tooling/paredit-keybindings.md)
+    <!-- * [Paredit keybindings](alternative-tooling/paredit-keybindings.md) -->
+        * [Paredit: Killing code softly](structural-editing/emacs-killing-code-softly.md)
     * [Joker](alternative-tooling/joker.md)
     * [Leiningen](alternative-tooling/leiningen.md)
     * [External Clojure REPL](external-repl/index.md)
@@ -274,27 +275,16 @@
 * [Misc](misc/index.md)
     * [Artist mode](misc/artist-mode.md)
     * [Unicode Characters](misc/unicode-characters.md)
-* [Contributors](contributors.md)
-* [About this workshop](introduction/about-this-workshop.md)
-    * [Workshop conventions](introduction/workshop-conventions.md)
-    * [Sample Configuration](introduction/sample-configuration.md)
-    * [Additional resources](introduction/additional-resources.md)
-* [Work in progress - messy](work-in-progress.md)
-    * [Emacs Quick Reference](spacemacs-basics/emacs-quick-reference.md)
-    * [Parinfer](alternative-tooling/parinfer.md)
-    * [Joker](alternative-tooling/joker.md)
-    * [Paredit](structural-editing/classic-emacs.md)
-        * [Paredit keybindings](structural-editing/paredit-keybindings.md)
-        * [Using Paredit](structural-editing/paredit.md)
-        * [Paredit: Killing code softly](structural-editing/emacs-killing-code-softly.md)
-* [Misc](misc/index.md)
-    * [Artist mode](misc/artist-mode.md)
-    * [Unicode Characters](misc/unicode-characters.md)
-* [Contributors](contributors.md)
-* [About this workshop](introduction/about-this-workshop.md)
-    * [Workshop conventions](introduction/workshop-conventions.md)
-    * [Sample Configuration](introduction/sample-configuration.md)
-    * [Additional resources](introduction/additional-resources.md)
-* [Work in progress - messy](work-in-progress.md)
-    * [Emacs Quick Reference](spacemacs-basics/emacs-quick-reference.MD)
     * [Writing Emacs Lisp](writing-emacs-lisp/index.md)
+* [Contributors](contributors.md)
+* [About this workshop](introduction/about-this-workshop.md)
+    * [Workshop conventions](introduction/workshop-conventions.md)
+    * [Sample Configuration](introduction/sample-configuration.md)
+    * [Additional resources](introduction/additional-resources.md)
+<!-- * [Work in progress - messy](work-in-progress.md) -->
+<!--     * [Emacs Quick Reference](spacemacs-basics/emacs-quick-reference.md) -->
+<!--     * [Paredit](structural-editing/classic-emacs.md) -->
+<!--         * [Paredit keybindings](structural-editing/paredit-keybindings.md) -->
+<!--         * [Using Paredit](structural-editing/paredit.md) -->
+<!-- * [Work in progress - messy](work-in-progress.md) -->
+<!--     * [Emacs Quick Reference](spacemacs-basics/emacs-quick-reference.MD) -->
