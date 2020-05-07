@@ -11,8 +11,8 @@
 | `, '`      | start the REPL                             |
 | `, e f`    | evaluate a function                        |
 | `, e ;`    | evaluate a function, add result as comment |
-| `, s s`    | toggle between source and repl             |
-| `, t a`    | run all tests                              |
+| `, m b`    | show running REPL's (browse) |
+| `, t a`    | run all tests (use in test namespace)       |
 
 
 ## Working with projects
@@ -23,7 +23,7 @@
 | `SPC p f`    | project specific find file           |
 | `SPC p a`    | toggle between source and test files |
 | `SPC TAB`    | switch to previous buffer            |
-| `SPC /`      | search in project                    |
+| `SPC s s`    | swoop search in project              |
 | `SPC b b`    | List current buffers                 |
 | `SPC b d`    | Kill current buffer                  |
 | `SPC number` | Jump to window number                |
