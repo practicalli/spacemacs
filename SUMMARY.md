@@ -270,17 +270,17 @@
         * [Show REPL Buffer on connect](external-repl/show-repl-on-connect.md)
         * [REPL Command Menu](external-repl/repl-command-menu.md)
         * [REPL History](external-repl/repl-history.md)
-    * [Hydra menus](reference/hydra.md)
+    <!-- * [Hydra menus](reference/hydra.md) -->
 
 * [Misc](misc/index.md)
     * [Artist mode](misc/artist-mode.md)
     * [Unicode Characters](misc/unicode-characters.md)
     * [Writing Emacs Lisp](writing-emacs-lisp/index.md)
 * [Contributors](contributors.md)
-* [About this workshop](introduction/about-this-workshop.md)
-    * [Workshop conventions](introduction/workshop-conventions.md)
-    * [Sample Configuration](introduction/sample-configuration.md)
-    * [Additional resources](introduction/additional-resources.md)
+<!-- * [About this workshop](introduction/about-this-workshop.md) -->
+<!--     * [Workshop conventions](introduction/workshop-conventions.md) -->
+<!--     * [Sample Configuration](introduction/sample-configuration.md) -->
+<!--     * [Additional resources](introduction/additional-resources.md) -->
 <!-- * [Work in progress - messy](work-in-progress.md) -->
 <!--     * [Emacs Quick Reference](spacemacs-basics/emacs-quick-reference.md) -->
 <!--     * [Paredit](structural-editing/classic-emacs.md) -->
