@@ -69,5 +69,5 @@
 
 | keybinding | action                                       |
 |------------|----------------------------------------------|
+| `SPS q r` | Restart Spacemacs keeping window and buffer layouts |
 | `SPC q q` | Quit Spacemacs                                             |
-| `SPS q r` | Restart Spacemacs keeping current window and buffer layout |
