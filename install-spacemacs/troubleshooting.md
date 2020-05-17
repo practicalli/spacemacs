@@ -46,10 +46,11 @@ If a package has an issue in its newest version, you can configure spacemacs to 
 
 * [Spacemacs - managing broken Emacs packages](http://jr0cket.co.uk/2017/03/spacemacs-managing-broken-emacs-packages.html)
 
-## Debugging Spacemacs
 
+## Debugging Spacemacs
 The [Spacemacs debugging page](https://github.com/syl20bnr/spacemacs/wiki/Debugging) explains concepts needed to debug Spacemacs and to report issues in an useful way.
 
+* [Debugging memory issues](https://www.emacswiki.org/emacs/EmacsMemoryDebugging)
 
 ## Issues with spawnd processes
 `SPC p a` (`list-processes`) lists the processes started by or from within Spacemacs, eg. for Clojure its `nrepl-server` and `nrepl-connection` processes when running `cider-jack-in`. Use `SPC a P` (`proced`) to see all operating system processes.
