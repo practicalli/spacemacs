@@ -68,3 +68,4 @@ If there are problems shutting down the REPL, `, s q q` (`cider-quit`),  check t
 `q` to quit the process list buffer.
 
 > #### Hint::`SPC a P` lists all operating system processes
+> `SPC SPC helm-top` runs a process list
