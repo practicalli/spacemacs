@@ -1,6 +1,6 @@
 # Searching Projects
 
-`SPC s p` (`helm-swoop`) enables a a fuzzy logic search through the content of all the files in the current project.  A helm pop-up displays, typing a pattern shows matching lines from all the files in the project.
+`SPC /` and `SPC s p` (`spacemacs/helm-project-smart-do-search`) enables a a fuzzy logic search through the content of all the files in the current project.  A helm pop-up displays, typing a pattern shows matching lines from all the files in the project.
 
 Use `C-j` and `C-k` to move down and up through the search results.
 
