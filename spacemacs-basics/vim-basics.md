@@ -31,6 +31,15 @@ To help make Vim style editing become a sub-conscious act you should [learn to s
 [![Vim Adventures - learn VIM while playing a game](/images/vim-adventures.png)](https://vim-adventures.com/)
 
 
+## Lecture and exercises on Vim
+A very interesting lecture on editors, focused on learning Vim and understanding why its so powerful.  [Transcript and exercises](https://missing.csail.mit.edu/2020/editors/) are also available.
+
+{% youtube %}
+https://youtu.be/a6Q8Na575qc
+{% endyoutube %}
+
+
+
 ## Other learning resource for Vim include:
 
 * [Spacemacs: Migrating from Vim](http://spacemacs.org/doc/VIMUSERS.html)
