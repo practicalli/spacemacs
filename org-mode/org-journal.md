@@ -23,7 +23,7 @@
 > `-` is a list and `- [ ]` adds a checkbox to the list.  `, T c` will toggle the mark in the checkbox, ticked or empty, for the current line.
 
 
-## Tracking progress
+## Tracking progress with TODO states
 Any Heading level can be assigned a [TODO state](/org-mode/todo-states.md) to demonstrate progress and use the journal to manage tasks for the day.
 
 `, L` or `S-🡆` (`org-shiftright`) cycles through the states, which are `TODO` `DOING` and `DONE` by default.  `, H` or `S-🡄` to cycle the states in reverse.
@@ -34,6 +34,21 @@ Headings in the TODO state are automatically carried over when creating the next
 > Practicalli recommends reviewing each days journal at the end of the day, before creating the next day.  This is a great opportunity to take a few moments to reflect on the day.
 >
 > `, p` jumps to the previous days journal if items seem to be missing. Manually copy any missing items. `, n` to view today's journal and paste those missing items.
+
+
+## Tracking progress with checkboxes
+`- [ ]` on a new line adds a checkbox as a list item.
+
+`, T c` toggles the done or not done state of the checkbox from anywhere on the line.
+
+Add a cookie to a header containing tasks to show the number or percentage of tasks complete.
+
+* `[/]` to show number of complete task and total
+* `[%]` to show the percentage of completed tasks
+
+`C-c C-c` will force an update of the checkbox totals in the cookie for the current heading.
+
+![Spacemacs Org-mode Journal - list checkbox tracking cookies](/images/spacemacs-org-mode-journal-list-checkbox-tracking-cookie.png)
 
 
 ## Configure org-journal
