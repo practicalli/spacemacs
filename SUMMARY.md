@@ -73,7 +73,7 @@
         * [iedit replace multiple words](spacemacs-basics/evil-tools/iedit-replace-multiple-words.md)
     * [Replace text across projects](spacemacs-basics/evil-tools/replacing-text-across-projects.md)
 * [Multiple Cursors](spacemacs-basics/evil-tools/multiple-cursors.md)
-* [go menu](spacemacs-basics/go-menu.md)
+* [Evil g menu](spacemacs-basics/evil-g-menu.md)
 * [Evil z menu](spacemacs-basics/evil-z-menu.md)
 
 ## Clojure Development
