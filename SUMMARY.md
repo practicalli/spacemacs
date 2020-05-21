@@ -270,6 +270,8 @@
         * [Show REPL Buffer on connect](external-repl/show-repl-on-connect.md)
         * [REPL Command Menu](external-repl/repl-command-menu.md)
         * [REPL History](external-repl/repl-history.md)
+* [MacOSX configuration](os-specific-config/macosx.md)
+
     <!-- * [Hydra menus](reference/hydra.md) -->
 
 * [Misc](misc/index.md)
