@@ -36,7 +36,7 @@ Mutable containers, `atom`, `ref`, can also be inspected.  The class of the cont
 
 ![Spacemacs - Clojure - Inspect atom containing a vector](/images/spacemacs-clojure-inspect-atom-containing-persistent-vector.png)
 
-Inspecting an atom or ref gives the value at the current time.  The inspector does not update if the value of the atom or ref is updated. Use `r` in the inspector buffer or restart the inspector with `, d v` each time you want to check if the value has changed.
+Inspecting an atom or ref gives the value at the current time.  The inspector does not update if the value of the atom or ref is updated. Use `r` in the inspector buffer to refresh or restart the inspector with `, d v` each time you want to check if the value has changed.
 
 
 ## Inspecting Var meta data
