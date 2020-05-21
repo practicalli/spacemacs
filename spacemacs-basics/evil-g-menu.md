@@ -34,3 +34,6 @@
 
 ## Changing text case
 `g u` to change the current character or selection to lowercase, `g U` for uppercase.
+
+> #### Hint::Toggle case with `~`
+> `~` will toggle the case of the current character or selected region.
