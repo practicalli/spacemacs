@@ -52,6 +52,8 @@ The issue is added to the Issues section of Magit status.
 
 `RET` on the issue opens the issue and shows the details.  Related issues are shown as a link, `RET` on the link opens the related issue in the browser.
 
+`, ,` to save and create the issue on the remote forge.  `, k` to cancel.
+
 ![Spacemacs Magit Forge - Issue details](/images/spacemacs-magit-forge-issue-details.png)
 
 ## Create a remote fork
@@ -91,6 +93,6 @@ For the target repository, select the upstream repository
 
 The description of the change is show and can be edited for the pull request description.
 
-![Spacemacs Magit Forge - create pull request text](/images/spacemacs-magit-forge-create-pull-request-text.png)
+`, ,` to confirm the message and create the pull request on the upstream repository. `, k` to cancel the pull request.
 
-`, ,` to confirm the message and create the pull request on the upstream repository.
+![Spacemacs Magit Forge - create pull request text](/images/spacemacs-magit-forge-create-pull-request-text.png)
