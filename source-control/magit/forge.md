@@ -83,11 +83,11 @@ Create a branch on the fork with a descriptive name of the change you want to su
 
 For the source repository, select the branch of the local fork repository.
 
-[Spacemacs Magit Forge - create pull request source branch](/images/spacemacs-magit-forge-create-pull-request-source-branch.png)
+![Spacemacs Magit Forge - create pull request source branch](/images/spacemacs-magit-forge-create-pull-request-source-branch.png)
 
 For the target repository, select the upstream repository
 
-[Spacemacs Magit Forge - create pull request target branch](/images/spacemacs-magit-forge-create-pull-request-target-branch.png)
+![Spacemacs Magit Forge - create pull request target branch](/images/spacemacs-magit-forge-create-pull-request-target-branch.png)
 
 The description of the change is show and can be edited for the pull request description.
 
