@@ -96,3 +96,8 @@ The description of the change is show and can be edited for the pull request des
 `, ,` to confirm the message and create the pull request on the upstream repository. `, k` to cancel the pull request.
 
 ![Spacemacs Magit Forge - create pull request text](/images/spacemacs-magit-forge-create-pull-request-text.png)
+
+> #### Hint::Markdown support
+> Pull Request descriptions will use markdown when displayed in GitHub.
+>
+> ``code`` for code / key highlighting, `#` for headings, `----` for horizontal lines
