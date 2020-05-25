@@ -183,7 +183,7 @@
         * [Pull Changes](source-control/magit/pull-changes.md)
         * [Push Changes](source-control/magit/push-changes.md)
         * [Try Pull Requests](source-control/magit/try-pull-requests.md)
-    * [Magit Forge](source-control/magit/forge.md)
+    * [Issues, PRs, Forks](source-control/magit/forge.md)
     * [Changing History](source-control/magit/changing-history.md)
         * [Squash commits](source-control/magit/commit-squash.md)
         * [Interactve Rebasing](source-control/magit/interactive-rebasing.md)
