@@ -1,6 +1,6 @@
 # Getting started with Spacemacs
 
-1. Install prerequisites: [Emacs version 26.3](/before-you-start/install-emacs.html), [Java 8 or 11](/before-you-start/install-emacs.html) and [Clojure CLI tools](/before-you-start/install-emacs.html).
+1. Install prerequisites: [Emacs version 26.3](/before-you-start/install-emacs.html), [Java 8 or 11](/before-you-start/install-emacs.html) and the [Recommended Command Line tools](/before-you-start/recommended-command-line-tools.md).
 2. Clone or download the Spacemacs, first removing `~/.emacs.d` if it already exists.
 3. Clone the [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/) configuration, or run the Spacemacs install wizard and follow the [additional configuration section](additional-configuration.md).
 

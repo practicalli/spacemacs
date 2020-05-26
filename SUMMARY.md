@@ -23,6 +23,7 @@
     * [Install Emacs](before-you-start/install-emacs.md)
     * [Install Java](before-you-start/install-java.md)
     * [Install Clojure](before-you-start/install-clojure.md)
+    * [Command Line Tools](before-you-start/recommended-command-line-tools.md)
 * [Install Spacemacs](install-spacemacs/index.md)
     * [Additional Configuration](install-spacemacs/additional-configuration.md)
         * [Add Clojure layer](install-spacemacs/clojure-layer.md)
