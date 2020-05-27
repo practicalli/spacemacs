@@ -32,16 +32,31 @@ img, div, table {
 }
 
 
-/* Make inline and code blocks stand out   */
-.markdown-section pre>code, .markdown-section code {
+/* Style code blocks  */
+.markdown-section pre>code {
     font-family: "Ubuntu Mono", Consolas, Menlo, Courier, monospace;
-    background-color: #f7f7f7;
-    color: #702b70;             /* Spacemacs purple*/
+    background-color: #fdf6e4;
     font-size: 1.1em;
     margin: 0;
     padding: 0.1em 0.1em;
  }
 
+/* Style pre-formatted section - surrounding code blocks */
+.markdown-section pre {
+    background-color: #fdf6e4;
+}
+
+
+/* Style inline blocks  */
+.markdown-section p>code {
+    font-family: "Ubuntu Mono", Consolas, Menlo, Courier, monospace;
+    background-color: #f7f7f7;
+    /* background-color: #fdf6e4; */
+    color: #702b70;            /* Spacemacs purple*/
+    font-size: 1.1em;
+    margin: 0;
+    padding: 0.1em 0.1em;
+}
 
 .CodeMirror pre {
     font-size: 1.8em;
