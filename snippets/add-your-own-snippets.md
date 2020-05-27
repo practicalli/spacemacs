@@ -1,6 +1,11 @@
 # Adding Custom Snippets
 `helm-yas-create-snippet-on-region` is an effective way to create snippets in addition to those Spacemacs provides.
 
+{% youtube %}
+https://youtu.be/51as0UrssLM
+{% endyoutube %}
+
+
 ## Create snippets
 Select a code block that you often create and using the yasnippets tools to create your own generic template
 
