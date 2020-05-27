@@ -31,3 +31,9 @@ Contribute changes via pull requests:
 {% youtube %}
 https://youtu.be/OMS-3Jl05mE
 {% endyoutube %}
+
+Making a change to a pull request you have created is also easy to do
+
+{% youtube %}
+https://youtu.be/gwFGSVtFrgQ
+{% endyoutube %}
