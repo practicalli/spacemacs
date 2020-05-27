@@ -27,3 +27,8 @@ The push menu has the `-f` switch to force a push with a lease (the recommended 
 > Communicate clearly in advance and get agreement from other contributors if a force is the only option.
 
 
+## Pushing changes to an open pull request
+
+{% youtube %}
+https://youtu.be/gwFGSVtFrgQ
+{% endyoutube %}
