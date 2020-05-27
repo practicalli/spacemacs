@@ -13,8 +13,17 @@ Commits can be pushed to a remote repository using Magit Status buffer.
 
 
 ## Push options
-`-f` to force a push, should the remote repository have a conflicting change history (avoid this when working with other people)
+Changing the local history with a commit amend, extend, reword, rebase or squash will prevent changes being pushed to a remote repository that has the original history unchanged.
+
+Magit will show `Unpulled from` and `Unpushed to` sections when the local and remote histories are different.
+
+![Spacemacs Magit Push - changed histories](/images/spacemacs-magit-push-changed-history.png)
+
+The push menu has the `-f` switch to force a push with a lease (the recommended force type).
+
+> #### Hint::Fix rather than Force
+> Pushing a new commit that fixes an issue is usually preferable than re-writing history and forcing a push when working on a shared repository.
+>
+> Communicate clearly in advance and get agreement from other contributors if a force is the only option.
 
 
-> #### TODO::work in progress, sorry
-> Pull requests are welcome
