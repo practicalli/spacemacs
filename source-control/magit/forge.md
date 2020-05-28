@@ -1,4 +1,4 @@
-# Magit Forge
+# Magit Forge - issues, PRs and forking
 Magit Forge is used to talk to GitHub, GitLab and similar services, collectively referred to as forges.
 
 Forge can retrieve the list of issues and pull requests from a remote repository. Issues, pull requests and forks can be created on a remote repository.
