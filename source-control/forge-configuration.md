@@ -73,11 +73,21 @@ Add `auth-sources` to specify the location of the encrypted token file in the `d
 ## Configure the number of open and closed topics shown in forge
 A topic is an issue or pull request and the list of each can be configured to display a number of open and closed items.
 
-The configuration will show 100 open topics and not show any closed topics, for both issues and pull requests.
+The configuration will show 100 open topics and never show any closed topics, for both issues and pull requests.
 
 ```lisp
  (setq  forge-topic-list-limit '(100 . 0))
 ```
+
+To occasionally show closed topics, set the closed value to a negative number to the number of closed items wanted to be displayed.
+
+`SPC SPC forge-toggle-closed-visibility` to toggle the view of closed topics in each list
+```lisp
+ (setq  forge-topic-list-limit '(100 . -10))
+```
+
+
+
 
 The first number is the open items to be displayed, the second number is the closed items to display.  `0` means no items will be displayed.
 

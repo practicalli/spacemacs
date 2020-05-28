@@ -27,7 +27,16 @@ Using forge commands before adding the repository will cause an error
 ![Spacemacs Magit - forge add repository](/images/spacemacs-magit-forge-require-forge-add-repository.png)
 
 
-## List issues
+## Fetching topics (issues and pull request lists)
+`f f` will fetch issues and pull requests based on the `forge-topic-list-limit`.
+
+`f t`
+
+`f n`
+
+
+## Issues list
+
 `l i` opens a buffer with a list of issues with the most recent at the top.  Issue labels also show in the list using the the color assigned on GitHub.
 
 ![Spacemacs Magit Forge Issues list with labels](/images/spacemacs-magit-forge-issues-status.png)
@@ -42,6 +51,8 @@ In the issue list buffer:
 
 > #### Hint::Configure number of open and closed items shown
 > Add  `(setq  forge-topic-list-limit '(100 . 0))` to the `dotspacemacs/user-config` section of `.spacemacs` to hide all closed issues and pull requests from the list, showing up to 100 open items from each.
+>
+> Or `(setq  forge-topic-list-limit '(100 . -10))` and use `SPC SPC forge-toggle-closed-visibility` to toggle showing 10 of the latest closed topics for issues and pull requests.
 >
 > [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/) configuration contains this setting.
 
