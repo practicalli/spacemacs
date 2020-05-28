@@ -171,6 +171,7 @@
     * [Git Status](source-control/magit/status.md)
         * [MaGit Status Fullscreen](source-control/magit/status-fullscreen.md)
     * [Branching](source-control/magit/branching.md)
+    * [Staging changes](source-control/magit/staging-changes.md)
     * [Commit changes](source-control/magit/commit-changes.md)
         * [Create commit](source-control/magit/commit-create.md)
         * [Amend commit](source-control/magit/commit-amend.md)
