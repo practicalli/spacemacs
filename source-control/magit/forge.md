@@ -40,6 +40,11 @@ In the issue list buffer:
 
 `q` to quit and close the buffer
 
+> #### Hint::Configure number of open and closed items shown
+> Add  `(setq  forge-topic-list-limit '(100 . 0))` to the `dotspacemacs/user-config` section of `.spacemacs` to hide all closed issues and pull requests from the list, showing up to 100 open items from each.
+>
+> [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/) configuration contains this setting.
+
 
 ## Create an issue
 `c i` to create a new issue on the current repository.
