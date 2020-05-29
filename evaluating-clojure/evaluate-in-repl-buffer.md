@@ -1,10 +1,10 @@
 # Evaluate in the REPL Buffer
 If you are used to working directly in the REPL, then you can easily open and work in a REPL buffer.  You will need a Clojure project open and must have started a REPL.
 
-`, s s` toggles between the REPL buffer and a source code buffer.  The REPL buffer will be shown in a new window if it is not currently being displayed.
+`, s a` toggles between the REPL buffer and a source code buffer.  The REPL buffer will be shown in a new window if it is not currently being displayed.
 
-> #### TODO::TODO:Add screencast for this whole section
-
+> #### Hint::Evaluate in the source file buffers
+> [Evaluating code source file buffers](index.md) is typically more effective as the code is saved to a file.  The whole buffer can be evaluated, `, e b` or just a specific expression, `, e f`.  Even nested expressions can be evaluated, `, e e`.  Expressions results can be added as a comment, `, e ;`, to have a record of results and results can also be pretty printed `, e P`.
 
 ## Change REPL buffer namespace
 `user` is the default namespace of the REPL.  This namespace includes the `doc` and `source` functions from `clojure.repl`.  This namespace is different to that of your project, so you will need to change the namespace of the REPL before calling any code in a project.
@@ -19,16 +19,13 @@ The REPL prompt should now show the namespace you have changed into.
 
 Type in expressions at the REPL prompt and press `RET` to evaluate them.
 
-`C-<up-arrow>` will scroll backwards through the history of expressions entered in the REPL buffer. `C-<down-arrow>` scrolls forward through the history.
+`C-RET` to add a new line and write an expression over multiple lines.  `RET` to evaluate the expression when ready.
 
-
-> #### Hint::Scrolling in Evil normal state
-> `C-k` and `C-j` will scroll backwards and forwards respectively through the REPL expression history, when you are in Evil normal state.
+`C-j` and `C-k` in Evil normal state cycle through the history of expressions entered in the REPL buffer.
 
 
 ## Send expressions to the REPL buffer
 `, s f` will send the current expression to the REPL to be evaluated.
-
 
 ![Spacemacs - Clojure - Send expressions to REPL](/images/spacemacs-clojure-cider-send-expression-to-repl.png)
 
@@ -48,7 +45,7 @@ The `in-ns` function will change the REPL namespace to that specified in its arg
 
 
 ## REPL Buffer shortcut menu
-`.` at the start of a line in Evil Insert state will open a list of command shortcuts for the REPL.
+`,` at the start of a line in Evil Insert state will open a list of command shortcuts for the REPL.
 
 ![Spacemacs - Clojure REPL - shortcut menu](/images/spacemacs-cider-repl-command-shortcuts.png)
 
