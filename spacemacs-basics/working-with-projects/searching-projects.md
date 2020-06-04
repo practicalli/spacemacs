@@ -31,11 +31,13 @@ Use the `-g` option for a filename to search (globbing), or `-g!` for a filename
 ## Example search patterns
 Additional search patterns that work with `ripgrep` or `ag`.
 
-`-G*.cljs -w time` - search for the word "time" in all `.cljs` files
+`-G*time` - search for the word "time" in all files
+
+`-G*time -g*.clj` - search for the word "time" in `.clj` files only
 
 `-tclojure time` - search for "time" in all `.{clj,cljs,cljc}` files
 
-`uno\ due\ tre` - search for the string "uno duo tre"
+`uno\ duo\ tre` - search for the string "uno duo tre"
 
 `-C5 foo` - search for "foo" but show 5 lines of context before and after the match
 
