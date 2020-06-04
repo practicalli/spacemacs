@@ -27,6 +27,8 @@ https://youtu.be/rZNYLGw1qFk
 
 [Spacemacs](http://spacemacs.org/) is a community configuration providing a consistent and simple to learn approach to using all the features and power of [Emacs](https://www.gnu.org/software/emacs/).  [Spacemacs](https://spacemacs.org) also integrates the raw text manipulation speed of Vim and multi-modal editing into the Emacs experience, enabling you to be even more productive.
 
+> #### WARNING::Book last updated
+> {{ gitbook.time }}
 
 ---
 
