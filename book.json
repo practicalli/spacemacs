@@ -71,6 +71,7 @@
         }
     },
     "variables": {
-        "host": "practical.li"
+        "host": "practical.li",
+        "p9i-clojure-deps-edn": "https://github.com/practicalli/clojure-deps-edn"
     }
 }
