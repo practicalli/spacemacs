@@ -11,10 +11,37 @@ In Clojure the unit under test is the function.  Unit test coverage should test 
 * Group assertions in `testing` and provide a meaningful description of that grouping, adding more information when reviewing test failures especially for larger code bases.
 
 
+## Requiring Namespaces
+A test namespace has a singular purpose to test a matching application namespace.  Therefore the idiomatic approach is to `:refer` specific functions from `clojure.test`.
 
+{% tabs repl="In the REPL", project="In a Clojure Project" %}
+
+{% content "repl" %}
+```clojure
+(require '[clojure.test :refer [deftest is testing]])
+```
 
 The namespace under test should be referred, typically using the alias SUT for software under test.
 
+```clojure
+(require '[practicalli.playground :as SUT])
+```
+
+
+{% content "project" %}
+
+Add `clojure.test` to the namespace definition along with the namespace under test.
+
+```clojure
+(ns practicalli.app-namespace-test
+  (:require '[clojure.test :refer [deftest is testing]]
+             [practicalli.app-namespace :as SUT]))
+```
+
+{% endtabs %}
+
+> #### Hint::SUT alias - software under test
+> The alias `SUT`, meaning software under test, is a common convention in unit testing.  Using the SUT alias makes it easier for developers to see which functions from the application are being tested at a glance.
 
 
 ## References
