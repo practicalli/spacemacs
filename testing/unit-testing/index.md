@@ -44,6 +44,22 @@ Add `clojure.test` to the namespace definition along with the namespace under te
 > The alias `SUT`, meaning software under test, is a common convention in unit testing.  Using the SUT alias makes it easier for developers to see which functions from the application are being tested at a glance.
 
 
+## Project structure with tests
+By convention, separate `src` and `test` directories are used to hold the source code and the code that tests the source code.
+
+For each source code file in `src` there should be a corresponding file in test with the same name and `-test` postfix.
+
+For example, code to test the `src/codewars/rock_paper_scissors.clj` is saved in the file `src/codewars/rock_paper_scissors_test.clj` file.
+
+![Clojure project structure - src and test branches](/images/clojure-project-structure-src-test-tree.png)
+
+> #### Hint::Create Projects from templates
+> Templates typically include a parallel `test` and `src` directory structure.  The `clj-new` tool has build it templates (app, lib) and will create `src` and `test` directories in the projects it creates.
+>
+> `clojure -A:clj-new app practicalli/rock-paper-scissors-lizard-spock`
+
+<!-- TODO: clj-new - does this add a test namespace if you add a src namesspace to an existing project? -->
+
 ## References
 * [Example based unit testing in Clojure](https://purelyfunctional.tv/mini-guide/example-based-unit-testing-in-clojure/) - PurelyFunctional.tv
 https://purelyfunctional.tv/mini-guide/example-based-unit-testing-in-clojure/
