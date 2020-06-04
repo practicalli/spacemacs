@@ -97,8 +97,8 @@
     * [REPL buffer](evaluating-clojure/evaluate-in-repl-buffer.md)
 * [Testing](testing/index.md)
     * [Unit Testing](testing/unit-testing/index.md)
+        * [CIDER test & deps.edn](testing/unit-testing/cider-test-deps-edn-projects.md)
         * [Running Tests](testing/unit-testing/running-tests.md)
-        * [Configure deps.edn projects](testing/unit-testing/configure-deps-edn-projects.md)
     <!-- * [Contract Testing](testing/contract-testing/index.md) -->
     <!-- * [Generative Testing](testing/generative-testing/index.md) -->
     <!-- * [Integration Testing](testing/integration-testing/index.md) -->
