@@ -1,21 +1,20 @@
 # Unit Testing
-Clojure includes `clojure.test` namespace provides a unit testing framework.
+In Clojure the unit under test is the function.  Unit test coverage should test all public function that form the API of their respective namespace.
 
-Creating Leiningen and deps.edn projects from templates typically includes a test namespace for each source code namespace.
-
-`clojure.test` is included in the standard Clojure jar file, so no additional dependencies are required.
+`clojure.test` namespace provides a unit testing framework and is included in the Clojure library, so is available in all Clojure projects.
 
 
-## Organising test code
-Create a namespace that matches the source code namespace to be tested, with a `-test` postfix.  For example, code to test the ``practicalli.playground`` namespace is defined in the `practicalli.playground-test` namespace.
+## Principles for writing test code
+* One `test` namespace for each `src` namespace
+* One `deftest` function for each function under test
+* Multiple `is` assertions for one function
+* Group assertions in `testing` and provide a meaningful description of that grouping, adding more information when reviewing test failures especially for larger code bases.
 
-The idiomatic approach is to include just the function names used from the `clojure.test` namespace.
 
-`(require '[clojure.test :refer [deftest is testing]])`
+
 
 The namespace under test should be referred, typically using the alias SUT for software under test.
 
-`(require '[practicalli.playground :as SUT])`
 
 
 ## References
