@@ -36,6 +36,13 @@ Cloning the repository adds a `.spacemacs.d/init.el` configuration file which sh
 > If the practicalli.spacemacs.d repository is not used, then a `.spacemacs` configuration file is created when Spacemacs first runs. Read the [additional configuration section](additional-configuration.md) to add support for Clojure and many other development tools.   The `.spacemacs` file can be backed up at a GitHub Gist, `SPC g g b`.
 
 
+## Adding fonts and icons for doom modeline
+Practicalli/spacemacs.d configuration uses the modern looking doom modeline theme, which requires a few fonts and icons.
+
+`SPC SPC all-the-icons-install-fonts` once Spacemacs is running will install the fonts.  `SPC q r` to restart Spacemacs and see the finished results
+
+![Spacemacs - doom-gruvbox-light theme - home and spacemacs config buffers](/images/spacemacs-doom-gruvbox-light-theme-examples-home-spacemacs-config.png)
+
 
 ## Spacemacs is ready for action
 Spacemacs is now up and running and ready to take on the world.
