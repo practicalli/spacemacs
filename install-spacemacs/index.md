@@ -28,13 +28,13 @@ Clone your fork of Practicalli Spacemacs configuration to `.spacemacs.d` directo
 git clone git@github.com:my-github-account/spacemacs.d.git ~/.spacemacs.d
 ```
 
-This configuration is used instead of `~/.spacemacs`, so ensure no file of that name exists before running Spacemacs.
+Cloning the repository adds a `.spacemacs.d/init.el` configuration file which should be used instead of `~/.spacemacs`, so ensure a `.spacemacs` file does not exist before running Spacemacs.
 
 
-> #### Hint::
-> `.spacemacs` is the default Spacemacs configuration file created when Spacemacs is first run. This file can be backed up at a GitHub Gist, `SPC g g b`.
-> `.spacemacs.d/init.el` file is an alternative Spacemacs configuration location. If a ~/.spacemacs file is not found when Emacs starts, ~/.spacemacs.d/init.el is used if present.
-> Using .spacemacs.d makes it easier to create a git repository, especially if you would like to version other files such as snippets, layouts, etc.
+> #### Hint::Configuration options
+> `.spacemacs.d/init.el` file is the recommended location for a Spacemacs configuration as the `.spacemacs.d` directory is a git repository, so its contents can be version controlled, including snippets, layouts, etc.
+> If the practicalli.spacemacs.d repository is not used, then a `.spacemacs` configuration file is created when Spacemacs first runs. Read the [additional configuration section](additional-configuration.md) to add support for Clojure and many other development tools.   The `.spacemacs` file can be backed up at a GitHub Gist, `SPC g g b`.
+
 
 
 ## Spacemacs is ready for action
