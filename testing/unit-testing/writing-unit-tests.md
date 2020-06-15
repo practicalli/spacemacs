@@ -19,4 +19,10 @@ Unit tests are centered on assertions, testing if something returns a true or fa
     (is (predicate-function? arg))))
 ```
 
+## Project Examples: Code challenges with unit tests
+* [practicalli/codewars-guides](https://github.com/practicalli/codewars-guides) - deps.edn projects
+* [practicalli/exercism-clojure-guides](https://github.com/practicalli/exercism-clojure-guides) - Leiningen projects
+
+
+## Reference
 For full details, visit the [API for `clojure.test`](https://clojure.github.io/clojure/clojure.test-api.html)
