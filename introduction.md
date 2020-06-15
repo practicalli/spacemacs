@@ -34,7 +34,7 @@ Using the [practicalli/spacemacs.d]({{ P9ISpacemacsD }}) configuration adds seve
 
 The Practicalli configuration uses a light theme and the simplified doom mode line which again can be easily changed.
 
-![Spacemacs Practicalli/spacemacs.d configuration - sreenshot](/images/spacemacs-doom-gruvbox-light-theme-example-clojure-spec.png)
+[![Spacemacs Practicalli/spacemacs.d configuration - sreenshot](/images/spacemacs-doom-gruvbox-light-theme-example-clojure-spec.png)](/images/spacemacs-doom-gruvbox-light-theme-example-clojure-spec.png)
 
 > #### INFO::Book published
 > {{ gitbook.time }}
