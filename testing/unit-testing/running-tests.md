@@ -1,7 +1,9 @@
 # Running unit tests in Cider
 <kbd>SPC p a</kbd> switches between source and test buffers.
 
-<kbd>, t a</kbd> run all tests.
+<kbd>, t n</kbd> run all tests in the current namespace.  This also loads any changes to those tests.
+
+<kbd>, t a</kbd> run all tests.  If tests are changed or added, `, e f` to evaluate those tests to add them to the REPL or `, e b` on any test buffers that have changed.
 
 The results of running the tests are displayed in the mini-buffer, showing the number of tests run and how many passed and failed.
 
@@ -17,7 +19,7 @@ A test report is generated if any of the tests fail and is displayed in a new bu
 > Tests can be run from the source code buffer, however, only test code that has been evaluated in the REPL will run.
 
 ## Run Cider test results buffer
-Tests can be run from the `*cider-test-results*` buffer
+Tests can be run from the `*cider-test-results*` buffer, although this buffer does not support Evil normal state.
 
 <kbd>C-z</kbd> to switch to Emacs state in order for these keybindings to work.
 
