@@ -51,7 +51,7 @@ In the issue list buffer:
 >
 > Or `(setq  forge-topic-list-limit '(100 . -10))` and use `SPC SPC forge-toggle-closed-visibility` to toggle showing 10 of the latest closed topics for issues and pull requests.
 >
-> [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/) configuration contains this setting.
+> [practicalli/spacemacs.d]({{ P9ISpacemacsD }}) configuration contains this setting.
 
 
 ## Create an issue
@@ -115,7 +115,7 @@ Prompt for the name of the new remote repository
 >
 > Add `(setq forge-owned-blacklist '(("bad-hacks" "really-bad-hacks")))` to define accounts and organisations not to include.  This over-rides the `forge-owned-accounts` setting.
 >
-> [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/) repository contains these settings.
+> [practicalli/spacemacs.d]({{ P9ISpacemacsD }}) repository contains these settings.
 
 
  GitHub user and organization accounts owned

@@ -72,6 +72,10 @@
     },
     "variables": {
         "host": "practical.li",
-        "p9i-clojure-deps-edn": "https://github.com/practicalli/clojure-deps-edn"
+        "P9ISpacemacsD": "https://github.com/practicalli/spacemacs.d",
+        "P9IClojureDepsEdn": "https://github.com/practicalli/clojure-deps-edn",
+        "P9IClojureThroughCode": "https://github.com/practicalli/clojure-through-code",
+        "P9IIssuesUrl": "https://github.com/practicalli/spacemacs-content/issues",
+        "P9IPullRequestsUrl": "https://github.com/practicalli/spacemacs-content/pulls"
     }
 }

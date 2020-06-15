@@ -30,7 +30,7 @@ https://youtu.be/rZNYLGw1qFk
 [![Built with Spacemacs](https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg)](http://github.com/syl20bnr/spacemacs)
 
 ## Practicalli Spacemacs configuration
-Using the `practicalli/spacemacs.d` configuration adds several layers and some custom code to make a complete development experience for Clojure, which can easily be used for other languages as well.
+Using the [practicalli/spacemacs.d]({{ P9ISpacemacsD }}) configuration adds several layers and some custom code to make a complete development experience for Clojure, which can easily be used for other languages as well.
 
 The Practicalli configuration uses a light theme and the simplified doom mode line which again can be easily changed.
 
