@@ -101,11 +101,23 @@
         * [Writing Unit Tests](testing/unit-testing/writing-unit-tests.md)
         * [Running Tests](testing/unit-testing/running-tests.md)
         * [Refactor Unit Tests](testing/unit-testing/refactor-unit-tests.md)
+        <!-- * [Expectations](testing/unit-testing/clojure-test-expectations.md) -->
     <!-- * [Contract Testing](testing/contract-testing/index.md) -->
     <!-- * [Generative Testing](testing/generative-testing/index.md) -->
     <!-- * [Integration Testing](testing/integration-testing/index.md) -->
     <!-- * [Performance Testing](testing/performance-testing/index.md) -->
     <!-- * [Load/Stress Testing](testing/load-stress-testing/index.md) -->
+* [Navigating code](navigating-code/index.md)
+    * [Expressions](navigating-code/expressions.md)
+    * [Markers](navigating-code/markers.md)
+    * [Namespaces](navigating-code/namespaces.md)
+    * [Names - Symbols](navigating-code/names-symbols.md)
+    * [Function Definitions](navigating-code/function-definitions.md)
+    * [Java Definitions](navigating-code/java-definitions.md)
+        * [Java Definitions](navigating-code/local-java-sources.md)
+    * [Expressions](navigating-code/expressions.md)
+    * [Code Folding](navigating-code/code-folding.md)
+        * [Folding methods](navigating-code/code-folding-methods.md)
 * [Structural Editing](structural-editing/index.md)
     * [cleverparens](structural-editing/cleverparens.md)
     * [Smartparens](structural-editing/smartparens.md)
@@ -120,16 +132,6 @@
 * [Snippets](snippets/index.md)
     * [Clojure Snippets](snippets/clojure-snippets.md)
     * [Add your own Snippets](snippets/add-your-own-snippets.md)
-* [Navigating code](navigating-code/index.md)
-    * [Markers](navigating-code/markers.md)
-    * [Namespaces](navigating-code/namespaces.md)
-    * [Names - Symbols](navigating-code/names-symbols.md)
-    * [Function Definitions](navigating-code/function-definitions.md)
-    * [Java Definitions](navigating-code/java-definitions.md)
-        * [Java Definitions](navigating-code/local-java-sources.md)
-    * [Expressions](navigating-code/expressions.md)
-    * [Code Folding](navigating-code/code-folding.md)
-        * [Folding methods](navigating-code/code-folding-methods.md)
 * [Refactor code](refactor/index.md)
     * [Similar function call name](refactor/similar-function-call-name.md)
     * [Within a function](refactor/within-a-function.md)
@@ -199,6 +201,8 @@
 * [GitHub](source-control/github/index.md)
     * [Gists](source-control/github/gists.md)
 * [GitLab](source-control/gitlab/index.md)
+
+
 
 <!-- ## ClojureScript features -->
 
