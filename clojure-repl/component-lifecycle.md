@@ -7,6 +7,10 @@ Example component lifecycle libraries included
 * [integrant](https://github.com/weavejester/integrant)
 * [component](https://github.com/stuartsierra/component)
 
+## Configure a deps.edn project
+[Set up a project to work with component lifecycle service](https://practicalli.github.io/clojure/repl-driven-development/configure-repl-startup.html), for example by adding components to the `dev.clj` file under a `dev` directory.
+
+To load the service code automatically, add `require` and `in-ns` expressions to `dev/user.clj` and use the `-A:dev` alias when starting the REPL from Spacemacs.
 
 ## Example project with component lifecycle
 {% tabs mount="Mount", integrant="Integrant", component="Component" %}
