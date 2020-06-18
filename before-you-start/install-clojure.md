@@ -1,9 +1,10 @@
 # Install Clojure
 Establish a Clojure environment by installing the following:
-* rlwrap, a read line tool for an interactive command line
 * Clojure CLI tools to run the REPL and projects (Leiningen and Boot should also work)
-* clj-new to create projects from templates
+* practicalli/clojure-deps.edn to create projects and use other Clojure community CLI tools
 * clj-kondo to lint your code and show syntax errors / idioms as you type
+* (optional) rlwrap, a read line tool for an interactive command line
+* (optional) Babashka to run a shell for Clojure scripting
 
 ## Clojure CLI tools
 Clojure CLI tools provides the simplest way to run the Clojure REPL and Clojure projects.
@@ -55,7 +56,7 @@ Fork and clone the [practicalli/clojure-deps-ed](https://github.com/practicalli/
 git clone git@github.com:your-fork/clojure-deps-edn.git ~/.clojure
 ```
 
-Or edit `~/.clojure/deps.edn` and add the alias called `:new` to create new Clojure projects from templates.
+Alternatively, edit `~/.clojure/deps.edn` and add the alias called `:new` to create new Clojure projects from templates.
 
 ```clojure
   :new
@@ -64,7 +65,7 @@ Or edit `~/.clojure/deps.edn` and add the alias called `:new` to create new Cloj
 ```
 
 
-## Install clj-kondo lint tool
+## Install clj-kondo static analysis tool
 [clj-kondo](https://github.com/borkdude/clj-kondo) performs static analysis on Clojure, ClojureScript and EDN, without the need of a running REPL. It informs you about potential errors while you are typing.
 
 Install the [clj-kondo binary](https://github.com/borkdude/clj-kondo/blob/master/doc/install.md#installation-script-macos-and-linux).  `clj-kondo --version` should run in a terminal shell.
