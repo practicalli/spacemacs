@@ -87,3 +87,13 @@ Add the `syntax-checking` layer
 `SPC f s` to save and `SPC q r` to restart Emacs and download any additional packages.
 
 clj-kondo has sensible default configuration, however its simple to [add your own configuration](https://github.com/borkdude/clj-kondo/blob/master/doc/config.md)
+
+
+## Babashka Clojure Scripting (optional)
+[Babashka](https://github.com/borkdude/babashka#installation) is a command line shell that runs Clojure scripts, an alternative to Bash scripting.  As [Babashka](https://github.com/borkdude/babashka#installation) runs Clojure it can also be used from Spacemacs by starting an nrepl service and using `cider-connect-clj`
+
+```shell
+bb -nrepl
+```
+
+[Babashka install guide](https://github.com/borkdude/babashka#installation)
