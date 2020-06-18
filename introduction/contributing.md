@@ -1,18 +1,21 @@
-## Contributing to the guide
+## Contributing to this guide and to Spacemacs
+[practicalli/spacemacs-content](https://github.com/practicalli/spacemacs-content/) contains the markdown content used to generate the book.  Please raise all issues and pull requests on this website.
 
-Contributions to the content of this workshop are welcome, either via
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/spacemacs-content?style=for-the-badge)
 
-* Disqus comments on each page
+[![Content ideas and other issues](https://img.shields.io/github/issues/practicalli/spacemacs-content?label=content%20ideas%20and%20issues&logoColor=green&style=for-the-badge)](https://github.com/practicalli/spacemacs-content/issues)
 
-* [Issues](https://github.com/practicalli/spacemacs-content/projects/1) or [Pull requests](https://github.com/practicalli/spacemacs-content/pulls) (small and ideally page specific, avoid changes over multiple pages)
+[![Pull requests](https://img.shields.io/github/issues-pr/practicalli/spacemacs-content?style=for-the-badge)](https://github.com/practicalli/spacemacs-content/pulls)
 
-* [#practicalli channel on Clojurians Slack community](http://clojurians.slack.com/messages/practicalli) - [sign up for a free account](https://clojurians.net/)
+## Pull requests
+Please keep pull requests small and focused, as they are much quicker to review and easier to accept.  Ideally PR's should be for a specific page or at most a section.
+
+A PR with a list of changes across different sections will not be merged, it will be reviewed and changes merged eventually.
 
 By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](http://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed in the [contributors](contributors.html) section of this workshop.
 
-Any contributors will be noted in the [contributors](/contributors.html) section.
+<!-- TODO:  Add GitHub issue templates, similar to those on practicalli/blog-content -->
 
-Thank you.
 
 ## Contributing to Spacemacs
 The [Spacemacs contribution guidelines](https://github.com/syl20bnr/spacemacs/blob/develop/CONTRIBUTING.org) details how to get help, report issues and contribute to the project.
