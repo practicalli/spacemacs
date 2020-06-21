@@ -55,11 +55,6 @@
                    "label": "GitHub",
                    "icon": "fa fa-github",
                    "url": "https://github.com/practicalli/spacemacs-content/projects/1"
-               },
-               {
-                   "label": "Search page title on StackOverflow",
-                   "icon": "fa fa-stack-overflow",
-                   "url": "http://stackoverflow.com/search?q={{title}}"
                }
            ]
        }
