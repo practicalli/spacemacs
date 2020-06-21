@@ -258,6 +258,8 @@
         * [Emacs Keybindings](reference/keybindings/emacs-keybindings.md)
         * [Custom Keybindings](reference/keybindings/custom-keybindings.md)
     * [Projectile](reference/projectile.md)
+    * [CIDER](reference/cider/index.md)
+        * [Config Variables](reference/cider/configuration-variables.md)
     * [Clojure](reference/clojure/index.md)
         * [Strings](reference/clojure/strings.md)
         * [Maths](reference/clojure/maths.md)
