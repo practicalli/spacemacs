@@ -14,7 +14,7 @@ Type `clojure-cli` for the value (or `lein-test` for Leiningen projects)
 The `.dir-locals.el` file should now contain the following
 
 ```elisp
-((nil . ((projectile-project-type . clojure-cli))))
+((clojure-mode . ((projectile-project-type . clojure-cli))))
 ```
 
 [practicalli/exercism-clojure-guides](https://github.com/practicalli/exercism-clojure-guides) is an example of a monorepo.
