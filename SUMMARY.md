@@ -83,6 +83,7 @@
 * [Clojure Projects](clojure-projects/index.md)
     * [Adding Files](clojure-projects/adding-files.md)
     * [Rename - Delete Files](clojure-projects/rename-delete-files.md)
+    * [Project configuration](clojure-projects/project-configuration.md)
     * [Monorepo / Nested projects](clojure-projects/monorepo-nested-projects.md)
 * [The REPL](clojure-repl/index.md)
     * [Start a REPL](clojure-repl/start-repl.md)
