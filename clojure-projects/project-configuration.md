@@ -78,6 +78,28 @@ The configuration variables are set when a file is open in a specific Emacs majo
 ```
 
 
+
+## More examples
+The [chui ClojureScript test runner](https://github.com/lambdaisland/chui/blob/master/.dir-locals.el) project [uses a .dir-locals.el](https://github.com/lambdaisland/chui/blob/master/.dir-locals.el) file with example custom code.  One custom expression ensures nrepl middleware is injected into the environment so CIDER can connect.  The other custom expression sets the indent size.
+
+```elisp
+((clojure-mode . ((cider-clojure-cli-global-options     . "-A:dev:test")
+                  (cider-custom-cljs-repl-init-form     . "(user/cljs-repl)")
+                  (cider-default-cljs-repl              . custom)
+                  (cider-preferred-build-tool           . clojure-cli)
+                  (cider-redirect-server-output-to-repl . t)
+                  (cider-repl-display-help-banner       . nil)
+                  (clojure-toplevel-inside-comment-form . t)
+                  (eval . (progn
+                            (make-variable-buffer-local 'cider-jack-in-nrepl-middlewares)
+                            (add-to-list 'cider-jack-in-nrepl-middlewares "shadow.cljs.devtools.server.nrepl/middleware")))
+                  (eval . (define-clojure-indent
+                            (assoc 0)
+                            (ex-info 0))))))
+```
+
+
+
 ## References
 * [CIDER list of configuration variables](/reference/cider/configuration-variables.md)
 * [Emacs Wiki: per-directory local variables](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html)
