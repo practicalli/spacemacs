@@ -189,6 +189,7 @@
         * [Pull Changes](source-control/magit/remote-repositories/pull-changes.md)
         * [Push Changes](source-control/magit/remote-repositories/push-changes.md)
         * [Try Pull Requests](source-control/magit/remote-repositories/try-pull-requests.md)
+        * [Configure default upstream](source-control/magit/remote-repositories/configure-default-upstream.md)
         * [Configure default push](source-control/magit/remote-repositories/configure-default-push.md)
     * [Issues, PRs, Forks](source-control/magit/forge.md)
     * [Changing History](source-control/magit/changing-history.md)
