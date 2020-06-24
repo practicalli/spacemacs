@@ -14,11 +14,6 @@ Use `e` to pull from a different repository.
 > `b b` displays a popup to select a different branch if you are not on the correct branch to pull changes into.
 
 
----
-> #### TODO::work in progress, sorry
-> Pull requests are welcome
-
-
 ## Rebase when pull
 `SPC g s` to open Magit Status buffer
 
