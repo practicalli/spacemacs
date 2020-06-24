@@ -24,12 +24,3 @@ The recommended approach is to include the test path as an alias
 ```elisp
 ((clojure-mode . ((cider-clojure-cli-global-options . "-A:test"))))
 ```
-
-
-> #### Hint::CIDER test report only created on test failure
-> To show a test report each time tests are run, add the variable `cider-test-show-report-on-success t` in the `clojure` layer list of the `.spacemacs` file.
-```lisp
-     (clojure :variables
-              clojure-enable-linters 'clj-kondo
-              cider-test-show-report-on-success t)
-```

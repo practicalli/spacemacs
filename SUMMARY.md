@@ -101,7 +101,8 @@
         * [CIDER test & deps.edn](testing/unit-testing/cider-test-deps-edn-projects.md)
         * [Writing Unit Tests](testing/unit-testing/writing-unit-tests.md)
         * [Running Tests](testing/unit-testing/running-tests.md)
-        * [Refactor Unit Tests](testing/unit-testing/refactor-unit-tests.md)
+        * [Test report - re-run tests](testing/unit-testing/re-run-tests-from-test-report-buffer.md)
+        * [Refactor Tests](testing/unit-testing/refactor-unit-tests.md)
         <!-- * [Expectations](testing/unit-testing/clojure-test-expectations.md) -->
     <!-- * [Contract Testing](testing/contract-testing/index.md) -->
     <!-- * [Generative Testing](testing/generative-testing/index.md) -->

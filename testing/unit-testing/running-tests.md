@@ -9,33 +9,10 @@ The results of running the tests are displayed in the mini-buffer, showing the n
 
 ![Spacemacs Cider tests - results in mini-buffer](/images/spacemacs-cider-test-run-tests-results-mini-buffer.png)
 
-A test report is generated if any of the tests fail and is displayed in a new buffer.
-
-![Clojure test report - failure](/images/spacemacs-cider-test-report-fail.png)
-
 > #### Hint::Run tests from test code buffer
 > Run tests from the buffer containing the test source code buffer, as this ensures all test code is loaded and the latest version of the tests are run.
 >
 > Tests can be run from the source code buffer, however, only test code that has been evaluated in the REPL will run.
-
-## Run Cider test results buffer
-Tests can be run from the `*cider-test-results*` buffer, although this buffer does not support Evil normal state.
-
-<kbd>C-z</kbd> to switch to Emacs state in order for these keybindings to work.
-
-Keyboard shortcut               | Description
---------------------------------|-------------------------------
-<kbd>g</kbd>                    | Run test at point.
-<kbd>n</kbd>                    | Run tests for current namespace.
-<kbd>l</kbd>                    | Run tests for all loaded namespaces.
-<kbd>p</kbd>                    | Run tests for all project namespaces. This loads the additional namespaces.
-<kbd>f</kbd>                    | Re-run test failures/errors.
-<kbd>M-p</kbd>                  | Move point to previous test.
-<kbd>M-n</kbd>                  | Move point to next test.
-<kbd>t</kbd> or <kbd>M-.</kbd>  | Jump to test definition.
-<kbd>d</kbd>                    | Display diff of actual vs expected.
-<kbd>e</kbd>                    | Display test error cause and stacktrace info.
-
 
 ## Running tests in the REPL buffer
 <kbd>,</kbd> to open the REPL command menu and select run tests
@@ -44,3 +21,12 @@ Keyboard shortcut               | Description
 <kbd>, T t</kbd> to toggle auto test mode
 
 <kbd>, e b</kbd> will evaluate the current buffer and automatically run all tests.
+
+
+> #### Hint::CIDER test report only created on test failure
+> To show a test report each time tests are run, add the variable `cider-test-show-report-on-success t` in the `clojure` layer list of the `.spacemacs` file.
+```lisp
+     (clojure :variables
+              clojure-enable-linters 'clj-kondo
+              cider-test-show-report-on-success t)
+```
