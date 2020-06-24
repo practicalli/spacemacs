@@ -103,7 +103,9 @@
         * [Running Tests](testing/unit-testing/running-tests.md)
         * [Test report - re-run tests](testing/unit-testing/re-run-tests-from-test-report-buffer.md)
         * [Refactor Tests](testing/unit-testing/refactor-unit-tests.md)
+        * [Configure Test Runner](testing/unit-testing/configure-cider-test-runner.md)
         <!-- * [Expectations](testing/unit-testing/clojure-test-expectations.md) -->
+
     <!-- * [Contract Testing](testing/contract-testing/index.md) -->
     <!-- * [Generative Testing](testing/generative-testing/index.md) -->
     <!-- * [Integration Testing](testing/integration-testing/index.md) -->
