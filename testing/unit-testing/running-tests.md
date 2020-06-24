@@ -3,7 +3,7 @@
 
 <kbd>, t n</kbd> run all tests in the current namespace.  This also loads any changes to those tests.
 
-<kbd>, t a</kbd> run all tests.  If tests are changed or added, `, e f` to evaluate those tests to add them to the REPL or `, e b` on any test buffers that have changed.
+<kbd>, t a</kbd> run all tests.  If tests are changed or added, <kbd>, e f</kbd> to evaluate those tests to add them to the REPL or <kbd>, e b</kbd> on any test buffers that have changed.
 
 The results of running the tests are displayed in the mini-buffer, showing the number of tests run and how many passed and failed.
 

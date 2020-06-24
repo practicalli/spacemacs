@@ -21,9 +21,9 @@ Or in `dotspacemacs/user-config`
 ```
 
 ## CIDER Automatic Test Running
-`, T t` (`cider-auto-test-mode`) toggles automatic test.
+<kbd>, T t</kbd> (`cider-auto-test-mode`) toggles automatic test.
 
-`, e b` evaluates the current buffer and automatically runs the CIDER test runner using all tests for that namespace
+<kbd>, e b</kbd> evaluates the current buffer and automatically runs the CIDER test runner using all tests for that namespace
 
 `cider-auto-test-mode` variable configures the state of automatic testing
 
