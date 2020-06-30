@@ -3,246 +3,277 @@ The following in not an authoritative list of configuration variables.  The list
 
 Variables are grouped by the files they are defined in throughout the [clojure-emacs/cider](https://github.com/clojure-emacs/cider) project.
 
-## Completion
+Variables can be used in `.dir-locals.el` files for project specific configuration (recommended for most variables), or in the Spacemacs `dotspacemacs/user-config` section of `.spacemaces`
 
-| Variables                               | Default value |
-|-----------------------------------------|---------------|
-| cider-completion-use-context            | t             |
-| cider-annotate-completion-candidates    | t             |
-| cider-annotate-completion-function      |               |
-| cider-completion-annotations-alist      |               |
-| cider-completion-annotations-include-ns | 'unqualified  |
+
+## Completion
+| Variables                               | Default value | Description                                                                                                                                                                                                              |
+|-----------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-completion-use-context            |               | When true, uses context at point to improve completion suggestions                                                                                                                                                       |
+| cider-annotate-completion-candidates    |               | When true, annotate completion candidates with some extra information                                                                                                                                                    |
+| cider-annotate-completion-function      |               | annotations for completion candidates are formatted. Must be a function that takes two arguments: the abbreviation of the candidate type according to `cider-completion-annotations-alist' and the candidate's namespace |
+| cider-completion-annotations-alist      |               | Annotation abbreviation for completion candidates (TYPE . ABBREVIATION). TYPE is that returned from the completion backend.ABBREVIATION is a short form of that type.                                                    |
+| cider-completion-annotations-include-ns |               | Pass namespace to `cider-annotate-completion-function', `'always` passed if namespace is available. `'unqualified` only pass namespace if not namespace-qualified.                                                       |
+
 
 ## Client
-| Variables                         | Default value |
-|-----------------------------------|---------------|
-| cider-eval-spinner-type           | 'progress-bar |
-| cider-show-eval-spinner           | t             |
-| cider-eval-spinner-delay          | 1             |
-| cider-enhanced-cljs-completion-p  | t             |
-| cider-print-fn                    | 'pprint       |
-| cider-print-options               | nil           |
-| cider-print-quota                 | (* 1024 1024) |
-| cider-print-buffer-size           | (* 4 1024)    |
-| cider-filtered-namespaces-regexps |               |
+| Variables                         | Default value | Description                                                                                                                                                                                                                                                                       |
+|-----------------------------------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-eval-spinner-type           | 'progress-bar | Type of evaluation spinner (`describe-variable spinner-types`)                                                                                                                                                                                                                    |
+| cider-show-eval-spinner           | `t`           | show evaluation spinner in mode line                                                                                                                                                                                                                                              |
+| cider-eval-spinner-delay          | `1`             | Time (seconds) elapsed before evaluation spinner shown (default: 1)                                                                                                                                                                                                               |
+| cider-enhanced-cljs-completion-p  | `t`           | - enable dynamic cljs completions. Expressions at point evaluated, resulting value are used to compute completions."                                                                                                                                                              |
+| cider-print-fn                    |               | Function use for printing. `'pprint` clojure.pprint, `pr` `clojure.core/pr`, `fipp` fast idiomatic pprint, `puget` serialisation on top of `fipp`, `zprint` zprint library, `nil` defer to REPL, namespace qualified var (args: object to print, java.io.PrintWriter, option map) |
+| cider-print-options               | `nil`           | options map passed to `cider-print-fn', pprint example: `'((\"length\" 50) (\"right-margin\" 70))`                                                                                                                                                                                |
+| cider-print-quota                 | `(* 1024 1024)` | hard limit on the number of bytes to return from any printing operation, `nil` for no limit                                                                                                                                                                                       |
+| cider-print-buffer-size           | `(* 4 1024)   ` | chunk size in bytes for print streaming. Smaller chunks, faster feedback and smaller results (only a single chunk result can be font-locked)                                                                                                                                      |
+| cider-filtered-namespaces-regexps |               | filter var/symbol/namespace with list of Clojure regex patters (double backslashes as passed through CIDER middleware)                                                                                                                                                            |
+
 
 ## eldoc
-| Variables                                  | Default value |
-|--------------------------------------------|---------------|
-| cider-eldoc-max-num-sexps-to-skip          | 30            |
-| cider-eldoc-ns-function                    | #'identity    |
-| cider-eldoc-max-class-names-to-display     | 3             |
-| cider-eldoc-display-for-symbol-at-point    | t             |
-| cider-eldoc-display-context-dependent-info | nil           |
+| Variables                                  | Default value | Description                                                                                                                                                                                                                                                                                                                                                        |
+|--------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-eldoc-max-num-sexps-to-skip          | `30`          | The maximum number of sexps to skip while searching the beginning of current sexp.                                                                                                                                                                                                                                                                                 |
+| cider-eldoc-ns-function                    | `#'identity`  | Function returning a ns string to be used by eldoc. Takes a namespace name as argument. Convenience functions: `cider-abbreviate-ns', and `cider-last-ns-segment'.                                                                                                                                                                                                 |
+| cider-eldoc-max-class-names-to-display     | `3`           | Maximum number of classes to display in an eldoc string. An eldoc string for Java interop forms can have a number of classes prefixed to it, when the form belongs to more than 1 class.  When not nil, only display the names of first `cider-eldoc-max-clas -names-to-display' classes and add a `"& x more"` suffix. Otherwise, all the classes are displayed." |
+| cider-eldoc-display-for-symbol-at-point    | `t`           | `t` display eldoc for symbol at point, e.g. (map inc ...) when the cursor is over inc its eldoc is displayed.  `nil` always display eldoc for first symbol of the sexp.                                                                                                                                                                                            |
+| cider-eldoc-display-context-dependent-info | `nil`         | `t` display context dependent info in the eldoc. CIDER will try to add expected function arguments based on the current context, for example for the datomic.api/q function where it will show the expected inputs of the query at point                                                                                                                           |
+
 
 ## debug
-| Variables                   | Default value |
-|-----------------------------|---------------|
-| cider-debug-prompt          | 'overlay      |
-| cider-debug-use-overlays    | t             |
-| cider-debug-display-locals  | nil           |
-| cider-debug-prompt-commands |               |
+| Variables                   | Default value | Description                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|-----------------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-debug-prompt          | `'overlay`    | Where to show keys while debugging. `overlay' show debug keys in an overlay above the current function. `minibuffer' show debug keys in the minibuffer along with the return value.   `t` shows as overlay and minibuffer. `nil` don't show debug keys at all.                                                                                                                                                                               |
+| cider-debug-use-overlays    | `t`           | Higlight debugging information with overlays. Same values as `cider-use-overlays', but only applies to values displayed during debugging sessions. To control the overlay that lists possible keys above the current function, configure `cider-debug-prompt' instead.                                                                                                                                                                       |
+| cider-debug-display-locals  | `nil`         | `t` local variables displayed while debugging. Toggled with `cider-debug-toggle-locals'                                                                                                                                                                                                                                                                                                                                                      |
+| cider-debug-prompt-commands |               | "List of debugger command specs in the format (KEY COMMAND-NAME DISPLAY-NAME?). KEY is a character mapped to the command COMMAND-NAME which is a valid debug command to be passed to the cider-nrepl middleware  DISPLAY-NAME is the string displayed in the debugger overlay.   If DISPLAY-NAME is nil, that command is hidden from the overlay but still callable. The rest of the commands are displayed in the same order as this list." |
+
 
 ## Overlays
-| Variables                          | Default value |
-|------------------------------------|---------------|
-| cider-result-use-clojure-font-lock | t             |
-| cider-overlays-use-font-lock       | t             |
-| cider-use-overlays                 | 'both         |
-| cider-result-overlay-position      | 'at-eol       |
-| cider-eval-result-prefix           | "=>"          |
-| cider-eval-result-duration         | 'command      |
-| cider-use-fringe-indicators        | t             |
+| Variables                          | Default value | Description                                                                                                                                                              |
+|------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-result-use-clojure-font-lock | `t`             | `t` interactive eval results are font-locked as Clojure code.                                                                                                            |
+| cider-overlays-use-font-lock       | `t`             | `t` results overlays are font-locked as Clojure code. `nil`, apply `cider-result-overlay-face' to the entire overlay instead of font-locking it.                         |
+| cider-use-overlays                 | 'both         | Display evaluation results with overlays. `t` use overlays determined by `cider-result-overlay-position'. `nil` display on the echo area. `both` display on both places. |
+| cider-result-overlay-position      | `'at-eol`       | display result overlays for inline evaluation and the debugger. If `'at-eol` display at the end of the line. `'at-point` display at the end of the respective sexp.      |
+| cider-eval-result-prefix           | `"=>"`          | The prefix displayed in the minibuffer before a result value.                                                                                                            |
+| cider-eval-result-duration         | `'command`      | Duration (seconds) of CIDER's eval-result overlays. `nil` overlays last indefinitely. `command` overlays erased after the next command. See `cider-use-overlays'.        |
+| cider-use-fringe-indicators        | `t`             | Display evaluation indicators on the left fringe.                                                                                                                        |
+
 
 ## Inspector
-| Variables                          | Default value |
-|------------------------------------|---------------|
-| cider-inspector-page-size          | 32            |
-| cider-inspector-fill-frame         | nil           |
-| cider-inspector-skip-uninteresting | t             |
+| Variables                          | Default value                                                                           |
+|------------------------------------|-----------------------------------------------------------------------------------------|
+| cider-inspector-page-size          | `32` number of results per page in paginated inspector view `s` to interactively change |
+| cider-inspector-fill-frame         | `nil` should cider inspector window fill its frame                                      |
+| cider-inspector-skip-uninteresting | `t` skips values when navigating with `cider-inspector-*-inspectable-object' commands   |
+
 
 ## REPL history
-| Variables                                    | Default value |
-|----------------------------------------------|---------------|
-| cider-repl-history-display-style             | 'separated    |
-| cider-repl-history-quit-action               | 'quit-window  |
-| cider-repl-history-resize-window             | nil           |
-| cider-repl-history-separator                 | ";;;;;;;;;;"  |
-| cider-repl-history-recenter                  | nil           |
-| cider-repl-history-highlight-current-entry   | nil           |
-| cider-repl-history-highlight-inserted-item   | nil           |
-| cider-repl-history-separator-face            | 'bold         |
-| cider-repl-history-current-entry-face        | 'highlight    |
-| cider-repl-history-inserted-item-face        | 'highlight    |
-| cider-repl-history-maximum-display-length    | nil           |
-| cider-repl-history-display-duplicates        | t             |
-| cider-repl-history-display-duplicate-highest | t             |
-| cider-repl-history-text-properties           | nil           |
-| cider-repl-history-hook                      | nil           |
-| cider-repl-history-show-preview              | nil           |
+| Variables                                    | Default value | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|----------------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-repl-history-display-style             | `'separated`    | Display CIDER command history: `'separated` display `cider-repl-history-separator` between entries, `one-line` replace newlines with `"\n"` .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| cider-repl-history-quit-action               | `'quit-window`  | Action when `cider-repl-history-quit' is called. `bury-buffer' bury the *cider-repl-history* buffer but keep the window, `bury-and-delete-window` bury the buffer and delete window if more than one window in frame. `delete-and-restore` restore window configuration to before `cider-repl-history' was called and kill the *cider-repl-history* buffer, `quit-window` restore window configuration to that before `cider-repl-history' was called and bury *cider-repl-history*. `kill-and-delete-window` kill the *cider-repl-history* buffer and delete the window on close. Otherwise, it should be a function to call. |
+| cider-repl-history-resize-window             | nil           | Resize the `cider-repl-history` window to fit its contents. `t` resize window `(MAXIMUM . MINIMUM)` for the size of the window.  MAXIMUM defaults to the window size chosen by `pop-to-buffer'; MINIMUM defaults to `window-min-height'.                                                                                                                                                                                                                                                                                                                                                                                       |
+| cider-repl-history-separator                 | `";;;;;;;;;;"`  | The string separating entries in the `separated' style. See `cider-repl-history-display-style'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| cider-repl-history-recenter                  | `nil`           | `t` always keep the current entry at the top of the window.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| cider-repl-history-highlight-current-entry   | `nil`           | `t` highlight the currently selected command history entry.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| cider-repl-history-highlight-inserted-item   | `nil`           | `t` temporarily highlight the inserted command history entry. A value controls item is highlighted: `solid` highlight the inserted text for a fixed period of time `pulse` fade out the highlighting gradually. `t` uses the default highlighting style `pulse'. `cider-repl-history-inserted-item-face' contains the face used for highlighting.                                                                                                                                                                                                                                                                              |
+| cider-repl-history-separator-face            | `'bold`         | Face in which to highlight the `cider-repl-history-separator`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| cider-repl-history-current-entry-face        | `'highlight`    | The face in which to highlight the command history current entry.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| cider-repl-history-inserted-item-face        | `'highlight`    | The face in which to highlight the inserted item.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| cider-repl-history-maximum-display-length    | `nil`           | Limit the length of displayed items. integer command history will be limited to that many characters. Setting this variable to nil means no Limit.                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| cider-repl-history-display-duplicates        | `t`           | `t` display duplicate items in the command history.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| cider-repl-history-display-duplicate-highest | `t`           | When `cider-repl-history-display-duplicates' is nil, display highest (most recent) duplicate items in the command history.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| cider-repl-history-text-properties           | `nil`           | If non-nil, maintain text properties of the command history items.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| cider-repl-history-hook                      | `nil`           | List of functions to call after `cider-repl-history'.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| cider-repl-history-show-preview              | `nil`           | `t` show preview of the inserted text in the REPL buffer using the item under point were inserted.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 ## xref
-| Variables                                               | Default value |
-|---------------------------------------------------------|---------------|
-| cider-xref-actions '(("display-doc" . cider-doc-lookup) |               |
+| Variables          | Default value                        | Description                                                                                                                                                                                                                                                                          |
+|--------------------|--------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-xref-actions | `'(("display-doc" . cider-doc-lookup)` | Actions applied on the symbol found by an xref search. First action key in list will be selected as default, if only one the associated action function is applied automatically.  An action function is any function that receives the symbol found by the xref search as argument. |
+
 
 ## util
-| Variables                  | Default value                       |
-|----------------------------|-------------------------------------|
-| cider-font-lock-max-length | 10000                               |
-| cider-doc-xref-regexp      |                                     |
-| cider-jdk-src-paths        | '("/usr/lib/jvm/openjdk-8/src.zip") |
+| Variables                  | Default value                       | Description                                                                                                                                                                 |
+|----------------------------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-font-lock-max-length | `10000`                               | The max length of strings to fontify in `cider-font-lock-as'. `nil` removes the fontification restriction.                                                                  |
+| cider-doc-xref-regexp      |                                     | The regexp used to search Clojure vars in doc buffers.                                                                                                                      |
+| cider-jdk-src-paths        | `'("/usr/lib/jvm/openjdk-8/src.zip")` | Source code used by `cider-stacktrace-navigate'. Zip/jar file or extracted directory (recommended). Clojure sources: https://mvnrepository.com/artifact/org.clojure/clojure |
+
 
 ## repl
-| Variables                            | Default value                                                |
-|--------------------------------------|--------------------------------------------------------------|
-| cider-repl-pop-to-buffer-on-connect  | t                                                            |
-| cider-repl-display-in-current-window | nil                                                          |
-| cider-repl-use-pretty-printing       | t                                                            |
-| cider-repl-use-content-types         | nil                                                          |
-| cider-repl-auto-detect-type          | t                                                            |
-| cider-repl-use-clojure-font-lock     | t                                                            |
-| cider-repl-require-ns-on-set         | nil                                                          |
-| cider-repl-result-prefix             | ""                                                           |
-| cider-repl-tab-command               | 'cider-repl-indent-and-complete-symbol                       |
-| cider-repl-init-code                 | (list (cdr (assoc 'clj cider-repl-require-repl-utils-code))) |
-| cider-repl-display-help-banner       | t                                                            |
-| cider-repl-prompt-function           | #'cider-repl-prompt-default                                  |
-| cider-repl-image-margin              | 10                                                           |
-| cider-locref-regexp-alist            |                                                              |
-| cider-repl-wrap-history              | nil                                                          |
-| cider-repl-history-size              | 500                                                          |
-| cider-repl-history-file              | nil                                                          |
-| cider-repl-shortcut-dispatch-char    | ?\,                                                          |
+| Variables                            | Default value                                                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|--------------------------------------|--------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-repl-pop-to-buffer-on-connect  | `t`                                                            | Focus REPL buffer on connect. `nil` REPL buffer is created but not displayed.  `display-only` REPL buffer displayed but not focused.  Otherwise REPL buffer is displayed and focused.                                                                                                                                                                                                                                                                 |
+| cider-repl-display-in-current-window | `nil`                                                          | Should REPL buffer be displayed in the current window.                                                                                                                                                                                                                                                                                                                                                                                                |
+| cider-repl-use-pretty-printing       | `t`                                                            | Should results in REPL buffer be pretty-printed. Uses printer specified in `cider-pprint-fn`.  `cider-toggle-pretty-printing` command interactively changes the value.                                                                                                                                                                                                                                                                                |
+| cider-repl-use-content-types         | `nil`                                                          | REPL results presented using content-type information. `cider-repl-toggle-content-types' command interactively changes the value.                                                                                                                                                                                                                                                                                                                     |
+| cider-repl-auto-detect-type          | `t`                                                            | Auto-detect REPL type using track-state information. If you disable this you'll have to manually change the REPL type between Clojure and ClojureScript when invoking REPL type changing forms. Use `cider-set-repl-type' to manually change the REPL type.                                                                                                                                                                                           |
+| cider-repl-use-clojure-font-lock     | `t`                                                            | `t` use Clojure mode font-locking for input and result. `nil` uses `cider-repl-input-face` and `cider-repl-result-face`                                                                                                                                                                                                                                                                                                                               |
+| cider-repl-require-ns-on-set         | `nil`                                                          | Should the namespace be required before setting it in the REPL.                                                                                                                                                                                                                                                                                                                                                                                       |
+| cider-repl-result-prefix             | `"" `                                                          | Display prefix characters in the REPL before a result value, egl `"=>"` if want results to stand out more. No prefix used by default.                                                                                                                                                                                                                                                                                                                 |
+| cider-repl-tab-command               | `'cider-repl-indent-and-complete-symbol`                       | Command invoked by TAB key. Default option is `cider-repl-indent-and-complete-symbol'. `indent-for-tab-command` to use the default Emacs behavior.                                                                                                                                                                                                                                                                                                    |
+| cider-repl-init-code                 | `(list (cdr (assoc 'clj cider-repl-require-repl-utils-code)))` | Clojure code evaluated when starting a REPL, evaluated with bindings for `set!`-able vars in place.                                                                                                                                                                                                                                                                                                                                                   |
+| cider-repl-display-help-banner       | `t`                                                            | `t` help text will be displayed on REPL start.                                                                                                                                                                                                                                                                                                                                                                                                        |
+| cider-repl-prompt-function           | `#'cider-repl-prompt-default`                                  | Function that takes a namespace name and returns a prompt string. Convenience functions: `cider-repl-prompt-lastname`, `cider-repl-prompt-abbreviated`, and `cider-repl-prompt-default`                                                                                                                                                                                                                                                               |
+| cider-repl-image-margin              | `10`                                                           | Margin applied to images displayed in REPL buffer. A single number of pixels as a symmetric margin, or pair of numbers `(x . y)` encoding an arbitrary margin.                                                                                                                                                                                                                                                                                        |
+| cider-locref-regexp-alist            |                                                              | Alist holding regular expressions for inline location references. Each element in the alist has the form (NAME REGEXP HIGHLIGHT VAR FILE LINE), where NAME is the identifier of the regexp, REGEXP - regexp matching a location, HIGHLIGHT - sub-expression matching region to highlight on mouse-over, VAR - sub-expression giving Clojure VAR to look up.  FILE is currently only used when VAR is nil and must be full resource path in that case. |
+| cider-repl-wrap-history              | `nil`                                                          | T to wrap history around when the end is reached.                                                                                                                                                                                                                                                                                                                                                                                                     |
+| cider-repl-history-size              | `500`                                                          | The maximum number of items to keep in the REPL history.                                                                                                                                                                                                                                                                                                                                                                                              |
+| cider-repl-history-file              | `nil`                                                          | File to save the persistent REPL history to.                                                                                                                                                                                                                                                                                                                                                                                                          |
+| cider-repl-shortcut-dispatch-char    | `?\,`                                                          | Character used to distinguish REPL commands from Lisp forms.                                                                                                                                                                                                                                                                                                                                                                                          |
 
-## cider
-| Variables                               | Default value                                       |
-|-----------------------------------------|-----------------------------------------------------|
-| cider-lein-command                      |                                                     |
-| cider-lein-global-options               |                                                     |
-| cider-lein-parameters                   |                                                     |
-| cider-boot-command                      |                                                     |
-| cider-boot-global-options               |                                                     |
-| cider-boot-parameters                   |                                                     |
-| cider-clojure-cli-command               |                                                     |
-| cider-clojure-cli-global-options        |                                                     |
-| cider-clojure-cli-parameters            |                                                     |
-| cider-shadow-cljs-command               |                                                     |
-| cider-shadow-cljs-global-options        |                                                     |
-| cider-shadow-cljs-parameters            |                                                     |
-| cider-gradle-command                    |                                                     |
-| cider-gradle-global-options             |                                                     |
-| cider-gradle-parameters                 |                                                     |
-| cider-jack-in-default                   | (if (executable-find "clojure") 'clojure-cli 'lein) |
-| cider-preferred-build-tool              |                                                     |
-| cider-allow-jack-in-without-project     | 'warn                                               |
-| cider-known-endpoints                   | nil                                                 |
-| cider-connected-hook                    | nil                                                 |
-| cider-disconnected-hook                 | nil                                                 |
-| cider-inject-dependencies-at-jack-in    | t                                                   |
-| cider-offer-to-open-cljs-app-in-browser | t                                                   |
-| cider-jack-in-auto-inject-clojure       | nil                                                 |
-| cider-check-cljs-repl-requirements      | t                                                   |
-| cider-shadow-default-options            | nil                                                 |
-| cider-figwheel-main-default-options     | nil                                                 |
-| cider-custom-cljs-repl-init-form        | nil                                                 |
-| cider-default-cljs-repl                 | nil                                                 |
-| cider-edit-jack-in-command              | nil                                                 |
-| cider-infer-remote-nrepl-ports          | nil                                                 |
+
+## cider.el
+| Variables                               | Default value                                       | Description                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|-----------------------------------------|-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-lein-command                      |                                                     | Command used to execute Leiningen.                                                                                                                                                                                                                                                                                                                                                                                                  |
+| cider-lein-global-options               |                                                     | Command global options used to execute Leiningen (e.g.: -o for offline).                                                                                                                                                                                                                                                                                                                                                            |
+| cider-lein-parameters                   |                                                     | Params passed to Leiningen to start an nREPL server via `cider-jack-in'.                                                                                                                                                                                                                                                                                                                                                            |
+| cider-boot-command                      |                                                     | Command used to execute Boot                                                                                                                                                                                                                                                                                                                                                                                                        |
+| cider-boot-global-options               |                                                     | Command global options used to execute Boot (e.g.: -c for checkouts).                                                                                                                                                                                                                                                                                                                                                               |
+| cider-boot-parameters                   |                                                     | Params passed to boot to start an nREPL server via `cider-jack-in'.                                                                                                                                                                                                                                                                                                                                                                 |
+| cider-clojure-cli-command               |                                                     | Command execute clojure with tools.deps (Clojure 1.9+). clj wrapper doesn't work when spawned from Emacs due to it using rlwrap.  If "clojure" executable is not found on Windows, default to "powershell"                                                                                                                                                                                                                          |
+| cider-clojure-cli-global-options        |                                                     | Command line options used to execute clojure with tools.deps.                                                                                                                                                                                                                                                                                                                                                                       |
+| cider-clojure-cli-parameters            |                                                     | Params passed to clojure to start an nREPL server via `cider-jack-in'. This is evaluated using `format', with the first argument being the Clojure vector of middleware variables as a string.                                                                                                                                                                                                                                      |
+| cider-shadow-cljs-command               |                                                     | The command used to execute shadow-cljs. By default we favor the project-specific shadow-cljs over the system-wide.                                                                                                                                                                                                                                                                                                                 |
+| cider-shadow-cljs-global-options        |                                                     | Command line options used to execute shadow-cljs (e.g.: -v for verbose mode).                                                                                                                                                                                                                                                                                                                                                       |
+| cider-shadow-cljs-parameters            |                                                     | Params passed to shadow-cljs to start an nREPL server via `cider-jack-in'.                                                                                                                                                                                                                                                                                                                                                          |
+| cider-gradle-command                    |                                                     | Command used to execute Gradle.                                                                                                                                                                                                                                                                                                                                                                                                     |
+| cider-gradle-global-options             |                                                     | Command line options used to execute Gradle (e.g.: -m for dry run).                                                                                                                                                                                                                                                                                                                                                                 |
+| cider-gradle-parameters                 |                                                     | Params passed to gradle to start an nREPL server via `cider-jack-in'                                                                                                                                                                                                                                                                                                                                                                |
+| cider-jack-in-default                   | `(if (executable-find "clojure") 'clojure-cli 'lein)` | Default tool when `cider-jack-in' outside a project. The Clojure CLI is is the default. Fallback to Leiningen if Clojure CLI not available                                                                                                                                                                                                                                                                                          |
+| cider-preferred-build-tool              |                                                     | User prompted when there are multiple project configuration files (deps.edn, project.clj, build.boot) unless set. `'clojure-cli` uses deps.edn file, `lein` uses project.clj file, `boot` uses build.boot file.                                                                                                                                                                                                                     |
+| cider-allow-jack-in-without-project     | `'warn`                                               | `'warn` prompt to confirm jack-in command when not in a Clojure project. `t` `cider-jack-in' quietly continues. `nil` `cider-jack-in' fails.                                                                                                                                                                                                                                                                                        |
+| cider-known-endpoints                   | `nil`                                                 | List of connection endpoints, each endpoint is a list, eg.  `\\='((\"label\" \"host\" \"port\"))`. Label is optional `\\='(\"host\" \"port\")` Variable is used by `cider-connect'                                                                                                                                                                                                                                                  |
+| cider-connected-hook                    | `nil`                                                 | List of functions to call when connected to Clojure nREPL server.                                                                                                                                                                                                                                                                                                                                                                   |
+| cider-disconnected-hook                 | `nil`                                                 | List of functions to call when disconnected from the Clojure nREPL server                                                                                                                                                                                                                                                                                                                                                           |
+| cider-inject-dependencies-at-jack-in    | `t`                                                   | `nil` do not inject REPL dependencies (most likely nREPL middlewares) at `cider-jack-in' time.                                                                                                                                                                                                                                                                                                                                      |
+| cider-offer-to-open-cljs-app-in-browser | `t`                                                   | `nil` do not offer to open ClojureScript apps in a browser on connect                                                                                                                                                                                                                                                                                                                                                               |
+| cider-jack-in-auto-inject-clojure       | `nil`                                                 | Clojure version to auto-inject into REPL. `nil` Clojure version not injected. `latest', inject `cider-latest-clojure-version' inject most recent version of Clojure. `minimal', inject `cider-minimum-clojure-version' inject lowest Clojure version CIDER supports.  Use a string for explicit version number.  Using list, first element should be a string specifying the artifact ID and the second element the version number. |
+| cider-check-cljs-repl-requirements      | `t`                                                   | Run requirement checks for the cljs REPLs. (only disable if experiencing a faulty check)                                                                                                                                                                                                                                                                                                                                            |
+| cider-shadow-default-options            | `nil`                                                 | Default `shadow-cljs' [options](https://shadow-cljs.github.io/docs/UsersGuide.html#config)                                                                                                                                                                                                                                                                                                                                          |
+| cider-figwheel-main-default-options     | `nil`                                                 | Define `figwheel.main/start'  [options](https://figwheel.org/config-options.html).                                                                                                                                                                                                                                                                                                                                                  |
+| cider-custom-cljs-repl-init-form        | `nil`                                                 | Form used to start custom ClojureScript REPL  (becomes the return value of the `cider-custom-cljs-repl-init-form' function which prompts for the init form) Intended for use with .dir-locals.el for cases where it doesn't make sense to register a new ClojureScript REPL type.                                                                                                                                                   |
+| cider-default-cljs-repl                 | `nil`                                                 | ClojureScript REPL to start for cljs jack-in commands (.dir-locals.el approach recommended)                                                                                                                                                                                                                                                                                                                                         |
+| cider-edit-jack-in-command              | `nil`                                                 | `t` allow the user to edit the `cider-jack-in-*` command line                                                                                                                                                                                                                                                                                                                                                                       |
+| cider-infer-remote-nrepl-ports          | `nil`                                                 | `t` cider will use ssh to try to infer nREPL ports on remote hosts                                                                                                                                                                                                                                                                                                                                                                  |
 
 ## apropos
-| Variables                                                  | Default value |
-|------------------------------------------------------------|---------------|
-| cider-apropos-actions '(("display-doc" . cider-doc-lookup) |               |
+| Variables             | Default value                        | Description                                                                 |
+|-----------------------|--------------------------------------|-----------------------------------------------------------------------------|
+| cider-apropos-actions | `'(("display-doc" . cider-doc-lookup)` | Controls the actions to be applied on the symbol found by an apropos search |
+
 
 ## scratch
-| Variables                     | Default value |
-|-------------------------------|---------------|
-| cider-scratch-initial-message |               |
+| Variables                     | Default value | Description                                              |
+|-------------------------------|---------------|--------------------------------------------------|
+| cider-scratch-initial-message |               | Initial message displayed in new scratch buffers |
+|                               |               |                                                  |
+
 
 ## ns
-| Variables                            | Default value   |
-|--------------------------------------|-----------------|
-| cider-ns-save-files-on-refresh       | 'prompt         |
-| cider-ns-save-files-on-refresh-modes | '(clojure-mode) |
-| cider-ns-refresh-show-log-buffer     | nil             |
-| cider-ns-refresh-before-fn           | nil             |
-| cider-ns-refresh-after-fn            | nil             |
+| Variables                            | Default value     | Description                                                                                                                                                                               |
+|--------------------------------------|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-ns-save-files-on-refresh       | `'prompt`         | `'prompt` user prompt to save modified files before refreshing. `nil` files not saved. `t` save modified files without confirmation.                                                      |
+| cider-ns-save-files-on-refresh-modes | `'(clojure-mode)` | "List of modes used to determine which modified files are saved before refreshing. An major mode derived from list of the modes. `t` all modified files on the classpath are saved.       |
+| cider-ns-refresh-show-log-buffer     | `nil`             | `nil` log buffer will be written to but not displayed automatically (relevant info shown in mini-buffer  `t` log buffer will be displayed every time `cider-ns-refresh' is called.        |
+| cider-ns-refresh-before-fn           | `nil`             | Clojure namespace-qualified function of zero arity called by `cider-ns-refresh' before reloading. `nil` no function called before reloading. Any thrown exception will prevent reloading. |
+| cider-ns-refresh-after-fn            | `nil`             | Clojure namespace-qualified function of zero arity for `cider-ns-refresh' to call after reloading. `nil` no function invoked after reloading.                                             |
+
 
 ## macroexpansion
-| Variables                               | Default value |
-|-----------------------------------------|---------------|
-| cider-macroexpansion-display-namespaces | 'tidy         |
-| cider-macroexpansion-print-metadata     | nil           |
+| Variables                               | Default value | Description                                                                                                                                                                                        |
+|-----------------------------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-macroexpansion-display-namespaces | ``tidy`       | Should full namespace be shown for vars in macroexpansion buffer 'tidy not shown for locally defined or referred vars, `'qualified` fully qualified vars shown, `'none` no namespace qualification |
+| cider-macroexpansion-print-metadata     | `nil`         | Include metadata in macroexpansion results if `t`                                                                                                                                                  |
+
 
 ## test
-| Variables                            | Default value                  |
-|--------------------------------------|--------------------------------|
-| cider-test-show-report-on-success    | nil                            |
-| cider-auto-select-test-report-buffer | t                              |
-| cider-test-defining-forms            | '("deftest" "defspec")         |
-| cider-test-infer-test-ns             | 'cider-test-default-test-ns-fn |
+| Variables                            | Default value                  | Description                                                                                                                                                                                                                    |
+|--------------------------------------|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-test-show-report-on-success    | `nil`                          | Generate report and show `*cider-test-report*` buffer for successful tests, `nil` only generates report when tests fail and subsequent test runs                                                                               |
+| cider-auto-select-test-report-buffer | `t`                              | Should `*cider-test-report*` buffer be active window when it appears                                                                                                                                                           |
+| cider-test-defining-forms            | `'("deftest" "defspec")`       | Forms that define individual tests. CIDER considers the \"top-level\" form around point to define a test if the form starts with one of these forms. Add to this list to have CIDER recognize additional test defining macros. |
+| cider-test-infer-test-ns             | `'cider-test-default-test-ns-fn` | infer the test namespace. Default uses Clojure convention of appending '-test' to the namespace name                                                                                                                           |
+
 
 ## common
-| Variables                           | Default value |
-|-------------------------------------|---------------|
-| cider-prompt-for-symbol             | t             |
-| cider-special-mode-truncate-lines   | t             |
-| cider-jump-to-pop-to-buffer-actions |               |
-| cider-path-translations             | nil           |
-| cider-prefer-local-resources        | nil           |
+| Variables                           | Default value | Description                                                                                                                                                                                                                                                                                                    |
+|-------------------------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-prompt-for-symbol             | `t`           | always prompt, use symbol at point as default. `nil` use symbol at point, prompt if error.                                                                                                                                                                                                                     |
+| cider-special-mode-truncate-lines   | `t`           | CIDER special buffers are line-truncated                                                                                                                                                                                                                                                                       |
+| cider-jump-to-pop-to-buffer-actions |               | [window `cider-jump-to` uses](https://docs.cider.mx/cider/repl/configuration.html#_control_what_window_to_use_when_jumping_to_a_definition). If target file is visible, reuse it. Otherwise open buffer in current window                                                                                      |
+| cider-path-translations             | nil           | Alist of path prefixes to path prefixes.  Example: intercept location of a path in a docker image and translate to the original location.  Mapping for project located at `\"~/projects/foo\"` with src directory of foo mounted at `\"/src\"` in the docker container  ``((\"/src\" \"~/projects/foo/src\"))` |
+| cider-prefer-local-resources        | nil           | Prefer local resources to remote (tramp) ones when both are available                                                                                                                                                                                                                                          |
 
-## doc
-| Variables                    | Default value |
-|------------------------------|---------------|
-| cider-doc-auto-select-buffer | t             |
-| cider-docview-fill-column    | fill-column   |
 
-## client
-| Variables                               | Default value |
-|-----------------------------------------|---------------|
-| ;; nrepl-buffer-name-separator          | " "           |
-| ;; nrepl-buffer-name-show-port          | nil           |
-| nrepl-connected-hook                    | nil           |
-| nrepl-disconnected-hook                 | nil           |
-| nrepl-force-ssh-for-remote-hosts        | nil           |
-| nrepl-use-ssh-fallback-for-remote-hosts | nil           |
-| nrepl-sync-request-timeout              | 10            |
-| nrepl-hide-special-buffers              | nil           |
-| nrepl-log-messages                      | nil           |
-| nrepl-message-colors                    |               |
+## cider-doc.el
+| Variables                    | Default value | Description                               |
+|------------------------------|---------------|-------------------------------------------|
+| cider-doc-auto-select-buffer | `t`           | auto-select the doc popup buffer.         |
+| cider-docview-fill-column    | `fill-column` | Fill column for docstrings in doc buffer. |
+
+
+## nrepl-client.el
+| Variables                               | Default value | Description                                                                                                                                                                                        |
+|-----------------------------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ;; nrepl-buffer-name-separator          | `" "`         | (make-obsolete-variable 'nrepl-buffer-name-separator 'cider-session-name-template "0.18")                                                                                                          |
+| ;; nrepl-buffer-name-show-port          | `nil`         | (make-obsolete-variable 'nrepl-buffer-name-show-port 'cider-session-name-template "0.18")                                                                                                          |
+| nrepl-connected-hook                    | `nil`         | List of functions to call when connecting to the nREPL server.                                                                                                                                     |
+| nrepl-disconnected-hook                 | `nil`         | List of functions to call when disconnected from the nREPL server.                                                                                                                                 |
+| nrepl-force-ssh-for-remote-hosts        | `nil`         | If non-nil, do not attempt a direct connection for remote hosts.                                                                                                                                   |
+| nrepl-use-ssh-fallback-for-remote-hosts | `nil`         | If non-nil, attempt to connect via ssh to remote hosts when unable to connect directly.                                                                                                            |
+| nrepl-sync-request-timeout              | `10`         | The number of seconds to wait for a sync response. Setting this to nil disables the timeout functionality.                                                                                         |
+| nrepl-hide-special-buffers              | `nil`         | Control the display of some special buffers in buffer switching commands. When true some special buffers like the server buffer will be hidden.                                                    |
+| nrepl-log-messages                      | `nil`         | `t` log protocol messages to an nREPL messages buffer. During debug allows inspection of the communication between Emacs and an nREPL server.  Enabling logging may negatively impact performance. |
+| nrepl-message-colors                    |               | Colors used in the messages buffer.                                                                                                                                                                |
+
 
 ## stacktrace
-| Variables                          | Default value  |
-|------------------------------------|----------------|
-| cider-stacktrace-fill-column       | t              |
-| cider-stacktrace-default-filters   | '(tooling dup) |
-| cider-stacktrace-suppressed-errors | '()            |
+| Variables                          | Default value    | Description                                                                                                                                         |
+|------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-stacktrace-fill-column       | `t`              | Fill column for error messages in stacktrace display. If nil, messages will not be wrapped.  If truthy but non-numeric, `fill-column' will be used. |
+| cider-stacktrace-default-filters   | `'(tooling dup)` | Frame types to omit from initial stacktrace display                                                                                                 |
+| cider-stacktrace-suppressed-errors | `'()`            | Errors that won't make the stacktrace buffer 'pop-over' your active window. The error types are represented as strings                              |
 
-## eval
-| Variables                                 | Default value                       |
-|-------------------------------------------|-------------------------------------|
-| cider-show-error-buffer                   | t                                   |
-| cider-auto-jump-to-error                  | t                                   |
-| cider-auto-select-error-buffer            | t                                   |
-| cider-auto-track-ns-form-changes          | t                                   |
-| cider-auto-inspect-after-eval             | t                                   |
-| cider-save-file-on-load                   | 'prompt                             |
-| cider-file-loaded-hook                    | nil                                 |
-| cider-interactive-eval-output-destination | 'repl-buffer                        |
-| cider-comment-prefix                      | ";;=>"                              |
-| cider-comment-continued-prefix            | ";;"                                |
-| cider-comment-postfix                     | ""                                  |
-| cider-mode-line-show-connection           | t                                   |
-| cider-mode-line                           |                                     |
-| cider-switch-to-repl-after-insert-p       | t                                   |
-| cider-switch-to-repl-on-insert            | t                                   |
-| cider-invert-insert-eval-p                | nil                                 |
-| cider-dynamic-indentation                 | t                                   |
-| cider-font-lock-dynamically               | '(macro core deprecated)            |
-| cider-font-lock-reader-conditionals       | t                                   |
-| cider-use-tooltips                        | t                                   |
-| cider-session-name-template               | "%J:%h:%p"                          |
-| cider-connection-message-fn               | #'cider-random-words-of-inspiration |
-| cider-redirect-server-output-to-repl      | t                                   |
-| cider-auto-mode                           | t                                   |
+
+## cider-eval.el
+| Variables                                 | Default value            | Description                                                                                                                                                            |
+|-------------------------------------------|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-show-error-buffer                   | `t`                      | popup behavior of cider stacktraces `t`/`'always`, `'except-in-repl`, `'only-in-repl`, `nil` no stack trace shown. `cider-error-buffer' always generated in background |
+| cider-auto-jump-to-error                  | `t`                      | automatically jump to error location. `'errors-only` don't jump to warnings                                                                                            |
+| cider-auto-select-error-buffer            | `t`                      | auto-select the error popup buffer.                                                                                                                                    |
+| cider-auto-track-ns-form-changes          | `t`                      | auto-evaluate a source buffer's ns form when changed. `nil` no evaluation of ns forms                                                                                  |
+| cider-auto-inspect-after-eval             | `t`                      | auto-update inspector buffer after eval when *cider-inspect* buffer is visible                                                                                         |
+| cider-save-file-on-load                   | `'prompt`                | prompt to save the file when loading a buffer. `t` save file without confirmation. `nil` files are not saved.                                                          |
+| cider-file-loaded-hook                    | `nil`                    | List of functions to call when a load file has completed                                                                                                               |
+| cider-interactive-eval-output-destination | `'repl-buffer`           | destination for stdout and stderr produced from interactive evaluation                                                                                                 |
+| cider-comment-prefix                      | ";;=>"                   | prefix to insert before the first line of commented output                                                                                                             |
+| cider-comment-continued-prefix            | ";;"                     | prefix to use on the second and subsequent lines of commented output                                                                                                   |
+| cider-comment-postfix                     | ""                       | postfix to be appended after the final line of commented output                                                                                                        |
+
+
+## cider-mode.el
+| Variables                           | Default value              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|-------------------------------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-mode-line-show-connection     | `t`                        | should mode-line lighter show the connection                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| cider-mode-line                     | display current connection | Mode line lighter to display cider status, `nil` disables status. variable is a mode line template as in `mode-line-format'. Info Node `(elisp)Mode Line Format' for mode line templates.                                                                                                                                                                                                                                                                                                     |
+| cider-switch-to-repl-after-insert-p | `t`                        | Switch to REPL buffer after inserting form to the REPL                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| cider-switch-to-repl-on-insert      | `t`                        | Switch to REPL buffer when inserting form into the REPL                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| cider-invert-insert-eval-p          | `nil`                      | `nil` insert form in REPL buffer, `t` insert and eval form in REPL buffer                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| cider-dynamic-indentation           | `t`                        | Enhance clojure-mode indentation using runtime nformation, eg. `":style/indent"` metadata                                                                                                                                                                                                                                                                                                                                                                                                     |
+| cider-font-lock-dynamically         | `'(macro core deprecated)` | Apply syntax highlighting to vars defined in active nREPL connection, in addition to `clojure-mode` static font-lock. Value is list of symbols: `macro` any defined macro gets `font-lock-keyword-face', `function` defined function gets the `font-lock-function-face', `var` non-local var gets the `font-lock-variable-name-face', `deprecated` deprecated var gets the `cider-deprecated-face', `core` symbol from clojure.core (face depends on type), `t` font lock as much as possible |
+| cider-font-lock-reader-conditionals | `t`                        | Apply font-locking to unused reader conditional expressions depending on the buffer CIDER connection type                                                                                                                                                                                                                                                                                                                                                                                     |
+| cider-use-tooltips                  | `t`                        | `t` displays mouse-over tooltips and `help-echo' mechanism                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+
+
+## cider-connection.el
+| Variables                            | Default value                       | Description                                                                                                                                       |
+|--------------------------------------|-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-session-name-template          | `"%J:%h:%p"`                          | String format for session names - describe `cider-format-connection-params' for available formats                                                 |
+| cider-connection-message-fn          | `#'cider-random-words-of-inspiration` | generate the message displayed on connect - `nil` no message, `cider-random-tip` random tip on using CIDER                                        |
+| cider-redirect-server-output-to-repl | `t`                                   | Should nREPL server output be redirected to the REPL buffer. `t` output sent to nrepl-server buffer and REPL buffer. `n` only nrepl-server buffer |
+| cider-auto-mode                      | `t`                                   | Should all Clojure buffers be automatically set to cider major mode                                                                               |
