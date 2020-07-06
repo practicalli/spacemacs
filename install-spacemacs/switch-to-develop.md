@@ -1,44 +1,77 @@
 # Switch to Spacemacs develop branch
-Until the release of Spacemacs 0.300 it is highly recommended to use the Spacemacs `develop` branch.
+Until the release of Spacemacs 0.300 it is highly recommended to use the Spacemacs `develop` branch. If you have installed the default Spacemacs `master` branch, follow these steps to switch smoothly to Spacemacs `develop` branch.
 
-If you have installed the default Spacemacs `master` branch, follow these steps to switch smoothly to Spacemacs `develop` branch.
+If you have not customized the `.spacemacs` file then simply delete it and checkout the `develop` branch in `.emacs.d`.  Starting Emacs will create a new .spacemacs file with the latest updates.
 
-## Clean the Spacemacs install
-If you made changes to the  `~/.spacemacs` file, them move the file or rename it. Otherwise delete the `~/.spacemacs` file.
+```shell
+cd ~/.emacs.d
+git checkout develop
+```
 
-Delete the `~/.emacs.d` directory or just the `~/emacs.d/elpa/` directory.
+## Updating to develop - keeping .spacemacs changes
+If you have changes in the `.spacemacs` file you wish to keep, there are two approaches.  Either update Spacemacs on top of your changes or replace the configuration and use a diff tool to copy your changes back to the `.spacemacs` file.
 
-## Install the Spacemacs develop branch
-If you deleted the `~/.emacs.d` directory, clone the Spacemacs develop branch
+{% tabs overwrite="Update Existing Configuration", clean="Clean install and diff changes" %}
+
+<!-- Update existing Spacemacs configuration in place -->
+
+{% content "overwrite" %}
+Make a backup of your `.spacemacs` file.
+
+Change into the `~/.emacs.d/` directory and change the Git branch to `develop`
+
+```shell
+cd ~/.emacs.d/
+git checkout develop
+```
+
+`SPC f e D` (`spacemacs/ediff-dotfile-and-template`) to compare the develop version of the `.spacemacs.template` with your customized `.spacemacs` configuration.
+
+In the ediff buffer, use `j` and `k` to navigate changes, `b` to copy changes from the `spacemacs.template` to your custom `.spacemacs` configuration.
+
+You should accept all changes unless you know that you should keep a specific change (eg. layers, variable settings).
+
+`q` to quit the ediff session.
+
+`SPC f s` to save the .spacemacs file.
+
+Delete the `~/emacs.d/elpa/` directory, as packages will downloaded under `~/.emacs.d/elpa/develop/<emacs-version>/`.
+
+
+<!-- Clean Spacemacs install, using ediff to add any changes -->
+
+{% content "clean" %}
+Delete the `~/.emacs.d` directory (backup any changes made in `.emacs.d/private` if relevant).
+
+Clone Spacemacs specifying the `develop` branch
 
 ```shell
 git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
 ```
 
-If you did not delete the `~/.emacs.d/` directory, change the Git branch to `develop`
+Move the  `~/.spacemacs` file or rename it, allowing Spacemacs to create an updated configuration from the `develop` branch.
 
-```shell
-cd ~/.emacs.d/
-git checkout -b develop
-```
+
+## Start Emacs
+Start Emacs.  Select the editing style (vim, emacs) and spacemacs distribution (full, minimal) to use and Spacemacs creates a new `.spacemacs configuration`.
+
+Spacemacs will download the distribution packages and packages for the default set of layers.  This may take a couple of minutes.
+
 
 ## Update the Spacemacs configuration
 If you have changes from the original Spacemacs install:
 
-`SPC D f f` to open ediff with the new `~/.spacemacs` file and your backup file.
+`SPC D f f` to open ediff.  Select the `~/.spacemacs` file first and then your `.spacemacs` backup file.
 
-Copy changes to the new `~/.spacemacs`.
-
-`n`, `p` navigates (down/up) between each difference in the file.  `a` and `b` copies a change from one file to the other.  Accept all the changes from the template unless you know you made a specific change to your `.spacemacs` file.
+`j`, `k` navigates (down/up) between each difference in the file.  `b` copies a change from your custom `.spacemacs` file to the `~/.spacemacs` file now used by Spacemacs.
 
 `?` to list the diff commands (when the cursor is in window 3)
 
-`q` to quit the ediff session (when the cursor is in window 3) and `SPC f s` to save the `.spacemacs` file.
+`q` to quit the ediff session (when the cursor is in window 3) and `SPC f s` to save any changes made to the `.spacemacs` file.
 
+## Restart Emacs to load all changes
+`SPC q r` (`emacs-restart`) to ensure your .spacemacs changes and packages are loaded.  This may take a minute if you added layers to the `.spacemacs` configuration file.
 
-## Start / Restart Spacemacs
-Start (or restart) Emacs to use the `develop` version of Spacemacs.  This will download a large number of packages and may take a few minutes.
+Once Spacemacs restarts you are ready to enjoy Spacemacs `develop`.
 
-Once all the packages are downloaded, `SPC q r` (`emacs-restart`) to ensure all packages downloaded successfully and are loaded in the correct order.
-
-You are now ready to enjoy Spacemacs `develop`.
+{% endtabs %}
