@@ -140,6 +140,7 @@
     * [Similar function call name](refactor/similar-function-call-name.md)
     * [Within a function](refactor/within-a-function.md)
     * [Within a namespace](refactor/within-a-namespace.md)
+    * [ns namespace definitions](refactor/namespace-definitions.md)
     * [Within a project](refactor/within-a-project.md)
     * [clj-refactor code](refactor/clj-refactor/index.md)
         * [Managing Library Dependencies](refactor/clj-refactor/managing-library-dependencies.md)
