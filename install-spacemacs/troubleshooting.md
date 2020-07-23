@@ -69,3 +69,12 @@ If there are problems shutting down the REPL, `, s q q` (`cider-quit`),  check t
 
 > #### Hint::`SPC a P` lists all operating system processes
 > `SPC SPC helm-top` runs a process list
+
+## Profiling Emacs
+`SPC SPC profiler-start` will start monitoring how much CPU and memory resources that different parts of Emacs are using.  The profiler is especially useful if there are slow running commands or Emacs is unresponsive at times.
+
+`SPC SPC profiler-report` displays buffers showing the results of profiling Emacs.
+
+[![Spacemacs Emacs Profiler report](/images/spacemacs-profiler-report-memory-cpu.png)](/images/spacemacs-profiler-report-memory-cpu.png)
+
+`SPC SPC profiler-stop` to stop profiling Emacs.
