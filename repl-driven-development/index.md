@@ -58,7 +58,7 @@ Continuous linting significantly reduces a wide range of bugs and syntax errors 
 
 [clj-kondo](https://github.com/borkdude/clj-kondo) is a Clojure project that provides continuous Linting
 
-[Eastwood](https://github.com/jonase/eastwood) also provides linting, although its more effective as a batch process before commit or as part of cont inuous integration.
+[Eastwood](https://github.com/jonase/eastwood) also provides linting, although its more effective as a batch process before commit or as part of continuous integration.
 
 Kibit provides feedback on the use of Clojure in your code, providing idiomatic Clojure suggestions.
 
