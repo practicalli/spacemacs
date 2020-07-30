@@ -3,6 +3,8 @@ Magit provides an excellent tool to change history using interactive rebasing.  
 
 During the interactive rebasing you can use other Git commands such as Amend, Write and Extend to update commits anywhere in the history.
 
+> Before rebasing, any uncommitted changes should be stashed or deleted.
+
 ![Spacemacs Magit Rebase menu](/images/spacemacs-magit-rebase-menu.png)
 
 <!-- Editing required for this video -->
@@ -11,23 +13,49 @@ During the interactive rebasing you can use other Git commands such as Amend, Wr
 <!-- {% endyoutube %} -->
 
 
+## Starting Rebase
+`SPC g s` to open the Magit Status buffer and find the commit where the rebase should start.
 
-## Rebase from the Git Log
-Open the git log view with `l l` and select the point in history you want to rebase from
+Either navigate to the **Recent Commits** section and `TAB` to show the list of commits, or use `l l` to open the commit history log.
+
+Move the cursor to the commit to rebase from, the earliest commit to be changed.
+
+## Modifying a commit during rebase
+`r` to start rebase
+
+`m` to modify the commit
+
+`s` to stage any new content to be added to the commit, if required.
+
+`u` to mark hunks or regions to unstage in the original commit, using `v` to select regions within hunks if required.
+
+`z w` to stash the working copy of any unstaged changes, or `x` to delete those unstaged changes from the working copy
+
+`c a` to amend the commit with the changes
+
+`, ,` to confirm the changes and make the new commit
+
+`r r` to continue the rebase
+
+`P p` to push the changes to a remote repository, or `P -f p` for a forced push with lease if rebased commits were already pushed to that repository
+
+`z p` to unstash any changes that were stashed during or before the rebase.
 
 
 
 
 > #### TODO::work in progress, sorry
 
-## Fixing up
+<!-- > #### TODO::work in progress, sorry -->
+
+<!-- ## Fixing up -->
 
 
-## Squashing
+<!-- ## Squashing -->
 
 
 
-### Interactive rebaste to modifying a commit other than HEAD
+## Interactive rebase to modifying a commit other than HEAD
 
 can be broken down into three steps:
 
@@ -48,7 +76,7 @@ If you know that your changes to A will result in conflicts with B, then proceed
 
 Git allows creating "fixup commits" using git commit --fixup A. This creates a new commit, which records changes which "should have been made in another commit". That commit becomes the new HEAD. There also exists a --squash variant. For information about the differences see the git-commit man page.
 
-## rebase with autosquash
+## Rebase with autosquash
 
 To actually combine the A commit and the new commit A' and then reapply B on top of that you have to use rebase. Magit provides a convenient command for doing so on r f.
 
