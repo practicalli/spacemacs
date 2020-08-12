@@ -308,3 +308,6 @@
 <!--         * [Using Paredit](structural-editing/paredit.md) -->
 <!-- * [Work in progress - messy](work-in-progress.md) -->
 <!--     * [Emacs Quick Reference](spacemacs-basics/emacs-quick-reference.MD) -->
+
+## Emacs development
+* [Learning eLisp](emacs-lisp/index.md)
