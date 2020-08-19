@@ -1,69 +1,60 @@
 # Managing Namespaces
+Adding, updating and cleaning up of libraries in your namespace.  Open the relevant Clojure file for the namespace and use the following commands to update the `ns` definition.
 
-Adding, updating and cleaning up of libraries in your namespace.  Open the relevant Clojure file for the namespace and use the following commands:
+| Keybinding | Description                                               |
+|------------|-----------------------------------------------------------|
+| `, r a r`  | Add require form                                          |
+| `, r a m`  | Add a missing namespace (library specification - libspec) |
+| `, r a i`  | Add import form for a JVM library                         |
+| `, r c n`  | Clean (remove unused) require and import forms            |
 
-* `ar` - Add a require section
-* `am` - Add a missing library (libspec)
-* `ai` - Import Java / JVM library
-* `cn` - Clean up the namespace
-
-> To add and update library dependencies to your project, see the previous section on [managing library dependencies](managing-library-dependencies.html)
+> [managing library dependencies](managing-library-dependencies.html) covers commands that add and update library dependencies to a Leiningen project.
 
 
-## `ar` Add require to namespace declaration
+## `ar` Add require to namespace definition
+`, r a r` to require a known library namespace to the current namespace definition.
 
-If you know the library you want to add to your namespace, you can use `ar` to add the library name to the namespace form and jump back to where you were coding.
+`(:require [ :as ])` is added if the `ns` definition does not contain any require statements
 
-| Spacemacs     | Major mode    | Emacs         | Evil      |
-|---------------|---------------|---------------|-----------|
-| `SPC m r a r` | `M-RET r a r` | `C-c C-f a r` | `, r a r` |
+`[ :as ]` is added if the `(:require )` form already exists in the `ns` definition.
 
-Adds a `(:require )` clause to to the namespace declaration if necessary, then gives you several tabstops to help you write your require statement:
+Auto-completion will show namespaces the REPL is aware of.
+
+`TAB` will jump through the various _tabstops_ to simplify adding the require statement
 
 - 1st tabstop wraps the entire `[example :as x]` entry, letting you paste in a complete require.
 - 2nd tabstop is inside the brackets `example :as x`, letting you write in a require with no alias.
 - 3rd and 4th tabstop is the `example` and `x`, letting you write a require with an alias.
 
-Once you're through the tabstops, the cursor jumps back to where you were. 
+Once you're through the tabstops, the cursor jumps back to where you were.
 
-> If `cljr-auto-clean-ns` is true (the default), the namespace is cleaned up afterwards. 
-
+The namespace is automatically cleaned up afterwards.  This behaviour can be disabled by adding `cljr-auto-clean-ns nil` to the clojure layer configuration in `.spacemacs`
 
 
 ## `am` Add missing Clojure library (libspec)
+`, r a m`  (`cljr-add-missing-libspec`) to require a namespace for a var (function, name) under the cursor that is defined in a different namespace.  This can be a namespace from the project or a library added as a dependency.
 
-If you want to call a function that is not part of the current namespace, you can use the Emacs function `cljr-add-missing-libspec` to try resolve the symbol at point and require or import the missing symbol.
+If the var name is unique on the classpath then the `ns` definition is updated automatically. A prompt to select possible candidates is shown if more than one possibility.
 
-| Spacemacs     | Major mode    | Emacs         | Evil      |
-|---------------|---------------|---------------|-----------|
-| `SPC m r a m` | `M-RET r a m` | `C-c C-f a m` | `, r a m` |
-
-
-If the name is unique on the classpath then the namespace is updated automatically.  If there is more than one posibility, the user is prompted to select among possible candidates.
-
-If the symbol at point is of the form `edn/read-string` the required
-namespace will be aliased to `edn`.
+If the symbol at point is of the form `edn/read-string` the required namespace will be aliased to `edn`.
 
 ![](/images/add-missing-libspec.gif)
 
 
-
 ## `ai` Add a Java Library
+`, r a i` to import a known JVM library (Java, Scala, Jython, etc.) to the current namespace definition.
 
-Adds an `(:import )` clause to the namespace declaration if necessary, then lets you type out your import in a highlighted field. Tab out of the field to jump back to where you were. If `cljr-auto-clean-ns` is true (the default), the namespace is cleaned up afterwards.
+`(:import )` form is added if the `ns` definition does not contain any import statements.
 
-| Spacemacs     | Major mode    | Emacs         | Evil      |
-|---------------|---------------|---------------|-----------|
-| `SPC m r a i` | `M-RET r a i` | `C-c C-f a i` | `, r a i` |
+Auto-completion will show namespaces the REPL is aware of.
 
+The namespace is automatically cleaned up afterwards.  This behaviour can be disabled by adding `cljr-auto-clean-ns nil` to the clojure layer configuration in `.spacemacs`
 
 ![Spacemacs ](/images/add-import.gif)
 
 
-
 ## `cn` Clean ns
-
-Cleanup the namespace of the current Clojure file by removing unused libraries and referred functions.
+`, r c n` to clean the `ns` namespace definition in the current Clojure buffer
 
 * Replace `:use` in favor of `refer` `:all`.
 * Sort required libraries, imports and vectors of referred symbols
@@ -74,12 +65,6 @@ Cleanup the namespace of the current Clojure file by removing unused libraries a
 * Remove unused symbols from the `:refer` vector, or remove it completely.
 * Remove any unused imports
 
-| Spacemacs     | Major mode    | Emacs         | Evil      |
-|---------------|---------------|---------------|-----------|
-| `SPC m r c n` | `M-RET r c n` | `C-c C-f c n` | `, r c n` |
-
-> The prefix rewriting can be turned off by tweaking `cljr-favor-prefix-notation`.
+> The prefix rewriting can be turned off by setting `cljr-favor-prefix-notation nil`.
 
 ![](/images/clj-refactor-clean-ns.gif)
-
-> The `au` refactor adds a `(:use )` declaration to the namespace, however that declaration is not encouraged in Clojure as it can pollute a namespace.

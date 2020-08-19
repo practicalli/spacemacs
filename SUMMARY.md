@@ -142,10 +142,11 @@
     * [Within a namespace](refactor/within-a-namespace.md)
     * [ns namespace definitions](refactor/namespace-definitions.md)
     * [Within a project](refactor/within-a-project.md)
-    * [clj-refactor code](refactor/clj-refactor/index.md)
+    * [Clojure mode](refactor/clojure-mode/index.md)
+    * [clj-refactor](refactor/clj-refactor/index.md)
         * [Managing Library Dependencies](refactor/clj-refactor/managing-library-dependencies.md)
         * [Managing Namespaces](refactor/clj-refactor/managing-namespaces.md)
-        * [Forms](refactor/clj-refactor/forms.md)
+        <!-- * [Forms](refactor/clj-refactor/forms.md) -->
         * [Collections](refactor/clj-refactor/collections.md)
         * [Extracting](refactor/clj-refactor/extracting.md)
         * [Formatting Code](refactor/clj-refactor/formatting-code.md)
