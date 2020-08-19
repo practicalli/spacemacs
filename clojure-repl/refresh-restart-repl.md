@@ -1,9 +1,17 @@
-# Restart the REPL
+# Refresh or Restart the REPL
 A REPL can be kept open for days or weeks for the same project, especially the vars in the REPL are kept clean by [un-defining a var, `, e u`, before changing its name]([undefine](/evaluating-clojure/undefine.md)  (e.g. `def`, `defn`, `deftest`, etc.).  Code that changes within a var can be refreshed by [evaluating the var expression]([undefine](/evaluating-clojure/) again.
 
 Projects may use [Component lifecycle libraries](component-lifecycle.md) such as mount, integrant or component, to provide ways to start and stop the major components of an application without restarting the REPL.
 
 Occasionally you want to start from scratch and remove all of the evaluated code from the REPL.  This is usually a good idea where major refactoring has taken place or before deployment to test and production environments.
+
+## Restarting the REPL
+`, m q r` calls the `sesman-restart` which kills the current REPL and starts a new REPL, establishing a connection to that REPL from Cider. It is the same as doing `, s q q` (`cider-quit`) followed by `, '` (`cider-jack-in-*`).
+
+> #### Hint::Restart the REPL when adding library dependencies
+> Use `, m q r` to restart the REPL to make newly added libraries available to the project.
+
+`, s q r` (`cider-restart`) only restarts the Cider connection to the running REPL process and does not affect the REPL itself.  There seems little value in this command.
 
 
 ## Refreshing the contents of the REPL
@@ -28,10 +36,6 @@ If there are issues using `cider-ns-refresh` then use a unconditional reloading 
 `SPC u , e N` prompts for a namespace name to reload a different namespace than that of the current buffer.
 
 
-## Restarting the REPL
-`SPC s q r` calls the `cider-restart` which is a convenience function that simply stops and starts the REPL. It is the same as doing `, s q q` (`cider-quit`) followed by `, '` (`cider-jack-in`).
-
-
 ## Issues with Clojure reload
 When modifing two namespaces that depend on each other, the namespaces must be reload in the correct order to avoid compilation errors.
 
@@ -47,5 +51,6 @@ For functions that close over values in a reloaded namespace, those values are n
 
 
 ## References
+* [Hard CIDER: Hard Restart](https://metaredux.com/posts/2019/11/07/hard-cider-hard-restart.html)
 * [Reloading Woes - Lambda island](https://lambdaisland.com/blog/2018-02-09-reloading-woes)
 * [clojure.tools.namespace.repl](https://cljdoc.org/d/org.clojure/tools.namespace/0.3.1/api/clojure.tools.namespace.repl) - cljdoc.org
