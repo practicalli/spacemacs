@@ -3,7 +3,7 @@
 
 `SPC a o j j` opens a new journal entry for the current day in a new buffer.  `SPC u SPC a o j j` to view the journal without adding a new entry.
 
-`SPC o j` is a user binding as a short-cut for `SPC a o j j`, added in the [practcialli/spacemacs.d]({{ P9ISpacemacsD }}) configuration
+`SPC o j` is a user binding as a short-cut for `SPC a o j j`, added in the [practcialli/spacemacs.d]({{ book.P9ISpacemacsD }}) configuration
 
 `o` creates a new line automatically indented, or a new list item, `-` or check box list, `- [ ]`, if the previous line was that type.
 
@@ -52,7 +52,7 @@ Add a cookie to a header containing tasks to show the number or percentage of ta
 
 
 ## Configure org-journal
-[practicalli/spacemacs.d]({{ P9ISpacemacsD }}) includes the configuration below
+[practicalli/spacemacs.d]({{ book.P9ISpacemacsD }}) includes the configuration below
 
 To manually add org-journal, edit `.spacemacs` and add these org layer variable with suggested settings from [Spacemacs org layer documentation](https://develop.spacemacs.org/layers/+emacs/org/README.html#org-journal-support)
 

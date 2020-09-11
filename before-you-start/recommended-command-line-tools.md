@@ -43,7 +43,7 @@ clj-kondo provides live linting when developing with the Clojure language and is
 
 * [clj-kondo binary install guide](https://github.com/borkdude/clj-kondo/blob/master/doc/install.md)
 
-Use the [practcialli/spacemacs.d]({{ P9ISpacemacsD }}) configuration or see [Install Clojure section](install-clojure.md) for details on how to use clj-kondo with Spacemacs.
+Use the [practcialli/spacemacs.d]({{ book.P9ISpacemacsD }}) configuration or see [Install Clojure section](install-clojure.md) for details on how to use clj-kondo with Spacemacs.
 
 
 <!-- ## image library -->

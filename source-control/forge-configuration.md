@@ -67,7 +67,7 @@ Add `auth-sources` to specify the location of the encrypted token file in the `d
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ```
 
-[practicalli/spacemacs.d]({{ P9ISpacemacsD }}) configuration contains this setting.
+[practicalli/spacemacs.d]({{ book.P9ISpacemacsD }}) configuration contains this setting.
 
 
 ## Configure the number of open and closed topics shown in forge
@@ -91,4 +91,4 @@ To occasionally show closed topics, set the closed value to a negative number to
 
 The first number is the open items to be displayed, the second number is the closed items to display.  `0` means no items will be displayed.
 
-[practicalli/spacemacs.d]({{ P9ISpacemacsD }}) configuration contains this setting.
+[practicalli/spacemacs.d]({{ book.P9ISpacemacsD }}) configuration contains this setting.
