@@ -1,7 +1,9 @@
 # Project level configuration
 `.dir-locals.el` files provide project level configuration, configuring the default project type, build tool and other CIDER actions.
 
-`SPC p e` to edit a `.dir-locals.el` file in the current project.  If a file does not yet exist for the current project, is created when the buffer is saved.
+There are many [CIDER configuration variables](/reference/cider/configuration-variables.md) that can be added to `.dir-locals.el`
+
+`SPC p e` to create or edit a `.dir-locals.el` file in the current project.
 
 > #### Hint::Force loading the .dir-locals.el configuration
 > If a `.dir-locals.el` file is created after a file from the project is open, then the variables will not be applied to that buffer.
