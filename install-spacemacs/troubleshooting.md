@@ -46,6 +46,10 @@ If a package has an issue in its newest version, you can configure spacemacs to 
 
 * [Spacemacs - managing broken Emacs packages](http://jr0cket.co.uk/2017/03/spacemacs-managing-broken-emacs-packages.html)
 
+## Scorched Earth approach
+Delete `~/.emacs.d/elpa` director and `SPC q r` to restart Spacemacs.  This will remove any complied Emacs packages that may have become corrupted or replace older packages that are now causing issues.
+
+As there are 100's of packages, the scorched earth approach of just deleting them and downloading fresh copies can be surprisingly effective at resolving issues with very little effort.
 
 ## Debugging Spacemacs
 The [Spacemacs debugging page](https://github.com/syl20bnr/spacemacs/wiki/Debugging) explains concepts needed to debug Spacemacs and to report issues in an useful way.
