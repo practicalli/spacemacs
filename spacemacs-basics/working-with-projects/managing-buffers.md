@@ -2,7 +2,7 @@
 
 Buffers manage the display of files and other information. Opening a file replaces the content in the current buffer.
 
-[![Spacemacs Buffer menu](../images/spacemacs-buffer-menu.png)](/images/spacemacs-buffer-menu.png)
+[![Spacemacs Buffer menu](/images/spacemacs-buffer-menu.png)](/images/spacemacs-buffer-menu.png)
 
 ## Listing open buffers
 
