@@ -1,21 +1,25 @@
 # Line Numbers
-Line numbers can be toggled for individual buffers via the Spacemacs toggle menu or configured in your `.spacemacs` file.
+`SPC t n` menu toggles line numbers, showing consecutive (absolute) `a`, relative `r` or visual `v` layout.
 
-Relative numbering is useful when using Vim style editing as it allows you to jump a relative number of lines from the current line.
+Configure `dotspacemacs-line-numbers` in `.spacemacs` file to [show line numbers by default](#visual-style-line-number-configuration).
 
-`10 j` in **Evil normal** mode will jump 10 lines forward.
+[![Spacemacs - Toggle menu](https://raw.githubusercontent.com/practicalli/graphic-design/master/spacemacs/spacemacs-line-numbers-comparison-labelled.png)](https://raw.githubusercontent.com/practicalli/graphic-design/master/spacemacs/spacemacs-line-numbers-comparison-labelled.png)
+
+
+## Relative line numbering for Vim-style editing
+A relative numbering style (`visual`, `relative`) is highly recommended for [vim-style editing](/spacemacs-basics/vim-basics.md) as it provides an effective way to apply actions to multiple lines
+
+`10 j` in **Evil normal** mode will jump 10 lines forward
+
+`g c 9 j` will comment 9 lines from current, downwards
+
+`24 g r j` will select multiple cursors for the next 24 lines
 
 With relative numbering, the current line number is shown and all other numbers are relative to the number of lines away they are from the current line.  Relative numbering is useful for jumping to different parts of your file or running commands on a number of lines, eg. delete, indent, multiple cursors (`g r`)
 
-| Keybindings | Description                  |
-|-------------|------------------------------|
-| `SPC t n`   | Toggle line numbers          |
-| `SPC t r`   | Toggle relative line numbers |
 
-[![Spacemacs - Toggle menu](../images/spacemacs-toggle-menu.png)](../images/spacemacs-toggle-menu.png)
-
-## Vim style line number configuration
-Practicalli recommends using visual line numbers for Vim style editing, which provides relative numbering that does not count hidden or folded code (`z a`).
+## Visual style line number configuration
+Practicalli recommends using visual line numbers for Vim style editing, which provides relative numbering that does not count hidden or [folded code](/spacemacs-basics/evil-z-menu.md).
 
 `SPC f e d` to open the `.spacemacs` file and `SPC s s`dotspacemacs-line-numbers` to jump to the configuration option.
 
@@ -31,8 +35,7 @@ dotspacemacs-line-numbers '(:visual t
 
 The configuration provides visual line numbers for buffers all buffers except dired, doc-view and pdf-view buffers.
 
-Line numbers are also disabled for large files, as it can slow Emacs down considerably (although this may be less of a problem with Emacs 26.3 and native line numbers).
-
+Line numbers are also disabled for large files, as it can slow Emacs down considerably (although this may be less of a problem with Emacs 26.3 onwards and native line numbers).
 
 If you want to turn line numbers off for all buffers by default, set the value back to the default `nil` value.
 
