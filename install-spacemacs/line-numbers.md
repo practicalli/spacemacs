@@ -9,10 +9,8 @@ With relative numbering, the current line number is shown and all other numbers 
 
 | Keybindings | Description                  |
 |-------------|------------------------------|
-| `SPC t n`   | Toggle line numbers          |
-| `SPC t r`   | Toggle relative line numbers |
-
-[![Spacemacs - Toggle menu](../images/spacemacs-toggle-menu.png)](../images/spacemacs-toggle-menu.png)
+| `SPC t n a` | Toggle absolute line numbers |
+| `SPC t n r` | Toggle relative line numbers |
 
 ## Vim style line number configuration
 Practicalli recommends using visual line numbers for Vim style editing, which provides relative numbering that does not count hidden or folded code (`z a`).
