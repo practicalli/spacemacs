@@ -7,7 +7,7 @@ Emacs persistent server will run in the background, even when Emacs is not runni
 As a heavy Vim user or otherwise spending most of your time in a terminal window, you will benefit from configuring Emacs to have a persistent server and opening files from the command line with `emacsclient`.
 
 > #### Hint::Run Spacemacs once per OS login
-> Emacs is typically run once and kept open, as its feature rich enough to do all your from Emacs.  Therefore the few seconds startup time is not seen as an issue.  If you stop and start Emacs constantly, as you may do with Vim, then you will of course notice this few seconds delay.
+> Emacs is typically run once and kept open, as its feature rich enough to do all your tasks from Emacs.  Therefore the few seconds startup time is not seen as an issue.  If you stop and start Emacs constantly, as you may do with Vim, then you will of course notice this few seconds delay.
 
 ## Configure Emacs persistent server
 
