@@ -6,7 +6,12 @@ Use `C-j` and `C-k` to move down and up through the search results.
 
 `RET` selects the search result and shows the file and line in the current buffer.
 
+`SPC s l` will repeat the last search
+
+`M-n` and `M-p` will scroll through the search patterns whenever the search pop-up window is open
+
 ![Spacemacs Helm-Ag ripgrep pattern search results](/images/spacemacs-helm-ag-ripgrep-pattern-search.png)
+
 
 ## Search tool binary
 Searching requires an external tool to be available on your system PATH. [Ripgrep](https://github.com/BurntSushi/ripgrep) is the recommended search tool, although [silver searcher (ag)](/alternative-tooling/silversearcher-ag.md) is a viable alternative.  Using `grep` is noticeably slower and has fewer options for searching.
