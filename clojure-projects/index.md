@@ -11,7 +11,7 @@ Clojure projects can be generated from templates using one of the Clojure build 
 Create a new project with Clojure CLI, using the `app` template and a project called practicalli/playground
 
 ```shell
-clojure -A:new app practicalli/playground
+clojure -M:project/new app practicalli/playground
 ```
 
 ![Spacemacs - Clojure CLI create project - Eshell ](/images/spacemacs-clojure-create-a-project-clojure-cli-eshell.png)
