@@ -14,6 +14,27 @@ The results of running the tests are displayed in the mini-buffer, showing the n
 >
 > Tests can be run from the source code buffer, however, only test code that has been evaluated in the REPL will run.
 
+
+## Using Test Selectors to run specific tests
+Using the universal argument before calling CIDER test runner will prompt for test selector filters, running only those tests that match the selector inclusions/exclusions.
+
+`SPC t a` runs all the tests in a project.
+
+`SPC u SPC t a` prompts for test selectors and runs the matching tests in a project.
+
+`SPC t l` runs all tests currently evaluated in the REPL.
+
+`SPC u SPC t l` prompts for test selectors and runs the matching tests currently evaluated in the REPL.
+
+CIDER first prompts for the test selectors to include:
+
+![Spacemacs Clojure Cider Test Runner test selector prompt - include](/images/spacemacs-clojure-test-selectors-prompt.png)
+
+Then prompts for the test selectors to exclude.  A warning displays if CIDER does not find the test selector name.
+
+![Spacemacs Clojure Cider Test Runner test selector prompt - include](/images/spacemacs-clojure-test-selectors-integration-not-found.png)
+
+
 ## Running tests in the REPL buffer
 <kbd>,</kbd> to open the REPL command menu and select run tests
 
