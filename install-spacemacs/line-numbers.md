@@ -35,7 +35,7 @@ dotspacemacs-line-numbers '(:visual t
 
 The configuration provides visual line numbers for buffers all buffers except dired, doc-view and pdf-view buffers.
 
-Line numbers are also disabled for large files, as it can slow Emacs down considerably (although this may be less of a problem with Emacs 26.3 onwards and native line numbers).
+Line numbers are also disabled for large files, as it can slow Emacs down considerably (although this may be less of a problem with Emacs 26.3 onward and native line numbers).
 
 If you want to turn line numbers off for all buffers by default, set the value back to the default `nil` value.
 
