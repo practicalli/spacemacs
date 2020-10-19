@@ -1,5 +1,5 @@
 # Recommended Command Line Tools
-Emacs uses several external command line tools.  There are some very efficient search tools that are recommended (ripgrep, sliver searcher).
+Emacs uses several external command line tools.  There are some very efficient search tools that are recommended (ripgrep, silver searcher).
 
 Consider installing these tools to enhance your Spacemacs experience.
 
