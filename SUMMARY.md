@@ -164,6 +164,7 @@
     * [Idiomatic code checking](improving-code/idiomatic-code-checking.md)
 * [Documentation](documentation/index.md)
     * [Cider doc](documentation/cider-doc.md)
+    * [Related functions](documentation/apropos.md)
     * [Javadoc](documentation/javadoc.md)
     * [Comments](documentation/comments.md)
     * [Markdown documentation](markdown-mode/index.md)
