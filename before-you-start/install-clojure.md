@@ -25,10 +25,11 @@ Clojure CLI tools provides the simplest way to run the Clojure REPL and Clojure 
 Use the Linux script installer from [Clojure.org](https://clojure.org/guides/getting_started#_installation_on_linux)
 
 ```shell
-curl -O https://download.clojure.org/install/linux-install-1.10.1.561.sh
-chmod +x linux-install-1.10.1.561.sh
-sudo ./linux-install-1.10.1.561.sh
+curl -O https://download.clojure.org/install/linux-install-1.10.1.727.sh
+chmod +x linux-install-1.10.1.727.sh
+sudo ./linux-install-1.10.1.727.sh
 ```
+
 > If required, install `curl` using `sudo apt install curl`
 
 The installation creates `/usr/local/bin/clojure`, `/usr/local/bin/clj` wrapper and `/usr/local/lib/clojure` directory.

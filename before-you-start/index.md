@@ -3,14 +3,22 @@
 ## [Install Emacs](install-emacs.html)
 Spacemacs is a communiy driven configuration for Emacs, so you need to install Emacs before you can use Spacemacs.
 
-> ####Info::Minimum Emacs Version - 26.3
-> This guide used the `develop` version of Spacemacs which recommends Emacs 26.3 or greater
+> ####Info::Minimum Emacs Version - 27.1
+> This guide used the 0.300 `develop` version of Spacemacs which recommends Emacs 27.1 or greater.  [Switch to Spacemacs develop](/install-spacemacs/switch-to-develop.md) if using version 0.200
 
-## [Install Java](install-java.html)
-Clojure is a hosted language, so requires a Java Virtual Machine (JVM), provided by installing the Java JRE or Java SDK.  Practicalli recommends [OpenJDK 11 (LTS) from AdoptOpenJDK](https://adoptopenjdk.net/)
+## Install Clojure CLI Tools
+Clojure CLI tools provide a simple and configurable way to:
 
+* Run Clojure programs and tools
+* Run an interactive REPL (Read-Eval-Print Loop) and evaluate Clojure expressions, usually with a [Clojure aware editor](/clojure-editors/)
+* Managing dependencies (via tools.deps) from Maven and Git repositories
 
-## [Install Clojure](install-clojure.html)
-This guide is changing to use [the Clojure CLI tools and deps.edn projects](https://clojure.org/guides/getting_started).  The guide will also use [clj-new](https://github.com/seancorfield/clj-new) to create Clojure projects.
+Using community tools on top of Clojure CLI tools provides tasks to create, develop, build and deploy Clojure applications and services
 
-Previously this guide used [Leiningen](https://leiningen.org) as the project automation tool for Clojure.  Leiningen is a very common tool that will help you create and run projects, as well as create build assets (jars) for deployment.  This guide should also work for [boot build tools](http://boot-clj.com/), although contains no specific details.
+| Tools                                                                                               | Description                                                                                                                                      |
+|-----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Java 11](https://practicalli.github.io/clojure/clojure-tools/install/java.html)                    | Clojure is a hosted language and Clojure tools runs on the Java virtual machine.  Java 11, the current long term support version is recommended. |
+| [Clojure CLI Tools](https://practicalli.github.io/clojure/clojure-tools/install/clojure.html)       | Essential tools for Clojure development and running Clojure applications                                                                         |
+| [Community tools](https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html) | Curated aliases for community tools and common development tasks                                                                                 |
+| [Code analysis](https://practicalli.github.io/clojure/clojure-tools/install/code-analysis.html)     | A lint tool for avoiding syntax bugs and supporting idiomatic code                                                                               |
+| [Editors](https://practicalli.github.io/clojure/clojure-tools/install/clojure-editors/)             | Spacemacs (Emacs), Calva (VS Code), Conjure (vim), Chlorine (Atom.io) and Cursive (IntelliJ) provided a complete Clojure development environment |
