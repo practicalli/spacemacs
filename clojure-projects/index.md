@@ -14,7 +14,7 @@ Create a new project with Clojure CLI, using the `app` template and a project ca
 clojure -M:project/new app practicalli/playground
 ```
 
-![Spacemacs - Clojure CLI create project - Eshell ](/images/spacemacs-clojure-create-a-project-clojure-cli-eshell.png)
+<!-- ![Spacemacs - Clojure CLI create project - Eshell ](/images/spacemacs-clojure-create-a-project-clojure-cli-eshell.png) -->
 
 > #### Hint::Clojure CLI and clj-new required?
 > See the [install Clojure section](/before-you-start/install-clojure.html) for details

@@ -16,17 +16,32 @@ An example of setting the Clojure CLI tool as the default Clojure tool (rather t
 
 ```elisp
 ((clojure-mode . ((cider-preferred-build-tool . clojure-cli)
-                  (cider-clojure-cli-global-options . "-A:dev:test-path:spec-test"))))
+                  (cider-clojure-cli-global-options . "-M:dev:test-path:spec-test"))))
 ```
 
 An example of a ClojureScript project using figwheel-main, Clojure CLI and hiding the display banner in the REPL browser
 ```
 ((clojure-mode . ((cider-preferred-build-tool          . clojure-cli)
-                  (cider-clojure-cli-global-options    . "-A:fig:dev")
+                  (cider-clojure-cli-global-options    . "-M:fig:dev")
                   (cider-default-cljs-repl             . figwheel-main)
                   (cider-figwheel-main-default-options . "dev")
                   (cider-repl-display-help-banner      . nil))))
 ```
+
+## Only Clojure CLI tools alias
+The `cider-jack-in` command injects dependencies via the `--deps` command line argument and includes the `--middleware` option for nrepl.  This auto-injected configuration can affect project or user level aliases used with jack-in.
+
+Use the following `.dir-locals.el` configuration to just use the configuration defined in the named alias
+
+```
+((clojure-mode . ((cider-preferred-build-tool . clojure-cli)
+                  (cider-clojure-cli-global-options . "-M:alias/name")
+                  (cider-jack-in-dependencies . nil)
+                  (cider-jack-in-nrepl-middlewares . nil)
+                  (cider-jack-in-lein-plugins . nil)
+                  (cider-clojure-cli-parameters . ""))))
+```
+
 
 ## Common configurations
 [CIDER documentation - basic configuration](https://docs.cider.mx/cider/) describes many of the configuration variables available.
@@ -56,14 +71,18 @@ dotted-pair example
 
 Multiple key-value pairs are defined as a collection of these cons cells in a list.
 
+```
 (("config-variable-name" . "custom-value")
  ("config-variable-name2" . "custom-value2"))
+```
 
 `.dir-locals.el` is a list of dotted-pairs for each major mode.  The value for the major mode is another list of dotted pairs which may contain one or more dotted-pairs.
 
+```
 ((clojure-mode . ((config-var1 . "custom-value1")
                   (config-var2 . "custom-value2")))
  (org-mode . ((config-var3 . "custom-value3"))))
+```
 
 The configuration variables are set when a file is open in a specific Emacs major mode.
 
@@ -80,12 +99,11 @@ The configuration variables are set when a file is open in a specific Emacs majo
 ```
 
 
-
 ## More examples
 The [chui ClojureScript test runner](https://github.com/lambdaisland/chui/blob/master/.dir-locals.el) project [uses a .dir-locals.el](https://github.com/lambdaisland/chui/blob/master/.dir-locals.el) file with example custom code.  One custom expression ensures nrepl middleware is injected into the environment so CIDER can connect.  The other custom expression sets the indent size.
 
 ```elisp
-((clojure-mode . ((cider-clojure-cli-global-options     . "-A:dev:test")
+((clojure-mode . ((cider-clojure-cli-global-options     . "-M:env/dev:env/test")
                   (cider-custom-cljs-repl-init-form     . "(user/cljs-repl)")
                   (cider-default-cljs-repl              . custom)
                   (cider-preferred-build-tool           . clojure-cli)
@@ -100,10 +118,9 @@ The [chui ClojureScript test runner](https://github.com/lambdaisland/chui/blob/m
                             (ex-info 0))))))
 ```
 
-
-
 ## References
 * [CIDER list of configuration variables](/reference/cider/configuration-variables.md)
+* [Hard CIDER: Project specific configuration](https://metaredux.com/posts/2019/10/05/hard-cider-project-specific-configuration.html)
 * [Emacs Wiki: per-directory local variables](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html)
 * [Project level Emacs config with .dir-locals.el](https://lambdaisland.com/blog/2019-12-21-advent-of-parens-21-project-config-dir-locals) - lambdaisland
 
