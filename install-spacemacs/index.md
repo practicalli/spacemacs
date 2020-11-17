@@ -1,12 +1,14 @@
 # Getting started with Spacemacs
 
-1. Install prerequisites: [Emacs version 26.3](/before-you-start/install-emacs.html), [Java 8 or 11](/before-you-start/install-emacs.html) and the [Recommended Command Line tools](/before-you-start/recommended-command-line-tools.md).
+1. Install prerequisites: [Emacs version 27.1](/before-you-start/install-emacs.html), [Java 8 or 11](/before-you-start/install-emacs.html) and the [Recommended Command Line tools](/before-you-start/recommended-command-line-tools.md).
 2. Clone or download the Spacemacs, first removing `~/.emacs.d` if it already exists.
 3. Clone the [practicalli/spacemacs.d]({{ book.P9ISpacemacsD }}) configuration, or run the Spacemacs install wizard and follow the [additional configuration section](additional-configuration.md).
+4. Add [fonts for modeline theme](#adding-fonts-and-icons-for-doom-modeline)
 
 {% youtube %}
 https://youtu.be/rZNYLGw1qFk
 {% endyoutube %}
+
 
 ## Clone Spacemacs
 Use your favourite git client or the following command in a terminal window to clone the `develop` branch of Spacemacs:
@@ -17,6 +19,7 @@ git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 > ####Hint::Use Spacemacs develop branch until version 0.300 released
 > Many features in this guide are only available in the `develop` branch of Spacemacs until version 0.300 of Spacemacs is released.
+> The `develop` branch is stable enough to used for your daily work and contains fixes that will not be available in Spacemacs 0.200.
 
 
 ##  Clone Practicalli Spacemacs configuration
