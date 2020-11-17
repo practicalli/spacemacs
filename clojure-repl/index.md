@@ -24,6 +24,10 @@ Clojure developers can use the REPL to evaluate (run) a whole file of code, or j
 `, m q r` to restart the REPL (i.e. when adding a library as a dependency to the project)
 
 
+> #### Hint::Documentation enabled after evaluating a namespace
+> `, h h` shows the documentation for a function under the cursor, but only if a namespace has been evaluated first.  This applies to `clojure.core` functions as well as project and library specific functions.
+
+
 <!-- TODO: add a specific screencast on using the basics of the REPL -->
 <!-- {% youtube %} -->
 <!-- https://www.youtube.com/watch?v=KZjFVdU8VLI?autoplay=1loop=1 -->
