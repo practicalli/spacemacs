@@ -33,6 +33,7 @@ Use the `-g` option for a filename to search (globbing), or `-g!` for a filename
 
 ![Spacemacs Helm-Ag ripgrep globbing not .md files](/images/spacemacs-heml-ag-ripgrep-globbing-not-md.png)
 
+
 ## Example search patterns
 Additional search patterns that work with `ripgrep` or `ag`.
 
@@ -49,6 +50,40 @@ Additional search patterns that work with `ripgrep` or `ag`.
 `(?:^|[^\w-])time(?:[^\w-]|$)` - search for "time" even in kebab-case words. i.e. search for the full word "time" including "-" to be a word character
 
 Ripgrep documentation has many [regular expression examples](https://docs.rs/regex/1.3.6/regex/#syntax)
+
+
+## Searching hidden files
+Searching a project using `SPC /` and `SPC s p` will ignore hidden files, those that start with `.`
+
+`-- --hidden` or `-- -uu` after the search pattern to include hidden files in the search
+
+For example, to search for the pattern `scisors`
+
+```
+scissors -- --hidden
+```
+
+> #### Hint::Searching hidden files may slow searching
+
+
+## Ripgrep configuration and arguments
+Define an environment variable called `RIPGREP_CONFIG_PATH` set to the file name and path
+
+```
+export RIPGREP_CONFIG_PATH=~/.config/ripgrep.config
+```
+
+| Argument        | Description                                        |
+|-----------------|----------------------------------------------------|
+| `-u`            | don't respect `.gitignore` or `.ignore` files      |
+| `-uu`           | same as -u and show hidden files                   |
+| `-uuu`          | same as -uu and search binary files                |
+| `--max-columns` | Maximum number of columns (Spacemacs default: 150) |
+| `--glob=!git/*` | glob patters, `!` excluded                         |
+| `--smart-case`  | Ignore case                                        |
+
+* [Ripgrep configuration file](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#configuration-file)
+
 
 ## References
 * https://github.com/BurntSushi/ripgrep
