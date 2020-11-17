@@ -118,6 +118,7 @@
     * [Namespaces](navigating-code/namespaces.md)
     * [Names - Symbols](navigating-code/names-symbols.md)
     * [Function Definitions](navigating-code/function-definitions.md)
+    * [Find Usages](navigating-code/find-usages.md)
     * [Java Definitions](navigating-code/java-definitions.md)
         * [Java Definitions](navigating-code/local-java-sources.md)
     * [Expressions](navigating-code/expressions.md)
