@@ -23,7 +23,7 @@ The recommended approach is to include the test path as an alias.  Then that ali
 `SPC p e` creates a `.dir-locals.el` file to define aliases that are always included during `cider-jack-in`.  Add the variable `cider-clojure-cli-global-options` with a value of the alias name(s**.
 
 ```elisp
-((clojure-mode . ((cider-clojure-cli-global-options . "-A:env/test"))))
+((clojure-mode . ((cider-clojure-cli-global-options . "-M:env/test"))))
 ```
 
 Remember to `revert-buffer` on an existing project buffer, or open a file from the current project, to load in any changes to a `.dir-locals.el` file.

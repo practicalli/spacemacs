@@ -27,14 +27,14 @@ Using an alias is the recommended way to include Java sources for Clojure CLI pr
 Add a `.dir-locals.el` file to the root of your Clojure project to include the java sources alias when running cider-jack-in.
 
 ```elisp
-((nil . ((cider-clojure-cli-global-options . "-A:java-11-source")
+((nil . ((cider-clojure-cli-global-options . "-A:lib/java11-source")
          (cider-preferred-build-tool . "clojure-cli"))))
 ```
 
 Or include both Java and Clojure Java sources
 
 ```elisp
-((nil . ((cider-clojure-cli-global-options . "-A:java-11-source:clojure-1.10.1-source")
+((nil . ((cider-clojure-cli-global-options . "-A:lib/java11-source:clojure-1.10.1-source")
          (cider-preferred-build-tool . "clojure-cli"))))
 ```
 

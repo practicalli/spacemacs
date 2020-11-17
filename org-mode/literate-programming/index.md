@@ -11,7 +11,7 @@ Create a project using either Clojure CLI tools or Leiningen.  Dependencies, apa
 
 **Clojure CLI tools (with clj-new)**
 ```shell
-clojure -A:new app practicalli/literate
+clojure -M:project/new app practicalli/literate
 ```
 
 **Leiningen**

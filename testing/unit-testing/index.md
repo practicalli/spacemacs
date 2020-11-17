@@ -56,7 +56,7 @@ For example, code to test the `src/codewars/rock_paper_scissors.clj` is saved in
 > #### Hint::Create Projects from templates
 > Templates typically include a parallel `test` and `src` directory structure.  The `clj-new` tool has build it templates (app, lib) and will create `src` and `test` directories in the projects it creates.
 >
-> `clojure -A:clj-new app practicalli/rock-paper-scissors-lizard-spock`
+> `clojure -M:project/new app practicalli/rock-paper-scissors-lizard-spock`
 
 <!-- TODO: clj-new - does this add a test namespace if you add a src namesspace to an existing project? -->
 
