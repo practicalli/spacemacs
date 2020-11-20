@@ -31,7 +31,7 @@ Define an alias for the Eastwood library and namespace.
 Run Clojure with the `eastwood` alias to lint your project
 
 ```sh
-$ clj -A:eastwood
+$ clojure -M:lint/eastwood
 ```
 
  An example output is as follows:

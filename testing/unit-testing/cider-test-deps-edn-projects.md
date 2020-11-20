@@ -1,7 +1,9 @@
 ## Configuration for Unit Testing deps.edn projects
 To use the CIDER test runner with `deps.edn` projects, the `test` directory needs to be on the classpath.
 
-The recommended approach is to include the test path as an alias.  Then that alias is included in the command to start the REPL (e.g. `cider-jack-in-clj`)
+The recommended approach is to include the test path via an alias, which avoids including all the test files when packaging the project.
+
+The alias is included in the command to start the REPL (e.g. `cider-jack-in-clj`).
 
 ```clojure
 :aliases
@@ -14,7 +16,11 @@ The recommended approach is to include the test path as an alias.  Then that ali
 
 
 ## Edit the Cider command line for jack-in
-`SPU u` before `cider-jack-in` displays the command line to be run, adding `-A:test-path` as the first option to the clojure binary in this command will include the alias for that jack-in session.
+`SPU u , '` uses the Emacs universal argument with `sesman-start` and displays the command line to be run.
+
+Add `-M:env/test` before the `-m` flag  to include the alias for that jack-in session.
+
+![Spacemacs CIDER configuration - add Clojure CLI tools alias to cider-jack-in command](https://practicalli.github.io/spacemacs/images/spacemacs-clojure-repl-start-edit-command-add-aliases.png)
 
 > `SPC u` is the Spacemacs equivalent of `C-u` in Emacs.
 
