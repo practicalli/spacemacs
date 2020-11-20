@@ -42,6 +42,18 @@ Use the following `.dir-locals.el` configuration to just use the configuration d
                   (cider-clojure-cli-parameters . ""))))
 ```
 
+> [Issue raised with CIDER](https://github.com/clojure-emacs/cider/issues/2922) to discuss improving this approach
+
+
+## Shared and local configurations
+Assuming a team agrees to keep a shared `.dir-locals.el` configuration in a project repository, each developer can [add their own configuration in a `.dir-locals-2.el` file](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html).
+
+The `.dir-locals-2.el` will be loaded in addition to `.dir-locals.el`.
+
+> #### Hint::Keep tooling config in a separate repository
+> Tooling configuration is generally not project specific, so if sharing that configuration in a team simply create a repository for tooling.
+> Or add tooling configuration to the project documentation.
+
 
 ## Common configurations
 [CIDER documentation - basic configuration](https://docs.cider.mx/cider/) describes many of the configuration variables available.
