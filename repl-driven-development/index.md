@@ -47,7 +47,7 @@ Cider Inspector is also a great way to navigate through a nested data structure.
 Cider debug tool includes inspect to view values and data structures during the evaluation of a Clojure function call.
 
 > #### Hint::View large data sets
-> `, e P` with open a new buffer with the results of the current function and so it very useful for larger data results.
+> `, e p e` with open a new buffer with the results of the current function and so it very useful for larger data results.
 
 
 ## Code Style and idiomatic Clojure
