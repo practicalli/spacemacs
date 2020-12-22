@@ -12,7 +12,7 @@ Please keep pull requests small and focused, as they are much quicker to review 
 
 A PR with a list of changes across different sections will not be merged, it will be reviewed and changes merged eventually.
 
-By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](http://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed in the [contributors](contributors.html) section of this workshop.
+By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](http://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed in the [contributors](/contributors.html) section of this workshop.
 
 <!-- TODO:  Add GitHub issue templates, similar to those on practicalli/blog-content -->
 
