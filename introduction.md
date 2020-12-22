@@ -5,7 +5,7 @@ A practical guide to Spacemacs, a community driven Emacs configuration that make
 This guide requires [Spacemacs Version 0.300, the Spacemacs develop branch](/install-spacemacs/).
 
 {% youtube %}
-https://youtu.be/rZNYLGw1qFk
+https://youtu.be/NDrpclY54E0
 {% endyoutube %}
 
 <table>
