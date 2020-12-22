@@ -39,15 +39,15 @@ The design journal can be used to create meaningful documentation for the projec
 
 
 ## Viewing data structures
+`, e p` is the Pretty Print menu to view data structures that are the result of evaluating code.  Pretty print shows the structure of the data in a human readable form which is more likely to highlight incorrect results.
 
-Use Pretty Print to view data structures that are the result of evaluating your code.  This makes those data structures easier to parse as a developer and more likely to notice incorrect results.
+`, d v` is the Cider Inspect menu that will page through very large data sets and navigate through a nested data structures in detail.
 
-Cider Inspector is also a great way to navigate through a nested data structure.
+![Clojure - viewing large data sets](/images/spacemace-clojure-inspect-java-lang-persistentvector.png)
 
-Cider debug tool includes inspect to view values and data structures during the evaluation of a Clojure function call.
+`, d` is the Cider debug menu which can inspect view values and data structures during the debugging of Clojure function calls.
 
-> #### Hint::View large data sets
-> `, e P` with open a new buffer with the results of the current function and so it very useful for larger data results.
+Spacemacs can also be used with [external data browsers]({{ book.P9IClojure }}clojure-tools/data-browsers/reveal.md) ([Clojure inspector]({{ book.P9IClojure }}clojure-tools/data-browsers/clojure-inspector.md), [REBL]({{ book.P9IClojure }}clojure-tools/data-browsers/rebl-data-visualization.md), [Reveal]({{ book.P9IClojure }}clojure-tools/data-browsers/reveal.md), [Portal]({{ book.P9IClojure }}clojure-tools/data-browsers/portal.md)) provide effective ways to navigate through a nested data structures and large data sets.
 
 
 ## Code Style and idiomatic Clojure
