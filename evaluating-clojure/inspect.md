@@ -1,7 +1,14 @@
-# Inspect Clojure
-`, d v` runs the `cider-inspector` command which opens a buffer with a pretty printed value of the current symbol under the cursor.  This provides a very readable way to understand the value and browse through larger data sets.
+# Inspect Clojure values
+`, d v` is the Cider Inspector menu used to efficiently page through large data sets and easily navigate through nested data structures.
 
-`n`  and `p` will page through the data if the number of elements in the data set is greater than the page size (default 32), (`cider-inspector-next-page`, `cider-inspector-prev-page`)
+The Cider Inspector opens in a new buffer that shows the underlying type of the value and all of its details. of the current symbol under the cursor.  This provides a very readable way to understand the value and browse through larger data sets.
+
+> #### Hint::Following the results in Cider Inspector
+> The Cider Inspector will show the results of any evaluation, from `, e` or `, d v` menus, whilst the buffer is visible.
+
+`, d v f` to evaluate a top level expression and show the results in the Cider Inspector.
+
+`n`  and `p` page through the data if the number of elements in the data set is greater than the page size (default 32), (`cider-inspector-next-page`, `cider-inspector-prev-page`)
 
 `TAB` and `S-TAB` to navigate forward and backward through the elements that can be further inspected, (`cider-inspector-next-inspectable-object`, `cider-inspector-previous-inspectable-object`).
 
@@ -13,10 +20,12 @@
 
 `q` quits the cider inspector buffer
 
+
 ## Inspecting simple values
 Inpecting a number or character shows the underlying type, the value and properties of that type
 
 ![Spacemacs - Clojure - Inspect value - java.lang.Long](/images/spacemace-clojure-inspect-java-lang-long.png)
+
 
 ## Inspecting Collections
 Inspect a collection shows the underlying type, contents of that collection and index (where applicable).  Only the elemnents are shown.  The characters of the overall collection itself are not show, only the underlying type of collection (vector, map, lazy sequence, etc.).
@@ -30,6 +39,7 @@ If there are collections within collections then those values can be navigated t
 ![Spacemacs - Clojure - Inspect persistent map with vector](/images/spacemacs-clojure-inspect-persistent-map-nested.png)
 
 `L` to back to parent of a nested element (`cider-inspector-pop`).
+
 
 # Inspecting mutable values
 Mutable containers, `atom`, `ref`, can also be inspected.  The class of the container is shown, along with the class of the value it contains along with its elements.
