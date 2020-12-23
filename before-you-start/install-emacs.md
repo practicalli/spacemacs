@@ -30,12 +30,13 @@ sudo apt-get install emacs
 
 For a self-contained install, download Emacs 26.3 or later from the [Emacs for OSX website](https://emacsformacosx.com/).
 
-Alternative, if you use Homebrew, run the following command:
+Alternative, [use Homebrew](https://formulae.brew.sh/cask/emacs) and run the following command:
 
 ```bash
-brew cask install emacs
+brew install -cask emacs
 ```
 
+> There is another [Homebrew emacs formula](https://formulae.brew.sh/formula/emacs), but this seems to suggest using the above now.
 
 <!-- Windows Install -->
 {% content "windows" %}
