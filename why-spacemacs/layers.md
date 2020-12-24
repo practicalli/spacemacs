@@ -15,6 +15,8 @@ Spacemacs uses Layers that organise these packages and the configuration to make
 
 Spacemacs provides a well tested configuration file called `~/.spacemacs` that provides lots of sensible defaults and makes customising your experience very easy.  This file is created during the Spacemacs installation.
 
+`.spacemacs.d/init.el` file can be used as an alternative location for `.spacemacs` and is easier to manage in its own version control project.
+
 The `~/.spacemacs` configuration file is composed of three important sections
 
 | Section                      | Purpose                                                                                                                                                                                                           |
@@ -24,7 +26,7 @@ The `~/.spacemacs` configuration file is composed of three important sections
 | **dotspacemacs/user-config** | Add your own customisation here                                                                                                                                                                                   |
 
 > ####Info::Example .spacemacs configuration
-> Review the authors [current .spacemacs configuration file](https://gist.github.com/jr0cket/2cbe91668b904c5a42a8f08a583e9242) for examples of changes and the [dotfile configuration](http://spacemacs.org/doc/DOCUMENTATION.html#dotfile-configuration) section of the Spacemacs documentation for a complete overview.
+> Review the authors [current .spacemacs.d/init.el configuration file]({{ book.P9ISpacemacsD }}) for examples of changes and the [dotfile configuration](http://spacemacs.org/doc/DOCUMENTATION.html#dotfile-configuration) section of the Spacemacs documentation for a complete overview.
 
 
 ## Opening and reloading the configuration file
