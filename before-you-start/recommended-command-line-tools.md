@@ -20,13 +20,12 @@ See the respective install guides for these tools:
 ## Locate files with helm-locate
 The locate binary is used by `SPC f L` (`helm-locate`) to find files and directories on the operating system filespace.
 
+`helm-locate` is the fastest way to search for files across the whole file space on your computer as it uses the updatedb database.  If a file was very recently added to the file system, run `sudo updatedb` to ensure all files are in the database.
+
 | Operating system                                       | Install                   |
 |--------------------------------------------------------|---------------------------|
 | Ubuntu / Debian                                        | `sudo apt install locate` |
 | [Homebrew](https://formulae.brew.sh/formula/findutils) | `brew install findutils`  |
-
-> #### Hint::fd - a better find tool
-> [fd](https://github.com/sharkdp/fd) is a faster and easier to use alternative to the find command line tool.
 
 
 ## spell check tool
