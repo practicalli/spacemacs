@@ -17,6 +17,18 @@ See the respective install guides for these tools:
 * [The Silver Searcher (ag)](https://github.com/ggreer/the_silver_searcher)
 
 
+## Finding files faster
+`SPC p` opens the projectile menu for finding files relative to the current project.  Projectile uses the external command line tool `find` to index files that are not part of a version controlled project (using `git` for projects versioned with Git).
+
+> Practicalli hasn't noticed any slowness in using Projectile, however, if you can to try to optimize `find` searches by installing `fd`.
+
+`fd` is an external command line binary that is faster than the `find` command.  If installed, projectile will automatically use `fd` instead of `find`
+
+Install the `fd` binary in your operating system by [following the relevant instructions](https://github.com/sharkdp/fd#installation).
+
+No additional Emacs packages are required.
+
+
 ## Locate files with helm-locate
 The locate binary is used by `SPC f L` (`helm-locate`) to find files and directories on the operating system filespace.
 
