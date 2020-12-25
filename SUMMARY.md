@@ -243,6 +243,7 @@
 
 * [Org-mode](org-mode/index.md)
     * [Headings](org-mode/headings.md)
+    * [Lists and checkboxes](org-mode/lists-and-checkboxes.md)
     * [Linking](org-mode/linking.md)
     * [TODO States](org-mode/todo-states.md)
     <!-- * [Get Things Done](org-mode/get-things-done.md) -->
