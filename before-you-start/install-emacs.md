@@ -28,6 +28,8 @@ sudo apt-get install emacs
 <!-- MacOSX Install -->
 {% content "macosx" %}
 
+Spacemacs documentation suggests [several Homebrew recipes for installs for Emacs](https://github.com/syl20bnr/spacemacs/tree/develop#macos).
+
 For a self-contained install, download Emacs 26.3 or later from the [Emacs for OSX website](https://emacsformacosx.com/).
 
 Alternative, [use Homebrew](https://formulae.brew.sh/cask/emacs) and run the following command:
