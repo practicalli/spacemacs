@@ -88,6 +88,7 @@
 * [The REPL](clojure-repl/index.md)
     * [Clear REPL buffer](clojure-repl/clear-repl-buffer.md)
     * [Connect to REPL](clojure-repl/connect-to-repl.md)
+    * [Connect to remote REPL](clojure-repl/connect-to-remote-repl.md)
     * [Refresh/Restart REPL](clojure-repl/refresh-restart-repl.md)
     * [Component Lifecycle Services](clojure-repl/component-lifecycle.md)
 * [Evaluating Clojure](evaluating-clojure/index.md)
