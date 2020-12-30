@@ -15,6 +15,8 @@
 
 `s` search a buffer and navigate to each location in code with the matching symbol by scrolling throught the results.
 
+`SPC s c` clears symbol highlighting and search pattern highlighting.
+
 ## [Helm-swoop](https://develop.spacemacs.org/layers/+completion/helm/README.html#helm-swoop)
 
 Search a buffer (Clojure namespace) or project and use the results to navigate to the locations in the code for each match found.
