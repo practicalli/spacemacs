@@ -88,6 +88,7 @@
 * [The REPL](clojure-repl/index.md)
     * [Connect to REPL](clojure-repl/connect-to-repl.md)
     * [Connect to remote REPL](clojure-repl/connect-to-remote-repl.md)
+    * [Portal data visualization](clojure-repl/portal-data-visualization.md)
     * [Jack-in to REPL](clojure-repl/jack-in-to-repl.md)
         * [Configure Jack-in](clojure-repl/configure-repl-start.md)
         * [Clear REPL buffer](clojure-repl/clear-repl-buffer.md)
