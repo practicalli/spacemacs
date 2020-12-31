@@ -91,6 +91,7 @@
     * [Jack-in to REPL](clojure-repl/jack-in-to-repl.md)
         * [Configure Jack-in](clojure-repl/configure-repl-start.md)
         * [Clear REPL buffer](clojure-repl/clear-repl-buffer.md)
+    * [ClojureScript REPL](clojure-repl/clojurescript-repl.md)
     * [Refresh/Restart REPL](clojure-repl/refresh-restart-repl.md)
     * [Component Lifecycle Services](clojure-repl/component-lifecycle.md)
 * [Evaluating Clojure](evaluating-clojure/index.md)
