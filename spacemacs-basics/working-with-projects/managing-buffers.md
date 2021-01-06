@@ -23,7 +23,7 @@ You can also delete any of the currently open buffers when you no longer need th
 
 With a single key you can cycle quickly through all open buffers, forward with `n` or backwards with either `N` or `p`.
 
-Use `k` to kill the current buffer.
+Use `d` to kill the current buffer.
 
 ![Spacemacs - Buffer Transient State](/images/spacemacs-buffers-transient-state-menu.png)
 
