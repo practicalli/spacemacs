@@ -34,7 +34,7 @@
             * [clj-kondo via LSP](install-spacemacs/clj-kondo-via-lsp.md)
         * [Clojure-lsp](install-spacemacs/clojure-lsp/index.md)
             * [Clojure-lsp](install-spacemacs/clojure-lsp/configure-lsp-and-cider.md)
-
+            * [LSP variables](install-spacemacs/clojure-lsp/lsp-variables-reference.md)
         * [Font size and Zooming](install-spacemacs/change-font.md)
         * [Open Maximised / Full Screen](install-spacemacs/maximised-full-screen.md)
         * [Themes](install-spacemacs/themes.md)
