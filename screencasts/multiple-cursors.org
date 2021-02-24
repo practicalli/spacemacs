@@ -1,0 +1,5 @@
+* Convert Git log to org-mode links
+  Open magit and copy 10 lines from the l l log
+  Paste the lines into orgmode
+  ~9 g r j~ to create 10 cursors
+  Delte the sha numbers, replace the * with - and optinally add a checkbox []

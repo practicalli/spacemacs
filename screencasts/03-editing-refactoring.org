@@ -1,0 +1,33 @@
+* Editing and Refactoring
+
+> TODO split into several videos ??
+
+
+* Pasting in the name of a file
+I can include the name of the current file as I edit the contents of its buffer.
+I find this useful for adding titles for articles and documentation.
+
+`SPC f y n` will copy (yank) the filename of the current buffer,
+then `p` to paste the filename into the buffer.
+
+I also find this useful for accurately adding the names of files,
+for example when creating links or including images.
+
+`SPC p f` or `SPC f f` to open the file,
+`SPC f y n` to copy (yank) the file name,
+`SPC b d` if I dont need to keep the file open
+and it returns to the previous buffer.
+Then `p` to paste in the filename.
+
+
+* Adding a namespace to a Clojure file
+
+With yasnippets configured and the Clojure REPL running,
+typing =ns= and selecting the =ns->ns= snippet
+will add a namespace declaration using the full namespace for the current file.
+
+This action is carried out automatically if you have the ~clj-refactor~ variable enabled in the clojure layer configuration in ~.spacemacs~
+
+
+* Changing case of words
+=~= in Evil normal state will toggle the case of the current character under the point.

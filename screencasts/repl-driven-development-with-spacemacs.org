@@ -1,0 +1,578 @@
+* Introduction
+  Hello and thank you for watching this Practicalli screencast
+  showing Clojure REPL driven development with Spacemacs.
+
+  Spacemacs is a community configuration for Emacs,
+  which uses the CIDER project as a Clojure development environment.
+  This workflow uses the Clojure CLI tools to configure a project and run the REPL
+  the practicalli clojure-deps-edn project to provide community tools
+  and clj-kondo is used to lint the Clojure code as it is written
+
+
+* Working With Clojure Projects
+
+We will start by creating a new Clojure project
+
+=SPC '= opens the eshell popup buffer providing a terminal to run commands
+The eshell buffer defaults to  Evil insert mode, so commands can be typed in
+
+=cd= to change to a directory in which to create the project
+
+A new project can be generated from the app template
+
+#+BEGIN_SRC shell
+clojure -X:project/new :template app :name practicalli/random-function
+#+END_SRC
+
+=-X= runs a function defined in the :project/new alias
+which is configured to run the clj-new create function with default values
+
+This command over-rides the default template and name of the project
+
+=RET= key to run the command
+
+Once the project is project has been created,
+toggle the eshell buffer visibility with =SPC '=
+or type =exit= to close eshell
+
+* Create a new layout for the project
+  Layouts help organise all the buffers for a project,
+  and run commands relative to those project buffers.
+
+  =SPC l l= to select an existing layout,
+  or create a layout by typing a new name
+
+* Open the Clojure project
+  =SPC f f= to navigate to a file
+  =TAB= to auto-complete directory and file names
+  =C-j= and =C-k= will navigate the list of matches
+  =RET= to open a specific file or directory
+
+  Open the `deps.edn` file, the configuration for the project
+  formatting the code to make it more readable
+
+* Start a REPL process
+  Before starting a REPL, add any libraries as dependencies
+  This project only needs Clojure, so we are ready to start the repl
+
+  =, '= to run sesman-start command and choose the type of repl connection
+  =clojure-jack-in-clj= will start a Clojure REPL
+  using the deps.edn project configuration
+  and connect the editor to the REPL once started
+
+  A REPL buffer is created but not shown
+  =, s a= toggles between source and REPL buffer,
+  opening a new window for the REPL buffer if required
+
+  Source code buffers are more effective than the REPL buffer
+  as evaluation is always done in the context of the current namespace
+  so the window holding the REPL buffer is closed and remain hidden.
+
+  =SPC w d=
+
+
+  To work with Cider effectively
+  first evaluate a source code buffer
+  =, e b=
+  Clojure core functions are loaded into the REPL
+  and CIDER features like help have the information they need
+
+
+* Starting REPL driven development
+  Create a rich comment block for our REPL driven experiments
+  I created a snippet for this
+  which also include meta data to tell clj-kondo lint tool
+  to ignore duplicate names
+  this is very useful when designing your own functions
+
+  To start writing Clojure, type an open paren
+  =(=
+  clojure-mode will automatically add the closing paren
+  This keeps the structure of code intact.
+
+  As names are typed,
+  =ns=
+  suggestions of matching functions appear
+  =C-j= and =C-k= will scroll through these options
+  =RET= to select one, or just keep on typing
+
+  The =ns-publics= function looks promising,
+  so lets select that one.
+
+  =, h h= will show the documentation of this function
+  include Clojure specifications and links to any related functions.
+  There is also a link to browse the source of that function.
+
+  The ns-publics function signature shows it takes a single argument
+  which is a namespace symbol.
+  =q= to quit the help buffer
+
+   Okay, back to the code.
+
+   There is a red mark at the start of the expression,
+   moving the cursor over this shows there is a lint warning from clj-kondo
+   also informing that ns-publics takes a single argument
+
+   =SPC e L= will show a list of all errors and warnings in the project
+   pressing =RET= on a list item will jump to the point in source code where the issue was detected
+
+   Fix the code by adding =*ns*= as an argument,
+   this dynamic symbol represents the current namespace
+
+   The lint warning has now disappeared
+
+   With clj-kondo providing live linting
+   its like having a friendly person constantly pairing with you
+
+#+begin_src clojure
+(ns-publics *ns*)
+#+end_src
+
+   =, e f= will evaluate the top-level expression and return a value
+
+   the cursor can be anywhere between the two outermost parens
+
+  Lets take a look at a specific namespace
+  clojure.core is a good example as it has over 500 functions
+
+#+begin_src clojure
+(ns-publics 'clojure.core)
+#+end_src
+
+   =, e f= to evaluate this expression
+
+   As the value returned is a map with lots of key value pairs
+   the inline display shows just a partial view
+   All the results are in the mini-buffer.
+
+   =, d v l= will open the last evaluation result in a new buffer
+   using the cider inspector to show the value
+   in this case the contents of a hash-map
+   =n= and =p= will page through the hash-map
+   =RET= will show the details of a key or value in the hash-map
+
+   Inspecting one of the value
+   shows other details that are of interesting
+   especially the meta data
+
+   =L= navigates back to the parent hash-map in the inspector
+   =q= to quit the inspector
+
+   Lets get just the function names from the hash-map
+
+   =y y= to copy the original expression
+   =p= to paste
+   =SPC k w= to used structural editing to wrap the expression
+   so a function can take the the original expression as an argument
+
+   The =vals= function will return just the values from a hash-map
+
+   As we know the value is going to be large,
+   rather than evaluating it with =, e f=
+   use =, d v f= to evaluate and open the result in the inspector
+
+   Keeping the inspector window open,
+   =SPC w .= opens the window transient state menu,
+   =L= move the window to the side
+   =[= resizes the windows so there is more space for the source code
+
+   Lets keep on developing the project,
+   by getting just one function at random.
+
+   =SPC v= to select the previous expression
+   =p= to paste
+   =SPC k w= to wrap that expression
+   Typing =random= lists related functions
+
+   The values are in a sequence,
+   so =rand-nth= will return a function at random
+
+   =, e f= to evaluate the function
+
+   as the cider-inspect buffer is still open
+   it displays the value of the latest evaluation
+
+
+* Testing
+  Taking what we have just learned from the REPL
+  create some tests to start designing the code
+
+  The template used to create the project,
+  also created a test namespace
+  =, p a= toggles between the source code and test code
+  for a particular Clojure namespace.
+
+  The namespace requires the clojure.test library
+  which I updated to refer the specific functions used
+  The namespace under test is also referred,
+  which I've updated to as the alias =sut=
+
+  Update the existing =devtest= expression to
+  =random-function-test=
+  using the same name as the function to be tested
+  with -test appended
+
+  Change the =testing= string to describe the test
+  The string is used in the test output
+  and help the developer identify which test failed
+
+  Change the assertion in the test
+  to compare an expected value with a call to =sut/random-function=
+  passing =*ns*= as an argument
+  The value expected is a string type
+
+#+begin_src clojure
+(deftest public-functions-test
+  (testing "The function names for a given namespace"
+    (is (string? (SUT/public-functions *ns*)))))
+#+end_src
+
+
+* Cider test runner
+  CIDER includes a test runner and is a simple way to run all tests
+
+  =, t a= to run all the tests and see the results.
+
+  An exception occurs as the =sut/public-functions= definition does not exist
+
+  =SPC p a= for the source code file
+  =defn= & =RET= is a snippet to create a function definition
+
+  add the function name =public-functions= and press =TAB=
+  add a doc string and press =TAB=
+  argument =TAB=
+  and leave the body of the function empty
+
+#+begin_src clojure
+(defn public-functions
+  "Returns a sequence of function names from a given namespace"
+  [namespace]
+  )
+#+end_src
+
+
+   =, e f= to evaluate this function
+   so the Cider test runner can find it in the REPL
+   =, t a= to run all tests again
+
+  oh, we still get an error, it cannot find the tests.
+
+* Using an external test runner
+   Check its not an issue with our project by trying a different test runner
+
+   =SPC '= to open the eshell terminal
+   use the kaocha test runner that is defined in the =:test/kaocha= alias
+   from practicalli clojure-deps-edn configuration
+
+
+#+begin_src shell
+clojure -M:test/kaocha
+#+end_src
+
+   This command successfully runs our tests
+   and we get a correctly failing test.
+   So we know our code is correct.
+
+
+* Adding the test directory to find the tests
+  =SPC p f= to open a file from the project
+  typing =deps.edn= to open the project configuration file
+
+  The test directory is not part of the main paths in the project configuration
+  as this would include test code when packaging the application.
+
+  We can see that the test path is include in the =:test= alias
+  so we need to tell CIDER to add the test directory when running the REPL
+
+  =, m q q= to quit the REPL
+  =SPC u= to use the universal argument
+  followed by =, '= to start the repl and chose the connection
+
+  The command to start the repl is shown in the mini-buffer
+  edit the command to include '-M:test= alias
+  and press =RET= to run.
+
+  Now our test should be found
+
+  =, e b= to evaluate the source code file
+  =SPC p a= switches to the test code
+  =, t a= will evaluate the whole buffer and run the tests
+
+   The cider test runner finds the test
+   and we have our first correctly failing test
+
+   copy the =(vals (ns-publics *ns*))= expression
+   into the body of the function
+   and replace the =*ns*= with the argument name
+   which is also in the auto-complete menu
+
+#+begin_src clojure
+(defn public-functions
+  "Returns a collection of function names from a given namespace"
+  [namespace]
+  (vals (ns-publics namespace)))
+#+end_src
+
+  =, e f= to evaluate this function
+  =, t a= to run the tests again
+
+  Success, a passing test.
+
+
+* Add Emacs project configuration
+  To avoid editing the command line each time the REPL is started,
+  =SPC p e= creates a =.dir-locals.el= file
+  type cider-clojure to see matching variables to add to the configuration
+  select =cider-clojure-cli-global-options=
+  and enter the value of the alias as a string ="-M:test"=
+  =C-g= to skip adding any further variables.
+  Ideally make this configuration specific to =clojure-mode=
+  =SPC f s= to save this file
+
+  For Emacs to read this configuration,
+  a file from the project must be opened or reopened
+  =SPC SPC revert-buffer= on the source code file should load the configuration
+
+  =, '= will run the repl using this alias from the dir-locals configuration
+
+  To check, =SPC b m= opens the message buffer
+  which shows the command used to start the REPL
+
+
+  The cider test runner is a very convenient tool for running tests,
+  As cider test runner only tests the code in the REPL
+  it is recommended to use an external test runner
+  like lambda island kaocha or cognitect labs test runner
+  to ensure the source code hasnt diverged from the REPL.
+
+
+* Continue developing the project
+   Now we can continue developing the project
+   writing tests and creating functions
+   and also just experimenting in the REPL.
+
+   What other information we can find about namspaces
+
+* apropos
+   Lets jump to the rich comment block and experiment
+   The relative line numbers on the left show how far away a line is
+   =28 j= will jump to the right line
+
+   =, h a= runs apropos to search for functions by their approximate name
+   =map=  =partition=  =ns=
+
+   =all-ns= looks interesting
+   =TAB= to see the documentation
+   yes, lets try that in the REPL
+
+
+#+begin_src clojure
+(all-ns)
+#+end_src
+
+   The =all-ns= function returns all the current namespaces,
+   as a lazy sequence
+
+   =ns-publics= can retrieve all functions
+   across all namespaces
+   when passed this sequenced
+
+ #+begin_src clojure
+(ns-publics (all-ns))
+#+end_src
+
+* Errors
+   Oh no, evaluating this gives an error.
+   The error message can be filtered, to help identify the issue
+   underlined sections are hidden from the error
+   Errors just from the project can be show,
+   hiding errors from the Clojure environment
+
+   The error message does describe the issue clearly
+   a lazy sequence is being passed instead of a symbol
+   so the call to ns-publics uses an incorrect argument
+
+ #+begin_src clojure
+(mapcat #(vals (ns-publics %)) (all-ns))
+#+end_src
+
+   =mapcat= returns a lazy sequence of all the functions from all the namespaces.
+   as shown in the cider inspect window
+
+   publics-functions is a function already defined
+
+ #+begin_src clojure
+      (defn public-functions
+           [namespace]
+           (vals (ns-publics namespace)))
+#+end_src
+
+   =mapcat= the public-functions function over all namespaces
+
+ #+begin_src clojure
+(mapcat public-functions (all-ns))
+#+end_src
+
+   Now we have a sequence of functions from a given namespace or set of namespace
+
+   Write a test for all public functions
+
+#+begin_src clojure
+(deftest public-functiions-allns-test
+  (testing "Public function names for all namespaces"
+    (is (seq? sut/public-functiions-allns))
+    (is (var? (first sut/public-functiions-allns)))))
+#+end_src
+
+
+   Define a name for the result of this function
+
+#+begin_src clojure
+(def public-functiions-allns
+  (mapcat public-functions (all-ns)))
+#+end_src
+
+   =, t a= to run all tests
+
+   Success
+
+
+* Random function
+   We want a random function from the sequence of public functions
+
+=SPC p a= to switch to the test namespace
+and write a test
+
+
+ #+begin_src clojure
+(deftest random-function-details-test
+  (testing "Details of a random public function name"
+    (is (map? (sut/random-function-details (sut/public-functions *ns*))))
+    (is (map? (sut/random-function-details (sut/public-functions 'clojure.core))))
+    (is (map? (sut/random-function-details (sut/public-functions 'clojure.string))))))
+#+end_src
+
+=SPC p a= to switch back to the source code namespace
+and create an empty function definition
+
+
+
+ #+begin_src clojure
+(defn random-function-details
+  "Returns the meta data for a randomly chosen function,
+  from a given sequence of fully qualified funciton names"
+  [function]
+  )
+#+end_src
+
+Jump down to the rich comment block and
+experiment to find how to get a random function
+from a sequence of functions.
+
+   =, h a= to use apropos to find a function
+
+   type =rand= to find any matching functions
+   =TAB= to see the documentation of that function
+   =C-j= moves to the next function in the list
+   =TAB= to see its documentation
+
+   =rand-nth= is the right function
+   as it gets a random element from a sequential collection
+
+ #+begin_src clojure
+(rand-nth (vals (ns-publics 'clojure.core)))
+#+end_src
+
+   This gives the function name.  What if we want more information about that function?
+
+   When using the cider-inspect tool,
+   navigating to a function value showed meta data
+   lets type =meta= and see if there is a function
+   Yes...
+
+ #+begin_src clojure
+   (meta (rand-nth (vals (ns-publics 'clojure.core))))
+#+end_src
+
+   Evaluating returns a map of meta data information
+   Its only a small value,
+   so use =, e ;= to show it as a comment
+   or even better `, e p ;` to pretty print as a comment
+
+   Now we can quick see which parts of the meta data are useful
+
+
+* Print out the function details
+   Now we can write a print function
+   to give a nice output on the command line
+
+   This function is not part of our tool use,
+   so add a comment to mark this as a helper function
+
+   Using a line comment to provide a logical separation to the code
+   and to group helper functions should more be written
+   This makes it easier to decide if a separate namespace should be created
+   to contain these helper functions
+
+   As this is a helper function only used by other functions,
+   I am not writing a unit test for it.
+
+#+begin_src clojure
+;; Helpers
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defn pprint-function [metadata]
+  "Pretty Print details of a given function"
+  (println (str (ns-name (metadata :ns)) "/" (metadata :name))
+           "\n  " (metadata :arglists)
+           "\n  " (metadata :doc)))
+#+end_src
+
+   Add an API section as a comment to group the other functions
+   and a system for the main
+
+
+* Main function
+   So now we need a main to be able to call this code from the command line
+
+   Refactor the existing -main function
+   - add a doc string
+   - add a zero argument branch to return a random function from all namespaces
+   - add a one argument branch or return a random function from a given namespace
+   - add a variable arity branch that calls the single argument branch,
+     printing a message that only the first argument is used.
+
+ #+begin_src clojure
+(defn -main
+  "Show the details of a randomly chosen function.
+  A specific namespace can be given, otherwise all current namespaces are used"
+
+  ([]
+   (pprint-function (random-function-details public-functiions-allns)))
+
+  ([namespace]
+   (pprint-function (random-function-details (public-functions namespace))))
+
+  ;; unknown shows a lint warning, _ is a common convention when we are not interested in the value
+  ([namespace & unknown]
+   (println "Random function takes zero or one argument, additional arguments ignored" "\n")
+   (-main namespace)))
+#+end_src
+
+
+underscore is a commonly used convention for a name where the value will not be used
+=c w= to change the unknown name
+=[namespace & _]=
+
+* Wrapping up
+  - check the tests still passed
+
+  Open a terminal and run the application on the command line
+
+
+  There are many more features to Spacemacs and Clojure development,
+  however we have covered many of the important ones.
+  Subscribe to the Practicalli YouTube channel for future videos on Clojure development
+  Thank you for watching.
+
+  [outro]

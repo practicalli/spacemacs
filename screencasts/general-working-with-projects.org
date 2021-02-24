@@ -1,0 +1,119 @@
+* Working with Buffers
+
+Buffers are the view of a specific file or process output.
+
+=SPC b b= lists all the currently open buffers,
+followed by a list of recently opened buffers.
+Start typing a patter to narrow the list of buffers shown
+=C-j= and =C-k= to navigate the list of buffers.
+
+=SPC b n= and =SPC b p= to navigate to next and previous buffers
+=SPC TAB= switches to the last buffer
+
+=SPC b d= to delete the current buffer
+=SPC b u= to undo the deletion of the last buffer
+
+=SPC b w= toggles read-only mode,
+useful when you are just reading a file,
+or if editing a file that is already marked read-only,
+such as the Spacemacs layer readme files.
+
+* Working with Windows
+
+Windows are used to display buffers and you can have multiple windows in a frame.
+A frame being the overall Emacs application (although you can have multiple frames too).
+
+If I want to see my source code and test code side by side,
+=SPC w 2= will create two windows
+each window has a number in the left corner of its mode line.
+I can switch between windows using =SPC= and the window number.
+
+I can move windows around within the Emacs frame
+and create as many windows as I like by splitting an existing window
+
+=SPC w d= will kill the window,
+however the buffer it contains is not killed, its just no longer displayed.
+
+=SPC b x= will kill the buffer and the window containing it.
+
+* Working with projects
+
+The file, buffer and windows menus are very broad in scope.
+Once a file from the project is open though,
+you can use the project menu to work with just files and buffers for that project.
+
+A project is demarcated by a local version control repository, eg. a =.git= directory.
+Or by a project configuration file, such as a =deps.edn= or =project.clj= file for Clojure.
+Spacemacs will search upwards in the directory hierarchy until no more relevant files are found.
+
+Lets look at the most common project commands
+
+=SPC p f= to find a file using helm completion,
+which shows a flat list of files for the project.
+Type the approximate name of the file you want and the list narrows with a fuzzy match.
+
+=SPC p a= to alternate between source code and test code.
+
+=SPC p b= to list open buffers from the current project (or =SPC b b= if you have layouts)
+
+=SPC p h= is a combination of project file and project buffer,
+it shows the open buffers from the project
+and a flat list of all files from the project.
+This provides a quick way to find the buffer or file you want.
+
+=SPC p "= opens a external terminal window,
+using the directory path of the current buffer
+This is useful if you run long lasting commands in the terminal
+
+=SPC p k= will kill all the buffers from the current project,
+a quick way to close the project.
+
+=SPC p T= calls the test runner for the project,
+prompting you with the test runner command
+
+* TODO Using multiple projects
+=SPC p p= will switch between projects
+this is a simple way to navigate between projects.
+project commands will be specific to whichever project is currently selected.
+
+However, if you want to search through all your Clojure projects,
+to find some code used to solve a similar problem,
+you can define a project that included all you Clojure projects,
+
+for example, assuming all Clojure projects are contained in the =~/projects= directory,
+create an empty =.projectile= file in =~/projects=
+
+=SPC f f= to navigate to the =~/projects= directory.
+Type the name =.projectile= to create a buffer for the file
+=SPC f s= to save the empty =.projectile= file.
+Now project commands will work across all your Clojure projects.
+
+=SPC s p= to search the project and enter a search pattern `ns`
+we can see results from numerous Clojure projects.
+
+Remove the =.projectile= file to work with individual projects again.
+
+* Using layouts
+Layouts provide a way to group buffers together, creating a specific view.
+Creating a layout for each project is an effective way to navigate between multiple projects.
+
+Use =SPC l l= to create a layer and type in a name.
+
+TODO: Enable restricted ... configuration
+
+`SPC p l` will also switch to a different project,
+and change to the associated layout.
+
+
+* Using the terminal with the project
+An eshell or operating system terminal window can be opened with respect to the project path.
+
+=SPC p '= opens a shell in the root of the current project.
+=SPC '= opens a shell in the directory of the current buffer.
+=SPC p "= will open a terminal in its own window
+
+
+> If you use a different shell, you may need to edit the SHELL environment variable using  =SPC f e e=
+
+* Closing your project buffers
+=SPC p k= will kill all the buffers from the project, including buffers for any Clojure REPL's you started from this project.

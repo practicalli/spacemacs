@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="185.15143mm"
+   height="121.008mm"
+   viewBox="0 0 185.15142 121.00799"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="spacemacs-states-vim-emacs.svg"
+   inkscape:export-filename="/home/jr0cket/projects/practicalli/clojure-development-with-spacemacs-gitbook/images/spacemacs-states-vim-emacs.svg.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs2">
+    <linearGradient
+       id="linearGradient5947"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop5945" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="-49.114451"
+     inkscape:cy="-131.35409"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="2560"
+     inkscape:window-height="1416"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="8"
+     fit-margin-left="8"
+     fit-margin-right="8"
+     fit-margin-bottom="8" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-72.225191,-93.809408)">
+    <g
+       id="g5392">
+      <rect
+         ry="5.1073442"
+         y="127.32141"
+         x="197.96577"
+         height="21.30648"
+         width="38.084251"
+         id="rect4485-6-1-5"
+         style="fill:#ff0000;fill-opacity:0;stroke:#7ec0ee;stroke-width:4.40981913;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text5955-3-0-9"
+         y="140.55339"
+         x="204.47287"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none"
+           y="140.55339"
+           x="204.47287"
+           id="tspan5953-9-3-6"
+           sodipodi:role="line">Emacs</tspan></text>
+    </g>
+    <g
+       id="g5362">
+      <g
+         transform="translate(-47.02777,28.865125)"
+         id="g6063">
+        <rect
+           style="fill:#ff0000;fill-opacity:0;stroke:#eead0e;stroke-width:4.40981865;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4485-6"
+           width="38.084251"
+           height="21.306477"
+           x="129.45787"
+           y="98.456284"
+           ry="5.1073442" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           x="133.69319"
+           y="111.68827"
+           id="text5955-3"><tspan
+             sodipodi:role="line"
+             id="tspan5953-9"
+             x="133.69319"
+             y="111.68827"
+             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none">Normal</tspan></text>
+      </g>
+      <g
+         transform="translate(-1.5704606,-1.1336095)"
+         id="g6068">
+        <rect
+           style="fill:#ff0000;fill-opacity:0;stroke:#66cd00;stroke-width:4.40981913;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4485-6-1"
+           width="38.084251"
+           height="21.306479"
+           x="129.45787"
+           y="128.45502"
+           ry="5.1073442" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           x="136.68649"
+           y="141.68701"
+           id="text5955-3-0"><tspan
+             sodipodi:role="line"
+             id="tspan5953-9-3"
+             x="136.68649"
+             y="141.68701"
+             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none">Insert</tspan></text>
+      </g>
+      <g
+         transform="translate(-47.02777,-30.747311)"
+         id="g6078">
+        <rect
+           style="fill:#ff0000;fill-opacity:0;stroke:#bebebe;stroke-width:4.40981913;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4485-6-1-9"
+           width="38.084251"
+           height="21.30648"
+           x="129.45787"
+           y="186.12068"
+           ry="5.1073442" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           x="136.57808"
+           y="199.35268"
+           id="text5955-3-0-7"><tspan
+             sodipodi:role="line"
+             id="tspan5953-9-3-5"
+             x="136.57808"
+             y="199.35268"
+             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none">Visual</tspan></text>
+      </g>
+      <g
+         transform="translate(-1.5704606,-116.80812)"
+         id="g6093">
+        <rect
+           style="fill:#ff0000;fill-opacity:0;stroke:#ff3030;stroke-width:4.40981913;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect4485-6-1-1"
+           width="38.084251"
+           height="21.30648"
+           x="129.45787"
+           y="272.18149"
+           ry="5.1073442" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           x="139.11734"
+           y="285.41348"
+           id="text5955-3-0-1"><tspan
+             sodipodi:role="line"
+             id="tspan5953-9-3-0"
+             x="139.11734"
+             y="285.41348"
+             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none">Iedit</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g6088"
+       transform="translate(-47.02777,-59.22597)">
+      <rect
+         ry="5.1073442"
+         y="242.53198"
+         x="129.45787"
+         height="21.30648"
+         width="38.084251"
+         id="rect4485-6-1-6"
+         style="fill:#ff0000;fill-opacity:0;stroke:#ff6eb4;stroke-width:4.40981913;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text5955-3-0-2"
+         y="255.7636"
+         x="140.47095"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none"
+           y="255.7636"
+           x="140.47095"
+           id="tspan5953-9-3-99"
+           sodipodi:role="line">Lisp</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="216.75772"
+       y="109.47456"
+       id="text5955-3-0-9-3"><tspan
+         sodipodi:role="line"
+         id="tspan5953-9-3-6-6"
+         x="216.75772"
+         y="109.47456"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:9.87777805px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';text-align:center;text-anchor:middle;stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none">Holy</tspan><tspan
+         sodipodi:role="line"
+         x="216.75772"
+         y="120.49181"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:9.87777805px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';text-align:center;text-anchor:middle;stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none"
+         id="tspan5412">Control Tower</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="95.521835"
+       y="118.78297"
+       id="text5955-3-0-9-3-7"><tspan
+         sodipodi:role="line"
+         id="tspan5953-9-3-6-6-5"
+         x="95.521835"
+         y="118.78297"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:9.87777805px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none">Evil Flagship</tspan></text>
+    <g
+       transform="translate(-70.078365,55.984601)"
+       id="g5392-3">
+      <rect
+         ry="5.1073442"
+         y="127.32141"
+         x="197.96577"
+         height="21.30648"
+         width="38.084251"
+         id="rect4485-6-1-5-5"
+         style="fill:#ff0000;fill-opacity:0;stroke:#7ec0ee;stroke-width:4.40981913;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         id="text5955-3-0-9-6"
+         y="140.55339"
+         x="204.47287"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;line-height:125%;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:8.46666622px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';stroke-width:8;stroke-miterlimit:4;stroke-dasharray:none"
+           y="140.55339"
+           x="204.47287"
+           id="tspan5953-9-3-6-2"
+           sodipodi:role="line">Emacs</tspan></text>
+    </g>
+  </g>
+</svg>

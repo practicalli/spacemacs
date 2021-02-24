@@ -1,0 +1,10 @@
+* Starting the repl
+
+
+* Adding an alias as a default
+
+`SPC p e` to create or edit the .dir-locals.el file for this project.
+This can be useful to define a default alias for CIDER when running deps.edn projects.
+The CIDER test runner needs the =test= directory in the classpath to run the tests,
+so you may need to include an alias from the tools.deps directory.
+Add as part of starting a REPL, as an additional step.

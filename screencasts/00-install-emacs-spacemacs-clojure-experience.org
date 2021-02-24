@@ -1,0 +1,198 @@
+# Install Spacemacs and the Clojure Experience
+
+* Prerequisites
+Install the latest stable version of Emacs, at this time its Emacs 26.3.
+Newer versions of Emacs usually work well,
+although occasionally you may find a few interesting effects.
+
+A Git client is highly recommended,
+although you can also download Spacemacs as a zip file.
+
+* Installing Spacemacs
+The develop branch is used as it contains the latest features and bug fixes.
+
+Move or delete any existing =~/.emacs.d= directory in your operating system account.
+
+Use Git to Clone the Spacemacs develop branch into the =~/.emacs.d= directory
+
+#+BEGIN_SRC shell
+git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
+#+END_SRC
+
+-----
+If you want to simplify the install and trust my recommendations,
+then clone the Practicalli Spacemacs configuration too.
+
+#+BEGIN_SRC shell
+git clone https://github.com/practicalli/spacemacs.d/ ~/.spacemacs.d/
+#+END_SRC
+
+Then just start Emacs and take a break for a few minutes while all the Emacs packages are installed.
+If it all works, then you can skip the rest of this guide,
+unless you want to know more about what you have just installed
+-----
+
+* Configuring Spacemacs manually
+
+Run Emacs as normal for your operating system.
+
+As Emacs starts it will read the contents of the =~/.emacs.d/= directory
+and run the Spacemacs configuration wizzard.
+This wizzard creates a =~/.spacemacs= file in the root of your operating system account.
+The wizzard only runs when it does not find the .spacemacs file
+or a =.spacemacs.d/init.el= configuration file.
+
+You are prompted to select the default editing style.
+Practicalli recommends the Vim style editing provided by Evil.
+If you have a lot of experience with Emacs, then the Holy option will be more familiar.
+
+The next prompt is to choose the Spacemacs distribution
+Practicalli recommends the Full distribution.
+If you want to spend a few weeks heavily customising Spacemacs,
+then choose the base distribution instead
+
+Finally, select the completion framework
+Practicalli recommends Helm,
+its the most comprehensive and requires no customisation.
+
+You can change any of these choices in the .spacemacs configuration
+
+Now Spacemacs downloads and installs packages
+for each of the layers that make up the Spacemacs distribution.
+This may take a few minutes depending on the speed of connection to the Internet.
+You may see warnings during the install, but these usually are not an issue.
+
+Once all the packages are installed, you are ready to start using Spacemacs.
+As we have installed lots of packages, I recommend restarting Spacemacs again.
+=SPC q r= to restart.
+This makes sure there are no lingering issues.
+
+* Install the Clojure layer
+
+Spacemacs will automatically add the Clojure layer
+when you open a file ending in =.clj=, =.cljs=, =.cljc= or =.edn=.
+This will give you CIDER, the default tool for Clojure development in Emacs.
+
+It is simple to manually add the layer too.
+Use =SPC f e d= to open the .spacemacs file
+
+=SPC s s= to search for =dotspacemacs-configuration-layers=
+Use =C-j= and =C-k= to select the line that starts with that search term
+then press =RET= to jump to that line.
+
+You should see a list of layer names, including helm and elisp
+Adding names of any layers here will automatically install that layer
+when you reload the .spacemacs configuration or restart Spacemacs.
+
+Add the =clojure= name to this list.
+I like to keep them in alphabetic order, so layers are easier to find in the list.
+
+
+* Enhancing the Clojure development experience
+
+The quick approach is to simply copy all the layers Practicalli recommends
+into the layers section of your .spacemacs file.
+
+Visit the Practicalli configuration in the guide
+Select the layer names
+=SPC f e d= to open your .spacemacs configuration file
+Press =p= to paste those names into the .spacemacs layer section.
+Use =dd= to remove any duplicate lines.
+Or use =v= to visually select multiple lines and =x= to delete that selection.
+
+Use =SPC f s= to save the configuration
+and restart Spacemacs using =SPC q r=
+
+You could also reload the configuration using =SPC f e R=,
+although as we are adding quite a few packages I recommend restarting.
+
+You can of course selectively add the recommended configurations.
+
+As Spacemacs restarts, the additional packages from these layers are installed.
+
+* Enhancing the editing experience
+Enabling Smartparens strict mode is highly recommended for Clojure and lisp style languages.
+
+=SPC f e d= to open the ~.spacemacs~ file,
+=SPC s s= and type smartparens
+
+Select the line with dotspacemacs-smartparens-strict-mode
+and set its value to true using the t character.
+
+Now it is almost impossible to create unbalanced parens.
+
+I also prefer setting =dotspacemacs-smart-closing-parenthesis= to true.
+which allows you to jump to after the closing paren quickly.
+
+To ensure Vim style editing respects the parens structure of your code,
+enable evil-cleverparens
+
+=SPC s s= and user-config to jump to the right place in the .spacemacs file.
+
+Inbetween the user-config parents,
+add the following to enable Evil state safe structural editing for Clojure
+
+#+BEGIN_SRC elisp
+(spacemacs/toggle-evil-safe-lisp-structural-editing-on-register-hook-clojure-mode)
+#+END_SRC
+
+Or enable evil safe structural editing for all supported major modes
+
+#+BEGIN_SRC elisp
+(spacemacs/toggle-evil-safe-lisp-structural-editing-on-register-hooks)
+#+END_SRC
+
+
+* External binaries
+Install clj-kondo binary to provide live linting as you edit your Clojure code.
+Instructions are on the clj-kondo website.
+
+Install a search tool binary such as ripgrep or sliver searcher.
+
+#+BEGIN_SRC shell
+sudo apt install ripgrep
+#+END_SRC
+
+If you want to search on filenames across your operating system, then also install locate.
+
+#+BEGIN_SRC shell
+sudo apt install locate
+#+END_SRC
+
+* Additional configuration
+Finally, add some general look and feel configurations
+via the .spacemacs configuration file
+
+=SPC s s= font to find the configuration to set the font and font size.
+I use "Ubuntu Mono".
+
+=SPC s s= maximise to find the configuration to set Spacemacs to open maximised
+or in full screen when starting.
+
+There are also commands to toggle these when Spacemacs is running
+
+Spacemacs provides a dark and light theme.
+I have a preference for doom-solarized-light, especially for screencasts
+=SPC s s= theme to find the configuration to set the default theme to load.
+Any theme listed here will be automatically downloaded.
+=SPC T s= allows you to switch between themes for Spacemacs at any time.
+
+Vim editing style benefits from relative line numbers,
+so you can use them to quickly jump to a line
+or use actions across multiple lines.
+
+=SPC s s= line-numbers to find the relevant configuration
+
+I set relative numbers on all modes, except those specifically disabled here.
+
+#+BEGIN_SRC elisp
+dotspacemacs-line-numbers '(:visual t
+                               :disabled-for-modes dired-mode
+                                                   doc-view-mode
+                                                   pdf-view-mode
+                               :size-limit-kb 1000)
+#+END_SRC
+
+=SPC f s= to save and =spc q r= to restart Spacemacs.
+
+And thats all. You are ready to code.
