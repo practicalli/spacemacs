@@ -1,7 +1,7 @@
 # Before You Start with Spacemacs and Clojure development
 
 ## [Install Emacs](install-emacs.html)
-Spacemacs is a communiy driven configuration for Emacs, so you need to install Emacs before you can use Spacemacs.
+Spacemacs is a community driven configuration for Emacs, so you need to install Emacs before you can use Spacemacs.
 
 > ####Info::Minimum Emacs Version - 27.1
 > This guide used the 0.300 `develop` version of Spacemacs which recommends Emacs 27.1 or greater.  [Switch to Spacemacs develop](/install-spacemacs/switch-to-develop.md) if using version 0.200
