@@ -1,23 +1,21 @@
 # Configure LSP and Cider
-Practicalli recommends starting with [a minimal LSP configuration](https://github.com/practicalli/spacemacs.d/) to avoid duplication of features that are already present in Cider.  LSP features can then be enabled when you find them valuable.
+Practicalli recommends starting with [a minimal LSP configuration](https://github.com/practicalli/spacemacs.d/) to avoid conflict with features that are present in Cider.  LSP features can be enabled when you find them valuable.
 
 [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/) configuration for Spacemacs included a minimal configuration for Cider and Clojure-lsp.
 
 The [Spacemacs lsp layer](https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Btools/lsp) has a [default configuration](https://github.com/syl20bnr/spacemacs/blob/develop/layers/+tools/lsp/config.el) for all languages
 
-The [LSP Mode website provides examples of LSP features](https://emacs-lsp.github.io/lsp-mode/)
+The [LSP Mode website provides examples of LSP features](https://emacs-lsp.github.io/lsp-mode/) and there is a long [list of LSP settings](https://emacs-lsp.github.io/lsp-mode/page/settings/)
 
-Add `clojure-backend 'cider` as a clojure layer variable in `.spacemacs` to run Cider without any LSP features.
+Add `clojure-backend 'cider` as a clojure layer variable to the `clojure` layer in the `.spacemacs` file to run Cider without LSP features.
 
 
 > #### Hint::Choose your own preferences
-> This configuration uses predominately CIDER features as its a more established tool for Clojure development.
->
-> LSP UI elements and features are added to complement but not over-ride features in CIDER.  See the [LSP variables reference](lsp-variables-reference.md) for other features that can be enabled.
+> This configuration uses predominately CIDER features as its a more established tool for Clojure development.  LSP UI elements and features are added to complement but not over-ride features in CIDER.
 
 
 ## Pre-requisites
-`SPC SPC allt-the-icons-install-fonts` command will install icons that support the breadcrumb on headerline feature of LSP UI.  This provides the director path, file name and symbol as a breadcrumb trail at the top of each buffer.
+`SPC SPC all-the-icons-install-fonts` command will install icons that support the breadcrumb on headerline feature of LSP UI.  This provides the director path, file name and symbol as a breadcrumb trail at the top of each buffer.
 
 If this feature of LSP is not used, then the fonts do not need to be installed.
 
@@ -25,7 +23,7 @@ If this feature of LSP is not used, then the fonts do not need to be installed.
 ## Optional - clj-kondo
 The clojure-lsp project includes the latest clj-kondo binary, so any external install of the clj-kondo binary is optional.
 
-Remove the flycheck-clj-kondo configuration, `clojure-enable-linters 'clj-kondo`, from the Spacemacs Clojure layer to avoid duplication of results, if a separate clj-kondo binary is on the execution path.
+Remove the flycheck-clj-kondo configuration, `clojure-enable-linters 'clj-kondo`, from the `clojure` layer in `.spacemacs` to avoid duplication of results if a separate clj-kondo binary is found on the execution path.
 
 
 ## Spacemacs Clojure layer configuration
@@ -60,33 +58,53 @@ Cider configuration in `dotspacemacs/user-config` section of `.spacemacs` config
   ;; Vertically align s-expressions
   ;; https://github.com/clojure-emacs/clojure-mode#vertical-alignment
   (setq clojure-align-forms-automatically t)
-  ;;
-  ;; Auto-indent code automatically
-  ;; https://emacsredux.com/blog/2016/02/07/auto-indent-your-code-with-aggressive-indent-mode/
-  (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
 ```
 
-> #### Hint::Explore the LSP indentation
-> LSP can also carry out indentation.  Remove the `aggressive-indent-mode` and the clojure-mode indentation and alignment to avoid clashes with the LSP formatting and indentation.
+> #### Hint::LSP aligning forms
+> [Support for associative syntax alignment](https://github.com/weavejester/cljfmt/issues/36) is an issue to add aligning forms to cljfmt, which is used by LSP for formatting.
 
 
 ## LSP layer variables
 Add the `lsp` layer to `.spacemacs` and include the following variables for an uncluttered LSP UI.
 
-The [lsp variables reference](lsp-variables-reference.md) covers more options available.
-
 ```elisp
      (lsp :variables
-          lsp-enable-on-type-formatting nil
-          lsp-enable-indentation nil
+          ;; Formatting and indentation - use Cider instead
+          lsp-enable-on-type-formatting t
+          ;; Set to nil to use CIDER features instead of LSP UI
+          lsp-enable-indentation t
+          lsp-enable-snippet t  ;; to test again
+
+          ;; symbol highlighting - `lsp-toggle-symbol-highlight` toggles highlighting
+          ;; subtle highlighting for doom-gruvbox-light theme defined in dotspacemacs/user-config
           lsp-enable-symbol-highlighting t
-          lsp-modeline--enable-diagnostics t
-          lsp-ui-doc-show-with-cursor nil   ;; disable doc popup for cursor
-          lsp-ui-doc-delay 2
+
+          ;; Show lint error indicator in the mode line
+          lsp-modeline-diagnostics-enable t
+          ;; lsp-modeline-diagnostics-scope :workspace
+
+          ;; popup documentation boxes
+          ;; lsp-ui-doc-enable nil          ;; disable all doc popups
+          lsp-ui-doc-show-with-cursor nil   ;; doc popup for cursor
+          ;; lsp-ui-doc-show-with-mouse t   ;; doc popup for mouse
+          lsp-ui-doc-delay 2                ;; delay in seconds for popup to display
+
+          ;; code actions and diagnostics text as right-hand side of buffer
           lsp-ui-sideline-enable nil
+          lsp-ui-sideline-show-code-actions nil
+          ;; lsp-ui-sideline-delay 500
+
+          ;; lsp-ui-sideline-show-diagnostics nil
+
+          ;; reference count for functions (assume their maybe other lenses in future)
           lsp-lens-enable t
+
+          ;; Efficient use of space in treemacs-lsp display
           treemacs-space-between-root-nodes nil
-          lsp-file-watch-threshold 10000)
+
+          ;; Optimization for large files
+          lsp-file-watch-threshold 10000
+          lsp-log-io nil)
 ```
 
 
