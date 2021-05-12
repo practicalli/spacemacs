@@ -1,6 +1,10 @@
 # MaGit - Version Control
 
-Magit is a very powerful and simple to use client for Git version control.  Everything you can do on the command line can be done in Magit and you can also type Git commands too.
+Magit is simple to use and powerful Git client which provides equivalents for all Git CLI commands and even has a git command line option.
+
+[Magit status](status.md) allows fine-grained staging of changes within visual diffs for files, hunks or just a single line.  Commit, amend, squash and rebase to your local repository.  Browse the commit history log which can also be used to [reset commits, interactive rebase and cherry pick changes](change-history.md).
+
+Magit can push and pull changes with [remote repositories](remote-repositories/) and using [Forge](forge.md) can also manage issue and pull request too.
 
 `SPC g` opens the Git menu.
 
@@ -9,8 +13,10 @@ Magit is a very powerful and simple to use client for Git version control.  Ever
 
 `SPC g s` is the equivalent of `git status` and opens the Magit client, providing full control over local and remote Git repositories.
 
+`?` shows the top level command menu in the Magit status buffer.
 
-Magit shows visual diffs of changes and lets you select files, hunks or just a single line to commit.  Its easy to stage and unstage changes, then commit, amend, squash and rebase to your commit history.  Browsing and searching through logs is easy and of course Magit can push and pull changes with remote repositories too.
+[Spacemacs Magit help menu](/images/spacemacs-magit-help-menu.png)
+
 
 ## Magit overview
 
@@ -19,3 +25,7 @@ Here is a quick demonstration of Magit in action where we stage and commit chang
 {% youtube %}
 https://youtu.be/natNUgnh_no
 {% endyoutube %}
+
+
+## Magit Dispatch
+`SPC g m` calls `magit-dispatch` which opens a transient menu with all the Magit commands found in Magit Status buffer.  Git commands can be run without the need of the Magit status buffer.
