@@ -11,18 +11,19 @@ There are many [CIDER configuration variables](/reference/cider/configuration-va
 > `SPC f A` to reload a file already open and apply the variables in the `.dir-locals.el` file.
 
 
+
 ## Example configurations
 An example of setting the Clojure CLI tool as the default Clojure tool (rather than Leiningen or Boot). Also configuring several `deps.edn` aliases to be used when starting the REPL via Clojure CLI.
 
 ```elisp
 ((clojure-mode . ((cider-preferred-build-tool . clojure-cli)
-                  (cider-clojure-cli-global-options . "-M:env/dev:env/test"))))
+                  (cider-clojure-cli-aliases . ":env/dev:env/test"))))
 ```
 
 An example of a ClojureScript project using figwheel-main, Clojure CLI and hiding the display banner in the REPL browser
 ```
 ((clojure-mode . ((cider-preferred-build-tool          . clojure-cli)
-                  (cider-clojure-cli-global-options    . "-M:fig:dev")
+                  (cider-clojure-cli-aliases           . :fig:dev")
                   (cider-default-cljs-repl             . figwheel-main)
                   (cider-figwheel-main-default-options . "dev")
                   (cider-repl-display-help-banner      . nil))))
@@ -35,14 +36,14 @@ Use the following `.dir-locals.el` configuration to just use the configuration d
 
 ```
 ((clojure-mode . ((cider-preferred-build-tool . clojure-cli)
-                  (cider-clojure-cli-global-options . "-M:alias/name")
+                  (cider-clojure-cli-aliases . ":alias/name")
                   (cider-jack-in-dependencies . nil)
                   (cider-jack-in-nrepl-middlewares . nil)
                   (cider-jack-in-lein-plugins . nil)
                   (cider-clojure-cli-parameters . ""))))
 ```
 
-> [Issue raised with CIDER](https://github.com/clojure-emacs/cider/issues/2922) to discuss improving this approach
+> `cider-clojure-cli-aliases` replaces `cider-clojure-cli-global-options` variable
 
 
 ## Shared and local configurations
@@ -115,7 +116,7 @@ The configuration variables are set when a file is open in a specific Emacs majo
 The [chui ClojureScript test runner](https://github.com/lambdaisland/chui/blob/master/.dir-locals.el) project [uses a .dir-locals.el](https://github.com/lambdaisland/chui/blob/master/.dir-locals.el) file with example custom code.  One custom expression ensures nrepl middleware is injected into the environment so CIDER can connect.  The other custom expression sets the indent size.
 
 ```elisp
-((clojure-mode . ((cider-clojure-cli-global-options     . "-M:env/dev:env/test")
+((clojure-mode . ((cider-clojure-cli-aliases     . "-M:env/dev:env/test")
                   (cider-custom-cljs-repl-init-form     . "(user/cljs-repl)")
                   (cider-default-cljs-repl              . custom)
                   (cider-preferred-build-tool           . clojure-cli)
