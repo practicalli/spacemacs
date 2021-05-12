@@ -202,6 +202,7 @@
     * [Stash changes](source-control/magit/stashing.md)
     * [Remote repositories](source-control/magit/remote-repositories/index.md)
         * [Clone and Fork](source-control/magit/remote-repositories/clone-fork.md)
+        * [Checkout remote branch](source-control/magit/remote-repositories/checkout-remote-branch.md)
         * [Pull Changes](source-control/magit/remote-repositories/pull-changes.md)
         * [Push Changes](source-control/magit/remote-repositories/push-changes.md)
         * [Try Pull Requests](source-control/magit/remote-repositories/try-pull-requests.md)
