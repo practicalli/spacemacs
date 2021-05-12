@@ -65,11 +65,7 @@ Wait until Spacemacs finishes updating itself (should be less than a minute).
 
 ## Update Packages
 
-`SPC b h` to open the Spacemacs Home buffer.
-
-`RET` on the **Update Packages** link or click with left mouse button
-
-_Spacemacs will list the packages to be updated_
+`SPC f e U` updates the packages.  Use this key binding from the Spacemacs Home buffer, `SPC b h`, to see the list of packages that will be updated
 
 `y` to confirm you want to install the packages
 
