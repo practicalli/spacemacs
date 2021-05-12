@@ -26,13 +26,13 @@ Add `-M:env/test` before the `-m` flag  to include the alias for that jack-in se
 
 
 ## Include aliases via `.dir-locals.el`
-`SPC p e` creates a `.dir-locals.el` file to define aliases that are always included during `cider-jack-in`.  Add the variable `cider-clojure-cli-global-options` with a value of the alias name(s**.
+`SPC p e` creates a `.dir-locals.el` file to define aliases that are always included during `cider-jack-in`.  Add the variable `cider-clojure-cli-aliases` with a value of the alias names.
 
 ```elisp
-((clojure-mode . ((cider-clojure-cli-global-options . "-M:env/test"))))
+((clojure-mode . ((cider-clojure-cli-aliases . "env/test"))))
 ```
 
 Remember to `revert-buffer` on an existing project buffer, or open a file from the current project, to load in any changes to a `.dir-locals.el` file.
 
 > #### Hint::Project configuration with `.dir-locals.el`
-> [Project level configuration](https://practicalli.github.io/spacemacs/clojure-projects/project-configuration.html) section contains many example configurations that can be set via `.dir-locals.el` file.  Remember to `revert-buffer` an existing project buffer or open a new buffer to load in changes from the `.dir-locals.el` file.
+> [Project level configuration](/clojure-projects/project-configuration.md) section contains many example configurations that can be set via `.dir-locals.el` file.  Remember to `revert-buffer` an existing project buffer or open a new buffer to load in changes from the `.dir-locals.el` file.
