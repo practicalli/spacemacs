@@ -107,6 +107,14 @@ Add the `lsp` layer to `.spacemacs` and include the following variables for an u
           lsp-log-io nil)
 ```
 
+## dotspacemacs/user-config settings
+Additional settings have been added to the `dotspacemacs/user-config` section of `.spacemacs` file as they were not working as layer variables.
+
+```
+(setq lsp-ui-sideline-enable nil)
+(setq lsp-modeline-diagnostics-scope :workspace)
+```
+
 
 ## Customising symbol highlighting
 Symbol highlighting can be toggled using the command `lsp-toggle-symbol-highlighting` and the startup state can be set using the lsp layer configuration variable `lsp-enable-symbol-highlighting`
