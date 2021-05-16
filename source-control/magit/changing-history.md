@@ -6,8 +6,8 @@ The need to change history in Git should be minimal and should limited to fixing
 
 Here are a few simple tools to help you change your local history.
 
-> #### Hint:: Consentual Shared Remote History rewriting
-> If you need to change commit history on a share repository then think about how many people it is going to affect.  If you really must change a shared git history, get consent from the people you will affect first.
+> #### Hint:: Consensual rewriting of shared remote history
+> Please consider the impact of other people working with a shared Git repository before changing the existing git commit history.  If you really must change a shared git history, seek consent from the people you will affect first.
 >
 > It is much simpler to commit a new change that fixes the omission or error and let others pull that additional change.
 
