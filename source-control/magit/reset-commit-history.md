@@ -13,11 +13,13 @@ Reset allows you to roll back commit history.  The local commit history can be c
 | `f`          | reset a specific file                                            |
 
 ## Using recent commits or log
-Navigating the recent commits or log list, `l l`, is a simple way to reset to a commit, especially further back in the history.
+Navigating the recent commits list on the magit status buffer or viewing the log list, `l l`, provides a simple way to reset to a specific commit, especially further back in the git history.
 
 `j` and `k` to navigate to the commit in the history to reset to,the commit that will be the new HEAD.
 
 `O` to initiate a reset and choose the scope of the reset to carry out (commit, staging, working directory).
+
+![Spacemacs Magit reset via recent commits list](spacemacs-magit-reset-via-recent-commits-list.png)
 
 
 ## Specifying a commit to reset to
