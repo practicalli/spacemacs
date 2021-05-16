@@ -15,7 +15,7 @@ Magit can push and pull changes with [remote repositories](remote-repositories/)
 
 `?` shows the top level command menu in the Magit status buffer.
 
-[Spacemacs Magit help menu](/images/spacemacs-magit-help-menu.png)
+![Spacemacs Magit help menu](/images/spacemacs-magit-help-menu.png)
 
 
 ## Magit overview
@@ -25,7 +25,3 @@ Here is a quick demonstration of Magit in action where we stage and commit chang
 {% youtube %}
 https://youtu.be/natNUgnh_no
 {% endyoutube %}
-
-
-## Magit Dispatch
-`SPC g m` calls `magit-dispatch` which opens a transient menu with all the Magit commands found in Magit Status buffer.  Git commands can be run without the need of the Magit status buffer.
