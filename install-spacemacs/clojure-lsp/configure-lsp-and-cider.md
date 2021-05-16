@@ -11,19 +11,18 @@ Add `clojure-backend 'cider` as a clojure layer variable to the `clojure` layer 
 
 
 > #### Hint::Choose your own preferences
-> This configuration uses predominately CIDER features as its a more established tool for Clojure development.  LSP UI elements and features are added to complement but not over-ride features in CIDER.
+> This configuration uses predominately CIDER features.  Minimal LSP UI elements and features are added without distracting from the minimal Spacemacs experience.
 
 
 ## Pre-requisites
-`SPC SPC all-the-icons-install-fonts` command will install icons that support the breadcrumb on headerline feature of LSP UI.  This provides the director path, file name and symbol as a breadcrumb trail at the top of each buffer.
+`SPC SPC all-the-icons-install-fonts` command will install icons that support the [breadcrumbs on headerline feature](https://emacs-lsp.github.io/lsp-mode/page/main-features/#breadcrumb-on-headerline) of LSP UI.  This provides the director path, file name and symbol as a breadcrumb trail at the top of each buffer.
 
-If this feature of LSP is not used, then the fonts do not need to be installed.
-
+![Spacemacs LSP breadcrumbs](/images/spacemacs-lsp-breadcumbs.png)
 
 ## Optional - clj-kondo
-The clojure-lsp project includes the latest clj-kondo binary, so any external install of the clj-kondo binary is optional.
+clojure-lsp includes the latest clj-kondo binary if not found on the execution path. so any external install of the clj-kondo binary is optional.
 
-Remove the flycheck-clj-kondo configuration, `clojure-enable-linters 'clj-kondo`, from the `clojure` layer in `.spacemacs` to avoid duplication of results if a separate clj-kondo binary is found on the execution path.
+Remove the flycheck-clj-kondo configuration, `clojure-enable-linters 'clj-kondo`, from the `clojure` layer in `.spacemacs` to avoid duplication of results.
 
 
 ## Spacemacs Clojure layer configuration
@@ -47,8 +46,15 @@ In .spacemacs, the clojure layer variables allow for evaluating top-level forms 
 ```
 
 
-## Spacemacs Clojure automatic indentation
-Cider configuration in `dotspacemacs/user-config` section of `.spacemacs` configures the automatic alignment and indenting of Clojure code, following the Clojure style guide.
+## Aligning forms
+`SPC m = l` will align arguments in the current line or selected region.  Automatic aligning of forms is not yet supported in LSP for Clojure.
+
+> #### Hint::LSP aligning forms not fully supported
+> [Support for associative syntax alignment](https://github.com/weavejester/cljfmt/issues/36) is an issue to add aligning forms to cljfmt, which is used by LSP for formatting.
+
+Automatic aligning of forms works with `clojure-mode` by configuring `aggressive-indent-mode`, however, this seriously conflicts with LSP formatting creating an unworkable editing experience.
+
+To auto-alignt arguments using cloure-mode, set `lsp-enable-on-type-formatting` to `nil` in the `lsp` layer configuration.  Then add the following configuration in `dotspacemacs/user-config` section of `.spacemacs`
 
 ```elisp
   ;; Indentation of function forms
@@ -58,17 +64,19 @@ Cider configuration in `dotspacemacs/user-config` section of `.spacemacs` config
   ;; Vertically align s-expressions
   ;; https://github.com/clojure-emacs/clojure-mode#vertical-alignment
   (setq clojure-align-forms-automatically t)
+  ;;
+  ;; Auto-indent code automatically
+  ;; WARNING - really conflicts with LSP formatting - set lsp-enable-on-type-formatting to nil in lsp layer
+  ;; https://emacsredux.com/blog/2016/02/07/auto-indent-your-code-with-aggressive-indent-mode/
+  (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
 ```
-
-> #### Hint::LSP aligning forms
-> [Support for associative syntax alignment](https://github.com/weavejester/cljfmt/issues/36) is an issue to add aligning forms to cljfmt, which is used by LSP for formatting.
 
 
 ## LSP layer variables
 Add the `lsp` layer to `.spacemacs` and include the following variables for an uncluttered LSP UI.
 
 ```elisp
-     (lsp :variables
+(lsp :variables
           ;; Formatting and indentation - use Cider instead
           lsp-enable-on-type-formatting t
           ;; Set to nil to use CIDER features instead of LSP UI
@@ -87,7 +95,10 @@ Add the `lsp` layer to `.spacemacs` and include the following variables for an u
           ;; lsp-ui-doc-enable nil          ;; disable all doc popups
           lsp-ui-doc-show-with-cursor nil   ;; doc popup for cursor
           ;; lsp-ui-doc-show-with-mouse t   ;; doc popup for mouse
-          lsp-ui-doc-delay 2                ;; delay in seconds for popup to display
+          ;; lsp-ui-doc-delay 2             ;; delay in seconds for popup to display
+          lsp-ui-doc-include-signature t    ;; include function signature
+          ;; lsp-ui-doc-position 'at-point  ;; positioning of doc popup: top bottom at-point
+          lsp-ui-doc-alignment 'window      ;; relative location of doc popup: frame window
 
           ;; code actions and diagnostics text as right-hand side of buffer
           lsp-ui-sideline-enable nil

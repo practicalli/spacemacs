@@ -3,7 +3,9 @@ The Language Server Protocol (LSP) is a specification for tooling developers, de
 
 A standard protocol means an LSP server implementation can support a wide range of tools, reducing the work of editor maintainers and helping ensure common features are available across all editors. LSP does not provide any implementation, this is left to tooling and editor developers.
 
-Adding the `lsp` layer to `.spacemacs` will automatically use LSP for Clojure.  This will override some features provided by CIDER, so you may wish to [configure lsp and lsp UI](configure-lsp-and-cider.md).
+[practicalli/spacemacs.d]({{ book.P9ISpacemacsD}}) provides an LSP configuration with minimal UI elements and no conflicts with CIDER.
+
+Adding the `lsp` layer to `.spacemacs` will automatically use LSP for Clojure.  By default LSP will override some features provided by CIDER, so you may wish to [configure lsp and lsp UI](configure-lsp-and-cider.md).
 
 ![Clojure Language Server Protocol LSP](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-language-server.png)
 
