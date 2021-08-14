@@ -161,6 +161,7 @@
         * [Extracting](refactor/clj-refactor/extracting.md)
         * [Formatting Code](refactor/clj-refactor/formatting-code.md)
 * [Debug Clojure](debug-clojure/index.md)
+    * [Understanding errors](debug-clojure/understanding-errors.md)
     * [Inspect values](debug-clojure/inspect-values.md)
     * [Cider debug](debug-clojure/cider-debug.md)
     * [Sayid debug & profile](debug-clojure/sayid-debug.md)
