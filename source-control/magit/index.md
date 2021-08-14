@@ -2,7 +2,7 @@
 
 Magit is simple to use and powerful Git client which provides equivalents for all Git CLI commands and even has a git command line option.
 
-[Magit status](status.md) allows fine-grained staging of changes within visual diffs for files, hunks or just a single line.  Commit, amend, squash and rebase to your local repository.  Browse the commit history log which can also be used to [reset commits, interactive rebase and cherry pick changes](change-history.md).
+[Magit status](status.md) allows fine-grained staging of changes within visual diffs for files, hunks or just a single line.  Commit, amend, squash and rebase to your local repository.  Browse the commit history log which can also be used to [reset commits, interactive rebase and cherry pick changes](changing-history.md).
 
 Magit can push and pull changes with [remote repositories](remote-repositories/) and using [Forge](forge.md) can also manage issue and pull request too.
 
