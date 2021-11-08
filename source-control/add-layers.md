@@ -16,11 +16,21 @@ Add the following configuration to provide the recommended setup.
 ```lisp
      (git :variables
           git-magit-status-fullscreen t
-          magit-diff-refine-hunk 'all)
+          magit-diff-refine-hunk t
+          git-enable-magit-todos-plugin t)
+
      github
+
      (version-control :variables
                       version-control-diff-tool 'diff-hl
                       version-control-global-margin t)
 ```
+
+`SPC g s` opens Magit Git client in full screen window layout (`q` restores previous window layout)
+
+`magit-diff-refine-hunk` shows word-granularity differences in the current diff hunk, making it easier to spot the exact changes
+
+`git-enable-magit-todos-plugin` lists matching TODO lines in the project in the Magit Status buffer, helping work and issues be tracked
+
 
 ![Spacemacs Source Control - full screen and refine-hunks](/images/spacemacs-magit-fullscreen-refine-hunks-example.png)
