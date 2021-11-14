@@ -1,0 +1,3946 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Clojure Layer · Clojure development with Spacemacs & Cider</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-callouts/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-simpletabs/tabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-wide-page/wide.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mnemonic-menu.html" />
+    
+    
+    <link rel="prev" href="layers.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://develop.spacemacs.org/" target="_blank" class="custom-link">Spacemacs (develop)</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://practicalli.github.io" target="_blank" class="custom-link">Practical.li</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../repl-driven-development/">
+            
+                <a href="../repl-driven-development/">
+            
+                    
+                    REPL Driven Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Why Spacemacs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="extensive-language-support.html">
+            
+                <a href="extensive-language-support.html">
+            
+                    
+                    Extensive Language Support
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" data-path="layers.html">
+            
+                <a href="layers.html">
+            
+                    
+                    Simple Layers
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1.2.2.1" data-path="clojure-layer.html">
+            
+                <a href="clojure-layer.html">
+            
+                    
+                    Clojure Layer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="mnemonic-menu.html">
+            
+                <a href="mnemonic-menu.html">
+            
+                    
+                    Mnemonic Menu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" data-path="states.html">
+            
+                <a href="states.html">
+            
+                    
+                    A State for everything
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5" data-path="transient-state-menus.html">
+            
+                <a href="transient-state-menus.html">
+            
+                    
+                    Transient state menus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.6" data-path="helm.html">
+            
+                <a href="helm.html">
+            
+                    
+                    Discoverable
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.6.1" data-path="helm-transient-state.html">
+            
+                <a href="helm-transient-state.html">
+            
+                    
+                    Helm Transient State
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.7" data-path="project-file-navigation.html">
+            
+                <a href="project-file-navigation.html">
+            
+                    
+                    Project & File navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="layouts.html">
+            
+                <a href="layouts.html">
+            
+                    
+                    Layouts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../spacemacs-mini-cheatsheet.html">
+            
+                <a href="../spacemacs-mini-cheatsheet.html">
+            
+                    
+                    Spacemacs mini cheatsheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../introduction/contributing.html">
+            
+                <a href="../introduction/contributing.html">
+            
+                    
+                    Contributing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Installing Spacemacs</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../before-you-start/">
+            
+                <a href="../before-you-start/">
+            
+                    
+                    Before you start
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../before-you-start/install-emacs.html">
+            
+                <a href="../before-you-start/install-emacs.html">
+            
+                    
+                    Install Emacs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../before-you-start/install-java.html">
+            
+                <a href="../before-you-start/install-java.html">
+            
+                    
+                    Install Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../before-you-start/install-clojure.html">
+            
+                <a href="../before-you-start/install-clojure.html">
+            
+                    
+                    Install Clojure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../before-you-start/recommended-command-line-tools.html">
+            
+                <a href="../before-you-start/recommended-command-line-tools.html">
+            
+                    
+                    Command Line Tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../install-spacemacs/">
+            
+                <a href="../install-spacemacs/">
+            
+                    
+                    Install Spacemacs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../install-spacemacs/additional-configuration.html">
+            
+                <a href="../install-spacemacs/additional-configuration.html">
+            
+                    
+                    Additional Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1.1" data-path="../install-spacemacs/clojure-layer.html">
+            
+                <a href="../install-spacemacs/clojure-layer.html">
+            
+                    
+                    Add Clojure layer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.2" data-path="../install-spacemacs/enhance-clojure-experience.html">
+            
+                <a href="../install-spacemacs/enhance-clojure-experience.html">
+            
+                    
+                    Enhance Clojure experience
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1.2.1" data-path="../install-spacemacs/smartparens.html">
+            
+                <a href="../install-spacemacs/smartparens.html">
+            
+                    
+                    Smartparens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.2.2" data-path="../install-spacemacs/evil-structural-editing.html">
+            
+                <a href="../install-spacemacs/evil-structural-editing.html">
+            
+                    
+                    Evil Structural editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.2.3" data-path="../install-spacemacs/fancify-symbols.html">
+            
+                <a href="../install-spacemacs/fancify-symbols.html">
+            
+                    
+                    Clojure Fancify Symbols
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.2.4" data-path="../install-spacemacs/clj-kondo-via-lsp.html">
+            
+                <a href="../install-spacemacs/clj-kondo-via-lsp.html">
+            
+                    
+                    clj-kondo via LSP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.3" data-path="../install-spacemacs/clojure-lsp/">
+            
+                <a href="../install-spacemacs/clojure-lsp/">
+            
+                    
+                    Clojure-lsp
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1.3.1" data-path="../install-spacemacs/clojure-lsp/configure-lsp-and-cider.html">
+            
+                <a href="../install-spacemacs/clojure-lsp/configure-lsp-and-cider.html">
+            
+                    
+                    Configure lsp and Cider
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.4" data-path="../install-spacemacs/change-font.html">
+            
+                <a href="../install-spacemacs/change-font.html">
+            
+                    
+                    Font size and Zooming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.5" data-path="../install-spacemacs/maximised-full-screen.html">
+            
+                <a href="../install-spacemacs/maximised-full-screen.html">
+            
+                    
+                    Open Maximised / Full Screen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.6" data-path="../install-spacemacs/themes.html">
+            
+                <a href="../install-spacemacs/themes.html">
+            
+                    
+                    Themes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.7" data-path="../install-spacemacs/line-numbers.html">
+            
+                <a href="../install-spacemacs/line-numbers.html">
+            
+                    
+                    Line Numbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.1.8" data-path="../install-spacemacs/eshell.html">
+            
+                <a href="../install-spacemacs/eshell.html">
+            
+                    
+                    Emacs Eshell
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../install-spacemacs/emacsclient-server.html">
+            
+                <a href="../install-spacemacs/emacsclient-server.html">
+            
+                    
+                    Starting Emacs instantly
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../install-spacemacs/emacsclient-git-commit-messages.html">
+            
+                <a href="../install-spacemacs/emacsclient-git-commit-messages.html">
+            
+                    
+                    Git commit messages
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../install-spacemacs/update.html">
+            
+                <a href="../install-spacemacs/update.html">
+            
+                    
+                    Update Spacemacs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../install-spacemacs/switch-to-develop.html">
+            
+                <a href="../install-spacemacs/switch-to-develop.html">
+            
+                    
+                    Switch to develop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../install-spacemacs/troubleshooting.html">
+            
+                <a href="../install-spacemacs/troubleshooting.html">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Using Spacemacs</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../spacemacs-basics/">
+            
+                <a href="../spacemacs-basics/">
+            
+                    
+                    Spacemacs Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../spacemacs-basics/emacs-basics.html">
+            
+                <a href="../spacemacs-basics/emacs-basics.html">
+            
+                    
+                    Frames Windows Buffers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../spacemacs-basics/working-with-projects/">
+            
+                <a href="../spacemacs-basics/working-with-projects/">
+            
+                    
+                    Working with Projects
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="../spacemacs-basics/working-with-projects/open-and-create-files.html">
+            
+                <a href="../spacemacs-basics/working-with-projects/open-and-create-files.html">
+            
+                    
+                    Open and Create Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.2" data-path="../spacemacs-basics/working-with-projects/managing-buffers.html">
+            
+                <a href="../spacemacs-basics/working-with-projects/managing-buffers.html">
+            
+                    
+                    Managing Buffers
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.2.1" data-path="../spacemacs-basics/working-with-projects/tidying-up-buffers.html">
+            
+                <a href="../spacemacs-basics/working-with-projects/tidying-up-buffers.html">
+            
+                    
+                    Tidying up Buffers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.3" data-path="../spacemacs-basics/working-with-projects/searching-projects.html">
+            
+                <a href="../spacemacs-basics/working-with-projects/searching-projects.html">
+            
+                    
+                    Searching Projects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.4" data-path="../spacemacs-basics/working-with-projects/projectile.html">
+            
+                <a href="../spacemacs-basics/working-with-projects/projectile.html">
+            
+                    
+                    Projectile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.5" data-path="../spacemacs-basics/working-with-projects/managing-windows.html">
+            
+                <a href="../spacemacs-basics/working-with-projects/managing-windows.html">
+            
+                    
+                    Managing Windows
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.6" data-path="../spacemacs-basics/working-with-projects/layouts.html">
+            
+                <a href="../spacemacs-basics/working-with-projects/layouts.html">
+            
+                    
+                    Layouts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.7" data-path="../spacemacs-basics/working-with-projects/treemacs.html">
+            
+                <a href="../spacemacs-basics/working-with-projects/treemacs.html">
+            
+                    
+                    Treemacs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.8" data-path="../spacemacs-basics/working-with-projects/ranger.html">
+            
+                <a href="../spacemacs-basics/working-with-projects/ranger.html">
+            
+                    
+                    Ranger
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../spacemacs-basics/visual-select.html">
+            
+                <a href="../spacemacs-basics/visual-select.html">
+            
+                    
+                    Visual Select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../spacemacs-basics/spell-checking.html">
+            
+                <a href="../spacemacs-basics/spell-checking.html">
+            
+                    
+                    Spell Checking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../spacemacs-basics/vim-basics.html">
+            
+                <a href="../spacemacs-basics/vim-basics.html">
+            
+                    
+                    Vim Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../spacemacs-basics/evil-states.html">
+            
+                <a href="../spacemacs-basics/evil-states.html">
+            
+                    
+                    Evil States
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../spacemacs-basics/vim-style/speaking-evil.html">
+            
+                <a href="../spacemacs-basics/vim-style/speaking-evil.html">
+            
+                    
+                    Speaking Evil
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../spacemacs-basics/vim-style/vim-quick-reference.html">
+            
+                <a href="../spacemacs-basics/vim-style/vim-quick-reference.html">
+            
+                    
+                    Vim Quick Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../spacemacs-basics/vim-style/vim-tips-for-developers.html">
+            
+                <a href="../spacemacs-basics/vim-style/vim-tips-for-developers.html">
+            
+                    
+                    Vim Tips for developers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/keybindng-reference.html">
+            
+                <a href="../spacemacs-basics/vim-style/keybindng-reference.html">
+            
+                    
+                    Keybinding reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../spacemacs-basics/evil-tools/">
+            
+                <a href="../spacemacs-basics/evil-tools/">
+            
+                    
+                    Evil tools
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../spacemacs-basics/evil-tools/narrowing.html">
+            
+                <a href="../spacemacs-basics/evil-tools/narrowing.html">
+            
+                    
+                    Narrowing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../spacemacs-basics/evil-tools/helm-swoop.html">
+            
+                <a href="../spacemacs-basics/evil-tools/helm-swoop.html">
+            
+                    
+                    helm-swoop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../spacemacs-basics/evil-tools/iedit.html">
+            
+                <a href="../spacemacs-basics/evil-tools/iedit.html">
+            
+                    
+                    iedit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.3.1" data-path="../spacemacs-basics/evil-tools/iedit-in-action.html">
+            
+                <a href="../spacemacs-basics/evil-tools/iedit-in-action.html">
+            
+                    
+                    iedit in action
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3.2" data-path="../spacemacs-basics/evil-tools/iedit-a-function.html">
+            
+                <a href="../spacemacs-basics/evil-tools/iedit-a-function.html">
+            
+                    
+                    iedit a function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3.3" data-path="../spacemacs-basics/evil-tools/iedit-find-replace.html">
+            
+                <a href="../spacemacs-basics/evil-tools/iedit-find-replace.html">
+            
+                    
+                    iedit find replace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3.4" data-path="../spacemacs-basics/evil-tools/iedit-replace-multiple-words.html">
+            
+                <a href="../spacemacs-basics/evil-tools/iedit-replace-multiple-words.html">
+            
+                    
+                    iedit replace multiple words
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../spacemacs-basics/evil-tools/replacing-text-across-projects.html">
+            
+                <a href="../spacemacs-basics/evil-tools/replacing-text-across-projects.html">
+            
+                    
+                    Replace text across projects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../spacemacs-basics/evil-tools/multiple-cursors.html">
+            
+                <a href="../spacemacs-basics/evil-tools/multiple-cursors.html">
+            
+                    
+                    Multiple Cursors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../spacemacs-basics/evil-g-menu.html">
+            
+                <a href="../spacemacs-basics/evil-g-menu.html">
+            
+                    
+                    Evil g menu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../spacemacs-basics/evil-z-menu.html">
+            
+                <a href="../spacemacs-basics/evil-z-menu.html">
+            
+                    
+                    Evil z menu
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Clojure Development</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../clojure-projects/">
+            
+                <a href="../clojure-projects/">
+            
+                    
+                    Clojure Projects
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../clojure-projects/adding-files.html">
+            
+                <a href="../clojure-projects/adding-files.html">
+            
+                    
+                    Adding Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../clojure-projects/rename-delete-files.html">
+            
+                <a href="../clojure-projects/rename-delete-files.html">
+            
+                    
+                    Rename - Delete Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../clojure-projects/project-configuration.html">
+            
+                <a href="../clojure-projects/project-configuration.html">
+            
+                    
+                    Project configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../clojure-projects/monorepo-nested-projects.html">
+            
+                <a href="../clojure-projects/monorepo-nested-projects.html">
+            
+                    
+                    Monorepo / Nested projects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../clojure-repl/">
+            
+                <a href="../clojure-repl/">
+            
+                    
+                    The REPL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../clojure-repl/connect-to-repl.html">
+            
+                <a href="../clojure-repl/connect-to-repl.html">
+            
+                    
+                    Connect to REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../clojure-repl/connect-to-remote-repl.html">
+            
+                <a href="../clojure-repl/connect-to-remote-repl.html">
+            
+                    
+                    Connect to remote REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../clojure-repl/portal-data-visualization.html">
+            
+                <a href="../clojure-repl/portal-data-visualization.html">
+            
+                    
+                    Portal data visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../clojure-repl/reveal-data-visualization.html">
+            
+                <a href="../clojure-repl/reveal-data-visualization.html">
+            
+                    
+                    Reveal data visualization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../clojure-repl/jack-in-to-repl.html">
+            
+                <a href="../clojure-repl/jack-in-to-repl.html">
+            
+                    
+                    Jack-in to REPL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.5.1" data-path="../clojure-repl/configure-repl-start.html">
+            
+                <a href="../clojure-repl/configure-repl-start.html">
+            
+                    
+                    Configure Jack-in
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5.2" data-path="../clojure-repl/clear-repl-buffer.html">
+            
+                <a href="../clojure-repl/clear-repl-buffer.html">
+            
+                    
+                    Clear REPL buffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../clojure-repl/clojurescript-repl.html">
+            
+                <a href="../clojure-repl/clojurescript-repl.html">
+            
+                    
+                    ClojureScript REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.7" data-path="../clojure-repl/refresh-restart-repl.html">
+            
+                <a href="../clojure-repl/refresh-restart-repl.html">
+            
+                    
+                    Refresh/Restart REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.8" data-path="../clojure-repl/component-lifecycle.html">
+            
+                <a href="../clojure-repl/component-lifecycle.html">
+            
+                    
+                    Component Lifecycle Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../evaluating-clojure/">
+            
+                <a href="../evaluating-clojure/">
+            
+                    
+                    Evaluating Clojure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../evaluating-clojure/expressions.html">
+            
+                <a href="../evaluating-clojure/expressions.html">
+            
+                    
+                    Evaluate Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../evaluating-clojure/undefine.html">
+            
+                <a href="../evaluating-clojure/undefine.html">
+            
+                    
+                    Un-define names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.3" data-path="../evaluating-clojure/macro-expand.html">
+            
+                <a href="../evaluating-clojure/macro-expand.html">
+            
+                    
+                    Macro-expand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.4" data-path="../evaluating-clojure/enlighten.html">
+            
+                <a href="../evaluating-clojure/enlighten.html">
+            
+                    
+                    Enlighten
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.5" data-path="../evaluating-clojure/inspect.html">
+            
+                <a href="../evaluating-clojure/inspect.html">
+            
+                    
+                    Inspect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.6" data-path="../evaluating-clojure/evaluate-in-repl-buffer.html">
+            
+                <a href="../evaluating-clojure/evaluate-in-repl-buffer.html">
+            
+                    
+                    REPL buffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../testing/">
+            
+                <a href="../testing/">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../testing/unit-testing/">
+            
+                <a href="../testing/unit-testing/">
+            
+                    
+                    Unit Testing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1.1" data-path="../testing/unit-testing/cider-test-deps-edn-projects.html">
+            
+                <a href="../testing/unit-testing/cider-test-deps-edn-projects.html">
+            
+                    
+                    CIDER test & deps.edn
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.1.2" data-path="../testing/unit-testing/writing-unit-tests.html">
+            
+                <a href="../testing/unit-testing/writing-unit-tests.html">
+            
+                    
+                    Writing Unit Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.1.3" data-path="../testing/unit-testing/running-tests.html">
+            
+                <a href="../testing/unit-testing/running-tests.html">
+            
+                    
+                    Running Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.1.4" data-path="../testing/unit-testing/re-run-tests-from-test-report-buffer.html">
+            
+                <a href="../testing/unit-testing/re-run-tests-from-test-report-buffer.html">
+            
+                    
+                    Test report - re-run tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.1.5" data-path="../testing/unit-testing/refactor-unit-tests.html">
+            
+                <a href="../testing/unit-testing/refactor-unit-tests.html">
+            
+                    
+                    Refactor Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4.1.6" data-path="../testing/unit-testing/configure-cider-test-runner.html">
+            
+                <a href="../testing/unit-testing/configure-cider-test-runner.html">
+            
+                    
+                    Configure Test Runner
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../navigating-code/">
+            
+                <a href="../navigating-code/">
+            
+                    
+                    Navigating code
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.1" data-path="../navigating-code/expressions.html">
+            
+                <a href="../navigating-code/expressions.html">
+            
+                    
+                    Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.2" data-path="../navigating-code/markers.html">
+            
+                <a href="../navigating-code/markers.html">
+            
+                    
+                    Markers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.3" data-path="../navigating-code/namespaces.html">
+            
+                <a href="../navigating-code/namespaces.html">
+            
+                    
+                    Namespaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.4" data-path="../navigating-code/names-symbols.html">
+            
+                <a href="../navigating-code/names-symbols.html">
+            
+                    
+                    Names - Symbols
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.5" data-path="../navigating-code/function-definitions.html">
+            
+                <a href="../navigating-code/function-definitions.html">
+            
+                    
+                    Function Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.6" data-path="../navigating-code/find-usages.html">
+            
+                <a href="../navigating-code/find-usages.html">
+            
+                    
+                    Find Usages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.7" data-path="../navigating-code/java-definitions.html">
+            
+                <a href="../navigating-code/java-definitions.html">
+            
+                    
+                    Java Definitions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.7.1" data-path="../navigating-code/local-java-sources.html">
+            
+                <a href="../navigating-code/local-java-sources.html">
+            
+                    
+                    Java Definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.8" data-path="../navigating-code/expressions.html">
+            
+                <a href="../navigating-code/expressions.html">
+            
+                    
+                    Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5.9" data-path="../navigating-code/code-folding.html">
+            
+                <a href="../navigating-code/code-folding.html">
+            
+                    
+                    Code Folding
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.5.9.1" data-path="../navigating-code/code-folding-methods.html">
+            
+                <a href="../navigating-code/code-folding-methods.html">
+            
+                    
+                    Folding methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../structural-editing/">
+            
+                <a href="../structural-editing/">
+            
+                    
+                    Structural Editing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.1" data-path="../structural-editing/cleverparens.html">
+            
+                <a href="../structural-editing/cleverparens.html">
+            
+                    
+                    cleverparens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.2" data-path="../structural-editing/smartparens.html">
+            
+                <a href="../structural-editing/smartparens.html">
+            
+                    
+                    Smartparens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.3" data-path="../structural-editing/lisp-state.html">
+            
+                <a href="../structural-editing/lisp-state.html">
+            
+                    
+                    Lisp State
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.6.3.1" data-path="../structural-editing/lisp-state-wrap-unwrap.html">
+            
+                <a href="../structural-editing/lisp-state-wrap-unwrap.html">
+            
+                    
+                    Wrap Unwrap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.3.2" data-path="../structural-editing/lisp-state-slurp-barf.html">
+            
+                <a href="../structural-editing/lisp-state-slurp-barf.html">
+            
+                    
+                    Slurp Barf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.3.3" data-path="../structural-editing/lisp-state-deleting.html">
+            
+                <a href="../structural-editing/lisp-state-deleting.html">
+            
+                    
+                    Deleting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.3.4" data-path="../structural-editing/lisp-state-raising.html">
+            
+                <a href="../structural-editing/lisp-state-raising.html">
+            
+                    
+                    Raising
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6.3.5" data-path="../structural-editing/repeating-commands.html">
+            
+                <a href="../structural-editing/repeating-commands.html">
+            
+                    
+                    Repeating Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../snippets/">
+            
+                <a href="../snippets/">
+            
+                    
+                    Snippets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1" data-path="../snippets/clojure-snippets.html">
+            
+                <a href="../snippets/clojure-snippets.html">
+            
+                    
+                    Clojure Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="../snippets/add-your-own-snippets.html">
+            
+                <a href="../snippets/add-your-own-snippets.html">
+            
+                    
+                    Add your own Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="../refactor/">
+            
+                <a href="../refactor/">
+            
+                    
+                    Refactor code
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.8.1" data-path="../refactor/similar-function-call-name.html">
+            
+                <a href="../refactor/similar-function-call-name.html">
+            
+                    
+                    Similar function call name
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.2" data-path="../refactor/within-a-function.html">
+            
+                <a href="../refactor/within-a-function.html">
+            
+                    
+                    Within a function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.3" data-path="../refactor/within-a-namespace.html">
+            
+                <a href="../refactor/within-a-namespace.html">
+            
+                    
+                    Within a namespace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.4" data-path="../refactor/namespace-definitions.html">
+            
+                <a href="../refactor/namespace-definitions.html">
+            
+                    
+                    ns namespace definitions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.5" data-path="../refactor/within-a-project.html">
+            
+                <a href="../refactor/within-a-project.html">
+            
+                    
+                    Within a project
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.6" data-path="../refactor/clojure-mode/">
+            
+                <a href="../refactor/clojure-mode/">
+            
+                    
+                    Clojure mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.7" data-path="../refactor/clj-refactor/">
+            
+                <a href="../refactor/clj-refactor/">
+            
+                    
+                    clj-refactor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.8.7.1" data-path="../refactor/clj-refactor/managing-library-dependencies.html">
+            
+                <a href="../refactor/clj-refactor/managing-library-dependencies.html">
+            
+                    
+                    Managing Library Dependencies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.7.2" data-path="../refactor/clj-refactor/managing-namespaces.html">
+            
+                <a href="../refactor/clj-refactor/managing-namespaces.html">
+            
+                    
+                    Managing Namespaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.7.3" data-path="../refactor/clj-refactor/collections.html">
+            
+                <a href="../refactor/clj-refactor/collections.html">
+            
+                    
+                    Collections
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.7.4" data-path="../refactor/clj-refactor/extracting.html">
+            
+                <a href="../refactor/clj-refactor/extracting.html">
+            
+                    
+                    Extracting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8.7.5" data-path="../refactor/clj-refactor/formatting-code.html">
+            
+                <a href="../refactor/clj-refactor/formatting-code.html">
+            
+                    
+                    Formatting Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="../debug-clojure/">
+            
+                <a href="../debug-clojure/">
+            
+                    
+                    Debug Clojure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.9.1" data-path="../debug-clojure/understanding-errors.html">
+            
+                <a href="../debug-clojure/understanding-errors.html">
+            
+                    
+                    Understanding errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9.2" data-path="../debug-clojure/inspect-values.html">
+            
+                <a href="../debug-clojure/inspect-values.html">
+            
+                    
+                    Inspect values
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9.3" data-path="../debug-clojure/cider-debug.html">
+            
+                <a href="../debug-clojure/cider-debug.html">
+            
+                    
+                    Cider debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9.4" data-path="../debug-clojure/sayid-debug.html">
+            
+                <a href="../debug-clojure/sayid-debug.html">
+            
+                    
+                    Sayid debug & profile
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="../improving-code/">
+            
+                <a href="../improving-code/">
+            
+                    
+                    Improving Code
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.10.1" data-path="../improving-code/formatting/">
+            
+                <a href="../improving-code/formatting/">
+            
+                    
+                    Formatting
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.10.1.1" data-path="../improving-code/formatting/automatic-indenting.html">
+            
+                <a href="../improving-code/formatting/automatic-indenting.html">
+            
+                    
+                    Automatic Indenting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.1.2" data-path="../improving-code/formatting/aligning-forms-expressions.html">
+            
+                <a href="../improving-code/formatting/aligning-forms-expressions.html">
+            
+                    
+                    Aligning forms
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.2" data-path="../improving-code/live-linting.html">
+            
+                <a href="../improving-code/live-linting.html">
+            
+                    
+                    Live Linting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.3" data-path="../improving-code/batch-linting.html">
+            
+                <a href="../improving-code/batch-linting.html">
+            
+                    
+                    Batch linting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10.4" data-path="../improving-code/idiomatic-code-checking.html">
+            
+                <a href="../improving-code/idiomatic-code-checking.html">
+            
+                    
+                    Idiomatic code checking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11" data-path="../documentation/">
+            
+                <a href="../documentation/">
+            
+                    
+                    Documentation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.11.1" data-path="../documentation/cider-doc.html">
+            
+                <a href="../documentation/cider-doc.html">
+            
+                    
+                    Cider doc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11.2" data-path="../documentation/apropos.html">
+            
+                <a href="../documentation/apropos.html">
+            
+                    
+                    Related functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11.3" data-path="../documentation/javadoc.html">
+            
+                <a href="../documentation/javadoc.html">
+            
+                    
+                    Javadoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11.4" data-path="../documentation/comments.html">
+            
+                <a href="../documentation/comments.html">
+            
+                    
+                    Comments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.11.5" data-path="../markdown-mode/">
+            
+                <a href="../markdown-mode/">
+            
+                    
+                    Markdown documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Source Control</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../source-control/">
+            
+                <a href="../source-control/">
+            
+                    
+                    Source Control Overview
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../source-control/add-layers.html">
+            
+                <a href="../source-control/add-layers.html">
+            
+                    
+                    Add Layers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../source-control/git-configuration.html">
+            
+                <a href="../source-control/git-configuration.html">
+            
+                    
+                    Git Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../source-control/github-configuration.html">
+            
+                <a href="../source-control/github-configuration.html">
+            
+                    
+                    GitHub Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../source-control/forge-configuration.html">
+            
+                <a href="../source-control/forge-configuration.html">
+            
+                    
+                    Forge Configuration
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.4.1" data-path="../source-control/forge-self-hosted-configuration.html">
+            
+                <a href="../source-control/forge-self-hosted-configuration.html">
+            
+                    
+                    Forge Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../source-control/magit/">
+            
+                <a href="../source-control/magit/">
+            
+                    
+                    MaGit Git Client
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.1" data-path="../source-control/magit/create-local-repository.html">
+            
+                <a href="../source-control/magit/create-local-repository.html">
+            
+                    
+                    Create local repository
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.2" data-path="../source-control/magit/list-local-repositories.html">
+            
+                <a href="../source-control/magit/list-local-repositories.html">
+            
+                    
+                    List local repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.3" data-path="../source-control/magit/status.html">
+            
+                <a href="../source-control/magit/status.html">
+            
+                    
+                    Git Status
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.3.1" data-path="../source-control/magit/status-fullscreen.html">
+            
+                <a href="../source-control/magit/status-fullscreen.html">
+            
+                    
+                    MaGit Status Fullscreen
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.4" data-path="../source-control/magit/branching.html">
+            
+                <a href="../source-control/magit/branching.html">
+            
+                    
+                    Branching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.5" data-path="../source-control/magit/staging-changes.html">
+            
+                <a href="../source-control/magit/staging-changes.html">
+            
+                    
+                    Staging changes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.6" data-path="../source-control/magit/commit-changes.html">
+            
+                <a href="../source-control/magit/commit-changes.html">
+            
+                    
+                    Commit changes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.6.1" data-path="../source-control/magit/commit-create.html">
+            
+                <a href="../source-control/magit/commit-create.html">
+            
+                    
+                    Create commit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.6.2" data-path="../source-control/magit/commit-amend.html">
+            
+                <a href="../source-control/magit/commit-amend.html">
+            
+                    
+                    Amend commit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.6.3" data-path="../source-control/magit/commit-extend.html">
+            
+                <a href="../source-control/magit/commit-extend.html">
+            
+                    
+                    Extend commit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.6.4" data-path="../source-control/magit/commit-rewrite.html">
+            
+                <a href="../source-control/magit/commit-rewrite.html">
+            
+                    
+                    Rewrite commit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.6.5" data-path="../source-control/magit/tag-commit.html">
+            
+                <a href="../source-control/magit/tag-commit.html">
+            
+                    
+                    Tag commit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.7" data-path="../source-control/magit/stashing.html">
+            
+                <a href="../source-control/magit/stashing.html">
+            
+                    
+                    Stash changes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.8" data-path="../source-control/magit/remote-repositories/">
+            
+                <a href="../source-control/magit/remote-repositories/">
+            
+                    
+                    Remote repositories
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.8.1" data-path="../source-control/magit/remote-repositories/clone-fork.html">
+            
+                <a href="../source-control/magit/remote-repositories/clone-fork.html">
+            
+                    
+                    Clone and Fork
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.8.2" data-path="../source-control/magit/remote-repositories/checkout-remote-branch.html">
+            
+                <a href="../source-control/magit/remote-repositories/checkout-remote-branch.html">
+            
+                    
+                    Checkout remote branch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.8.3" data-path="../source-control/magit/remote-repositories/pull-changes.html">
+            
+                <a href="../source-control/magit/remote-repositories/pull-changes.html">
+            
+                    
+                    Pull Changes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.8.4" data-path="../source-control/magit/remote-repositories/push-changes.html">
+            
+                <a href="../source-control/magit/remote-repositories/push-changes.html">
+            
+                    
+                    Push Changes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.8.5" data-path="../source-control/magit/remote-repositories/try-pull-requests.html">
+            
+                <a href="../source-control/magit/remote-repositories/try-pull-requests.html">
+            
+                    
+                    Try Pull Requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.8.6" data-path="../source-control/magit/remote-repositories/configure-default-upstream.html">
+            
+                <a href="../source-control/magit/remote-repositories/configure-default-upstream.html">
+            
+                    
+                    Configure default upstream
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.8.7" data-path="../source-control/magit/remote-repositories/configure-default-push.html">
+            
+                <a href="../source-control/magit/remote-repositories/configure-default-push.html">
+            
+                    
+                    Configure default push
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.9" data-path="../source-control/magit/forge.html">
+            
+                <a href="../source-control/magit/forge.html">
+            
+                    
+                    Issues, PRs, Forks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.10" data-path="../source-control/magit/changing-history.html">
+            
+                <a href="../source-control/magit/changing-history.html">
+            
+                    
+                    Changing History
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.2.10.1" data-path="../source-control/magit/commit-squash.html">
+            
+                <a href="../source-control/magit/commit-squash.html">
+            
+                    
+                    Squash commits
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.10.2" data-path="../source-control/magit/interactive-rebasing.html">
+            
+                <a href="../source-control/magit/interactive-rebasing.html">
+            
+                    
+                    Interactve Rebasing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.10.3" data-path="../source-control/magit/reset-commit-history.html">
+            
+                <a href="../source-control/magit/reset-commit-history.html">
+            
+                    
+                    Reset Commits
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.11" data-path="../source-control/magit/blame.html">
+            
+                <a href="../source-control/magit/blame.html">
+            
+                    
+                    Git blame
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.12" data-path="../source-control/magit/timemachine.html">
+            
+                <a href="../source-control/magit/timemachine.html">
+            
+                    
+                    Timemachine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.13" data-path="../source-control/magit/version-highlighting.html">
+            
+                <a href="../source-control/magit/version-highlighting.html">
+            
+                    
+                    Highlight Changes in file
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.14" data-path="../source-control/magit/clean-up-magit-sessions.html">
+            
+                <a href="../source-control/magit/clean-up-magit-sessions.html">
+            
+                    
+                    Clean up Magit sessions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../source-control/github/">
+            
+                <a href="../source-control/github/">
+            
+                    
+                    GitHub
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.3.1" data-path="../source-control/github/gists.html">
+            
+                <a href="../source-control/github/gists.html">
+            
+                    
+                    Gists
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../source-control/gitlab/">
+            
+                <a href="../source-control/gitlab/">
+            
+                    
+                    GitLab
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Org mode</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../org-mode/">
+            
+                <a href="../org-mode/">
+            
+                    
+                    Org-mode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../org-mode/headings.html">
+            
+                <a href="../org-mode/headings.html">
+            
+                    
+                    Headings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../org-mode/lists-and-checkboxes.html">
+            
+                <a href="../org-mode/lists-and-checkboxes.html">
+            
+                    
+                    Lists and checkboxes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../org-mode/linking.html">
+            
+                <a href="../org-mode/linking.html">
+            
+                    
+                    Linking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../org-mode/todo-states.html">
+            
+                <a href="../org-mode/todo-states.html">
+            
+                    
+                    TODO States
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="../org-mode/tables.html">
+            
+                <a href="../org-mode/tables.html">
+            
+                    
+                    Tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.6" data-path="../org-mode/code-blocks.html">
+            
+                <a href="../org-mode/code-blocks.html">
+            
+                    
+                    Code Blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.7" data-path="../org-mode/org-mode-tweaks.html">
+            
+                <a href="../org-mode/org-mode-tweaks.html">
+            
+                    
+                    Org-mode tweaks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../org-mode/org-journal.html">
+            
+                <a href="../org-mode/org-journal.html">
+            
+                    
+                    Org-journal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../org-mode/literate-programming/">
+            
+                <a href="../org-mode/literate-programming/">
+            
+                    
+                    Literate Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Encryption</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../encryption/">
+            
+                <a href="../encryption/">
+            
+                    
+                    Encryption
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../encryption/create-gpg-key.html">
+            
+                <a href="../encryption/create-gpg-key.html">
+            
+                    
+                    Create gpg key
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../reference/">
+            
+                <a href="../reference/">
+            
+                    
+                    Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../reference/vim/getting-comfortable.html">
+            
+                <a href="../reference/vim/getting-comfortable.html">
+            
+                    
+                    Vim - Getting Comfortable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../reference/keybindings/">
+            
+                <a href="../reference/keybindings/">
+            
+                    
+                    Keybindings
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.2.1" data-path="../reference/keybindings/spacemacs-keybindings.md">
+            
+                <span>
+            
+                    
+                    Spacemacs Keybindings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2.2" data-path="../reference/keybindings/vim-keybindings.html">
+            
+                <a href="../reference/keybindings/vim-keybindings.html">
+            
+                    
+                    Vim Keybindings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2.3" data-path="../reference/keybindings/emacs-keybindings.md">
+            
+                <span>
+            
+                    
+                    Emacs Keybindings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2.4" data-path="../reference/keybindings/custom-keybindings.md">
+            
+                <span>
+            
+                    
+                    Custom Keybindings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../reference/projectile.html">
+            
+                <a href="../reference/projectile.html">
+            
+                    
+                    Projectile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../reference/cider/">
+            
+                <a href="../reference/cider/">
+            
+                    
+                    CIDER
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.4.1" data-path="../reference/cider/configuration-variables.html">
+            
+                <a href="../reference/cider/configuration-variables.html">
+            
+                    
+                    Config Variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5" data-path="../reference/clojure/">
+            
+                <a href="../reference/clojure/">
+            
+                    
+                    Clojure
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.5.1" data-path="../reference/clojure/strings.html">
+            
+                <a href="../reference/clojure/strings.html">
+            
+                    
+                    Strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5.2" data-path="../reference/clojure/maths.html">
+            
+                <a href="../reference/clojure/maths.html">
+            
+                    
+                    Maths
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5.3" data-path="../reference/clojure/data-structures.html">
+            
+                <a href="../reference/clojure/data-structures.html">
+            
+                    
+                    Data Structures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5.4" data-path="../reference/clojure/functions.html">
+            
+                <a href="../reference/clojure/functions.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5.5" data-path="../reference/clojure/control-flow.html">
+            
+                <a href="../reference/clojure/control-flow.html">
+            
+                    
+                    Control flow
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignement.html">
+            
+                <a href="../reference/clojure/local-assignement.html">
+            
+                    
+                    Local Assignment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../alternative-tooling/">
+            
+                <a href="../alternative-tooling/">
+            
+                    
+                    Alternative tooling
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.2.1" data-path="../alternative-tooling/neotree.html">
+            
+                <a href="../alternative-tooling/neotree.html">
+            
+                    
+                    NeoTree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.2" data-path="../alternative-tooling/silversearcher-ag.html">
+            
+                <a href="../alternative-tooling/silversearcher-ag.html">
+            
+                    
+                    Silver Searcher - ag
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.3" data-path="../alternative-tooling/parinfer.html">
+            
+                <a href="../alternative-tooling/parinfer.html">
+            
+                    
+                    Parinfer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.4" data-path="../alternative-tooling/paredit.html">
+            
+                <a href="../alternative-tooling/paredit.html">
+            
+                    
+                    Paredit
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.2.4.1" data-path="../structural-editing/emacs-killing-code-softly.html">
+            
+                <a href="../structural-editing/emacs-killing-code-softly.html">
+            
+                    
+                    Paredit: Killing code softly
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.5" data-path="../alternative-tooling/joker.html">
+            
+                <a href="../alternative-tooling/joker.html">
+            
+                    
+                    Joker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.6" data-path="../alternative-tooling/leiningen.html">
+            
+                <a href="../alternative-tooling/leiningen.html">
+            
+                    
+                    Leiningen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.7" data-path="../external-repl/">
+            
+                <a href="../external-repl/">
+            
+                    
+                    External Clojure REPL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.2.7.1" data-path="../external-repl/connect-to-running-repl.html">
+            
+                <a href="../external-repl/connect-to-running-repl.html">
+            
+                    
+                    Connect to existing REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.7.2" data-path="../external-repl/switching-to-repl.html">
+            
+                <a href="../external-repl/switching-to-repl.html">
+            
+                    
+                    Switching to REPL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.7.3" data-path="../external-repl/show-repl-on-connect.html">
+            
+                <a href="../external-repl/show-repl-on-connect.html">
+            
+                    
+                    Show REPL Buffer on connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.7.4" data-path="../external-repl/repl-command-menu.html">
+            
+                <a href="../external-repl/repl-command-menu.html">
+            
+                    
+                    REPL Command Menu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2.7.5" data-path="../external-repl/repl-history.html">
+            
+                <a href="../external-repl/repl-history.html">
+            
+                    
+                    REPL History
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../os-specific-config/macosx.html">
+            
+                <a href="../os-specific-config/macosx.html">
+            
+                    
+                    MacOSX configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../misc/">
+            
+                <a href="../misc/">
+            
+                    
+                    Misc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.4.1" data-path="../misc/artist-mode.html">
+            
+                <a href="../misc/artist-mode.html">
+            
+                    
+                    Artist mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4.2" data-path="../misc/unicode-characters.html">
+            
+                <a href="../misc/unicode-characters.html">
+            
+                    
+                    Unicode Characters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4.3" data-path="../writing-emacs-lisp/">
+            
+                <a href="../writing-emacs-lisp/">
+            
+                    
+                    Writing Emacs Lisp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="../contributors.html">
+            
+                <a href="../contributors.html">
+            
+                    
+                    Contributors
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Emacs development</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../emacs-lisp/">
+            
+                <a href="../emacs-lisp/">
+            
+                    
+                    Learning eLisp
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Clojure Layer</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="spacemacs-clojure-layer-overview">Spacemacs Clojure Layer Overview</h1>
+<p>The <a href="https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/clojure" target="_blank">Clojure layer</a> provides full language support and tooling including, autocomplete, refactor, inspector and debug, etc.</p>
+<p>Projects managed by <a href="https://leiningen.org" target="_blank">Leiningen</a>, <a href="http://boot-clj.com/" target="_blank">Boot</a> and <a href="https://clojure.org/guides/deps_and_cli" target="_blank">Clojure CLI tools</a> (<code>deps.edn</code>) are supported and automatically detected when running the REPL.</p>
+<p><a href="https://github.com/clojure-emacs/cider" target="_blank"><a href="https://github.com/clojure-emacs/cider" target="_blank"><img src="../images/cider-logo.png" alt="CIDER logo"></a></a></p>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="cider-is-part-of-the-clojure-layer"><i class="fa fa-lightbulb-o"></i> CIDER is part of the Clojure layer</h3></div><div class="panel-body"><p>The <a href="https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/clojure" target="_blank">Clojure layer</a> is a collection of Emacs packages and curated configuration to ensure those packages work well together in Spacemacs. The biggest part of the <a href="https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/clojure" target="_blank">Clojure layer</a> are the <a href="https://github.com/clojure-emacs/cider" target="_blank">CIDER</a> packages.
+Installing the <a href="../install-spacemacs/manually-add-clojure-layer.html">Clojure layer</a> will use the latest release of CIDER.</p></div></div>
+<h2 id="features-of-the-clojure-layer">Features of the Clojure layer</h2>
+<p><a href="https://github.com/clojure-emacs/cider" target="_blank">CIDER</a> provides a comprehensive range of tools to create quality Clojure code.</p>
+<p>Start a REPL (Clojure runtime environment) from Spacemacs and evaluate one or more expressions to see the results in the source code buffer, giving extremely fast feedback on the behavior of that code.</p>
+<ul>
+<li>inline error and warning highlighting, supporting <a href="https://joker-lang.org/" target="_blank">joker</a> and <a href="https://github.com/borkdude/clj-kondo" target="_blank">clj-kondo</a> linters</li>
+<li>human-friendly stack traces</li>
+<li>smart code completion - <a href="https://github.com/clojure-emacs/ac-cider" target="_blank">auto-complete-mode</a></li>
+<li>definition &amp; documentation lookup</li>
+<li>value inspector &amp; function tracing</li>
+<li>interactive macroexpansion</li>
+<li>Run tests and generate reports - with <code>clojure.test</code> integration</li>
+<li>classpath &amp; namespace browser</li>
+<li>nREPL session management</li>
+<li>scratchpad</li>
+<li>integration with <a href="http://company-mode.github.io/" target="_blank">company-mode</a></li>
+</ul>
+<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title" id="todo"><i class="fa fa-bookmark"></i> TODO</h3></div><div class="panel-body"><p>Add animated gifs or video of main features</p></div></div>
+<h2 id="further-reading">Further reading</h2>
+<p>Some further reading around CIDER:</p>
+<ul>
+<li><a href="https://cider.readthedocs.io/en/latest/" target="_blank">CIDER docs</a> for comprehensive details</li>
+<li><a href="https://github.com/clojure-emacs/cider#keyboard-shortcuts" target="_blank">Cider keyboard shortcuts (keybindings)</a></li>
+<li><a href="http://blog.jenkster.com/2013/12/a-cider-excursion.html" target="_blank">Clojure on Emacs - A CIDER workflow hack</a> - Kris Jenkins</li>
+</ul>
+ <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="layers.html" class="navigation navigation-prev " aria-label="Previous page: Simple Layers">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mnemonic-menu.html" class="navigation navigation-next " aria-label="Next page: Mnemonic Menu">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Clojure Layer","level":"1.1.2.2.1","depth":4,"next":{"title":"Mnemonic Menu","level":"1.1.2.3","depth":3,"path":"why-spacemacs/mnemonic-menu.md","ref":"why-spacemacs/mnemonic-menu.md","articles":[]},"previous":{"title":"Simple Layers","level":"1.1.2.2","depth":3,"path":"why-spacemacs/layers.md","ref":"why-spacemacs/layers.md","articles":[{"title":"Clojure Layer","level":"1.1.2.2.1","depth":4,"path":"why-spacemacs/clojure-layer.md","ref":"why-spacemacs/clojure-layer.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d","P9IClojure":"https://practicalli.github.io/clojure/","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"why-spacemacs/clojure-layer.md","mtime":"2021-11-14T12:47:08.011Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-14T12:48:36.046Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-codeblock-disable-glossary/disable-glossary.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-gist/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-simpletabs/tabs.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
