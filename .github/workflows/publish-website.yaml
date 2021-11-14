@@ -1,0 +1,25 @@
+name: "GitBook publish"
+
+on:
+  workflow_dispatch:
+  push:
+    paths-ignore:
+      - README.md
+      - CHANGELOG.md
+      - .gitignore
+      - '_book/**'
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build Gitbook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Publish Website
+        uses: tuliren/publish-gitbook@v1.0.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # GitHub generated token
