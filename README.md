@@ -1,6 +1,6 @@
 # Clojure development with Spacemacs
 
-[![GitHub version](https://badge.fury.io/gh/practicalli%2Fspacemacs-content.svg)](https://badge.fury.io/gh/practicalli%2Fspacemacs-content)
+[![GitBook publish](https://github.com/practicalli/spacemacs-content/actions/workflows/publish-website.yaml/badge.svg)](https://github.com/practicalli/spacemacs-content/actions/workflows/publish-website.yaml)
 
 ![Spacemacs Practicalli - interactive development with Clojure and Emacs, using CIDER](images/practicalli-spacemacs-book-banner.png)
 
