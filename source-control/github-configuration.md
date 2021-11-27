@@ -21,7 +21,13 @@ git config --global github.user practicalli
 
 Visit your GitHub account and [generate a personal access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line).
 
-The token should have the `repo` and `gists` permissions
+The token should have the `repo` permission.
+
+> #### Hint::Using Gists
+> A personal access token should also include the `gist` permission if you wish to access GitHub Gists from Spacemacs.
+>
+> Spacemacs maintainers have removed the [gist.el package](https://github.com/defunkt/gist.el) from the github layer, although that package can be added in `.spacemacs` configuration in the `dotspacemacs-additional-packages` section.
+
 
 Add the personal access token to Git configuration (using your own token)
 

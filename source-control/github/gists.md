@@ -1,7 +1,33 @@
 # GitHub Gists
+
 [GitHub Gists](https://gist.github.com/) are used to share code or configuration without the need of a git project.
 
-`SPC g g b` to create a Gist from the current buffer.
+> #### Hint::github layer no longer includes gist support
+> [gist.el](http://github.com/defunkt/gist.el) was removed from the GitHub layer on 2021-11-02 citing a broken and unmaintained package.  However, adding gist as an additonal package, using `dotspacemacs-additional-package (gist)` in .spacemacs seems to work.  Some [investigation](https://github.com/syl20bnr/spacemacs/issues/15183) is being done as to what features are no longer working with gist.el.
+
+## Manually add Gist support
+
+`SPC f e d` to edit the Spacemacs configuration
+
+`/ additional-packages RET` to find the `dotspacemacs-additional-packages` directive
+
+Add gist as an additional package
+
+```
+dotspacemacs-additional-packages '(gist)
+```
+
+Add keybindings for the package in the `dotspacemacs/user-config` section of `.spacemacs` configuration
+
+```
+(spacemacs/set-leader-keys "ogb" 'gist-buffer)
+(spacemacs/set-leader-keys "ogb" 'gist-list)
+```
+
+
+## Create a Gist from current buffer
+
+`SPC o g b` to create a Gist from the current buffer.
 
 [![Spacemacs Git menu](/images/spacemacs-git-gist-menu.png)](/images/spacemacs-git-menu.png)
 
@@ -10,9 +36,12 @@
 >  If you have already used GitHub from Spacemacs, then your account details will have been saved so you do not need to enter them each time.
 
 ## Listing your Gists
-`SPC g g l` will display a buffer listing all Gists for your account.
+`SPC o g l` will display a buffer listing all Gists for your account.
 
 ![Spacemacs - Gist list](/images/spacemacs-gist-list.png)
+
+> #### DANGER::Viewing a Gist hangs Emacs
+> `RET` on an entry in the Gist list should download that Gist and open it in a buffer.  Unfortunately this seems to hang Emacs and leave it in an unrecoverable state.
 
 Use the following commands in the Gist list buffer.
 
