@@ -13,13 +13,13 @@
 
 Add gist as an additional package
 
-```
+```elisp
 dotspacemacs-additional-packages '(gist)
 ```
 
 Add keybindings for the package in the `dotspacemacs/user-config` section of `.spacemacs` configuration
 
-```
+```elisp
 (spacemacs/set-leader-keys "ogb" 'gist-buffer)
 (spacemacs/set-leader-keys "ogb" 'gist-list)
 ```
@@ -33,7 +33,7 @@ Add keybindings for the package in the `dotspacemacs/user-config` section of `.s
 
 > #### Hint::Prompt for GitHub account details
 > The first time using GitHub from Spacemacs you will be prompted for your GitHub username & password.
->  If you have already used GitHub from Spacemacs, then your account details will have been saved so you do not need to enter them each time.
+> If you have already used GitHub from Spacemacs, then your account details will have been saved so you do not need to enter them each time.
 
 ## Listing your Gists
 `SPC o g l` will display a buffer listing all Gists for your account.

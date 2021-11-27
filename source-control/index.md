@@ -6,7 +6,7 @@ Magit provides a graphical Git client in Spacemacs that provides all the feature
 
 Markers in the fringe show the changes between a file you are editing and the committed version of that file.
 
-## Installing Source Control ##
+## Installing Source Control
 
 Recommended layers to add for source control include:
 
