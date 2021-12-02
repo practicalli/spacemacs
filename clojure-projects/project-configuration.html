@@ -3834,21 +3834,23 @@
                   (cider-clojure-cli-aliases . &quot;:env/dev:env/test&quot;))))
 </code></pre>
 <p>An example of a ClojureScript project using figwheel-main, Clojure CLI and hiding the display banner in the REPL browser</p>
-<pre><code>((clojure-mode . ((cider-preferred-build-tool          . clojure-cli)
+<pre><code class="lang-elisp">((clojure-mode . ((cider-preferred-build-tool          . clojure-cli)
                   (cider-clojure-cli-aliases           . :fig:dev&quot;)
                   (cider-default-cljs-repl             . figwheel-main)
                   (cider-figwheel-main-default-options . &quot;dev&quot;)
                   (cider-repl-display-help-banner      . nil))))
-</code></pre><h2 id="only-clojure-cli-tools-alias">Only Clojure CLI tools alias</h2>
+</code></pre>
+<h2 id="only-clojure-cli-tools-alias">Only Clojure CLI tools alias</h2>
 <p>The <code>cider-jack-in</code> command injects dependencies via the <code>--deps</code> command line argument and includes the <code>--middleware</code> option for nrepl.  This auto-injected configuration can affect project or user level aliases used with jack-in.</p>
 <p>Use the following <code>.dir-locals.el</code> configuration to just use the configuration defined in the named alias</p>
-<pre><code>((clojure-mode . ((cider-preferred-build-tool . clojure-cli)
+<pre><code class="lang-elisp">((clojure-mode . ((cider-preferred-build-tool . clojure-cli)
                   (cider-clojure-cli-aliases . &quot;:alias/name&quot;)
                   (cider-jack-in-dependencies . nil)
                   (cider-jack-in-nrepl-middlewares . nil)
                   (cider-jack-in-lein-plugins . nil)
                   (cider-clojure-cli-parameters . &quot;&quot;))))
-</code></pre><blockquote>
+</code></pre>
+<blockquote>
 <p><code>cider-clojure-cli-aliases</code> replaces <code>cider-clojure-cli-global-options</code> variable</p>
 </blockquote>
 <h2 id="shared-and-local-configurations">Shared and local configurations</h2>
@@ -3870,13 +3872,15 @@ Or add tooling configuration to the project documentation.</p></div></div>
 <pre><code class="lang-elisp">&apos;(&quot;config-variable-name&quot; . &quot;custom-value&quot;)
 </code></pre>
 <p>Multiple key-value pairs are defined as a collection of these cons cells in a list.</p>
-<pre><code>((&quot;config-variable-name&quot; . &quot;custom-value&quot;)
+<pre><code class="lang-elisp">((&quot;config-variable-name&quot; . &quot;custom-value&quot;)
  (&quot;config-variable-name2&quot; . &quot;custom-value2&quot;))
-</code></pre><p><code>.dir-locals.el</code> is a list of dotted-pairs for each major mode.  The value for the major mode is another list of dotted pairs which may contain one or more dotted-pairs.</p>
-<pre><code>((clojure-mode . ((config-var1 . &quot;custom-value1&quot;)
+</code></pre>
+<p><code>.dir-locals.el</code> is a list of dotted-pairs for each major mode.  The value for the major mode is another list of dotted pairs which may contain one or more dotted-pairs.</p>
+<pre><code class="lang-elisp">((clojure-mode . ((config-var1 . &quot;custom-value1&quot;)
                   (config-var2 . &quot;custom-value2&quot;)))
  (org-mode . ((config-var3 . &quot;custom-value3&quot;))))
-</code></pre><p>The configuration variables are set when a file is open in a specific Emacs major mode.</p>
+</code></pre>
+<p>The configuration variables are set when a file is open in a specific Emacs major mode.</p>
 <div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="avoid-using-nil-for-major-mode"><i class="fa fa-lightbulb-o"></i> Avoid using nil for major mode</h3></div><div class="panel-body"><p>Avoid  using <code>nil</code> for the major mode as this will apply the variables in all buffers regardless of their major mode, potentially leading to conflicts.  Ensure that if <code>nil</code> is used that testing is done to ensure issues do not arise.</p></div></div>
 <h2 id="custom-code">Custom code</h2>
 <p><code>eval</code> variable will evaluate custom code specified when a variable is used. For example, if using a new type of ClojureScript REPL that CIDER does not currently know, then custom elisp code can be added to make CIDER do the required actions.</p>
@@ -3952,7 +3956,7 @@ Or add tooling configuration to the project documentation.</p></div></div>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Project configuration","level":"4.1.3","depth":2,"next":{"title":"Monorepo / Nested projects","level":"4.1.4","depth":2,"path":"clojure-projects/monorepo-nested-projects.md","ref":"clojure-projects/monorepo-nested-projects.md","articles":[]},"previous":{"title":"Rename - Delete Files","level":"4.1.2","depth":2,"path":"clojure-projects/rename-delete-files.md","ref":"clojure-projects/rename-delete-files.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d","P9IClojure":"https://practicalli.github.io/clojure/","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"clojure-projects/project-configuration.md","mtime":"2021-12-02T00:00:08.568Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-02T00:01:31.336Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Project configuration","level":"4.1.3","depth":2,"next":{"title":"Monorepo / Nested projects","level":"4.1.4","depth":2,"path":"clojure-projects/monorepo-nested-projects.md","ref":"clojure-projects/monorepo-nested-projects.md","articles":[]},"previous":{"title":"Rename - Delete Files","level":"4.1.2","depth":2,"path":"clojure-projects/rename-delete-files.md","ref":"clojure-projects/rename-delete-files.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d","P9IClojure":"https://practicalli.github.io/clojure/","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"clojure-projects/project-configuration.md","mtime":"2021-12-02T00:20:41.909Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-02T00:21:51.726Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
