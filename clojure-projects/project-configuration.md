@@ -21,7 +21,7 @@ An example of setting the Clojure CLI tool as the default Clojure tool (rather t
 ```
 
 An example of a ClojureScript project using figwheel-main, Clojure CLI and hiding the display banner in the REPL browser
-```
+```elisp
 ((clojure-mode . ((cider-preferred-build-tool          . clojure-cli)
                   (cider-clojure-cli-aliases           . :fig:dev")
                   (cider-default-cljs-repl             . figwheel-main)
@@ -34,7 +34,7 @@ The `cider-jack-in` command injects dependencies via the `--deps` command line a
 
 Use the following `.dir-locals.el` configuration to just use the configuration defined in the named alias
 
-```
+```elisp
 ((clojure-mode . ((cider-preferred-build-tool . clojure-cli)
                   (cider-clojure-cli-aliases . ":alias/name")
                   (cider-jack-in-dependencies . nil)
@@ -84,14 +84,14 @@ dotted-pair example
 
 Multiple key-value pairs are defined as a collection of these cons cells in a list.
 
-```
+```elisp
 (("config-variable-name" . "custom-value")
  ("config-variable-name2" . "custom-value2"))
 ```
 
 `.dir-locals.el` is a list of dotted-pairs for each major mode.  The value for the major mode is another list of dotted pairs which may contain one or more dotted-pairs.
 
-```
+```elisp
 ((clojure-mode . ((config-var1 . "custom-value1")
                   (config-var2 . "custom-value2")))
  (org-mode . ((config-var3 . "custom-value3"))))
