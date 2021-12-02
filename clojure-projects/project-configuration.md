@@ -8,7 +8,7 @@ There are many [CIDER configuration variables](/reference/cider/configuration-va
 > #### Hint::Force loading the .dir-locals.el configuration
 > If a `.dir-locals.el` file is created or edited after a file from the project is open, then the variables will not be applied when using a command in that buffer.
 >
-> `SPC f A` (`reload-buffer`) to reload an already open buffer and the variables in the `.dir-locals.el` file will be loaded and available to any command called from that buffer.  Switching to a buffer that has not been reverted (or re-opened) may not pick up the changes to the `.dir-locals.el` file.
+> `SPC b R` (`revert-buffer`) to reload an already open buffer and the variables in the `.dir-locals.el` file will be loaded and available to any command called from that buffer.  Switching to a buffer that has not been reverted (or re-opened) may not pick up the changes to the `.dir-locals.el` file.
 
 
 
