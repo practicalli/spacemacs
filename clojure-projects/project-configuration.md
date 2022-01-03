@@ -1,4 +1,5 @@
 # Project level configuration
+
 `.dir-locals.el` files provide project level configuration, configuring the default project type, build tool and other CIDER actions.
 
 There are many [CIDER configuration variables](/reference/cider/configuration-variables.md) that can be added to `.dir-locals.el`
@@ -21,9 +22,10 @@ An example of setting the Clojure CLI tool as the default Clojure tool (rather t
 ```
 
 An example of a ClojureScript project using figwheel-main, Clojure CLI and hiding the display banner in the REPL browser
+
 ```elisp
 ((clojure-mode . ((cider-preferred-build-tool          . clojure-cli)
-                  (cider-clojure-cli-aliases           . :fig:dev")
+                  (cider-clojure-cli-aliases           . ":fig:dev")
                   (cider-default-cljs-repl             . figwheel-main)
                   (cider-figwheel-main-default-options . "dev")
                   (cider-repl-display-help-banner      . nil))))
