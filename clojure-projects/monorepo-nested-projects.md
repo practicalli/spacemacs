@@ -9,7 +9,7 @@ Type `projectile-project-type` and select that configuration option.
 
 Type `clojure-cli` for the value (or `lein-test` for Leiningen projects)
 
-`SPC f s` to safe the file.
+`SPC f s` to save the file.
 
 The `.dir-locals.el` file should now contain the following
 
