@@ -39,7 +39,9 @@ jobs:
           SPELL_CSPELL_DISABLE_ERRORS: true
           SPELL_MISSPELL_DISABLE_ERRORS: true
           MARKDOWN_MARKDOWNLINT_DISABLE_ERRORS: true
-          MARKDOWN_MARKDOWNLINT_CONFIG_FILE: ".github/linters/.markdown-lint.yml"
+          MARKDOWN_MARKDOWNLINT_CONFIG_FILE: ".github/linters/markdown-lint.yaml"
+          MARKDOWN_MARKDOWN_LINK_CHECK_CONFIG_FILE: ".github/linters/markdown-lint-check.json"
+          # MARKDOWN_MARKDOWN_LINK_CHECK_CLI_LINT_MODE: "project"
           MARKDOWN_REMARK_LINT_DISABLE_ERRORS: true
           # MARKDOWN_MARKDOWN_LINK_CHECK_DISABLE_ERRORS: true
           # MARKDOWN_MARKDOWN_TABLE_FORMATTER_DISABLE_ERRORS: true
