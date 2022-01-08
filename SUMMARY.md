@@ -11,7 +11,7 @@
         * [Transient state menus](why-spacemacs/transient-state-menus.md)
         * [Discoverable](why-spacemacs/helm.md)
             * [Helm Transient State](why-spacemacs/helm-transient-state.md)
-        <!-- * [Structural editing](why-spacemacs/structural-editing.md) -->
+        * [Structural editing](why-spacemacs/structural-editing.md)
         * [Project & File navigation](why-spacemacs/project-file-navigation.md)
         * [Layouts](why-spacemacs/layouts.md)
     * [Spacemacs mini cheatsheet](spacemacs-mini-cheatsheet.md)

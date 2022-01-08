@@ -1,5 +1,5 @@
 # Evil Basics - Vim Style Editing
-Evil provides multiple editing states, [multi-modal editing](/why-spacemacs/states.html), simplifying keybindings by reducing the need for simultaneous key presses.
+Evil provides multiple editing states, [multi-modal editing](/why-spacemacs/states.md), simplifying keybindings by reducing the need for simultaneous key presses.
 
 Spacemacs provides Evil editing states and simplified keybindings throughout all layers and major modes.
 

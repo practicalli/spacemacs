@@ -42,7 +42,7 @@ Create multiple cursors in a buffer to concurrently edit or output text from cal
 > `SPC n f` narrows to the current function definition
 > `SPC n r` narrows to a selected range of text
 >
-> See the section on [Spacemacs - Narrowing](narrowing.html)
+> See the section on [Spacemacs - Narrowing](narrowing.md)
 
 
 ## Known issues

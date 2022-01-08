@@ -91,4 +91,4 @@ Further examples are covered in the [Emacs YASnippet video tutorial](https://www
 
 
 ## Summary
-Find out more about YASnippets and autocompletion from the [Github repository for Spacemacs autocompletion layer](https://github.com/syl20bnr/spacemacs/tree/master/layers/auto-completion).
+Find out more about YASnippets and autocompletion from the [Github repository for Spacemacs autocompletion layer](https://github.com/syl20bnr/spacemacs/tree/develop/layers/auto-completion).

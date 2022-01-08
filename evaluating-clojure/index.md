@@ -33,4 +33,4 @@ Review the [evaluating expressions](expressions.md) page for more examples and a
 
 > ####HINT::Displaying large results
 > `, e p f` or `, e p e` pretty prints the results into a new buffer.  This is excellent for evaluating expressions that return a large result, eg. a large map.
-> `, d v` the [`cider-inspector`](inspect.html) is a great way to navigate through a large data structure, especially if it is nested.
+> `, d v` the [`cider-inspector`](inspect.md) is a great way to navigate through a large data structure, especially if it is nested.

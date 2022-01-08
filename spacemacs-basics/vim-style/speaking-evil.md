@@ -43,6 +43,6 @@ Practice speaking evil with these examples
 
 
 > #### Hint:: Evil Reference and Tips
-> [Evil quick reference guide](vim-quick-reference.html)
-> [Evil tips for developers](vim-tips-for-developers.html)
+> [Evil quick reference guide](vim-quick-reference.md)
+> [Evil tips for developers](vim-tips-for-developers.md)
 > [Speaking Vim](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)

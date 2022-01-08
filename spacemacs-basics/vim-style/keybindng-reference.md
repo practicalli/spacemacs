@@ -1,7 +1,7 @@
 # Evil Keybinding Reference
 An alphabetically ordered reference of Evil key bindings.
 
-[Spacemacs DOCUMENTATION key bindings section](https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#key-bindings) contains full details
+[Spacemacs DOCUMENTATION key bindings section](https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#key-bindings) contains full details
 
 ## Normal mode keybindings
 
@@ -22,7 +22,7 @@ Keybindings available in Evil normal mode and the resultant state they leave you
 | `f`        | find character forward (type character)          | Normal  |
 | `F`        | find character backward (type character)         | Normal  |
 | `fd`       | Escape (press almost together)                   | Normal  |
-| `g`        | [go menu](/editing/evil-tools/g-menu.html)       |         |
+| `g`        | [go menu](/editing/evil-tools/g-menu.md)       |         |
 | `G`        | Jump to end of buffer                            | Normal  |
 | `h`        | move cursor left                                 | Normal  |
 | `H`        | move cursor to top of buffer                     | Normal  |

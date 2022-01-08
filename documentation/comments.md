@@ -13,7 +13,7 @@ Spacemacs uses the same keybindings and commands to comment any programming lang
 | `M-;`  (any state)         | Create a new comment line, or add comment to end of line |
 
 > ####Info::Evil-commentary layer
-> Spacemacs uses the [evil-commentary layer](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Bvim/evil-commentary) to provide a commenting tool for all other layers.
+> Spacemacs uses the [evil-commentary layer](https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Bvim/evil-commentary) to provide a commenting tool for all other layers.
 
 ## `#_` - Reader Macro comment
 

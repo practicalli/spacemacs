@@ -1,8 +1,8 @@
 # Source control layers
 
-`git` provides the Magit, a rich Git client that can do everything a Git command line client can do.  Magit is configured to open full screen, to make it easier to read diff's of change and have plenty of space for commit messages.  Diffs are configured to show the specific changes on each line (refine-hunk).  Ensure you follow the [Git Configuration steps](git-configuration.html) required for this layer.
+`git` provides the Magit, a rich Git client that can do everything a Git command line client can do.  Magit is configured to open full screen, to make it easier to read diff's of change and have plenty of space for commit messages.  Diffs are configured to show the specific changes on each line (refine-hunk).  Ensure you follow the [Git Configuration steps](git-configuration.md) required for this layer.
 
-`github` provided access to remote repositories created on GitHub, enabling search and cloning of those repositories.  This layer also gives full access to GitHub Gists.  Ensure you follow the [GitHub Configuration steps](github-configuration.html) required for this layer.
+`github` provided access to remote repositories created on GitHub, enabling search and cloning of those repositories.  This layer also gives full access to GitHub Gists.  Ensure you follow the [GitHub Configuration steps](github-configuration.md) required for this layer.
 
 
 ## Add layers to .spacemacs configuration

@@ -1,10 +1,10 @@
 # Spacemacs Basics
-Understanding the [Emacs basic concepts and terminology](emacs-basics.html) will help speed your adoption of Spacemacs.
+Understanding the [Emacs basic concepts and terminology](emacs-basics.md) will help speed your adoption of Spacemacs.
 
-You will gradually discover the power and pleasure of using [Vim and modal editing](vim-basics.html), using different states for specific tasks and reducing your cognitive load (and strain from keybinding combinations).  The [Vim Quick Reference](/spacemacs-basics/vim-style/vim-quick-reference.html) will help you use Spacemacs more effectively.
+You will gradually discover the power and pleasure of using [Vim and modal editing](vim-basics.md), using different states for specific tasks and reducing your cognitive load (and strain from keybinding combinations).  The [Vim Quick Reference](/spacemacs-basics/vim-style/vim-quick-reference.md) will help you use Spacemacs more effectively.
 
 > ####Hint::Spacemacs for Vim users
-> [Migrating from Vim](https://github.com/syl20bnr/spacemacs/blob/master/doc/VIMUSERS.org) article helps Vimmers get up to speed with Spacemacs.
+> [Migrating from Vim](https://github.com/syl20bnr/spacemacs/blob/develop/doc/VIMUSERS.org) article helps Vimmers get up to speed with Spacemacs.
 
 The two most important things to learn about Spacemacs first are the Space menu, `SPC`, and the Help system, `SPC h`.
 
@@ -38,7 +38,7 @@ Many functions have a keybinding (keyboard short-cut) and you can also get a des
 Online help
 
 * [Spacemacs online documentation](https://develop.spacemacs.org/doc/DOCUMENTATION.html)
-* [Spacemacs key bindings](https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#key-bindings)
+* [Spacemacs key bindings](https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#key-bindings)
 * [Spacemacs Quick Start guide](https://develop.spacemacs.org/doc/QUICK_START.html)
 * [Spacemacs Layers](https://develop.spacemacs.org/layers/LAYERS.html)
 * [Practicalli Spacemacs YouTube playlist](https://www.youtube.com/playlist?list=PLpr9V-R8ZxiCHMl2_dn1Fovcd34Oz45su)

@@ -8,7 +8,7 @@ Search a buffer (Clojure namespace) or project and use the results to navigate t
 
 `SPC s S` assumes word under cursor is the symbol you wish to search for.
 
-helm-swoop is also available in the [symbol highlight transient menu](/navigating-code/names-symbols.html).
+helm-swoop is also available in the [symbol highlight transient menu](/navigating-code/names-symbols.md).
 
 
 | Keybindings | Description                  |

@@ -9,7 +9,7 @@ Use Evil normal mode to quickly jump around your code.
 | `SPC j j`          | Search across all windows for given character(s), type highlighted character(s) to jump to location                    |
 | `SPC j C`          | Jump to first unbalanced parens                                                                                        |
 | `SPC j c` / `' '` | Jump to last change                                                                                                    |
-| `m x` , `' x`      | Create marker called `x`, jump to marker called `x` (use any alphabet character) (see [markers section](markers.html)) |
+| `m x` , `' x`      | Create marker called `x`, jump to marker called `x` (use any alphabet character) (see [markers section](markers.md)) |
 | `#`                | Symbol highlight transient state - navigate symbol names, iedit, swoop                                                 |
 | `SPC s s`          | Search in current buffer, `C-j`/`C-k` to navigate results                                                              |
 | `SPC s p`          | Search in project, `C-j/k` to navigate results                                                                         |
@@ -28,7 +28,7 @@ Folding code hides away details, so you can just look at the function definition
 
 `SPC z .` is the code fold transient menu should you wish to un/fold code many times.
 
-See the [code folding](/navigating-code/code-folding.html) section for more details.
+See the [code folding](/navigating-code/code-folding.md) section for more details.
 
 
 ## Structural Editing

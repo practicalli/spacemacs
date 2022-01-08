@@ -8,7 +8,7 @@ Adding, updating and cleaning up of libraries in your namespace.  Open the relev
 | `, r a i`  | Add import form for a JVM library                         |
 | `, r c n`  | Clean (remove unused) require and import forms            |
 
-> [managing library dependencies](managing-library-dependencies.html) covers commands that add and update library dependencies to a Leiningen project.
+> [managing library dependencies](managing-library-dependencies.md) covers commands that add and update library dependencies to a Leiningen project.
 
 
 ## `ar` Add require to namespace definition

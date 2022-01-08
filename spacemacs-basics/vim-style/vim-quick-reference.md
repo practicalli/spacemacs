@@ -1,5 +1,5 @@
 # Vim Quick Reference
-A reference of the most common keybindings available in Vim Normal mode. [Spacemacs DOCUMENTATION key bindings section](https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#key-bindings) contains full details
+A reference of the most common keybindings available in Vim Normal mode. [Spacemacs DOCUMENTATION key bindings section](https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#key-bindings) contains full details
 
 `.` repeats the last keybinding sequence used in Vim Normal mode or a change made within a complete Vim Insert session.
 

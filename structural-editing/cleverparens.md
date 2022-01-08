@@ -1,6 +1,6 @@
 # Evil Cleverparens
 
-[With `evil-cleverparens` enabled](/install-spacemacs/evil-structural-editing.html), editing in Evil Normal state respects the structure of your code.
+[With `evil-cleverparens` enabled](/install-spacemacs/evil-structural-editing.md), editing in Evil Normal state respects the structure of your code.
 
 | Spacemacs   | Evil     | Description                                                |
 |-------------|---------|------------------------------------------------------------|

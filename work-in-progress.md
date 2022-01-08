@@ -103,7 +103,7 @@ then try `company-auto-complete`
 ## Ideas for intro to Spacemacs
 
 http://www.jesshamrick.com/2012/09/10/absolute-beginners-guide-to-emacs/
-https://github.com/syl20bnr/spacemacs/blob/master/doc/BEGINNERS_TUTORIAL.org
+https://github.com/syl20bnr/spacemacs/blob/develop/doc/BEGINNERS_TUTORIAL.org
 https://www.gnu.org/software/emacs/tour/
 
 
@@ -332,7 +332,7 @@ actually `SPC p a` toggles between `src` and `test` file
 
 
 
-## Madeline & powerline
+## Modeline & powerline
 
 `SPC t m t` - toggle mode line
 
@@ -350,13 +350,13 @@ There are other modeline toggles under `SPC t m` that you might explore.
 C-c C-i
 
 
+navigate helm prompt C-<left-arrow> C-<right-arrow>
+
+navigate up helm prompt C-h (deleting path by file or directory name)
 
 
+https://sprungcanary.net/posts-output/2015-11-29-a-repl-story/
 
-http://sprungcanary.net/2015/11/29/a-repl-story/
-
-Keybindings
-https://github.com/SteveJobzniak/spacemaxed/blob/master/spacemaxed/docs/03_USEFUL_KEYBINDINGS.org
 
 ## Git stuff
 

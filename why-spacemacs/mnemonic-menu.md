@@ -1,17 +1,19 @@
 # Mnemonic Menu with Which-Key
+
 Spacemacs uses [which-key](https://github.com/justbur/emacs-which-key) to create a menus system of keybindings for the most commonly used commands.
 
-Single chord keybindings are preferred, e.g. `SCP p f` rather than `C-x C-p C-f`, which are easier to remember and less of a strain to type. fs
+Which-key provides single chord keybindings, `SCP p f` rather than `C-x C-p C-f`.  Single chord key bindings are easier to remember and therefore make Spacemacs simpler to learn and faster to use.  Single chorded key bindings are also less of a strain on hands when typing.
 
-Mnemonic characters for keys are used where possible, aiding memorability of keybindings.
+Mnemonic characters for keys are used where possible, using the first character of a command or a prominent character if a particular character is already taken.  Sub-menus are added to increase the range of characters available for a menu.  Spacemacs prefers a sub-menu rather than upper case or non-mnemonic characters.
 
-[![Spacemacs Which-Key](/images/spacemacs-main-menu.png)](/images/spacemacs-main-menu.png)
+[![Spacemacs Which-Key](/images/spacemacs-main-menu.png)](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-menu-main.png)
 
 
 ## Which-key menu controls
+
 `C-h` opens the which-key command menu, allowing navigation through menus and sub-menus.
 
-![which-key menu - C-h](/images/spacemacs-which-key-paging-help-menu.png)
+![which-key menu - C-h](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-which-key-paging-help-menu.png)
 
 `C-h n` shows the next page of commands when a menu is so large it is be spanned over several pages. `C-h p` shows the previous menu page.
 

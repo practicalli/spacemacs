@@ -26,7 +26,7 @@ You can remove all the stale vars (def and defn expressions that are no longer i
 `SPC u SPC u , e n` clears the state of the namespace tracker before reloading, if for example circular dependencies are preventing successful reload.
 
 > #### Hint::Hooking into component lifecycle libraries
-> `cider-ns-refresh` can [call component lifecycle functions](/clojure-repl/component-lifecycle.html) to stop and start services as part of the refresh process.
+> `cider-ns-refresh` can [call component lifecycle functions](/clojure-repl/component-lifecycle.md) to stop and start services as part of the refresh process.
 
 ## Force reload namespace approach
 If there are issues using `cider-ns-refresh` then use a unconditional reloading of the namespace.

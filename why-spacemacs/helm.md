@@ -1,6 +1,6 @@
 # Helm & completion
 
-Spacemacs helps you find things quickly with a minimum of typing, using [Helm](https://github.com/emacs-helm/helm) - [Helm documentation wiki](https://github.com/emacs-helm/helm/wiki).
+Spacemacs helps you find things quickly with a minimum of typing, using [Emacs Helm](https://emacs-helm.github.io/helm/) - [Helm documentation wiki](https://github.com/emacs-helm/helm/wiki).
 
 [Helm](https://github.com/emacs-helm/helm) is an incremental completion and selection narrowing framework.  Its the central control tower of Spacemacs, it is used to manage buffers, projects, search results, configuration layers, toggles and more.
 
@@ -19,4 +19,4 @@ For example, Helm helps you navigate files and directory names, only showing the
 | `C-y`           | Paste kill ring into helm      |
 | `SPC w b`       | Switch to minibuffer           |
 
-![Helm - narrowing and completion framework](/images/helm-logo.png)
+![Helm - narrowing and completion framework](https://avatars3.githubusercontent.com/u/1541688?v=3&s=200)

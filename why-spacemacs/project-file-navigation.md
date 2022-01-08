@@ -16,16 +16,12 @@ Some of Projectile's features:
 * regenerate project etags or gtags (requires ggtags).
 * browse dirty version controlled projects
 
-[![Spacemacs - Project menu](/images/spacemacs-project-menu.png)](/images/spacemacs-project-menu.png)
-
+[![Spacemacs - Projectile](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-projectile-menu.png)](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-projectile-menu.png)
 
 
 ## Treemacs
 
-> #### TODO::Treemacs has now replaced Neotree
-> Treemacs is now the default visual file browser in Spacemacs.  It works in the same way as Neotree for the basic file navigation.
-
-Treemacs provides a quick and simple way to navigate all the directories and files in a project.  Visit the [Treemacs project for details of all its features](https://github.com/Alexander-Miller/treemacs#detailed-feature-list)
+Treemacs is the default visual file browser in Spacemacs, providing a way to view and navigate all the directories and files in a project.  Visit the [Treemacs project for details of all its features](https://github.com/Alexander-Miller/treemacs#detailed-feature-list)
 
 `SPC f t` or `SPC p t` to toggle the Treemacs buffer, the latter opens Treemacs with the root set to the projectile project root.
 
@@ -38,11 +34,13 @@ To select the Treemacs window at any time, press `SPC 0`. The Treemacs window al
 
 ## Ranger
 
-Navigate directories and view contents of files quickly and easily, using standard Vi keybindings, `j`, `k`, `l` and `h`.  Ranger is great for quickly looking through files, thanks to its preview option.
+`SPC a t r r` runs ranger to navigate directories and view contents of files quickly and easily, using standard Vi keybindings, `j`, `k`, `l` and `h`.
 
-![Spacemacs - Ranger directory and file navigation](/images/spacemacs-ranger-example.png)
+Ranger is great for quickly looking through files, thanks to its preview option.
 
-[Discover more about ranger](/spacemacs-basics/working-with-projects/ranger.html) in the working with projects section.
+![Spacemacs - Ranger directory and file navigation](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-ranger-navigate-preview.png)
+
+[Discover more about ranger]({{book.url}}/spacemacs-basics/working-with-projects/ranger.md) in the working with projects section.
 
 > ####Hint::Ranger is also a terminal based file manager
 > https://ranger.github.io/

@@ -22,7 +22,7 @@ With snippets added to the auto-completion tooltip, typing `def` show the matchi
 
 
 > ####Hint::Write your own snippets
-> Its easy to [write your own snippets](add-your-own-snippets.html) for Clojure or any other language you use with Spacemacs / Emacs
+> Its easy to [write your own snippets](add-your-own-snippets.md) for Clojure or any other language you use with Spacemacs / Emacs
 
 ## Clojure namespace snippet
 The `ns` snippet adds a namespace expression with the namespace of the current file, this requires a running REPL.

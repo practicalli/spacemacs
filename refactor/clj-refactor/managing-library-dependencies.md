@@ -9,7 +9,7 @@ Update project dependencies using `clj-refactor` on your `project.clj` configura
 * `up` - Update the project dependency versions
 * `sp` - Sort project dependencies
 
-> If you are adding libraries as dependencies then you may wish to [refactor the relevant namespace](manage-namespaces.html), as shown in the next section.
+> If you are adding libraries as dependencies then you may wish to [refactor the relevant namespace](manage-namespaces.md), as shown in the next section.
 
 ## `ap` Add project dependency
  `, r a p` to search a library and add a specific version of that library to your project dependencies, without having to browse [clojars.org](https://clojars.org) separately.

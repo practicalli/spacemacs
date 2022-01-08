@@ -17,7 +17,7 @@ clojure -M:project/new app practicalli/playground
 <!-- ![Spacemacs - Clojure CLI create project - Eshell ](/images/spacemacs-clojure-create-a-project-clojure-cli-eshell.png) -->
 
 > #### Hint::Clojure CLI and clj-new required?
-> See the [install Clojure section](/before-you-start/install-clojure.html) for details
+> See the [install Clojure section](/before-you-start/install-clojure.md) for details
 
 <!-- Leiningen Project -->
 {% content "leiningen" %}
@@ -29,7 +29,7 @@ lein new lib playground
 ```
 
 > #### Hint::Leiningen build tool required?
-> See [Leiningen](/alternative-tooling/leiningen.html) for details
+> See [Leiningen](/alternative-tooling/leiningen.md) for details
 
 {% endtabs %}
 <!-- End of  -->
@@ -37,4 +37,4 @@ lein new lib playground
 
 ## Adding files to your project
 
-See the section on [adding a new file](adding-files.html) when you need to add more namespaces to your project.
+See the section on [adding a new file](adding-files.md) when you need to add more namespaces to your project.
