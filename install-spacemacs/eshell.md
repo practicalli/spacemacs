@@ -28,7 +28,7 @@ The shell popup is configured in the `dotspacemacs-configure-layers` section of 
 
 You can customize the eshell prompt, although there is nothing specific in Spacemacs.
 
-Praticalli created a custom Eshell prompt.  The code can be found in the [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/blob/master/init.el#L872-L994) configuration, the [Eshell custom code in `dotspacemacs/user-config` section](https://github.com/practicalli/spacemacs.d/blob/master/init.el#L872-L994).
+Practicalli created a custom Eshell prompt.  The code can be found in the [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/blob/master/init.el#L872-L994) configuration, the [Eshell custom code in `dotspacemacs/user-config` section](https://github.com/practicalli/spacemacs.d/blob/master/init.el#L872-L994).
 
 ![Spacemacs Eshell custom prompt](/images/spacemacs-eshell-theme-practicalli.png)
 

@@ -1,6 +1,6 @@
 # iedit example - multiple find and replace
 
-If you have text you want to edit in multiple places at the same time, rather than the traditional find/replace, you can select all the regions and use multiple cusors to edit all regions simultaneously.
+If you have text you want to edit in multiple places at the same time, rather than the traditional find/replace, you can select all the regions and use multiple cursors to edit all regions simultaneously.
 
 * Put the cursor over the word you want to replace
 * `v` to enter visual (select) mode

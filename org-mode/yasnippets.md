@@ -1,4 +1,4 @@
-# Yasnippet for Org-mode
+# Yasnippets for Org-mode
 Snippets provide a way to add common code or text.
 
 `<ta M-/` adds a two column table snippet with a caption.  The cursor is the first tab stop, followed by the first column name, then the second column name.

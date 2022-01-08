@@ -20,7 +20,7 @@ list, show and delete buffers.  A buffer is a container for file content and any
 
 ![Spacemacs - Buffer menu](/images/spacemacs-buffer-menu.png)
 
-Read the [Mainaging Buffers](managing-buffers.md) section for more details.
+Read the [Managing Buffers](managing-buffers.md) section for more details.
 
 
 ## Project (Projectile) menu

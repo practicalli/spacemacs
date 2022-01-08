@@ -88,15 +88,18 @@ dont abbreviate
 
 
 ## Configure autocomplete to use a key or a delay
+
 Sometimes autocomplete is a bit slow in Clojure.
 
 is it possible to trigger the autocomplete popup with a key ? i find the popup useful some of the time, but having it trigger automatically drives me nuts...
 
-try adjusting `auto-completion-idle-delay`
+try adjusting either
 
-@ag i seem to be using company, rather than auto-complete so i have `company-idle-delay` - i'd much rather have the popup be manual though - if i want auto-complete then i know and want it quickly, if i don't want it i don't ever want it to appear
-ag [5:24 PM]
-then try `company-auto-complete`
+`auto-completion-idle-delay`
+`company-idle-delay`
+
+- i'd much rather have the popup be manual though - if i want auto-complete then i know and want it quickly, if i don't want it i don't ever want it to appear
+`company-auto-complete`
 
 
 
@@ -125,7 +128,7 @@ https://github.com/emacs-evil/evil-surround
 
 1. select the text to surround
 2. `gS` prompts to type in the character to use for the surround (surround-region)
-3. insets opening & closing charaters, however inserts a new lines before and after the selected text
+3. insets opening & closing characters, however inserts a new lines before and after the selected text
 
 
 ### insert mode
@@ -338,7 +341,7 @@ actually `SPC p a` toggles between `src` and `test` file
 
 There are other modeline toggles under `SPC t m` that you might explore.
 
-@cpmcdaniel if it's the separators between the things in the modeline that is bothering you, you can change the separator in our `.spacemacs`... I set mine to `nil`, ala:
+change the separator, in this example removing the separator by setting the value to `nil`
 ```
 (setq powerline-default-separator nil
         powerline-center-theme t)
@@ -479,67 +482,17 @@ Layers
 Everything so far (except specific key bindings) applies to emacs in general. Layers, however, are a spacemacs specific term. Layers are meant to be a simple way for you to customize your configuration by adding only one line to your .spacemacs file. See the list to see what are available. Check out the latex layer for example.
 The .spacemacs file
 
-Hit spc f e d (file emacs dotfile) to open this file. This is where you can customize everything. Find the dotspacemacs-configuration-layers line. You can use / in normal mode to start searching for it and enter when you have it. Add latex in that list. It should look like this:
-
-dotspacemacs-configuration-layers '(
-  latex
-  other-layer
-  other-layer)
-
-Now spacemacs will load that layer on startup for you, which includes a major mode for editing latex and a bunch of commands. You can now either restart emacs, or hit spc f e R(file emacs reload) to reload your config. Now if you hit spc f f (file find) and open a latex file you should have some syntax highlighting and latex specific commands on your , key.
-
 ## Why Vim ?
 
 ### Positives
 
-* Cut the Mouse - One of the main wins for Vim has always been that it is an editor that lets you keep your hands on the keyboard. Reaching for the mouse slows you down, and while I never really had a problem with that in the past (I spend more time thinking and reading than I do writing code), now that I’ve experienced 2 months with my hands on the keyboard I do find myself noticing (annoyingly) when I am forced to reach for the mouse.
+Hands centered on the center of the keyboard
 
-* Fast Navigation - Moving around inside files in most windows editors involves a lot of home/end/up/down arrow key. Having search and tag based navigation makes getting around within a file much faster. Finding the right file is also easier with the commandt plugin, influenced by Textmate on the Mac, this fuzzy file finder is not typically available in traditional windows editors (last time I looked)
+Rarely have to use a chorded keybinding
 
-* Split Windows - Splitting windows into panes and navigating around them is a killer feature that I use all the time to see multiple files at once, or multiple areas of the same file at once. In the past I used tabs heavily, but I now prefer split panes that I can manage without reaching for the mouse.
+Keeps strain on hands to a minimum
 
-
-### Negatives
-
-    HJKL - Sorry, call me a heretic but I just cannot get used to using these keys for up/down/left/right. 20+ years of using the arrow keys is completely and utterly embedded in my brain. Besides, I’m pretty sure J (down) and K (up) are bass-ackwards. Western languages, and presumably most programming languages, read from TOP LEFT to BOTTOM RIGHT so shouldn’t UP be next to LEFT and DOWN be next to RIGHT ??? I know I could remap the keys, but plugins that follow similar patterns would also have to be remapped and I just could not get used to it.
-
-    Mode Struggles - The modal nature of Vim is both a blessing and a curse. Its the feature that allows us to keep our hands on the keyboards without the wrist breaking key combo’s of Emacs but its also far too easy to forget which mode you are in and start typing code only to discover you just executed 5 random commands. The people who recommend you ESC constantly back into command mode are absolutely correct. You have to shift your thinking into being primarily command based with short sharp bursts of INSERT.
-
-    Breaking Windows - One of the side effects of the modal nature of vim is that it trains you to constantly hit ESCAPE to go back to command mode…. but when you do this in more traditional windows apps its quite possible you will end up dismissing a dialog while you are in the middle of typing! How frustrating! I hit this mostly when using Tortoise SVN for my code commits.
-
-    Disappointing Plugins - Whilst some plugins are awesome, some are surprisingly disappointing. While I was really looking forward to them, the following plugins just didn’t get as much use as I expected session (doesn’t work well with NERDTree or quickfix window), taglist (doesn’t work well with dynamic languages - at the moment I use primarily Ruby and Javascript), Conque Shell - (nice idea, but doesn’t feel natural, just easier to use :shell or have another terminal open)
-
-Effort vs Reward
-
-Ok. So I have a theory…
-
-Vim proponents will tell you that the effort you spend learning vim will pay dividends in the long run once you know how to use it properly. After 60 days I can say that I agree with that opinion.
-
-However, if I spent this much effort learning any editor I think it would pay dividends in the long run. The difference is that Vim forces you to go through this pain, whilst other editors work ‘out the box’ and so most programmers are not inclined to learn the power of those editors.
-
-For example, I think UltraEdit, TextMate, even Visual Studio are pretty good editors, but since they all pretty much just work out of the box, its easy to ignore their advanced features and not spend the time customizing and configuring them.
-
-I wonder if I spent 60 days really learning UltraEdit if I couldn’t get the same positives I described here ? Hmmm, a future article maybe?
-Conclusion
-
-I’m still using Vim after 60 days, and I plan to continue using it for the foreseeable future as long as I can keep taking a little time here and there to dig deeper, customize a bit more, learn how to overcome the negatives and build upon the positives.
-
-Vim seems to be so powerful that I could be learning it forever. Here’s a list of some of the things I want to spend time on in the future.
-
-    Movement - I need to learn more code related movement commands like % match
-    Sessions - Both sessions.vim and sessionman.vim seem to struggle with NERDTree and the quickfix window
-    Cut & Paste - I need to learn more about vim registers so I can manage my cut & paste better, errr, sorry, I mean yank & put
-    Undo & Redo - I think I spend too much time in insert mode so when I undo it tends to be more than I’d like
-    HJKL - Maybe I should remap to swap the J and K keys and try again!
-    More Plugins - There are many more plugins I would like to take the time to check out, and perhaps build some of my own.
-
-
-
-# projectile
-
-`SPC p p` - switch to another project that spacemacs knows about
-
-
+* Fast Navigation - Moving around inside files in most windows editors involves a lot of home/end/up/down arrow key. Having search and tag based navigation makes getting around within a file much faster. Finding the right file is also easier with the command plugin, influenced by Textmate on the Mac, this fuzzy file finder is not typically available in traditional windows editors (last time I looked)
 
 
 # ranger
@@ -573,7 +526,6 @@ some configuration to consider
 
 * Blog: http://nexusstar.name/hackpads/spacemacs-iedit-mode-cheat-sheat/
 
-
 iedit-mode (aka interactive-edit-mode) gives you the power to edit instances of the same text string in a buffer. It’s quite similar to multiple cursors, although if you’re used to working with multiple cursors, it’s likely you’ll prefer that.
 
 IEdit defaults to selecting all matches, and then allows you to reduce and expand the matches in various ways, so the workflow is in the opposite direction.
@@ -593,11 +545,6 @@ Spacemacs has a binding for IEdit mode on it’s SPACE leader (SPC s e)
 
 
 
-# Multiple cursor options in spacemacs
-
-https://www.reddit.com/r/spacemacs/comments/4641zt/how_the_heck_do_i_use_multicursor_support/
-
-
 
 ## general stuff
 
@@ -605,11 +552,9 @@ From: http://blog.christopher-atkins.com/more-spacemacs
 
 Inter-file Navigation SPC b b open Helm mini-buffer SPC f f Helm find files, is less useful than SPC p f Projectile find files SPC p p Projectile find project
 
-Using the Ranger layer (file manager) invoked using SPC a r (applications ranger) Consier using Unimpaired layer (tpope quick cycling) Consider using Fasd layer to complement Fasd
-
 Intra-file Navigation SPC s s SWOOP! opens a copy of the buffer then elides lines that don’t match the search you type, allowing you to navigate the top buffer by selecting lines in the swoop buffer
 
-Window navigation SPC <number> navigate numbered windows Eyebrowse layer allows SPC W then a number to create/navigate to a new workspace with Eybrwose working you can using Vim’s gt and gT to
+Window navigation SPC <number> navigate numbered windows Eyebrowse layer allows SPC W then a number to create/navigate to a new workspace with Eyebrowse working you can using Vim’s gt and gT to
 
 Editing Select some text, then s <char> will surround with <char> iedit, get a selection (the whole current symbol by default) then SPC s e to enter iedit mode, allowing you to edit all the matched things at once SPC ; ; toggle line comment Diacritics in Emacs C-x 8 ' e to creates é
 
@@ -636,7 +581,7 @@ So, if you wanted contributors to help with you open source project or are on-bo
 
 Emacs has Org-mode with can do amazing things with documents, simply open a file with a `.org` filename extension.  Alternatively you can start the org-mode major mode with the command `M-x org-mode`
 
-Emacs also has bable, which can take code and run it in an Emacs buffer of the correct major-mode for the language and automoaticaly return the result back to the org-mode file.
+Emacs also has bable, which can take code and run it in an Emacs buffer of the correct major-mode for the language and automatically return the result back to the org-mode file.
 
 
 ## Examples

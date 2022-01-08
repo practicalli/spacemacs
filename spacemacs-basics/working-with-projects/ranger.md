@@ -21,7 +21,7 @@ Edit your `~./spacemacs` file and in the `...` section add the following layer
 
 This layer definition will add the ranger package and set some recommended variables:
 * preview files when the cursor is on a file name in ranger
-* show hidden files (dotfiles)
+* show hidden files (dot files)
 * clean up buffers when closing ranger
 * file name extensions to ignore (multi-media files)
 

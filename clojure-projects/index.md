@@ -3,10 +3,10 @@ Clojure projects can be generated from templates using one of the Clojure build 
 
 `SPC '` opens a popup buffer containing an eshell terminal.  Or you can open a terminal window from your operating system.
 
-{% tabs clojurecli="Clojure CLI", leiningen="Leiningen" %}
+{% tabs cli="Clojure CLI", leiningen="Leiningen" %}
 
 <!-- Tools deps project with clj-new -->
-{% content "clojurecli" %}
+{% content "cli" %}
 
 Create a new project with Clojure CLI, using the `app` template and a project called practicalli/playground
 

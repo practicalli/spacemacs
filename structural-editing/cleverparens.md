@@ -29,7 +29,7 @@ Evil-cleverparens modifies some of the existing behaviour of Evil keybindings.  
 
 ## Navigating via parens
 
-Evil-cleverparens has some convienient keybindings for jumping around code using the parens, including double quotes.
+Evil-cleverparens has some convenient keybindings for jumping around code using the parens, including double quotes.
 
 | Keybinding | Description                                                   |
 |------------|---------------------------------------------------------------|

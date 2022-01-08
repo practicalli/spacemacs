@@ -17,7 +17,7 @@
 
 `TAB` to expand a section
 
-[![Spacemacs Magit Status Exaple](/images/spacemacs-magit-status-example-full.png)](/images/spacemacs-magit-status-example-full.png)
+[![Spacemacs Magit Status Example](/images/spacemacs-magit-status-example-full.png)](/images/spacemacs-magit-status-example-full.png)
 
 
 ## Using Magit status directly

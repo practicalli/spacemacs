@@ -57,7 +57,7 @@ In find file, the following key bindings are available
 * `C-h` - navigate to parent directory
 * `C-j` - move down list of files & directories
 * `C-k` - move up list of files & directories
-* `RET` - open a file (or dird if a directory)
+* `RET` - open a file (or dired if a directory)
 
 > ####Hint::Creating files and directories
 > When creating a new file in a new directory, you can simply type in the full path and file name and Spacemacs will prompt you to confirm the creation of the new directory and the file name.

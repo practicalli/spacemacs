@@ -1,9 +1,9 @@
-# Smartparens cheetsheet
+# Smartparens cheatsheet
 
-`SPC SPC sp-cheet-sheet`  lists all the smartparens commands available
+`SPC SPC sp-cheat-sheet`  lists all the smartparens commands available
 
 > #### Hint::Animated cheatsheet
-> [Animated Smartparens cheetsheet](https://gist.github.com/pvik/8eb5755cc34da0226e3fc23a320a3c95) - update to use Spacemacs keybindings
+> [Animated Smartparens cheatsheet](https://gist.github.com/pvik/8eb5755cc34da0226e3fc23a320a3c95) - update to use Spacemacs keybindings
 
 ---
 
@@ -995,7 +995,7 @@ sp-join-sexp is an interactive compiled Lisp function in ‘smartparens.el’.
 
   [foo] [bar] |[baz]                  -> [foo bar |baz] ;; -2
 
-  (foo bar (baz)| (quux) (blob bluq)) -> (foo bar (baz| quux blob bluq)) ;; SPC u
+  (foo bar (baz)| (quux) (blob buzz)) -> (foo bar (baz| quux blob buzz)) ;; SPC u
 
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 
@@ -1269,7 +1269,7 @@ sp-indent-defun is an interactive compiled Lisp function in ‘smartparens.el’
 
 (sp-indent-defun &optional ARG)
 
-Reindent the current defun.
+Re-indent the current defun.
 
 If point is inside a string or comment, fill the current
 paragraph instead, and with ARG, justify as well.

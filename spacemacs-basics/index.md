@@ -4,7 +4,7 @@ Understanding the [Emacs basic concepts and terminology](emacs-basics.md) will h
 You will gradually discover the power and pleasure of using [Vim and modal editing](vim-basics.md), using different states for specific tasks and reducing your cognitive load (and strain from keybinding combinations).  The [Vim Quick Reference](/spacemacs-basics/vim-style/vim-quick-reference.md) will help you use Spacemacs more effectively.
 
 > ####Hint::Spacemacs for Vim users
-> [Migrating from Vim](https://github.com/syl20bnr/spacemacs/blob/develop/doc/VIMUSERS.org) article helps Vimmers get up to speed with Spacemacs.
+> [Migrating from Vim](https://github.com/syl20bnr/spacemacs/blob/develop/doc/VIMUSERS.org) article to help those with Vim experience to get up to speed with Spacemacs.
 
 The two most important things to learn about Spacemacs first are the Space menu, `SPC`, and the Help system, `SPC h`.
 

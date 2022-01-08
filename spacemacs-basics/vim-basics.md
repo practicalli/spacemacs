@@ -43,7 +43,7 @@ https://youtu.be/a6Q8Na575qc
 ## Other learning resource for Vim include:
 
 * [Spacemacs: Migrating from Vim](http://spacemacs.org/doc/VIMUSERS.html)
-* [Spacemancs Vim Cheatsheet](https://simpletutorials.com/c/3036/Spacemacs)
+* [Spacemacs Vim Cheatsheet](https://simpletutorials.com/c/3036/Spacemacs)
 * [Graphical Cheatsheet Tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
 * [Vim quick reference guide](http://vimhelp.appspot.com/quickref.txt.html)
 * [Vim Casts](http://vimcasts.org/)

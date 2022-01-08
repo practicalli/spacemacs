@@ -31,7 +31,7 @@ Once the REPL starts, [evaluate expressions using the source code buffer](/evalu
 ## REPL cheatsheet
 `SPC f f` open a Clojure source code file from a project
 
-`, '` to start a Clojure REPL using [Clojure CLI](http://practicalli.github.io/clojure/clojure-tools/install/install-clojure.html), Leiningen or Boot.
+`, '` to start a Clojure REPL using [Clojure CLI](http://practical.li/clojure/clojure-tools/install/install-clojure.html), Leiningen or Boot.
 
 `, e f` evaluate the current Clojure expression and show the results inline
 

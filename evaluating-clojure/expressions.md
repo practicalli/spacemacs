@@ -4,7 +4,7 @@ Evaluating individual expressions is a very effective way to test the actions of
 
 `, e f` is the most commonly used command and evaluates the current top-level expression.  The cursor can be anywhere inside the expression or nested expressions.
 
-When defining functions, `, e f` to evaluate them.  Then underneath the function definintion, write a call to that function with appropriate arguments and evaluate that expression to test your function.
+When defining functions, `, e f` to evaluate them.  Then underneath the function definition, write a call to that function with appropriate arguments and evaluate that expression to test your function.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eJ-JPmkzyP8" frameborder="0" allowfullscreen></iframe>
 

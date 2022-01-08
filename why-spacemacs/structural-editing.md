@@ -20,7 +20,7 @@ This well defined structure also makes it trivial to move expressions around, gi
 > Read the [Structural editing section]({{book.url}}/structural-editing/) for a detailed guide to using Lisp mode, Smartparens, Paredit and Evil mode to manage your Clojure (and elsip) code.
 
 
-## Smartparents For Writing Structural Text
+## Smartparens For Writing Structural Text
 
 Spacemacs uses [smartparens](https://github.com/Fuco1/smartparens) to help you write structural code really fast and also move expressions around.  Smartparens is a newer implementation of the classic _paredit_ package.
 

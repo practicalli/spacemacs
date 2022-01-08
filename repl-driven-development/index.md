@@ -72,12 +72,13 @@ With the power of the REPL, it is easy to get feedback on exactly how your code 
 At some point before production you should have unit tests around the public API of each namespace in your project to catch regressions before committed.  It is much more efficient in terms of thinking time to create these tests as you stabilise the design that as an after thought.  So it makes sense to write these tests as part of the design process.
 
 > #### Hint::Automate local test runner
-> Set up an automated test runner that will run on each file save
-> Tools: [eftest](https://github.com/weavejester/eftest), [kaocha](https://github.com/lambdaisland/kaocha)
+> Use [kaocha](https://github.com/lambdaisland/kaocha) test runner in watch mode to run tests and specification check automatically (when changes are saved)
+>
+```bash
+clojure -X:test/runner
+```
 
 ## Continuous Integration
-
-> #### TODO::work in progress, sorry
 
 Wire up a continuous integration server that runs tests and builds code on every shared commit (or every commit if you run a CI server locally).
 

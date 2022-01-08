@@ -26,10 +26,10 @@ When this function is called with a prefix, `C-u`, the artifact cache is refresh
 ## `up` Update project dependency versions
 `, r u p` to update the version for each library in your Leiningen dependency configuration.
 
-Alternatively you can use [lein-ancient](https://clojars.org/lein-ancient) plugin to update dependencicollections.mdes in your project.
+Alternatively you can use [lein-ancient](https://clojars.org/lein-ancient) plugin to update dependencies in your project.
 
 > #### Hint::deps.edn projects
-> [`practicalli/clojure-deps-edn`](http://practicalli.github.io/clojure/clojure-tools/install/install-clojure.html#clojure-cli-tools-common-aliases) contains an `:update` alias that uses depot to update `deps.edn` projects
+> [`practicalli/clojure-deps-edn`](http://practical.li/clojure/clojure-tools/install/install-clojure.html#clojure-cli-tools-common-aliases) contains an `:update` alias that uses depot to update `deps.edn` projects
 
 
 # `sp` Sort project dependencies

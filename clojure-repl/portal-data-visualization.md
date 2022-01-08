@@ -7,14 +7,14 @@ Portal is a web browser data inspector that can be configures as the `tap>` sour
 
 [Practicalli Clojure -data browsers section - portal](https://practicalli.github.io/clojure/clojure-tools/data-browsers/portal.html)
 
-Portal is simple to add to a REPL as it only requires the Portal library to be added as a depencency.
+Portal is simple to add to a REPL as it only requires the Portal library to be added as a dependency.
 
 practicalli/clojure-deps-edn includes several aliases for portal, depending on the type of Clojure project used.
 
 | Command                           | Description                                            |
 |-----------------------------------|--------------------------------------------------------|
 | `clojure -M:inspect/portal-cli`   | Clojure REPL with Portal dependency                    |
-| `clojure -M:inspect/portal-web`   | ClojureScript web browswer REPL with Portal dependency |
+| `clojure -M:inspect/portal-web`   | ClojureScript web browser REPL with Portal dependency |
 | `clojure -M:inspect/portal-node`  | ClojureScript node.js REPL with Portal dependency      |
 
 

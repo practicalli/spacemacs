@@ -22,13 +22,13 @@ The Cider Inspector opens in a new buffer that shows the underlying type of the 
 
 
 ## Inspecting simple values
-Inpecting a number or character shows the underlying type, the value and properties of that type
+Inspecting a number or character shows the underlying type, the value and properties of that type
 
 ![Spacemacs - Clojure - Inspect value - java.lang.Long](/images/spacemace-clojure-inspect-java-lang-long.png)
 
 
 ## Inspecting Collections
-Inspect a collection shows the underlying type, contents of that collection and index (where applicable).  Only the elemnents are shown.  The characters of the overall collection itself are not show, only the underlying type of collection (vector, map, lazy sequence, etc.).
+Inspect a collection shows the underlying type, contents of that collection and index (where applicable).  Only the elements are shown.  The characters of the overall collection itself are not show, only the underlying type of collection (vector, map, lazy sequence, etc.).
 
 ![Spacemacs - Clojure - Inspect persistent map](/images/spacemace-clojure-inspect-java-lang-persistentvector.png)
 

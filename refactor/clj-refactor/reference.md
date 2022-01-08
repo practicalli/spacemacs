@@ -6,7 +6,7 @@ http://endlessparentheses.com/a-small-improvement-to-clj-refactor.html
 
 All functions in clj-refactor have a two-letter mnemonic shortcut. E.g. `rs` for `cljr-rename-symbol`.
 
-The configuration for clj-refactor is in the file `~/.emacs.d/layers/+lang/clojure/packages.el`.  The specific `clj-refactor` configuratoin is in the `clojure/init-clj-refactor` function.
+The configuration for clj-refactor is in the file `~/.emacs.d/layers/+lang/clojure/packages.el`.  The specific `clj-refactor` configuration is in the `clojure/init-clj-refactor` function.
 
 The most relevant configuration is the keybindings prefix, which for spacemacs is `c-c C-f`.
 

@@ -10,9 +10,14 @@ For Clojure / ClojureScript language, add
 (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
 ```
 
-Or set aggressive indentation for all languages using the following code instead
+## Aggressive Indentation
 
-```elips
+> #### DANGER::LSP clashes with aggressive indent
+> Avoid running LSP format as type and aggressive indent as they will interact with each others changes and cause very strange side effects
+
+Set aggressive indentation for all languages using the following code instead
+
+```elisp
 (global-aggressive-indent-mode 1)
 ```
 

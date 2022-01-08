@@ -4,7 +4,7 @@ Emacs has one weakness, the processing of large files, especially with very long
 [Auto-trimming of the REPL buffer](https://docs.cider.mx/cider/repl/configuration.html#auto-trimming-the-repl-buffer) is a new feature that automatically deletes the oldest output, based on a given size.
 
 > #### Hint::Use cider-inspector and Source Code buffers
-> `, d v` will show values in the `cider-inspector`, allowing navigation of nested data structures and paging through large data sets.  Or consider using the [Portal data navigation tool](http://practicalli.github.io/clojure/clojure-tools/data-browsers/portal.html).
+> `, d v` will show values in the `cider-inspector`, allowing navigation of nested data structures and paging through large data sets.  Or consider using the [Portal data navigation tool](http://practical.li/clojure/clojure-tools/data-browsers/portal.html).
 >
 > All evaluations in a Clojure source code buffer are limited to 100 results and do not add to the REPL buffer, so avoids any slow-down from large results.  Use `, e p` menu to pretty print the results of evaluations.
 

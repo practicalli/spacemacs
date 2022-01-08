@@ -9,7 +9,7 @@ https://www.quora.com/What-is-the-best-free-IDE/answer/John-Stevenson-12
 
 Ever since I did a few projects in Racket I have been interested in the lisp scheme syntax, and been dancing with the idea of learning Emacs. But since I found my first job, I've been jumping from (the introduction) of one technology or another because I needed them for my role. Now I'm about to be furloughed, and the dance of learning Emacs seems much more attractive, but I don't know if it's the right time for this.So I'd really appreciate to hear your take on this dilemma. :)
 
-Short answer:  Yes, definately learn Emacs, start with Spacemacs develop branch and read my book https://practicalli.github.io/spacemacs/
+Short answer:  Yes, definitely learn Emacs, start with Spacemacs develop branch and read my book https://practicalli.github.io/spacemacs/
 
 Longer answer:
 It sounds like you have the agony of choice, which is a very real problem in our modern world.  There are so many things you can do with your time.  I can offer my experiences as a guide, but only you know how best to spend your time :slightly_smiling_face:

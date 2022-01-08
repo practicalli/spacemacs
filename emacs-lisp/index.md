@@ -3,7 +3,7 @@
 > #### TODO::work in progress, sorry
 > Just very rough notes at the moment
 
-there are two aspects to Emacs Lisp: The basic language itself, and the interaction with Emacs. Separate these two in your mind. Focus first on the former (should not be too hard as you learned Lisp in the past). Use sites like Excercism to practice.
+there are two aspects to Emacs Lisp: The basic language itself, and the interaction with Emacs. Separate these two in your mind. Focus first on the former (should not be too hard as you learned Lisp in the past). Use sites like Exercism to practice.
 
 Once you have a grip on the basics (loops, functions, variables, conditionals, etc), move on to the aspects that involve Emacs itself (changing text, switching buffers, etc). This is vast, and you'll likely get lost in a sea of details. There are a few things you should understand really well, as you'll use them often. They are:
 
@@ -57,7 +57,7 @@ i don't think reddit is the best place for that kind of documentation. you shoul
 
 ## Resources
 
-* [Learn Emacs Listp while customizing Emacs](http://emacslife.com/emacs-lisp-tutorial.html)
+* [Learn Emacs Lisp while customizing Emacs](http://emacslife.com/emacs-lisp-tutorial.html)
 * [Learning Emacs Lisp](https://github.com/jedcn/learning-elisp) - Elisp code examples for common tasks
 * [Ergo Emacs - How to learn Emacs Lisp](http://ergoemacs.org/misc/what_to_do_with_emacs_lisp.html)
 * [Ergo Emacs Visual Tutorial](http://ergoemacs.org/emacs/elisp.html)
@@ -67,7 +67,7 @@ i don't think reddit is the best place for that kind of documentation. you shoul
 * [Emacs Lisp Development Tips with John Wiegley](https://sachachua.com/blog/2015/04/2015-04-08-emacs-lisp-development-tips-with-john-wiegley/) - Sacha Chua
 * [Learn Emacs Lisp](https://www.emacswiki.org/emacs/LearnEmacsLisp) - Emacs Wiki
 * [Learn elisp in Y minutes](https://learnxinyminutes.com/docs/elisp/) LearnXInYMinutes.com
-* [Emergency Elips](http://steve-yegge.blogspot.com/2008/01/emergency-elisp.html)
+* [Emergency Elip](http://steve-yegge.blogspot.com/2008/01/emergency-elisp.html)
 * [Emacs Tutor 2](http://tuhdo.github.io/emacs-tutor2.html)
 
 http://harryrschwartz.com/2014/04/08/an-introduction-to-emacs-lisp.html

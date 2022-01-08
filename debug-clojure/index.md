@@ -10,8 +10,8 @@ Cider also provides a debug tool to instrument a function and step through break
 | Tool                                                                                                   | Description                                                 |
 |--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | [cider inspector](/evaluating-clojure/inspect.md)                                                      | navigate through data structures, paging through large data |
-| [data inspector: reveal](http://practicalli.github.io/clojure/clojure-tools/data-browsers/reveal.md) | visualize and navigate through data structures              |
-| [data inspector: portal](http://practicalli.github.io/clojure/clojure-tools/data-browsers/portal.md) | visualize and navigate through data structures              |
+| [data inspector: reveal](http://practical.li/clojure/clojure-tools/data-browsers/reveal.md) | visualize and navigate through data structures              |
+| [data inspector: portal](http://practical.li/clojure/clojure-tools/data-browsers/portal.md) | visualize and navigate through data structures              |
 | [cider debug](cider-debug.md)                                                                          | add breakpoints and step through values and expressions     |
 | [sayid debug](sayid-debug.md)                                                                          | debug the whole project (must compile) and profile project  |
 

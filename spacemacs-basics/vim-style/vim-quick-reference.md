@@ -42,7 +42,7 @@ In menus such as helm you can move around using `Ctrl` and these keybindings.  S
 | `gg`       | start of buffer                                                  |
 | `G`        | end of buffer                                                    |
 | `H`        | move cursor to head of buffer                                    |
-| `M`        | move cusror to middle of buffer                                  |
+| `M`        | move cursor to middle of buffer                                  |
 | `L`        | move cursor to bottom line of buffer                             |
 | `C-u`      | jump up half a page                                              |
 | `C-d`      | jump down half a page                                            |
@@ -322,7 +322,7 @@ As you are typing in any(?) buffer then Spacemacs is checking your spelling as y
 
 ### Scrolling ###
 
-in evil command mode you can scroll just the text using the classic vi bindings.  This does not scroll the cursor unless the cursor hist the top or bottom of the window, in which case the cursor stays at that window boundry.
+in evil command mode you can scroll just the text using the classic vi bindings.  This does not scroll the cursor unless the cursor hist the top or bottom of the window, in which case the cursor stays at that window boundary.
 
 `C-y` - scroll down
 `C-e` - scroll text up

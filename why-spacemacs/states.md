@@ -4,7 +4,7 @@ When installing Spacemacs you have the choice of editor styles
 
 | Editing style                                         | Description                                                                                |
 |-------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| Among the stars abord the Evil flagship (Vim)         | Vim multi-model editing (normal, insert, visual, lisp, etc. `C-z` for classic Emacs editor |
+| Among the stars aboard the Evil flagship (Vim)        | Vim multi-model editing (normal, insert, visual, lisp, etc. `C-z` for classic Emacs editor |
 | On the planet Emacs in the Holy control tower (Emacs) | Emacs only editing (No Vim states)                                                         |
 
 

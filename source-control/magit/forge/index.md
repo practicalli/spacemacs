@@ -5,7 +5,7 @@ Forge can retrieve the list of issues and pull requests from a remote repository
 
 `@` opens the forge menu from the Magit Status buffer, `, g s`, and therefore requires a local Git repository.
 
-![Spacemace Magit Forge](/images/spacmacs-magit-forge-menu.png)
+![Spacemacs Magit Forge](/images/spacmacs-magit-forge-menu.png)
 
 > #### Hint::Requires Forge Configuration
 > [Configure forge with your remote repository](/source-control/forge-configuration.md) before using the forge commands.

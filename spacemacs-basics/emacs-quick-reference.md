@@ -198,11 +198,6 @@ C-x r y    (yank-rectangle)           : pastes a rectangle
 M-c        (capitalize-word)          : capitalizes the word under cursor
 M-l        (downcase-word)            : changes the word to lowercase
 M-u        (upcase-word)              : changes the word to uppercase
-M-/        (dabbrev-expand)           : tries to complete the word
-                                        you're writing with a word
-                                        occuring in one of the
-                                        buffers; it tries another
-                                        completion when repeated
            (iso-accents-mode)         : turns on/off flying accents (',~,^)
 ```
 
