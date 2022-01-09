@@ -12,7 +12,7 @@ The alias is included in the command to start the REPL (e.g. `cider-jack-in-clj`
 ```
 
 > #### Hint:: practicalli/clojure-deps-edn contains common tools and aliases
-> [practicalli/clojure-deps-edn](/before-you-start/install-clojure.html#clojure-cli-tools-and-common-aliases) contains aliases for all aspects of Clojure development with the CLI tools.
+> [practicalli/clojure-deps-edn]({{book.P9IClojureDepsEdnInstall}}) contains aliases for all aspects of Clojure development with the CLI tools.
 
 
 ## Edit the Cider command line for jack-in
@@ -20,7 +20,7 @@ The alias is included in the command to start the REPL (e.g. `cider-jack-in-clj`
 
 Add `-M:env/test` before the `-m` flag  to include the alias for that jack-in session.
 
-![Spacemacs CIDER configuration - add Clojure CLI tools alias to cider-jack-in command](https://practicalli.github.io/spacemacs/images/spacemacs-clojure-repl-start-edit-command-add-aliases.png)
+![Spacemacs CIDER configuration - add Clojure CLI tools alias to cider-jack-in command](/images/spacemacs-clojure-repl-start-edit-command-add-aliases.png)
 
 > `SPC u` is the Spacemacs equivalent of `C-u` in Emacs.
 
