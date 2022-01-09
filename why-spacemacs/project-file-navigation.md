@@ -40,7 +40,7 @@ Ranger is great for quickly looking through files, thanks to its preview option.
 
 ![Spacemacs - Ranger directory and file navigation](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-ranger-navigate-preview.png)
 
-[Discover more about ranger]({{book.url}}/spacemacs-basics/working-with-projects/ranger.md) in the working with projects section.
+[Discover more about ranger](/spacemacs-basics/working-with-projects/ranger.md) in the working with projects section.
 
 > ####Hint::Ranger is also a terminal based file manager
 > https://ranger.github.io/

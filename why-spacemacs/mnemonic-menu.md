@@ -6,7 +6,7 @@ Which-key provides single chord keybindings, `SCP p f` rather than `C-x C-p C-f`
 
 Mnemonic characters for keys are used where possible, using the first character of a command or a prominent character if a particular character is already taken.  Sub-menus are added to increase the range of characters available for a menu.  Spacemacs prefers a sub-menu rather than upper case or non-mnemonic characters.
 
-[![Spacemacs Which-Key](/images/spacemacs-main-menu.png)](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-menu-main.png)
+![Spacemacs Which-Key](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-menu-main.png)
 
 
 ## Which-key menu controls
