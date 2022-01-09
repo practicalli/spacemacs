@@ -11,11 +11,11 @@ Portal is simple to add to a REPL as it only requires the Portal library to be a
 
 practicalli/clojure-deps-edn includes several aliases for portal, depending on the type of Clojure project used.
 
-| Command                           | Description                                            |
-|-----------------------------------|--------------------------------------------------------|
-| `clojure -M:inspect/portal-cli`   | Clojure REPL with Portal dependency                    |
-| `clojure -M:inspect/portal-web`   | ClojureScript web browser REPL with Portal dependency |
-| `clojure -M:inspect/portal-node`  | ClojureScript node.js REPL with Portal dependency      |
+| Command                          | Description                                           |
+|----------------------------------+-------------------------------------------------------|
+| `clojure -M:inspect/portal-cli`  | Clojure REPL with Portal dependency                   |
+| `clojure -M:inspect/portal-web`  | ClojureScript web browser REPL with Portal dependency |
+| `clojure -M:inspect/portal-node` | ClojureScript node.js REPL with Portal dependency     |
 
 
 ### Using Portal
@@ -58,7 +58,7 @@ practicalli/clojure-deps-edn includes several aliases for portal, depending on t
 ## Automatically start Portal
 `user` is the default namespace when a Clojure REPL starts.  If there is a `user.clj` file on the classpath, the code it contains is automatically loaded once the REPL has started.
 
-Create a `user` namespace in the file `dev/user.clj`. Require the portal library in the namespace definition, using the alias `inspect`. Call the `inspect/open` function to launch Portal in a browser tab. Call the `inpect/tap` to add portal as the `tap>` source for the project (there can only be one `tap>` source)
+Create a `user` namespace in the file `dev/user.clj`. Require the portal library in the namespace definition, using the alias `inspect`. Call the `inspect/open` function to launch Portal in a browser tab. Call `inspect/tap` to add portal as the `tap>` source for the project (there can only be one `tap>` source)
 
 ```clojure
 (ns user
@@ -66,7 +66,7 @@ Create a `user` namespace in the file `dev/user.clj`. Require the portal library
      [portal.api :as inspect]))
 
 ;; Start Portal
-;; Open a portal inspector window using default nord theme
+;; Open a portal inspector window using default theme
 (inspect/open {:portal.colors/theme :portal.colors/solarized-light})
 
 ;; Add portal as a tap> target
@@ -76,5 +76,5 @@ Create a `user` namespace in the file `dev/user.clj`. Require the portal library
 Include the `dev` directory when starting the REPL and the `dev/user.clj` code will be loaded.  The `:env/dev` alias from [`practicalli/clojure-deps-edn`]({{book.P9IClojureDepsEdnInstall}}) adds `dev` directory to the classpath.
 
 ```shell
-clojure -M:env/dev:middleware/cider-clj
+clojure -M:env/dev:repl/rebel
 ```

@@ -13,7 +13,7 @@
 
 `b` will show a helm popup with all the instances of the symbol through out all open buffers (global buffers, so even those in a different layer).
 
-`s` search a buffer and navigate to each location in code with the matching symbol by scrolling throught the results.
+`s` search a buffer and navigate to each location in code with the matching symbol by scrolling though the results.
 
 `SPC s c` clears symbol highlighting and search pattern highlighting.
 

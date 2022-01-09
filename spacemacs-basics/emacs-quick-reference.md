@@ -2,7 +2,7 @@
 
 > ####Todo::Consider moving this to just a reference section.  Vim style is the default approach for this book and whist the Emacs bindings are still available in Spacemacs, they are not as focused on great user experience as Vim.
 
-As Spacemacs is built on Emacs, its worth spending a little time getitng uses to working with Emacs.
+As Spacemacs is built on Emacs, its worth spending a little time getting uses to working with Emacs.
 
 Here is a short summary of what you need to know.  For more details use the built in docs with `M-x helm-spacemacs` or `M-m h SPC`.
 
@@ -93,7 +93,7 @@ C-s        (isearch-forward)          : searches forward
 C-r        (isearch-backward)         : searches backward
 M-%        (query-replace)            : replaces a string wherever it
                                         occurs with another, and asks
-                                        for permission everytime
+                                        for permission every time
            (replace-string)           : replaces a string wherever it
                                         occurs with another
 ```
@@ -210,7 +210,7 @@ C-x n n    (narrow-to-region)         : temporarily crops the buffer to the
 C-x n w    (widen)                    : restores the un-cropped buffer
 C-M-%      (query-replace-regexp)     : replaces a regexp wherever it
                                         occurs with a string, and asks
-                                        for permission everytime
+                                        for permission every time
            (replace-regexp)           : replaces a regexp wherever it
                                         occurs with a string
            (occur)                    : lists all occurences of search string

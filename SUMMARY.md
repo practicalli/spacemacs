@@ -66,7 +66,7 @@
     * [Speaking Evil](spacemacs-basics/vim-style/speaking-evil.md)
     * [Vim Quick Reference](spacemacs-basics/vim-style/vim-quick-reference.md)
     * [Vim Tips for developers](spacemacs-basics/vim-style/vim-tips-for-developers.md)
-    * [Keybinding reference](spacemacs-basics/vim-style/keybindng-reference.md)
+    * [Keybinding reference](spacemacs-basics/vim-style/key-binding-reference.md)
 * [Evil tools](spacemacs-basics/evil-tools/index.md)
     * [Narrowing](spacemacs-basics/evil-tools/narrowing.md)
     * [helm-swoop](spacemacs-basics/evil-tools/helm-swoop.md)

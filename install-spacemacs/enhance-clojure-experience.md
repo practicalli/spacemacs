@@ -16,7 +16,7 @@ Enhance the **clojure** layer by adding automatic linting (clj-kondo), refactori
 | `multiple-cursors` | multiple concurrent edits with more than one cursor `g r`                                                                                                                           |
 | `org`              | write documentation, organize tasks with [org-mode](/org-mode/)                                                                                                                     |
 | `spell-checking`   | spell check as you type using your Operating System spell checker `SPC S s`                                                                                                         |
-| `syntax-checking`  | syntax checking / linting as you type (flycheckk with clj-kondo for Clojure)                                                                                                        |
+| `syntax-checking`  | syntax checking / linting as you type (flycheck with clj-kondo for Clojure)                                                                                                        |
 | `treemacs`         | visual file system browser (file explorer) `SPC p t`                                                                                                                                |
 | `version-control`  | general version control features, eg. ediff, fringe highlights                                                                                                                      |
 

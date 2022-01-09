@@ -50,7 +50,7 @@ In this example the CIDER test runner look for `practicalli.test-app-main` inste
 ```elisp
 (defun cider-custom-test-ns-fn (ns)
   "For a NS, return the test namespace, which may be the argument itself.
-This uses the convention of prepending 'test-' to the namespace name."
+This uses the convention of prefix 'test-' to the namespace name."
   (when ns
     (let ((prefix "test-"))
       (if (string-prefix-p prefix ns)

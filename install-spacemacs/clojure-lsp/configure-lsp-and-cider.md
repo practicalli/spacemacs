@@ -130,7 +130,7 @@ Additional settings have been added to the `dotspacemacs/user-config` section of
 ## Customising symbol highlighting
 Symbol highlighting can be toggled using the command `lsp-toggle-symbol-highlighting` and the startup state can be set using the lsp layer configuration variable `lsp-enable-symbol-highlighting`
 
-The face used for highlighting will vary by theme.  Use the Emacs `customize` command to configure the `lsp-syntax-highliging-read` face or add the `theming` layer to `.spacemacs` and add a custom face to `dotspacemacs/user-init` section of `.spacemacs`
+The face used for highlighting will vary by theme.  Use the Emacs `customize` command to configure the `lsp-syntax-highlight-read` face or add the `theming` layer to `.spacemacs` and add a custom face to `dotspacemacs/user-init` section of `.spacemacs`
 
 In this example, the default orange background color is removed and the font weigh set to bold.
 ```elisp

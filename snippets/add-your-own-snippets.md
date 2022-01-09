@@ -40,7 +40,7 @@ The basic structure of a snippet template is:
 # --
 Add the content you want to replace the snippet name with when it expands
 ```
-The content can be anything, simple text or more usefully a code strucuture with placeholders
+The content can be anything, simple text or more usefully a code structure with placeholders
 
 
 ## Example: Simple text replacement
@@ -82,7 +82,7 @@ Further examples are covered in the [Emacs YASnippet video tutorial](https://www
 `M-x yas-load-snippet-buffer-and-close` also loads the new snippet into the correct major mode and kills the snippet buffer (prompting to save first if necessary).
 
 > #### Todo::PR for yasnippet key bindings
-> `SPC x s` key bindings for yasnipet commands in Spacemacs.
+> `SPC x s` key bindings for yasnippet commands in Spacemacs.
 > `SPC x s e` to edit an existing snippet (`yas/visit-snippet-file`).
 > `SPC x s c` to create a snippet.
 > `SPC x s t` to try a snippet.

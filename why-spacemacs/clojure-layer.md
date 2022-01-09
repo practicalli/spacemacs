@@ -9,7 +9,7 @@ Projects managed by [Leiningen](https://leiningen.org), [Boot](http://boot-clj.c
 > ####Hint::CIDER is part of the [Clojure layer](https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Blang/clojure)
 > The [Clojure layer](https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Blang/clojure) includes [CIDER](https://github.com/clojure-emacs/cider) and supported Emacs packages, curated to ensure those packages work well together.
 >
-> Installing the [Clojure layer](/install-spacemacs/manually-add-clojure-layer.md) usesthe [latest version of CIDER on Melpa](https://melpa.org/#/cider)
+> Installing the [Clojure layer](/install-spacemacs/manually-add-clojure-layer.md) uses the [latest version of CIDER on Melpa](https://melpa.org/#/cider)
 
 
 ## Features of the Clojure layer

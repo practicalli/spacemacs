@@ -9,7 +9,7 @@ Show progress by adding TODO states to the headings of an .org document.  The de
 ## Custom TODO States
 A custom set of states can be configured, although it seems useful to keep the defaults and simply add custom states.
 
-[Practicalli/spacemacs.d](https://github.com/practcialli/spacemacs.d) includes a simple kanban style of states.  The `|` character denotes closed TODO states.
+[Practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d) includes a simple kanban style of states.  The `|` character denotes closed TODO states.
 
 In `dotspacemacs/user-config` in the `.spacemacs` file, define states and workflow for all `.org` files
 

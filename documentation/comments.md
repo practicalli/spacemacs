@@ -2,15 +2,18 @@
 
 Spacemacs uses the same keybindings and commands to comment any programming language or mode.  The character and style of comments is defined in each layer or package that layer includes.
 
-| Keybinding                | Action                                                   |
-|---------------------------|----------------------------------------------------------|
-| `SPC ; ;`                 | Toggle comment current line                              |
-| `g c c`                   | Toggle comment current line                              |
-| `g c a p`                 | Toggle comment selected paragraphs                       |
-| `g c SPC y`               | Comment up to a line with avy                            |
-| `g y`                     | Paste a commented copy of the current line above         |
-| `v` _select region_ `g c` | Enter visual mode, select a region and comment           |
-| `M-;`  (any state)         | Create a new comment line, or add comment to end of line |
+| Key binding               | Description                                      |
+|---------------------------|--------------------------------------------------|
+| `SPC ; ;`                 | Toggle comment current line                      |
+| `SPC ; i i`               | Toggle comment current line indented             |
+| `SPC ; p a`               | Toggle comment paragraph                         |
+| `g c c`                   | Toggle comment current line                      |
+| `g c a p`                 | Toggle comment selected paragraphs               |
+| `g c SPC y`               | Comment up to a line with avy                    |
+| `g y`                     | Paste a commented copy of the current line above |
+| `v` _select region_ `g c` | Comment selected region                          |
+| `M-;`  (any state)        | New comment line or add comment to end of line   |
+
 
 > ####Info::Evil-commentary layer
 > Spacemacs uses the [evil-commentary layer](https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Bvim/evil-commentary) to provide a commenting tool for all other layers.

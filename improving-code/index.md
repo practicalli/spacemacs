@@ -27,4 +27,4 @@ Kibit is a commonly used static analyser for Clojure projects, suggesting change
 
 A consistent format of your code base makes it much more readable and therefore understandable by the development team.  The `clojure-mode` does manage basic formatting of your code, especially code indentation.
 
-Spacemacs can be configured to automatically check and adjust any formatiing as you type.
+Spacemacs can be configured to automatically check and adjust any formatting as you type.

@@ -6,7 +6,7 @@ If you did not use the practicalli/spacemacs.d configuration, then use the follo
 ## Spacemacs install Wizard
 Run Emacs as normal.
 
-Spacemacs will start a wizzard and ask you how you want your Spacemacs.
+Spacemacs will ask how to configure the fundamentals of Spacemacs operation.
 
 The `.spacemacs` configuration file is created by the Spacemacs Wizard, which only runs if it does not find this file, or `.spacemacs.d/init.el` file.
 
@@ -21,7 +21,7 @@ For the distribution, select *The Standard Distribution (spacemacs)*
 
 Spacemacs will now download all its Emacs packages and this will take several minutes, depending on the speed of your connection to the Internet.
 
-`SPC q r` to restart Spacemacs once all the packages have downloaded.  This is not strictly neccessary, but helps ensure the packages are working correctly.
+`SPC q r` to restart Spacemacs once all the packages have downloaded.  This is not strictly necessary, but helps ensure the packages are working correctly.
 
 ## Spacemacs is ready for action
 

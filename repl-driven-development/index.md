@@ -35,7 +35,7 @@ It is recommended to create a Design Journal section at the bottom of each names
 The design journal can be used to create meaningful documentation for the project very easily and should prevent time spent on repeating exactly the same conversations.
 
 > #### HINT::Add example journal
-> [Design Journal for TicTacToe game using reagent, clojurescript and scalable vector graphics](https://github.com/jr0cket/tictactoe-reagent/blob/master/src/tictactoe_reagent/core.cljs#L124)
+> [Design Journal for Tic-Tac-Toe game using reagent, clojurescript and scalable vector graphics](https://github.com/jr0cket/tictactoe-reagent/blob/master/src/tictactoe_reagent/core.cljs#L124)
 
 
 ## Viewing data structures

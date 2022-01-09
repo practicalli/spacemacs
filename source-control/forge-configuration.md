@@ -1,11 +1,13 @@
 # Magit Forge
-Magit can retrieve issues and pull request for a project and even create a new pull request, when connect to services provided by GitHub, GitLab and your own hosted environments.  Magit uses Forge to talk to these services and Forge uses ghub for authentication.
+
+Magit can retrieve issues and pull request for a project and even create a new pull request, when connect to services provided by GitHub, GitLab and your own hosted environments.  Magit uses Forge to talk to these services.
 
 > #### Hint::Configure Git access and define a gpg key first
 > You should [configure Git access](git-configuration.md) to repositories on these services before configuring Forge
 > You should [create a gpg key](encryption/create-gpg-key.md) (Pretty Good Privacy) to encrypt your GitHub/GitLab personal access token in a file called `.authinfo.gpg`.
 
 ## Set the username for the service used
+
 Add your GitHub or GitLab username to your `~/.gitconfig` file for your operating system account.
 
 For example, if your username on GitHub is `practicalli`, then run this command in a terminal:
@@ -13,10 +15,12 @@ For example, if your username on GitHub is `practicalli`, then run this command 
 ```shell
 git config --global github.user practicalli
 ```
+
 Replace `github.user` with `gitlab.user` if you are using GitLab.
 
 
 ## Generating a token for API access
+
 You need a token for GitHub or GitLab, which can be generated via your account on those services.
 * [GitHub personal access tokens](https://github.com/settings/tokens)
 * [GitLab personal access tokens](https://gitlab.com/profile/personal_access_tokens)
@@ -28,6 +32,7 @@ Personal Access tokens can be revoked and recreated at any time.  They are a saf
 
 
 ### Create an encrypted .authinfo.gpg file
+
 Create a file called `~/.authinfo`
 
 Add the Auth Source line to the file, using your GitHub or GitLab name and associated personal access token.
@@ -55,16 +60,9 @@ Add the preferred file in which to store your token, by default this is `.authin
 
 Add `auth-sources` to specify the location of the encrypted token file in the `dotspacemacs/user-config` section of your `.spacemacs` file
 ```elisp
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-  ;; Magit - forge configuration
-  ;;
   ;; Set the files that are searched for writing tokens
   ;; by default ~/.authinfo will be used
-  ;; and write a token in unencrypted format
   (setq auth-sources '("~/.authinfo.gpg"))
-  ;;
-  ;; End of Magit - forge configuration
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ```
 
 [practicalli/spacemacs.d]({{ book.P9ISpacemacsD }}) configuration contains this setting.
@@ -85,9 +83,6 @@ To occasionally show closed topics, set the closed value to a negative number to
 ```lisp
  (setq  forge-topic-list-limit '(100 . -10))
 ```
-
-
-
 
 The first number is the open items to be displayed, the second number is the closed items to display.  `0` means no items will be displayed.
 

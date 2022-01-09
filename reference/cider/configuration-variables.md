@@ -3,7 +3,7 @@ The following in not an authoritative list of configuration variables.  The list
 
 Variables are grouped by the files they are defined in throughout the [clojure-emacs/cider](https://github.com/clojure-emacs/cider) project.
 
-Variables can be used in `.dir-locals.el` files for project specific configuration (recommended for most variables), or in the Spacemacs `dotspacemacs/user-config` section of `.spacemaces`
+Variables can be used in `.dir-locals.el` files for project specific configuration (recommended for most variables), or in the Spacemacs `dotspacemacs/user-config` section of `.spacemacs`
 
 
 ## Completion

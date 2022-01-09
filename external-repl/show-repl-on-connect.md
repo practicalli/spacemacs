@@ -1,17 +1,45 @@
-# Show REPL Buffer on Connect
+# Show REPL Buffer
 
-Spacemacs does not show the Clojure REPL buffer once you have connected (cider-jack-in).  You can open and jump to the REPL buffer using `, s s`.  This keybinding toggles focus between the repl and code buffers.
+> #### Hint::Minimise use of REPL buffer
+> When developing code it is more effective to evaluate in the source code buffers.
 
-You can also open the buffer list, `SPC b b` and if there are many open buffers narrow the list by typing `repl`.  This is useful when you are using ClojureScript, which has two repls (Clojure REPL & ClojureScript REPL).
+Spacemacs does not automatically show the Clojure REPL buffer when connecting to a REPL (`cider-jack-in-clj`).
+
+`, s s` opens and switches to the REPL buffer. Once the REPL buffer is open, `, s s` toggles focus between the REPL and source code buffers.
+
+Alternatively, `SPC b b` opens the buffer list. Typing `repl` narrows to REPL buffers. `C-j` and `C-k` navigate the buffer list and `RET` selects the buffer.
+
+A buffer for each Clojure REPL & ClojureScript REPL processs will be shown in the buffer list.
+
+
+## Configure REPL Buffer size limit
+
+By default, standard out (printlin and logs to console) will be printed in the REPL buffer.
+
+Logging into the REPL buffer, especially logs with verbose output, can slow down Emacs performance.
+
+Add `cider-repl-buffer-size-limit 100` to the `cider` layer to limit lines shown in REPL buffer.  Only that number of lines will be retailed in the buffer, with any more lines automatically deleted.  This should keep the REPL buffer more responsive.
+
+```elisp
+(clojure :variables
+         cider-repl-buffer-size-limit 100)
+```
+
+
+## Show REPL buffer automatically
 
 To automatically show the REPL buffer once you have connected, add the following code to the `dotspacemacs/user-config` section of the `.spacemacs` file.
 
-
 ```elisp
-(with-eval-after-load 'cider
-  (setq cider-repl-pop-to-buffer-on-connect t))
+(clojure :variables
+         cider-repl-pop-to-buffer-on-connect t)
 ```
 
-![Spacemacs - Clojure - Show REPL Buffer on Connect](/images/spacemacs-clojure-repl-pop-to-buffer-on-connect.png)
-
 The REPL buffer will open as an additional window in the current frame.
+
+
+## Slow REPL buffer
+
+`SPC SPC fundamental-mode` will switch off the text formatting and help the REPL buffer should be faster to respond.
+
+However, fundamental-mode should be a last resource as it limits the usefulness of the REPL buffer.

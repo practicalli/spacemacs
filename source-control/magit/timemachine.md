@@ -1,6 +1,6 @@
 # Git Timemachine
 
-Easily navigate backwards and forwards throught the commit history of a file under Git Version Control. The buffer shows the file as it was in each change you select.
+Easily navigate backwards and forwards through the commit history of a file under Git Version Control. The buffer shows the file as it was in each change you select.
 
 > #### Hint:: Positioning the buffer content
 > Timemachine seems to work best when you have all the text visible in a buffer or you roughly know where the changes are in the file as you move between commits.

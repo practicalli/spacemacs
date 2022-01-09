@@ -16,7 +16,7 @@ Org-mode [easy templates](https://www.gnu.org/software/emacs/manual/html_node/or
 | c    | #+BEGIN_CENTER ... #+END_CENTER   |                      |
 | l    | #+BEGIN_LaTeX ... #+END_LaTeX     | LaTeX markup section |
 | L    | #+LaTeX:                          |                      |
-| h    | #+BEGIN_HTML ... #+END_HTML       | HTML sectiion        |
+| h    | #+BEGIN_HTML ... #+END_HTML       | HTML section         |
 | H    | #+HTML:                           |                      |
 | a    | #+BEGIN_ASCII ... #+END_ASCII     |                      |
 | A    | #+ASCII:                          |                      |

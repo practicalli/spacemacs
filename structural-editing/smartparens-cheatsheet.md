@@ -90,7 +90,7 @@ If you specify a regular emacs prefix argument this is passed to
 the executed command.  Therefore, executing
 "SPC u 2 M-x sp-prefix-tag-object M-x sp-forward-sexp" will move two tag
 expressions forward, ignoring possible symbols or paired
-expressions inbetween.
+expressions in between.
 
 Tag object is anything delimited by sgml tag.
 
@@ -106,7 +106,7 @@ Read the command and invoke it on the next pair object.
 If you specify a regular emacs prefix argument this is passed to
 the executed command.  Therefore, executing
 "SPC u 2 M-x sp-prefix-pair-object M-x sp-forward-sexp" will move two paired
-expressions forward, ignoring possible symbols inbetween.
+expressions forward, ignoring possible symbols in between.
 
 Pair object is anything delimited by pairs from ‘sp-pair-list’.
 
@@ -1274,7 +1274,7 @@ Re-indent the current defun.
 If point is inside a string or comment, fill the current
 paragraph instead, and with ARG, justify as well.
 
-Otherwise, reindent the current defun, and adjust the position
+Otherwise, re-indent the current defun, and adjust the position
 of the point.
 
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――

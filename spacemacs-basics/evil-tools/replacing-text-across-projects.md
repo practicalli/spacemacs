@@ -11,7 +11,7 @@ To replace all `foo` occurrences by `bar` in your current project:
 
 `C-c C-e` opens a new buffer with all the search results, which you can edit.
 
-`SPC s e` on a selected piece of text will highlight all occurences in the search results and allow you to change them all concurrently.
+`SPC s e` on a selected piece of text will highlight all occurrences in the search results and allow you to change them all concurrently.
 
 `ESC` or `fd` to leave iedit state (twice if in Evil insert mode).
 

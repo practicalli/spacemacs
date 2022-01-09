@@ -37,7 +37,7 @@ If there are issues using `cider-ns-refresh` then use a unconditional reloading 
 
 
 ## Issues with Clojure reload
-When modifing two namespaces that depend on each other, the namespaces must be reload in the correct order to avoid compilation errors.
+When modifying two namespaces that depend on each other, the namespaces must be reload in the correct order to avoid compilation errors.
 
 Removing definitions from a source file does not remove those stale definitions from a running REPL.  Code that uses those stale definitions will continue to work, but will break the next time you restart the REPL.
 

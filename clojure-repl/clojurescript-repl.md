@@ -1,5 +1,6 @@
 # ClojureScript projects
-[Practicalli ClojureScript](https://practicalli.github.io/clojurescript/) covers the development of websites and single page apps (SPA) with figwheel-main build tool and the reaact-style reagent library
+
+[Practicalli ClojureScript](https://practicalli.github.io/clojurescript/) covers the development of websites and single page apps (SPA) with figwheel-main build tool and the react-style reagent library
 
 [practicalli/clojure-deps-edn]({{book.P9IClojureDepsEdn}}) defines the `:middleware/cider-cljs` alias which provides the nREPL connection support specifically for a ClojureScript REPL.
 
@@ -16,7 +17,6 @@ clojure -M:figwheel:middleware/cider-cljs
 clojurescript-figwheel-main-external-repl-middleware-cider-cljs.png
 
 Choose `cider-connect-cljs` when using `sesman-start`
-
 
 ![ClojureScript figwheel-main connect-cljs](/images/clojurescript-figwheel-main-connect-command-cljs.png)
 

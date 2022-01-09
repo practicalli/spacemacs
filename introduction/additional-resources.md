@@ -2,7 +2,7 @@
 
 **Spacemacs**
 * [Spacemacs Website](http://spacemacs.org/)
-* [Spacemacs ABC](https://www.youtube.com/playlist?list=PLrJ2YN5y27KLhd3yNs2dR8_inqtEiEweE) - screencast walk-through of features in alphabetical order
+* [Spacemacs ABC](https://www.youtube.com/playlist?list=PLrJ2YN5y27KLhd3yNs2dR8_inqtEiEweE) - walk-through of features in alphabetical order
 * [SimpleTutorials: Spacemacs](https://simpletutorials.com/c/2883/Spacemacs)
 
 **Clojure Getting Started**

@@ -5,7 +5,7 @@
 
 
 ## Folding code, comments and other content
-Code folding is very useful for hiding different levels of detail, for example you could hide everthing but the function names in a namespace, showing just the API for that namespace.
+Code folding is very useful for hiding different levels of detail, for example you could hide everything but the function names in a namespace, showing just the API for that namespace.
 
 Comments and documentation can be folded to help you focus on a specific part of the content.
 

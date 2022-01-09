@@ -77,7 +77,7 @@ Alternatively, if a namespace refresh is not required, configure the `.dirs-loca
          (cider-refresh-after-fn . "practicalli.dev/start"))))
 ```
 
-This code calls the `stop` function from the component lifecycle library at the start of the `cider-refresh` function.  At the end of `cider-refesh`, the `start` function is called to restart all the components in the defined order in the project.
+This code calls the `stop` function from the component lifecycle library at the start of the `cider-refresh` function.  At the end of `cider-refresh`, the `start` function is called to restart all the components in the defined order in the project.
 
 
 <!-- Integrant example -->

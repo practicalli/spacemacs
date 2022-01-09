@@ -57,7 +57,7 @@ Using Clojure exec `-X` flag, the default repl function can be over-ridden on th
 
 **Configure theme & font**
 
-Add a custom theme and font via the `-J` command line option or create an alias using `:insepct/reveal-light` as an example.
+Add a custom theme and font via the `-J` command line option or create an alias using `:inspect/reveal-light` as an example.
 
 ```shell
 clojure -M:inspect/reveal -J-Dvlaaad.reveal.prefs='{:theme :light :font-family "Ubuntu Mono" :font-size 32}'
@@ -135,7 +135,7 @@ Using Clojure exec `-X` flag, the default repl function can be over-ridden on th
 
 **Configure theme & font**
 
-Add a custom theme and font via the `-J` command line option or create an alias using `:insepct/reveal-light` as an example.
+Add a custom theme and font via the `-J` command line option or create an alias using `:inspect/reveal-light` as an example.
 
 ```shell
 clojure -M:inspect/reveal -J-Dvlaaad.reveal.prefs='{:theme :light :font-family "Ubuntu Mono" :font-size 32}'
