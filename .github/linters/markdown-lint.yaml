@@ -23,6 +23,7 @@ MD004: false                  # Unordered list style
 MD007:
   indent: 4                   # Unordered list indentation (SUMMARY file)
 MD009: true                   # no trailing spaces
+MD012: false                  # no consecutive blank lines
 MD013:
   line_length: 400            # Line length 80 is far to short
 MD026:

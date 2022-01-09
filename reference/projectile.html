@@ -292,7 +292,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/project-file-navigation.html">
+        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/structural-editing.html">
+            
+                <a href="../why-spacemacs/structural-editing.html">
+            
+                    
+                    Structural editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/project-file-navigation.html">
             
                 <a href="../why-spacemacs/project-file-navigation.html">
             
@@ -305,7 +318,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/layouts.html">
+        <li class="chapter " data-level="1.1.2.9" data-path="../why-spacemacs/layouts.html">
             
                 <a href="../why-spacemacs/layouts.html">
             
@@ -1001,9 +1014,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/keybindng-reference.html">
+        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/key-binding-reference.html">
             
-                <a href="../spacemacs-basics/vim-style/keybindng-reference.html">
+                <a href="../spacemacs-basics/vim-style/key-binding-reference.html">
             
                     
                     Keybinding reference
@@ -2912,7 +2925,7 @@
                 <a href="../source-control/magit/interactive-rebasing.html">
             
                     
-                    Interactve Rebasing
+                    Interactive Rebasing
             
                 </a>
             
@@ -3451,9 +3464,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.1.5.6" data-path="clojure/local-assignement.html">
+        <li class="chapter " data-level="8.1.5.6" data-path="clojure/local-assignment.md">
             
-                <a href="clojure/local-assignement.html">
+                <span>
             
                     
                     Local Assignment
@@ -3823,30 +3836,39 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="projectile">Projectile</h2>
-<p><a href="https://github.com/bbatsov/projectile" target="_blank">Projectile</a> is a project interaction library for Emacs. Its goal is to provide a nice set of features operating on a project level without introducing external dependencies (when feasible). For instance - finding project files has a portable implementation written in pure Emacs Lisp without the use of GNU find (but for performance sake an indexing mechanism backed by external commands exists as well).</p>
-<p>Projectile tries to be practical - portability is great, but if some external tools could speed up some task substantially and the tools are available, Projectile will leverage them.</p>
-<p>This library provides easy project management and navigation. The concept of a project is pretty basic - just a folder containing special file. Currently git, mercurial, darcs and bazaar repos are considered projects by default. So are lein, maven, sbt, scons, rebar and bundler projects. If you want to mark a folder manually as a project just create an empty .projectile file in it. Some of Projectile&apos;s features:</p>
+                                <h2 id="projectile-project-navigation-and-management">Projectile project navigation and management</h2>
+<p><a href="https://docs.projectile.mx/projectile/" target="_blank">Projectile</a> provides commands to navigate within a project and manage files and buffers as a project.</p>
+<p>A project is defined by any of the following:</p>
 <ul>
-<li>jump to a file in project</li>
-<li>jump to files at point in project</li>
-<li>jump to a directory in project</li>
-<li>jump to a file in a directory</li>
-<li>jump to a project buffer</li>
-<li>jump to a test in project</li>
-<li>toggle between files with same names but different extensions (e.g. <code>.h</code> &lt;-&gt; <code>.c/.cpp</code>, <code>Gemfile</code> &lt;-&gt; <code>Gemfile.lock</code>)</li>
-<li>toggle between code and its test (e.g. <code>main.service.js</code> &lt;-&gt; <code>main.service.spec.js</code>)</li>
-<li>jump to recently visited files in the project</li>
-<li>switch between projects you have worked on</li>
-<li>kill all project buffers</li>
-<li>replace in project</li>
-<li>multi-occur in project buffers</li>
-<li>grep in project</li>
-<li>regenerate project etags or gtags (requires <a href="https://github.com/leoliu/ggtags" target="_blank">ggtags</a>).</li>
-<li>visit project in dired</li>
-<li>run make in a project with a single key chord</li>
-<li>check for dirty repositories</li>
+<li>a source control directory e.g. <code>.git</code></li>
+<li>programming language tools e.g. <code>deps.edn</code></li>
+<li>projectile configuration file, <code>.projectile</code></li>
 </ul>
+<h2 id="commonly-used-commands">Commonly used commands</h2>
+<p><code>SPC p f</code> will find a file by name within the project scope</p>
+<p><code>SPC p a</code> will alternate between a source code file and its unit test file</p>
+<p><code>SPC p &quot;</code> opens an external terminal at the root of the project, so external terminal commands can easily be run on the project, e.g. <code>clojure -M:repl/rebel</code> to start a terminal UI REPL</p>
+<p><code>SPC</code></p>
+<h2 id="ignore-files-in-project-projectile-configuration-file">Ignore files in project Projectile configuration file</h2>
+<p>A <code>.projectile</code> file at the root of a project include file and directory name <a href="https://docs.projectile.mx/projectile/projects.html#ignoring-files" target="_blank">patterns for Projectile to ignore</a>, similar to a <code>.gitignore</code> file.</p>
+<p>Projectile will ignore patterns in a <code>.gitignore</code> file. however, there may be additional patterns that Projectile should ignore that Git should not</p>
+<p>Ignore files at the root of the project</p>
+<pre><code class="lang-none">-/log
+-/tmp
+-/public/uploads
+</code></pre>
+<p>Relative pathname ignores:</p>
+<pre><code class="lang-none">-tmp
+-*.port
+-*.yml
+</code></pre>
+<p>Ignore everything except certain sub-directories (not relevant for file names)</p>
+<pre><code class="lang-none">+/src/practicalli
++/tests/practicalli
+</code></pre>
+<h2 id="projectile-menu">Projectile menu</h2>
+<p><code>SPC p</code> opens the projectile menu</p>
+<p><img src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-projectile-menu.png" alt="Spacemacs Projectile Menu"></p>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -3890,7 +3912,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Projectile","level":"8.1.3","depth":2,"next":{"title":"CIDER","level":"8.1.4","depth":2,"path":"reference/cider/index.md","ref":"reference/cider/index.md","articles":[{"title":"Config Variables","level":"8.1.4.1","depth":3,"path":"reference/cider/configuration-variables.md","ref":"reference/cider/configuration-variables.md","articles":[]}]},"previous":{"title":"Custom Keybindings","level":"8.1.2.4","depth":3,"path":"reference/keybindings/custom-keybindings.md","ref":"reference/keybindings/custom-keybindings.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d","P9IClojure":"https://practicalli.github.io/clojure/","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"reference/projectile.md","mtime":"2022-01-04T11:09:51.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-04T11:10:53.662Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Projectile","level":"8.1.3","depth":2,"next":{"title":"CIDER","level":"8.1.4","depth":2,"path":"reference/cider/index.md","ref":"reference/cider/index.md","articles":[{"title":"Config Variables","level":"8.1.4.1","depth":3,"path":"reference/cider/configuration-variables.md","ref":"reference/cider/configuration-variables.md","articles":[]}]},"previous":{"title":"Custom Keybindings","level":"8.1.2.4","depth":3,"path":"reference/keybindings/custom-keybindings.md","ref":"reference/keybindings/custom-keybindings.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"reference/projectile.md","mtime":"2022-01-09T02:52:39.975Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T02:53:46.289Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

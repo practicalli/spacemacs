@@ -14,7 +14,7 @@ Reveal can also used as a `tap>` source for more powerful manual debugging.
 
 | Command                                       | Description                                                                        |
 |-----------------------------------------------|------------------------------------------------------------------------------------|
-| `clojure -M:inspect/reveal`                   | start a Reveal repl with data visualization window (cloure.main)                   |
+| `clojure -M:inspect/reveal`                   | start a Reveal repl with data visualization window (clojure.main)                   |
 | `clojure -M:inspect/reveal-light`             | as above with light theme and large font                                           |
 | `clojure -X:inspect/reveal`                   | start a Reveal repl with data visualization window (clojure exec)                  |
 | `clojure -X:inspect/reveal-light`             | as above with light theme and large font                                           |
@@ -57,7 +57,7 @@ Using Clojure exec `-X` flag, the default repl function can be over-ridden on th
 
 **Configure theme & font**
 
-Add a custom theme and font via the `-J` command line option or create an alias using `:insepct/reveal-light` as an example.
+Add a custom theme and font via the `-J` command line option or create an alias using `:inspect/reveal-light` as an example.
 
 ```shell
 clojure -M:inspect/reveal -J-Dvlaaad.reveal.prefs='{:theme :light :font-family "Ubuntu Mono" :font-size 32}'
@@ -67,7 +67,7 @@ clojure -M:inspect/reveal -J-Dvlaaad.reveal.prefs='{:theme :light :font-family "
 
 Evaluate `(add-tap ((requiring-resolve 'vlaaad.reveal/ui)))` when using Rebel Readline to add Reveal as a tap source, showing `(tap> ,,,)` expressions in the reveal window, eg. `(tap> (map inc [1 2 3 4 5]))`.
 
-[Practicalli Clojure - data browsers section](http://practicalli.github.io/clojure/clojure-tools/data-browsers/reveal.html) has more details on using reveal.
+[Practicalli Clojure - data browsers section](http://practical.li/clojure/clojure-tools/data-browsers/reveal.html) has more details on using reveal.
 
 
 
@@ -92,7 +92,7 @@ Reveal can also used as a `tap>` source for more powerful manual debugging.
 
 | Command                                       | Description                                                                        |
 |-----------------------------------------------|------------------------------------------------------------------------------------|
-| `clojure -M:inspect/reveal`                   | start a Reveal repl with data visualization window (cloure.main)                   |
+| `clojure -M:inspect/reveal`                   | start a Reveal repl with data visualization window (clojure.main)                   |
 | `clojure -M:inspect/reveal-light`             | as above with light theme and large font                                           |
 | `clojure -X:inspect/reveal`                   | start a Reveal repl with data visualization window (clojure exec)                  |
 | `clojure -X:inspect/reveal-light`             | as above with light theme and large font                                           |
@@ -135,7 +135,7 @@ Using Clojure exec `-X` flag, the default repl function can be over-ridden on th
 
 **Configure theme & font**
 
-Add a custom theme and font via the `-J` command line option or create an alias using `:insepct/reveal-light` as an example.
+Add a custom theme and font via the `-J` command line option or create an alias using `:inspect/reveal-light` as an example.
 
 ```shell
 clojure -M:inspect/reveal -J-Dvlaaad.reveal.prefs='{:theme :light :font-family "Ubuntu Mono" :font-size 32}'
@@ -145,4 +145,4 @@ clojure -M:inspect/reveal -J-Dvlaaad.reveal.prefs='{:theme :light :font-family "
 
 Evaluate `(add-tap ((requiring-resolve 'vlaaad.reveal/ui)))` when using Rebel Readline to add Reveal as a tap source, showing `(tap> ,,,)` expressions in the reveal window, eg. `(tap> (map inc [1 2 3 4 5]))`.
 
-[Practicalli Clojure - data browsers section](http://practicalli.github.io/clojure/clojure-tools/data-browsers/reveal.html) has more details on using reveal.
+[Practicalli Clojure - data browsers section](http://practical.li/clojure/clojure-tools/data-browsers/reveal.html) has more details on using reveal.

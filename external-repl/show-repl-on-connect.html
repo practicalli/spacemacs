@@ -292,7 +292,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/project-file-navigation.html">
+        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/structural-editing.html">
+            
+                <a href="../why-spacemacs/structural-editing.html">
+            
+                    
+                    Structural editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/project-file-navigation.html">
             
                 <a href="../why-spacemacs/project-file-navigation.html">
             
@@ -305,7 +318,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/layouts.html">
+        <li class="chapter " data-level="1.1.2.9" data-path="../why-spacemacs/layouts.html">
             
                 <a href="../why-spacemacs/layouts.html">
             
@@ -1001,9 +1014,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/keybindng-reference.html">
+        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/key-binding-reference.html">
             
-                <a href="../spacemacs-basics/vim-style/keybindng-reference.html">
+                <a href="../spacemacs-basics/vim-style/key-binding-reference.html">
             
                     
                     Keybinding reference
@@ -2912,7 +2925,7 @@
                 <a href="../source-control/magit/interactive-rebasing.html">
             
                     
-                    Interactve Rebasing
+                    Interactive Rebasing
             
                 </a>
             
@@ -3451,9 +3464,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignement.html">
+        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignment.md">
             
-                <a href="../reference/clojure/local-assignement.html">
+                <span>
             
                     
                     Local Assignment
@@ -3823,15 +3836,28 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="show-repl-buffer-on-connect">Show REPL Buffer on Connect</h1>
-<p>Spacemacs does not show the Clojure REPL buffer once you have connected (cider-jack-in).  You can open and jump to the REPL buffer using <code>, s s</code>.  This keybinding toggles focus between the repl and code buffers.</p>
-<p>You can also open the buffer list, <code>SPC b b</code> and if there are many open buffers narrow the list by typing <code>repl</code>.  This is useful when you are using ClojureScript, which has two repls (Clojure REPL &amp; ClojureScript REPL).</p>
-<p>To automatically show the REPL buffer once you have connected, add the following code to the <code>dotspacemacs/user-config</code> section of the <code>.spacemacs</code> file.</p>
-<pre><code class="lang-elisp">(with-eval-after-load &apos;cider
-  (setq cider-repl-pop-to-buffer-on-connect t))
+                                <h1 id="show-repl-buffer">Show REPL Buffer</h1>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="minimise-use-of-repl-buffer"><i class="fa fa-lightbulb-o"></i> Minimise use of REPL buffer</h3></div><div class="panel-body"><p>When developing code it is more effective to evaluate in the source code buffers.</p></div></div>
+<p>Spacemacs does not automatically show the Clojure REPL buffer when connecting to a REPL (<code>cider-jack-in-clj</code>).</p>
+<p><code>, s s</code> opens and switches to the REPL buffer. Once the REPL buffer is open, <code>, s s</code> toggles focus between the REPL and source code buffers.</p>
+<p>Alternatively, <code>SPC b b</code> opens the buffer list. Typing <code>repl</code> narrows to REPL buffers. <code>C-j</code> and <code>C-k</code> navigate the buffer list and <code>RET</code> selects the buffer.</p>
+<p>A buffer for each Clojure REPL &amp; ClojureScript REPL processs will be shown in the buffer list.</p>
+<h2 id="configure-repl-buffer-size-limit">Configure REPL Buffer size limit</h2>
+<p>By default, standard out (printlin and logs to console) will be printed in the REPL buffer.</p>
+<p>Logging into the REPL buffer, especially logs with verbose output, can slow down Emacs performance.</p>
+<p>Add <code>cider-repl-buffer-size-limit 100</code> to the <code>cider</code> layer to limit lines shown in REPL buffer.  Only that number of lines will be retailed in the buffer, with any more lines automatically deleted.  This should keep the REPL buffer more responsive.</p>
+<pre><code class="lang-elisp">(clojure :variables
+         cider-repl-buffer-size-limit 100)
 </code></pre>
-<p><img src="../images/spacemacs-clojure-repl-pop-to-buffer-on-connect.png" alt="Spacemacs - Clojure - Show REPL Buffer on Connect"></p>
+<h2 id="show-repl-buffer-automatically">Show REPL buffer automatically</h2>
+<p>To automatically show the REPL buffer once you have connected, add the following code to the <code>dotspacemacs/user-config</code> section of the <code>.spacemacs</code> file.</p>
+<pre><code class="lang-elisp">(clojure :variables
+         cider-repl-pop-to-buffer-on-connect t)
+</code></pre>
 <p>The REPL buffer will open as an additional window in the current frame.</p>
+<h2 id="slow-repl-buffer">Slow REPL buffer</h2>
+<p><code>SPC SPC fundamental-mode</code> will switch off the text formatting and help the REPL buffer should be faster to respond.</p>
+<p>However, fundamental-mode should be a last resource as it limits the usefulness of the REPL buffer.</p>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -3875,7 +3901,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Show REPL Buffer on connect","level":"8.2.7.3","depth":3,"next":{"title":"REPL Command Menu","level":"8.2.7.4","depth":3,"path":"external-repl/repl-command-menu.md","ref":"external-repl/repl-command-menu.md","articles":[]},"previous":{"title":"Switching to REPL","level":"8.2.7.2","depth":3,"path":"external-repl/switching-to-repl.md","ref":"external-repl/switching-to-repl.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d","P9IClojure":"https://practicalli.github.io/clojure/","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"external-repl/show-repl-on-connect.md","mtime":"2022-01-04T11:09:51.623Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-04T11:10:53.662Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Show REPL Buffer on connect","level":"8.2.7.3","depth":3,"next":{"title":"REPL Command Menu","level":"8.2.7.4","depth":3,"path":"external-repl/repl-command-menu.md","ref":"external-repl/repl-command-menu.md","articles":[]},"previous":{"title":"Switching to REPL","level":"8.2.7.2","depth":3,"path":"external-repl/switching-to-repl.md","ref":"external-repl/switching-to-repl.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"external-repl/show-repl-on-connect.md","mtime":"2022-01-09T02:52:39.799Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T02:53:46.289Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -45,7 +45,7 @@ Use the `-g` option for a filename to search (globbing), or `-g!` for a filename
 
 `-g!*.md map` will search for `map` for all files except those ending in `.md`
 
-![Spacemacs Helm-Ag ripgrep globbing not .md files](/images/spacemacs-heml-ag-ripgrep-globbing-not-md.png)
+![Spacemacs Helm-Ag ripgrep globbing not .md files](/images/spacemacs-helm-ag-ripgrep-globbing-not-md.png)
 
 
 ## Example search patterns
@@ -71,7 +71,7 @@ Searching a project using `SPC /` and `SPC s p` will ignore hidden files, those 
 
 `-- --hidden` or `-- -uu` after the search pattern to include hidden files in the search
 
-For example, to search for the pattern `scisors`
+For example, to search for the pattern `scissors`
 
 ```
 scissors -- --hidden

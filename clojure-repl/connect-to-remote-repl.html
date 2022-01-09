@@ -292,7 +292,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/project-file-navigation.html">
+        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/structural-editing.html">
+            
+                <a href="../why-spacemacs/structural-editing.html">
+            
+                    
+                    Structural editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/project-file-navigation.html">
             
                 <a href="../why-spacemacs/project-file-navigation.html">
             
@@ -305,7 +318,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/layouts.html">
+        <li class="chapter " data-level="1.1.2.9" data-path="../why-spacemacs/layouts.html">
             
                 <a href="../why-spacemacs/layouts.html">
             
@@ -1001,9 +1014,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/keybindng-reference.html">
+        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/key-binding-reference.html">
             
-                <a href="../spacemacs-basics/vim-style/keybindng-reference.html">
+                <a href="../spacemacs-basics/vim-style/key-binding-reference.html">
             
                     
                     Keybinding reference
@@ -2912,7 +2925,7 @@
                 <a href="../source-control/magit/interactive-rebasing.html">
             
                     
-                    Interactve Rebasing
+                    Interactive Rebasing
             
                 </a>
             
@@ -3451,9 +3464,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignement.html">
+        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignment.md">
             
-                <a href="../reference/clojure/local-assignement.html">
+                <span>
             
                     
                     Local Assignment
@@ -3826,7 +3839,7 @@
                                 <p><img src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-remote-repl-terminal-editor.png" alt="Connecting to a remote REPL with a Clojure aware editor"></p>
 <h1 id="connect-to-a-remote-repl-with-a-clojure-aware-editor">Connect to a remote REPL with a Clojure aware editor</h1>
 <p>Using a remote REPL can provide a collaborative coding environment as well as a means for working within remote environments (docker images, cloud servers, etc).</p>
-<p>Running a remote REPL can also provide longevity to the process, as many clients (editors, ssh terminals) can connect to the REPL over time, disconnecting from the running process without interupting the process.  This provides a very resilient way of running a REPL.</p>
+<p>Running a remote REPL can also provide longevity to the process, as many clients (editors, ssh terminals) can connect to the REPL over time, disconnecting from the running process without interrupting the process.  This provides a very resilient way of running a REPL.</p>
 <p><a href="https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html" target="_blank">practicalli/clojure-deps-edn</a> provides many aliases to configure a REPL to work with other community tools.  These aliases are easier to manage when running a REPL outside of an editor which automatically injects its own configuration.  This configuration can be installed into the remote environment and ideally added into the server build process.</p>
 <h2 id="establish-a-remote-environment">Establish a remote environment</h2>
 <p>A small Virtual Private Server (VPS) is enough for a remote Clojure environment.</p>
@@ -3877,14 +3890,6 @@
 <td>$3.50</td>
 </tr>
 <tr>
-<td><a href="https://dedipath.com/ssd-vps" target="_blank">Dedipath</a></td>
-<td>1</td>
-<td>512Mb</td>
-<td>10Gb</td>
-<td>1Gbps unmetered</td>
-<td>$1.67</td>
-</tr>
-<tr>
 <td><a href="https://www.time4vps.com/linux-vps/" target="_blank">Time4VPS</a></td>
 <td>1 x 2.6GHz</td>
 <td>2Gb</td>
@@ -3907,7 +3912,7 @@
   LocalForward 7888 localhost:7888
   Port 22
 </code></pre><h2 id="configure-emacs-to-listen-to-nrepl-port">Configure Emacs to listen to nREPL port</h2>
-<p>Emacs can be used to connect to a running Clojure project that has been run with the nREPL and Cider middleware, e.g. <code>:middleware/cider-clj</code> from <a href="http://practicalli.github.io/clojure/clojure-tools/install/community-tools.html" target="_blank"><code>practicalli/clojure-deps-edn</code></a></p>
+<p>Emacs can be used to connect to a running Clojure project that has been run with the nREPL and Cider middleware, e.g. <code>:middleware/cider-clj</code> from <a href="http://practical.li/clojure/clojure-tools/install/community-tools.html" target="_blank"><code>practicalli/clojure-deps-edn</code></a></p>
 <p>Edit your Emacs <code>~/.emacs.d/init.el</code> file and add the following configuration.</p>
 <p>For Spacemacs, edit <code>~/.spacemacs</code> and add the following code to <code>dotspacemacs/user-config</code></p>
 <pre><code class="lang-elisp">  (setq nrepl-use-ssh-fallback-for-remote-hosts t)
@@ -3981,7 +3986,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Connect to remote REPL","level":"4.2.2","depth":2,"next":{"title":"Portal data visualization","level":"4.2.3","depth":2,"path":"clojure-repl/portal-data-visualization.md","ref":"clojure-repl/portal-data-visualization.md","articles":[]},"previous":{"title":"Connect to REPL","level":"4.2.1","depth":2,"path":"clojure-repl/connect-to-repl.md","ref":"clojure-repl/connect-to-repl.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d","P9IClojure":"https://practicalli.github.io/clojure/","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"clojure-repl/connect-to-remote-repl.md","mtime":"2022-01-04T11:09:51.619Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-04T11:10:53.662Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Connect to remote REPL","level":"4.2.2","depth":2,"next":{"title":"Portal data visualization","level":"4.2.3","depth":2,"path":"clojure-repl/portal-data-visualization.md","ref":"clojure-repl/portal-data-visualization.md","articles":[]},"previous":{"title":"Connect to REPL","level":"4.2.1","depth":2,"path":"clojure-repl/connect-to-repl.md","ref":"clojure-repl/connect-to-repl.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"clojure-repl/connect-to-remote-repl.md","mtime":"2022-01-09T02:52:39.795Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T02:53:46.289Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

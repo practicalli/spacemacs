@@ -9,7 +9,7 @@ Show progress by adding TODO states to the headings of an .org document.  The de
 ## Custom TODO States
 A custom set of states can be configured, although it seems useful to keep the defaults and simply add custom states.
 
-[Practicalli/spacemacs.d](https://github.com/practcialli/spacemacs.d) includes a simple kanban style of states.  The `|` character denotes closed TODO states.
+[Practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d) includes a simple kanban style of states.  The `|` character denotes closed TODO states.
 
 In `dotspacemacs/user-config` in the `.spacemacs` file, define states and workflow for all `.org` files
 
@@ -38,7 +38,7 @@ Using colors for the TODO states makes them easier to distinguish, especially in
 `org-todo-keyword-faces` is a `defcustom` function for setting colors for the TODO state faces. Using the [X11 color names](https://en.wikipedia.org/wiki/Web_colors) gives colours that are easy to notice but are not to strong.
 
 In `dotspacemacs/user-config` in the `.spacemacs` file, add following to configure custom colors
-```elsip
+```elisp
   (with-eval-after-load 'org
     (setq org-todo-keyword-faces
          '(("todo" . "SlateGray")

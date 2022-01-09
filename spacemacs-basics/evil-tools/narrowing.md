@@ -12,7 +12,7 @@ For example, you may have two Clojure functions that have use the same local nam
 
 ## Example: Narrowing and multiple replace
 
-In this example I narrow my 100daysofcode log to just edit a single day of the log and use iedit to manage a multiple replace on just the text for that day.
+In this example I narrow my 100-days-of-code log to just edit a single day of the log and use iedit to manage a multiple replace on just the text for that day.
 
 {% youtube %}
 https://www.youtube.com/watch?v=4bVMXXxPiQs

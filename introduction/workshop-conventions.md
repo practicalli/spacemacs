@@ -9,13 +9,16 @@ General menu and commands
 | `SPC` - global menu | `,` - major mode menu | Evil (Vim) normal mode | Evil (Vim) insert mode | Name of Emacs command |
 
 
-Vim Mode specific keybindings
+Evil (vim-style) states
 
-| Normal           | Insert                | Visual             | Motion | Lisp               | Iedit             | Evilified | Emacs                     |
-|------------------|-----------------------|--------------------|--------|--------------------|-------------------|-----------|---------------------------|
-| The default mode | Mode for writing text | Mode for selection | ?      | Structural Editing | Text manipulation |           | Classic Emacs keybindings |
-|                  |                       |                    |        |                    |                   |           |                           |
-
+* normal - manipulating text
+* insert - typing in new text
+* visual - selecting regions of text
+* motion - ?
+* lisp - structural editing (smartparens)
+* iedit - editing multiple occurrences in a buffer simultaneously
+* Evilified - Emacs applications with Evil key bindings
+* emacs - Emacs chorded key bindings, i.e. `C-c C-x`, `C-x C-s`, etc.
 
 
 ### Spacemacs - `SPC`
@@ -23,9 +26,6 @@ Vim Mode specific keybindings
 Spacemacs provides a global menu where you can access commands using a mnemonic, text based menu.  Its the recommended starting point for those new to Spacemacs.
 
 Access the global menu via `SPC` in Evil Normal mode or via `M-m` in all other modes
-
-> ####Info
-> The use of `SPC`
 
 
 ### Major Mode - `,`
@@ -53,3 +53,10 @@ Use a command when there is no menu item or keybinding.
 ## Classic Emacs Keybindings
 
 The keybindings used in Emacs (holy mode) are also available, many of which start with `C-c` or `C-x`.  If you are familiar with these then its fine to stick with them.  However, if you have trouble learning or remembering them, then switch to the Spacemacs mnemonic alternatives.
+
+
+## Universal argument
+
+`SPC-u` is the key binding for the Emacs universal argument, `C-u` in Emacs, which is used before other key bindings to modify the function that is called.
+
+For example, `SPC-u , m s` in a Clojure file will start a REPL, but allow for editing of the command line that starts the REPL process

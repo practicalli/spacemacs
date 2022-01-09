@@ -1,12 +1,15 @@
 # Cider doc
+
 View the documentation for function definitions and other vars, including links to browse the Clojure specification and source code.
 
 > #### Hint::Evaluate a namespace to enable Help
 > Help only works for special forms (`def`, `if`, etc.) until any namespace from a project is first evaluated.
 
- `, '` (`sesman-start`) to start or connect to a REPL proess
+ `, '` (`sesman-start`) to start or connect to a REPL process
 
-`, e f` with the cursor on a namespace definition in the project source code. This will load the `clojure.core` functions and vars as well as the relevant namespaces of the project. Alternatively, use `, e b` to evaluate a source code buffer if all source code in that namespace compils.
+`, e f` with the cursor on the namespace definition in the source code buffer. This loads the `clojure.core` functions and vars and the required namespaces for the current namespace.
+
+Alternatively, use `, e b` to evaluate a source code buffer if all source code in that namespace is syntactically correct.
 
 `, h h` shows the documentation for the current function or var under the cursor, or prompts for a function or var name.
 

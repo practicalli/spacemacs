@@ -11,7 +11,7 @@
         * [Transient state menus](why-spacemacs/transient-state-menus.md)
         * [Discoverable](why-spacemacs/helm.md)
             * [Helm Transient State](why-spacemacs/helm-transient-state.md)
-        <!-- * [Structural editing](why-spacemacs/structural-editing.md) -->
+        * [Structural editing](why-spacemacs/structural-editing.md)
         * [Project & File navigation](why-spacemacs/project-file-navigation.md)
         * [Layouts](why-spacemacs/layouts.md)
     * [Spacemacs mini cheatsheet](spacemacs-mini-cheatsheet.md)
@@ -66,7 +66,7 @@
     * [Speaking Evil](spacemacs-basics/vim-style/speaking-evil.md)
     * [Vim Quick Reference](spacemacs-basics/vim-style/vim-quick-reference.md)
     * [Vim Tips for developers](spacemacs-basics/vim-style/vim-tips-for-developers.md)
-    * [Keybinding reference](spacemacs-basics/vim-style/keybindng-reference.md)
+    * [Keybinding reference](spacemacs-basics/vim-style/key-binding-reference.md)
 * [Evil tools](spacemacs-basics/evil-tools/index.md)
     * [Narrowing](spacemacs-basics/evil-tools/narrowing.md)
     * [helm-swoop](spacemacs-basics/evil-tools/helm-swoop.md)
@@ -215,7 +215,7 @@
         * [forks](source-control/magit/forge/forks.md)
     * [Changing History](source-control/magit/changing-history.md)
         * [Squash commits](source-control/magit/commit-squash.md)
-        * [Interactve Rebasing](source-control/magit/interactive-rebasing.md)
+        * [Interactive Rebasing](source-control/magit/interactive-rebasing.md)
         * [Reset Commits](source-control/magit/reset-commit-history.md)
     * [Git blame](source-control/magit/blame.md)
     * [Timemachine](source-control/magit/timemachine.md)
@@ -240,7 +240,7 @@
 <!--     * [Multiple Environments (repl)](figwheel/multiple-environments.md) -->
 <!--     * [Static Content](figwheel/static-content.md) -->
 <!--     * [Heads up display](figwheel/heads-up-display.md) -->
-<!--     * [Broadcasting](figwheel/braodcasting.md) -->
+<!--     * [Broadcasting](figwheel/broadcasting.md) -->
 <!--     * [Other Options](figwheel/other-options.md) -->
 <!-- * [Using Figwheel-main](using-figwheel/index.md) -->
 <!--     * [Template](using-figwheel/figwheel-main-template.md) -->
@@ -290,7 +290,7 @@
         * [Data Structures](reference/clojure/data-structures.md)
         * [Functions](reference/clojure/functions.md)
         * [Control flow](reference/clojure/control-flow.md)
-        * [Local Assignment](reference/clojure/local-assignement.md)
+        * [Local Assignment](reference/clojure/local-assignment.md)
 * [Alternative tooling](alternative-tooling/index.md)
     * [NeoTree](alternative-tooling/neotree.md)
     * [Silver Searcher - ag](alternative-tooling/silversearcher-ag.md)

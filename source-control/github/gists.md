@@ -1,5 +1,8 @@
 # GitHub Gists
 
+> #### Hint::gists.el not functioning correctly
+> Changes to the GitHub API have resulted in gist.el failing to work for most functions.  It should be possible to create a gist from a buffer and list gists, however, other functions my not work or stop Emacs from working
+
 [GitHub Gists](https://gist.github.com/) are used to share code or configuration without the need of a git project.
 
 > #### Hint::github layer no longer includes gist support
@@ -36,6 +39,7 @@ Add keybindings for the package in the `dotspacemacs/user-config` section of `.s
 > If you have already used GitHub from Spacemacs, then your account details will have been saved so you do not need to enter them each time.
 
 ## Listing your Gists
+
 `SPC o g l` will display a buffer listing all Gists for your account.
 
 ![Spacemacs - Gist list](/images/spacemacs-gist-list.png)
@@ -74,7 +78,7 @@ Use the following commands in the Gist list buffer.
 >
 > Once the gist is created, delete the original file and open the Gist (as described above).  Then changes to the file will be saved
 
-## Creating Gists from files with `dird`
+## Creating Gists with `dired`
 
 If you open a dired buffer you can make gists from marked files, `m`, by pressing `@`.  This will make a public gist out of marked files (or if you use with a prefix, it will make private gists)
 

@@ -8,7 +8,7 @@ These commands typically require a running REPL to work.
 This section covers the more commonly used refactor commands.
 
 ## Enable clj-refactor
-[Enable using the `clojure-enable-clj-refactor` variable](http://practicalli.github.io/spacemacs/install-spacemacs/enhance-clojure-experience.html#edit-spacemacs-and-add-layers) in your `.spacemacs` layer configuration
+[Enable using the `clojure-enable-clj-refactor` variable](http://practical.li/spacemacs/install-spacemacs/enhance-clojure-experience.html#edit-spacemacs-and-add-layers) in your `.spacemacs` layer configuration
 
 ```elisp
 (clojure :variables

@@ -292,7 +292,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/project-file-navigation.html">
+        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/structural-editing.html">
+            
+                <a href="../why-spacemacs/structural-editing.html">
+            
+                    
+                    Structural editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/project-file-navigation.html">
             
                 <a href="../why-spacemacs/project-file-navigation.html">
             
@@ -305,7 +318,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/layouts.html">
+        <li class="chapter " data-level="1.1.2.9" data-path="../why-spacemacs/layouts.html">
             
                 <a href="../why-spacemacs/layouts.html">
             
@@ -1001,9 +1014,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/keybindng-reference.html">
+        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/key-binding-reference.html">
             
-                <a href="../spacemacs-basics/vim-style/keybindng-reference.html">
+                <a href="../spacemacs-basics/vim-style/key-binding-reference.html">
             
                     
                     Keybinding reference
@@ -2912,7 +2925,7 @@
                 <a href="../source-control/magit/interactive-rebasing.html">
             
                     
-                    Interactve Rebasing
+                    Interactive Rebasing
             
                 </a>
             
@@ -3451,9 +3464,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignement.html">
+        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignment.md">
             
-                <a href="../reference/clojure/local-assignement.html">
+                <span>
             
                     
                     Local Assignment
@@ -3826,8 +3839,9 @@
                                 <h1 id="cider-doc">Cider doc</h1>
 <p>View the documentation for function definitions and other vars, including links to browse the Clojure specification and source code.</p>
 <div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="evaluate-a-namespace-to-enable-help"><i class="fa fa-lightbulb-o"></i> Evaluate a namespace to enable Help</h3></div><div class="panel-body"><p>Help only works for special forms (<code>def</code>, <code>if</code>, etc.) until any namespace from a project is first evaluated.</p></div></div>
-<p> <code>, &apos;</code> (<code>sesman-start</code>) to start or connect to a REPL proess</p>
-<p><code>, e f</code> with the cursor on a namespace definition in the project source code. This will load the <code>clojure.core</code> functions and vars as well as the relevant namespaces of the project. Alternatively, use <code>, e b</code> to evaluate a source code buffer if all source code in that namespace compils.</p>
+<p> <code>, &apos;</code> (<code>sesman-start</code>) to start or connect to a REPL process</p>
+<p><code>, e f</code> with the cursor on the namespace definition in the source code buffer. This loads the <code>clojure.core</code> functions and vars and the required namespaces for the current namespace.</p>
+<p>Alternatively, use <code>, e b</code> to evaluate a source code buffer if all source code in that namespace is syntactically correct.</p>
 <p><code>, h h</code> shows the documentation for the current function or var under the cursor, or prompts for a function or var name.</p>
 <p><img src="../images/spacemacs-clojure-doc-defn.png" alt="Spacemacs Clojure docs - defn example"></p>
 <p>The documentation popup shows</p>
@@ -3891,7 +3905,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Cider doc","level":"4.11.1","depth":2,"next":{"title":"Related functions","level":"4.11.2","depth":2,"path":"documentation/apropos.md","ref":"documentation/apropos.md","articles":[]},"previous":{"title":"Documentation","level":"4.11","depth":1,"path":"documentation/index.md","ref":"documentation/index.md","articles":[{"title":"Cider doc","level":"4.11.1","depth":2,"path":"documentation/cider-doc.md","ref":"documentation/cider-doc.md","articles":[]},{"title":"Related functions","level":"4.11.2","depth":2,"path":"documentation/apropos.md","ref":"documentation/apropos.md","articles":[]},{"title":"Javadoc","level":"4.11.3","depth":2,"path":"documentation/javadoc.md","ref":"documentation/javadoc.md","articles":[]},{"title":"Comments","level":"4.11.4","depth":2,"path":"documentation/comments.md","ref":"documentation/comments.md","articles":[]},{"title":"Markdown documentation","level":"4.11.5","depth":2,"path":"markdown-mode/index.md","ref":"markdown-mode/index.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d","P9IClojure":"https://practicalli.github.io/clojure/","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"documentation/cider-doc.md","mtime":"2022-01-04T11:09:51.623Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-04T11:10:53.662Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Cider doc","level":"4.11.1","depth":2,"next":{"title":"Related functions","level":"4.11.2","depth":2,"path":"documentation/apropos.md","ref":"documentation/apropos.md","articles":[]},"previous":{"title":"Documentation","level":"4.11","depth":1,"path":"documentation/index.md","ref":"documentation/index.md","articles":[{"title":"Cider doc","level":"4.11.1","depth":2,"path":"documentation/cider-doc.md","ref":"documentation/cider-doc.md","articles":[]},{"title":"Related functions","level":"4.11.2","depth":2,"path":"documentation/apropos.md","ref":"documentation/apropos.md","articles":[]},{"title":"Javadoc","level":"4.11.3","depth":2,"path":"documentation/javadoc.md","ref":"documentation/javadoc.md","articles":[]},{"title":"Comments","level":"4.11.4","depth":2,"path":"documentation/comments.md","ref":"documentation/comments.md","articles":[]},{"title":"Markdown documentation","level":"4.11.5","depth":2,"path":"markdown-mode/index.md","ref":"markdown-mode/index.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"documentation/cider-doc.md","mtime":"2022-01-09T02:52:39.799Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T02:53:46.289Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

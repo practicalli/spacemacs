@@ -18,7 +18,7 @@ Add the `git-magit-status-fullscreen t` variable to the `git` layer in `.spacema
 
 `SPC f e d` opens the `.spacemacs` configuration file (`M-m f e d` Emacs state)
 
-Use `/` and start typing `configuration-layers` to search for the `dotspacemacs-configuration-layers` section.  `RTN` confirms the search text and `n` jumps to the next occurance, `N` jumps to the previous occurrence.
+Use `/` and start typing `configuration-layers` to search for the `dotspacemacs-configuration-layers` section.  `RTN` confirms the search text and `n` jumps to the next occurrence, `N` jumps to the previous occurrence.
 
 ```lisp
    dotspacemacs-configuration-layers

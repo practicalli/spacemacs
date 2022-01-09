@@ -129,7 +129,7 @@ To help Joker work with Clojure common code, then create the file `~/.jokerd/lin
 (declare are)
 ```
 
-> #### Hint::Project specfic over-rides
+> #### Hint::Project specific over-rides
 > You can use `joker` and `.jokerd/linter.*` files in the root of a project, or anywhere up the path to your home directory.
 >
 > I recommend just using these files in the root of your home directory (global for all projects) so you have one configuration to work with.

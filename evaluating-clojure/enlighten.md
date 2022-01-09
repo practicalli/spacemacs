@@ -6,6 +6,6 @@ As a homage to [LightTable](https://lighttable.com) live evaluation, you can ena
 |-------------|-------------------------------------------------------------------|
 | `, T e`     | Toggle Enlighten mode, showing intermediate values                |
 
-This provides a basic version of the [Cider inspector](inspect.html) which is always on (until you toggle it off).
+This provides a basic version of the [Cider inspector](inspect.md) which is always on (until you toggle it off).
 
 [![Spacemacs - Clojure Enlighten mode](/images/spacemacs-clojure-evaluation-enlighten-example.png)](/images/spacemacs-clojure-evaluation-enlighten-example.png)

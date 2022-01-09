@@ -56,7 +56,8 @@ The [Spacemacs debugging page](https://github.com/syl20bnr/spacemacs/wiki/Debugg
 
 * [Debugging memory issues](https://www.emacswiki.org/emacs/EmacsMemoryDebugging)
 
-## Issues with spawnd processes
+## Issues with spawned processes
+
 `SPC a p` (`list-processes`) lists the processes started by or from within Spacemacs, eg. for Clojure its `nrepl-server` and `nrepl-connection` processes when running `cider-jack-in`. Use `SPC a P` (`proced`) to see all operating system processes.
 
 ![Spacemacs Applications - Process list](/images/spacemacs-application-processes-buffer.png)

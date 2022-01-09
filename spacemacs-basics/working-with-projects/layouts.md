@@ -70,7 +70,7 @@ There are also some handy globally available key bindings related to workspaces:
 
 
 ## References
-* [spacemacs-layout layer on GitHub](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Bspacemacs/spacemacs-layouts)
+* [spacemacs-layout layer on GitHub](https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Bspacemacs/spacemacs-layouts)
 * [develop.spacemacs.org layer description](https://develop.spacemacs.org/layers/+spacemacs/spacemacs-layouts/README.html)
 * [Spacemacs documentation](http://develop.spacemacs.org/doc/DOCUMENTATION.html#layouts-and-workspaces)
 * [Eyebrowse GitHub repository](https://github.com/wasamasa/eyebrowse)

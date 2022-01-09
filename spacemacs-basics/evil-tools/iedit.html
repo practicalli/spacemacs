@@ -292,7 +292,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.7" data-path="../../why-spacemacs/project-file-navigation.html">
+        <li class="chapter " data-level="1.1.2.7" data-path="../../why-spacemacs/structural-editing.html">
+            
+                <a href="../../why-spacemacs/structural-editing.html">
+            
+                    
+                    Structural editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../../why-spacemacs/project-file-navigation.html">
             
                 <a href="../../why-spacemacs/project-file-navigation.html">
             
@@ -305,7 +318,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.8" data-path="../../why-spacemacs/layouts.html">
+        <li class="chapter " data-level="1.1.2.9" data-path="../../why-spacemacs/layouts.html">
             
                 <a href="../../why-spacemacs/layouts.html">
             
@@ -1001,9 +1014,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.5" data-path="../vim-style/keybindng-reference.html">
+        <li class="chapter " data-level="3.2.5" data-path="../vim-style/key-binding-reference.html">
             
-                <a href="../vim-style/keybindng-reference.html">
+                <a href="../vim-style/key-binding-reference.html">
             
                     
                     Keybinding reference
@@ -2912,7 +2925,7 @@
                 <a href="../../source-control/magit/interactive-rebasing.html">
             
                     
-                    Interactve Rebasing
+                    Interactive Rebasing
             
                 </a>
             
@@ -3451,9 +3464,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.1.5.6" data-path="../../reference/clojure/local-assignement.html">
+        <li class="chapter " data-level="8.1.5.6" data-path="../../reference/clojure/local-assignment.md">
             
-                <a href="../../reference/clojure/local-assignement.html">
+                <span>
             
                     
                     Local Assignment
@@ -3824,179 +3837,44 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="editing-with-vim-and-iedit">Editing with Vim and iedit</h1>
-<p><code>SPC s e</code> to use <a href="https://github.com/syl20bnr/evil-iedit-state" target="_blank"><code>evil-iedit-state</code></a> to quickly edit multiple occurrences of a symbol or selection.</p>
+<p>Make multiple matching edits within a buffer</p>
+<p><code>SPC s e</code> to start <a href="https://github.com/syl20bnr/evil-iedit-state" target="_blank"><code>evil-iedit-state</code></a> to quickly edit multiple occurrences of a symbol within a buffer or selection. Use iedit with helm-ag to <a href="replacing-text-across-projects.html">make multiple matching edits across a project</a>.</p>
 <p><code>e</code> within visual state and symbol highlight transient state also enables iedit.</p>
+<h2 id="common-usage">Common usage</h2>
+<p><code>#</code> to select all the occurrences of a symbol or word, <code>e</code> to start iedit</p>
+<p><code>n</code> or <code>N</code> to jump between occurrences, <code>TAB</code> to deselect or re-select the specific occurrence</p>
 <p><div style="position: relative;padding-bottom: 56.25%;padding-top: 25px;height: 0;"><iframe frameborder="0" allowfullscreen style="border: none;position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="//www.youtube.com/embed/VCxJy8abkfA"></iframe></div></p>
-<h2 id="iedit-states-key-bindings">iedit states key bindings</h2>
-<table>
-<thead>
-<tr>
-<th>Key Binding</th>
-<th>From</th>
-<th>To</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>SPC s e</code></td>
-<td>normal or visual</td>
-<td>iedit</td>
-</tr>
-<tr>
-<td><code>e</code></td>
-<td>expand-region</td>
-<td>iedit</td>
-</tr>
-<tr>
-<td><code>ESC</code></td>
-<td>iedit</td>
-<td>normal</td>
-</tr>
-<tr>
-<td><code>C-g</code></td>
-<td>iedit</td>
-<td>normal</td>
-</tr>
-<tr>
-<td><code>fd</code></td>
-<td>iedit</td>
-<td>normal</td>
-</tr>
-<tr>
-<td><code>ESC</code></td>
-<td>iedit-insert</td>
-<td>iedit</td>
-</tr>
-<tr>
-<td><code>C-g</code></td>
-<td>iedit-insert</td>
-<td>normal</td>
-</tr>
-<tr>
-<td><code>fd</code></td>
-<td>iedit-insert</td>
-<td>normal</td>
-</tr>
-</tbody>
-</table>
-<p>iedit also integrates with <a href="https://github.com/magnars/expand-region.el" target="_blank"><code>expand-region</code></a> for quick editing of the currently selected text by pressing <code>e</code>.</p>
-<div class="panel panel-primary"><div class="panel-heading"><h3 class="panel-title" id="switching-edit-states"><i class="fa fa-edit"></i> Switching edit states</h3></div><div class="panel-body"><p>Evil commands which switch to <code>insert state</code> will switch in <code>iedit-insert state</code>.</p></div></div>
-<h2 id="in-iedit-state">In iedit state</h2>
-<p><code>iedit state</code> inherits from <code>normal state</code>, the following key bindings are specific to <code>iedit state</code>.</p>
-<table>
-<thead>
-<tr>
-<th>Key Binding</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ESC</code></td>
-<td>go back to normal state</td>
-</tr>
-<tr>
-<td><code>TAB</code></td>
-<td>toggle current occurrence</td>
-</tr>
-<tr>
-<td><code>0</code></td>
-<td>go to the beginning of the current occurrence</td>
-</tr>
-<tr>
-<td><code>$</code></td>
-<td>go to the end of the current occurrence</td>
-</tr>
-<tr>
-<td><code>#</code></td>
-<td>prefix all occurrences with an increasing number (SPC u to choose starting number).</td>
-</tr>
-<tr>
-<td><code>A</code></td>
-<td>go to the end of the current occurrence and switch to iedit-insert state</td>
-</tr>
-<tr>
-<td><code>D</code></td>
-<td>delete the occurrences</td>
-</tr>
-<tr>
-<td><code>F</code></td>
-<td>restrict the scope to the function</td>
-</tr>
-<tr>
-<td><code>gg</code></td>
-<td>go to first occurrence</td>
-</tr>
-<tr>
-<td><code>G</code></td>
-<td>go to last occurrence</td>
-</tr>
-<tr>
-<td><code>I</code></td>
-<td>go to the beginning of the current occurrence and switch to iedit-insert state</td>
-</tr>
-<tr>
-<td><code>J</code></td>
-<td>increase the editing scope by one line below</td>
-</tr>
-<tr>
-<td><code>K</code></td>
-<td>increase the editing scope by one line above</td>
-</tr>
-<tr>
-<td><code>L</code></td>
-<td>restrict the scope to the current line</td>
-</tr>
-<tr>
-<td><code>n</code></td>
-<td>go to next occurrence</td>
-</tr>
-<tr>
-<td><code>N</code></td>
-<td>go to previous occurrence</td>
-</tr>
-<tr>
-<td><code>p</code></td>
-<td>replace occurrences with last yanked (copied) text</td>
-</tr>
-<tr>
-<td><code>S</code></td>
-<td>(substitute) delete the occurrences and switch to iedit-insert state</td>
-</tr>
-<tr>
-<td><code>V</code></td>
-<td>toggle visibility of lines with no occurrence</td>
-</tr>
-<tr>
-<td><code>U</code></td>
-<td>Up-case the occurrences</td>
-</tr>
-<tr>
-<td><code>C-U</code></td>
-<td>down-case the occurrences</td>
-</tr>
-</tbody>
-</table>
+<h3 id="refining-text-selection">Refining text selection</h3>
+<p><code>SPC v</code> selects a word and <code>v</code> expands the selection.</p>
+<p>When a name is separated such as with kebab case, <code>-</code>, then <code>SPC v v v v</code> can select words-separated-by-dashes, with a <code>v</code> for each part of the word selection.  The same selection works with file paths and URL&apos;s.</p>
+<p>Narrowing, <code>SPC n</code>, limits the scope of iedit so only the relevant occurrences are changed and reduces the need to deselect unwanted occurrences.</p>
+<p><code>SPC n f</code> narrows the scope to a function, <code>SPC n r</code> narrows to a pre-selected range.</p>
+<h2 id="iedit-state-key-bindings">iedit state key bindings</h2>
+<p><code>iedit state</code> changes the behaviour of the following Evil normal state key bindings (every other normal state key binding remains the same)</p>
+<p>| Key   | Description                                                                         |
+|-------+-------------------------------------------------------------------------------------|
+| <code>ESC</code> | go back to normal state                                                             |
+| <code>TAB</code> | toggle selection of current occurrence                                              |
+| <code>0</code>   | go to the beginning of the current occurrence                                       |
+| <code>$</code>   | go to the end of the current occurrence                                             |
+| <code>#</code>   | prefix all occurrences with an increasing number (SPC u to choose starting number). |
+| <code>A</code>   | go to the end of the current occurrence and switch to iedit-insert state            |
+| <code>D</code>   | delete the occurrences                                                              |
+| <code>F</code>   | restrict the scope to the function                                                  |
+| <code>gg</code>  | go to first occurrence                                                              |
+| <code>G</code>   | go to last occurrence                                                               |
+| <code>I</code>   | go to the beginning of the current occurrence and switch to iedit-insert state      |
+| <code>J</code>   | increase the editing scope by one line below                                        |
+| <code>K</code>   | increase the editing scope by one line above                                        |
+| <code>L</code>   | restrict the scope to the current line                                              |
+| <code>n</code>   | go to next occurrence                                                               |
+| <code>N</code>   | go to previous occurrence                                                           |
+| <code>p</code>   | replace occurrences with last yanked (copied) text                                  |
+| <code>S</code>   | (substitute) delete the occurrences and switch to iedit-insert state                |
+| <code>V</code>   | toggle visibility of lines with no occurrence                                       |
+| <code>U</code>   | Up-case the occurrences                                                             |
+| <code>C-U</code> | down-case the occurrences                                                           |</p>
 <div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="hint"><i class="fa fa-lightbulb-o"></i> Hint</h3></div><div class="panel-body"><p><code>0</code>, <code>$</code>, <code>A</code> and <code>I</code> have the default Vim behavior when used outside of an <code>occurrence</code>.</p></div></div>
-<h2 id="in-iedit-insert-state">In iedit-insert state</h2>
-<table>
-<thead>
-<tr>
-<th>Key binding</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ESC</code></td>
-<td>go back to iedit state</td>
-</tr>
-<tr>
-<td><code>C-g</code></td>
-<td>go back to normal state</td>
-</tr>
-</tbody>
-</table>
 <h2 id="reference">Reference</h2>
 <ul>
 <li><a href="https://github.com/victorhge/iedit" target="_blank">iedit GitHub project</a></li>
@@ -4045,7 +3923,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"iedit","level":"3.3.3","depth":2,"next":{"title":"iedit in action","level":"3.3.3.1","depth":3,"path":"spacemacs-basics/evil-tools/iedit-in-action.md","ref":"spacemacs-basics/evil-tools/iedit-in-action.md","articles":[]},"previous":{"title":"helm-swoop","level":"3.3.2","depth":2,"path":"spacemacs-basics/evil-tools/helm-swoop.md","ref":"spacemacs-basics/evil-tools/helm-swoop.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d","P9IClojure":"https://practicalli.github.io/clojure/","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"spacemacs-basics/evil-tools/iedit.md","mtime":"2022-01-04T11:09:51.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-04T11:10:53.662Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"iedit","level":"3.3.3","depth":2,"next":{"title":"iedit in action","level":"3.3.3.1","depth":3,"path":"spacemacs-basics/evil-tools/iedit-in-action.md","ref":"spacemacs-basics/evil-tools/iedit-in-action.md","articles":[]},"previous":{"title":"helm-swoop","level":"3.3.2","depth":2,"path":"spacemacs-basics/evil-tools/helm-swoop.md","ref":"spacemacs-basics/evil-tools/helm-swoop.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"spacemacs-basics/evil-tools/iedit.md","mtime":"2022-01-09T02:52:39.975Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T02:53:46.289Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -9,7 +9,7 @@ Update project dependencies using `clj-refactor` on your `project.clj` configura
 * `up` - Update the project dependency versions
 * `sp` - Sort project dependencies
 
-> If you are adding libraries as dependencies then you may wish to [refactor the relevant namespace](manage-namespaces.html), as shown in the next section.
+> If you are adding libraries as dependencies then you may wish to [refactor the relevant namespace](manage-namespaces.md), as shown in the next section.
 
 ## `ap` Add project dependency
  `, r a p` to search a library and add a specific version of that library to your project dependencies, without having to browse [clojars.org](https://clojars.org) separately.
@@ -26,10 +26,10 @@ When this function is called with a prefix, `C-u`, the artifact cache is refresh
 ## `up` Update project dependency versions
 `, r u p` to update the version for each library in your Leiningen dependency configuration.
 
-Alternatively you can use [lein-ancient](https://clojars.org/lein-ancient) plugin to update dependencicollections.mdes in your project.
+Alternatively you can use [lein-ancient](https://clojars.org/lein-ancient) plugin to update dependencies in your project.
 
 > #### Hint::deps.edn projects
-> [`practicalli/clojure-deps-edn`](http://practicalli.github.io/clojure/clojure-tools/install/install-clojure.html#clojure-cli-tools-common-aliases) contains an `:update` alias that uses depot to update `deps.edn` projects
+> [`practicalli/clojure-deps-edn`](http://practical.li/clojure/clojure-tools/install/install-clojure.html#clojure-cli-tools-common-aliases) contains an `:update` alias that uses depot to update `deps.edn` projects
 
 
 # `sp` Sort project dependencies

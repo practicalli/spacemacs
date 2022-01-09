@@ -1,26 +1,54 @@
-## Projectile
+## Projectile project navigation and management
 
-[Projectile](https://github.com/bbatsov/projectile) is a project interaction library for Emacs. Its goal is to provide a nice set of features operating on a project level without introducing external dependencies (when feasible). For instance - finding project files has a portable implementation written in pure Emacs Lisp without the use of GNU find (but for performance sake an indexing mechanism backed by external commands exists as well).
+[Projectile](https://docs.projectile.mx/projectile/) provides commands to navigate within a project and manage files and buffers as a project.
 
-Projectile tries to be practical - portability is great, but if some external tools could speed up some task substantially and the tools are available, Projectile will leverage them.
+A project is defined by any of the following:
 
-This library provides easy project management and navigation. The concept of a project is pretty basic - just a folder containing special file. Currently git, mercurial, darcs and bazaar repos are considered projects by default. So are lein, maven, sbt, scons, rebar and bundler projects. If you want to mark a folder manually as a project just create an empty .projectile file in it. Some of Projectile's features:
+* a source control directory e.g. `.git`
+* programming language tools e.g. `deps.edn`
+* projectile configuration file, `.projectile`
 
-* jump to a file in project
-* jump to files at point in project
-* jump to a directory in project
-* jump to a file in a directory
-* jump to a project buffer
-* jump to a test in project
-* toggle between files with same names but different extensions (e.g. `.h` <-> `.c/.cpp`, `Gemfile` <-> `Gemfile.lock`)
-* toggle between code and its test (e.g. `main.service.js` <-> `main.service.spec.js`)
-* jump to recently visited files in the project
-* switch between projects you have worked on
-* kill all project buffers
-* replace in project
-* multi-occur in project buffers
-* grep in project
-* regenerate project etags or gtags (requires [ggtags](https://github.com/leoliu/ggtags)).
-* visit project in dired
-* run make in a project with a single key chord
-* check for dirty repositories
+## Commonly used commands
+
+`SPC p f` will find a file by name within the project scope
+
+`SPC p a` will alternate between a source code file and its unit test file
+
+`SPC p "` opens an external terminal at the root of the project, so external terminal commands can easily be run on the project, e.g. `clojure -M:repl/rebel` to start a terminal UI REPL
+
+`SPC `
+
+
+## Ignore files in project Projectile configuration file
+
+A `.projectile` file at the root of a project include file and directory name [patterns for Projectile to ignore](https://docs.projectile.mx/projectile/projects.html#ignoring-files), similar to a `.gitignore` file.
+
+Projectile will ignore patterns in a `.gitignore` file. however, there may be additional patterns that Projectile should ignore that Git should not
+
+Ignore files at the root of the project
+```none
+-/log
+-/tmp
+-/public/uploads
+```
+
+Relative pathname ignores:
+```none
+-tmp
+-*.port
+-*.yml
+```
+
+Ignore everything except certain sub-directories (not relevant for file names)
+
+```none
++/src/practicalli
++/tests/practicalli
+```
+
+
+## Projectile menu
+
+`SPC p` opens the projectile menu
+
+![Spacemacs Projectile Menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-projectile-menu.png)

@@ -2,7 +2,7 @@
 
 Spacemacs comes configured to use [Silver Searcher](https://github.com/ggreer/the_silver_searcher) as the default search tool, but it is only used if it is available in the underlying operating system.
 
-[Silver Searcher](https://github.com/ggreer/the_silver_searcher) make searching much faster as it skips file and directory patterns defined in `.gitignore` and `.htignore` files.  Additional patterns to be skipped can be defined in an `.ignore` file.
+[Silver Searcher](https://github.com/ggreer/the_silver_searcher) make searching much faster as it skips file and directory patterns defined in `.gitignore`.  Additional patterns to be skipped can be defined in an `.ignore` file.
 
 For Clojure and Clojurescript developers there are many files that you always want to ignore when searching your projects
 

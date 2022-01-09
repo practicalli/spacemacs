@@ -16,6 +16,8 @@ By submitting content ideas and corrections you are agreeing they can be used in
 Special mentions
 * [duianto](https://github.com/duianto) - for discussions and accepting my pull requests to Spacemacs
 
+To everyone who [contributed via the GitHub repository](https://github.com/practicalli/spacemacs/graphs/contributors)
+
 In no specific order, the following people have provided input to this work
 
 * Chris Howe-Jones - [@agile-geek](https://twitter.com/agile_geek)

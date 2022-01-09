@@ -292,7 +292,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/project-file-navigation.html">
+        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/structural-editing.html">
+            
+                <a href="../why-spacemacs/structural-editing.html">
+            
+                    
+                    Structural editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/project-file-navigation.html">
             
                 <a href="../why-spacemacs/project-file-navigation.html">
             
@@ -305,7 +318,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/layouts.html">
+        <li class="chapter " data-level="1.1.2.9" data-path="../why-spacemacs/layouts.html">
             
                 <a href="../why-spacemacs/layouts.html">
             
@@ -1001,9 +1014,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/keybindng-reference.html">
+        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/key-binding-reference.html">
             
-                <a href="../spacemacs-basics/vim-style/keybindng-reference.html">
+                <a href="../spacemacs-basics/vim-style/key-binding-reference.html">
             
                     
                     Keybinding reference
@@ -2912,7 +2925,7 @@
                 <a href="../source-control/magit/interactive-rebasing.html">
             
                     
-                    Interactve Rebasing
+                    Interactive Rebasing
             
                 </a>
             
@@ -3451,9 +3464,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignement.html">
+        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignment.md">
             
-                <a href="../reference/clojure/local-assignement.html">
+                <span>
             
                     
                     Local Assignment
@@ -3828,30 +3841,13 @@
 <!-- TODO add image showing off Portal -->
 <p><a href="https://github.com/djblue/portal" target="_blank">Portal</a> navigates data in the form of edn, json and transit (with vega graphic support coming soon)</p>
 <p><a href="https://practicalli.github.io/clojure/clojure-tools/data-browsers/portal.html" target="_blank">Practicalli Clojure -data browsers section - portal</a></p>
-<p>Portal is simple to add to a REPL as it only requires the Portal library to be added as a depencency.</p>
+<p>Portal is simple to add to a REPL as it only requires the Portal library to be added as a dependency.</p>
 <p>practicalli/clojure-deps-edn includes several aliases for portal, depending on the type of Clojure project used.</p>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>clojure -M:inspect/portal-cli</code></td>
-<td>Clojure REPL with Portal dependency</td>
-</tr>
-<tr>
-<td><code>clojure -M:inspect/portal-web</code></td>
-<td>ClojureScript web browswer REPL with Portal dependency</td>
-</tr>
-<tr>
-<td><code>clojure -M:inspect/portal-node</code></td>
-<td>ClojureScript node.js REPL with Portal dependency</td>
-</tr>
-</tbody>
-</table>
+<p>| Command                          | Description                                           |
+|----------------------------------+-------------------------------------------------------|
+| <code>clojure -M:inspect/portal-cli</code>  | Clojure REPL with Portal dependency                   |
+| <code>clojure -M:inspect/portal-web</code>  | ClojureScript web browser REPL with Portal dependency |
+| <code>clojure -M:inspect/portal-node</code> | ClojureScript node.js REPL with Portal dependency     |</p>
 <h3 id="using-portal">Using Portal</h3>
 <p><code>(require &apos;[portal.api :as portal])</code> once the REPL starts.  For <code>inspect/portal-web</code> use <code>(require &apos;[portal.web :as portal])</code> instead</p>
 <p><code>(portal/open)</code> to open the web based inspector window in a browser.</p>
@@ -3880,20 +3876,20 @@
 </code></pre>
 <h2 id="automatically-start-portal">Automatically start Portal</h2>
 <p><code>user</code> is the default namespace when a Clojure REPL starts.  If there is a <code>user.clj</code> file on the classpath, the code it contains is automatically loaded once the REPL has started.</p>
-<p>Create a <code>user</code> namespace in the file <code>dev/user.clj</code>. Require the portal library in the namespace definition, using the alias <code>inspect</code>. Call the <code>inspect/open</code> function to launch Portal in a browser tab. Call the <code>inpect/tap</code> to add portal as the <code>tap&gt;</code> source for the project (there can only be one <code>tap&gt;</code> source)</p>
+<p>Create a <code>user</code> namespace in the file <code>dev/user.clj</code>. Require the portal library in the namespace definition, using the alias <code>inspect</code>. Call the <code>inspect/open</code> function to launch Portal in a browser tab. Call <code>inspect/tap</code> to add portal as the <code>tap&gt;</code> source for the project (there can only be one <code>tap&gt;</code> source)</p>
 <pre><code class="lang-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">ns</span></span> user
   (<span class="hljs-symbol">:require</span>
      [portal.api <span class="hljs-symbol">:as</span> inspect]))
 
 <span class="hljs-comment">;; Start Portal</span>
-<span class="hljs-comment">;; Open a portal inspector window using default nord theme</span>
+<span class="hljs-comment">;; Open a portal inspector window using default theme</span>
 (<span class="hljs-name">inspect/open</span> {<span class="hljs-symbol">:portal.colors/theme</span> <span class="hljs-symbol">:portal.colors/solarized-light</span>})
 
 <span class="hljs-comment">;; Add portal as a tap&gt; target</span>
 (<span class="hljs-name">inspect/tap</span>)
 </code></pre>
 <p>Include the <code>dev</code> directory when starting the REPL and the <code>dev/user.clj</code> code will be loaded.  The <code>:env/dev</code> alias from <a href="https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html" target="_blank"><code>practicalli/clojure-deps-edn</code></a> adds <code>dev</code> directory to the classpath.</p>
-<pre><code class="lang-shell">clojure -M:env/dev:middleware/cider-clj
+<pre><code class="lang-shell">clojure -M:env/dev:repl/rebel
 </code></pre>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
@@ -3938,7 +3934,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Portal data visualization","level":"4.2.3","depth":2,"next":{"title":"Reveal data visualization","level":"4.2.4","depth":2,"path":"clojure-repl/reveal-data-visualization.md","ref":"clojure-repl/reveal-data-visualization.md","articles":[]},"previous":{"title":"Connect to remote REPL","level":"4.2.2","depth":2,"path":"clojure-repl/connect-to-remote-repl.md","ref":"clojure-repl/connect-to-remote-repl.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d","P9IClojure":"https://practicalli.github.io/clojure/","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"clojure-repl/portal-data-visualization.md","mtime":"2022-01-04T11:09:51.619Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-04T11:10:53.662Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Portal data visualization","level":"4.2.3","depth":2,"next":{"title":"Reveal data visualization","level":"4.2.4","depth":2,"path":"clojure-repl/reveal-data-visualization.md","ref":"clojure-repl/reveal-data-visualization.md","articles":[]},"previous":{"title":"Connect to remote REPL","level":"4.2.2","depth":2,"path":"clojure-repl/connect-to-remote-repl.md","ref":"clojure-repl/connect-to-remote-repl.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"clojure-repl/portal-data-visualization.md","mtime":"2022-01-09T02:52:39.795Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T02:53:46.289Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

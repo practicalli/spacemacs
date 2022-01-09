@@ -11,7 +11,7 @@
 
 `, g g` to run the command `clj-find-var` which shows
 
-![Spacemcs Clojure - find Java sources](/images/spacemacs-clojure-java-find-var.png)
+![Spacemacs Clojure - find Java sources](/images/spacemacs-clojure-java-find-var.png)
 
 Selecting a specific Java package (namespace) will open the  Java source code in a buffer
 

@@ -108,7 +108,7 @@ Key Binding               | Function
 <kbd>\<leader\> p</kbd>   | paste after
 <kbd>\<leader\> P</kbd>   | paste before
 <kbd>\<leader\> r</kbd>   | raise expression (replace parent expression by current one)
-<kbd>\<leader\> s</kbd>   | forwared slurp expression
+<kbd>\<leader\> s</kbd>   | forward slurp expression
 <kbd>\<leader\> S</kbd>   | backward slurp expression
 <kbd>\<leader\> t</kbd>   | transpose expression
 <kbd>\<leader\> u</kbd>   | undo
@@ -145,6 +145,3 @@ If you don't want commands to enter in `lisp state` by default set the variable
 [evil-link]: https://gitorious.org/evil/pages/Home
 [smartparens-link]: https://github.com/Fuco1/smartparens/wiki
 [melpa-link]: http://melpa.org/
-
-
-

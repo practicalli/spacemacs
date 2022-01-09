@@ -1,6 +1,6 @@
 # Getting started with Spacemacs
 
-1. Install prerequisites: [Emacs version 27.1](/before-you-start/install-emacs.html), [Java 11](/before-you-start/install-emacs.html) and the [Recommended Command Line tools](/before-you-start/recommended-command-line-tools.md).
+1. Install prerequisites: [Emacs version 27.1](/before-you-start/install-emacs.md), [Java 11](/before-you-start/install-emacs.md) and the [Recommended Command Line tools](/before-you-start/recommended-command-line-tools.md).
 2. Clone or download the Spacemacs, first removing `~/.emacs.d` if it already exists.
 3. [optional] Install Fira Code fonts (change `dotspacemacs-default-font` to a name of a font on your operating system in `.spacemacs.d/init.el` in step 4)
 4. Clone the [practicalli/spacemacs.d]({{ book.P9ISpacemacsD }}) configuration, or run the Spacemacs install wizard and follow the [additional configuration section](additional-configuration.md).
@@ -64,4 +64,4 @@ Why Fira Code?  It is an excellent mono-spaced font for code which includes [lig
 ## Spacemacs is ready for action
 Spacemacs is now up and running and ready to take on the world.
 
-If you already know how to use Spacemacs, jump to the [Clojure Projects section](/clojure-projects/index.html), otherwise look through the [Spacemacs Basics section](/spacemacs-basics/index.html) to learn how to use Vim style editing and work with files, buffers and windows in Spacemacs.
+If you already know how to use Spacemacs, jump to the [Clojure Projects section](/clojure-projects/index.md), otherwise look through the [Spacemacs Basics section](/spacemacs-basics/index.md) to learn how to use Vim style editing and work with files, buffers and windows in Spacemacs.

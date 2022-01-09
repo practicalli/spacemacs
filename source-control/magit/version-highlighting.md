@@ -33,4 +33,4 @@ See [version control layer configuration](https://develop.spacemacs.org/layers/+
 
 TODO: describe the benefit of this transient state.
 
-https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Bsource-control/version-control#smerge-mode-transient-state
+https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Bsource-control/version-control#smerge-mode-transient-state

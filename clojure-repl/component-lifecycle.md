@@ -67,7 +67,7 @@ During development call the `reset` function to stop components, clean the names
 ((clojure-mode . ((cider-refresh-before-fn . "practicalli.dev/reset"))))
 ```
 
-`SPC f s` to save the file.  Refresh a buffer from the project or open a new file to trigger the reading of the `.deir-locals.el` configuration by Emacs.
+`SPC f s` to save the file.  Refresh a buffer from the project or open a new file to trigger the reading of the `.dir-locals.el` configuration by Emacs.
 
 
 Alternatively, if a namespace refresh is not required, configure the `.dirs-local.el` file to call `stop` then `start`.
@@ -77,7 +77,7 @@ Alternatively, if a namespace refresh is not required, configure the `.dirs-loca
          (cider-refresh-after-fn . "practicalli.dev/start"))))
 ```
 
-This code calls the `stop` function from the component lifecycle library at the start of the `cider-refresh` function.  At the end of `cider-refesh`, the `start` function is called to restart all the components in the defined order in the project.
+This code calls the `stop` function from the component lifecycle library at the start of the `cider-refresh` function.  At the end of `cider-refresh`, the `start` function is called to restart all the components in the defined order in the project.
 
 
 <!-- Integrant example -->

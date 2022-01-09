@@ -92,7 +92,7 @@
     <link rel="next" href="layouts.html" />
     
     
-    <link rel="prev" href="helm-transient-state.html" />
+    <link rel="prev" href="structural-editing.html" />
     
 
     </head>
@@ -292,7 +292,20 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.1.2.7" data-path="project-file-navigation.html">
+        <li class="chapter " data-level="1.1.2.7" data-path="structural-editing.html">
+            
+                <a href="structural-editing.html">
+            
+                    
+                    Structural editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.2.8" data-path="project-file-navigation.html">
             
                 <a href="project-file-navigation.html">
             
@@ -305,7 +318,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.8" data-path="layouts.html">
+        <li class="chapter " data-level="1.1.2.9" data-path="layouts.html">
             
                 <a href="layouts.html">
             
@@ -1001,9 +1014,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/keybindng-reference.html">
+        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/key-binding-reference.html">
             
-                <a href="../spacemacs-basics/vim-style/keybindng-reference.html">
+                <a href="../spacemacs-basics/vim-style/key-binding-reference.html">
             
                     
                     Keybinding reference
@@ -2912,7 +2925,7 @@
                 <a href="../source-control/magit/interactive-rebasing.html">
             
                     
-                    Interactve Rebasing
+                    Interactive Rebasing
             
                 </a>
             
@@ -3451,9 +3464,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignement.html">
+        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignment.md">
             
-                <a href="../reference/clojure/local-assignement.html">
+                <span>
             
                     
                     Local Assignment
@@ -3839,10 +3852,9 @@
 <li>regenerate project etags or gtags (requires ggtags).</li>
 <li>browse dirty version controlled projects</li>
 </ul>
-<p><a href="../images/spacemacs-project-menu.png"><img src="../images/spacemacs-project-menu.png" alt="Spacemacs - Project menu"></a></p>
+<p><a href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-projectile-menu.png" target="_blank"><img src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-projectile-menu.png" alt="Spacemacs - Projectile"></a></p>
 <h2 id="treemacs">Treemacs</h2>
-<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title" id="treemacs-has-now-replaced-neotree"><i class="fa fa-bookmark"></i> Treemacs has now replaced Neotree</h3></div><div class="panel-body"><p>Treemacs is now the default visual file browser in Spacemacs.  It works in the same way as Neotree for the basic file navigation.</p></div></div>
-<p>Treemacs provides a quick and simple way to navigate all the directories and files in a project.  Visit the <a href="https://github.com/Alexander-Miller/treemacs#detailed-feature-list" target="_blank">Treemacs project for details of all its features</a></p>
+<p>Treemacs is the default visual file browser in Spacemacs, providing a way to view and navigate all the directories and files in a project.  Visit the <a href="https://github.com/Alexander-Miller/treemacs#detailed-feature-list" target="_blank">Treemacs project for details of all its features</a></p>
 <p><code>SPC f t</code> or <code>SPC p t</code> to toggle the Treemacs buffer, the latter opens Treemacs with the root set to the projectile project root.</p>
 <p>To select the Treemacs window at any time, press <code>SPC 0</code>. The Treemacs window always has the number 0.</p>
 <p><img src="http://develop.spacemacs.org/layers/+filetree/treemacs/img/treemacs.png" alt="Spacemacs - Treemacs example"></p>
@@ -3850,8 +3862,9 @@
 <li><a href="http://develop.spacemacs.org/layers/+filetree/treemacs/README.html" target="_blank">Spacemacs Treemacs Layer</a></li>
 </ul>
 <h2 id="ranger">Ranger</h2>
-<p>Navigate directories and view contents of files quickly and easily, using standard Vi keybindings, <code>j</code>, <code>k</code>, <code>l</code> and <code>h</code>.  Ranger is great for quickly looking through files, thanks to its preview option.</p>
-<p><img src="../images/spacemacs-ranger-example.png" alt="Spacemacs - Ranger directory and file navigation"></p>
+<p><code>SPC a t r r</code> runs ranger to navigate directories and view contents of files quickly and easily, using standard Vi keybindings, <code>j</code>, <code>k</code>, <code>l</code> and <code>h</code>.</p>
+<p>Ranger is great for quickly looking through files, thanks to its preview option.</p>
+<p><img src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-ranger-navigate-preview.png" alt="Spacemacs - Ranger directory and file navigation"></p>
 <p><a href="../spacemacs-basics/working-with-projects/ranger.html">Discover more about ranger</a> in the working with projects section.</p>
 <div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="ranger-is-also-a-terminal-based-file-manager"><i class="fa fa-lightbulb-o"></i> Ranger is also a terminal based file manager</h3></div><div class="panel-body"><p><a href="https://ranger.github.io/" target="_blank">https://ranger.github.io/</a></p></div></div>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
@@ -3881,7 +3894,7 @@
 
             
                 
-                <a href="helm-transient-state.html" class="navigation navigation-prev " aria-label="Previous page: Helm Transient State">
+                <a href="structural-editing.html" class="navigation navigation-prev " aria-label="Previous page: Structural editing">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -3897,7 +3910,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Project & File navigation","level":"1.1.2.7","depth":3,"next":{"title":"Layouts","level":"1.1.2.8","depth":3,"path":"why-spacemacs/layouts.md","ref":"why-spacemacs/layouts.md","articles":[]},"previous":{"title":"Helm Transient State","level":"1.1.2.6.1","depth":4,"path":"why-spacemacs/helm-transient-state.md","ref":"why-spacemacs/helm-transient-state.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d","P9IClojure":"https://practicalli.github.io/clojure/","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"why-spacemacs/project-file-navigation.md","mtime":"2022-01-04T11:09:51.791Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-04T11:10:53.662Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Project & File navigation","level":"1.1.2.8","depth":3,"next":{"title":"Layouts","level":"1.1.2.9","depth":3,"path":"why-spacemacs/layouts.md","ref":"why-spacemacs/layouts.md","articles":[]},"previous":{"title":"Structural editing","level":"1.1.2.7","depth":3,"path":"why-spacemacs/structural-editing.md","ref":"why-spacemacs/structural-editing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"why-spacemacs/project-file-navigation.md","mtime":"2022-01-09T02:52:39.979Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T02:53:46.289Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

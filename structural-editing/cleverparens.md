@@ -1,10 +1,18 @@
-# Evil Cleverparens
+# Evil Cleverparens safe structural editing
 
-[With `evil-cleverparens` enabled](/install-spacemacs/evil-structural-editing.html), editing in Evil Normal state respects the structure of your code.
+[With `evil-cleverparens` enabled](/install-spacemacs/evil-structural-editing.md), editing in Evil Normal state respects the structure of your code.
 
-| Spacemacs   | Evil     | Description                                                |
+| Spacemacs   | Evil    | Description                                                |
 |-------------|---------|------------------------------------------------------------|
 | `SPC m T s` | `, T s` | Enable evil safe structural editing for the current buffer |
+
+Default safe structural editing for all major modes by adding the following to `dotspacemacs/user-config` in `.spacemacs` or `.spacemacs.d/init.el`
+
+```elisp
+  (spacemacs/toggle-evil-safe-lisp-structural-editing-on-register-hooks)
+  ;; for clojure layer only (comment out line above)
+  ;; (spacemacs/toggle-evil-safe-lisp-structural-editing-on-register-hook-clojure-mode)
+```
 
 
 ## Evil normal editing
@@ -24,33 +32,67 @@ Evil-cleverparens modifies some of the existing behaviour of Evil keybindings.  
 | `M-O`      | New line before current form (insert)                                 |
 | `M-o`      | New line after current form (insert)                                  |
 | `x`        | if point on parens, unwrap expression, else delete character at point |
-| `_`        | jump point to the first non-blank non-opening paren        |
+| `_`        | jump point to the first non-blank non-opening paren                   |
+
+
+## Slurping and Barfing
+
+`<` and `>` to slurp and barf, both forwards and backwards depending on cursor location
+
+On an open delimiter, `(`, `[`, `{`
+
+* `<` *slurp backwards* as many times as there are preceding opening delimiters.
+* `<` *barf forwards* unless form contains a single sexp
+
+On a closing delimiter, `)`, `]`, `}`
+
+* `>` *slurp forwards* as many times as there are closing delimiters behind
+* `>` *barf backwards* unless form contains a single sexp
+
+When inside a form `<` will *barf* and `>` will *slurp* *forwards*.
+
+
+## Wrapping
+
+| Key   | Behaviour                       |
+|-------|---------------------------------|
+| `M-(` | Wrap next sexp in `()`          |
+| `M-)` | Wrap the previous sexp in  `()` |
+| `M-[` | Wrap the next sexp in `[]`      |
+| `M-]` | Wrap the previous sexp in  `[]` |
+| `M-{` | Wrap the next sexp in `{}`      |
+| `M-}` | Wrap the previous sexp in `{}`  |
+
+Start with a numeric argument to operate on multiple s-expressions until the end of the surrounding form.
+
+`SPC-u` (universal argument) acts on the surrounding form instead. Each consecutive `SPC-u` wraps an additional expression from the surrounding form.
 
 
 ## Navigating via parens
 
-Evil-cleverparens has some convienient keybindings for jumping around code using the parens, including double quotes.
+Evil-cleverparens has some convenient keybindings for jumping around code using the parens, including double quotes.
 
-| Keybinding | Description                                                   |
-|------------|---------------------------------------------------------------|
-| `(`        | Move backward up a sexp.                                      |
-| `)`        | Move forward up a sexp.                                       |
-| `[`        | Move to the previous opening parentheses                      |
-| `]`        | Move to the next closing parentheses                          |
-| `{`        | Move to the next opening parentheses                          |
-| `}`        | Move to the previous closing parentheses                      |
+| Key | Description                              |
+|-----|------------------------------------------|
+| `(` | Move backward up a sexp.                 |
+| `)` | Move forward up a sexp.                  |
+| `[` | Move to the previous opening parentheses |
+| `]` | Move to the next closing parentheses     |
+| `{` | Move to the next opening parentheses     |
+| `}` | Move to the previous closing parentheses |
 
 
----
+## Dragging / Transposing
 
-> #### TODO::work in progress, sorry
-> The following content is still work in progress
+Drag the expression under point forward or backward.
 
-#### Dragging / Transposing
+`M-j` `evil-drag-forward` drag expression forward
 
-In addition to regular transpose, bound to `M-t` (`sp-transpose-sexp`), `evil-cleverparens` provides additional means of moving sexps around with behavior inspired by the [drag-stuff-el](https://github.com/rejeep/drag-stuff.el) mode. `evil-drag-forward` bound to `M-j` and `evil-drag-backward` bound to `M-k` attempt to drag the *thing* under point forward or backward. The depth of the thing being moved never changes, i.e. dragging is distinct from slurping or barfing.
+`M-k` `evil-drag-backward`  drag expression backward
 
-The *thing* can be many different things depending on the location of the cursor:
+The depth of the expression being moved never changes, i.e. dragging is distinct from slurping or barfing.
+
+The expression affected is dependent on the location of the cursor:
 
 - On top of a symbol acts on that symbol.
 - Inside or on the delimiters of a form moves the form.
@@ -58,40 +100,25 @@ The *thing* can be many different things depending on the location of the cursor
 - Outside a form on a safe line will move the line.
 - On a top-level comment will move the entire comment-block.
 
-The behavior of the command with respect to top-level sexps and lines can be customized with `evil-cleverparens-drag-ignore-lines` (default `nil`). You can also choose not to treat connected commented lines as singular units by setting `evil-cleverparens-drag-comment-blocks` to `nil`.
+The behavior of the command with respect to top-level sexps and lines can be customized with
 
-#### Slurping and Barfing
+`evil-cleverparens-drag-ignore-lines` (default `nil`)
 
-`evil-cleverparens` implements slurping and barfing both forwards and backwards using only the `<` and `>` keys by making them act differently when on top of a form delimiter:
+`evil-cleverparens-drag-comment-blocks` to `nil` treats connected commented lines as singular units
 
-- On an opening delimiter `<` will *slurp backwards* as many times as there are preceding opening delimiters.
-- On a closing delimiter `<` will *barf forwards*. If the form contains only a single sexp inside it then `evil-cleverparens` will question your intention and instead do nothing. Perhaps you meant to *splice* or *delete* instead?
-- On a opening delimiter `>` will *barf backwards* with the same caveat as above.
-- On a closing delimiter `>` will *slurp forwards* as many times as there are closing delimiters behind.
-- When inside a form `<` will *barf* and `>` will *slurp* *forwards*.
 
-While the specifics of the dragging, slurping and barfing behavior may seem complicated when spelled out, a lot of thought has been put to make their use feel intuitive and fluid.
+## Copy and Paste
 
-#### Wrapping
+`M-w` aka `evil-cp-evil-copy-paste-form` copies the surrounding form and inserts it below with the proper indentation.
 
-While `evil-cleverparens` editing operations work well with [evil-surround](https://github.com/timcharper/evil-surround), the following specialized wrapping commands are also provided:
+Call outside a form it will do the same with the current line instead (as long as its safe).
 
-| Key   | Behavior                                     |
-|-------|----------------------------------------------|
-| `M-(` | Wrap the next sexp in round parentheses.     |
-| `M-)` | Wrap the previous sexp in round parentheses. |
-| `M-[` | Wrap the next sexp in square brackets.       |
-| `M-]` | Wrap the previous sexp in square brackets.   |
-| `M-{` | Wrap the next sexp in curly braces.          |
-| `M-}` | Wrap the previous sexp in curly braces.      |
+Call with a numeric argument to repeat the paste operation multiple times.
 
-Each command can take a numeric argument to determine how many sexps to operate on maxing out at the number of sexps from the cursor until the end of the surrounding form. When called with the `universal-argument`, the operations act on the surrounding form instead. The universal argument can be called multiple times, where each consecutive call will wrap an additional expression from the surrounding form.
+Call with `SPC-u` copy-paste the current top-level form and insert newlines between them.
 
-#### Copy and Paste
 
-`M-w` aka `evil-cp-evil-copy-paste-form` will copy the surrounding form and insert it below with the proper indentation. If called outside a form it will do the same with the current line instead (as long as its safe). This command can be called with a numeric argument to repeat the paste operation that many times. Calling it with the `universal-argument` will copy-paste the current top-level form and insert newlines between them.
-
-#### From Smartparens
+### From Smartparens
 
 The following commands have been lifted straight from `smartparens`:
 

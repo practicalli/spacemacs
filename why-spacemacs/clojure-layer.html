@@ -292,7 +292,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.7" data-path="project-file-navigation.html">
+        <li class="chapter " data-level="1.1.2.7" data-path="structural-editing.html">
+            
+                <a href="structural-editing.html">
+            
+                    
+                    Structural editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="project-file-navigation.html">
             
                 <a href="project-file-navigation.html">
             
@@ -305,7 +318,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.8" data-path="layouts.html">
+        <li class="chapter " data-level="1.1.2.9" data-path="layouts.html">
             
                 <a href="layouts.html">
             
@@ -1001,9 +1014,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/keybindng-reference.html">
+        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/key-binding-reference.html">
             
-                <a href="../spacemacs-basics/vim-style/keybindng-reference.html">
+                <a href="../spacemacs-basics/vim-style/key-binding-reference.html">
             
                     
                     Keybinding reference
@@ -2912,7 +2925,7 @@
                 <a href="../source-control/magit/interactive-rebasing.html">
             
                     
-                    Interactve Rebasing
+                    Interactive Rebasing
             
                 </a>
             
@@ -3451,9 +3464,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignement.html">
+        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignment.md">
             
-                <a href="../reference/clojure/local-assignement.html">
+                <span>
             
                     
                     Local Assignment
@@ -3824,28 +3837,23 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="spacemacs-clojure-layer-overview">Spacemacs Clojure Layer Overview</h1>
-<p>The <a href="https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/clojure" target="_blank">Clojure layer</a> provides full language support and tooling including, autocomplete, refactor, inspector and debug, etc.</p>
+<p>The <a href="https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Blang/clojure" target="_blank">Clojure layer</a> provides full language support and tooling including, autocomplete, refactor, inspector and debug, etc.</p>
 <p>Projects managed by <a href="https://leiningen.org" target="_blank">Leiningen</a>, <a href="http://boot-clj.com/" target="_blank">Boot</a> and <a href="https://clojure.org/guides/deps_and_cli" target="_blank">Clojure CLI tools</a> (<code>deps.edn</code>) are supported and automatically detected when running the REPL.</p>
-<p><a href="https://github.com/clojure-emacs/cider" target="_blank"><a href="https://github.com/clojure-emacs/cider" target="_blank"><img src="../images/cider-logo.png" alt="CIDER logo"></a></a></p>
-<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="cider-is-part-of-the-clojure-layer"><i class="fa fa-lightbulb-o"></i> CIDER is part of the Clojure layer</h3></div><div class="panel-body"><p>The <a href="https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/clojure" target="_blank">Clojure layer</a> is a collection of Emacs packages and curated configuration to ensure those packages work well together in Spacemacs. The biggest part of the <a href="https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Blang/clojure" target="_blank">Clojure layer</a> are the <a href="https://github.com/clojure-emacs/cider" target="_blank">CIDER</a> packages.
-Installing the <a href="../install-spacemacs/manually-add-clojure-layer.html">Clojure layer</a> will use the latest release of CIDER.</p></div></div>
+<p><a href="https://docs.cider.mx/" target="_blank"><img src="https://raw.github.com/clojure-emacs/cider/master/logo/cider-logo-w640.png" alt="CIDER logo"></a></p>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="cider-is-part-of-the-clojure-layer"><i class="fa fa-lightbulb-o"></i> CIDER is part of the Clojure layer</h3></div><div class="panel-body"><p>The <a href="https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Blang/clojure" target="_blank">Clojure layer</a> includes <a href="https://github.com/clojure-emacs/cider" target="_blank">CIDER</a> and supported Emacs packages, curated to ensure those packages work well together.</p><p>Installing the <a href="../install-spacemacs/manually-add-clojure-layer.md">Clojure layer</a> uses the <a href="https://melpa.org/#/cider" target="_blank">latest version of CIDER on Melpa</a></p></div></div>
 <h2 id="features-of-the-clojure-layer">Features of the Clojure layer</h2>
-<p><a href="https://github.com/clojure-emacs/cider" target="_blank">CIDER</a> provides a comprehensive range of tools to create quality Clojure code.</p>
+<p><a href="https://docs.cider.mx/cider/1.2/index.html#features" target="_blank">CIDER</a> provides a comprehensive range of tools to create quality Clojure code.</p>
 <p>Start a REPL (Clojure runtime environment) from Spacemacs and evaluate one or more expressions to see the results in the source code buffer, giving extremely fast feedback on the behavior of that code.</p>
 <ul>
-<li>inline error and warning highlighting, supporting <a href="https://joker-lang.org/" target="_blank">joker</a> and <a href="https://github.com/borkdude/clj-kondo" target="_blank">clj-kondo</a> linters</li>
-<li>human-friendly stack traces</li>
-<li>smart code completion - <a href="https://github.com/clojure-emacs/ac-cider" target="_blank">auto-complete-mode</a></li>
-<li>definition &amp; documentation lookup</li>
-<li>value inspector &amp; function tracing</li>
-<li>interactive macroexpansion</li>
-<li>Run tests and generate reports - with <code>clojure.test</code> integration</li>
-<li>classpath &amp; namespace browser</li>
+<li>REPL based Test runner and test reports</li>
+<li><a href="https://github.com/clojure-emacs/ac-cider" target="_blank">smart code completion</a></li>
+<li>live static analysis with <a href="https://github.com/borkdude/clj-kondo" target="_blank">clj-kondo</a></li>
+<li>Documentation and source navigation</li>
+<li>Error report filtering</li>
+<li>Value inspector to visualise and navigate evaluation results</li>
+<li>Interactive debugging</li>
 <li>nREPL session management</li>
-<li>scratchpad</li>
-<li>integration with <a href="http://company-mode.github.io/" target="_blank">company-mode</a></li>
 </ul>
-<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title" id="todo"><i class="fa fa-bookmark"></i> TODO</h3></div><div class="panel-body"><p>Add animated gifs or video of main features</p></div></div>
 <h2 id="further-reading">Further reading</h2>
 <p>Some further reading around CIDER:</p>
 <ul>
@@ -3896,7 +3904,7 @@ Installing the <a href="../install-spacemacs/manually-add-clojure-layer.html">Cl
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Clojure Layer","level":"1.1.2.2.1","depth":4,"next":{"title":"Mnemonic Menu","level":"1.1.2.3","depth":3,"path":"why-spacemacs/mnemonic-menu.md","ref":"why-spacemacs/mnemonic-menu.md","articles":[]},"previous":{"title":"Simple Layers","level":"1.1.2.2","depth":3,"path":"why-spacemacs/layers.md","ref":"why-spacemacs/layers.md","articles":[{"title":"Clojure Layer","level":"1.1.2.2.1","depth":4,"path":"why-spacemacs/clojure-layer.md","ref":"why-spacemacs/clojure-layer.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d","P9IClojure":"https://practicalli.github.io/clojure/","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"why-spacemacs/clojure-layer.md","mtime":"2022-01-04T11:09:51.791Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-04T11:10:53.662Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Clojure Layer","level":"1.1.2.2.1","depth":4,"next":{"title":"Mnemonic Menu","level":"1.1.2.3","depth":3,"path":"why-spacemacs/mnemonic-menu.md","ref":"why-spacemacs/mnemonic-menu.md","articles":[]},"previous":{"title":"Simple Layers","level":"1.1.2.2","depth":3,"path":"why-spacemacs/layers.md","ref":"why-spacemacs/layers.md","articles":[{"title":"Clojure Layer","level":"1.1.2.2.1","depth":4,"path":"why-spacemacs/clojure-layer.md","ref":"why-spacemacs/clojure-layer.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"why-spacemacs/clojure-layer.md","mtime":"2022-01-09T02:52:39.979Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T02:53:46.289Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

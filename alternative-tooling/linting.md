@@ -23,7 +23,7 @@ Eastwood provides a very comprehensive feedback on linting and is very useful to
 
 [Eastwood](https://github.com/jonase/eastwood) and [squiggly-clojure](https://github.com/clojure-emacs/squiggly-clojure) are an option on the Clojure layer, so you only need to enable squiggly linter.
 
-See the section on [Eastwood-Squiggly](/improving-code/linting/eastwood-squiggly.html) for more details.
+See the section on [Eastwood-Squiggly](/improving-code/linting/eastwood-squiggly.md) for more details.
 
 > #### DANGER::Repeatedly reloads your code
 > To run Eastwood automatically from Emacs it will repeatedly reload your code in the REPL, so you need to ensure your code is happy with being reloaded constantly.
@@ -35,4 +35,4 @@ See the section on [Eastwood-Squiggly](/improving-code/linting/eastwood-squiggly
 
 Joker is no longer recommended and has been superseded by clj-kondo.
 
-Joker does give fast feedback during coding and gives a good experience.  There are some false positives to configure, but the [install](/improving-code/linting/jocker.html) is fairly straight forward with the unofficial clojure-lint layer.
+Joker does give fast feedback during coding and gives a good experience.  There are some false positives to configure, but the [install](/improving-code/linting/jocker.md) is fairly straight forward with the unofficial clojure-lint layer.

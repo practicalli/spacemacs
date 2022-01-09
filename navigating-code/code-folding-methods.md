@@ -2,7 +2,7 @@
 
 There are two code folding methods, evil folding (the default) and [origami](https://github.com/gregsexton/origami.el).  Evil fold is recommended for Clojure development.
 
-Origami adds a recursive open and close and what it calls an org-mode header collapse (although these didnt seem to work on my Clojure code). Origami seems less useful for Clojure than evil-fold, as folding seems to only work at the top level.
+Origami adds a recursive open and close and what it calls an org-mode header collapse (didn't seem to work on Clojure code). Origami seems less useful for Clojure than evil-fold, as folding seems to only work at the top level.
 
 Origami allows you to [write your own parser](https://github.com/gregsexton/origami.el#does-it-support-my-favourite-major-mode) to teach different ways to fold code.  Origami is a great choice if you want to customise your code folding.
 

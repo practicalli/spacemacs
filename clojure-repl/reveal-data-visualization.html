@@ -292,7 +292,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/project-file-navigation.html">
+        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/structural-editing.html">
+            
+                <a href="../why-spacemacs/structural-editing.html">
+            
+                    
+                    Structural editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/project-file-navigation.html">
             
                 <a href="../why-spacemacs/project-file-navigation.html">
             
@@ -305,7 +318,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/layouts.html">
+        <li class="chapter " data-level="1.1.2.9" data-path="../why-spacemacs/layouts.html">
             
                 <a href="../why-spacemacs/layouts.html">
             
@@ -1001,9 +1014,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/keybindng-reference.html">
+        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/key-binding-reference.html">
             
-                <a href="../spacemacs-basics/vim-style/keybindng-reference.html">
+                <a href="../spacemacs-basics/vim-style/key-binding-reference.html">
             
                     
                     Keybinding reference
@@ -2912,7 +2925,7 @@
                 <a href="../source-control/magit/interactive-rebasing.html">
             
                     
-                    Interactve Rebasing
+                    Interactive Rebasing
             
                 </a>
             
@@ -3451,9 +3464,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignement.html">
+        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignment.md">
             
-                <a href="../reference/clojure/local-assignement.html">
+                <span>
             
                     
                     Local Assignment
@@ -3845,7 +3858,7 @@ Reveal can also used as a <code>tap&gt;</code> source for more powerful manual d
 <tbody>
 <tr>
 <td><code>clojure -M:inspect/reveal</code></td>
-<td>start a Reveal repl with data visualization window (cloure.main)</td>
+<td>start a Reveal repl with data visualization window (clojure.main)</td>
 </tr>
 <tr>
 <td><code>clojure -M:inspect/reveal-light</code></td>
@@ -3903,12 +3916,12 @@ See the <a href="https://practicalli.github.io/clojure-staging/clojure-tools/dat
 <li><code>clojure -X:inspect/reveal remote-prepl :title &apos;&quot;I am a remote prepl repl&quot;&apos;</code></li>
 </ul>
 <p><strong>Configure theme &amp; font</strong></p>
-<p>Add a custom theme and font via the <code>-J</code> command line option or create an alias using <code>:insepct/reveal-light</code> as an example.</p>
+<p>Add a custom theme and font via the <code>-J</code> command line option or create an alias using <code>:inspect/reveal-light</code> as an example.</p>
 <pre><code class="lang-shell">clojure -M:inspect/reveal -J-Dvlaaad.reveal.prefs=&apos;{:theme :light :font-family &quot;Ubuntu Mono&quot; :font-size 32}&apos;
 </code></pre>
 <p><strong>Rebel Readline &amp; Reveal: Add Reveal as tap&gt; source</strong></p>
 <p>Evaluate <code>(add-tap ((requiring-resolve &apos;vlaaad.reveal/ui)))</code> when using Rebel Readline to add Reveal as a tap source, showing <code>(tap&gt; ,,,)</code> expressions in the reveal window, eg. <code>(tap&gt; (map inc [1 2 3 4 5]))</code>.</p>
-<p><a href="http://practicalli.github.io/clojure/clojure-tools/data-browsers/reveal.html" target="_blank">Practicalli Clojure - data browsers section</a> has more details on using reveal.</p>
+<p><a href="http://practical.li/clojure/clojure-tools/data-browsers/reveal.html" target="_blank">Practicalli Clojure - data browsers section</a> has more details on using reveal.</p>
 <h2 id="reveal">Reveal</h2>
 <h2 id="data-inspectors">Data Inspectors</h2>
 <p>REPL driven data inspectors and <code>tap&gt;</code> sources for visualizing data.</p>
@@ -3933,7 +3946,7 @@ Reveal can also used as a <code>tap&gt;</code> source for more powerful manual d
 <tbody>
 <tr>
 <td><code>clojure -M:inspect/reveal</code></td>
-<td>start a Reveal repl with data visualization window (cloure.main)</td>
+<td>start a Reveal repl with data visualization window (clojure.main)</td>
 </tr>
 <tr>
 <td><code>clojure -M:inspect/reveal-light</code></td>
@@ -3991,12 +4004,12 @@ See the <a href="https://practicalli.github.io/clojure-staging/clojure-tools/dat
 <li><code>clojure -X:inspect/reveal remote-prepl :title &apos;&quot;I am a remote prepl repl&quot;&apos;</code></li>
 </ul>
 <p><strong>Configure theme &amp; font</strong></p>
-<p>Add a custom theme and font via the <code>-J</code> command line option or create an alias using <code>:insepct/reveal-light</code> as an example.</p>
+<p>Add a custom theme and font via the <code>-J</code> command line option or create an alias using <code>:inspect/reveal-light</code> as an example.</p>
 <pre><code class="lang-shell">clojure -M:inspect/reveal -J-Dvlaaad.reveal.prefs=&apos;{:theme :light :font-family &quot;Ubuntu Mono&quot; :font-size 32}&apos;
 </code></pre>
 <p><strong>Rebel Readline &amp; Reveal: Add Reveal as tap&gt; source</strong></p>
 <p>Evaluate <code>(add-tap ((requiring-resolve &apos;vlaaad.reveal/ui)))</code> when using Rebel Readline to add Reveal as a tap source, showing <code>(tap&gt; ,,,)</code> expressions in the reveal window, eg. <code>(tap&gt; (map inc [1 2 3 4 5]))</code>.</p>
-<p><a href="http://practicalli.github.io/clojure/clojure-tools/data-browsers/reveal.html" target="_blank">Practicalli Clojure - data browsers section</a> has more details on using reveal.</p>
+<p><a href="http://practical.li/clojure/clojure-tools/data-browsers/reveal.html" target="_blank">Practicalli Clojure - data browsers section</a> has more details on using reveal.</p>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -4040,7 +4053,7 @@ See the <a href="https://practicalli.github.io/clojure-staging/clojure-tools/dat
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Reveal data visualization","level":"4.2.4","depth":2,"next":{"title":"Jack-in to REPL","level":"4.2.5","depth":2,"path":"clojure-repl/jack-in-to-repl.md","ref":"clojure-repl/jack-in-to-repl.md","articles":[{"title":"Configure Jack-in","level":"4.2.5.1","depth":3,"path":"clojure-repl/configure-repl-start.md","ref":"clojure-repl/configure-repl-start.md","articles":[]},{"title":"Clear REPL buffer","level":"4.2.5.2","depth":3,"path":"clojure-repl/clear-repl-buffer.md","ref":"clojure-repl/clear-repl-buffer.md","articles":[]}]},"previous":{"title":"Portal data visualization","level":"4.2.3","depth":2,"path":"clojure-repl/portal-data-visualization.md","ref":"clojure-repl/portal-data-visualization.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d","P9IClojure":"https://practicalli.github.io/clojure/","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"clojure-repl/reveal-data-visualization.md","mtime":"2022-01-04T11:09:51.619Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-04T11:10:53.662Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Reveal data visualization","level":"4.2.4","depth":2,"next":{"title":"Jack-in to REPL","level":"4.2.5","depth":2,"path":"clojure-repl/jack-in-to-repl.md","ref":"clojure-repl/jack-in-to-repl.md","articles":[{"title":"Configure Jack-in","level":"4.2.5.1","depth":3,"path":"clojure-repl/configure-repl-start.md","ref":"clojure-repl/configure-repl-start.md","articles":[]},{"title":"Clear REPL buffer","level":"4.2.5.2","depth":3,"path":"clojure-repl/clear-repl-buffer.md","ref":"clojure-repl/clear-repl-buffer.md","articles":[]}]},"previous":{"title":"Portal data visualization","level":"4.2.3","depth":2,"path":"clojure-repl/portal-data-visualization.md","ref":"clojure-repl/portal-data-visualization.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"clojure-repl/reveal-data-visualization.md","mtime":"2022-01-09T02:52:39.795Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T02:53:46.289Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

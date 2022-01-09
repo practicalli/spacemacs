@@ -37,9 +37,9 @@ unless you want to know more about what you have just installed
 Run Emacs as normal for your operating system.
 
 As Emacs starts it will read the contents of the =~/.emacs.d/= directory
-and run the Spacemacs configuration wizzard.
-This wizzard creates a =~/.spacemacs= file in the root of your operating system account.
-The wizzard only runs when it does not find the .spacemacs file
+and run the Spacemacs configuration wizard.
+This wizard creates a =~/.spacemacs= file in the root of your operating system account.
+The wizard only runs when it does not find the .spacemacs file
 or a =.spacemacs.d/init.el= configuration file.
 
 You are prompted to select the default editing style.
@@ -129,7 +129,7 @@ enable evil-cleverparens
 
 =SPC s s= and user-config to jump to the right place in the .spacemacs file.
 
-Inbetween the user-config parents,
+In between the user-config parents,
 add the following to enable Evil state safe structural editing for Clojure
 
 #+BEGIN_SRC elisp

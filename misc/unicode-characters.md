@@ -2,7 +2,7 @@
 
 `SPC i u` shows a pop-up list of [Unicode characters](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) by name, with each name also showing the unicode character.
 
-The first time `SPC i u` is called the unicode characters are loaded, as spacemacs doesnt load them in by default.  Loading should only take a second.
+The first time `SPC i u` is called the unicode characters are loaded, as spacemacs doesn't load them in by default.  Loading should only take a second.
 
 As the popup list can be narrowed by typing part or all of the name of characters.  The list shows a fuzzy match of unicode names that match.
 

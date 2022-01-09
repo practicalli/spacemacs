@@ -1,7 +1,7 @@
 # Configure emacsclient for Git commit messages
 Configure the `core.editor` property with `emacsclient` to open Emacs for editing Git commit messages (assuming you do not specify the `-m "commit message"`option to the `git` command).
 
-You can run `emacsclient` in one of several ways (try these approaches until you find which one workd best for your operating system).
+You can run `emacsclient` in one of several ways (try these approaches until you find which one worked best for your operating system).
 
 1) in the same terminal as your `git` command, preferably with Emacs persistent server running.
 

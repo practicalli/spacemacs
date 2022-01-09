@@ -30,7 +30,7 @@ No additional Emacs packages are required.
 
 
 ## Locate files with helm-locate
-The locate binary is used by `SPC f L` (`helm-locate`) to find files and directories on the operating system filespace.
+The locate binary is used by `SPC f L` (`helm-locate`) to find files and directories on the operating system file space.
 
 `helm-locate` is the fastest way to search for files across the whole file space on your computer as it uses the updatedb database.  If a file was very recently added to the file system, run `sudo updatedb` to ensure all files are in the database.
 
@@ -54,7 +54,7 @@ clj-kondo provides live linting when developing with the Clojure language and is
 
 * [clj-kondo binary install guide](https://github.com/borkdude/clj-kondo/blob/master/doc/install.md)
 
-Use the [practcialli/spacemacs.d]({{ book.P9ISpacemacsD }}) configuration or see [Install Clojure section](install-clojure.md) for details on how to use clj-kondo with Spacemacs.
+Use the [practicalli/spacemacs.d]({{ book.P9ISpacemacsD }}) configuration or see [Install Clojure section](install-clojure.md) for details on how to use clj-kondo with Spacemacs.
 
 
 <!-- ## image library -->

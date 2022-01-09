@@ -25,7 +25,7 @@ Use the Spacemacs Zoom menu to enter a transient state that will let you zoom te
 | `SPC z f` | `M-m z f` | Zoom all the buffers in the current frame, including the which-key and helm pop-up buffers |
 | `SPC z x` | `M-m z x` | Scale the font of only the current buffer            |
 
-[![Spacemacs - Zoom Text Transient State - Font Scalling](/images/spacemacs-zoom-text-transient-state-font-scaling.png)](/images/spacemacs-zoom-text-transient-state-font-scaling.png)
+[![Spacemacs - Zoom Text Transient State - Font Scaling](/images/spacemacs-zoom-text-transient-state-font-scaling.png)](/images/spacemacs-zoom-text-transient-state-font-scaling.png)
 
 
 [![Spacemacs - Zoom Frame Transient State](/images/spacemacs-zoom-frame-scale-transient-state.png)](/images/spacemacs-zoom-frame-scale-transient-state.png)

@@ -16,4 +16,4 @@ Delete a symbol, word or expression using the `d` menu
 ------------------------------------------
 
 > ####HINT::Evil-CleverParens
-> Enabling [evil-cleverparens](/install-spacemacs/evil-structural-editing.html) makes Vim editing respect structural editing.  For example, using `d d` will delete a line within a function without unbalancing the outer parenthesis.  In fact, the closing parenthesis will be pulled up to the preceding line, keeping the correct formatting for the Clojure code.
+> Enabling [evil-cleverparens](/install-spacemacs/evil-structural-editing.md) makes Vim editing respect structural editing.  For example, using `d d` will delete a line within a function without unbalancing the outer parenthesis.  In fact, the closing parenthesis will be pulled up to the preceding line, keeping the correct formatting for the Clojure code.

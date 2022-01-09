@@ -1,6 +1,6 @@
 # Sayid debug and profile tool
 
-[Sayid](http://bpiel.github.io/sayid/), pronounced "siy EED", is an indepth debug and profile tool for Clojure projects. To debug or profile code it must be able to compile.
+[Sayid](http://bpiel.github.io/sayid/), pronounced "siy EED", is an extensive debug and profile tool for Clojure projects. To debug or profile code it must be able to compile.
 
 > #### Hint::cider-debug - a simpler approach
 > [cider-debug](cider-debug.md) is simpler and quicker approach to debugging.

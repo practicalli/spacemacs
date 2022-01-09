@@ -1,12 +1,10 @@
 # Idiomatic code with Kibit
 
-> #### TODO::work in progress, sorry
-
 kibit is a static code analyzer for Clojure, ClojureScript, cljx and other Clojure variants. It uses core.logic to search for patterns of code that could be rewritten with a more idiomatic function or macro. For example if kibit finds the code
 
 
 ```clojure
-(defproject myproject "0.0.1"
+(defproject project-name "0.0.1"
   :description "Eastwood Sample Project"
   :license "Eclipse Public License 1.0"
   :url "http://www.bradcypert.com"
@@ -16,7 +14,7 @@ kibit is a static code analyzer for Clojure, ClojureScript, cljx and other Cloju
             [lein-kibit "0.1.5"]])
 ```
 
-`lein kibit` in a terminal will run the analysis on your project and output recommentations
+`lein kibit` in a terminal will run the analysis on your project and output recommendations
 
 ```shell
 At /Users/brad/Projects/podcasts/app/src/app/db/processors.clj:14:
@@ -47,7 +45,7 @@ instead of:
   (if (not (some nil? [item source])) (hashers/check item source) false)
 ```
 
-Kibit will scan your code and check it against idoimatic code patterns (using `core.logic`) and recommend how to simplify and reduce your code complexity.
+Kibit will scan your code and check it against idiomatic code patterns (using `core.logic`) and recommend how to simplify and reduce your code complexity.
 
 The output excerpt shows two different suggestions: Simplifying an `if` to a `when` and condensing an `if` and `not` to an `if-not`.
 

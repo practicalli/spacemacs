@@ -37,7 +37,7 @@ Is this correct? (y/N) y
 
 You need a user ID to identify your key; the software constructs the user ID
 from the Real Name, Comment and Email Address in this form:
-    "Heinrich Heine (Der Dichter) <heinrichh@duesseldorf.de>"
+    "John Practicalli <noreply@practical.li>"
 
 Real name: Jane Roe
 Email address: jane@example.com
@@ -112,4 +112,4 @@ TODO: Is this required if the file is encrypted via Emacs?
 
 
 * [org-mode: encrypting org files](https://orgmode.org/worg/org-tutorials/encrypting-files.html)
-* [Configuring Magithub](https://asok.github.io/emacs/2018/05/09/configuring-magithub.html) - Forge uses the same method to authenticate.
+* [Configuring Forge](https://asok.github.io/emacs/2018/05/09/configuring-magithub.html) - Forge uses the same method to authenticate.

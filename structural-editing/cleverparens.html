@@ -292,7 +292,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/project-file-navigation.html">
+        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/structural-editing.html">
+            
+                <a href="../why-spacemacs/structural-editing.html">
+            
+                    
+                    Structural editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/project-file-navigation.html">
             
                 <a href="../why-spacemacs/project-file-navigation.html">
             
@@ -305,7 +318,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/layouts.html">
+        <li class="chapter " data-level="1.1.2.9" data-path="../why-spacemacs/layouts.html">
             
                 <a href="../why-spacemacs/layouts.html">
             
@@ -1001,9 +1014,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/keybindng-reference.html">
+        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/key-binding-reference.html">
             
-                <a href="../spacemacs-basics/vim-style/keybindng-reference.html">
+                <a href="../spacemacs-basics/vim-style/key-binding-reference.html">
             
                     
                     Keybinding reference
@@ -2912,7 +2925,7 @@
                 <a href="../source-control/magit/interactive-rebasing.html">
             
                     
-                    Interactve Rebasing
+                    Interactive Rebasing
             
                 </a>
             
@@ -3451,9 +3464,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignement.html">
+        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignment.md">
             
-                <a href="../reference/clojure/local-assignement.html">
+                <span>
             
                     
                     Local Assignment
@@ -3823,7 +3836,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="evil-cleverparens">Evil Cleverparens</h1>
+                                <h1 id="evil-cleverparens-safe-structural-editing">Evil Cleverparens safe structural editing</h1>
 <p><a href="../install-spacemacs/evil-structural-editing.html">With <code>evil-cleverparens</code> enabled</a>, editing in Evil Normal state respects the structure of your code.</p>
 <table>
 <thead>
@@ -3841,6 +3854,11 @@
 </tr>
 </tbody>
 </table>
+<p>Default safe structural editing for all major modes by adding the following to <code>dotspacemacs/user-config</code> in <code>.spacemacs</code> or <code>.spacemacs.d/init.el</code></p>
+<pre><code class="lang-elisp">  (spacemacs/toggle-evil-safe-lisp-structural-editing-on-register-hooks)
+  ;; for clojure layer only (comment out line above)
+  ;; (spacemacs/toggle-evil-safe-lisp-structural-editing-on-register-hook-clojure-mode)
+</code></pre>
 <h2 id="evil-normal-editing">Evil normal editing</h2>
 <p>Evil-cleverparens modifies some of the existing behaviour of Evil keybindings.  It also adds some extra keybindings that use forms as a text object.</p>
 <table>
@@ -3901,12 +3919,62 @@
 </tr>
 </tbody>
 </table>
-<h2 id="navigating-via-parens">Navigating via parens</h2>
-<p>Evil-cleverparens has some convienient keybindings for jumping around code using the parens, including double quotes.</p>
+<h2 id="slurping-and-barfing">Slurping and Barfing</h2>
+<p><code>&lt;</code> and <code>&gt;</code> to slurp and barf, both forwards and backwards depending on cursor location</p>
+<p>On an open delimiter, <code>(</code>, <code>[</code>, <code>{</code></p>
+<ul>
+<li><code>&lt;</code> <em>slurp backwards</em> as many times as there are preceding opening delimiters.</li>
+<li><code>&lt;</code> <em>barf forwards</em> unless form contains a single sexp</li>
+</ul>
+<p>On a closing delimiter, <code>)</code>, <code>]</code>, <code>}</code></p>
+<ul>
+<li><code>&gt;</code> <em>slurp forwards</em> as many times as there are closing delimiters behind</li>
+<li><code>&gt;</code> <em>barf backwards</em> unless form contains a single sexp</li>
+</ul>
+<p>When inside a form <code>&lt;</code> will <em>barf</em> and <code>&gt;</code> will <em>slurp</em> <em>forwards</em>.</p>
+<h2 id="wrapping">Wrapping</h2>
 <table>
 <thead>
 <tr>
-<th>Keybinding</th>
+<th>Key</th>
+<th>Behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>M-(</code></td>
+<td>Wrap next sexp in <code>()</code></td>
+</tr>
+<tr>
+<td><code>M-)</code></td>
+<td>Wrap the previous sexp in  <code>()</code></td>
+</tr>
+<tr>
+<td><code>M-[</code></td>
+<td>Wrap the next sexp in <code>[]</code></td>
+</tr>
+<tr>
+<td><code>M-]</code></td>
+<td>Wrap the previous sexp in  <code>[]</code></td>
+</tr>
+<tr>
+<td><code>M-{</code></td>
+<td>Wrap the next sexp in <code>{}</code></td>
+</tr>
+<tr>
+<td><code>M-}</code></td>
+<td>Wrap the previous sexp in <code>{}</code></td>
+</tr>
+</tbody>
+</table>
+<p>Start with a numeric argument to operate on multiple s-expressions until the end of the surrounding form.</p>
+<p><code>SPC-u</code> (universal argument) acts on the surrounding form instead. Each consecutive <code>SPC-u</code> wraps an additional expression from the surrounding form.</p>
+<h2 id="navigating-via-parens">Navigating via parens</h2>
+<p>Evil-cleverparens has some convenient keybindings for jumping around code using the parens, including double quotes.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -3937,11 +4005,12 @@
 </tr>
 </tbody>
 </table>
-<hr>
-<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title" id="work-in-progress-sorry"><i class="fa fa-bookmark"></i> work in progress, sorry</h3></div><div class="panel-body"><p>The following content is still work in progress</p></div></div>
-<h4 id="dragging--transposing">Dragging / Transposing</h4>
-<p>In addition to regular transpose, bound to <code>M-t</code> (<code>sp-transpose-sexp</code>), <code>evil-cleverparens</code> provides additional means of moving sexps around with behavior inspired by the <a href="https://github.com/rejeep/drag-stuff.el" target="_blank">drag-stuff-el</a> mode. <code>evil-drag-forward</code> bound to <code>M-j</code> and <code>evil-drag-backward</code> bound to <code>M-k</code> attempt to drag the <em>thing</em> under point forward or backward. The depth of the thing being moved never changes, i.e. dragging is distinct from slurping or barfing.</p>
-<p>The <em>thing</em> can be many different things depending on the location of the cursor:</p>
+<h2 id="dragging--transposing">Dragging / Transposing</h2>
+<p>Drag the expression under point forward or backward.</p>
+<p><code>M-j</code> <code>evil-drag-forward</code> drag expression forward</p>
+<p><code>M-k</code> <code>evil-drag-backward</code>  drag expression backward</p>
+<p>The depth of the expression being moved never changes, i.e. dragging is distinct from slurping or barfing.</p>
+<p>The expression affected is dependent on the location of the cursor:</p>
 <ul>
 <li>On top of a symbol acts on that symbol.</li>
 <li>Inside or on the delimiters of a form moves the form.</li>
@@ -3949,57 +4018,15 @@
 <li>Outside a form on a safe line will move the line.</li>
 <li>On a top-level comment will move the entire comment-block.</li>
 </ul>
-<p>The behavior of the command with respect to top-level sexps and lines can be customized with <code>evil-cleverparens-drag-ignore-lines</code> (default <code>nil</code>). You can also choose not to treat connected commented lines as singular units by setting <code>evil-cleverparens-drag-comment-blocks</code> to <code>nil</code>.</p>
-<h4 id="slurping-and-barfing">Slurping and Barfing</h4>
-<p><code>evil-cleverparens</code> implements slurping and barfing both forwards and backwards using only the <code>&lt;</code> and <code>&gt;</code> keys by making them act differently when on top of a form delimiter:</p>
-<ul>
-<li>On an opening delimiter <code>&lt;</code> will <em>slurp backwards</em> as many times as there are preceding opening delimiters.</li>
-<li>On a closing delimiter <code>&lt;</code> will <em>barf forwards</em>. If the form contains only a single sexp inside it then <code>evil-cleverparens</code> will question your intention and instead do nothing. Perhaps you meant to <em>splice</em> or <em>delete</em> instead?</li>
-<li>On a opening delimiter <code>&gt;</code> will <em>barf backwards</em> with the same caveat as above.</li>
-<li>On a closing delimiter <code>&gt;</code> will <em>slurp forwards</em> as many times as there are closing delimiters behind.</li>
-<li>When inside a form <code>&lt;</code> will <em>barf</em> and <code>&gt;</code> will <em>slurp</em> <em>forwards</em>.</li>
-</ul>
-<p>While the specifics of the dragging, slurping and barfing behavior may seem complicated when spelled out, a lot of thought has been put to make their use feel intuitive and fluid.</p>
-<h4 id="wrapping">Wrapping</h4>
-<p>While <code>evil-cleverparens</code> editing operations work well with <a href="https://github.com/timcharper/evil-surround" target="_blank">evil-surround</a>, the following specialized wrapping commands are also provided:</p>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Behavior</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>M-(</code></td>
-<td>Wrap the next sexp in round parentheses.</td>
-</tr>
-<tr>
-<td><code>M-)</code></td>
-<td>Wrap the previous sexp in round parentheses.</td>
-</tr>
-<tr>
-<td><code>M-[</code></td>
-<td>Wrap the next sexp in square brackets.</td>
-</tr>
-<tr>
-<td><code>M-]</code></td>
-<td>Wrap the previous sexp in square brackets.</td>
-</tr>
-<tr>
-<td><code>M-{</code></td>
-<td>Wrap the next sexp in curly braces.</td>
-</tr>
-<tr>
-<td><code>M-}</code></td>
-<td>Wrap the previous sexp in curly braces.</td>
-</tr>
-</tbody>
-</table>
-<p>Each command can take a numeric argument to determine how many sexps to operate on maxing out at the number of sexps from the cursor until the end of the surrounding form. When called with the <code>universal-argument</code>, the operations act on the surrounding form instead. The universal argument can be called multiple times, where each consecutive call will wrap an additional expression from the surrounding form.</p>
-<h4 id="copy-and-paste">Copy and Paste</h4>
-<p><code>M-w</code> aka <code>evil-cp-evil-copy-paste-form</code> will copy the surrounding form and insert it below with the proper indentation. If called outside a form it will do the same with the current line instead (as long as its safe). This command can be called with a numeric argument to repeat the paste operation that many times. Calling it with the <code>universal-argument</code> will copy-paste the current top-level form and insert newlines between them.</p>
-<h4 id="from-smartparens">From Smartparens</h4>
+<p>The behavior of the command with respect to top-level sexps and lines can be customized with</p>
+<p><code>evil-cleverparens-drag-ignore-lines</code> (default <code>nil</code>)</p>
+<p><code>evil-cleverparens-drag-comment-blocks</code> to <code>nil</code> treats connected commented lines as singular units</p>
+<h2 id="copy-and-paste">Copy and Paste</h2>
+<p><code>M-w</code> aka <code>evil-cp-evil-copy-paste-form</code> copies the surrounding form and inserts it below with the proper indentation.</p>
+<p>Call outside a form it will do the same with the current line instead (as long as its safe).</p>
+<p>Call with a numeric argument to repeat the paste operation multiple times.</p>
+<p>Call with <code>SPC-u</code> copy-paste the current top-level form and insert newlines between them.</p>
+<h3 id="from-smartparens">From Smartparens</h3>
 <p>The following commands have been lifted straight from <code>smartparens</code>:</p>
 <table>
 <thead>
@@ -4083,7 +4110,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"cleverparens","level":"4.6.1","depth":2,"next":{"title":"Smartparens","level":"4.6.2","depth":2,"path":"structural-editing/smartparens.md","ref":"structural-editing/smartparens.md","articles":[]},"previous":{"title":"Structural Editing","level":"4.6","depth":1,"path":"structural-editing/index.md","ref":"structural-editing/index.md","articles":[{"title":"cleverparens","level":"4.6.1","depth":2,"path":"structural-editing/cleverparens.md","ref":"structural-editing/cleverparens.md","articles":[]},{"title":"Smartparens","level":"4.6.2","depth":2,"path":"structural-editing/smartparens.md","ref":"structural-editing/smartparens.md","articles":[]},{"title":"Lisp State","level":"4.6.3","depth":2,"path":"structural-editing/lisp-state.md","ref":"structural-editing/lisp-state.md","articles":[{"title":"Wrap Unwrap","level":"4.6.3.1","depth":3,"path":"structural-editing/lisp-state-wrap-unwrap.md","ref":"structural-editing/lisp-state-wrap-unwrap.md","articles":[]},{"title":"Slurp Barf","level":"4.6.3.2","depth":3,"path":"structural-editing/lisp-state-slurp-barf.md","ref":"structural-editing/lisp-state-slurp-barf.md","articles":[]},{"title":"Deleting","level":"4.6.3.3","depth":3,"path":"structural-editing/lisp-state-deleting.md","ref":"structural-editing/lisp-state-deleting.md","articles":[]},{"title":"Raising","level":"4.6.3.4","depth":3,"path":"structural-editing/lisp-state-raising.md","ref":"structural-editing/lisp-state-raising.md","articles":[]},{"title":"Repeating Commands","level":"4.6.3.5","depth":3,"path":"structural-editing/repeating-commands.md","ref":"structural-editing/repeating-commands.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d","P9IClojure":"https://practicalli.github.io/clojure/","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"structural-editing/cleverparens.md","mtime":"2022-01-04T11:09:51.791Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-04T11:10:53.662Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"cleverparens","level":"4.6.1","depth":2,"next":{"title":"Smartparens","level":"4.6.2","depth":2,"path":"structural-editing/smartparens.md","ref":"structural-editing/smartparens.md","articles":[]},"previous":{"title":"Structural Editing","level":"4.6","depth":1,"path":"structural-editing/index.md","ref":"structural-editing/index.md","articles":[{"title":"cleverparens","level":"4.6.1","depth":2,"path":"structural-editing/cleverparens.md","ref":"structural-editing/cleverparens.md","articles":[]},{"title":"Smartparens","level":"4.6.2","depth":2,"path":"structural-editing/smartparens.md","ref":"structural-editing/smartparens.md","articles":[]},{"title":"Lisp State","level":"4.6.3","depth":2,"path":"structural-editing/lisp-state.md","ref":"structural-editing/lisp-state.md","articles":[{"title":"Wrap Unwrap","level":"4.6.3.1","depth":3,"path":"structural-editing/lisp-state-wrap-unwrap.md","ref":"structural-editing/lisp-state-wrap-unwrap.md","articles":[]},{"title":"Slurp Barf","level":"4.6.3.2","depth":3,"path":"structural-editing/lisp-state-slurp-barf.md","ref":"structural-editing/lisp-state-slurp-barf.md","articles":[]},{"title":"Deleting","level":"4.6.3.3","depth":3,"path":"structural-editing/lisp-state-deleting.md","ref":"structural-editing/lisp-state-deleting.md","articles":[]},{"title":"Raising","level":"4.6.3.4","depth":3,"path":"structural-editing/lisp-state-raising.md","ref":"structural-editing/lisp-state-raising.md","articles":[]},{"title":"Repeating Commands","level":"4.6.3.5","depth":3,"path":"structural-editing/repeating-commands.md","ref":"structural-editing/repeating-commands.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"structural-editing/cleverparens.md","mtime":"2022-01-09T02:52:39.975Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T02:53:46.289Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

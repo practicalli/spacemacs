@@ -3,14 +3,6 @@
 
 ## comments
 
-`SPC ;`
-
-
-`SPC ; i i` comment indented
-`SPC ; p a` comment paragraph
-
-`M-;` - Emacs comment line
-
 
 ## lisp mode - structural editing
 
@@ -88,22 +80,25 @@ dont abbreviate
 
 
 ## Configure autocomplete to use a key or a delay
+
 Sometimes autocomplete is a bit slow in Clojure.
 
 is it possible to trigger the autocomplete popup with a key ? i find the popup useful some of the time, but having it trigger automatically drives me nuts...
 
-try adjusting `auto-completion-idle-delay`
+try adjusting either
 
-@ag i seem to be using company, rather than auto-complete so i have `company-idle-delay` - i'd much rather have the popup be manual though - if i want auto-complete then i know and want it quickly, if i don't want it i don't ever want it to appear
-ag [5:24 PM]
-then try `company-auto-complete`
+`auto-completion-idle-delay`
+`company-idle-delay`
+
+- i'd much rather have the popup be manual though - if i want auto-complete then i know and want it quickly, if i don't want it i don't ever want it to appear
+`company-auto-complete`
 
 
 
 ## Ideas for intro to Spacemacs
 
 http://www.jesshamrick.com/2012/09/10/absolute-beginners-guide-to-emacs/
-https://github.com/syl20bnr/spacemacs/blob/master/doc/BEGINNERS_TUTORIAL.org
+https://github.com/syl20bnr/spacemacs/blob/develop/doc/BEGINNERS_TUTORIAL.org
 https://www.gnu.org/software/emacs/tour/
 
 
@@ -125,7 +120,7 @@ https://github.com/emacs-evil/evil-surround
 
 1. select the text to surround
 2. `gS` prompts to type in the character to use for the surround (surround-region)
-3. insets opening & closing charaters, however inserts a new lines before and after the selected text
+3. insets opening & closing characters, however inserts a new lines before and after the selected text
 
 
 ### insert mode
@@ -232,7 +227,7 @@ Move the cursor to where you want to paste the text with `p`
 
 ## Spacemacs cache
 
-Spacemacs saves the bookmarks in ~/.emacs.d/.cache/bookmarks, and the recent files lise in ~/.emacs.d/.cache/recentf. You can copy these two files somewhere outside of ~/.emacs.d, and copy them back in after re-installing.
+Spacemacs saves the bookmarks in `~/.emacs.d/.cache/bookmarks`, and the recent files in `~/.emacs.d/.cache/recentf`. You can copy these two files somewhere outside of ~/.emacs.d, and copy them back in after re-installing.
 
 In fact, there might be more files in ~/.emacs.d/.cache that you'd like to save. I suggest backing up the entire ~/.emacs.d/.cache and restoring what you miss after re-installation.
 
@@ -290,8 +285,8 @@ evil-want-fine-undo
 https://gist.github.com/agzam/acd3b5e311f8f7e87e21b550856f65e1
 
 
-does anyone know what face is for the current symbol when automatic-highlight is on? SPC t h a?
-nevermind, I think I found it: ahs-plugin-whole-buffer-face
+face for the current symbol when automatic-highlight is on? SPC t h a?
+`ahs-plugin-whole-buffer-face`
 
 
 
@@ -332,13 +327,13 @@ actually `SPC p a` toggles between `src` and `test` file
 
 
 
-## Madeline & powerline
+## Modeline & powerline
 
 `SPC t m t` - toggle mode line
 
 There are other modeline toggles under `SPC t m` that you might explore.
 
-@cpmcdaniel if it's the separators between the things in the modeline that is bothering you, you can change the separator in our `.spacemacs`... I set mine to `nil`, ala:
+change the separator, in this example removing the separator by setting the value to `nil`
 ```
 (setq powerline-default-separator nil
         powerline-center-theme t)
@@ -350,13 +345,13 @@ There are other modeline toggles under `SPC t m` that you might explore.
 C-c C-i
 
 
+navigate helm prompt C-<left-arrow> C-<right-arrow>
+
+navigate up helm prompt C-h (deleting path by file or directory name)
 
 
+https://sprungcanary.net/posts-output/2015-11-29-a-repl-story/
 
-http://sprungcanary.net/2015/11/29/a-repl-story/
-
-Keybindings
-https://github.com/SteveJobzniak/spacemaxed/blob/master/spacemaxed/docs/03_USEFUL_KEYBINDINGS.org
 
 ## Git stuff
 
@@ -375,14 +370,14 @@ http://spacemacs.org/layers/+emacs/org/README.html
 * Pomodoro
 https://github.com/lolownia/org-pomodoro
 
-
-I am starting to use spacemacs and org-mode for academic writing, so I use pandoc, which you will probably want to use. I have written a beginner's guide to spacemacs for academic writing and a cheat sheet that you might find useful: https://ontologicalblog.wordpress.com/2016/10/14/an-absolute-beginners-guide-to-spacemacs-for-academic-writing/
+https://ontologicalblog.wordpress.com/2016/10/14/an-absolute-beginners-guide-to-spacemacs-for-academic-writing/
 
 * Agenda files
 
+```elisp
 (with-eval-after-load 'org (setq org-agenda-files
                               '("c:/Users/USERNAME/Dropbox/Notes/")))
-
+```
 
 ## working with buffers
 
@@ -450,7 +445,7 @@ c
 
 Functions
 
-Function refers to the thing that you are calling when you hit a key or series of keys. For example j in normal modeis mapped to the function evil-next-line. In elisp these usually look like strings of hyphenated words. spc spc opens helm M-x and lets you search for functions by name and execute them. Note that functions may also be refered to as sexps (symbolic expressions).
+Function refers to the thing that you are calling when you hit a key or series of keys. For example j in normal mode is mapped to the function evil-next-line. In elisp these usually look like strings of hyphenated words. spc spc opens helm M-x and lets you search for functions by name and execute them. Note that functions may also be refereed to as sexps (symbolic expressions).
 Buffers
 
 Buffers are like tabs in your browser. You open them from files on your computer instead of from the internet, and they stay open until you close them. Hit spc b b to see a searchable list of your open buffers, and recently opened buffers. spc b B opens a list of buffers organized by major mode. spc b d deletes the buffer you are currently in. As you can most the spc b commands are related to buffers. But buffers arent necessarily just files you open, they can also be generated by emacs (like the helm mini buffer (spc b b) you use to search buffers) to do useful things.
@@ -465,7 +460,7 @@ At the bottom of the window, you will see the mode line. Its got some handy info
     Major mode.
     Minor modes.
 
-On the far right is info about where you are in a buffer. Move around whth hjkl and watch it if you dont get it at first.
+On the far right is info about where you are in a buffer. Move around with hjkl and watch it if you dont get it at first.
 Major Modes
 
 This is how emacs organizes important sets of functionality. Each buffer will have one major mode at a time. It can customize anything about emacs so that it suits the buffer you are working with. There is a mode for editing C#, a mode for editing latex, a mode for viewing files (dired-mode), a mode for searching (helm-major-mode), a mode for emulating a terminal (term-mode). You can see what major mode you are in at the bottom of each buffer in your mode line. Usually this is automatically set depending on which buffer you are in. Major modes specific functions are on the , key (also spc m).
@@ -479,67 +474,17 @@ Layers
 Everything so far (except specific key bindings) applies to emacs in general. Layers, however, are a spacemacs specific term. Layers are meant to be a simple way for you to customize your configuration by adding only one line to your .spacemacs file. See the list to see what are available. Check out the latex layer for example.
 The .spacemacs file
 
-Hit spc f e d (file emacs dotfile) to open this file. This is where you can customize everything. Find the dotspacemacs-configuration-layers line. You can use / in normal mode to start searching for it and enter when you have it. Add latex in that list. It should look like this:
-
-dotspacemacs-configuration-layers '(
-  latex
-  other-layer
-  other-layer)
-
-Now spacemacs will load that layer on startup for you, which includes a major mode for editing latex and a bunch of commands. You can now either restart emacs, or hit spc f e R(file emacs reload) to reload your config. Now if you hit spc f f (file find) and open a latex file you should have some syntax highlighting and latex specific commands on your , key.
-
 ## Why Vim ?
 
 ### Positives
 
-* Cut the Mouse - One of the main wins for Vim has always been that it is an editor that lets you keep your hands on the keyboard. Reaching for the mouse slows you down, and while I never really had a problem with that in the past (I spend more time thinking and reading than I do writing code), now that I’ve experienced 2 months with my hands on the keyboard I do find myself noticing (annoyingly) when I am forced to reach for the mouse.
+Hands centered on the center of the keyboard
 
-* Fast Navigation - Moving around inside files in most windows editors involves a lot of home/end/up/down arrow key. Having search and tag based navigation makes getting around within a file much faster. Finding the right file is also easier with the commandt plugin, influenced by Textmate on the Mac, this fuzzy file finder is not typically available in traditional windows editors (last time I looked)
+Rarely have to use a chorded keybinding
 
-* Split Windows - Splitting windows into panes and navigating around them is a killer feature that I use all the time to see multiple files at once, or multiple areas of the same file at once. In the past I used tabs heavily, but I now prefer split panes that I can manage without reaching for the mouse.
+Keeps strain on hands to a minimum
 
-
-### Negatives
-
-    HJKL - Sorry, call me a heretic but I just cannot get used to using these keys for up/down/left/right. 20+ years of using the arrow keys is completely and utterly embedded in my brain. Besides, I’m pretty sure J (down) and K (up) are bass-ackwards. Western languages, and presumably most programming languages, read from TOP LEFT to BOTTOM RIGHT so shouldn’t UP be next to LEFT and DOWN be next to RIGHT ??? I know I could remap the keys, but plugins that follow similar patterns would also have to be remapped and I just could not get used to it.
-
-    Mode Struggles - The modal nature of Vim is both a blessing and a curse. Its the feature that allows us to keep our hands on the keyboards without the wrist breaking key combo’s of Emacs but its also far too easy to forget which mode you are in and start typing code only to discover you just executed 5 random commands. The people who recommend you ESC constantly back into command mode are absolutely correct. You have to shift your thinking into being primarily command based with short sharp bursts of INSERT.
-
-    Breaking Windows - One of the side effects of the modal nature of vim is that it trains you to constantly hit ESCAPE to go back to command mode…. but when you do this in more traditional windows apps its quite possible you will end up dismissing a dialog while you are in the middle of typing! How frustrating! I hit this mostly when using Tortoise SVN for my code commits.
-
-    Disappointing Plugins - Whilst some plugins are awesome, some are surprisingly disappointing. While I was really looking forward to them, the following plugins just didn’t get as much use as I expected session (doesn’t work well with NERDTree or quickfix window), taglist (doesn’t work well with dynamic languages - at the moment I use primarily Ruby and Javascript), Conque Shell - (nice idea, but doesn’t feel natural, just easier to use :shell or have another terminal open)
-
-Effort vs Reward
-
-Ok. So I have a theory…
-
-Vim proponents will tell you that the effort you spend learning vim will pay dividends in the long run once you know how to use it properly. After 60 days I can say that I agree with that opinion.
-
-However, if I spent this much effort learning any editor I think it would pay dividends in the long run. The difference is that Vim forces you to go through this pain, whilst other editors work ‘out the box’ and so most programmers are not inclined to learn the power of those editors.
-
-For example, I think UltraEdit, TextMate, even Visual Studio are pretty good editors, but since they all pretty much just work out of the box, its easy to ignore their advanced features and not spend the time customizing and configuring them.
-
-I wonder if I spent 60 days really learning UltraEdit if I couldn’t get the same positives I described here ? Hmmm, a future article maybe?
-Conclusion
-
-I’m still using Vim after 60 days, and I plan to continue using it for the foreseeable future as long as I can keep taking a little time here and there to dig deeper, customize a bit more, learn how to overcome the negatives and build upon the positives.
-
-Vim seems to be so powerful that I could be learning it forever. Here’s a list of some of the things I want to spend time on in the future.
-
-    Movement - I need to learn more code related movement commands like % match
-    Sessions - Both sessions.vim and sessionman.vim seem to struggle with NERDTree and the quickfix window
-    Cut & Paste - I need to learn more about vim registers so I can manage my cut & paste better, errr, sorry, I mean yank & put
-    Undo & Redo - I think I spend too much time in insert mode so when I undo it tends to be more than I’d like
-    HJKL - Maybe I should remap to swap the J and K keys and try again!
-    More Plugins - There are many more plugins I would like to take the time to check out, and perhaps build some of my own.
-
-
-
-# projectile
-
-`SPC p p` - switch to another project that spacemacs knows about
-
-
+* Fast Navigation - Moving around inside files in most windows editors involves a lot of home/end/up/down arrow key. Having search and tag based navigation makes getting around within a file much faster. Finding the right file is also easier with the command plugin, influenced by Textmate on the Mac, this fuzzy file finder is not typically available in traditional windows editors (last time I looked)
 
 
 # ranger
@@ -559,44 +504,12 @@ some configuration to consider
  (ranger :variables
          ranger-ignored-extensions '(
                                      "mkv" "iso" "mp4" "avi" "mp4" "mkv"
-                                     "zip" "rar" "exe" "ps" "webm" "png"
+                                     "zip" "rar" "exe" "ps" "png"
                                      "jpg" "jpeg" "tif" "tiff" "ics" "dmg"
                                      "swf" "gz" "m4a")
          ranger-max-preview-size 4  ;; Megabyte
          ranger-cleanup-eagerly t
          )
-
-
-# iedit-mode
-
-`SPC s e`
-
-* Blog: http://nexusstar.name/hackpads/spacemacs-iedit-mode-cheat-sheat/
-
-
-iedit-mode (aka interactive-edit-mode) gives you the power to edit instances of the same text string in a buffer. It’s quite similar to multiple cursors, although if you’re used to working with multiple cursors, it’s likely you’ll prefer that.
-
-IEdit defaults to selecting all matches, and then allows you to reduce and expand the matches in various ways, so the workflow is in the opposite direction.
-
-I use iedit often as a quick interactive replace all, and multiple cursors for anything in between that and more complicated regexp search replace.
-
-In conjunction with wgrep-mode (that is a writeable grep mode, which works with most grep alternative tools as well) iedit-mode can become a poweful way to edit a string across many files and review the changes before you save them.
-
-To install it use M-x package-install iedit
-
-Once installed you can start it with C-; (M-x iedit-mode)
-
-Note, this doesn’t work in a terminal so in that case I’d bind it to C-c ;
-
-Spacemacs has a binding for IEdit mode on it’s SPACE leader (SPC s e)
-
-
-
-
-# Multiple cursor options in spacemacs
-
-https://www.reddit.com/r/spacemacs/comments/4641zt/how_the_heck_do_i_use_multicursor_support/
-
 
 
 ## general stuff
@@ -605,181 +518,16 @@ From: http://blog.christopher-atkins.com/more-spacemacs
 
 Inter-file Navigation SPC b b open Helm mini-buffer SPC f f Helm find files, is less useful than SPC p f Projectile find files SPC p p Projectile find project
 
-Using the Ranger layer (file manager) invoked using SPC a r (applications ranger) Consier using Unimpaired layer (tpope quick cycling) Consider using Fasd layer to complement Fasd
-
 Intra-file Navigation SPC s s SWOOP! opens a copy of the buffer then elides lines that don’t match the search you type, allowing you to navigate the top buffer by selecting lines in the swoop buffer
 
-Window navigation SPC <number> navigate numbered windows Eyebrowse layer allows SPC W then a number to create/navigate to a new workspace with Eybrwose working you can using Vim’s gt and gT to
+Window navigation SPC <number> navigate numbered windows Eyebrowse layer allows SPC W then a number to create/navigate to a new workspace with Eyebrowse working you can using Vim’s gt and gT to
 
 Editing Select some text, then s <char> will surround with <char> iedit, get a selection (the whole current symbol by default) then SPC s e to enter iedit mode, allowing you to edit all the matched things at once SPC ; ; toggle line comment Diacritics in Emacs C-x 8 ' e to creates é
 
-Help SPC h d invokes “help describe”, providing access to multipe ways of find help SPC f e h is canonical spacemacs help
+Help SPC h d invokes “help describe”, providing access to multiple ways of find help SPC f e h is canonical spacemacs help
 
 Checking SPC t s turns on syntax checking
 
 Future layers to explore OrgMode + Capture mode Abbrev mode
 
 Editorconfig layer to manage things like indent and such
-
-
-
-
-# Literate programming
-
-## Why Literate Programming
-
-In Spacemacs and Clojure development, it means you could write a document explaining your project or library and include code that can execute and give results in the document itself.
-
-So, if you wanted contributors to help with you open source project or are on-boarding a developer onto you team, you could give them a literate programming document that explains how all the important aspects work, including real code examles that they can experiment with.
-
-## How to do it
-
-Emacs has Org-mode with can do amazing things with documents, simply open a file with a `.org` filename extension.  Alternatively you can start the org-mode major mode with the command `M-x org-mode`
-
-Emacs also has bable, which can take code and run it in an Emacs buffer of the correct major-mode for the language and automoaticaly return the result back to the org-mode file.
-
-
-## Examples
-
-The following are Clojure code block examples.
-Basic Functionality
-
-Let's start really simple. We will test the evaluation of a simple Clojure form. Insert the following into the org file:
-```
-#+begin_src clojure :results silent
-  (+ 1 4)
-#+end_src
-```
-Now place the cursor in the code block and enter the command:
-
-C-c C-c
-
-This should evaluate the Clojure form, and echo the results: "5" in the mini-buffer.
-
-Now let's insert the results into the buffer immediately after the Clojure code block. Insert the following into your org file:
-
-#+begin_src clojure :results value
-  [ 1 2 3 4]
-#+end_src
-
-Execute as before:
-
-C-c C-c
-
-Now, immediately following the code block, the following results block will be inserted:
-
-#+RESULTS
-[ 1 2 3 4]
-
-The result of the last form evaluated will be inserted into the results block.
-
-Here is another simple example, with the results of evaluation included:
-
-#+begin_src clojure :results value
-  (def small-map {:a 2 :b 4 :c 8})
-  (:b small-map)
-#+end_src
-
-#+RESULTS:
-: 4
-
-A More Complicated Example- Make a Graph and Insert It into the Document
-
-The next example will use an interesting Clojure based library called Incanter. The code will demonstrate the creation of a basic x-y line plot using the Incanter xy-plot function. There is a preliminary step which is required to download the Incanter library into your machine. In the Leiningen project, there is a file called project.clj which must have the Incanter library dependency added to it as follows:
-```clojure
-(defproject clojure-examples "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.5.0"]
-                 [incanter "1.5.4"]])
-```
-
-After the project.clj file is modified, issue the command lein deps at the command line. You must have an internet connection for this to successfully download the dependencies into your local machine.
-
-The following code block shows how the Incanter library is used to create an x-y line plot. The view function will display the plot. The plot is also saved to both PDF and PNG format image files.
-
-```
-#+begin_src clojure
-  (use '(incanter core charts pdf))
-  ;;; Create the x and y data:
-  (def x-data [0.0 1.0 2.0 3.0 4.0 5.0])
-  (def y-data [2.3 9.0 2.6 3.1 8.1 4.5])
-  (def xy-line (xy-plot x-data y-data))
-  (view xy-line)
-  (save-pdf xy-line "incanter-xy-line.pdf")
-  (save xy-line "incanter-xy-line.png")
-#+end_src
-```
-
-To insert the image into the exported document, add this code:
-
-```
-#+CAPTION: A basic x-y line plot
-#+NAME: fig:xy-line
-[[./incanter-xy-line.pdf]]
-```
-
-Note that the file will be saved to the highest level of the Leiningen project. Depending on where you created the org file, the path to the file may have to be different than shown.
-Export to LaTeX or HTML
-
-To export to LaTeX, C-c C-e l l. To export to HTML, C-c C-e h h.
-
-Note that the exported HTML will hyperlink the PDF file; to embed the image in the HTML, switch to the PNG image file. The exported LaTeX (.tex) file will embed either the PDF or PNG file. Graphical quality will be superior with the PDF file.
-
-## Session Evaluation
-
-By default, each individual code block will execute by starting a Clojure process. Each code block will execute in isolation from the others. Due to the start-up time of a Java virtual machine, this can make execution of many blocks slow. The :session option will allow control of the process assigned to each code block. Please refer to the org manual for details on :session usage.
-Specify namespace
-
-By default, each individual code block will execute under CIDER connection session's current namespace. But you can specify a namespace like bellowing:
-
-```
-#+begin_src clojure :results pp
-(ns kk.test)
-(def he "hi")
-#+end_src
-
-#+RESULTS:
-: #'kk.test/he
-```
-
-You can see the second code block still us individual namespace.
-
-```
-#+begin_src clojure :results value :ns kk2
-(def he "hi")
-*ns*
-#+end_src
-
-#+RESULTS:
-: nil#'kk2/he#namespace[kk2
-
-Change Clojure cwd in Org-mode way
-```
-
-As this blog post Clojure Plotting to Org inline image in ob-clojure mentioned.
-
-Because Clojure is based on JVM, can JVM does not allow to dynamically change current working directory (cwd). So if you use ob-clojure in Org-mode, and need to interact with path, directory, file etc. You need to figure other ways. Here is an Org-mode way, use header argument :var to pass current buffer's path into Clojure, then use this dir variable in Clojure to construct a correct path.
-
-```
-#+begin_src clojure :results graphics :dir "data/images" :file "ob-clojure-literate.png" :var dir=(concat (file-name-directory (buffer-file-name)) "data/images/")
-(use '(incanter core stats datasets charts io pdf))
-(def hist (histogram (sample-normal 1000)))
-(save hist (str dir "ob-clojure-literate.png"))
-#+end_src
-```
-
-## Additional Examples
-
-The above set-up and examples were intended for the beginner to achieve success with Clojure code blocks in org mode documents.
-
-Please refer to the documentation for emacs, Clojure-mode, and CIDER which are referenced in the requirements session for details on how to enhance the system beyond the basics described in this tutorial.
-
-More examples of Clojure code blocks can be found at these sites:
-
-    Emacs Org and Overtone
-    Literate Programming Solution to the Potter Kata
-    Incanter Chart Customizations
-    thi.ng/geom: Comprehensive geometry toolkit for Clojure/ClojureScript developed in a literate programming style.

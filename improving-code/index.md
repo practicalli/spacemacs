@@ -13,7 +13,7 @@ Clojure code should be kept readable and consistently use idiomatic style, which
 
 ## Linting
 
-Linting tools can be added as a `flycheck` service so code is continually checked as you are writing it.  Continuously linting picks up little bugs as you type and reduces the ammount of debugging required, as you are changing errors as you make them.
+Linting tools can be added as a `flycheck` service so code is continually checked as you are writing it.  Continuously linting picks up little bugs as you type and reduces the amount of debugging required, as you are changing errors as you make them.
 
 Linting will get rid of all the little errors and typos that are easily made, yet take time to find and fix.
 
@@ -27,4 +27,4 @@ Kibit is a commonly used static analyser for Clojure projects, suggesting change
 
 A consistent format of your code base makes it much more readable and therefore understandable by the development team.  The `clojure-mode` does manage basic formatting of your code, especially code indentation.
 
-Spacemacs can be configured to automatically check and adjust any formatiing as you type.
+Spacemacs can be configured to automatically check and adjust any formatting as you type.

@@ -292,7 +292,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.7" data-path="../../why-spacemacs/project-file-navigation.html">
+        <li class="chapter " data-level="1.1.2.7" data-path="../../why-spacemacs/structural-editing.html">
+            
+                <a href="../../why-spacemacs/structural-editing.html">
+            
+                    
+                    Structural editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../../why-spacemacs/project-file-navigation.html">
             
                 <a href="../../why-spacemacs/project-file-navigation.html">
             
@@ -305,7 +318,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.8" data-path="../../why-spacemacs/layouts.html">
+        <li class="chapter " data-level="1.1.2.9" data-path="../../why-spacemacs/layouts.html">
             
                 <a href="../../why-spacemacs/layouts.html">
             
@@ -1001,9 +1014,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.5" data-path="../../spacemacs-basics/vim-style/keybindng-reference.html">
+        <li class="chapter " data-level="3.2.5" data-path="../../spacemacs-basics/vim-style/key-binding-reference.html">
             
-                <a href="../../spacemacs-basics/vim-style/keybindng-reference.html">
+                <a href="../../spacemacs-basics/vim-style/key-binding-reference.html">
             
                     
                     Keybinding reference
@@ -2912,7 +2925,7 @@
                 <a href="../../source-control/magit/interactive-rebasing.html">
             
                     
-                    Interactve Rebasing
+                    Interactive Rebasing
             
                 </a>
             
@@ -3451,9 +3464,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.1.5.6" data-path="../../reference/clojure/local-assignement.html">
+        <li class="chapter " data-level="8.1.5.6" data-path="../../reference/clojure/local-assignment.md">
             
-                <a href="../../reference/clojure/local-assignement.html">
+                <span>
             
                     
                     Local Assignment
@@ -3824,28 +3837,116 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="literate-programming">Literate Programming</h1>
-<p><a href="https://en.wikipedia.org/wiki/Literate_programming" target="_blank">Literate programming </a>is a document in a natural language, interspersed with snippets of code that can be executed.  It is an interactive document that can update sections of itself from the code that runs inside.</p>
+<p><a href="https://en.wikipedia.org/wiki/Literate_programming" target="_blank">Literate programming </a> is a document written in a natural language, interspersed with snippets of code that can be executed and results visualised as text or graphics.  It is an interactive document that can update sections of itself from the code that runs inside.</p>
+<p>In Spacemacs and Clojure development, it means you could write a document explaining your project or library and include code that can execute and give results in the document itself.</p>
+<p>To encourage contributors to open source project or on-boarding a developer onto a team, a literate programming document that explains how all the important aspects work, including real code examples that they can experiment with, would remove barriers in becomming familiar with a project.</p>
+<h2 id="literate-programming-with-spacemacs">Literate programming with Spacemacs</h2>
+<p>Emacs has Org-mode with can do amazing things with documents, simply open a file with a <code>.org</code> filename extension.</p>
+<p>Org-mode includes Babel, which can take code and run it in an Emacs buffer of the correct major-mode for the programming language and automatically return the result back to the org-mode file.</p>
 <h2 id="configure-literate-programming-with-clojure">Configure Literate Programming with Clojure</h2>
 <p>Include the <code>org</code> and <code>clojure</code> layers in the <code>dotspacemacs-layer-configuration</code> of the <code>~/.spacemacs</code> configuration file.</p>
-<h2 id="create-a-clojure-project">Create a Clojure project</h2>
-<p>Literate programming can be used with any working Clojure project, using either a <code>deps.edn</code> configuration or a Leinigen `project.clj** file.</p>
+<h3 id="create-a-clojure-project">Create a Clojure project</h3>
+<p>Literate programming can be used with any working Clojure project, using either a <code>deps.edn</code> configuration or a Leiningen <code>project.clj</code> file.</p>
 <p>Create a project using either Clojure CLI tools or Leiningen.  Dependencies, apart from Clojure, itself are not required.</p>
-<p><strong>Clojure CLI tools (with clj-new)</strong></p>
-<pre><code class="lang-shell">clojure -M:project/new app practicalli/literate
-</code></pre>
-<p><strong>Leiningen</strong></p>
-<pre><code class="lang-shell">lein new app literate
-</code></pre>
+<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#cli" aria-controls="cli" role="tab" data-toggle="tab">Clojure CLI project</a></li><li role="presentation" class=""><a href="#lein" aria-controls="lein" role="tab" data-toggle="tab">Leiningnen project</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="cli"><pre><code class="lang-shell">clojure -T:project/new :template app :name practicalli/literate</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="lein"><pre><code class="lang-shell">lein new app literate</code></pre>
+</div></div></p>
 <div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="simple-example-project"><i class="fa fa-lightbulb-o"></i> Simple example project</h3></div><div class="panel-body"><p>Clone <a href="https://github.com/practicalli/literate-programming-in-clojure" target="_blank">practicalli/literate-programming-in-clojure</a> project for a simple example project that works.</p></div></div>
-<h2 id="run-a-clojure-repl">Run a Clojure REPL</h2>
+<h3 id="run-a-clojure-repl">Run a Clojure REPL</h3>
 <p>Open the <code>deps.edn</code>, <code>project.clj</code>, or any source code file from the project.</p>
 <p><code>, &apos;</code> or <code>M-RET &apos;</code> to start a REPL.</p>
-<h2 id="create-an-org-file-with-clojure-code-blocks">Create an org file with Clojure code blocks</h2>
+<h3 id="create-an-org-file-with-clojure-code-blocks">Create an org file with Clojure code blocks</h3>
 <p>Create an org file, eg. <code>literate-clojure.org</code> in the root of the Clojure project.</p>
 <p>Write the text of the document and use <code>, b d</code> to add a code block, selecting <code>clojure</code> as the language.</p>
 <p>Add <code>:results value</code> after <code>clojure</code> in the code block <code>BEGIN</code> line.</p>
 <p>In the code block write your clojure code, eg <code>(+ 1 2 3)</code></p>
 <p><code>C-c C-c</code> to evaluate the code block at the cursor point. The result is pasted underneath the code block.</p>
+<h2 id="clojure-literate-programming-examples">Clojure Literate programming examples</h2>
+<p>Starting with a very basic Clojure expression to test evaluation is working correctly.  Using <code>:results silent</code> will not add the result to the <code>.org</code> file.</p>
+<pre><code class="lang-none">#+begin_src clojure :results silent
+  (+ 1 4)
+#+end_src
+</code></pre>
+<p><code>C-c C-c</code> with the cursor placed in the code block</p>
+<p>This should evaluate the Clojure form and echo the results: &quot;5&quot; in the mini-buffer.</p>
+<p>Now insert the results into the org buffer immediately after the Clojure code block</p>
+<pre><code class="lang-none">#+begin_src clojure :results value
+  [ 1 2 3 4]
+#+end_src
+</code></pre>
+<p><code>C-c C-c</code> with the cursor placed in the code block</p>
+<p>The following results block will be inserted immediately following the code block</p>
+<pre><code class="lang-none">#+RESULTS
+[ 1 2 3 4]
+</code></pre>
+<p>Multiple expressions can be defined.  First define a Clojure data structure (hash-map) and then use a keyword as a function to retrieve a specific value from the hash-map.</p>
+<pre><code class="lang-none">#+begin_src clojure :results value
+  (def small-map {:a 2 :b 4 :c 8})
+  (:b small-map)
+#+end_src
+
+#+RESULTS:
+: 4
+</code></pre>
+<p>Make a Graph of the results</p>
+<p>Using the Clojure <a href="https://github.com/incanter/incanter" target="_blank">Incanter library</a> to create a line plot graph using the Incanter xy-plot function.</p>
+<p>The Incanter library should first be added to the Clojure project as a dependency.</p>
+<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#cli" aria-controls="cli" role="tab" data-toggle="tab">Clojure CLI project</a></li><li role="presentation" class=""><a href="#lein" aria-controls="lein" role="tab" data-toggle="tab">Leiningnen project</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="cli"><p>Add Incanter to the <code>:deps</code> key of the <code>deps.edn</code> file</p><pre><code class="lang-clojure">{<span class="hljs-symbol">:paths</span> [<span class="hljs-string">&quot;src&quot;</span> <span class="hljs-string">&quot;resources&quot;</span>]
+ <span class="hljs-symbol">:deps</span> {org.clojure/clojure {<span class="hljs-symbol">:mvn/version</span> <span class="hljs-string">&quot;1.10.3&quot;</span>}
+        incanter/incanter   {<span class="hljs-symbol">:mvn/version</span> <span class="hljs-string">&quot;1.9.3&quot;</span>}}}</code></pre>
+</div><div role="tabpanel" class="tab-pane " id="lein"><p>Add Incanter to the <code>:dependencies</code> key of the <code>project.clj</code> file</p><pre><code class="lang-clojure">(<span class="hljs-name">defproject</span> clojure-literate-programming <span class="hljs-string">&quot;0.1.0&quot;</span>
+  <span class="hljs-symbol">:description</span> <span class="hljs-string">&quot;Literate Programming with Incanter&quot;</span>
+  <span class="hljs-symbol">:license</span> {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;Creative Commons Attribution Share-Alike 4.0 International&quot;</span>
+            <span class="hljs-symbol">:url</span> <span class="hljs-string">&quot;https://creativecommons.org/&quot;</span>}
+  <span class="hljs-symbol">:dependencies</span> [[org.clojure/clojure <span class="hljs-string">&quot;1.10.3&quot;</span>]
+                 [incanter <span class="hljs-string">&quot;1.9.3&quot;</span>]])</code></pre>
+</div></div></p>
+<p>Use the Incanter library to create an x-y line plot. The <code>view</code> function displays the line plot. The plot is also saved to both PDF and PNG format image files.</p>
+<pre><code>#+begin_src clojure
+  (use &apos;(incanter core charts pdf))
+  ;;; Create the x and y data:
+  (def x-data [0.0 1.0 2.0 3.0 4.0 5.0])
+  (def y-data [2.3 9.0 2.6 3.1 8.1 4.5])
+  (def xy-line (xy-plot x-data y-data))
+  (view xy-line)
+  (save-pdf xy-line &quot;incanter-xy-line.pdf&quot;)
+  (save xy-line &quot;incanter-xy-line.png&quot;)
+#+end_src
+</code></pre><p>Insert the image into the exported PDF document:</p>
+<pre><code>#+CAPTION: A basic x-y line plot
+#+NAME: fig:xy-line
+[[./incanter-xy-line.pdf]]
+</code></pre><p>Files are saved to the root of the Clojure project.</p>
+<h2 id="export-to-latex-or-html">Export to LaTeX or HTML</h2>
+<p><code>C-c C-e l l</code> to export to LaTeX.</p>
+<p><code>C-c C-e h h</code> to export to HTML.</p>
+<p>The exported HTML code will hyperlink the PDF file. To embed the image in the HTML, switch to the PNG image file.</p>
+<p>The exported LaTeX (.tex) file will embed either the PDF or PNG file. Graphical quality will be superior with the PDF file.</p>
+<h2 id="session-evaluation">Session Evaluation</h2>
+<p>Use the <code>:session</code> option to run all Clojure code in the same REPL process</p>
+<p>Without <code>:session</code> each individual code block will execute by starting a Clojure REPL process. Due to the start-up time of a Java virtual machine, this can make execution of many blocks slow.</p>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="sessions-changed-in-org-9"><i class="fa fa-lightbulb-o"></i> Sessions changed in Org 9</h3></div><div class="panel-body"><p>The <code>:session</code> option may not be required in Org version 9.  Testing is required.</p></div></div>
+<h2 id="specify-a-namespace">Specify a namespace</h2>
+<p>Each code block will execute in the default <code>user</code> namespace, unless changed via CIDER nREPL connection.</p>
+<p>A namespace can be specified in a code block using the Clojure <code>ns</code> function.</p>
+<pre><code>#+begin_src clojure :results pp
+(ns practicalli.greet)
+(def hello &quot;Hello Practicalli, this is the greet namespace&quot;)
+#+end_src
+
+#+RESULTS:
+: #&apos;practically.greet/hello
+</code></pre><p>Following code blocks in the .org file will continue to use the specified namespace.</p>
+<pre><code>#+begin_src clojure :results value :ns kk2
+*ns*
+#+end_src
+
+#+RESULTS:
+: #&apos;practicalli.greet/hello
+</code></pre><h2 id="references">References</h2>
+<ul>
+<li><a href="https://github.com/incanter/incanter#usage" target="_blank">Incanter examples</a></li>
+</ul>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -3889,7 +3990,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Literate Programming","level":"6.3","depth":1,"next":{"title":"Encryption","level":"7.1","depth":1,"path":"encryption/index.md","ref":"encryption/index.md","articles":[{"title":"Create gpg key","level":"7.1.1","depth":2,"path":"encryption/create-gpg-key.md","ref":"encryption/create-gpg-key.md","articles":[]}]},"previous":{"title":"Org-journal","level":"6.2","depth":1,"path":"org-mode/org-journal.md","ref":"org-mode/org-journal.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d","P9IClojure":"https://practicalli.github.io/clojure/","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"org-mode/literate-programming/index.md","mtime":"2022-01-04T11:09:51.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-04T11:10:53.662Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Literate Programming","level":"6.3","depth":1,"next":{"title":"Encryption","level":"7.1","depth":1,"path":"encryption/index.md","ref":"encryption/index.md","articles":[{"title":"Create gpg key","level":"7.1.1","depth":2,"path":"encryption/create-gpg-key.md","ref":"encryption/create-gpg-key.md","articles":[]}]},"previous":{"title":"Org-journal","level":"6.2","depth":1,"path":"org-mode/org-journal.md","ref":"org-mode/org-journal.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"org-mode/literate-programming/index.md","mtime":"2022-01-09T02:52:39.971Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T02:53:46.289Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

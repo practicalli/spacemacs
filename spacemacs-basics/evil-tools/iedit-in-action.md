@@ -29,4 +29,4 @@ Once editing the selections, use `n` to jump to next word/region and `N` to the 
 
 > ####Hint::iedit and narrowing
 > iedit selects all occurrences in a buffer.  If you only want to change one part of the text (or a specific function), then you can narrow to just edit that specific region.
-> See [narrow](narrow.html) for more details
+> See [narrow](narrow.md) for more details

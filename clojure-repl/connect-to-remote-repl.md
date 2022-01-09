@@ -3,7 +3,7 @@
 # Connect to a remote REPL with a Clojure aware editor
 Using a remote REPL can provide a collaborative coding environment as well as a means for working within remote environments (docker images, cloud servers, etc).
 
-Running a remote REPL can also provide longevity to the process, as many clients (editors, ssh terminals) can connect to the REPL over time, disconnecting from the running process without interupting the process.  This provides a very resilient way of running a REPL.
+Running a remote REPL can also provide longevity to the process, as many clients (editors, ssh terminals) can connect to the REPL over time, disconnecting from the running process without interrupting the process.  This provides a very resilient way of running a REPL.
 
 [practicalli/clojure-deps-edn]({{book.P9IClojureDepsEdnInstall}}) provides many aliases to configure a REPL to work with other community tools.  These aliases are easier to manage when running a REPL outside of an editor which automatically injects its own configuration.  This configuration can be installed into the remote environment and ideally added into the server build process.
 
@@ -24,7 +24,6 @@ A small Virtual Private Server (VPS) is enough for a remote Clojure environment.
 | [Google Cloud f1-micro VPS](https://cloud.google.com/compute/docs) |            |       |      |                 |         |
 | [Ionos](https://www.ionos.co.uk/servers/vps)                       |          1 | 512Mb | 10Gb |                 | £1      |
 | [Amazon Lightsail](https://aws.amazon.com/lightsail/)              |          1 | 512Mb | 20Gb |                 | $3.50   |
-| [Dedipath](https://dedipath.com/ssd-vps)                           |          1 | 512Mb | 10Gb | 1Gbps unmetered | $1.67   |
 | [Time4VPS](https://www.time4vps.com/linux-vps/)                    | 1 x 2.6GHz | 2Gb   | 20Gb | 2TB             | E3.99   |
 
 
@@ -49,7 +48,7 @@ Host remote-clojure-server
 
 
 ## Configure Emacs to listen to nREPL port
-Emacs can be used to connect to a running Clojure project that has been run with the nREPL and Cider middleware, e.g. `:middleware/cider-clj` from [`practicalli/clojure-deps-edn`](http://practicalli.github.io/clojure/clojure-tools/install/community-tools.html)
+Emacs can be used to connect to a running Clojure project that has been run with the nREPL and Cider middleware, e.g. `:middleware/cider-clj` from [`practicalli/clojure-deps-edn`](http://practical.li/clojure/clojure-tools/install/community-tools.html)
 
 Edit your Emacs `~/.emacs.d/init.el` file and add the following configuration.
 

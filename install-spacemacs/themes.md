@@ -6,7 +6,7 @@ You can select a different theme or cycle through the currently added themes.
 | `SPC T n`         | Next theme in list                                                      |
 | `SPC T p`         | Previous theme in list                                                  |
 | `SPC T s`         | Select theme from list (all themes from gallery)                        |
-| `SPC T s C-c C-f` | Apply themes when srolling through the list of names (helm-follow-mode) |
+| `SPC T s C-c C-f` | Apply themes when scrolling through the list of names (helm-follow-mode) |
 
 [![Spacemacs Themes menu](/images/spacemacs-themes-menu.png)](/images/spacemacs-themes-menu.png)
 

@@ -292,7 +292,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/project-file-navigation.html">
+        <li class="chapter " data-level="1.1.2.7" data-path="../why-spacemacs/structural-editing.html">
+            
+                <a href="../why-spacemacs/structural-editing.html">
+            
+                    
+                    Structural editing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/project-file-navigation.html">
             
                 <a href="../why-spacemacs/project-file-navigation.html">
             
@@ -305,7 +318,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.2.8" data-path="../why-spacemacs/layouts.html">
+        <li class="chapter " data-level="1.1.2.9" data-path="../why-spacemacs/layouts.html">
             
                 <a href="../why-spacemacs/layouts.html">
             
@@ -1001,9 +1014,9 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/keybindng-reference.html">
+        <li class="chapter " data-level="3.2.5" data-path="../spacemacs-basics/vim-style/key-binding-reference.html">
             
-                <a href="../spacemacs-basics/vim-style/keybindng-reference.html">
+                <a href="../spacemacs-basics/vim-style/key-binding-reference.html">
             
                     
                     Keybinding reference
@@ -2912,7 +2925,7 @@
                 <a href="../source-control/magit/interactive-rebasing.html">
             
                     
-                    Interactve Rebasing
+                    Interactive Rebasing
             
                 </a>
             
@@ -3451,9 +3464,9 @@
             
         </li>
     
-        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignement.html">
+        <li class="chapter " data-level="8.1.5.6" data-path="../reference/clojure/local-assignment.md">
             
-                <a href="../reference/clojure/local-assignement.html">
+                <span>
             
                     
                     Local Assignment
@@ -3824,9 +3837,8 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="idiomatic-code-with-kibit">Idiomatic code with Kibit</h1>
-<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title" id="work-in-progress-sorry"><i class="fa fa-bookmark"></i> work in progress, sorry</h3></div><div class="panel-body"></div></div>
 <p>kibit is a static code analyzer for Clojure, ClojureScript, cljx and other Clojure variants. It uses core.logic to search for patterns of code that could be rewritten with a more idiomatic function or macro. For example if kibit finds the code</p>
-<pre><code class="lang-clojure">(<span class="hljs-name">defproject</span> myproject <span class="hljs-string">&quot;0.0.1&quot;</span>
+<pre><code class="lang-clojure">(<span class="hljs-name">defproject</span> project-name <span class="hljs-string">&quot;0.0.1&quot;</span>
   <span class="hljs-symbol">:description</span> <span class="hljs-string">&quot;Eastwood Sample Project&quot;</span>
   <span class="hljs-symbol">:license</span> <span class="hljs-string">&quot;Eclipse Public License 1.0&quot;</span>
   <span class="hljs-symbol">:url</span> <span class="hljs-string">&quot;http://www.bradcypert.com&quot;</span>
@@ -3835,7 +3847,7 @@
             [jonase/eastwood <span class="hljs-string">&quot;0.2.4&quot;</span>]
             [lein-kibit <span class="hljs-string">&quot;0.1.5&quot;</span>]])
 </code></pre>
-<p><code>lein kibit</code> in a terminal will run the analysis on your project and output recommentations</p>
+<p><code>lein kibit</code> in a terminal will run the analysis on your project and output recommendations</p>
 <pre><code class="lang-shell">At /Users/brad/Projects/podcasts/app/src/app/db/processors.clj:14:
 Consider using:
   (update-in podcast [:feed] podcast-service/parse-feed)
@@ -3863,7 +3875,7 @@ Consider using:
 instead of:
   (if (not (some nil? [item source])) (hashers/check item source) false)
 </code></pre>
-<p>Kibit will scan your code and check it against idoimatic code patterns (using <code>core.logic</code>) and recommend how to simplify and reduce your code complexity.</p>
+<p>Kibit will scan your code and check it against idiomatic code patterns (using <code>core.logic</code>) and recommend how to simplify and reduce your code complexity.</p>
 <p>The output excerpt shows two different suggestions: Simplifying an <code>if</code> to a <code>when</code> and condensing an <code>if</code> and <code>not</code> to an <code>if-not</code>.</p>
 <p><code>lein kibit --replace</code> will fix these issues for you.</p>
 <p><code>lein kibit --replace --interactive</code> will automatically walk you through each recommendation and ask if want to use it.</p>
@@ -3912,7 +3924,7 @@ automatically apply and commit recommendations from kibit into a Pull Request</p
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Idiomatic code checking","level":"4.10.4","depth":2,"next":{"title":"Documentation","level":"4.11","depth":1,"path":"documentation/index.md","ref":"documentation/index.md","articles":[{"title":"Cider doc","level":"4.11.1","depth":2,"path":"documentation/cider-doc.md","ref":"documentation/cider-doc.md","articles":[]},{"title":"Related functions","level":"4.11.2","depth":2,"path":"documentation/apropos.md","ref":"documentation/apropos.md","articles":[]},{"title":"Javadoc","level":"4.11.3","depth":2,"path":"documentation/javadoc.md","ref":"documentation/javadoc.md","articles":[]},{"title":"Comments","level":"4.11.4","depth":2,"path":"documentation/comments.md","ref":"documentation/comments.md","articles":[]},{"title":"Markdown documentation","level":"4.11.5","depth":2,"path":"markdown-mode/index.md","ref":"markdown-mode/index.md","articles":[]}]},"previous":{"title":"Batch linting","level":"4.10.3","depth":2,"path":"improving-code/batch-linting.md","ref":"improving-code/batch-linting.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"host":"practical.li","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d","P9IClojure":"https://practicalli.github.io/clojure/","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"improving-code/idiomatic-code-checking.md","mtime":"2022-01-04T11:09:51.783Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-04T11:10:53.662Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Idiomatic code checking","level":"4.10.4","depth":2,"next":{"title":"Documentation","level":"4.11","depth":1,"path":"documentation/index.md","ref":"documentation/index.md","articles":[{"title":"Cider doc","level":"4.11.1","depth":2,"path":"documentation/cider-doc.md","ref":"documentation/cider-doc.md","articles":[]},{"title":"Related functions","level":"4.11.2","depth":2,"path":"documentation/apropos.md","ref":"documentation/apropos.md","articles":[]},{"title":"Javadoc","level":"4.11.3","depth":2,"path":"documentation/javadoc.md","ref":"documentation/javadoc.md","articles":[]},{"title":"Comments","level":"4.11.4","depth":2,"path":"documentation/comments.md","ref":"documentation/comments.md","articles":[]},{"title":"Markdown documentation","level":"4.11.5","depth":2,"path":"markdown-mode/index.md","ref":"markdown-mode/index.md","articles":[]}]},"previous":{"title":"Batch linting","level":"4.10.3","depth":2,"path":"improving-code/batch-linting.md","ref":"improving-code/batch-linting.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"improving-code/idiomatic-code-checking.md","mtime":"2022-01-09T02:52:39.971Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T02:53:46.289Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -35,7 +35,7 @@ It is recommended to create a Design Journal section at the bottom of each names
 The design journal can be used to create meaningful documentation for the project very easily and should prevent time spent on repeating exactly the same conversations.
 
 > #### HINT::Add example journal
-> [Design Journal for TicTacToe game using reagent, clojurescript and scalable vector graphics](https://github.com/jr0cket/tictactoe-reagent/blob/master/src/tictactoe_reagent/core.cljs#L124)
+> [Design Journal for Tic-Tac-Toe game using reagent, clojurescript and scalable vector graphics](https://github.com/jr0cket/tictactoe-reagent/blob/master/src/tictactoe_reagent/core.cljs#L124)
 
 
 ## Viewing data structures
@@ -72,12 +72,13 @@ With the power of the REPL, it is easy to get feedback on exactly how your code 
 At some point before production you should have unit tests around the public API of each namespace in your project to catch regressions before committed.  It is much more efficient in terms of thinking time to create these tests as you stabilise the design that as an after thought.  So it makes sense to write these tests as part of the design process.
 
 > #### Hint::Automate local test runner
-> Set up an automated test runner that will run on each file save
-> Tools: [eftest](https://github.com/weavejester/eftest), [kaocha](https://github.com/lambdaisland/kaocha)
+> Use [kaocha](https://github.com/lambdaisland/kaocha) test runner in watch mode to run tests and specification check automatically (when changes are saved)
+>
+```bash
+clojure -X:test/runner
+```
 
 ## Continuous Integration
-
-> #### TODO::work in progress, sorry
 
 Wire up a continuous integration server that runs tests and builds code on every shared commit (or every commit if you run a CI server locally).
 

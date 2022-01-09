@@ -18,7 +18,7 @@
 
 * `C-c C-k` - evaluate the whole buffer.  So with the cursor in a Clojure source file, all the forms / expressions are evaluate as if the code was loaded in from scratch.
 
-* `C-c C-d d` - show the documentaion as you would with `(doc function-name)`.  Place the cursor over a function name, hit the keybinding and see the documenation for that funtion.  This also works inside the REPL buffer, so no need to use `(doc)`, which is not loaded by default.
+* `C-c C-d d` - show the documentation as you would with `(doc function-name)`.  Place the cursor over a function name, hit the keybinding and see the documentation for that function.  This also works inside the REPL buffer, so no need to use `(doc)`, which is not loaded by default.
 
 * `C-c M-n` - switch to namespace of current Clojure buffer.  So with the cursor in a Clojure source file, hit the keybinding and your REPL buffer will now be in the namespace for that Clojure code.
 
@@ -26,7 +26,7 @@
 
 > Changing into a namespace does not automatically evaluate the code in that namespace, so evaluate the whole buffer `C-c C-k` or evaluate specific expressions (forms) `C-c M-e`.  Once evaluated, you can evaluate that code in the REPL.
 
-* `M->` or `M-x cider-jump-to-var` prompts you for a var, a function `(defn)` or symbol name `(def)` and moves the cursor to its definition.  If the cusor is already on a matching name the the cursor jumps straight to that definition.
+* `M->` or `M-x cider-jump-to-var` prompts you for a var, a function `(defn)` or symbol name `(def)` and moves the cursor to its definition.  If the cursor is already on a matching name the the cursor jumps straight to that definition.
 
 * `C-c C-q` or `M-x cider-quit` - close the REPL and its associated buffer.
 

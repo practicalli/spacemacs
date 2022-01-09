@@ -2,13 +2,13 @@
 
 When installing Spacemacs you have the choice of editor styles
 
-| Editing style                                         | Description                                                                                                                             |
-|-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| Among the stars abord the Evil flagship (Vim)         | Provides Vim normal and insert states and several additional states provided by Spacemacs.  You also have the classic Emacs editor too. |
-| On the planet Emacs in the Holy control tower (Emacs) | Emacs only editing (No Vim states) (To be checked, may still have lisp mode, etc.)                                                        |
+| Editing style                                         | Description                                                                                |
+|-------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| Among the stars aboard the Evil flagship (Vim)        | Vim multi-model editing (normal, insert, visual, lisp, etc. `C-z` for classic Emacs editor |
+| On the planet Emacs in the Holy control tower (Emacs) | Emacs only editing (No Vim states)                                                         |
 
 
-![Spacemacs states](/images/spacemacs-states-vim-emacs.svg.png)
+![Spacemacs states](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/concepts/spacemacs-states-vim-emacs.png)
 
 
 ## Evil flagship states
@@ -39,10 +39,10 @@ Here is the list of all the possible states, some of which are automatically app
 | `emacs`        | blue          | This state is like using a regular Emacs without Vim                                 |
 | `replace`      | chocolate     | Evil - overwrites the character under point instead of inserting a new one           |
 | `hybrid`       | blue          | Spacemacs - use Emacs state instead of the Vim insert                                |
-| `evilified`    | light brown   | Spacemacs - an `emacs` state modified to bring Vim navigation, selection and search.               |
+| `evilified`    | light brown   | Spacemacs - an `emacs` state modified to bring Vim navigation, selection and search. |
 | `lisp`         | pink          | Spacemacs - structural editing for Lisp code (and Clojure)                           |
 | `iedit`        | red           | Spacemacs - navigate between multiple regions of text                                |
 | `iedit-insert` | red           | Spacemacs - replace multiple regions of text                                         |
 
 > ####Hint::Spacemacs state documentation
-> States and other concepts are explained further in the [Spacemacs concepts](https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#editing-styles) documentation.
+> States and other concepts are explained further in the [Spacemacs concepts](https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#editing-styles) documentation.

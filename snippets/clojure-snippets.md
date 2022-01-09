@@ -7,22 +7,22 @@ With snippets added to the auto-completion tooltip, typing `def` show the matchi
 
 ## Common Clojure snippets include
 
-| Snippet    | Description                                              | Tab Stops                              |
-| ----       | ----                                                     | ----                                   |
-| defn       | `defn` function definition                               | name, docstring, args, body            |
-| for        | `for` iterative macro                                    | condition, body                        |
-| if         | `if` conditional dfexpression                            | condition, body                        |
-| ifl        | `if-let` - if true, bind local name                      | binding, body                          |
-| let        | `let` - bind a local name to value                       | name, value, body                      |
-| map.lambda | `map` with anonymous function `#()`                      | fn, body                               |
-| ns         | `ns` - current namespace inserted automatically          | N/A                                    |
-| reduce     | `reduce` - reduce expression with an anonymous function  | args, body                             |
-| require    | `:require` expression with library and alias             | library, alias                         |
-| test       | `deftest` expression                                     | test description, value/expected       |
+| Snippet    | Description                                             | Tab Stops                        |
+| ----       | ----                                                    | ----                             |
+| defn       | `defn` function definition                              | name, docstring, args, body      |
+| for        | `for` iterative macro                                   | condition, body                  |
+| if         | `if` conditional expression                             | condition, body                  |
+| ifl        | `if-let` - if true, bind local name                     | binding, body                    |
+| let        | `let` - bind a local name to value                      | name, value, body                |
+| map.lambda | `map` with anonymous function `#()`                     | fn, body                         |
+| ns         | `ns` - current namespace inserted automatically         | N/A                              |
+| reduce     | `reduce` - reduce expression with an anonymous function | args, body                       |
+| require    | `:require` expression with library and alias            | library, alias                   |
+| test       | `deftest` expression                                    | test description, value/expected |
 
 
 > ####Hint::Write your own snippets
-> Its easy to [write your own snippets](add-your-own-snippets.html) for Clojure or any other language you use with Spacemacs / Emacs
+> Its easy to [write your own snippets](add-your-own-snippets.md) for Clojure or any other language you use with Spacemacs / Emacs
 
 ## Clojure namespace snippet
 The `ns` snippet adds a namespace expression with the namespace of the current file, this requires a running REPL.

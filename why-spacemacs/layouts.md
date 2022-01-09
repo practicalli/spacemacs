@@ -6,14 +6,14 @@ Layouts enable you to switch between different projects.  Each layout keeps its 
 
 `SPC l l` shows a menu where you can select an existing layer or create a new layer. Type in the name of the layer to narrow to the existing layer name or  use the name to create a new layer.  The layer name shows in the mode line.
 
-![Spacemacs - Layouts - practicalli spacemacs layout](/images/spacemacs-layouts-example-practicalli-spacemacs.png)
-
+![Spacemacs - Layouts - practicalli spacemacs layout](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-modeline-layouts.png)
 
 > #### Hint::Limit `SPC TAB` to current layout
 > Add `(spacemacs-layouts :variables spacemacs-layouts-restrict-spc-tab t)` to the `dotspacemacs-configuration-layers` in the `.spacemacs` file to limit `SPC TAB` to buffers of the current layer.
 
 
 ## Layouts Transient State
+
 `SPC l` opens the Layouts transient state, allowing you to create, delete and select layouts with a single character keybinding.
 
 The transient state also lists all the current layers.
@@ -32,8 +32,8 @@ The most layer common commands are:
 | `SPC l <` / `SPC l >` | Move layout left or right in the layout list               |
 
 
-![Spacemacs - Layouts - transient state menu - `SPC l` ](/images/spacemacs-layouts-transient-state-menu.png)
+![Spacemacs - Layouts - transient state menu with help - `SPC l ?` ](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-layouts-transient-state-menu.png)
 
 
 > ####Hint::Spacemacs Layouts documentation
-> [Layouts - Spacemacs documentation](https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org#layouts-and-workspaces)
+> [Layouts - Spacemacs documentation](https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#layouts-and-workspaces)

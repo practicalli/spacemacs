@@ -14,7 +14,7 @@ Spacemacs is a community-driven project that provides a simple way to add lots o
 
 This workshop will cover the following topics:
 * Emacs basics, common commands and tools
-* Powerful editing and refactor tools (iedt, narrowing, helm-ag, multiple cursors, visual undo)
+* Powerful editing and refactor tools (iedit, narrowing, helm-ag, multiple cursors, visual undo)
 * Adding and enhancing the Clojure layer
 * Running the REPL, evaluating code, inspecting data, debug, reloaded workflow
 * Running tests & test reports
