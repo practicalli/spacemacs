@@ -20,7 +20,7 @@ Spacemacs uses the same keybindings and commands to comment any programming lang
 
 ## `#_` - Reader Macro comment
 
-`#_` will comment out an expression and is completely ignored by Clojure, so the expression is never evaluated and therefore no value is returned.  It can therefor be used to comment out expressions withing expressions.
+`#_` will comment out an expression and is completely ignored by Clojure, so the expression is never evaluated and therefore no value is returned.  It can therefor be used to comment out expressions within expressions.
 
 ```clojure
 #_(str "Reader macro comment "
