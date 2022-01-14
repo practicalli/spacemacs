@@ -33,7 +33,7 @@ Narrowing, `SPC n`, limits the scope of iedit so only the relevant occurrences a
 `iedit state` changes the behaviour of the following Evil normal state key bindings (every other normal state key binding remains the same)
 
 | Key   | Description                                                                         |
-|-------+-------------------------------------------------------------------------------------|
+|-------|-------------------------------------------------------------------------------------|
 | `ESC` | go back to normal state                                                             |
 | `TAB` | toggle selection of current occurrence                                              |
 | `0`   | go to the beginning of the current occurrence                                       |
