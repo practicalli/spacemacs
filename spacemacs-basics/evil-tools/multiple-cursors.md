@@ -33,7 +33,7 @@ Multiple cursors allows you to call all Emacs named functions and have the resul
 The most commonly used key bindings for multiple cursors
 
 | Evil normal | Description                                                                   |
-|-------------+-------------------------------------------------------------------------------|
+|-------------|-------------------------------------------------------------------------------|
 | `g r j`     | creates a new cursor on the line below (adhoc changes)                        |
 | `g r k`     | create new cursor on the line above (adhoc changes)                           |
 | `g r I`     | create new cursor on selected lines                                           |

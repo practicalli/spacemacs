@@ -3851,17 +3851,52 @@
 <code>SPC n r</code> narrows to a selected range of text</p><p>See the section on <a href="narrowing.html">Spacemacs - Narrowing</a></p></div></div>
 <h2 id="keybindings">Keybindings</h2>
 <p>The most commonly used key bindings for multiple cursors</p>
-<p>| Evil normal | Description                                                                   |
-|-------------+-------------------------------------------------------------------------------|
-| <code>g r j</code>     | creates a new cursor on the line below (adhoc changes)                        |
-| <code>g r k</code>     | create new cursor on the line above (adhoc changes)                           |
-| <code>g r I</code>     | create new cursor on selected lines                                           |
-| <code>g r m</code>     | create cursors on all matching text (under cursor or region of selected text) |
-| <code>g r n</code>     | make a cursor at point and go to the next match                               |
-| <code>g r N</code>     | go to the next match without creating a cursor at current point               |
-| <code>g r p</code>     | make a cursor at point and go to the previous match                           |
-| <code>g r P</code>     | go to the previous match without creating a cursor at current point           |
-| <code>g r q</code>     | when you have finished to remove all cursors and leave just one cursor.       |</p>
+<table>
+<thead>
+<tr>
+<th>Evil normal</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>g r j</code></td>
+<td>creates a new cursor on the line below (adhoc changes)</td>
+</tr>
+<tr>
+<td><code>g r k</code></td>
+<td>create new cursor on the line above (adhoc changes)</td>
+</tr>
+<tr>
+<td><code>g r I</code></td>
+<td>create new cursor on selected lines</td>
+</tr>
+<tr>
+<td><code>g r m</code></td>
+<td>create cursors on all matching text (under cursor or region of selected text)</td>
+</tr>
+<tr>
+<td><code>g r n</code></td>
+<td>make a cursor at point and go to the next match</td>
+</tr>
+<tr>
+<td><code>g r N</code></td>
+<td>go to the next match without creating a cursor at current point</td>
+</tr>
+<tr>
+<td><code>g r p</code></td>
+<td>make a cursor at point and go to the previous match</td>
+</tr>
+<tr>
+<td><code>g r P</code></td>
+<td>go to the previous match without creating a cursor at current point</td>
+</tr>
+<tr>
+<td><code>g r q</code></td>
+<td>when you have finished to remove all cursors and leave just one cursor.</td>
+</tr>
+</tbody>
+</table>
 <p><code>g r</code> shows the full menu</p>
 <p><img src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-g-menu-multiple-cursors.png" alt="Spacemacs G menu multiple cursor commands"></p>
 <div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title" id="add-video-of-most-commonly-used-features"><i class="fa fa-bookmark"></i> Add video of most commonly used features</h3></div><div class="panel-body"></div></div>
@@ -3921,7 +3956,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Multiple Cursors","level":"3.4","depth":1,"next":{"title":"Evil g menu","level":"3.5","depth":1,"path":"spacemacs-basics/evil-g-menu.md","ref":"spacemacs-basics/evil-g-menu.md","articles":[]},"previous":{"title":"Replace text across projects","level":"3.3.4","depth":2,"path":"spacemacs-basics/evil-tools/replacing-text-across-projects.md","ref":"spacemacs-basics/evil-tools/replacing-text-across-projects.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"spacemacs-basics/evil-tools/multiple-cursors.md","mtime":"2022-01-14T22:07:25.802Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-14T22:08:26.442Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Multiple Cursors","level":"3.4","depth":1,"next":{"title":"Evil g menu","level":"3.5","depth":1,"path":"spacemacs-basics/evil-g-menu.md","ref":"spacemacs-basics/evil-g-menu.md","articles":[]},"previous":{"title":"Replace text across projects","level":"3.3.4","depth":2,"path":"spacemacs-basics/evil-tools/replacing-text-across-projects.md","ref":"spacemacs-basics/evil-tools/replacing-text-across-projects.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"spacemacs-basics/evil-tools/multiple-cursors.md","mtime":"2022-01-14T22:58:23.284Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-14T22:59:23.280Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

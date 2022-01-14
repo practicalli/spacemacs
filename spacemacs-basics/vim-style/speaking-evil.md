@@ -38,8 +38,7 @@ Practice speaking evil with these examples
 | `v i w s "` | visually select, insert around current word, and surround with quotes |
 | `y y`       | yank (copy) current line                                              |
 | `y w`       | yank (copy) current word                                              |
-| `y ' a`     | yank (copy) to mark `a` (`m a` creates a mark called `a`)                 |
-|             |                                                                       |
+| `y ' a`     | yank (copy) to mark `a` (`m a` creates a mark called `a`)             |
 
 
 > #### Hint:: Evil Reference and Tips
