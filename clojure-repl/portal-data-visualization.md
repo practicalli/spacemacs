@@ -12,7 +12,7 @@ Portal is simple to add to a REPL as it only requires the Portal library to be a
 practicalli/clojure-deps-edn includes several aliases for portal, depending on the type of Clojure project used.
 
 | Command                          | Description                                           |
-|----------------------------------+-------------------------------------------------------|
+|----------------------------------|-------------------------------------------------------|
 | `clojure -M:inspect/portal-cli`  | Clojure REPL with Portal dependency                   |
 | `clojure -M:inspect/portal-web`  | ClojureScript web browser REPL with Portal dependency |
 | `clojure -M:inspect/portal-node` | ClojureScript node.js REPL with Portal dependency     |
