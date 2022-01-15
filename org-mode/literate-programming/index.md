@@ -4,7 +4,7 @@
 
 In Spacemacs and Clojure development, it means you could write a document explaining your project or library and include code that can execute and give results in the document itself.
 
-To encourage contributors to open source project or on-boarding a developer onto a team, a literate programming document that explains how all the important aspects work, including real code examples that they can experiment with, would remove barriers in becomming familiar with a project.
+To encourage contributors to open source project or on-boarding a developer onto a team, a literate programming document that explains how all the important aspects work, including real code examples that they can experiment with, would remove barriers in becoming familiar with a project.
 
 
 ## Literate programming with Spacemacs

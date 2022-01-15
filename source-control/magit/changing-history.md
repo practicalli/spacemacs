@@ -16,7 +16,7 @@ Here are a few simple tools to help you change your local history.
 | Tool        | Magit | Description                                         |
 |-------------|-------|-----------------------------------------------------|
 | Augment     | `c A` | Create a squash commit, editing the squash message  |
-| Squash      | `c s` | see [squash commits](squash-commits.md) |
+| Squash      | `c s` | see [squash commits](squash-commits.md)             |
 | Auto-squash | `c S` | see [interactive rebasing](interactive-rebasing.md) |
 | Fixup       | `c f` | see [interactive rebasing](interactive-rebasing.md) |
 | Auto-fixup  | `c F` | see [interactive rebasing](interactive-rebasing.md) |

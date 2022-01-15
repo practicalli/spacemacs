@@ -8,7 +8,7 @@ Org-mode [easy templates](https://www.gnu.org/software/emacs/manual/html_node/or
 `<` followed by the template alias and then `TAB` will expand the block template.
 
 | Name | Template                          | Description          |
-| ---  | ---                               | ---                  |
+|------|-----------------------------------|----------------------|
 | s    | #+BEGIN_SRC ... #+END_SRC         | Adds a source block  |
 | e    | #+BEGIN_EXAMPLE ... #+END_EXAMPLE |                      |
 | q    | #+BEGIN_QUOTE ... #+END_QUOTE     |                      |
@@ -23,4 +23,4 @@ Org-mode [easy templates](https://www.gnu.org/software/emacs/manual/html_node/or
 | i    | #+INDEX: line                     |                      |
 | I    | #+INCLUDE: line                   |                      |
 
-Add custom templates by adding to the ‘org-structure-template-alist’
+Add custom templates by adding to the `org-structure-template-alist`

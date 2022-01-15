@@ -13,18 +13,18 @@ A small Virtual Private Server (VPS) is enough for a remote Clojure environment.
 
 > [How to set up a f1-micro VPS on Google Cloud](https://medium.com/@hbmy289/how-to-set-up-a-free-micro-vps-on-google-cloud-platform-bddee893ac09)
 
-* Install [Clojure CLI tools](https://practicalli.github.io/clojure/clojure-tools/install/) and [practicalli/clojure-deps-edn configuration](https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html)
+* Install [Clojure CLI tools](https://practical.li/clojure/clojure-cli/install/) and [practicalli/clojure-deps-edn configuration](https://practical.li/clojure/clojure-cli/install/community-tools.html)
 * Git Client
 * SSH server
 * Set up user account
 * Generate a permissions file, `.pem` from the server (TODO: how to generate .pem files)
 
-| Services                                                           |      vCore | RAM   | SSD  | Transfer        | Monthly |
-|--------------------------------------------------------------------|------------|-------|------|-----------------|---------|
-| [Google Cloud f1-micro VPS](https://cloud.google.com/compute/docs) |            |       |      |                 |         |
-| [Ionos](https://www.ionos.co.uk/servers/vps)                       |          1 | 512Mb | 10Gb |                 | £1      |
-| [Amazon Lightsail](https://aws.amazon.com/lightsail/)              |          1 | 512Mb | 20Gb |                 | $3.50   |
-| [Time4VPS](https://www.time4vps.com/linux-vps/)                    | 1 x 2.6GHz | 2Gb   | 20Gb | 2TB             | E3.99   |
+| Services                                                           | vCore      | RAM   | SSD  | Transfer | Monthly |
+|--------------------------------------------------------------------|------------|-------|------|----------|---------|
+| [Google Cloud f1-micro VPS](https://cloud.google.com/compute/docs) |            |       |      |          |         |
+| [Ionos](https://www.ionos.co.uk/servers/vps)                       | 1          | 512Mb | 10Gb |          | £1      |
+| [Amazon Lightsail](https://aws.amazon.com/lightsail/)              | 1          | 512Mb | 20Gb |          | $3.50   |
+| [Time4VPS](https://www.time4vps.com/linux-vps/)                    | 1 x 2.6GHz | 2Gb   | 20Gb | 2TB      | E3.99   |
 
 
 ## Configure local SSH connection
@@ -48,7 +48,7 @@ Host remote-clojure-server
 
 
 ## Configure Emacs to listen to nREPL port
-Emacs can be used to connect to a running Clojure project that has been run with the nREPL and Cider middleware, e.g. `:middleware/cider-clj` from [`practicalli/clojure-deps-edn`](http://practical.li/clojure/clojure-tools/install/community-tools.html)
+Emacs can be used to connect to a running Clojure project that has been run with the nREPL and Cider middleware, e.g. `:middleware/cider-clj` from [`practicalli/clojure-deps-edn`](http://practical.li/clojure/clojure-cli/install/community-tools.html)
 
 Edit your Emacs `~/.emacs.d/init.el` file and add the following configuration.
 
@@ -60,7 +60,7 @@ For Spacemacs, edit `~/.spacemacs` and add the following code to `dotspacemacs/u
 
 
 ## Start a REPL on a remote server
-The majority of [Clojure aware editors](https://practicalli.github.io/clojure/clojure-editors/) can connect to an external REPL using the nREPL protocol.  Emacs CIDER, VSCode Calva and NeoVim Conjure all use nREPL and the Cider middleware.
+The majority of [Clojure aware editors](https://practical.li/clojure/clojure-editors/) can connect to an external REPL using the nREPL protocol.  Emacs CIDER, VSCode Calva and NeoVim Conjure all use nREPL and the Cider middleware.
 
 [practicalli/clojure-deps-edn]({{book.P9IClojureDepsEdnInstall}}) defines the `:middleware/clj` alias that includes several libraries required for the nREPL connection between CIDER and the REPL.
 

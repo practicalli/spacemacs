@@ -1,4 +1,5 @@
 #  Clojure snippets reference
+
 Spacemacs included the [yasnippet official snippets repository](https://github.com/AndreaCrotti/yasnippet-snippets) and [clojure-snippets package](https://github.com/mpenet/clojure-snippets), providing an extensive collection of snippets for Clojure.
 
 * [Datomic snippets package](https://github.com/magnars/datomic-snippets) contains specific snippets for [Cognitect Datomic database](https://www.datomic.com/).
@@ -6,7 +7,7 @@ Spacemacs included the [yasnippet official snippets repository](https://github.c
 > #### Hint::deftest snippet is called test
 
 | Snippet    | Description                                                                                                                    | Tab Stops                              |
-| ----       | ----                                                                                                                           | ----                                   |
+|------------|--------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
 | bench      | benchmark an expression, using the `time` function                                                                             | body                                   |
 | bp         | deprecated: was break point in swank                                                                                           |                                        |
 | def        | `def` expression                                                                                                               | N/A                                    |

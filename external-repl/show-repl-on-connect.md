@@ -9,7 +9,7 @@ Spacemacs does not automatically show the Clojure REPL buffer when connecting to
 
 Alternatively, `SPC b b` opens the buffer list. Typing `repl` narrows to REPL buffers. `C-j` and `C-k` navigate the buffer list and `RET` selects the buffer.
 
-A buffer for each Clojure REPL & ClojureScript REPL processs will be shown in the buffer list.
+A buffer for each Clojure REPL & ClojureScript REPL process will be shown in the buffer list.
 
 
 ## Configure REPL Buffer size limit

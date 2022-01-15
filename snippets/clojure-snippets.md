@@ -1,4 +1,7 @@
 # Clojure Snippets
+
+<!-- TODO: include clojure-lsp snippets -->
+
 There are numerous snippets that provide short-cuts for the minimal amount of common code structure in Clojure.
 
 `defn M-/` will expand to a function definition expression with the cursor in the position for the function name.  `TAB` will jump to the argument list, docstring and body of the function definition in turn.
@@ -8,7 +11,7 @@ With snippets added to the auto-completion tooltip, typing `def` show the matchi
 ## Common Clojure snippets include
 
 | Snippet    | Description                                             | Tab Stops                        |
-| ----       | ----                                                    | ----                             |
+|------------|---------------------------------------------------------|----------------------------------|
 | defn       | `defn` function definition                              | name, docstring, args, body      |
 | for        | `for` iterative macro                                   | condition, body                  |
 | if         | `if` conditional expression                             | condition, body                  |
@@ -25,6 +28,7 @@ With snippets added to the auto-completion tooltip, typing `def` show the matchi
 > Its easy to [write your own snippets](add-your-own-snippets.md) for Clojure or any other language you use with Spacemacs / Emacs
 
 ## Clojure namespace snippet
+
 The `ns` snippet adds a namespace expression with the namespace of the current file, this requires a running REPL.
 
 `SPC f f` to create a new file, using underscores in the file name to separate words. Any underscores in the file name are converted into dashes in the `ns` definition

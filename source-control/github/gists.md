@@ -6,7 +6,7 @@
 [GitHub Gists](https://gist.github.com/) are used to share code or configuration without the need of a git project.
 
 > #### Hint::github layer no longer includes gist support
-> [gist.el](http://github.com/defunkt/gist.el) was removed from the GitHub layer on 2021-11-02 citing a broken and unmaintained package.  However, adding gist as an additonal package, using `dotspacemacs-additional-package (gist)` in .spacemacs seems to work.  Some [investigation](https://github.com/syl20bnr/spacemacs/issues/15183) is being done as to what features are no longer working with gist.el.
+> [gist.el](http://github.com/defunkt/gist.el) was removed from the GitHub layer on 2021-11-02 citing a broken and unmaintained package.  However, adding gist as an additional package, using `dotspacemacs-additional-package (gist)` in .spacemacs seems to work.  Some [investigation](https://github.com/syl20bnr/spacemacs/issues/15183) is being done as to what features are no longer working with gist.el.
 
 ## Manually add Gist support
 

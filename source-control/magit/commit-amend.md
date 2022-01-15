@@ -6,7 +6,7 @@ First stage any changes you wish to make to the previous commit, i.e. HEAD.
 
 `a` in the commit menu to amend a commit
 
-The commit transient state buffers now appear and show you the details of the previous commit with the additonal staged changes.
+The commit transient state buffers now appear and show you the details of the previous commit with the additional staged changes.
 
 You can edit the commit message and review the diffs for all the files added to the commit (helping ensure you write a meaningful commit message).
 

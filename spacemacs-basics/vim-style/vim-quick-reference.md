@@ -7,63 +7,64 @@ A reference of the most common keybindings available in Vim Normal mode. [Spacem
 
 In **normal** mode you can keep your fingers resting on the main row of your keyboard to move around.
 
-| keybinding | action                          |
-|------------|---------------------------------|
-| `j`        | move cursor down one line       |
-| `k`        | move cursor up one line         |
-| `l`        | move cursor right one character |
-| `h`        | move cursor left one character  |
+| Key | action                          |
+|-----|---------------------------------|
+| `j` | move cursor down one line       |
+| `k` | move cursor up one line         |
+| `l` | move cursor right one character |
+| `h` | move cursor left one character  |
 
 In menus such as helm you can move around using `Ctrl` and these keybindings.  So `C-j` will move the cursor down one item in a menu.
 
 ### Navigating the current line
 
-| Command | Action                                       |
-| ------- | ---------------------------------------------|
-| `f`     | to next character (you specify)              |
-| `t`     | to just before the next character            |
-| `;`     | repeat `f` or `t` search                     |
-| `w`     | start of next word                           |
-| `W`     | start of next word, white space delimited    |
-| `e`     | end of current word                          |
-| `b`     | start of previous word                       |
-| `W`     | end of next word, white space delimited      |
-| `*`     | to next matching symbol name                 |
-| `$`     | end of current line                          |
-| `0`     | start of current line                        |
-| `^`     | start of non-whitespace                      |
-| `%`     | jump to matching parens or next closed paren |
+| Key | Action                                       |
+|-----|----------------------------------------------|
+| `f` | to next character (you specify)              |
+| `t` | to just before the next character            |
+| `;` | repeat `f` or `t` search                     |
+| `w` | start of next word                           |
+| `W` | start of next word, white space delimited    |
+| `e` | end of current word                          |
+| `b` | start of previous word                       |
+| `W` | end of next word, white space delimited      |
+| `*` | to next matching symbol name                 |
+| `$` | end of current line                          |
+| `0` | start of current line                        |
+| `^` | start of non-whitespace                      |
+| `%` | jump to matching parens or next closed paren |
 
 
 ### Navigating the current buffer
 
-| keybinding | action                                                           |
-|------------|------------------------------------------------------------------|
-| `gg`       | start of buffer                                                  |
-| `G`        | end of buffer                                                    |
-| `H`        | move cursor to head of buffer                                    |
-| `M`        | move cursor to middle of buffer                                  |
-| `L`        | move cursor to bottom line of buffer                             |
-| `C-u`      | jump up half a page                                              |
-| `C-d`      | jump down half a page                                            |
-| `}`        | move cursor forward by paragraph or block                        |
-| `{`        | move cursor backward by paragraph or block                       |
-| `ma`       | mark a line in a file with marker "a"                            |
-| ``a`       | after moving around, go back to the exact position of marker "a" |
-| `'a`       | after moving around, go back to line of marker "a"               |
-| `:marks`   | view all the marks                                               |
-| `''`       | go to the last place you were                                    |
-| `[{`       | jump back to the "{" at the beginning of the current code block  |
-| `SPC j i`  | jump using helm list of headings / functions                     |
-| `SPC j j`  | avy-jump to character (specify)                                  |
-| `SPC j l`  | avy-jump to line                                                 |
-| `C-o`      | jump back to previous cursor location (`evil-jump-backwards`)    |
-| `C-i`      | Go to newer position in jump list (opposite of `C-o`)            |
-| `: 4`      | go to line 4                                                     |
+| Key       | action                                                           |
+|-----------|------------------------------------------------------------------|
+| `gg`      | start of buffer                                                  |
+| `G`       | end of buffer                                                    |
+| `H`       | move cursor to head of buffer                                    |
+| `M`       | move cursor to middle of buffer                                  |
+| `L`       | move cursor to bottom line of buffer                             |
+| `C-u`     | jump up half a page                                              |
+| `C-d`     | jump down half a page                                            |
+| `}`       | move cursor forward by paragraph or block                        |
+| `{`       | move cursor backward by paragraph or block                       |
+| `ma`      | mark a line in a file with marker "a"                            |
+| ``a`      | after moving around, go back to the exact position of marker "a" |
+| `'a`      | after moving around, go back to line of marker "a"               |
+| `:marks`  | view all the marks                                               |
+| `''`      | go to the last place you were                                    |
+| `[{`      | jump back to the "{" at the beginning of the current code block  |
+| `SPC j i` | jump using helm list of headings / functions                     |
+| `SPC j j` | avy-jump to character (specify)                                  |
+| `SPC j l` | avy-jump to line                                                 |
+| `C-o`     | jump back to previous cursor location (`evil-jump-backwards`)    |
+| `C-i`     | Go to newer position in jump list (opposite of `C-o`)            |
+| `: 4`     | go to line 4                                                     |
 
 
 
 ## Searching
+
 Searching buffers and projects with `helm-swoop` is recommended.
 
 `SPC s s` - helm-swoop - shows a buffer with all search results, `C-j` and `C-k` navigates through results.
@@ -73,15 +74,14 @@ Searching buffers and projects with `helm-swoop` is recommended.
 `\b` defines a boundary around the search term. For example `search\b` will match search, but not searching.
 
 
-
-| Command | Action                                        |
-|---------|-----------------------------------------------|
-| `*`     | search forward for the word under the cursor  |
-| `#`     | search backward for the word under the cursor |
-| `/`     | search forward in current buffer              |
-| `?`     | search backward in current buffer             |
-| `n`     | once searching: find forward                  |
-| `N`     | once searching: find backwards                |
+| Key | Action                                        |
+|-----|-----------------------------------------------|
+| `*` | search forward for the word under the cursor  |
+| `#` | search backward for the word under the cursor |
+| `/` | search forward in current buffer              |
+| `?` | search backward in current buffer             |
+| `n` | once searching: find forward                  |
+| `N` | once searching: find backwards                |
 
 > #### Hint::Ensure `RET` is pressed after `/` search
 > Using `/` to search should be completed by pressing `RET` or deleting the search term in the mini-buffer before using Evil keybindings.  When in the search state the Evil keybindings act more destructively.
@@ -93,14 +93,14 @@ Searching buffers and projects with `helm-swoop` is recommended.
 
 The following commands put you into the Evil Insert state
 
-| Command | Action                               |
-|---------|--------------------------------------|
-| `i`     | insert state at cursor               |
-| `I`     | insert state at start of line        |
-| `a`     | append - insert state after cursor   |
-| `A`     | append - insert state at end of line |
-| `o`     | new line after cursor                |
-| `O`     | new line before cursor               |
+| Key | Action                               |
+|-----|--------------------------------------|
+| `i` | insert state at cursor               |
+| `I` | insert state at start of line        |
+| `a` | append - insert state after cursor   |
+| `A` | append - insert state at end of line |
+| `o` | new line after cursor                |
+| `O` | new line before cursor               |
 
 
 ## Return to Normal state
@@ -123,8 +123,8 @@ Switching from **insert** to **normal** state:
 
 `v` in Vim normal mode changes to Visual select mode.  Use the navigation keys or any other movement keys to select text to copy or cut.
 
-| Command  | Action                                             |
-| -------  | -------------------------------------------------- |
+| Key      | Action                                             |
+|----------|----------------------------------------------------|
 | `y`      | copy (yank) selection and add to kill ring         |
 | `x`      | delete character at point and add to kill ring     |
 | `X`      | delete character before point and add to kill ring |
@@ -138,19 +138,19 @@ Switching from **insert** to **normal** state:
 
 ## Replace and changing text
 
-| Command        | Action                                   |
-| -------        | ---------------------------------------- |
-| `r`            | replace the character under cursor       |
-| `R`            | replace multiple characters until `ESC`  |
-| `cw`           | change word from cursor to end           |
-| `4 c w`        | change 4 words                           |
-| `v (select) c` | change region                            |
-| `SPC v c`      | change current word/region               |
-| `SPC v d`      | delete current word/region               |
-| `d w`          | delete from cursor to end of word        |
-| `C`            | change from cursor to end of line        |
-| `D`            | delete from cursor to end of line        |
-| `d $`          | delete from cursor to end of line        |
+| Key            | Action                                  |
+|----------------|-----------------------------------------|
+| `r`            | replace the character under cursor      |
+| `R`            | replace multiple characters until `ESC` |
+| `cw`           | change word from cursor to end          |
+| `4 c w`        | change 4 words                          |
+| `v (select) c` | change region                           |
+| `SPC v c`      | change current word/region              |
+| `SPC v d`      | delete current word/region              |
+| `d w`          | delete from cursor to end of word       |
+| `C`            | change from cursor to end of line       |
+| `D`            | delete from cursor to end of line       |
+| `d $`          | delete from cursor to end of line       |
 
 Combine d | c | v | r with avy-goto
 
@@ -159,8 +159,8 @@ Combine d | c | v | r with avy-goto
 
 ## Delete commands
 
-| Command | Action                                          |
-| ---     | ---                                             |
+| Key     | Action                                          |
+|---------|-------------------------------------------------|
 | `de`    | delete to end of word, not including space      |
 | `dw`    | delete to end of word, including space          |
 | `d$`    | delete to end of line                           |
@@ -179,8 +179,8 @@ Combine d | c | v | r with avy-goto
 
 ## Repeat commands
 
-| Command          | Action                           |
-| -------          | -----------------                |
+| Key              | Action                           |
+|------------------|----------------------------------|
 | `.`              | repeat last command again        |
 | `<number> <cmd>` | repeat command a number of times |
 
@@ -198,7 +198,7 @@ Type a number before a command and that command will run that number of times.
 
 ## Transposing / swap
 
-| Command              | Description                                                 |
+| Key                  | Description                                                 |
 |----------------------|-------------------------------------------------------------|
 | `x p` or `SPC x t c` | transpose the current character with the next character     |
 | `SPC x t w`          | transpose the current character with the previous character |
@@ -235,15 +235,15 @@ Buffers are displayed in a window and you can change the window to show any of t
 
 Here are the most commonly used buffer commands
 
-| Keybinding | Command                        | Description                               |
-|------------|--------------------------------|-------------------------------------------|
-| `SPC b b`  | helm-mini                      | List current buffers                      |
-| `SPC b d`  | kill-this-buffer               | Kill current buffer                       |
-| `SPC b h`  | home                           | Switch to Spacemacs home page             |
-| `SPC b n`  | next-buffer                    | Switch to next buffer                     |
-| `SPC b p`  | previous-buffer                | Switch to previous buffer                 |
-| `SPC b s`  | switch-to-scratch-buffer       | Switch to the **scratch** buffer          |
-| `SPC b Y`  | copy-whole-buffer-to-clipboard | Copy current buffer contents to kill ring |
+| Key       | Command                        | Description                               |
+|-----------|--------------------------------|-------------------------------------------|
+| `SPC b b` | helm-mini                      | List current buffers                      |
+| `SPC b d` | kill-this-buffer               | Kill current buffer                       |
+| `SPC b h` | home                           | Switch to Spacemacs home page             |
+| `SPC b n` | next-buffer                    | Switch to next buffer                     |
+| `SPC b p` | previous-buffer                | Switch to previous buffer                 |
+| `SPC b s` | switch-to-scratch-buffer       | Switch to the **scratch** buffer          |
+| `SPC b Y` | copy-whole-buffer-to-clipboard | Copy current buffer contents to kill ring |
 
 See the full buffer menu via `SPC b`
 
@@ -252,7 +252,7 @@ See the full buffer menu via `SPC b`
 
 ## Managing Files
 
-| Spacemacs   | Description                                          |
+| Key         | Description                                          |
 |-------------|------------------------------------------------------|
 | `SPC f c`   | copy file - save current buffer with a new file name |
 | `SPC f R`   | change file name of current buffer                   |
@@ -265,29 +265,26 @@ Also consider using treemacs and projectile
 
 I recommend using the Spacemacs menu from **normal** mode to quit / restart Spacemacs.
 
-| Command   | Action                                                     |
-| -------   | -----------------                                          |
+| Key       | Action                                                     |
+|-----------|------------------------------------------------------------|
 | `SPC q q` | Quit Spacemacs                                             |
 | `SPS q r` | Restart Spacemacs keeping current window and buffer layout |
 | `SPS q R` | Restart Spacemacs                                          |
-
-
 
 
 > #### Hint::Work in progress - sorry
 > The rest of this section is work in progress and a little messy.
 
 
-
-## Classic Vim commands ##
+## Classic Vim commands
 
 > ####Todo::Reference section
 > The classic vim commands are also available, however, I dont think they are as nice to learn.  Adding as reference for those used to Vim already and would miss them.
 
-### Substitution ###
+### Substitution
 
-| Command           | Action                                       |
-| ---               | ---                                          |
+| key               | Action                                       |
+|-------------------|----------------------------------------------|
 | `:s/old/new`      | substitute new for the first old pattern     |
 | `:s/old/new/g`    | substitute new for all 'old's on a line      |
 | `:#,#s/old/new/g` | substitute phrases between two line #'s type |
@@ -295,7 +292,7 @@ I recommend using the Spacemacs menu from **normal** mode to quit / restart Spac
 | `:%s/old/new/gc`  | as above, asking for confirmation each time  |
 
 
-### External commands ###
+### External commands
 
 You can run external commands using `:!` followed by a command.  For example:
 
@@ -304,13 +301,7 @@ You can run external commands using `:!` followed by a command.  For example:
 > Spacemacs shell can be configured to pop-up a shell buffer to run commands from the directory of the current buffer.
 
 
-
-
-
-
-
-
-### Spelling Checking  ###
+### Spelling Checking
 
 As you are typing in any(?) buffer then Spacemacs is checking your spelling as you type.  If you type a word that Spacemacs does not recognise then that word is underscored in red.  To correct a spelling:
 
@@ -319,28 +310,21 @@ As you are typing in any(?) buffer then Spacemacs is checking your spelling as y
 * Either type in a new spelling or use `C-j` and `C-k` keys to move down and back up the list of words, using `RET` to select that word.
 
 
+### Scrolling
 
-### Scrolling ###
+In evil command mode you can scroll just the text using the classic vi bindings.  This does not scroll the cursor unless the cursor hist the top or bottom of the window, in which case the cursor stays at that window boundary.
 
-in evil command mode you can scroll just the text using the classic vi bindings.  This does not scroll the cursor unless the cursor hist the top or bottom of the window, in which case the cursor stays at that window boundary.
-
-`C-y` - scroll down
-`C-e` - scroll text up
-
+* `C-y` - scroll down
+* `C-e` - scroll text up
 
 
-
-### jump around... ###
+### Jump around
 
 `SPC j i` shows imenu that lists all the def and defn expressions in the current buffer, allowing you to jump to one of these definitions directly by typing its name or using `C-j` and `C-k` to select the name and pressing `RET` to jump to the name in the buffer
 
 
 `SPC j l` labels each line of the buffer with a short, unique character code.  By entering the character code you are taken directly to the specific line.  This is the `avy goto line` function and this works on all visible buffers by default, although it can be just shown on the current buffer (TODO: how is this set).
 
-### searching ###
+### Searching
 
-search with `SPc /`
-
-## getting stuff done - evil basics ###
-
-http://paul-gowder.com/emacs.html
+Search with `SPC /`

@@ -1,4 +1,5 @@
 # Org-mode Headings
+
 Organise text content with multiple levels of headings.  Focus on sections by expanding and folding the content under headings, to show the level of information required at a particular time. [TODO states](todo-states.md) can be applied to any level of headings.
 
 `C-RTN` to create a heading at the same level of parent (top level heading if no parent)
@@ -14,12 +15,14 @@ Organise text content with multiple levels of headings.  Focus on sections by ex
 
 
 ### Collapse / Expand headings
+
 `TAB` expands / collapses the heading at the current cursor position.
 
 `S-TAB` will cycle through expanding and collapsing headings at different levels.
 
 
 ### Moving headings and content around
+
 Items can be moved to change the order they appear, avoiding the need to cut and paste.
 
 | Key binding      | Description                                     |

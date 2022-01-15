@@ -213,7 +213,7 @@ C-M-%      (query-replace-regexp)     : replaces a regexp wherever it
                                         for permission every time
            (replace-regexp)           : replaces a regexp wherever it
                                         occurs with a string
-           (occur)                    : lists all occurences of search string
+           (occur)                    : lists all occurrences of search string
            (find-name-dired)          : searches for a file with the
                                         specified name
            (find-grep-dired)          : searches for a file that contains
