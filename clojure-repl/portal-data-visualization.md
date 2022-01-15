@@ -5,7 +5,7 @@ Portal is a web browser data inspector that can be configures as the `tap>` sour
 
 [Portal](https://github.com/djblue/portal) navigates data in the form of edn, json and transit (with vega graphic support coming soon)
 
-[Practicalli Clojure -data browsers section - portal](https://practicalli.github.io/clojure/clojure-tools/data-browsers/portal.html)
+[Practicalli Clojure -data browsers section - portal](https://practical.li/clojure/clojure-cli/data-browsers/portal.html)
 
 Portal is simple to add to a REPL as it only requires the Portal library to be added as a dependency.
 
