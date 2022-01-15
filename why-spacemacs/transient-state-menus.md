@@ -12,8 +12,8 @@ When in a transient-state you will see documentation at the bottom of your windo
 
 ## Examples of transient state menus
 
-| Keybindings   | Transient state description  |
-|---------------|------------------------------|
+| Keybindings | Transient state description  |
+|-------------|------------------------------|
 | `SPC b .`   | buffer management            |
 | `SPC e .`   | errors                       |
 | `SPC k .`   | lisp state                   |

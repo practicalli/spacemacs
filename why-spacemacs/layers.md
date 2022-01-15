@@ -19,11 +19,11 @@ Spacemacs provides a well tested configuration file called `~/.spacemacs` that p
 
 The `~/.spacemacs` configuration file is composed of three important sections
 
-| Section                      | Purpose                                                                                                                                                                                                           |
-|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Section                      | Purpose                                                                                                                                                                                                                               |
+|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **dotspacemacs/layers**      | Layers provide a simple way to add language support and tooling to Spacemacs.  A layer can contain elisp configuration and packages from Melpa/Elpa.  Individual Emacs packages can also be added (if they do not exist in any layer) |
-| **dotspacemacs/init**        | configuration applied when Spacemacs first starts, eg evil or holy mode(emacs), themes, fonts, full screen, recent files, etc                                                                                     |
-| **dotspacemacs/user-config** | Add your own customisation here                                                                                                                                                                                   |
+| **dotspacemacs/init**        | configuration applied when Spacemacs first starts, eg evil or holy mode(emacs), themes, fonts, full screen, recent files, etc                                                                                                         |
+| **dotspacemacs/user-config** | Add your own customisation here                                                                                                                                                                                                       |
 
 > ####Info::Example .spacemacs configuration
 > Review the authors [current .spacemacs.d/init.el configuration file]({{ book.P9ISpacemacsD }}) for examples of changes and the [dotfile configuration](http://spacemacs.org/doc/DOCUMENTATION.html#dotfile-configuration) section of the Spacemacs documentation for a complete overview.
@@ -51,6 +51,7 @@ See the Spacemacs documentation for a [list of layers](http://spacemacs.org/laye
 
 
 ## Available Layers
+
 `SPC h l` (or `M-m h l` in holy mode) displays a list of all layers available in Spacemacs.  Type the layer name or scroll down (`C-j`) to a layer name and press `TAB` to preview the documentation for that layer or `RTN` to open the docs for that layer in a buffer.
 
 ![Help layers - Helm list](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-help-layers-list.png)
@@ -67,6 +68,7 @@ Create your own layers with `SPC SPC configuration-layer/create-layer`.  See the
 
 
 ## Existing Emacs users
+
 If you have configured Emacs before, you can consider the `.spacemacs` file as a replacement for the `init.el` file you would otherwise use to define your Emacs configuration.
 
 Installing packages via the `packages-list-packages` method is ignored by Spacemacs.  Any packages installed in this way will be ignored.

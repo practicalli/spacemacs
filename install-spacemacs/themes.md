@@ -1,16 +1,17 @@
 # Themes
 You can select a different theme or cycle through the currently added themes.
 
-| Spacemacs         | Description                                                             |
-|-------------------|-------------------------------------------------------------------------|
-| `SPC T n`         | Next theme in list                                                      |
-| `SPC T p`         | Previous theme in list                                                  |
-| `SPC T s`         | Select theme from list (all themes from gallery)                        |
+| Spacemacs         | Description                                                              |
+|-------------------|--------------------------------------------------------------------------|
+| `SPC T n`         | Next theme in list                                                       |
+| `SPC T p`         | Previous theme in list                                                   |
+| `SPC T s`         | Select theme from list (all themes from gallery)                         |
 | `SPC T s C-c C-f` | Apply themes when scrolling through the list of names (helm-follow-mode) |
 
 [![Spacemacs Themes menu](/images/spacemacs-themes-menu.png)](/images/spacemacs-themes-menu.png)
 
 # Adding Themes to Spacemacs
+
 Themes are included by adding the theme name to the `dotspacemacs-themes` list.  The first theme in the list is loaded when Spacemacs starts.
 
 ```lisp
@@ -29,6 +30,7 @@ The first time you select a theme it will be automatically downloaded, installed
 > This guide uses the `doom-gruvbox-light` theme for screenshots and videos, some older screenshots are `doom-solarized-light` or `spacemacs-dark`.
 
 ## Example themes
+
 There are many [themes available](http://themegallery.robdor.com/) for Spacemacs that will change the colours of text, background, etc.
 
 > #### Hint::Original Emacs theme ?

@@ -11,7 +11,7 @@ Code folding allows you to collapse a code block onto one line, allowing you to 
 |------------|---------------------------------------------|
 | `z a`      | Toggle fold for current code block          |
 | `z c`      | Folds a code block                          |
-| `z m`      | Folds all code  in buffer             |
+| `z m`      | Folds all code  in buffer                   |
 | `z o`      | Opens current folded code block             |
 | `z O`      | Opens current folded code block recursively |
 | `z r`      | Opens all folded code blocks in the buffer  |

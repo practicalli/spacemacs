@@ -23,8 +23,8 @@ Review the [evaluating expressions](expressions.md) page for more examples and a
 | `, e b`     | Evaluate all the code in the current buffer                       |
 | `, e e`     | Evaluate the previous expression and print the result             |
 | `, e f`     | Evaluate the current expression and print the result              |
-| `, e p ;`   | Pretty print result of the top-level expression as comment |
-| `, e p :`   | Pretty print result of the top-level expression as comment |
+| `, e p ;`   | Pretty print result of the top-level expression as comment        |
+| `, e p :`   | Pretty print result of the top-level expression as comment        |
 | `, e p f`   | Pretty print result of the top-level expression in a new buffer   |
 | `, e p e`   | Pretty print result of the last expression in a new buffer        |
 | `, e r`     | Evaluate code within the highlighted region                       |

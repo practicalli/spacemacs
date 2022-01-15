@@ -6,7 +6,7 @@ Safe structural editing in Evil normal state respects structural editing too, me
 
 Safe structural editing is provided by the package [evil-cleverparens](https://github.com/luxbock/evil-cleverparens) which is included in the Clojure layer. By default this mode is not activated.
 
-| Spacemacs   | Evil     | Description                                                |
+| Spacemacs   | Evil    | Description                                                |
 |-------------|---------|------------------------------------------------------------|
 | `SPC m T s` | `, T s` | Enable evil safe structural editing for the current buffer |
 
