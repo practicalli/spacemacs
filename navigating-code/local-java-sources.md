@@ -12,7 +12,7 @@ Navigate to Java source files [using local copies of the Java Source code](https
 Java sources are available as Debian/Ubuntu packages
 
 ```
-sudo apt install openjdk-11-source
+sudo apt install openjdk-17-source
 ```
 
 <!-- MacOSX Install -->
@@ -34,13 +34,13 @@ C:\Program Files\Java\{jdk-version}\src.zip
 
 {% endtabs %}
 
-Download the [latest Clojure sources](https://repo1.maven.org/maven2/org/clojure/clojure/1.10.1/) from Maven
+Download the [latest Clojure sources](https://repo1.maven.org/maven2/org/clojure/clojure/1.10.3/) from Maven
 
 Extract the Java `src.zip` file and `clojure-x-x-x-sources.jar` file
 
 Add `cider-jdk-src-paths` configuration to `dotspacemacs/user-config` in the `.spacemacs` file.  Change the paths if you extracted the files to a different location.
 
 ```elisp
-  (setq cider-jdk-src-paths '("~/projects/java/clojure-1.10.1-sources"
-                              "~/projects/java/openjdk-11/src"))
+  (setq cider-jdk-src-paths '("~/projects/java/clojure-1.10.3-sources"
+                              "~/projects/java/openjdk-17/src"))
 ```
