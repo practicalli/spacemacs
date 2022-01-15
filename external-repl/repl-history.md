@@ -15,7 +15,7 @@ The above commands do not work in Vim normal state.
 
 ## View the whole history with `cider-repl-history`
 
-You can view the whole history in a separate buffer via the REPL Command menu, available when the REPL buffer is active.
+You can view the history of expressions in a separate buffer via the REPL Command menu, available when the REPL buffer is active.  This does not include the history of results (data inspectors like Portal can be used to navigate evaluated history).
 
 In Vim Insert state or Emacs state:
 
@@ -43,11 +43,5 @@ In Evil Normal state:
 
 `SPC SPC cider-history-use-and-quit` sends the current expression to the REPL buffer and closes the REPL history.
 
-
-------------------------------------------
-
-
-> #### TODO:: Pull Request to support Evil
-> [#11431](https://github.com/syl20bnr/spacemacs/pull/11431) is a pull request to add Evil keybindings to the REPL buffer, so you can press `RTN` to evaluate code when in Evil Normal mode.  It will also add Evil Normal keybindings to send the current expression to the REPL.
 
 [![Spacemacs Clojure REPL History - keybindings code](/images/spacemacs-clojure-repl-history-keybindings-code.png)](/images/spacemacs-clojure-repl-history-keybindings-code.png)
