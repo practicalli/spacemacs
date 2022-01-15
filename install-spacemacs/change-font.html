@@ -3837,7 +3837,8 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="changing-fonts-and-zooming">Changing Fonts and Zooming</h1>
-<p>You can change the font to any currently installed on your computer.  The default font is <a href="https://adobe-fonts.github.io/source-code-pro/" target="_blank">Source Code Pro</a>.</p>
+<p>You can change the font to any currently installed on your computer.  The default font configured in Spacemacs is <a href="https://adobe-fonts.github.io/source-code-pro/" target="_blank">Source Code Pro</a>.</p>
+<h2 id="ubuntu-mono">Ubuntu Mono</h2>
 <p>Ubuntu Mono is also a great font to use for code.  This font is available from the <a href="http://font.ubuntu.com/" target="_blank">Ubuntu Font Family</a> and on all Ubuntu operating systems (and derivatives).</p>
 <p>To change font, open the <code>~/.spacemacs</code> file (<code>SPC f e d</code>) and edit the <code>dotspacemacs-default-font</code></p>
 <pre><code class="lang-lisp">   dotspacemacs-default-font &apos;(<span class="hljs-string">&quot;Ubuntu Mono&quot;</span>
@@ -3845,7 +3846,16 @@
                                <span class="hljs-symbol">:weight</span> normal
                                <span class="hljs-symbol">:width</span> normal)
 </code></pre>
-<h2 id="zooming---emacs-frame-and-font-size">Zooming - Emacs Frame and Font Size</h2>
+<h2 id="fira-code">Fira Code</h2>
+<p>Fira Code is a free mono-spaced font with programming ligatures, with specific ligatures for Clojure.</p>
+<p><img src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/fira-code-font-clojure-ligatures.png" alt="Fira Code font programming ligatures for Clojure"></p>
+<p>To change font, open the <code>~/.spacemacs</code> file (<code>SPC f e d</code>) and edit the <code>dotspacemacs-default-font</code></p>
+<pre><code class="lang-lisp">   dotspacemacs-default-font &apos;(<span class="hljs-string">&quot;Fira Code&quot;</span>
+                               <span class="hljs-symbol">:size</span> <span class="hljs-number">12.0</span>
+                               <span class="hljs-symbol">:weight</span> normal
+                               <span class="hljs-symbol">:width</span> normal)
+</code></pre>
+<h2 id="zoom-emacs-frame-and-font-size">Zoom Emacs Frame and Font Size</h2>
 <p>If you attach an external monitor, share your screen, give demos or presentations in Emacs, then you may need to scale the font size of your buffer or if using multiple buffers, zoom the size of your Emacs frame.</p>
 <p>Use the Spacemacs Zoom menu to enter a transient state that will let you zoom text or frame size.</p>
 <table>
@@ -3860,12 +3870,12 @@
 <tr>
 <td><code>SPC z f</code></td>
 <td><code>M-m z f</code></td>
-<td>Zoom all the buffers in the current frame, including the which-key and helm pop-up buffers</td>
+<td>Zoom all Emacs frames, including the which-key and helm pop-up buffers</td>
 </tr>
 <tr>
 <td><code>SPC z x</code></td>
 <td><code>M-m z x</code></td>
-<td>Scale the font of only the current buffer</td>
+<td>Scale the font of the current buffer</td>
 </tr>
 </tbody>
 </table>
@@ -3915,7 +3925,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Font size and Zooming","level":"2.2.1.4","depth":3,"next":{"title":"Open Maximised / Full Screen","level":"2.2.1.5","depth":3,"path":"install-spacemacs/maximised-full-screen.md","ref":"install-spacemacs/maximised-full-screen.md","articles":[]},"previous":{"title":"Configure lsp and Cider","level":"2.2.1.3.1","depth":4,"path":"install-spacemacs/clojure-lsp/configure-lsp-and-cider.md","ref":"install-spacemacs/clojure-lsp/configure-lsp-and-cider.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"install-spacemacs/change-font.md","mtime":"2022-01-15T03:46:12.444Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-15T03:47:17.061Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Font size and Zooming","level":"2.2.1.4","depth":3,"next":{"title":"Open Maximised / Full Screen","level":"2.2.1.5","depth":3,"path":"install-spacemacs/maximised-full-screen.md","ref":"install-spacemacs/maximised-full-screen.md","articles":[]},"previous":{"title":"Configure lsp and Cider","level":"2.2.1.3.1","depth":4,"path":"install-spacemacs/clojure-lsp/configure-lsp-and-cider.md","ref":"install-spacemacs/clojure-lsp/configure-lsp-and-cider.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"install-spacemacs/change-font.md","mtime":"2022-01-15T13:14:13.288Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-15T13:15:23.657Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

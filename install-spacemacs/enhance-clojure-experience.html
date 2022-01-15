@@ -3856,20 +3856,12 @@
 <td><a href="https://docs.cider.mx" target="_blank">CIDER</a>, optionally with <a href="https://github.com/clojure-emacs/clj-refactor.el/wiki" target="_blank">clj-refactor</a> and <a href="https://github.com/borkdude/clj-kondo" target="_blank">clj-kondo</a> linter</td>
 </tr>
 <tr>
-<td><code>elisp</code></td>
-<td>edit <code>.spacemacs</code> configuration and any Emacs elisp code</td>
-</tr>
-<tr>
 <td><code>git</code></td>
 <td>git version control with <a href="https://magit.vc/" target="_blank">Magit</a> in full screen, with fringe highlighting of changes in buffers</td>
 </tr>
 <tr>
 <td><code>github</code></td>
 <td>GitHub API for remote repositories and gists</td>
-</tr>
-<tr>
-<td><code>helm</code></td>
-<td>completion and selection narrowing framework</td>
 </tr>
 <tr>
 <td><code>lsp</code></td>
@@ -3910,44 +3902,134 @@ Please read the <a href="https://github.com/borkdude/clj-kondo/blob/master/doc/i
 <h2 id="edit-spacemacs-and-add-layers">Edit .spacemacs and add layers</h2>
 <p><code>SPC f e d</code> opens the <code>.spacemacs</code> configuration file (<code>M-m f e d</code> holy mode)</p>
 <p>Use <code>SPC s s</code> and start typing <code>configuration-layers</code> to search for the <code>dotspacemacs-configuration-layers</code> section.  <code>RTN</code> to jump to the highlighted line, <code>C-j</code> to move down the matching lines, <code>C-k</code> to move up.</p>
-<p>Add the following layers to <code>dotspacemacs-configuration-layers</code> ensuring there are no duplicates</p>
-<pre><code class="lang-lisp">     (<span class="hljs-name">auto-completion</span> <span class="hljs-symbol">:variables</span>
-                      auto-completion-enable-help-tooltip <span class="hljs-literal">t</span>
-                      auto-completion-enable-snippets-in-popup <span class="hljs-literal">t</span>
-                      auto-completion-enable-sort-by-usage <span class="hljs-literal">t</span>)
-     (<span class="hljs-name">clojure</span> <span class="hljs-symbol">:variables</span>
-              <span class="hljs-comment">;; clojure-backend &apos;cider               ;; use cider and disable lsp</span>
-              <span class="hljs-comment">;; clojure-enable-linters &apos;clj-kondo    ;; clj-kondo included in lsp</span>
-              cider-repl-display-help-banner <span class="hljs-literal">nil</span>      <span class="hljs-comment">;; disable help banner</span>
-              cider-pprint-fn &apos;fipp                   <span class="hljs-comment">;; fast pretty printing</span>
-              clojure-indent-style &apos;align-arguments
-              clojure-align-forms-automatically <span class="hljs-literal">t</span>
-              clojure-toplevel-inside-comment-form <span class="hljs-literal">t</span>  <span class="hljs-comment">;; evaluate expressions in comment as top level</span>
-              cider-result-overlay-position &apos;at-point <span class="hljs-comment">;; results shown right after expression</span>
-              cider-overlays-use-font-lock <span class="hljs-literal">t</span>
-              cider-repl-buffer-size-limit <span class="hljs-number">100</span>        <span class="hljs-comment">;; limit lines shown in REPL buffer</span>
-              )
-     emacs-lisp
-     (<span class="hljs-name">git</span> <span class="hljs-symbol">:variables</span>
-          git-magit-status-fullscreen <span class="hljs-literal">t</span>
-          magit-diff-refine-hunk <span class="hljs-literal">t</span>)
-     github
-     helm
-     markdown
-     multiple-cursors
-     org
-     spell-checking
-     syntax-checking
-     treemacs
-     (<span class="hljs-name">version-control</span> <span class="hljs-symbol">:variables</span>
-                      version-control-diff-tool &apos;diff-hl
-                      version-control-global-margin <span class="hljs-literal">t</span>)
-</code></pre>
+<p>Either copy the <code>dotspacemacs-configuration-layers</code> from practicalli/spacemacs.d or copy the individual configurations in the rest of this page.</p>
 <p><code>SPC f s</code> to save the file.</p>
 <p><code>SPC q r</code> to restart Spacemacs which will load and configure all the new layers and their Emacs packages.</p>
-<h2 id="reload-configuration-or-restart-emacs">Reload Configuration or Restart Emacs</h2>
-<p><code>SPC q r</code> to restart Emacs with the new configuration.  This is the recommended approach when making a big change or adding layers to ensure all the new packages are installed and configured.</p>
-<p>For smaller changes you can reload the <code>~/.spacemacs</code> configuration using <code>SPC f e R</code>.</p>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="reload-configuration-or-restart-emacs"><i class="fa fa-lightbulb-o"></i> Reload Configuration or Restart Emacs</h3></div><div class="panel-body"><p><code>SPC q r</code> to restart Emacs with a new configuration is recommended when making a big change or adding layers. For smaller changes you can reload the <code>~/.spacemacs</code> configuration using <code>SPC f e R</code>.</p><p>Practicalli recommends restarting Spacemacs, <code>SPC q r</code>, once more after all the packages have finished installing, ensuring all the Elisp code is loaded correctly.</p></div></div>
+<h3 id="auto-completion">Auto-completion</h3>
+<p>Enable auto-completion for programming languages.  In Clojure this includes functions, namespaces and other symbols.</p>
+<p>Yasnippet are included in the auto-completion popup and are sorted with the most frequently used snippets first.</p>
+<pre><code class="lang-lisp">(<span class="hljs-name">auto-completion</span> <span class="hljs-symbol">:variables</span>
+                 auto-completion-enable-help-tooltip <span class="hljs-literal">t</span>
+                 auto-completion-enable-snippets-in-popup <span class="hljs-literal">t</span>
+                 auto-completion-enable-sort-by-usage <span class="hljs-literal">t</span>)
+</code></pre>
+<p>To have auto-completion as soon as typing starts, add <code>auto-completion-idle-delay nil</code> to the auto-completion variables</p>
+<h2 id="clojure">Clojure</h2>
+<p>Enable Clojure support but differ the backend to Clojure LSP rather than CIDER.  The clojure-lsp binary should be downloaded automatically.</p>
+<p>Enable the kaocha-runner to use Kaocha test runner from within the REPL.</p>
+<pre><code class="lang-lisp">(<span class="hljs-name">clojure</span> <span class="hljs-symbol">:variables</span>
+         cider-repl-display-help-banner <span class="hljs-literal">nil</span>      <span class="hljs-comment">;; disable help banner</span>
+         cider-pprint-fn &apos;fipp                   <span class="hljs-comment">;; fast pretty printing</span>
+         cider-overlays-use-font-lock <span class="hljs-literal">t</span>
+         cider-repl-buffer-size-limit <span class="hljs-number">100</span>        <span class="hljs-comment">;; limit lines shown in REPL buffer to prevent performance issues</span>
+         clojure-indent-style &apos;align-arguments
+         clojure-align-forms-automatically <span class="hljs-literal">t</span>
+         clojure-toplevel-inside-comment-form <span class="hljs-literal">t</span>  <span class="hljs-comment">;; evaluate expressions in comment as top level</span>
+         clojure-enable-kaocha-runner <span class="hljs-literal">t</span>)
+</code></pre>
+<p>Add the variable <code>cider-result-overlay-position &apos;at-point</code> to show results shown right after expression (useful for evaluated a nested expression). Otherwise results from evaluating expressions show at the end of the top-level expression.</p>
+<h2 id="git-and-github">Git and GitHub</h2>
+<p>Enable Magit Git client in Emacs and open Magit Status, <code>SPC g s</code> full screen (q restores previous layout). Show word-granularity differences in current diff hunk.</p>
+<p>Enable GitHub features to clone repositories, push commits and create pull requests (Magit Forge) all from within Emacs.</p>
+<p>Enable fringe highlight of version control (Git) changes in buffers</p>
+<pre><code class="lang-lisp">(<span class="hljs-name">git</span> <span class="hljs-symbol">:variables</span>
+     git-magit-status-fullscreen <span class="hljs-literal">t</span>
+     magit-diff-refine-hunk <span class="hljs-literal">t</span>
+     git-enable-magit-todos-plugin <span class="hljs-literal">t</span>)
+github
+(<span class="hljs-name">version-control</span> <span class="hljs-symbol">:variables</span>
+                 version-control-diff-tool &apos;diff-hl
+                 version-control-global-margin <span class="hljs-literal">t</span>)
+</code></pre>
+<h2 id="language-server-protocol-lsp">Language Server Protocol (LSP)</h2>
+<p>Clojure LSP provides common editor features across all Clojure aware editors.  A configuration with minimal visual impact.</p>
+<pre><code class="lang-lisp">(<span class="hljs-name">lsp</span> <span class="hljs-symbol">:variables</span>
+     <span class="hljs-comment">;; Formatting and indentation</span>
+     lsp-enable-on-type-formatting <span class="hljs-literal">t</span>
+     lsp-enable-indentation <span class="hljs-literal">t</span>
+     lsp-enable-snippet <span class="hljs-literal">t</span>
+
+     lsp-enable-symbol-highlighting <span class="hljs-literal">t</span>
+
+     <span class="hljs-comment">;; popup documentation</span>
+     lsp-ui-doc-enable <span class="hljs-literal">t</span>               <span class="hljs-comment">;; documentation popups</span>
+     lsp-ui-doc-show-with-cursor <span class="hljs-literal">nil</span>   <span class="hljs-comment">;; doc popup triggered by cursor</span>
+     lsp-ui-doc-show-with-mouse <span class="hljs-literal">nil</span>    <span class="hljs-comment">;; doc popup triggered by mouse</span>
+     lsp-ui-doc-delay <span class="hljs-number">1</span>                <span class="hljs-comment">;; delay in seconds for popup to display</span>
+     lsp-ui-doc-include-signature <span class="hljs-literal">t</span>    <span class="hljs-comment">;; include function signature</span>
+     <span class="hljs-comment">;; lsp-ui-doc-position &apos;top       ;; top bottom at-point</span>
+     <span class="hljs-comment">;; lsp-ui-doc-alignment &apos;window   ;; frame window</span>
+
+     <span class="hljs-comment">;; code actions and diagnostics text as right-hand side of buffer</span>
+     lsp-ui-sideline-enable <span class="hljs-literal">nil</span>
+     lsp-ui-sideline-show-code-actions <span class="hljs-literal">nil</span>
+     <span class="hljs-comment">;; lsp-ui-sideline-delay 500</span>
+     <span class="hljs-comment">;; lsp-ui-sideline-show-diagnostics nil</span>
+
+     <span class="hljs-comment">;; function reference count and test coverage</span>
+     lsp-lens-enable <span class="hljs-literal">t</span>
+
+     <span class="hljs-comment">;; Efficient use of space in treemacs-lsp display</span>
+     treemacs-space-between-root-nodes <span class="hljs-literal">nil</span>
+
+     <span class="hljs-comment">;; Optimization for large files</span>
+     lsp-file-watch-threshold <span class="hljs-number">10000</span>
+     lsp-log-io <span class="hljs-literal">nil</span>)
+</code></pre>
+<h2 id="multiple-cursors">Multiple cursors</h2>
+<p>Edit multiple lines of text concurrently by creating multiple cursors, especially useful for editing the form of lines which have different values.</p>
+<pre><code class="lang-lisp">multiple-cursors
+</code></pre>
+<h2 id="org-mode">Org-mode</h2>
+<p>Enable Spacemacs Org-mode with support for a range of additional features useful for development, including a custom TODO list workflow.</p>
+<pre><code class="lang-lisp">(<span class="hljs-name">org</span> <span class="hljs-symbol">:variables</span>
+     org-enable-github-support <span class="hljs-literal">t</span>
+     org-enable-bootstrap-support <span class="hljs-literal">t</span>
+     org-enable-reveal-js-support <span class="hljs-literal">t</span>
+     org-want-todo-bindings <span class="hljs-literal">t</span>
+     org-enable-org-journal-support <span class="hljs-literal">t</span>
+     org-journal-dir <span class="hljs-string">&quot;~/projects/journal/&quot;</span>
+     org-journal-file-format <span class="hljs-string">&quot;%Y-%m-%d&quot;</span>
+     org-journal-date-prefix <span class="hljs-string">&quot;#+TITLE: &quot;</span>
+     org-journal-date-format <span class="hljs-string">&quot;%A, %B %d %Y&quot;</span>
+     org-journal-time-prefix <span class="hljs-string">&quot;* &quot;</span>
+     org-journal-time-format <span class="hljs-string">&quot;&quot;</span>
+     org-journal-carryover-items <span class="hljs-string">&quot;TODO=\&quot;TODO\&quot;|TODO=\&quot;DOING\&quot;|TODO=\&quot;BLOCKED\&quot;|TODO=\&quot;REVIEW\&quot;&quot;</span>
+
+     <span class="hljs-comment">;; org-enable-jira-support t</span>
+     <span class="hljs-comment">;; jiralib-url &quot;https://org-domain.atlassian.net:443&quot;</span>
+     )
+</code></pre>
+<h2 id="layouts">Layouts</h2>
+<p>spacemacs-layouts layer added to set variables, <code>SPC TAB</code> restricted to current layout buffers</p>
+<p>Kill buffers when killing layer - SPC l x</p>
+<pre><code class="lang-lisp">(<span class="hljs-name">spacemacs-layouts</span> <span class="hljs-symbol">:variables</span>
+                   spacemacs-layouts-restrict-spc-tab <span class="hljs-literal">t</span>
+                   persp-autokill-buffer-on-remove &apos;kill-weak)
+</code></pre>
+<h2 id="configure-doom-modeline">Configure Doom modeline</h2>
+<p>Configuration used by Practicalli for the Doom modeline, based on the configuration: <a href="https://github.com/seagle0128/doom-modeline#customize" target="_blank">seagle0128/doom-modeline</a></p>
+<pre><code class="lang-lisp">(<span class="hljs-name">spacemacs-modeline</span> <span class="hljs-symbol">:variables</span>
+                    doom-modeline-height <span class="hljs-number">12</span>
+                    doom-modeline-major-mode-color-icon <span class="hljs-literal">t</span>
+                    doom-modeline-buffer-file-name-style &apos;relative-to-project
+                    doom-modeline-display-default-persp-name <span class="hljs-literal">t</span>
+                    doom-modeline-minor-modes <span class="hljs-literal">nil</span>
+                    doom-modeline-modal-icon <span class="hljs-literal">nil</span>)
+</code></pre>
+<h2 id="spell-checking">Spell checking</h2>
+<p>Spell as you type with Flyspell package, which requires external command such as ispell, hunspell, aspell</p>
+<p><code>SPC S s</code> to check the spelling of the current word</p>
+<pre><code class="lang-lisp">spell-checking
+</code></pre>
+<h2 id="programming-ligatures">Programming Ligatures</h2>
+<p>Support font ligatures (fancy symbols) in all programming language modes, when using Fira Codes and other fonts that support ligatures.</p>
+<p>Including ligatures for text-mode may cause issues with org-mode and magit.</p>
+<pre><code class="lang-lisp">(<span class="hljs-name">unicode-fonts</span> <span class="hljs-symbol">:variables</span>
+               unicode-fonts-enable-ligatures <span class="hljs-literal">t</span>
+               unicode-fonts-ligature-modes &apos;(prog-mode))
+</code></pre>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -3991,7 +4073,7 @@ Please read the <a href="https://github.com/borkdude/clj-kondo/blob/master/doc/i
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Enhance Clojure experience","level":"2.2.1.2","depth":3,"next":{"title":"Smartparens","level":"2.2.1.2.1","depth":4,"path":"install-spacemacs/smartparens.md","ref":"install-spacemacs/smartparens.md","articles":[]},"previous":{"title":"Add Clojure layer","level":"2.2.1.1","depth":3,"path":"install-spacemacs/clojure-layer.md","ref":"install-spacemacs/clojure-layer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practicalli.github.io/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practicalli.github.io/clojure/clojure-tools/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"install-spacemacs/enhance-clojure-experience.md","mtime":"2022-01-15T03:46:12.444Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-15T03:47:17.061Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Enhance Clojure experience","level":"2.2.1.2","depth":3,"next":{"title":"Smartparens","level":"2.2.1.2.1","depth":4,"path":"install-spacemacs/smartparens.md","ref":"install-spacemacs/smartparens.md","articles":[]},"previous":{"title":"Add Clojure layer","level":"2.2.1.1","depth":3,"path":"install-spacemacs/clojure-layer.md","ref":"install-spacemacs/clojure-layer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"install-spacemacs/enhance-clojure-experience.md","mtime":"2022-01-15T13:14:13.288Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-15T13:15:23.657Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -2,19 +2,19 @@
 
 > #### TODO::work in progress, sorry
 
-[Reveal](https://vlaaad.github.io/reveal/) - run a Terminal REPL with data visualisation or connect with nREPL, socket or prepl connection and use from any [Clojure aware editor]([Clojure aware editors](https://practicalli.github.io/clojure/clojure-editors/)).
+[Reveal](https://vlaaad.github.io/reveal/) - run a Terminal REPL with data visualisation or connect with nREPL, socket or prepl connection and use from any [Clojure aware editor]([Clojure aware editors](https://practical.li/clojure/clojure-editors/)).
 Reveal can also used as a `tap>` source for more powerful manual debugging.
 
 * `:inspect/reveal` - visualisation with terminal REPL.
 * `:inspect/reveal-light` - as above with light theme and 32 point Ubuntu Mono font
-* `:inspect/reveal-nrepl` - visualization for [Clojure aware editors](https://practicalli.github.io/clojure/clojure-editors/) via an nrepl server
+* `:inspect/reveal-nrepl` - visualization for [Clojure aware editors](https://practical.li/clojure/clojure-editors/) via an nrepl server
 * `:inspec/reveal-light-nrepl` - as above with light theme and 32 point Ubuntu Mono font
 * `:inspect/reveal-nrepl-cider` - visualization tool for Emacs Cider / Spacemacs / VSCode Calva
 * `:inspec/reveal-light-nrepl-cider` - as above with light theme and 32 point Ubuntu Mono font
 
 | Command                                       | Description                                                                        |
 |-----------------------------------------------|------------------------------------------------------------------------------------|
-| `clojure -M:inspect/reveal`                   | start a Reveal repl with data visualization window (clojure.main)                   |
+| `clojure -M:inspect/reveal`                   | start a Reveal repl with data visualization window (clojure.main)                  |
 | `clojure -M:inspect/reveal-light`             | as above with light theme and large font                                           |
 | `clojure -X:inspect/reveal`                   | start a Reveal repl with data visualization window (clojure exec)                  |
 | `clojure -X:inspect/reveal-light`             | as above with light theme and large font                                           |
@@ -34,7 +34,7 @@ Alternatively, add an `.nrepl.edn` file to the root of a project to include the 
 ```
 
 **Cider jack-in and reveal**
-See the [Reveal section of Practicalli Clojure](https://practicalli.github.io/clojure-staging/clojure-tools/data-browsers/reveal.html#using-reveal-with-nrepl-editors) for full details, including how to set up a `.dir-locals.el` configuration.
+See the [Reveal section of Practicalli Clojure](https://practicalli.github.io/clojure-staging/clojure-cli/data-browsers/reveal.html#using-reveal-with-nrepl-editors) for full details, including how to set up a `.dir-locals.el` configuration.
 
 `:inspect/reveal-nrepl-cider` alias contains Reveal REPL with nrepl server and Emacs CIDER specific middleware
 
@@ -67,32 +67,29 @@ clojure -M:inspect/reveal -J-Dvlaaad.reveal.prefs='{:theme :light :font-family "
 
 Evaluate `(add-tap ((requiring-resolve 'vlaaad.reveal/ui)))` when using Rebel Readline to add Reveal as a tap source, showing `(tap> ,,,)` expressions in the reveal window, eg. `(tap> (map inc [1 2 3 4 5]))`.
 
-[Practicalli Clojure - data browsers section](http://practical.li/clojure/clojure-tools/data-browsers/reveal.html) has more details on using reveal.
+[Practicalli Clojure - data browsers section](http://practical.li/clojure/clojure-cli/data-browsers/reveal.html) has more details on using reveal.
 
-
-
-
-## Reveal
 
 
 ## Data Inspectors
+
 REPL driven data inspectors and `tap>` sources for visualizing data.
 
 
 ### Reveal data inspector and visualization tool
-[Reveal](https://vlaaad.github.io/reveal/) - run a Terminal REPL with data visualisation or connect with nREPL, socket or prepl connection and use from any [Clojure aware editor]([Clojure aware editors](https://practicalli.github.io/clojure/clojure-editors/)).
+[Reveal](https://vlaaad.github.io/reveal/) - run a Terminal REPL with data visualisation or connect with nREPL, socket or prepl connection and use from any [Clojure aware editor]([Clojure aware editors](https://practical.li/clojure/clojure-editors/)).
 Reveal can also used as a `tap>` source for more powerful manual debugging.
 
 * `:inspect/reveal` - visualisation with terminal REPL.
 * `:inspect/reveal-light` - as above with light theme and 32 point Ubuntu Mono font
-* `:inspect/reveal-nrepl` - visualization for [Clojure aware editors](https://practicalli.github.io/clojure/clojure-editors/) via an nrepl server
+* `:inspect/reveal-nrepl` - visualization for [Clojure aware editors](https://practical.li/clojure/clojure-editors/) via an nrepl server
 * `:inspec/reveal-light-nrepl` - as above with light theme and 32 point Ubuntu Mono font
 * `:inspect/reveal-nrepl-cider` - visualization tool for Emacs Cider / Spacemacs / VSCode Calva
 * `:inspec/reveal-light-nrepl-cider` - as above with light theme and 32 point Ubuntu Mono font
 
 | Command                                       | Description                                                                        |
 |-----------------------------------------------|------------------------------------------------------------------------------------|
-| `clojure -M:inspect/reveal`                   | start a Reveal repl with data visualization window (clojure.main)                   |
+| `clojure -M:inspect/reveal`                   | start a Reveal repl with data visualization window (clojure.main)                  |
 | `clojure -M:inspect/reveal-light`             | as above with light theme and large font                                           |
 | `clojure -X:inspect/reveal`                   | start a Reveal repl with data visualization window (clojure exec)                  |
 | `clojure -X:inspect/reveal-light`             | as above with light theme and large font                                           |
@@ -112,7 +109,7 @@ Alternatively, add an `.nrepl.edn` file to the root of a project to include the 
 ```
 
 **Cider jack-in and reveal**
-See the [Reveal section of Practicalli Clojure](https://practicalli.github.io/clojure-staging/clojure-tools/data-browsers/reveal.html#using-reveal-with-nrepl-editors) for full details, including how to set up a `.dir-locals.el` configuration.
+See the [Reveal section of Practicalli Clojure](https://practicalli.github.io/clojure-staging/clojure-cli/data-browsers/reveal.html#using-reveal-with-nrepl-editors) for full details, including how to set up a `.dir-locals.el` configuration.
 
 `:inspect/reveal-nrepl-cider` alias contains Reveal REPL with nrepl server and Emacs CIDER specific middleware
 
@@ -145,4 +142,4 @@ clojure -M:inspect/reveal -J-Dvlaaad.reveal.prefs='{:theme :light :font-family "
 
 Evaluate `(add-tap ((requiring-resolve 'vlaaad.reveal/ui)))` when using Rebel Readline to add Reveal as a tap source, showing `(tap> ,,,)` expressions in the reveal window, eg. `(tap> (map inc [1 2 3 4 5]))`.
 
-[Practicalli Clojure - data browsers section](http://practical.li/clojure/clojure-tools/data-browsers/reveal.html) has more details on using reveal.
+[Practicalli Clojure - data browsers section](http://practical.li/clojure/clojure-cli/data-browsers/reveal.html) has more details on using reveal.
