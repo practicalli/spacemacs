@@ -115,6 +115,8 @@
         * [Configure Test Runner](testing/unit-testing/configure-cider-test-runner.md)
         <!-- * [Expectations](testing/unit-testing/clojure-test-expectations.md) -->
 
+    * [Kaocha Test Runner](testing/kaocha-test-runner.md)
+
     <!-- * [Contract Testing](testing/contract-testing/index.md) -->
     <!-- * [Generative Testing](testing/generative-testing/index.md) -->
     <!-- * [Integration Testing](testing/integration-testing/index.md) -->
