@@ -149,7 +149,6 @@
 /home/practicalli/projects/practicalli/books/spacemacs/snippets/yasnippets/add-custom-snippets.md
     * [Yasnippets](snippets/yasnippets/index.md)
         * [Built-in Snippets](snippets/yasnippets/built-in-snippets.md)
-        * [Clojure Snippets](snippets/yasnippets/clojure-snippets.md)
         * [Clojure Snippets](snippets/yasnippets/clojure-snippets-reference.md)
         * [Create Snippets](snippets/yasnippets/create-snippets.md)
         * [Writing Snippets](snippets/yasnippets/writing-snippets.md)
