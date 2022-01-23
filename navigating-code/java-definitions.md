@@ -6,16 +6,16 @@ Add the Java sources locally to also enable searching with ripgrep or ag.  Or ad
 
 ## Adding a deps.edn alias for Java sources
 
-Using an alias is the recommended way to include Java sources for Clojure CLI projects, as those sources are a development time artifact.
+Using an alias is the recommended way to include Java sources for Clojure CLI projects, as those sources are a only used in the development workflow.
 
 ```clojure
-  :java-17-source
+  :src/java17
   {:extra-deps
    {java-sources {:local/root "/usr/lib/jvm/openjdk-17/lib/src.zip"}}}
 
-  :clojure-1.10.1-source
+  :src/clojure
   {:extra-deps
-   {clojure-java-sources {:local/root "~/projects/java/clojure-1.10.1-sources"}}}
+   {org.clojure/source {:local/root "~/projects/community/clojure.org/clojure"}}}
 ```
 
 [practicalli/example deps.edn includes example aliases for java sources](https://github.com/practicalli/clojure-deps-edn#java-sources)
@@ -28,14 +28,14 @@ Using an alias is the recommended way to include Java sources for Clojure CLI pr
 Add a `.dir-locals.el` file to the root of your Clojure project to include the java sources alias when running cider-jack-in.
 
 ```elisp
-((clojure-mode . ((cider-clojure-cli-aliases . ":lib/java17-source")
+((clojure-mode . ((cider-clojure-cli-aliases . ":src/java17")
                   (cider-preferred-build-tool . "clojure-cli"))))
 ```
 
 Or include both Java and Clojure Java sources
 
 ```elisp
-((clojure-mode . ((cider-clojure-cli-aliases . ":lib/java17-source:clojure-1.10.1-source")
+((clojure-mode . ((cider-clojure-cli-aliases . ":src/java17:src/clojure")
                   (cider-preferred-build-tool . "clojure-cli"))))
 ```
 

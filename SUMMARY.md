@@ -128,7 +128,7 @@
     * [Function Definitions](navigating-code/function-definitions.md)
     * [Find Usages](navigating-code/find-usages.md)
     * [Java Definitions](navigating-code/java-definitions.md)
-        * [Java Definitions](navigating-code/local-java-sources.md)
+        <!-- * [Local Java Sources](navigating-code/local-java-sources.md) -->
     * [Expressions](navigating-code/expressions.md)
     * [Code Folding](navigating-code/code-folding.md)
         * [Folding methods](navigating-code/code-folding-methods.md)
