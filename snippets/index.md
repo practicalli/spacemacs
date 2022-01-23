@@ -1,53 +1,35 @@
 # Snippets - Common code templates
-Speed up the creation of common code blocks with easy to define text templates provided by [yasnippet](https://github.com/joaotavora/yasnippet/blob/master/doc/index.org).
+
+Snippets are names that expand to code or documentation, to minimise typing commonly used code pattern and can serve as a reminder of common Clojure forms.
+
+The content of a snippet can be anything, from a simple piece of text or a more involved code structure with placeholders for tab stops. Practicalli also uses snippets for rich code blocks, documentation and helping organise code in a namespace.
+
+Snippets can include code which is evaluated, allowing the snippet to tap into all the features of Emacs (Yasnippets) or Clojure (Clojure LSP).
+
+Emacs specific Yasnippets or the more general LSP snippets can be used (or both together).
+
+Yasnippet are easier to create and write as the are plain text.  Clojure LSP built-in snippets can include Clojure code for generating the snippets.
+
+
+## Emacs Yasnippets
+
+[YASnippets](https://github.com/joaotavora/yasnippet/blob/master/doc/index.org) uses plain text templates and so are very easy to learn and write.  Snippets are specific to an Emacs major mode.  They include tab stops, placoders with default values and markers to ensure correct indentation.
 
 `M-/` expands the text under the point by any of the methods registered with hippie-expand. Yasnippets is one of the methods registered.
 
 `TAB` will jump through the expanded snippet if it contains markers.
 
-## Example using snippets
-In `web` major mode, typing `link` and pressing `M-/` expands to `<link rel="stylesheet" href="url" type="text/css" media="screen" />` placing the cursor on `stylesheet`.  `TAB` to move the cursor to `url` to change the name of the CSS file. `TAB` again until the end marker is reached.
+For example, `defn` is a snippet that expands into the full function definition form, tab stops jump the cursor through the snippet to add specific values to quickly complete the specifics of that function definition.
 
-![Spacemacs - Snippets - Web html link expanded](/images/spacemacs-auto-completion-snippets-html-link-expanded.png)
+Yasnippets can also execute Elisp code, opening up a large number of Emacs functions to use within a snippet.
 
-
-## Configure yasnippet
-The [auto-completion](https://develop.spacemacs.org/layers/+completion/auto-completion/README.html) layer adds yasnippet and the official snippet collection, yasnippet-snippets.
-
-Add `auto-completion` to the `dotspacemacs-configuration-layers` list in `.spacemacs`
-
-The [clojure layer](https://develop.spacemacs.org/layers/+lang/clojure/README.html) providing additional snippet templates from the [clojure-snippets](https://github.com/mpenet/clojure-snippets) package.
-
-> #### Hint::[practicalli/spacemacs.d]({{ book.P9ISpacemacsD }}) includes this configuration
+Spacemacs automatically includes [snippets for many programming languages and text formats](https://github.com/AndreaCrotti/yasnippet-snippets), including [snippets for Clojure](https://github.com/AndreaCrotti/yasnippet-snippets/tree/master/snippets/clojure-mode).
 
 
-## Snippets in Auto-completion popups
-Snippets can be included in the auto-complete pop-up menu.
+## Clojure LSP snippets
 
-![Spacemacs - Snippets - Web html link](/images/spacemacs-auto-completion-snippets-html-link.png)
+Clojure LSP snippets are editor agnostic (although the editor needs to support Clojure LSP). Snippets support tab stops, placeholders with default values and can pull in a following form (`$current-form`).
 
-`TAB` to navigate through the list of menu items.
+[Built-in snippets](https://clojure-lsp.io/features/#snippets) appear in the completion menu when typing.
 
-`RET` to select the snippet and add the template to the buffer.
-
-Add the layer variable `auto-completion-enable-snippets-in-popup t` to the `auto-completion` layer in `.spacemacs`.
-
-Practicalli also recommends adding `auto-completion-enable-sort-by-usage t` to show the most commonly used snippets at the top of the auto-completion pop-up menu.
-
-```elisp
-(auto-completion :variables
-                 auto-completion-enable-help-tooltip t
-                 auto-completion-enable-snippets-in-popup t
-                 auto-completion-enable-sort-by-usage t)
-```
-
-## Snippet save locations
-Snippets are saved in `~/.emacs.d/private/snippets/`.  When `~/.spacemacs.d` is used for the Spacemacs configuration, snippets are saved in `~/.spacemacs.d/snippets/` directory.
-
-Each snippet is saved in its own file, named after the alias of the snippet.  The snippet file is located in a directory named after the Emacs major mode it belongs to.
-
-A snippet called `wip` for Clojure has a file name `wip` and is in saved in directory named `clojure`.
-
-
-## Resources
-* [How to make better use of Yasnippet in my Emacs workflow](http://sachachua.com/blog/2015/01/thinking-make-better-use-yasnippet-emacs-workflow/) - Sacha Chua
+Custom snippets are defined in the Clojure LSP configuration using the `:additional-snipets` key.

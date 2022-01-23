@@ -2,9 +2,11 @@
 
 Spacemacs included the [yasnippet official snippets repository](https://github.com/AndreaCrotti/yasnippet-snippets) and [clojure-snippets package](https://github.com/mpenet/clojure-snippets), providing an extensive collection of snippets for Clojure.
 
-* [Datomic snippets package](https://github.com/magnars/datomic-snippets) contains specific snippets for [Cognitect Datomic database](https://www.datomic.com/).
+* [Datomic snippets package](https://github.com/magnars/datomic-snippets) contains specific snippets for [Cognitect Datomic database](https://www.datomic.com/)
+* [mpenet/clojure-snippets](https://github.com/mpenet/clojure-snippets) has several additional Clojure snippets (although not included in Spacemacs by default)
 
 > #### Hint::deftest snippet is called test
+> `test` may expand when typing the deftest name, which typically ends with `-test`.  Add a space after the `-test` name to ensure its not expanded to another deftest expression when pressing `TAB`
 
 | Snippet    | Description                                                                                                                    | Tab Stops                              |
 |------------|--------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|

@@ -89,7 +89,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="clojure-snippets.html" />
+    <link rel="next" href="yasnippets/" />
     
     
     <link rel="prev" href="../structural-editing/repeating-commands.html" />
@@ -1641,6 +1641,19 @@
             
         </li>
     
+        <li class="chapter " data-level="4.4.2" data-path="../testing/kaocha-test-runner.html">
+            
+                <a href="../testing/kaocha-test-runner.html">
+            
+                    
+                    Kaocha Test Runner
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1748,25 +1761,6 @@
                 </a>
             
 
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="4.5.7.1" data-path="../navigating-code/local-java-sources.html">
-            
-                <a href="../navigating-code/local-java-sources.html">
-            
-                    
-                    Java Definitions
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
             
         </li>
     
@@ -1963,9 +1957,36 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.7.1" data-path="clojure-snippets.html">
+        <li class="chapter " data-level="4.7.1" data-path="yasnippets/">
             
-                <a href="clojure-snippets.html">
+                <a href="yasnippets/">
+            
+                    
+                    Yasnippets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.1.1" data-path="yasnippets/built-in-snippets.html">
+            
+                <a href="yasnippets/built-in-snippets.html">
+            
+                    
+                    Built-in Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.1.2" data-path="yasnippets/clojure-snippets.html">
+            
+                <a href="yasnippets/clojure-snippets.html">
             
                     
                     Clojure Snippets
@@ -1976,16 +1997,105 @@
             
         </li>
     
-        <li class="chapter " data-level="4.7.2" data-path="add-your-own-snippets.html">
+        <li class="chapter " data-level="4.7.1.3" data-path="yasnippets/clojure-snippets-reference.html">
             
-                <a href="add-your-own-snippets.html">
+                <a href="yasnippets/clojure-snippets-reference.html">
             
                     
-                    Add your own Snippets
+                    Clojure Snippets
             
                 </a>
             
 
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.1.4" data-path="yasnippets/create-snippets.md">
+            
+                <span>
+            
+                    
+                    Create Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.1.5" data-path="yasnippets/writing-snippets.md">
+            
+                <span>
+            
+                    
+                    Writing Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.1.6" data-path="yasnippets/practicalli-snippets.html">
+            
+                <a href="yasnippets/practicalli-snippets.html">
+            
+                    
+                    Practicalli Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2" data-path="clojure-lsp/">
+            
+                <a href="clojure-lsp/">
+            
+                    
+                    Clojure LSP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.7.2.1" data-path="clojure-lsp/custom-snippets.html">
+            
+                <a href="clojure-lsp/custom-snippets.html">
+            
+                    
+                    Custom Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7.2.2" data-path="clojure-lsp/practicalli-snippets.html">
+            
+                <a href="clojure-lsp/practicalli-snippets.html">
+            
+                    
+                    Practicalli Snippets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -3837,37 +3947,22 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="snippets---common-code-templates">Snippets - Common code templates</h1>
-<p>Speed up the creation of common code blocks with easy to define text templates provided by <a href="https://github.com/joaotavora/yasnippet/blob/master/doc/index.org" target="_blank">yasnippet</a>.</p>
+<p>Snippets are names that expand to code or documentation, to minimise typing commonly used code pattern and can serve as a reminder of common Clojure forms.</p>
+<p>The content of a snippet can be anything, from a simple piece of text or a more involved code structure with placeholders for tab stops. Practicalli also uses snippets for rich code blocks, documentation and helping organise code in a namespace.</p>
+<p>Snippets can include code which is evaluated, allowing the snippet to tap into all the features of Emacs (Yasnippets) or Clojure (Clojure LSP).</p>
+<p>Emacs specific Yasnippets or the more general LSP snippets can be used (or both together).</p>
+<p>Yasnippet are easier to create and write as the are plain text.  Clojure LSP built-in snippets can include Clojure code for generating the snippets.</p>
+<h2 id="emacs-yasnippets">Emacs Yasnippets</h2>
+<p><a href="https://github.com/joaotavora/yasnippet/blob/master/doc/index.org" target="_blank">YASnippets</a> uses plain text templates and so are very easy to learn and write.  Snippets are specific to an Emacs major mode.  They include tab stops, placoders with default values and markers to ensure correct indentation.</p>
 <p><code>M-/</code> expands the text under the point by any of the methods registered with hippie-expand. Yasnippets is one of the methods registered.</p>
 <p><code>TAB</code> will jump through the expanded snippet if it contains markers.</p>
-<h2 id="example-using-snippets">Example using snippets</h2>
-<p>In <code>web</code> major mode, typing <code>link</code> and pressing <code>M-/</code> expands to <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;url&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;</code> placing the cursor on <code>stylesheet</code>.  <code>TAB</code> to move the cursor to <code>url</code> to change the name of the CSS file. <code>TAB</code> again until the end marker is reached.</p>
-<p><img src="../images/spacemacs-auto-completion-snippets-html-link-expanded.png" alt="Spacemacs - Snippets - Web html link expanded"></p>
-<h2 id="configure-yasnippet">Configure yasnippet</h2>
-<p>The <a href="https://develop.spacemacs.org/layers/+completion/auto-completion/README.html" target="_blank">auto-completion</a> layer adds yasnippet and the official snippet collection, yasnippet-snippets.</p>
-<p>Add <code>auto-completion</code> to the <code>dotspacemacs-configuration-layers</code> list in <code>.spacemacs</code></p>
-<p>The <a href="https://develop.spacemacs.org/layers/+lang/clojure/README.html" target="_blank">clojure layer</a> providing additional snippet templates from the <a href="https://github.com/mpenet/clojure-snippets" target="_blank">clojure-snippets</a> package.</p>
-<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="practicallispacemacsd-includes-this-configuration"><i class="fa fa-lightbulb-o"></i> practicalli/spacemacs.d includes this configuration</h3></div><div class="panel-body"></div></div>
-<h2 id="snippets-in-auto-completion-popups">Snippets in Auto-completion popups</h2>
-<p>Snippets can be included in the auto-complete pop-up menu.</p>
-<p><img src="../images/spacemacs-auto-completion-snippets-html-link.png" alt="Spacemacs - Snippets - Web html link"></p>
-<p><code>TAB</code> to navigate through the list of menu items.</p>
-<p><code>RET</code> to select the snippet and add the template to the buffer.</p>
-<p>Add the layer variable <code>auto-completion-enable-snippets-in-popup t</code> to the <code>auto-completion</code> layer in <code>.spacemacs</code>.</p>
-<p>Practicalli also recommends adding <code>auto-completion-enable-sort-by-usage t</code> to show the most commonly used snippets at the top of the auto-completion pop-up menu.</p>
-<pre><code class="lang-elisp">(auto-completion :variables
-                 auto-completion-enable-help-tooltip t
-                 auto-completion-enable-snippets-in-popup t
-                 auto-completion-enable-sort-by-usage t)
-</code></pre>
-<h2 id="snippet-save-locations">Snippet save locations</h2>
-<p>Snippets are saved in <code>~/.emacs.d/private/snippets/</code>.  When <code>~/.spacemacs.d</code> is used for the Spacemacs configuration, snippets are saved in <code>~/.spacemacs.d/snippets/</code> directory.</p>
-<p>Each snippet is saved in its own file, named after the alias of the snippet.  The snippet file is located in a directory named after the Emacs major mode it belongs to.</p>
-<p>A snippet called <code>wip</code> for Clojure has a file name <code>wip</code> and is in saved in directory named <code>clojure</code>.</p>
-<h2 id="resources">Resources</h2>
-<ul>
-<li><a href="http://sachachua.com/blog/2015/01/thinking-make-better-use-yasnippet-emacs-workflow/" target="_blank">How to make better use of Yasnippet in my Emacs workflow</a> - Sacha Chua</li>
-</ul>
+<p>For example, <code>defn</code> is a snippet that expands into the full function definition form, tab stops jump the cursor through the snippet to add specific values to quickly complete the specifics of that function definition.</p>
+<p>Yasnippets can also execute Elisp code, opening up a large number of Emacs functions to use within a snippet.</p>
+<p>Spacemacs automatically includes <a href="https://github.com/AndreaCrotti/yasnippet-snippets" target="_blank">snippets for many programming languages and text formats</a>, including <a href="https://github.com/AndreaCrotti/yasnippet-snippets/tree/master/snippets/clojure-mode" target="_blank">snippets for Clojure</a>.</p>
+<h2 id="clojure-lsp-snippets">Clojure LSP snippets</h2>
+<p>Clojure LSP snippets are editor agnostic (although the editor needs to support Clojure LSP). Snippets support tab stops, placeholders with default values and can pull in a following form (<code>$current-form</code>).</p>
+<p><a href="https://clojure-lsp.io/features/#snippets" target="_blank">Built-in snippets</a> appear in the completion menu when typing.</p>
+<p>Custom snippets are defined in the Clojure LSP configuration using the <code>:additional-snipets</code> key.</p>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -3900,7 +3995,7 @@
                 </a>
                 
                 
-                <a href="clojure-snippets.html" class="navigation navigation-next " aria-label="Next page: Clojure Snippets">
+                <a href="yasnippets/" class="navigation navigation-next " aria-label="Next page: Yasnippets">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -3911,7 +4006,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Snippets","level":"4.7","depth":1,"next":{"title":"Clojure Snippets","level":"4.7.1","depth":2,"path":"snippets/clojure-snippets.md","ref":"snippets/clojure-snippets.md","articles":[]},"previous":{"title":"Repeating Commands","level":"4.6.3.5","depth":3,"path":"structural-editing/repeating-commands.md","ref":"structural-editing/repeating-commands.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"snippets/index.md","mtime":"2022-01-15T14:25:05.747Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-15T14:26:08.657Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Snippets","level":"4.7","depth":1,"next":{"title":"Yasnippets","level":"4.7.1","depth":2,"path":"snippets/yasnippets/index.md","ref":"snippets/yasnippets/index.md","articles":[{"title":"Built-in Snippets","level":"4.7.1.1","depth":3,"path":"snippets/yasnippets/built-in-snippets.md","ref":"snippets/yasnippets/built-in-snippets.md","articles":[]},{"title":"Clojure Snippets","level":"4.7.1.2","depth":3,"path":"snippets/yasnippets/clojure-snippets.md","ref":"snippets/yasnippets/clojure-snippets.md","articles":[]},{"title":"Clojure Snippets","level":"4.7.1.3","depth":3,"path":"snippets/yasnippets/clojure-snippets-reference.md","ref":"snippets/yasnippets/clojure-snippets-reference.md","articles":[]},{"title":"Create Snippets","level":"4.7.1.4","depth":3,"path":"snippets/yasnippets/create-snippets.md","ref":"snippets/yasnippets/create-snippets.md","articles":[]},{"title":"Writing Snippets","level":"4.7.1.5","depth":3,"path":"snippets/yasnippets/writing-snippets.md","ref":"snippets/yasnippets/writing-snippets.md","articles":[]},{"title":"Practicalli Snippets","level":"4.7.1.6","depth":3,"path":"snippets/yasnippets/practicalli-snippets.md","ref":"snippets/yasnippets/practicalli-snippets.md","articles":[]}]},"previous":{"title":"Repeating Commands","level":"4.6.3.5","depth":3,"path":"structural-editing/repeating-commands.md","ref":"structural-editing/repeating-commands.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"snippets/index.md","mtime":"2022-01-23T01:48:06.237Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-23T01:49:22.785Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -115,6 +115,8 @@
         * [Configure Test Runner](testing/unit-testing/configure-cider-test-runner.md)
         <!-- * [Expectations](testing/unit-testing/clojure-test-expectations.md) -->
 
+    * [Kaocha Test Runner](testing/kaocha-test-runner.md)
+
     <!-- * [Contract Testing](testing/contract-testing/index.md) -->
     <!-- * [Generative Testing](testing/generative-testing/index.md) -->
     <!-- * [Integration Testing](testing/integration-testing/index.md) -->
@@ -128,7 +130,7 @@
     * [Function Definitions](navigating-code/function-definitions.md)
     * [Find Usages](navigating-code/find-usages.md)
     * [Java Definitions](navigating-code/java-definitions.md)
-        * [Java Definitions](navigating-code/local-java-sources.md)
+        <!-- * [Local Java Sources](navigating-code/local-java-sources.md) -->
     * [Expressions](navigating-code/expressions.md)
     * [Code Folding](navigating-code/code-folding.md)
         * [Folding methods](navigating-code/code-folding-methods.md)
@@ -144,8 +146,17 @@
         * [Repeating Commands](structural-editing/repeating-commands.md)
         <!-- * [Splicing](structural-editing/lisp-state-splicing.md) -->
 * [Snippets](snippets/index.md)
-    * [Clojure Snippets](snippets/clojure-snippets.md)
-    * [Add your own Snippets](snippets/add-your-own-snippets.md)
+/home/practicalli/projects/practicalli/books/spacemacs/snippets/yasnippets/add-custom-snippets.md
+    * [Yasnippets](snippets/yasnippets/index.md)
+        * [Built-in Snippets](snippets/yasnippets/built-in-snippets.md)
+        * [Clojure Snippets](snippets/yasnippets/clojure-snippets.md)
+        * [Clojure Snippets](snippets/yasnippets/clojure-snippets-reference.md)
+        * [Create Snippets](snippets/yasnippets/create-snippets.md)
+        * [Writing Snippets](snippets/yasnippets/writing-snippets.md)
+        * [Practicalli Snippets](snippets/yasnippets/practicalli-snippets.md)
+    * [Clojure LSP](snippets/clojure-lsp/index.md)
+        * [Custom Snippets](snippets/clojure-lsp/custom-snippets.md)
+        * [Practicalli Snippets](snippets/clojure-lsp/practicalli-snippets.md)
 * [Refactor code](refactor/index.md)
     * [Similar function call name](refactor/similar-function-call-name.md)
     * [Within a function](refactor/within-a-function.md)
