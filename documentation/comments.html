@@ -3934,7 +3934,11 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="spacemacs-comments">Spacemacs Comments</h1>
+<p><code>M-;</code> creates a line comment on a new line or adds a comment at the end of an existing line.</p>
+<p><code>g c c</code> toggles a line commend for the current line, <code>g c</code> to toggle the selected region.</p>
+<h2 id="spacemacs-comment-key-bindings">Spacemacs comment key bindings</h2>
 <p>Spacemacs uses the same keybindings and commands to comment any programming language or mode.  The character and style of comments is defined in each layer or package that layer includes.</p>
+<p>If a mode does not have a comment character, Spacemacs will prompt for one in the mode line.</p>
 <table>
 <thead>
 <tr>
@@ -3982,51 +3986,39 @@
 </tbody>
 </table>
 <div class="panel panel-info"><div class="panel-heading"><h3 class="panel-title" id="evil-commentary-layer"><i class="fa fa-info"></i> Evil-commentary layer</h3></div><div class="panel-body"><p>Spacemacs uses the <a href="https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Bvim/evil-commentary" target="_blank">evil-commentary layer</a> to provide a commenting tool for all other layers.</p></div></div>
-<h2 id="--reader-macro-comment"><code>#_</code> - Reader Macro comment</h2>
-<p><code>#_</code> will comment out an expression and is completely ignored by Clojure, so the expression is never evaluated and therefore no value is returned.  It can therefor be used to comment out expressions within expressions.</p>
-<pre><code class="lang-clojure">#_(str &quot;Reader macro comment &quot;
-     #__&quot;covers the whole expression &quot;
-     &quot;over multiple lines&quot;)
+<h2 id="clojure-comments">Clojure comments</h2>
+<p><a href="https://practical.li/clojure/reference/clojure-syntax/comments.html" title="Practicalli Clojure: Comments" target="_blank">Clojure uses line comments, the comment function and the <code>#_</code> reader macro</a>.</p>
+<h2 id="evaluating-forms-in-rich-comments">Evaluating forms in Rich comments</h2>
+<p>Expressions contained within a <code>(comment ,,,)</code> form are not evaluated when a namespace is evaluated, i.e. <code>, e b</code> to evaluate the current buffer.  So its a useful form for code only evaluated directly by the developer.</p>
+<p>Setting <code>clojure-toplevel-inside-comment-form</code> to true in the Clojure layer enables expressions to be evaluated within the <code>(comment ,,,)</code> form using the usual evaluation commands, (i.e. <code>, e f</code>).</p>
+<pre><code class="lang-elisp">(clojure :variables clojure-toplevel-inside-comment-form t)
 </code></pre>
-<p><code>#_</code> can also be used with threading macro. In this example a book is transformed by functions that can be individually commented out to see how each function affects the result.</p>
-<pre><code class="lang-clojure">(<span class="hljs-name"><span class="hljs-builtin-name">-&gt;&gt;</span></span> book
-     #_(<span class="hljs-name">re-seq</span> #<span class="hljs-string">&quot;[a-zA-Z0-9|&apos;]+&quot;</span>)
-     #_frequencies
-     #_(<span class="hljs-name"><span class="hljs-builtin-name">sort-by</span></span> val)
-     #_reverse)
-</code></pre>
-<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="evaluating-commented-expressions"><i class="fa fa-lightbulb-o"></i> Evaluating commented expressions</h3></div><div class="panel-body"><p><code>, e e</code> or <code>, e f</code> will still evaluate an expression commented with the reader macro comment in the source code buffer.</p></div></div>
-<hr>
-<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title" id="a-function--keybinding-for-toggling-the-reader-macro-comment"><i class="fa fa-bookmark"></i> A function / keybinding for toggling the reader macro comment</h3></div><div class="panel-body"><p>A function that adds a reader macro was added to my .spacemacs configuration, along with a keybinding.</p></div></div>
-<h2 id="comment-function"><code>comment</code> function</h2>
-<p>The <code>comment</code> function prevents the expressions it surrounds from being evaluated, however, as <code>comment</code> is a function it is evaluated itself and returns a <code>nil</code> value.</p>
-<p>So <code>comment</code> is useful for commenting out one or more complete expressions</p>
 <pre><code class="lang-clojure">(<span class="hljs-comment">comment</span>
-   (<span class="hljs-name">println</span> <span class="hljs-string">&quot;I dont run if buffer is evaluated&quot;</span>)
-   (<span class="hljs-name">println</span> <span class="hljs-string">&quot;I can be one of many functions commented out&quot;</span>))
+  <span class="hljs-comment">;; Stop / restart application server</span>
+  (<span class="hljs-name">app-server-start</span> <span class="hljs-number">8888</span>)
+  (<span class="hljs-name">app-server-restart</span> <span class="hljs-number">8888</span>)
+  (<span class="hljs-name">app-server-stop</span>)
+
+  <span class="hljs-comment">;; OS environment variables / Java properties</span>
+  (<span class="hljs-name">System/getenv</span> <span class="hljs-string">&quot;PORT&quot;</span>)
+  (<span class="hljs-name">System/getProperties</span>)
+  )
 </code></pre>
-<p>However, using <code>comment</code> within an expression can cause unexpected results as it returns <code>nil</code></p>
-<h2 id="creating-sections-for-comments">Creating sections for comments</h2>
-<p>Code is typically divided into sections using a line of comment characters. Rather than type or copy/paste a line of comments you can use Spacemacs repeat command.</p>
+<blockquote>
+<p>Example rich comment from <a href="https://practical.li/clojure-web-services/projects/banking-on-clojure/application-server-configuration.html#repl-driven-development-helpers" target="_blank">Banking on Clojure project</a> in <a href="https://practical.li/clojure-web-services/projects/banking-on-clojure/application-server-configuration.html#repl-driven-development-helpers" target="_blank">Practicalli Clojure Web Services</a></p>
+</blockquote>
+<h2 id="creating-sections-with-line-comments">Creating sections with line comments</h2>
+<p>Logical sections within a namespace aid navigation and understanding, as well as identifying opportunities to refactor a namespace as it grows in size.</p>
+<p>Sections are defined using consecutive line comments characters, which can easily be generated using Evil repeat.</p>
 <p><code>42 i ; ESC</code> will create a line of 42 <code>;</code> characters.</p>
-<p>Hold down the control key and press the relevant number key, then release both and press the character you wish to repeat.</p>
-<p>If you want more than a single digit value, then hold the control key and press the first number, then release both keys and press the remaining numbers followed by the character to repeat.</p>
-<h2 id="classic-emacs-comments">Classic Emacs comments</h2>
-<p>With Spacemacs you can add comments to Clojure or any type of language using the keybinding <code>M-;</code>.  This will add a comment to the end of the existing line using the default comment character(s) for the current language (Emacs major mode).</p>
-<p>To comment out an existing code, simply select the line(s) of text you wish to comment out, <code>C-SPC</code>, then hit <code>M-;</code></p>
-<p>As <code>M-;</code> toggles comments, to un-comment code then simply select the commented line(s) of code to change and hit <code>M-;</code></p>
-<h4 id="creating-sections-for-comments">Creating sections for comments</h4>
-<p>If you want to divide up your code into sections using comments, rather than type or copy/paste a line of comments you can use Spacemacs character repeat command (is that the real name?)</p>
-<p>Hold down the control key and press the relevant number key, then release both and press the character you wish to repeat.</p>
-<p>If you want more than a single digit value, then hold the control key and press the first number, then release both keys and press the remaining numbers followed by the character to repeat.</p>
+<p>Or Emacs repeat using Control and a number to repeat the following character <code>C-42</code></p>
 <ul>
 <li><code>C-7 ;</code>  - ;;;;;;;</li>
 <li><code>C-24 ;</code> - ;;;;;;;;;;;;;;;;;;;;;;;;</li>
 <li><code>C-42 ;</code> - ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;</li>
 </ul>
-<blockquote>
-<p>Use <code>C-g</code> if you want to cancel at any time before hitting the character to be repeated</p>
-</blockquote>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="multiple-digit-repeats"><i class="fa fa-lightbulb-o"></i> Multiple digit repeats</h3></div><div class="panel-body"><p>hold the control key and press the first number, then release both keys and press the remaining numbers followed by the character to repeat</p><p>Use <code>C-g</code> if you want to cancel at any time before hitting the character to be repeated</p></div></div>
+<h2 id="classic-emacs-comments">Classic Emacs comments</h2>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -4070,7 +4062,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Comments","level":"4.11.4","depth":2,"next":{"title":"Markdown documentation","level":"4.11.5","depth":2,"path":"markdown-mode/index.md","ref":"markdown-mode/index.md","articles":[]},"previous":{"title":"Javadoc","level":"4.11.3","depth":2,"path":"documentation/javadoc.md","ref":"documentation/javadoc.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"documentation/comments.md","mtime":"2022-01-23T04:01:25.250Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-23T04:02:33.645Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Comments","level":"4.11.4","depth":2,"next":{"title":"Markdown documentation","level":"4.11.5","depth":2,"path":"markdown-mode/index.md","ref":"markdown-mode/index.md","articles":[]},"previous":{"title":"Javadoc","level":"4.11.3","depth":2,"path":"documentation/javadoc.md","ref":"documentation/javadoc.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"documentation/comments.md","mtime":"2022-01-23T18:53:27.579Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-23T18:54:25.834Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
