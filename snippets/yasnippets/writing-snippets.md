@@ -1,37 +1,9 @@
-# Adding Custom Snippets
-`helm-yas-create-snippet-on-region` is an effective way to create snippets in addition to those Spacemacs provides.
+# Yasnippets Custom Snippets
 
-{% youtube %}
-https://youtu.be/51as0UrssLM
-{% endyoutube %}
-
-
-## Create snippets
-Select a code block that you often create and using the yasnippets tools to create your own generic template
-
-1. `v` for visual select and highlight the text for the snippet. Or use `SPC v` and grow the selected region
-2. `SPC SPC helm-yas-create-snippet-on-region` creates a new snippet
-3. Enter the name you wish to refer to this snippet
-4. Select the major mode you want to add the snippet too (eg. clojure, markdown, html)
-5. Edit the text and delete any text that is not required
-6. Add tab points in the snippet if relevant
-     - `$1` initial cursor position, `$2` next cursor position on tab, `$0` end cursor position.
-7. `C-c C-t` calls `yas-tryout-snippet` to test the snippet has the right behaviour
-8. ``C-c C-c` calls `yas-load-snippet-buffer-and-close` to load the snippet into the specified major mode and closes the snippet buffer
-
-
-## Edit an existing snippet
-`SPC SPC yas/visit-snippet-file` displays a helm popup listing snippets. Enter a pattern to narrow the list or `C-j` and `C-k` to navigate the snippets. `RET` to select the snippet.
-
-Edit the snippet and `SPC f s` to save file
-
-`C-c C-c` calls the function `yas-load-snippet-buffer-and-close` which loads the snippet into Spacemacs and closes the buffer.
-
-`C-c C-t` calls `yas-tryout-snippet` to test the snippet and check the placement of your tab stops.
-
-
+Yasnippets are written in plain text, so are easy to write.  They support tab stops `$1`, placeholders `${1:defaultvalue}` and ensure indentation rules are applied `$<`
 
 # How to write a snippet
+
 The basic structure of a snippet template is:
 
 ```
@@ -44,6 +16,7 @@ The content can be anything, simple text or more usefully a code structure with 
 
 
 ## Example: Simple text replacement
+
 As Practicalli develops the book content its useful to highlight sections which are still work in progress.  Rather than type the same message over again,  a simple snippet called `wip` is created.
 
 ```
@@ -56,6 +29,7 @@ As Practicalli develops the book content its useful to highlight sections which 
 When you expand this snippet with `M-/` then the snippet name is replaced by the content.
 
 ## Example: Using tab stops
+
 [Yasnippets official snippets repository](https://github.com/AndreaCrotti/yasnippet-snippets) contains a snippet called `form` in the `html-mode`.  This expands into a html form and jumps from method, id, action and content.
 ```
 #contributor : Practicalli <info@practical.li>
@@ -75,6 +49,7 @@ Further examples are covered in the [Emacs YASnippet video tutorial](https://www
 
 
 # Testing your snippets
+
 `M-x yas-tryout-snippet`  opens a new empty buffer in the appropriate major mode and inserts the snippet so you can then test it with `M-/`.
 
 `M-x yas-load-snippet-buffer` to load the new snippet into the correct major mode.
@@ -88,7 +63,3 @@ Further examples are covered in the [Emacs YASnippet video tutorial](https://www
 > `SPC x s t` to try a snippet.
 > `SPC x s l` to load a snippet.
 > `SPC x s L` to load a snippet and close the snippet buffer
-
-
-## Summary
-Find out more about YASnippets and autocompletion from the [Github repository for Spacemacs autocompletion layer](https://github.com/syl20bnr/spacemacs/tree/develop/layers/auto-completion).

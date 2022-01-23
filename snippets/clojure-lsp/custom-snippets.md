@@ -1,0 +1,86 @@
+# Custom snippets
+
+[Creating custom snippets](https://clojure-lsp.io/settings/#snippets) are defined in the Clojure LSP configuration using the `:additional-snipets` key.
+
+The Clojur LSP is defined in EDN, although the snippet body uses the same tab stop and placeholder syntax as Yasnipets.
+
+Built-in snippets can include Clojure code for generating the text of the snippet when expanded.  Custom snippets do not currently support evaluation of code in the snippet.
+
+
+> #### Hint::Clojuse LSP Configuration locations
+> Project specific configuration resides in `.lsp/config.edn`
+>
+> User level configuration is either `$XDG_CONFIG_HOME/.lsp/config.edn` or `$HOME/.lsp/config`
+
+
+## Snippet defintion
+
+ by adding `:additional-snippets` key to the Clojure LSP configuration, either `.lsp/config.edn` in the root of the project or in the global config (`$XDG_CONFIG_HOME/.lsp/config.edn` or `$HOME/.lsp/config.edn`)
+
+The `:additional-snippets` key is associated with a vector or hash-maps, `[{}{},,,]` with each hash-map defining a snippet using the keys:
+
+`:name` - name of the snippet, typed into the editor for completion
+
+`:detail` - a meaningful description of the snippet
+
+`:snippet` - the definition of the snippet, with tab stops and current-form syntax
+
+The `:snippet` can be any text, ideally with syntax that is correct for the particular language
+
+
+### Snippet Tab Stops
+
+Include `$` with a number, e.g. `$1`,`$2`,`$3`,  to include tab stops in the snippet.  Once the snippet code has been generated, `TAB` key jumps through the tab stops in sequence, allowing customisation of a generic snippet.
+
+`$0` marks the final position of the cursor, after which `TAB` has no more positions in the snippet to jump to.
+
+
+### Snippet current-form
+
+When a Clojure LSP snipped includes `$current-form` then typing a snippet name in front of an existing Clojure form includes that form in the generated code.
+
+```clojure
+{:additional-snippets [{:name "wrap-let-sexpr"
+                        :detail "Wrap current sexpr in let"
+                        :snippet "(let [$1 $current-form] $0)"}]}
+```
+
+### Placeholders
+
+Tab Stops can also include default values or text used as hint on what each tab stop value is for.  These are referred to as placeholders.
+
+`${1:default-value}` is the form of a placeholder for tab stop 1.  When the cursor tabs to tab stop 1, the default-value text is highlighted and replaces as soon as characters are typed.
+
+The `deftest` custom snippet shows examples of placeholders for three tab stops.
+
+```clojure
+{:name "deftest"
+ :detail "deftest clojure.test"
+ :snippet
+ "(deftest ${1:name}-test
+    (testing \"${2:Context of the test assertions}\"
+      (is (= ${3:assertion-values}))$4))
+  $0"}
+```
+
+
+### Clojure code driven snippet - built-in snippets only
+
+The built-in `defn` snippet uses Clojure code to help generate the snippet.
+
+`%s` is a substitution point within a snippet, used by the standard Clojure `format` command, used to included either `defn ^:private` or `defn-`, depending on the value returned from the `if` expression.
+
+`:use-metadata-for-privacy?` is a key from the Clojure LSP configuration
+
+```clojure
+ {:label "defn-"
+  :detail "Create private function"
+  :insert-text (format "(defn%s ${1:name} [$2]\n  ${0:body})"
+                       (if (:use-metadata-for-privacy? settings)
+                         " ^:private"
+                         "-"))}
+```
+
+The syntax for built-in snippets is slightly different that the `:additional-syntax` form.  The internal form uses `:label` for `:name` and `:insert-text` for `:snippet`.
+
+> Clojure code only works for built-in snippets and not `:additional-snippets`. Clojure LSP is compiled by Graal to a native binary, including the built-in snippets.  To include Clojure code in a snippet then consider submitting a pull request to the Clojure LSP project to add a built-in snippet.

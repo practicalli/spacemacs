@@ -146,8 +146,16 @@
         * [Repeating Commands](structural-editing/repeating-commands.md)
         <!-- * [Splicing](structural-editing/lisp-state-splicing.md) -->
 * [Snippets](snippets/index.md)
-    * [Clojure Snippets](snippets/clojure-snippets.md)
-    * [Add your own Snippets](snippets/add-your-own-snippets.md)
+/home/practicalli/projects/practicalli/books/spacemacs/snippets/yasnippets/add-custom-snippets.md
+    * [Yasnippets](snippets/yasnippets/index.md)
+        * [Built-in Snippets](snippets/yasnippets/built-in-snippets.md)
+        * [Clojure Snippets](snippets/yasnippets/clojure-snippets-reference.md)
+        * [Create Snippets](snippets/yasnippets/create-snippets.md)
+        * [Writing Snippets](snippets/yasnippets/writing-snippets.md)
+        * [Practicalli Snippets](snippets/yasnippets/practicalli-snippets.md)
+    * [Clojure LSP](snippets/clojure-lsp/index.md)
+        * [Custom Snippets](snippets/clojure-lsp/custom-snippets.md)
+        * [Practicalli Snippets](snippets/clojure-lsp/practicalli-snippets.md)
 * [Refactor code](refactor/index.md)
     * [Similar function call name](refactor/similar-function-call-name.md)
     * [Within a function](refactor/within-a-function.md)

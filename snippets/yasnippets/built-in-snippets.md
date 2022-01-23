@@ -1,6 +1,20 @@
-# Clojure Snippets
+## Yasnippet Built-in Snippets
 
-<!-- TODO: include clojure-lsp snippets -->
+[Yasnippet official snippet collection](https://github.com/AndreaCrotti/yasnippet-snippets) contains Emacs mode specific snippets that are automatically included in Spacemacs.
+
+
+## Web-mode HTML Link
+
+In `web` major mode, typing `link` and pressing `M-/` expands to `<link rel="stylesheet" href="url" type="text/css" media="screen" />` placing the cursor on `stylesheet`.
+
+`TAB` moves the cursor to `url` to change the name of the CSS file.
+
+`TAB` again until the end marker is reached.
+
+![Spacemacs - Snippets - Web html link expanded](/images/spacemacs-auto-completion-snippets-html-link-expanded.png)
+
+
+## Clojure mode snippets
 
 There are numerous snippets that provide short-cuts for the minimal amount of common code structure in Clojure.
 
@@ -23,6 +37,7 @@ With snippets added to the auto-completion tooltip, typing `def` show the matchi
 | require    | `:require` expression with library and alias            | library, alias                   |
 | test       | `deftest` expression                                    | test description, value/expected |
 
+See the [Clojure Snippets](clojure-snippets.md) for a complete reference
 
 > ####Hint::Write your own snippets
 > Its easy to [write your own snippets](add-your-own-snippets.md) for Clojure or any other language you use with Spacemacs / Emacs
