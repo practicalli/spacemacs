@@ -23,6 +23,9 @@ Use an alias that adds the sources as an `:extra-deps` via a `:local/root`
 
 The alias assumes the sources are located at `/usr/lib/jvm/openjdk-17/lib/src.zip`
 
+`clojure -M:src/java17:repl/rebel` starts a rich terminal UI REPL including the Java sources on the class path.
+
+
 {% content "manual" %}
 
 Add the `:src/java17` alias to the project `deps.edn` file
