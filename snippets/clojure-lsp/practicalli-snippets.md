@@ -23,7 +23,7 @@ Create a public var using a `def` form with a doc-string, with placeholders for 
 Create a private var using a `def` form with `^:private` meta data and a doc-string, with placeholders for name and value.
 
 ```clojure
-{:name "def-private"
+{:name "def-"
    :detail "def private"
    :snippet "(def ^:private ${1:name}\n\"${2:doc-string}\"\n${3:value})$0"}
 ```
