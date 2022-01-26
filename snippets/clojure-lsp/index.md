@@ -10,7 +10,7 @@ Clojure LSP snippets appear in the completion popup, in the same way as Clojure 
 
 Clojure LSP snippets are defined using the EDN syntax and supports tab stops, placeholders with default values and can pull in a following form (`$current-form`).
 
-[Built-in snippets](https://clojure-lsp.io/features/#snippets) are defined in the [`clojure-lsp.feature.completion-snippet` namespace](https://github.com/clojure-lsp/clojure-lsp/blob/master/src/clojure_lsp/feature/completion_snippet.clj).
+[Built-in snippets](https://clojure-lsp.io/features/#snippets) are defined in the [`clojure-lsp.feature.completion-snippet` namespace](https://github.com/clojure-lsp/clojure-lsp/blob/master/lib/src/clojure_lsp/feature/completion_snippet.clj).
 
 
 ## Checking available snippets
