@@ -16,7 +16,7 @@ Create a public var using a `def` form with a doc-string, with placeholders for 
 ```clojure
 {:name "def"
    :detail "def with docstring"
-   :snippet "(def ${2:name}\n\"${1:doc-string}\"\n${3:value})$0"}
+   :snippet "(def ${1:name}\n\"${2:doc-string}\"\n${3:value})$0"}
 ```
 
 
