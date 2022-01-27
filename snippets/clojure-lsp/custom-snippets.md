@@ -15,7 +15,7 @@ Built-in snippets can include Clojure code for generating the text of the snippe
 
 ## Snippet defintion
 
- by adding `:additional-snippets` key to the Clojure LSP configuration, either `.lsp/config.edn` in the root of the project or in the global config (`$XDG_CONFIG_HOME/.lsp/config.edn` or `$HOME/.lsp/config.edn`)
+ by adding `:additional-snippets` key to the Clojure LSP configuration, either `.lsp/config.edn` in the root of the project or in the global config (`$XDG_CONFIG_HOME/clojure-lsp/config.edn` or `$HOME/.lsp/config.edn`)
 
 The `:additional-snippets` key is associated with a vector or hash-maps, `[{}{},,,]` with each hash-map defining a snippet using the keys:
 
