@@ -119,3 +119,68 @@ Using `testing` before an assertion form pull that assertion into the group
    :detail "testing clojure.test"
    :snippet "(testing \"${1:description-of-assertion-group}\"\n $current-form$0)"}
 ```
+
+
+
+
+## Library Dependencies
+
+Add a Maven style dependency to a Clojure CLI `deps.edn` project.
+
+```clojure
+  {:name "deps-maven"
+   :detail "Clojure CLI maven dependency"
+   :snippet "${1:domain/library-name} {:mvn/version \"${2:1.0.0}\"}"}
+```
+
+
+Add a dependency from a Git repository, where the library is named after the remote Git repository, i.e io.github.user|org/library-name for the GitHub repository https://github.com/user|org/library-name.
+
+The `:git/sha` defines a specific commit to use for the dependency.
+
+
+```clojure
+  {:name "deps-git"
+   :detail "Clojure CLI Git dependency"
+   :snippet
+   "${1:domain/library-name}
+      {:git/sha \"${2:git-sha-value}\"}$0"}
+```
+
+Additionally a Git tag can be specified, enabling the use of the short SHA value for `:git/sha` (short sha is the first 7 characters of the 40 character SHA-1 value).
+
+A Git client can obtain the short form of a SHA from a Git repository
+
+```bash
+git rev-parse --short 1e872b59013425b7c404a91d16119e8452b983f2
+```
+
+
+```clojure
+  {:name "deps-git-tag"
+   :detail "Clojure CLI Git Tag dependency"
+   :snippet
+   "${1:domain/library-name}
+      {:git/tag \"${1:git-tag-value}\"
+       :git/sha \"${2:git-sha-value}\"}$0"}
+```
+
+If a library is not named after the domain of the Git repository, the URL of the Git repository must be specified using the `:git/url` key.
+
+
+```clojure
+  {:name "deps-git-url"
+   :detail "Clojure CLI Git URL dependency"
+   :snippet
+   "${1:domain/library-name}
+      {:git/url \"https://github.com/${1:}\"
+       :git/sha \"${1:git-sha-value}\"}$0"}
+```
+
+Add a library dependency that is a local Clojure project.
+
+```clojure
+  {:name "deps-local"
+   :detail "Clojure CLI local dependency"
+   :snippet "${1:domain/library-name} {:local/root \"${2:/path/to/project/root}\"}$0"}
+```
