@@ -6,7 +6,7 @@ Yasnippets can also execute Elisp code, opening up a large number of Emacs funct
 
 Spacemacs automatically includes [snippets for many programming languages and text formats](https://github.com/AndreaCrotti/yasnippet-snippets), including [snippets for Clojure](https://github.com/AndreaCrotti/yasnippet-snippets/tree/master/snippets/clojure-mode).
 
-Take a look at how to write your own snippets and the custom snippets created by Practicalli
+Take a look at how to write your own snippets and the custom [snippets created by Practicalli](practicalli-snippets.md)
 
 ## Configure yasnippet
 

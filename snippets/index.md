@@ -25,6 +25,9 @@ Yasnippets can also execute Elisp code, opening up a large number of Emacs funct
 
 Spacemacs automatically includes [snippets for many programming languages and text formats](https://github.com/AndreaCrotti/yasnippet-snippets), including [snippets for Clojure](https://github.com/AndreaCrotti/yasnippet-snippets/tree/master/snippets/clojure-mode).
 
+> #### Hint::Start REPL for autocomplete menu entries
+> Private snippets only appear in the auto-completion popup once the REPL process has started.
+
 
 ## Clojure LSP snippets
 

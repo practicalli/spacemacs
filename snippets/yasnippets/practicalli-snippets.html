@@ -3934,9 +3934,31 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="practicalli-clojure-mode-yasnippets">Practicalli Clojure mode Yasnippets</h1>
-<p>Snippets created by Practicalli for Yasnippet for Clojure mode.</p>
+<p><a href="https://github.com/practicalli/spacemacs.d/tree/live/snippets" target="_blank">Practicalli Snippets for Yasnippet</a>.</p>
+<h2 id="clojurecore">Clojure.core</h2>
+<p>Add a def form including a doc-string</p>
+<pre><code class="lang-none"># -*- mode: snippet -*-
+# name : def with doc-string
+# key : def
+# contributor : practicalli
+# --
+(def ${1:name}
+  &quot;${2:doc-string}&quot;
+  ${3:value})
+$0
+</code></pre>
+<pre><code class="lang-none"># -*- mode: snippet -*-
+# name : def private with doc-string
+# key : def-
+# contributor : practicalli
+# --
+(def ^:private ${1:name}
+  &quot;${2:doc-string}&quot;
+  ${3:value})
+$0
+</code></pre>
 <h2 id="documentation">Documentation</h2>
-<p>Add the Creative Commons Licence name</p>
+<p>Creative Commons Licence name, used to update the license in a Leiningen project.clj file and for README.md files to describe a project.</p>
 <pre><code class="lang-none"># -*- mode: snippet -*-
 # name : cc-license-name
 # key : cc-license-name
@@ -3944,69 +3966,59 @@
 # --
 &quot;Creative Commons Attribution Share-Alike 4.0 International&quot;
 </code></pre>
-<!-- TODO: add comment heading and comment section  -->
-<h2 id="clojurecore">Clojure.core</h2>
-<!-- TODO: defn-private, def-private -->
-<h2 id="clojuretest">Clojure.test</h2>
-<p>A <code>deftest</code> snippet with a <code>testing</code> form to group assertions with and</p>
+<p>Creative Commons Licence URL to complement the Creative Commons Licence name snippet.</p>
 <pre><code class="lang-none"># -*- mode: snippet -*-
-# name: deftest clojure.test function
-# key: deftest
-# contributor: practicalli
+# name : cc-license-url
+# key : cc-license-url
+# contributor : practicalli
 # --
-(deftest ${1:name}-test
-  (testing &quot;${2:Context of the test assertions}&quot;$&gt;
-    (is (= ${3:assertion-values}))$4))$&gt;
+&quot;https://creativecommons.org/&quot;
+</code></pre>
+<h2 id="documentation">Documentation</h2>
+<p>A comment heading to describe the purpose and important information about the current namesapce.</p>
+<pre><code class="lang-none"># -*- mode: snippet -*-
+# name : Comment header for namespace
+# key : comment-header
+# contributor : practicalli
+# --
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ${1:Namespace summary title}
+;;
+;; ${2:Brief description}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 $0
 </code></pre>
-<h2 id="library-dependencies">Library Dependencies</h2>
+<p>A comment separator for marking logical sections within a namespace, useful for navigating code and identifying opportunities to refactor a namespace into multiple namespaces.</p>
 <pre><code class="lang-none"># -*- mode: snippet -*-
-# name : Clojure CLI maven dependency
-# key : deps-maven
+# name : Comment separator for namespace
+# key : comment-separator
 # contributor : practicalli
 # --
-${1:domain/library-name} {:mvn/version \&quot;${2:1.0.0}\&quot;}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ${1:Namespace summary title}
 </code></pre>
-<p>Add a dependency from a Git repository, where the library is named after the remote Git repository, i.e io.github.user|org/library-name for the GitHub repository <a href="https://github.com/user|org/library-name" target="_blank">https://github.com/user|org/library-name</a>.</p>
-<p>The <code>:git/sha</code> defines a specific commit to use for the dependency.</p>
+<p>A rich comment block typically used to hold function calls to show how to make use of the important aspects of the current namespace. For example, calls to start, restart, stop functions in a namespace that defines the service life-cycle.</p>
+<p>This provides a live executable guide to using the namespace, without being called if the whole namespace is evaluated.</p>
+<p>A commented expression is placed before the closing paren to ensure that closing paren is not folded up into the previous line. This makes it easier to add further code to the rich comment block.</p>
 <pre><code class="lang-none"># -*- mode: snippet -*-
-# name : deps.edn Git
-# key : deps-git
+# name : Rich comment
+# key : rich-comment
 # contributor : practicalli
 # --
-${1:domain/library-name}
-  {:git/sha \&quot;${2:git-sha-value}\&quot;}$0
+(comment
+  ${0:body}
+#_()) ;; End of rich comment
 </code></pre>
-<p>Additionally a Git tag can be specified, enabling the use of the short SHA value for <code>:git/sha</code> (short sha is the first 7 characters of the 40 character SHA-1 value).</p>
-<p>A Git client can obtain the short form of a SHA from a Git repository</p>
-<pre><code class="lang-bash">git rev-parse --short 1e872b59013425b7c404a91d16119e8452b983f2
-</code></pre>
+<p>A modified rich comment block with clj-kondo configuration to suppress warnings for duplicate function definition names, supporting alternative function implementations as part of a REPL driven development workflow.</p>
 <pre><code class="lang-none"># -*- mode: snippet -*-
-# name : deps.edn Git tag
-# key : deps-git-tag
+# name : Rich comment with clj-kondo ignore
+# key : rich-comment-ignore
 # contributor : practicalli
 # --
-${1:domain/library-name}
- {:git/tag \&quot;${1:git-tag-value}\&quot;
-  :git/sha \&quot;${2:git-sha-value}\&quot;}$0
-</code></pre>
-<p>If a library is not named after the domain of the Git repository, the URL of the Git repository must be specified using the <code>:git/url</code> key.</p>
-<pre><code class="lang-none"># -*- mode: snippet -*-
-# name : deps.edn Git url
-# key : deps-git-url
-# contributor : practicalli
-# --
-${1:domain/library-name}
-  {:git/url \&quot;https://github.com/${1:}\&quot;
-   :git/sha \&quot;${1:git-sha-value}\&quot;}$0
-</code></pre>
-<p>Add a library dependency that is a local Clojure project.</p>
-<pre><code class="lang-none"># -*- mode: snippet -*-
-# name : deps.edn local project dependency
-# key : deps-local
-# contributor : practicalli
-# --
-${1:domain/library-name} {:local/root \&quot;${2:/path/to/project/root}\&quot;}$0
+#_{:clj-kondo/ignore [:redefined-var]}
+(comment
+  ${0:body}
+#_()) ;; End of rich comment
 </code></pre>
 <h2 id="hotload-libraries-into-the-repl">Hotload libraries into the REPL</h2>
 <p>Clojure CLI projects can <a href="https://practical.li/clojure/alternative-tools/clojure-cli/hotload-libraries.html" target="_blank">hotload library dependencies into a running Clojure REPL using the tools.deps library</a>.  This requires starting a REPL with the <code>clojure.tools.deps.alpha</code> library as a dependency which can be done by including the <a href="https://github.com/practicalli/clojure-deps-edn#hotload-libraries-into-a-running-repl" target="_blank"><code>:lib/hotload</code> alias from practicalli/clojure-deps-edn</a>.  Note this library is alpha and the API could change in future.</p>
@@ -4021,9 +4033,71 @@ ${1:domain/library-name} {:local/root \&quot;${2:/path/to/project/root}\&quot;}$
 (comment
   ;; Add-lib library for hot-loading
   (require &apos;[clojure.tools.deps.alpha.repl :refer [add-libs]])
-  (add-libs &apos;{${1:domain/library-name} {:mvn/version \&quot;${2:1.0.0}\&quot;}$3})
+  (add-libs &apos;{${1:domain/library-name} {:mvn/version &quot;${2:1.0.0}&quot;}$3})
 
   ) ;; End of rich comment block
+</code></pre>
+<h2 id="clojuretest">Clojure.test</h2>
+<p>A <code>deftest</code> snippet with a <code>testing</code> form to group assertions with and</p>
+<pre><code class="lang-none"># -*- mode: snippet -*-
+# name: deftest clojure.test function
+# key: deftest
+# contributor: practicalli
+# --
+(deftest ${1:name}-test
+  (testing &quot;${2:Context of the test assertions}&quot;$&gt;
+    (is (= ${3:assertion-values}))$4))$&gt;
+$0
+</code></pre>
+<h2 id="library-dependencies">Library Dependencies</h2>
+<p>Add a Maven style dependency to a Clojure CLI <code>deps.edn</code> project.</p>
+<pre><code class="lang-none"># -*- mode: snippet -*-
+# name : Clojure CLI maven dependency
+# key : deps-maven
+# contributor : practicalli
+# --
+${1:domain/library-name} {:mvn/version &quot;${2:1.0.0}&quot;}
+</code></pre>
+<p>Add a dependency from a Git repository, where the library is named after the remote Git repository, i.e io.github.user|org/library-name for the GitHub repository <a href="https://github.com/user|org/library-name" target="_blank">https://github.com/user|org/library-name</a>.</p>
+<p>The <code>:git/sha</code> defines a specific commit to use for the dependency.</p>
+<pre><code class="lang-none"># -*- mode: snippet -*-
+# name : deps.edn Git
+# key : deps-git
+# contributor : practicalli
+# --
+${1:domain/library-name}
+  {:git/sha &quot;${2:git-sha-value}&quot;}$0
+</code></pre>
+<p>Additionally a Git tag can be specified, enabling the use of the short SHA value for <code>:git/sha</code> (short sha is the first 7 characters of the 40 character SHA-1 value).</p>
+<p>A Git client can obtain the short form of a SHA from a Git repository</p>
+<pre><code class="lang-bash">git rev-parse --short 1e872b59013425b7c404a91d16119e8452b983f2
+</code></pre>
+<pre><code class="lang-none"># -*- mode: snippet -*-
+# name : deps.edn Git tag
+# key : deps-git-tag
+# contributor : practicalli
+# --
+${1:domain/library-name}
+ {:git/tag &quot;${1:git-tag-value}&quot;
+  :git/sha &quot;${2:git-sha-value}&quot;}$0
+</code></pre>
+<p>If a library is not named after the domain of the Git repository, the URL of the Git repository must be specified using the <code>:git/url</code> key.</p>
+<pre><code class="lang-none"># -*- mode: snippet -*-
+# name : deps.edn Git url
+# key : deps-git-url
+# contributor : practicalli
+# --
+${1:domain/library-name}
+  {:git/url &quot;https://github.com/${1:}&quot;
+   :git/sha &quot;${1:git-sha-value}&quot;}$0
+</code></pre>
+<p>Add a library dependency that is a local Clojure project.</p>
+<pre><code class="lang-none"># -*- mode: snippet -*-
+# name : deps.edn local project dependency
+# key : deps-local
+# contributor : practicalli
+# --
+${1:domain/library-name} {:local/root &quot;${2:/path/to/project/root}&quot;}$0
 </code></pre>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
@@ -4068,7 +4142,7 @@ ${1:domain/library-name} {:local/root \&quot;${2:/path/to/project/root}\&quot;}$
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Practicalli Snippets","level":"4.7.1.5","depth":3,"next":{"title":"Clojure LSP","level":"4.7.2","depth":2,"path":"snippets/clojure-lsp/index.md","ref":"snippets/clojure-lsp/index.md","articles":[{"title":"Custom Snippets","level":"4.7.2.1","depth":3,"path":"snippets/clojure-lsp/custom-snippets.md","ref":"snippets/clojure-lsp/custom-snippets.md","articles":[]},{"title":"Practicalli Snippets","level":"4.7.2.2","depth":3,"path":"snippets/clojure-lsp/practicalli-snippets.md","ref":"snippets/clojure-lsp/practicalli-snippets.md","articles":[]}]},"previous":{"title":"Writing Snippets","level":"4.7.1.4","depth":3,"path":"snippets/yasnippets/writing-snippets.md","ref":"snippets/yasnippets/writing-snippets.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"snippets/yasnippets/practicalli-snippets.md","mtime":"2022-01-26T23:57:04.148Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-26T23:58:02.993Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Practicalli Snippets","level":"4.7.1.5","depth":3,"next":{"title":"Clojure LSP","level":"4.7.2","depth":2,"path":"snippets/clojure-lsp/index.md","ref":"snippets/clojure-lsp/index.md","articles":[{"title":"Custom Snippets","level":"4.7.2.1","depth":3,"path":"snippets/clojure-lsp/custom-snippets.md","ref":"snippets/clojure-lsp/custom-snippets.md","articles":[]},{"title":"Practicalli Snippets","level":"4.7.2.2","depth":3,"path":"snippets/clojure-lsp/practicalli-snippets.md","ref":"snippets/clojure-lsp/practicalli-snippets.md","articles":[]}]},"previous":{"title":"Writing Snippets","level":"4.7.1.4","depth":3,"path":"snippets/yasnippets/writing-snippets.md","ref":"snippets/yasnippets/writing-snippets.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"snippets/yasnippets/practicalli-snippets.md","mtime":"2022-01-27T00:39:57.531Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-27T00:40:55.904Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
