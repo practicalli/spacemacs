@@ -4,7 +4,7 @@ Type the name of the snippet and press `TAB` to expand.
 
 Clojure LSP snippets appear in the completion popup, in the same way as Clojure functions and other symbols.
 
-[Spacemacs LSP snippets - deps snippets in completion menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemcs-snippets-completion-menu-deps-snippets.png)
+![Spacemacs LSP snippets - deps snippets in completion menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemcs-snippets-completion-menu-deps-snippets.png)
 
 [Clojure LSP snippets](https://clojure-lsp.io/features/#snippets) are editor agnostic, usable in any editor that supports [clojure-lsp](https://clojure-lsp.io/), making them more useful that editor specific snippets.
 
