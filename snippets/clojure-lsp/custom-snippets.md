@@ -1,21 +1,16 @@
 # Custom snippets
 
-[Creating custom snippets](https://clojure-lsp.io/settings/#snippets) are defined in the Clojure LSP configuration using the `:additional-snipets` key.
-
-The Clojur LSP is defined in EDN, although the snippet body uses the same tab stop and placeholder syntax as Yasnipets.
+[Custom snippets](https://clojure-lsp.io/settings/#snippets) are defined in the Clojure LSP EDN configuration using the `:additional-snipets` key.  The snippet body uses the same tab stop and placeholder syntax as Yasnipets, although the body is contained within a string.
 
 Built-in snippets can include Clojure code for generating the text of the snippet when expanded.  Custom snippets do not currently support evaluation of code in the snippet.
-
 
 > #### Hint::Clojuse LSP Configuration locations
 > Project specific configuration resides in `.lsp/config.edn`
 >
-> User level configuration is either `$XDG_CONFIG_HOME/.lsp/config.edn` or `$HOME/.lsp/config`
+> User level configuration is either `$XDG_CONFIG_HOME/clojure-lsp/config.edn` or `$HOME/.lsp/config`
 
 
-## Snippet defintion
-
- by adding `:additional-snippets` key to the Clojure LSP configuration, either `.lsp/config.edn` in the root of the project or in the global config (`$XDG_CONFIG_HOME/clojure-lsp/config.edn` or `$HOME/.lsp/config.edn`)
+## Snippet definition
 
 The `:additional-snippets` key is associated with a vector or hash-maps, `[{}{},,,]` with each hash-map defining a snippet using the keys:
 
@@ -62,6 +57,9 @@ The `deftest` custom snippet shows examples of placeholders for three tab stops.
       (is (= ${3:assertion-values}))$4))
   $0"}
 ```
+
+> #### Hint::Escape string quotes in snippet body
+> Use `\` character before the open and closing `"` character of any string that is part of the snippet body.  For example, doc-strings in function definitions or the string in `testing` function.
 
 
 ### Clojure code driven snippet - built-in snippets only
