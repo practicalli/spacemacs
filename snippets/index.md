@@ -2,13 +2,11 @@
 
 Snippets are names that expand to code or documentation, to minimise typing commonly used code pattern and can serve as a reminder of common Clojure forms.
 
+![Spacemacs LSP snippets - deps snippets in completion menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemcs-snippets-completion-menu-deps-snippets.png)
+
 The content of a snippet can be anything, from a simple piece of text or a more involved code structure with placeholders for tab stops. Practicalli also uses snippets for rich code blocks, documentation and helping organise code in a namespace.
 
 Snippets can include code which is evaluated, allowing the snippet to tap into all the features of Emacs (Yasnippets) or Clojure (Clojure LSP).
-
-Emacs specific Yasnippets or the more general LSP snippets can be used (or both together).
-
-Yasnippet are easier to create and write as the are plain text.  Clojure LSP built-in snippets can include Clojure code for generating the snippets.
 
 
 ## Emacs Yasnippets
