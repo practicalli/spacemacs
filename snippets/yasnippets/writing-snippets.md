@@ -4,15 +4,19 @@ Yasnippets are written in plain text, so are easy to write.  They support tab st
 
 # How to write a snippet
 
+The content can be anything, simple text or more usefully a code structure with placeholders
+
 The basic structure of a snippet template is:
 
 ```
-#name : FullNameOfSnippet (not the alias name, the full name shows in autocompletion menu)
-#contributor: John Stevenson <john@jr0cket.co.uk>
+# key : short-form-name    (text that expands to snippet body)
+# name : FullNameOfSnippet (shows in autocompletion menu after key )
+# contributor: Practicalli
 # --
-Add the content you want to replace the snippet name with when it expands
+;; ${1:Title placeholder text}
+;; License: ${2:name of licence} Copyright Practicalli
+$0
 ```
-The content can be anything, simple text or more usefully a code structure with placeholders
 
 
 ## Example: Simple text replacement
@@ -20,8 +24,9 @@ The content can be anything, simple text or more usefully a code structure with 
 As Practicalli develops the book content its useful to highlight sections which are still work in progress.  Rather than type the same message over again,  a simple snippet called `wip` is created.
 
 ```
-#name : WorkInProgress
-#contributor: Practicalli <info@practical.li>
+# key : wip
+# name : Work In Progress
+# contributor: Practicalli <info@practical.li>
 # --
 > **Fixme** work in progress
 ```
@@ -32,8 +37,9 @@ When you expand this snippet with `M-/` then the snippet name is replaced by the
 
 [Yasnippets official snippets repository](https://github.com/AndreaCrotti/yasnippet-snippets) contains a snippet called `form` in the `html-mode`.  This expands into a html form and jumps from method, id, action and content.
 ```
-#contributor : Practicalli <info@practical.li>
-#name :<form method="..." id="..." action="..."></form>
+# key : form
+# contributor : Practicalli <info@practical.li>
+# name :<form method="..." id="..." action="..."></form>
 # --
 <form method="$1" id="$2" action="$3">
   $0
