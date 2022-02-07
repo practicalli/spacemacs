@@ -101,6 +101,7 @@
 * [Evaluating Clojure](evaluating-clojure/index.md)
     * [Evaluate Expressions](evaluating-clojure/expressions.md)
     * [Un-define names](evaluating-clojure/undefine.md)
+    * [Interrupting evaluation](evaluating-clojure/interupt.md)
     * [Macro-expand](evaluating-clojure/macro-expand.md)
     * [Enlighten](evaluating-clojure/enlighten.md)
     * [Inspect](evaluating-clojure/inspect.md)
