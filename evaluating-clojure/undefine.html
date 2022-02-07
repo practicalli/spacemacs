@@ -89,7 +89,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="macro-expand.html" />
+    <link rel="next" href="interupt.html" />
     
     
     <link rel="prev" href="expressions.html" />
@@ -1473,7 +1473,20 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3.3" data-path="macro-expand.html">
+        <li class="chapter " data-level="4.3.3" data-path="interupt.html">
+            
+                <a href="interupt.html">
+            
+                    
+                    Interrupting evaluation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.4" data-path="macro-expand.html">
             
                 <a href="macro-expand.html">
             
@@ -1486,7 +1499,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3.4" data-path="enlighten.html">
+        <li class="chapter " data-level="4.3.5" data-path="enlighten.html">
             
                 <a href="enlighten.html">
             
@@ -1499,7 +1512,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3.5" data-path="inspect.html">
+        <li class="chapter " data-level="4.3.6" data-path="inspect.html">
             
                 <a href="inspect.html">
             
@@ -1512,7 +1525,7 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3.6" data-path="evaluate-in-repl-buffer.html">
+        <li class="chapter " data-level="4.3.7" data-path="evaluate-in-repl-buffer.html">
             
                 <a href="evaluate-in-repl-buffer.html">
             
@@ -3952,6 +3965,43 @@
 <p>Or specify the namespace if the symbol is not in the current namespace</p>
 <pre><code class="lang-clojure">(<span class="hljs-name">ns-unmap</span> &apos;practicalli.service &apos;name-before-refactor)
 </code></pre>
+<p><code>ns-unalias</code> will remove an alias added via a require form</p>
+<pre><code class="lang-clojure"><span class="hljs-comment">;; Require a neamespace</span>
+(<span class="hljs-name">require</span> &apos;[practicalli.service <span class="hljs-symbol">:as</span> service])
+
+<span class="hljs-comment">;; The service alias should now be in the current nammespace</span>
+(<span class="hljs-name">ns-aliases</span> *ns*)
+<span class="hljs-comment">;; =&gt; {service #namespace[practicalli.service]}</span>
+
+(<span class="hljs-name">ns-unalias</span> *ns* &apos;service)
+<span class="hljs-comment">;; =&gt; nil</span>
+</code></pre>
+<h2 id="clojuretoolsnamespace">clojure.tools.namespace</h2>
+<p><code>refresh</code> function scans all directories on the classpath for source files, read their ns forms, builds a graph of their dependencies and load them in dependency order. <code>set-refresh-dirs</code> defines directories that should be scanned.</p>
+<p>Add the library as a dependency to the project file</p>
+<pre><code class="lang-clojure">org.clojure/tools.namespace {:mvn/version &quot;1.2.0&quot;}
+</code></pre>
+<p>Require the namespace and refer the function (refresh is the only public function in the namespace)</p>
+<pre><code class="lang-clojure">(<span class="hljs-name">require</span> &apos;[clojure.tools.namespace.repl <span class="hljs-symbol">:refer</span> [refresh]])
+</code></pre>
+<p>Refresh the current namespace</p>
+<pre><code class="lang-clojure">(<span class="hljs-name">refresh</span>)
+</code></pre>
+<p>The refresh function will load all namespaces found and list them as the output.</p>
+<pre><code class="lang-clojure"><span class="hljs-symbol">:reloading</span> (<span class="hljs-name">com.example.util</span> com.example.app com.example.app-test)
+<span class="hljs-symbol">:ok</span>
+</code></pre>
+<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title" id="all-code-must-be-loadable"><i class="fa fa-exclamation-triangle"></i> All Code must be loadable</h3></div><div class="panel-body"><p>If there are errors in one or more namespaces that prevent them from successfully loading, then reresh will error, showing which namespaces had issues to resolve.</p></div></div>
+<h3 id="use-refresh-in-a-rich-comment-block">Use refresh in a rich comment block</h3>
+<p>Use a rich comment block to ensure the refresh function is only called when directly evaluated.</p>
+<p>Code inside the rich comment block will not be evaluated when evaluating the current buffer or loading the namespace.</p>
+<pre><code class="lang-clojure">(<span class="hljs-comment">comment</span>
+
+  (<span class="hljs-name">require</span> &apos;[clojure.tools.namespace.repl <span class="hljs-symbol">:refer</span> [refresh]])
+
+  (<span class="hljs-name">refresh</span>)
+)
+</code></pre>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -3984,7 +4034,7 @@
                 </a>
                 
                 
-                <a href="macro-expand.html" class="navigation navigation-next " aria-label="Next page: Macro-expand">
+                <a href="interupt.html" class="navigation navigation-next " aria-label="Next page: Interrupting evaluation">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -3995,7 +4045,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Un-define names","level":"4.3.2","depth":2,"next":{"title":"Macro-expand","level":"4.3.3","depth":2,"path":"evaluating-clojure/macro-expand.md","ref":"evaluating-clojure/macro-expand.md","articles":[]},"previous":{"title":"Evaluate Expressions","level":"4.3.1","depth":2,"path":"evaluating-clojure/expressions.md","ref":"evaluating-clojure/expressions.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"evaluating-clojure/undefine.md","mtime":"2022-02-04T21:28:07.198Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-04T21:29:11.699Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Un-define names","level":"4.3.2","depth":2,"next":{"title":"Interrupting evaluation","level":"4.3.3","depth":2,"path":"evaluating-clojure/interupt.md","ref":"evaluating-clojure/interupt.md","articles":[]},"previous":{"title":"Evaluate Expressions","level":"4.3.1","depth":2,"path":"evaluating-clojure/expressions.md","ref":"evaluating-clojure/expressions.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"evaluating-clojure/undefine.md","mtime":"2022-02-07T13:58:21.774Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-07T13:59:24.626Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

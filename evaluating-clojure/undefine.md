@@ -39,3 +39,65 @@ Or specify the namespace if the symbol is not in the current namespace
 ```clojure
 (ns-unmap 'practicalli.service 'name-before-refactor)
 ```
+
+`ns-unalias` will remove an alias added via a require form
+
+```clojure
+;; Require a neamespace
+(require '[practicalli.service :as service])
+
+;; The service alias should now be in the current nammespace
+(ns-aliases *ns*)
+;; => {service #namespace[practicalli.service]}
+
+(ns-unalias *ns* 'service)
+;; => nil
+```
+
+## clojure.tools.namespace
+
+`refresh` function scans all directories on the classpath for source files, read their ns forms, builds a graph of their dependencies and load them in dependency order. `set-refresh-dirs` defines directories that should be scanned.
+
+Add the library as a dependency to the project file
+
+```clojure
+org.clojure/tools.namespace {:mvn/version "1.2.0"}
+```
+
+Require the namespace and refer the function (refresh is the only public function in the namespace)
+
+```clojure
+(require '[clojure.tools.namespace.repl :refer [refresh]])
+```
+
+Refresh the current namespace
+
+```clojure
+(refresh)
+```
+
+The refresh function will load all namespaces found and list them as the output.
+
+```clojure
+:reloading (com.example.util com.example.app com.example.app-test)
+:ok
+```
+
+> #### WARNING::All Code must be loadable
+> If there are errors in one or more namespaces that prevent them from successfully loading, then reresh will error, showing which namespaces had issues to resolve.
+
+
+### Use refresh in a rich comment block
+
+Use a rich comment block to ensure the refresh function is only called when directly evaluated.
+
+Code inside the rich comment block will not be evaluated when evaluating the current buffer or loading the namespace.
+
+```clojure
+(comment
+
+  (require '[clojure.tools.namespace.repl :refer [refresh]])
+
+  (refresh)
+)
+```
