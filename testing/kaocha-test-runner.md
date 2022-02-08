@@ -7,7 +7,9 @@ Koacha is typically run on the command line or as part of a continuous integrati
 Kaocha can also be run as an alternative to the cider-test runner as the Spacemacs Clojure layer [now includes kaocha-runner.el](https://github.com/syl20bnr/spacemacs/pull/15268)
 
 
-## Using Clojure from Emacs Cider
+## Using Kaocha from Emacs Cider
+
+`SPC f e d` to edit the Spacemacs configuration file, adding `clojure-enable-kaocha-runner t` as a variable to the Clojure layer.
 
 Start a REPL process that includes the kaocha library
 
@@ -17,11 +19,32 @@ Start a REPL process that includes the kaocha library
 clojure -M:lib/kaocha:repl/rebel
 ```
 
+### Key bindings
+
+`, t k a` to run all tests
+
+`, t k t` to run the deftest at point (under the cursor)
+
+`, t k n` to run tests in the current namespace
+
+`, t k w` to show warnings from the kaocha runner
+
+`, t k h` to hide the kaocha test window
+
 > #### Hint::Kaochan runner uses kaocha.repl
 > kaocha-runner.el uses the the same appraoch as [running Kaocha from the REPL](https://cljdoc.org/d/lambdaisland/kaocha/1.60.977/doc/5-running-kaocha-from-the-repl "Kaocha cljdoc")
 
 
-## Command line
+## Kaocha Clojure CLI Ailas
+
+practicalli/clojure-deps-edn defines aliases to run Kaocha from the `clojure` command:
+
+`clojure -X:test/run` will run all tests found in the project, unless there is a failing test which will end the test run.
+
+`clojure -X:test/watch` runs all test and then watches for changes to the test code, running again if a change is detected.
+
+
+## Kaocha shell script
 
 [Kaocha install guide](https://cljdoc.org/d/lambdaisland/kaocha/1.60.977/doc/2-installing) recommends creating an executable shell script file
 
