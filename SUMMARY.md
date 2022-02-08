@@ -43,6 +43,7 @@
     * [Git commit messages](install-spacemacs/emacsclient-git-commit-messages.md)
 * [Update Spacemacs](install-spacemacs/update.md)
     * [Switch to develop](install-spacemacs/switch-to-develop.md)
+<!-- * [Spacemacs on Android](spacemacs-on-android.md) -->
 * [Troubleshooting](install-spacemacs/troubleshooting.md)
 
 ## Using Spacemacs
