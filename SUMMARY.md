@@ -109,7 +109,7 @@
     * [REPL buffer](evaluating-clojure/evaluate-in-repl-buffer.md)
 * [Testing](testing/index.md)
     * [Unit Testing](testing/unit-testing/index.md)
-        * [CIDER test & deps.edn](testing/unit-testing/cider-test-deps-edn-projects.md)
+        * [Configure deps.edn project](testing/unit-testing/cider-test-deps-edn-projects.md)
         * [Writing Unit Tests](testing/unit-testing/writing-unit-tests.md)
         * [Running Tests](testing/unit-testing/running-tests.md)
         * [Test report - re-run tests](testing/unit-testing/re-run-tests-from-test-report-buffer.md)
