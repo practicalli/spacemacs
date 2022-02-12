@@ -15,13 +15,18 @@ A `.dir-locals.el` file can include any number of aliases when using Cider jack-
 
 ## Practicalli user level aliases
 
-[practicalli/clojure-deps-edn]({{ book.P9IClojureDepsEdnInstall }}) user-level configuration contains several aliases for Clojure and ClojureScript test runners, each alias includes the `test` directory as an `:extra-path`.
+[practicalli/clojure-deps-edn]({{ book.P9IClojureDepsEdnInstall }}) user-level configuration contains several aliases for running tests within the CIDER jack-in REPL.
 
-`:env/test` adds the `test` directory to the class path and enables CIDER test runner to find the test code.
+`:env/test` adds the `test` directory to the class path and enables CIDER test runner to find the test code.  This is the only alias required if using Cider test runner.
 
-`:repl/cider` includes the nrepl and cider-nrepl libraries and starts an nREPL server connected to the REPL
+`:lib/kaocha` add the kaocha library to the class path, so [kaocha can be used instead of CIDER test runner](/testing/kaocha-test-runner.md).
 
-`:repl/rebel` runs Rebel Readline, providing a rich terminal UI for the REPL
+
+Other aliases can be used with the `:env/test` alias to support cider-connect approach:
+
+`:repl/cider` include the nrepl and cider-nrepl libraries and starts an nREPL server connected to the REPL
+
+`:repl/rebel` run Rebel Readline, providing a rich terminal UI for the REPL
 
 
 {% content "deps" %}
