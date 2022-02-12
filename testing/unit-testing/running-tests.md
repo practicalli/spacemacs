@@ -1,4 +1,5 @@
 # Running unit tests in Cider
+
 <kbd>SPC p a</kbd> switches between source and test buffers.
 
 <kbd>, t n</kbd> run all tests in the current namespace.  This also loads any changes to those tests.
@@ -9,33 +10,34 @@ The results of running the tests are displayed in the mini-buffer, showing the n
 
 ![Spacemacs Cider tests - results in mini-buffer](/images/spacemacs-cider-test-run-tests-results-mini-buffer.png)
 
-> #### Hint::Run tests from test code buffer
-> Run tests from the buffer containing the test source code buffer, as this ensures all test code is loaded and the latest version of the tests are run.
->
-> Tests can be run from the source code buffer, however, only test code that has been evaluated in the REPL will run.
+> #### Hint::Spacemacs loads current buffer before running tests
+> Run unit tests from the buffer that has changes or new tests.  Otherwise, ensure all buffers with changes have been evaluated to ensure the tests run with the right src and test code.
 
 
 ## Using Test Selectors to run specific tests
+
 Using the universal argument before calling CIDER test runner will prompt for test selector filters, running only those tests that match the selector inclusions/exclusions.
 
-`SPC t a` runs all the tests in a project.
+<kbd>SPC t a</kbd> runs all the tests in a project.
 
-`SPC u SPC t a` prompts for test selectors and runs the matching tests in a project.
+<kbd>SPC u SPC t a</kbd> prompts for test selectors and runs the matching tests in a project.
 
-`SPC t l` runs all tests currently evaluated in the REPL.
+<kbd>SPC t l</kbd> runs all tests currently evaluated in the REPL.
 
-`SPC u SPC t l` prompts for test selectors and runs the matching tests currently evaluated in the REPL.
+<kbd>SPC u SPC t l</kbd> prompts for test selectors and runs the matching tests currently evaluated in the REPL.
+
 
 CIDER first prompts for the test selectors to include:
 
 ![Spacemacs Clojure Cider Test Runner test selector prompt - include](/images/spacemacs-clojure-test-selectors-prompt.png)
 
-Then prompts for the test selectors to exclude.  A warning displays if CIDER does not find the test selector name.
+Then prompts for the test selectors to exclude.  A warning displays in the power line if CIDER does not find the test selector name.
 
 ![Spacemacs Clojure Cider Test Runner test selector prompt - include](/images/spacemacs-clojure-test-selectors-integration-not-found.png)
 
 
 ## Running tests in the REPL buffer
+
 <kbd>,</kbd> to open the REPL command menu and select run tests
 
 ## Auto Unit Test Mode
@@ -48,6 +50,5 @@ Then prompts for the test selectors to exclude.  A warning displays if CIDER doe
 > To show a test report each time tests are run, add the variable `cider-test-show-report-on-success t` in the `clojure` layer list of the `.spacemacs` file.
 ```lisp
      (clojure :variables
-              clojure-enable-linters 'clj-kondo
               cider-test-show-report-on-success t)
 ```
