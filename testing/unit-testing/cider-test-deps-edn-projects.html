@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>CIDER test & deps.edn · Clojure development with Spacemacs & Cider</title>
+        <title>Configure deps.edn project · Clojure development with Spacemacs & Cider</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -1576,7 +1576,7 @@
                 <a href="cider-test-deps-edn-projects.html">
             
                     
-                    CIDER test & deps.edn
+                    Configure deps.edn project
             
                 </a>
             
@@ -1641,7 +1641,7 @@
                 <a href="configure-cider-test-runner.html">
             
                     
-                    Configure Test Runner
+                    Configure Cider Test Runner
             
                 </a>
             
@@ -3931,7 +3931,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >CIDER test & deps.edn</a>
+        <a href="../.." >Configure deps.edn project</a>
     </h1>
 </div>
 
@@ -3946,28 +3946,58 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="configuration-for-unit-testing-depsedn-projects">Configuration for Unit Testing deps.edn projects</h2>
-<p>To use the CIDER test runner with <code>deps.edn</code> projects, the <code>test</code> directory needs to be on the classpath.</p>
-<p>The recommended approach is to include the test path via an alias, which avoids including all the test files when packaging the project.</p>
-<p>The alias is included in the command to start the REPL (e.g. <code>cider-jack-in-clj</code>).</p>
-<pre><code class="lang-clojure"><span class="hljs-symbol">:aliases</span>
-{<span class="hljs-symbol">:env/test</span>
-  {<span class="hljs-symbol">:extra-paths</span> [<span class="hljs-string">&quot;test&quot;</span>]}}
+                                <h2 id="configure-unit-testing-for-depsedn-projects">Configure Unit Testing for deps.edn projects</h2>
+<p>Cider test runner is a convenient way to run Clojure unit tests, using the same REPL for evaluating source code.</p>
+<p>The <code>test</code> directory must be included in the classpath when running the REPL, as test code is evaluated in the running REPL.</p>
+<p>An alias should be used to include the <code>test</code> directory.  The <code>test</code> path should not be part of the main <code>:paths</code> configuration, otherwise test code would be included in the jar or uberjar package and deployment.</p>
+<p>A <code>.dir-locals.el</code> file can include any number of aliases when using Cider jack-in.</p>
+<p><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#practicalli" aria-controls="practicalli" role="tab" data-toggle="tab">practicalli/clojure-deps-edn</a></li><li role="presentation" class=""><a href="#deps" aria-controls="deps" role="tab" data-toggle="tab">Manual deps.edn projects</a></li></ul><div class="tab-content"><div role="tabpanel" class="tab-pane active" id="practicalli"><h2 id="practicalli-user-level-aliases">Practicalli user level aliases</h2><p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html" target="_blank">practicalli/clojure-deps-edn</a> user-level configuration contains several aliases for Clojure and ClojureScript test runners, each alias includes the <code>test</code> directory as an <code>:extra-path</code>.</p><p><code>:env/test</code> adds the <code>test</code> directory to the class path and enables CIDER test runner to find the test code.</p><p><code>:repl/cider</code> includes the nrepl and cider-nrepl libraries and starts an nREPL server connected to the REPL</p><p><code>:repl/rebel</code> runs Rebel Readline, providing a rich terminal UI for the REPL</p></div><div role="tabpanel" class="tab-pane " id="deps"><h2 id="add-test-directory">Add test directory</h2><p>Add the <code>:env/dev</code> alias to the project <code>deps.edn</code> file or user level configuration.</p><pre><code class="lang-clojure"><span class="hljs-symbol">:aliases</span>
+{
+  <span class="hljs-symbol">:env/test</span>
+  {<span class="hljs-symbol">:extra-paths</span> [<span class="hljs-string">&quot;test&quot;</span>]}
+}</code></pre>
+<h2 id="terminal-repl-uis-with-nrepl">Terminal REPL UIs with nREPL</h2><p>Use <code>cider-connect</code> to connect to the Clojure REPL process started in a terminal window with the following command:</p><pre><code class="lang-bash">clojure -M:env/<span class="hljs-built_in">test</span>:repl/cider-clj</code></pre>
+<p>Use the <code>:repl/rebel-nrepl</code> alias to also run a Rebel UI for the REPL in the terminal.</p><pre><code class="lang-bash">clojure -M:env/<span class="hljs-built_in">test</span>:repl/rebel-nrepl</code></pre>
+<h2 id="alias-to-run-a-simple-terminal-ui-repl-with-nrepl-support">Alias to run a simple Terminal UI REPL with nREPL support</h2><p>Run a REPL using nREPL server that starts an nREPL server, enabling CIDER to connect via <code>cider-connect-clj</code></p><pre><code class="lang-clojure"> <span class="hljs-symbol">:repl/cider</span>
+  {<span class="hljs-symbol">:extra-deps</span> {nrepl/nrepl                {<span class="hljs-symbol">:mvn/version</span> <span class="hljs-string">&quot;0.9.0&quot;</span>}
+                cider/cider-nrepl          {<span class="hljs-symbol">:mvn/version</span> <span class="hljs-string">&quot;0.27.4&quot;</span>}}
+   <span class="hljs-symbol">:main-opts</span>  [<span class="hljs-string">&quot;-m&quot;</span> <span class="hljs-string">&quot;nrepl.cmdline&quot;</span>
+                <span class="hljs-string">&quot;--middleware&quot;</span> <span class="hljs-string">&quot;[cider.nrepl/cider-middleware]&quot;</span>
+                <span class="hljs-string">&quot;-i&quot;</span>]}</code></pre>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="headless-repl"><i class="fa fa-lightbulb-o"></i> Headless REPL</h3></div><div class="panel-body"><p>Remove the <code>&quot;-i&quot;</code> if a headless (non-interactive) REPL is required, useful if only interacting with Clojure code via the nREPL connected editor.</p></div></div><h2 id="alias-to-run-a-rebel-repl-with-nrepl-support">Alias to run a Rebel REPL with nREPL support</h2><p>Rebel readline provides a rich terminal UI with nrepl server , enabling CIDER to connect via <code>cider-connect-clj</code></p><pre><code class="lang-clojure">  <span class="hljs-symbol">:repl/rebel</span>
+  {<span class="hljs-symbol">:extra-deps</span> {nrepl/nrepl                {<span class="hljs-symbol">:mvn/version</span> <span class="hljs-string">&quot;0.9.0&quot;</span>}
+                cider/cider-nrepl          {<span class="hljs-symbol">:mvn/version</span> <span class="hljs-string">&quot;0.27.4&quot;</span>}
+                com.bhauman/rebel-readline {<span class="hljs-symbol">:mvn/version</span> <span class="hljs-string">&quot;0.1.4&quot;</span>}}
+   <span class="hljs-symbol">:main-opts</span>  [<span class="hljs-string">&quot;-m&quot;</span> <span class="hljs-string">&quot;nrepl.cmdline&quot;</span>
+                <span class="hljs-string">&quot;--middleware&quot;</span> <span class="hljs-string">&quot;[cider.nrepl/cider-middleware]&quot;</span>
+                <span class="hljs-string">&quot;-i&quot;</span>
+                <span class="hljs-string">&quot;-f&quot;</span> <span class="hljs-string">&quot;rebel-readline.main/-main&quot;</span>]}</code></pre>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="-practicalliclojure-deps-edn-contains-common-tools-and-aliases"><i class="fa fa-lightbulb-o"></i>  practicalli/clojure-deps-edn contains common tools and aliases</h3></div><div class="panel-body"><p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html" target="_blank">practicalli/clojure-deps-edn</a> contains aliases for all aspects of Clojure development with the CLI tools.</p></div></div></div></div></p>
+<h2 id="using-cider-connect">Using Cider Connect</h2>
+<p>Start the REPL in a terminal including the <code>test</code> directory and starting an nREPL server for CIDER to connect too.</p>
+<pre><code class="lang-bash">clojure -M:env/<span class="hljs-built_in">test</span>:repl/cider
 </code></pre>
-<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="-practicalliclojure-deps-edn-contains-common-tools-and-aliases"><i class="fa fa-lightbulb-o"></i>  practicalli/clojure-deps-edn contains common tools and aliases</h3></div><div class="panel-body"><p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html" target="_blank">practicalli/clojure-deps-edn</a> contains aliases for all aspects of Clojure development with the CLI tools.</p></div></div>
-<h2 id="edit-the-cider-command-line-for-jack-in">Edit the Cider command line for jack-in</h2>
+<p>Alternatively, use a rich terminal UI for the REPL using Rebel Readline which will also start an nREPL server for Cider to connect too.</p>
+<pre><code class="lang-bash">clojure -M:env/<span class="hljs-built_in">test</span>:repl/rebel
+</code></pre>
+<h2 id="using-cider-jack-in">Using CIDER jack-in</h2>
+<p><code>.dir-locals.el</code> file can define aliases which are always included during <code>cider-jack-in</code>.</p>
+<p>Add the variable <code>cider-clojure-cli-aliases</code> with a names of one or more alias names, which are from either the project <code>deps.edn</code> file or the user level <code>deps.edn</code> configuration.</p>
+<p><code>SPC p e</code> creates or opens an existing <code>.dir-locals.el</code> file for the current project.</p>
+<pre><code class="lang-elisp">((clojure-mode . ((cider-clojure-cli-aliases . &quot;:env/test&quot;))))
+</code></pre>
+<p>Remember to <code>SPC b R</code> (<code>revert-buffer</code>) on an existing project buffer, or open a file from the current project, to force Emacs to load in any changes to a <code>.dir-locals.el</code> file.</p>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="project-configuration-with-dir-localsel"><i class="fa fa-lightbulb-o"></i> Project configuration with .dir-locals.el</h3></div><div class="panel-body"><p><a href="../../clojure-projects/project-configuration.html">Project level configuration</a> section contains many example configurations that can be set via <code>.dir-locals.el</code> file.  Remember to <code>revert-buffer</code> an existing project buffer or open a new buffer to load in changes from the <code>.dir-locals.el</code> file.</p></div></div>
+<h3 id="edit-the-jack-in-command">Edit the jack-in command</h3>
 <p><code>SPU u , &apos;</code> uses the Emacs universal argument with <code>sesman-start</code> and displays the command line to be run.</p>
-<p>Add <code>-M:env/test</code> before the <code>-m</code> flag  to include the alias for that jack-in session.</p>
-<p><img src="../../images/spacemacs-clojure-repl-start-edit-command-add-aliases.png" alt="Spacemacs CIDER configuration - add Clojure CLI tools alias to cider-jack-in command"></p>
+<p>Add <code>:env/test</code> directly after the <code>-M</code> flag and before the <code>:cider/nrepl</code> alias</p>
+<p><img src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-alias-env-test.png" alt="Spacemacs CIDER configuration - add Clojure CLI tools alias to cider-jack-in command"></p>
 <blockquote>
 <p><code>SPC u</code> is the Spacemacs equivalent of <code>C-u</code> in Emacs.</p>
 </blockquote>
-<h2 id="include-aliases-via-dir-localsel">Include aliases via <code>.dir-locals.el</code></h2>
-<p><code>SPC p e</code> creates a <code>.dir-locals.el</code> file to define aliases that are always included during <code>cider-jack-in</code>.  Add the variable <code>cider-clojure-cli-aliases</code> with a value of the alias names.</p>
-<pre><code class="lang-elisp">((clojure-mode . ((cider-clojure-cli-aliases . &quot;env/test&quot;))))
-</code></pre>
-<p>Remember to <code>revert-buffer</code> on an existing project buffer, or open a file from the current project, to load in any changes to a <code>.dir-locals.el</code> file.</p>
-<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="project-configuration-with-dir-localsel"><i class="fa fa-lightbulb-o"></i> Project configuration with .dir-locals.el</h3></div><div class="panel-body"><p><a href="../../clojure-projects/project-configuration.html">Project level configuration</a> section contains many example configurations that can be set via <code>.dir-locals.el</code> file.  Remember to <code>revert-buffer</code> an existing project buffer or open a new buffer to load in changes from the <code>.dir-locals.el</code> file.</p></div></div>
+<h3 id="checking-the-jack-in-command">Checking the jack-in command</h3>
+<p><code>SPC b m</code> opens the messages buffer and the full command should be shown in the messages history.</p>
+<p><img src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-jack-in-command-in-message-buffer.png" alt="Spacemacs Clojure - Cider jack-in command in message buffer"></p>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -4011,7 +4041,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"CIDER test & deps.edn","level":"4.4.1.1","depth":3,"next":{"title":"Writing Unit Tests","level":"4.4.1.2","depth":3,"path":"testing/unit-testing/writing-unit-tests.md","ref":"testing/unit-testing/writing-unit-tests.md","articles":[]},"previous":{"title":"Unit Testing","level":"4.4.1","depth":2,"path":"testing/unit-testing/index.md","ref":"testing/unit-testing/index.md","articles":[{"title":"CIDER test & deps.edn","level":"4.4.1.1","depth":3,"path":"testing/unit-testing/cider-test-deps-edn-projects.md","ref":"testing/unit-testing/cider-test-deps-edn-projects.md","articles":[]},{"title":"Writing Unit Tests","level":"4.4.1.2","depth":3,"path":"testing/unit-testing/writing-unit-tests.md","ref":"testing/unit-testing/writing-unit-tests.md","articles":[]},{"title":"Running Tests","level":"4.4.1.3","depth":3,"path":"testing/unit-testing/running-tests.md","ref":"testing/unit-testing/running-tests.md","articles":[]},{"title":"Test report - re-run tests","level":"4.4.1.4","depth":3,"path":"testing/unit-testing/re-run-tests-from-test-report-buffer.md","ref":"testing/unit-testing/re-run-tests-from-test-report-buffer.md","articles":[]},{"title":"Refactor Tests","level":"4.4.1.5","depth":3,"path":"testing/unit-testing/refactor-unit-tests.md","ref":"testing/unit-testing/refactor-unit-tests.md","articles":[]},{"title":"Configure Test Runner","level":"4.4.1.6","depth":3,"path":"testing/unit-testing/configure-cider-test-runner.md","ref":"testing/unit-testing/configure-cider-test-runner.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"testing/unit-testing/cider-test-deps-edn-projects.md","mtime":"2022-02-12T15:07:58.605Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-12T15:09:10.333Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Configure deps.edn project","level":"4.4.1.1","depth":3,"next":{"title":"Writing Unit Tests","level":"4.4.1.2","depth":3,"path":"testing/unit-testing/writing-unit-tests.md","ref":"testing/unit-testing/writing-unit-tests.md","articles":[]},"previous":{"title":"Unit Testing","level":"4.4.1","depth":2,"path":"testing/unit-testing/index.md","ref":"testing/unit-testing/index.md","articles":[{"title":"Configure deps.edn project","level":"4.4.1.1","depth":3,"path":"testing/unit-testing/cider-test-deps-edn-projects.md","ref":"testing/unit-testing/cider-test-deps-edn-projects.md","articles":[]},{"title":"Writing Unit Tests","level":"4.4.1.2","depth":3,"path":"testing/unit-testing/writing-unit-tests.md","ref":"testing/unit-testing/writing-unit-tests.md","articles":[]},{"title":"Running Tests","level":"4.4.1.3","depth":3,"path":"testing/unit-testing/running-tests.md","ref":"testing/unit-testing/running-tests.md","articles":[]},{"title":"Test report - re-run tests","level":"4.4.1.4","depth":3,"path":"testing/unit-testing/re-run-tests-from-test-report-buffer.md","ref":"testing/unit-testing/re-run-tests-from-test-report-buffer.md","articles":[]},{"title":"Refactor Tests","level":"4.4.1.5","depth":3,"path":"testing/unit-testing/refactor-unit-tests.md","ref":"testing/unit-testing/refactor-unit-tests.md","articles":[]},{"title":"Configure Cider Test Runner","level":"4.4.1.6","depth":3,"path":"testing/unit-testing/configure-cider-test-runner.md","ref":"testing/unit-testing/configure-cider-test-runner.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","disqus","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"spacemacs-practicalli"},"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"testing/unit-testing/cider-test-deps-edn-projects.md","mtime":"2022-02-12T16:56:10.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-12T16:57:18.995Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
