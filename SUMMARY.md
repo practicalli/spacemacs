@@ -114,7 +114,7 @@
         * [Running Tests](testing/unit-testing/running-tests.md)
         * [Test report - re-run tests](testing/unit-testing/re-run-tests-from-test-report-buffer.md)
         * [Refactor Tests](testing/unit-testing/refactor-unit-tests.md)
-        * [Configure Test Runner](testing/unit-testing/configure-cider-test-runner.md)
+        * [Configure Cider Test Runner](testing/unit-testing/configure-cider-test-runner.md)
         <!-- * [Expectations](testing/unit-testing/clojure-test-expectations.md) -->
 
     * [Kaocha Test Runner](testing/kaocha-test-runner.md)
