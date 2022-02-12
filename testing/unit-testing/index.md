@@ -1,4 +1,5 @@
 # Unit Testing
+
 In Clojure the unit under test is the function.  Unit test coverage should test all public function that form the API of their respective namespace.
 
 `clojure.test` namespace provides a unit testing framework and is included in the Clojure library, so is available in all Clojure projects.
@@ -35,13 +36,15 @@ Add `clojure.test` to the namespace definition along with the namespace under te
 ```clojure
 (ns practicalli.app-namespace-test
   (:require '[clojure.test :refer [deftest is testing]]
-             [practicalli.app-namespace :as SUT]))
+             [practicalli.app-namespace :as app-namespace]))
 ```
+
+Providing an alias that is the same name as the namespace being tested creates easily readable test code.
 
 {% endtabs %}
 
-> #### Hint::SUT alias - software under test
-> The alias `SUT`, meaning software under test, is a common convention in unit testing.  Using the SUT alias makes it easier for developers to see which functions from the application are being tested at a glance.
+> #### INFO::SUT alias - software under test
+> A TDD approach is to use `SUT` to represent the namespace or package being tested. SUT stands for software under test
 
 
 ## Project structure with tests
