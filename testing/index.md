@@ -26,18 +26,17 @@ Tests are only as good as the thought that goes into them.  Generative testing c
 
 
 ## Integration testing
-Using Continuous Integration (CI) tools: CircleCI, Travis, GitLabs, etc.
 
-Clojure has several test runners that can be used with CI servers
-* cognitect-labs test runner
-* Koacha
-* eftest
-* midje test runner
+Continuous Integration (CI) services CircleCI, GitHub and GitLabs all support Clojure projects.
 
-[deps.edn aliases for Clojure test runners](https://github.com/practicalli/clojure-deps-edn/#test-runners)
+Clojure has several test runners that can be used with CI servers and [practicalli/clojure-deps.edn defines a range of aliases for Clojure test runners](https://github.com/practicalli/clojure-deps-edn/#test-runners-and-test-coverage-tools).
+
+* `:test/run` to run [lambdaisland/kaocha](https://github.com/lambdaisland/kaocha) test runner, which is configured to stop immediately if any tests fail, minimising the time the CI workflow is running.
+* `test/cognitect` to run [cognitect-labs/test-runner](https://github.com/cognitect-labs/test-runner), a light-weight test runner
 
 
 ## Performance testing
+
 Tesing the execution time of specific functions or groups of functions, typically within a namespace.
 
 `time` is a quick and easy tool to give a rough comparison of performance.
@@ -46,8 +45,9 @@ Tesing the execution time of specific functions or groups of functions, typicall
 
 
 ## Load / Stress Testing
-Testing the whole system under loads to simulate the stress the system would be placed under in normal production environments.
 
-`Gattling` is a JVM load tool.
+Testing the whole system under load that simulate the stress the system would be placed under in normal production environments.
+
+[Gattling](https://gatling.io/open-source/) is a JVM load tool.
 
 There are many on-line load testing tools if you have a web facing application.
