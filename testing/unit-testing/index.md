@@ -48,6 +48,7 @@ Providing an alias that is the same name as the namespace being tested creates e
 
 
 ## Project structure with tests
+
 By convention, separate `src` and `test` directories are used to hold the source code and the code that tests the source code.
 
 For each source code file in `src` there should be a corresponding file in test with the same name and `-test` postfix.
@@ -59,7 +60,7 @@ For example, code to test the `src/codewars/rock_paper_scissors.clj` is saved in
 > #### Hint::Create Projects from templates
 > Templates typically include a parallel `test` and `src` directory structure.  The `clj-new` tool has build it templates (app, lib) and will create `src` and `test` directories in the projects it creates.
 >
-> `clojure -M:project/new app practicalli/rock-paper-scissors-lizard-spock`
+> `clojure -X:project/new :template app :name practicalli/rock-paper-scissors-lizard-spock`
 
 <!-- TODO: clj-new - does this add a test namespace if you add a src namesspace to an existing project? -->
 
