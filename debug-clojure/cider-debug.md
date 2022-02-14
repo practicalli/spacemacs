@@ -20,6 +20,37 @@ A debug menu appears above the expression, press `n` to step through each expres
 <!-- {% endyoutube %} -->
 
 
+## Conditional break points
+
+`:break/when` metadata on a `#dbg` directive defines a condition when a breakpoint is triggered, allowing the evaluation to iterate until a desirable point is reached.
+
+Setting a condition is especially useful when there are many iterations required before reaching a point of issue, for example iterating through a large data set.
+
+A `#break` can be added on any Clojure form.  In this example the evaluation will break on each iteration of the sequence, showing the local value of the index.
+
+```clojure
+(dotimes [index 10]
+  #break index)
+```
+
+Add a break condition within the expression to be evaluated and the evaluation will iterate until the condition is met and then break
+
+`n` to continue to the next break point will complete the evaluation as the break condition is no longer met
+
+```clojure
+(dotimes [index 10]
+  #dbg ^{:break/when (= index  7)}
+  index)
+```
+
+The evaluation will break each time a condition is met, so a break will occur multiple times when the value of index is odd
+
+```clojure
+(dotimes [index 10]
+  #dbg ^{:break/when (odd? index)}
+   index)
+```
+
 
 ## Skip over lazy functions
 `o` (out) will jump out of evaluating an expression.
