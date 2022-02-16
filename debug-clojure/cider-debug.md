@@ -1,4 +1,5 @@
 # CIDER Debug
+
 `, d b` calls the `cider-debug-defn-breakpoint` command that sets breakpoints on the expression under the cursor.  If the expression is a function definition, then its name is marked as instrumented by the debug along with any calls to that function.
 
 A debug menu appears above the expression, press `n` to step through each expression and see the inline result.
