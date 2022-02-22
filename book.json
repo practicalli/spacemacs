@@ -15,7 +15,6 @@
     "plugins": [
         "callouts",
         "codeblock-disable-glossary",
-        "disqus",
         "ga",
         "gist",
         "heading-anchors",
@@ -37,9 +36,6 @@
         },
         "sectionx": {
             "tag": "b"
-        },
-        "disqus": {
-            "shortName": "spacemacs-practicalli"
         },
         "ga": {
             "token": "UA-28030709-9"
