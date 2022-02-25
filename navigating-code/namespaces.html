@@ -3943,32 +3943,24 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="navigating-clojure-namespaces">Navigating Clojure Namespaces</h1>
-<p>Browse or find a namespace in the current project</p>
-<table>
-<thead>
-<tr>
-<th>Keybindings</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>, h n</code></td>
-<td>Browse namespace contents</td>
-</tr>
-<tr>
-<td><code>, h N</code></td>
-<td>Browse all namespaces content</td>
-</tr>
-<tr>
-<td><code>, g n</code></td>
-<td>Find file for the given namespace</td>
-</tr>
-</tbody>
-</table>
-<p>Browse namespaces allows you to navigate through just the definitions in a namespace (<code>def</code>, <code>defn</code>) and view their documentation (doc strings).</p>
+<p><code>, g n</code> (<code>cider-find-ns</code>) lists the namespaces currently loaded into the running REPL.  Type a pattern to narrow the list.  <code>C-j</code> and <code>C-k</code> to navigate the list.  <code>RET</code> to open the namespace in the current buffer.</p>
+<p><img src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-find-ns.png" alt="Spacemacs Clojure - Cider find namespace"></p>
+<h2 id="namespaces-via-projectile">Namespaces via Projectile</h2>
+<p><code>SPC p f</code> (<code>helm-projectile-find-file</code>) is an effective way to switch between files in the project.  Helm uses fuzzy matching, so <code>_</code> characters can be skipped when narrowing the helm list with a pattern, so searching for a file is the same as searching for a namespace.</p>
+<blockquote>
+<p><code>g g</code> jumps to the top of the file, which should be near to the location of the <code>ns</code> form</p>
+</blockquote>
+<h2 id="lsp-symbols-and-ns-definitions">LSP symbols and ns definitions</h2>
+<p><code>, g s</code> (<code>helm-lsp-workspace-symbols</code>) lists all the symbols found in the current project, including <code>ns</code>, <code>def</code> and <code>defn</code> forms.</p>
+<p>Type in a pattern to narrow the list. <code>C-j</code> and <code>C-k</code> to navigate the list.</p>
+<p><code>RET</code> to jump to the symbol, opening the relevant namespace in the current buffer.</p>
+<p><img src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-lsp-workspace-symbols.png" alt="Spacemacs Helm LSP workspace symbols - navigate to symbols across a project"></p>
+<h2 id="browse-namespace-symbol-documentation">Browse namespace symbol documentation</h2>
+<p>Browse namespace symbols by navigating through the definitions in a namespace (<code>def</code>, <code>defn</code>) and view their documentation (doc strings).</p>
+<p><code>, h n</code> (<code>cider-browse-ns</code>) lists all namespaces loaded into the REPL in the current project.  Namespaces in the project that have not been evaluated, directly or via a require, will not be in the list.</p>
 <p><img src="../images/spacemacs-clojure-namespace-browse-ns.png" alt="Clojure - Namespaces - browse-ns"></p>
-<div class="panel panel-warning"><div class="panel-heading"><h3 class="panel-title" id="confirm-function-operation"><i class="fa fa-bookmark"></i> Confirm function operation</h3></div><div class="panel-body"><p>Find namespace will open the file for a selected namespace</p></div></div>
+<p><code>RET</code> to show the symbols in the namespace</p>
+<p><code>RET</code> on a namespace symbol to see the documention in a pop-up wondow.  Use the link to the source code file in the documentation to open the namespace in the buffer.</p>
 <h2 id="repl-buffer-cider-commands">REPL buffer cider commands</h2>
 <p><code>,</code> in Evil insert mode in the REPL buffer will bring up the REPL command menu</p>
 <table>
@@ -3990,7 +3982,7 @@
 </tbody>
 </table>
 <p><img src="../images/spacemacs-clojure-repl-command-ns.png" alt="Clojure REPL commands - namespace"></p>
-<h2 id="using-code-to-change-the-namespace">Using code to change the namespace</h2>
+<h3 id="using-code-to-change-the-namespace">Using code to change the namespace</h3>
 <p><a href="https://clojuredocs.org/clojure.core/in-ns" target="_blank"><code>in-ns</code></a> function will set the namespace for the REPL.  If that namespace does not exist, then the namespace is created in the current REPL.</p>
 <p><img src="../images/spacemacs-clojure-repl-change-namespace-spacemacs-workshop.png" alt="Clojure REPL - change namespace"></p>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
@@ -4036,7 +4028,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Namespaces","level":"4.5.3","depth":2,"next":{"title":"Names - Symbols","level":"4.5.4","depth":2,"path":"navigating-code/names-symbols.md","ref":"navigating-code/names-symbols.md","articles":[]},"previous":{"title":"Markers","level":"4.5.2","depth":2,"path":"navigating-code/markers.md","ref":"navigating-code/markers.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"navigating-code/namespaces.md","mtime":"2022-02-22T16:47:51.188Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-22T16:49:02.130Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Namespaces","level":"4.5.3","depth":2,"next":{"title":"Names - Symbols","level":"4.5.4","depth":2,"path":"navigating-code/names-symbols.md","ref":"navigating-code/names-symbols.md","articles":[]},"previous":{"title":"Markers","level":"4.5.2","depth":2,"path":"navigating-code/markers.md","ref":"navigating-code/markers.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"navigating-code/namespaces.md","mtime":"2022-02-25T19:34:38.824Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-25T19:35:39.870Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
