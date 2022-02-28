@@ -85,7 +85,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="add-layers.html" />
+    <link rel="next" href="configure-layers.html" />
     
     
     <link rel="prev" href="../markdown-mode/" />
@@ -2560,12 +2560,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="5.1.1" data-path="add-layers.html">
+        <li class="chapter " data-level="5.1.1" data-path="configure-layers.html">
             
-                <a href="add-layers.html">
+                <a href="configure-layers.html">
             
                     
-                    Add Layers
+                    Configure Layers
             
                 </a>
             
@@ -2637,7 +2637,7 @@
                 <a href="forge-self-hosted-configuration.html">
             
                     
-                    Forge Configuration
+                    Self-hosted Forge
             
                 </a>
             
@@ -3962,20 +3962,12 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="source-control-introduction">Source Control Introduction</h1>
-<p>Source control supports Git repositories and services including GitHub, GitLab along and Perforce.</p>
-<p>Magit provides a graphical Git client in Spacemacs that provides all the features of the Git command line client.</p>
-<p>Markers in the fringe show the changes between a file you are editing and the committed version of that file.</p>
-<h2 id="installing-source-control">Installing Source Control</h2>
-<p>Recommended layers to add for source control include:</p>
-<ul>
-<li><code>git</code> - provides Magit, a feature rich git client that is easy to use</li>
-<li><code>github</code> - accessing GitHub repositories</li>
-<li><code>version-control</code> - general features including diff highlights in the window fringe</li>
-</ul>
-<p>You must <a href="git-configuration.html">configure Git</a> and <a href="source-code/github-configuration.md">add SSH keys and a personal access token</a> to get the most out of Spacemacs source control with Git.</p>
-<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="github-layer-no-longer-includes-gist-support"><i class="fa fa-lightbulb-o"></i> github layer no longer includes gist support</h3></div><div class="panel-body"><p><a href="http://github.com/defunkt/gist.el" target="_blank">gist.el</a> was removed from the GitHub layer on 2021-11-02 citing a broken and unmaintained package.  However, adding gist as an additional package, using <code>dotspacemacs-additional-package (gist)</code> in .spacemacs seems to work.  Some <a href="https://github.com/syl20bnr/spacemacs/issues/15183" target="_blank">investigation</a> is being done as to what features are no longer working with gist.el.</p></div></div>
-<p>Configure Magit Forge to use services over GitHub and GitLab APIs, e.g. showing issues, creating pull requests, etc.</p>
+<p>Source control in Spacemacs supports Git repositories and services including GitHub, GitLab and Perforce.</p>
+<p>Magit is a graphical Git client in Spacemacs that provides all the features of the Git command line client.</p>
+<p>Highlight changes in file buffers and the local Git repository can be shown in the fringe.</p>
+<h2 id="configure-spacemacs-for-source-control">Configure Spacemacs for Source Control</h2>
 <p><div style="position: relative;padding-bottom: 56.25%;padding-top: 25px;height: 0;"><iframe frameborder="0" allowfullscreen style="border: none;position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="//www.youtube.com/embed/LoI5mlDv8gE"></iframe></div></p>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="github-layer-no-longer-includes-gist-support"><i class="fa fa-lightbulb-o"></i> github layer no longer includes gist support</h3></div><div class="panel-body"><p><a href="http://github.com/defunkt/gist.el" target="_blank">gist.el</a> was removed from the GitHub layer on 2021-11-02 citing a broken and unmaintained package.</p><p>github-clone removal is currently being discussed as it adds very little over Magit and requires a separate auth settings.</p></div></div>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -4008,7 +4000,7 @@
                 </a>
                 
                 
-                <a href="add-layers.html" class="navigation navigation-next " aria-label="Next page: Add Layers">
+                <a href="configure-layers.html" class="navigation navigation-next " aria-label="Next page: Configure Layers">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -4019,7 +4011,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Source Control Overview","level":"5.1","depth":1,"next":{"title":"Add Layers","level":"5.1.1","depth":2,"path":"source-control/add-layers.md","ref":"source-control/add-layers.md","articles":[]},"previous":{"title":"Markdown documentation","level":"4.11.5","depth":2,"path":"markdown-mode/index.md","ref":"markdown-mode/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"source-control/index.md","mtime":"2022-02-28T22:01:42.171Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-28T22:02:44.534Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Source Control Overview","level":"5.1","depth":1,"next":{"title":"Configure Layers","level":"5.1.1","depth":2,"path":"source-control/configure-layers.md","ref":"source-control/configure-layers.md","articles":[]},"previous":{"title":"Markdown documentation","level":"4.11.5","depth":2,"path":"markdown-mode/index.md","ref":"markdown-mode/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"source-control/index.md","mtime":"2022-02-28T23:32:56.300Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-28T23:34:01.290Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
