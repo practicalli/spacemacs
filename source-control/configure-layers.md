@@ -83,6 +83,3 @@ Ensure you follow the [GitHub Configuration steps](github-configuration.md) requ
                       version-control-diff-tool 'diff-hl
                       version-control-global-margin t)
 ```
-
-
-![Spacemacs Source Control - full screen and refine-hunks](/images/spacemacs-magit-fullscreen-refine-hunks-example.png)
