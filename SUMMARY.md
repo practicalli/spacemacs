@@ -194,7 +194,7 @@
 ## Source Control
 
 * [Source Control Overview](source-control/index.md)
-    * [Add Layers](source-control/add-layers.md)
+    * [Configure Layers](source-control/configure-layers.md)
     * [Git Configuration](source-control/git-configuration.md)
         * [SSH Keys](source-control/ssh-remote-repositories.md)
         * [GitHub Clone](source-control/github-clone.md)
