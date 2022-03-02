@@ -8,7 +8,7 @@ Magit can retrieve issues and pull request for a project and even create a new p
 
 ## Set the username for the service used
 
-Add your GitHub or GitLab username to your `~/.gitconfig` file for your operating system account.
+Add your Forge username to your `~/.gitconfig` file for your operating system account.
 
 For example, if your username on GitHub is `practicalli`, then run this command in a terminal:
 
@@ -16,19 +16,19 @@ For example, if your username on GitHub is `practicalli`, then run this command 
 git config --global github.user practicalli
 ```
 
-Replace `github.user` with `gitlab.user` if you are using GitLab.
+If using GitLab, replace `github.user` with `gitlab.user` in the above command.
 
 
 ## Generating a token for API access
 
-You need a token for GitHub or GitLab, which can be generated via your account on those services.
+You need a token personal access token for the forge, which can be generated via your account on those services.
+
+A token should be created with `repo`, `user` and `read:org` permissions.
+
 * [GitHub personal access tokens](https://github.com/settings/tokens)
 * [GitLab personal access tokens](https://gitlab.com/profile/personal_access_tokens)
 
-Personal Access tokens can be revoked and recreated at any time.  They are a safer approach than using your GitHub password.
-
-> #### Hint::GitHub layer configuration
-> Creating a personal access token is the same as setup in the [GitHub layer configuration](github-configuration.md), however, you may wish to create a separate token for added security.
+Personal Access tokens can be revoked and recreated at any time, so are a safer approach than using a password.  Some services will prevent authentication via password, so a token is the only option.
 
 
 ### Create an encrypted .authinfo.gpg file
@@ -69,6 +69,7 @@ Add `auth-sources` to specify the location of the encrypted token file in the `d
 
 
 ## Configure the number of open and closed topics shown in forge
+
 A topic is an issue or pull request and the list of each can be configured to display a number of open and closed items.
 
 The configuration will show 100 open topics and never show any closed topics, for both issues and pull requests.
