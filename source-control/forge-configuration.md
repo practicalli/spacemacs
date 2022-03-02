@@ -69,6 +69,7 @@ Add `auth-sources` to specify the location of the encrypted token file in the `d
 
 
 ## Configure the number of open and closed topics shown in forge
+
 A topic is an issue or pull request and the list of each can be configured to display a number of open and closed items.
 
 The configuration will show 100 open topics and never show any closed topics, for both issues and pull requests.
