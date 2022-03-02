@@ -16,7 +16,7 @@ For example, if your username on GitHub is `practicalli`, then run this command 
 git config --global github.user practicalli
 ```
 
-Replace `github.user` with `gitlab.user` if you are using GitLab.
+If using GitLab, replace `github.user` with `gitlab.user` in the above command.
 
 
 ## Generating a token for API access
