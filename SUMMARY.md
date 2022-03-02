@@ -196,8 +196,6 @@
 * [Source Control Overview](source-control/index.md)
     * [Configure Layers](source-control/configure-layers.md)
     * [Git Configuration](source-control/git-configuration.md)
-        * [SSH Keys](source-control/ssh-remote-repositories.md)
-        * [GitHub Clone](source-control/github-clone.md)
     * [Forge Configuration](source-control/forge-configuration.md)
         * [Self-hosted Forge](source-control/forge-self-hosted-configuration.md)
 * [MaGit Git Client](source-control/magit/index.md)

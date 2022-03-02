@@ -32,3 +32,68 @@ git config --global user.email "250870+practicalli-john@users.noreply.github.com
 ```
 
 For additional security, select the option **Block command line pushes that expose my email** to prevent commits being pushed to GitHub using your public email address.
+
+
+## Accessing remote repositories
+
+GitHub repositories can be accessed via HTTPS or SSH URL
+
+
+## SSH URLs with SSH Key
+
+When using SSH URLs for remote repository access, [generate an SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) and [add it to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
+
+The SSH key removes the need to enter GitHub credentials each time a command is used that accesses a remote repository (push, pull, clone, etc.).
+
+![GitHub Clone using SSH URL](https://raw.githubusercontent.com/practicalli/graphic-design/live/github/screenshot/github-clone-ssh-spacemacs.png)
+
+
+### SSH Key Passphrase
+
+Practicalli recommends setting a passphrase when generating an SSH key.
+
+Unix systems (Linux / MacOSX) should have the `ssh-keygen` command.
+
+`-t` specifies the type of encryption, RSA recommended
+
+`-C` to add your GitHub email address to the SSH key
+
+```
+ssh-keygen -t rsa -C "250870+practicalli-john@users.noreply.github.com"
+```
+
+Accept the default file or enter a preferred file name
+
+Enter a passphrase.  A 12 character or greater passphrase should provide adequate security.
+
+Repeat the passphrase
+
+The key has now been created, with an `id_rsa.pub` public key that should be added to you GitHub account.
+
+![ssh-keygen generated SSH key](https://raw.githubusercontent.com/practicalli/graphic-design/live/github/screenshot/ssh-key-generated.png)
+
+
+### Saving SSH Key to Key Ring
+
+A key-ring tool for the Operating System can be used to securely store the passphrase.
+
+Ubuntu desktop has a key-ring tool which will display a pop-up dialog to save the passphrase to the key-ring the first time the SSH key is used. Once saved, the key is unlocked when login into the desktop.
+
+
+## HTTPS URLs and personal access token
+
+When using HTTPS URLs for remote repository access, a personal access token is required.  Visit the remote repository service and generate a personal access token with at least `repo` permission.
+
+* [GitHub personal access token documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+* [GitLab personal access token documentation](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#create-a-personal-access-token)
+
+Whilst the token could be added to the `~/.gitconfig`, as this file is plain text it is not particularly secure (especially if committed into a dotfiles repository and shared).
+
+```shell
+git config --global oauth.token "tokens-in-plain-text-files-are-not-very-secure"
+```
+
+To provide greater security when using the token, you should consider using the [GitHub CLI or the Git Credential Manager](https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git)
+
+> #### Hint::Magit Forge also uses personal access token
+> Magit Forge also requires a personal access token, although this can be saved in the encrypted file `~/.authinfo.pgg` for greater security.  The Magit Forge token includes `repo`, `user` and `read:org` permissions, so the same token could also be used for HTTPS remote repositories (although for greater security, have separate tokens especially if placing the token in a plain text file).
