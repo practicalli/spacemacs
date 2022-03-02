@@ -27,9 +27,6 @@ You need a token for GitHub or GitLab, which can be generated via your account o
 
 Personal Access tokens can be revoked and recreated at any time.  They are a safer approach than using your GitHub password.
 
-> #### Hint::GitHub layer configuration
-> Creating a personal access token is the same as setup in the [GitHub layer configuration](github-configuration.md), however, you may wish to create a separate token for added security.
-
 
 ### Create an encrypted .authinfo.gpg file
 
