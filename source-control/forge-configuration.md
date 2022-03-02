@@ -8,7 +8,7 @@ Magit can retrieve issues and pull request for a project and even create a new p
 
 ## Set the username for the service used
 
-Add your GitHub or GitLab username to your `~/.gitconfig` file for your operating system account.
+Add your Forge username to your `~/.gitconfig` file for your operating system account.
 
 For example, if your username on GitHub is `practicalli`, then run this command in a terminal:
 
