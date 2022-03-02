@@ -16,7 +16,5 @@ https://youtu.be/LoI5mlDv8gE
 {% endyoutube %}
 
 
-> #### Hint::github layer no longer includes gist support
-> [gist.el](http://github.com/defunkt/gist.el) was removed from the GitHub layer on 2021-11-02 citing a broken and unmaintained package.
->
-> github-clone removal is currently being discussed as it adds very little over Magit and requires a separate auth settings.
+> #### Hint::github layer deprecated
+> The `github` layer has been [marked as deprecated](https://github.com/syl20bnr/spacemacs/pull/15381) as almost all of its functionality is provided by the `git` layer.  Only `grep-mode` remains in the layer for previewing GitHub flavoured Markdown and that package should be moved to either the markdown layer or org layer (or possibly both) as an optional feature.
