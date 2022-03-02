@@ -21,12 +21,10 @@ If using GitLab, replace `github.user` with `gitlab.user` in the above command.
 
 ## Generating a token for API access
 
-You need a token personal access token for the forge, which can be generated via your account on those services.
+You need a token personal access token for the forge with the correct permissions, which can be generated via your account on those services.
 
-A token should be created with `repo`, `user` and `read:org` permissions.
-
-* [GitHub personal access tokens](https://github.com/settings/tokens)
-* [GitLab personal access tokens](https://gitlab.com/profile/personal_access_tokens)
+* [GitHub personal access tokens](https://github.com/settings/tokens) should be created with `repo`, `user` and `read:org` permissions.
+* [GitLab personal access tokens](https://gitlab.com/profile/personal_access_tokens) should be created with `api` permissions.
 
 Personal Access tokens can be revoked and recreated at any time, so are a safer approach than using a password.  Some services will prevent authentication via password, so a token is the only option.
 
