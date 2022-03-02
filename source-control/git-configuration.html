@@ -85,7 +85,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="ssh-remote-repositories.html" />
+    <link rel="next" href="forge-configuration.html" />
     
     
     <link rel="prev" href="configure-layers.html" />
@@ -2584,38 +2584,6 @@
             
 
             
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.1.2.1" data-path="ssh-remote-repositories.html">
-            
-                <a href="ssh-remote-repositories.html">
-            
-                    
-                    SSH Keys
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="5.1.2.2" data-path="github-clone.html">
-            
-                <a href="github-clone.html">
-            
-                    
-                    GitHub Clone
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
         </li>
     
         <li class="chapter " data-level="5.1.3" data-path="forge-configuration.html">
@@ -3979,6 +3947,37 @@ git config --global user.email github@practical.li
 <pre><code class="lang-shell">git config --global user.email &quot;250870+practicalli-john@users.noreply.github.com&quot;
 </code></pre>
 <p>For additional security, select the option <strong>Block command line pushes that expose my email</strong> to prevent commits being pushed to GitHub using your public email address.</p>
+<h2 id="accessing-remote-repositories">Accessing remote repositories</h2>
+<p>GitHub repositories can be accessed via HTTPS or SSH URL</p>
+<h2 id="ssh-urls-with-ssh-key">SSH URLs with SSH Key</h2>
+<p>When using SSH URLs for remote repository access, <a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/" target="_blank">generate an SSH key</a> and <a href="https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/" target="_blank">add it to your GitHub account</a>.</p>
+<p>The SSH key removes the need to enter GitHub credentials each time a command is used that accesses a remote repository (push, pull, clone, etc.).</p>
+<p><img src="https://raw.githubusercontent.com/practicalli/graphic-design/live/github/screenshot/github-clone-ssh-spacemacs.png" alt="GitHub Clone using SSH URL"></p>
+<h3 id="ssh-key-passphrase">SSH Key Passphrase</h3>
+<p>Practicalli recommends setting a passphrase when generating an SSH key.</p>
+<p>Unix systems (Linux / MacOSX) should have the <code>ssh-keygen</code> command.</p>
+<p><code>-t</code> specifies the type of encryption, RSA recommended</p>
+<p><code>-C</code> to add your GitHub email address to the SSH key</p>
+<pre><code>ssh-keygen -t rsa -C &quot;250870+practicalli-john@users.noreply.github.com&quot;
+</code></pre><p>Accept the default file or enter a preferred file name</p>
+<p>Enter a passphrase.  A 12 character or greater passphrase should provide adequate security.</p>
+<p>Repeat the passphrase</p>
+<p>The key has now been created, with an <code>id_rsa.pub</code> public key that should be added to you GitHub account.</p>
+<p><img src="https://raw.githubusercontent.com/practicalli/graphic-design/live/github/screenshot/ssh-key-generated.png" alt="ssh-keygen generated SSH key"></p>
+<h3 id="saving-ssh-key-to-key-ring">Saving SSH Key to Key Ring</h3>
+<p>A key-ring tool for the Operating System can be used to securely store the passphrase.</p>
+<p>Ubuntu desktop has a key-ring tool which will display a pop-up dialog to save the passphrase to the key-ring the first time the SSH key is used. Once saved, the key is unlocked when login into the desktop.</p>
+<h2 id="https-urls-and-personal-access-token">HTTPS URLs and personal access token</h2>
+<p>When using HTTPS URLs for remote repository access, a personal access token is required.  Visit the remote repository service and generate a personal access token with at least <code>repo</code> permission.</p>
+<ul>
+<li><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token" target="_blank">GitHub personal access token documentation</a></li>
+<li><a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#create-a-personal-access-token" target="_blank">GitLab personal access token documentation</a></li>
+</ul>
+<p>Whilst the token could be added to the <code>~/.gitconfig</code>, as this file is plain text it is not particularly secure (especially if committed into a dotfiles repository and shared).</p>
+<pre><code class="lang-shell">git config --global oauth.token &quot;tokens-in-plain-text-files-are-not-very-secure&quot;
+</code></pre>
+<p>To provide greater security when using the token, you should consider using the <a href="https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git" target="_blank">GitHub CLI or the Git Credential Manager</a></p>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="magit-forge-also-uses-personal-access-token"><i class="fa fa-lightbulb-o"></i> Magit Forge also uses personal access token</h3></div><div class="panel-body"><p>Magit Forge also requires a personal access token, although this can be saved in the encrypted file <code>~/.authinfo.pgg</code> for greater security.  The Magit Forge token includes <code>repo</code>, <code>user</code> and <code>read:org</code> permissions, so the same token could also be used for HTTPS remote repositories (although for greater security, have separate tokens especially if placing the token in a plain text file).</p></div></div>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -4011,7 +4010,7 @@ git config --global user.email github@practical.li
                 </a>
                 
                 
-                <a href="ssh-remote-repositories.html" class="navigation navigation-next " aria-label="Next page: SSH Keys">
+                <a href="forge-configuration.html" class="navigation navigation-next " aria-label="Next page: Forge Configuration">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -4022,7 +4021,7 @@ git config --global user.email github@practical.li
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Git Configuration","level":"5.1.2","depth":2,"next":{"title":"SSH Keys","level":"5.1.2.1","depth":3,"path":"source-control/ssh-remote-repositories.md","ref":"source-control/ssh-remote-repositories.md","articles":[]},"previous":{"title":"Configure Layers","level":"5.1.1","depth":2,"path":"source-control/configure-layers.md","ref":"source-control/configure-layers.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"source-control/git-configuration.md","mtime":"2022-03-02T15:07:34.768Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-02T15:08:48.341Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Git Configuration","level":"5.1.2","depth":2,"next":{"title":"Forge Configuration","level":"5.1.3","depth":2,"path":"source-control/forge-configuration.md","ref":"source-control/forge-configuration.md","articles":[{"title":"Self-hosted Forge","level":"5.1.3.1","depth":3,"path":"source-control/forge-self-hosted-configuration.md","ref":"source-control/forge-self-hosted-configuration.md","articles":[]}]},"previous":{"title":"Configure Layers","level":"5.1.1","depth":2,"path":"source-control/configure-layers.md","ref":"source-control/configure-layers.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"source-control/git-configuration.md","mtime":"2022-03-02T15:26:39.327Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-02T15:27:40.249Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
