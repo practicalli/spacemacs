@@ -25,7 +25,7 @@
     * [Install Clojure](before-you-start/install-clojure.md)
     * [Command Line Tools](before-you-start/recommended-command-line-tools.md)
 * [Install Spacemacs](install-spacemacs/index.md)
-    * [Additional Configuration](install-spacemacs/additional-configuration.md)
+    * [Manual Configuration](install-spacemacs/manual-configuration.md)
         * [Add Clojure layer](install-spacemacs/clojure-layer.md)
         * [Enhance Clojure experience](install-spacemacs/enhance-clojure-experience.md)
             * [Smartparens](install-spacemacs/smartparens.md)
