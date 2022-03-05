@@ -20,11 +20,11 @@ If Java is installed, you will see something like this in your terminal:
 Open a terminal and run the following command (you will be prompted for your login password to complete the install)
 
 ```bash
-sudo apt install openjdk-11-jdk
+sudo apt install openjdk-17-jdk
 ```
 
-> #### Hint:: openjdk-11 not available or not the right version?
-> If openjdk-11 is not available, add the [Ubuntu OpenJDK personal package archive](https://launchpad.net/~openjdk-r/+archive/ubuntu/ppa)
+> #### Hint:: openjdk-17 not available or not the right version?
+> If openjdk-17 is not available, add the [Ubuntu OpenJDK personal package archive](https://launchpad.net/~openjdk-r/+archive/ubuntu/ppa)
 ```bash
 sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt-get update
@@ -42,10 +42,10 @@ sudo update-alternatives --config java
 <!-- Homebrew (MacOSX) install -->
 {% content "second" %}
 
-Using [Homebrew](https://brew.sh/), run the following command in a terminal to install Java 11:
+Using [Homebrew](https://brew.sh/), run the following command in a terminal to install Java 17:
 
 ```bash
-brew cask install adoptopenjdk11
+brew cask install adoptopenjdk17
 ```
 
 > #### Hint::Switching between Java versions
@@ -56,9 +56,9 @@ brew cask install adoptopenjdk11
 /usr/libexec/java_home -V
 ```
 >
-> Switch to Java version 11
+> Switch to Java version 17
 ```bash
-export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 ```
 
 
