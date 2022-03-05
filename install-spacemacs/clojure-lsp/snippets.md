@@ -18,7 +18,7 @@ Clojure LSP should automatically pick up the new changes without having to resta
 
 Start typing the name of the snippet and it should appear in the auto-completion pop-up menu
 
-[Spacemacs Clojure LSP snippets - comment example](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-lsp-snippets-autocomplete-example-comment.png)
+![Spacemacs Clojure LSP snippets - comment example](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-lsp-snippets-autocomplete-example-comment.png)
 
 `RET` to expand the highlighted snipped
 
