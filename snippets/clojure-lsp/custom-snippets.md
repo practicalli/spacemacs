@@ -1,4 +1,4 @@
-# Custom snippets
+# Custom snippets for Clojure LSP
 
 [Custom snippets](https://clojure-lsp.io/settings/#snippets) are defined in the Clojure LSP EDN configuration using the `:additional-snipets` key.  The snippet body uses the same tab stop and placeholder syntax as Yasnipets, although the body is contained within a string.
 
@@ -40,11 +40,17 @@ When a Clojure LSP snipped includes `$current-form` then typing a snippet name i
                         :snippet "(let [$1 $current-form] $0)"}]}
 ```
 
+> #### WARNING::Limited scope with current-form
+> A Snippet including `$current-form` is only active when typed in front of an existing expression.  A snippet is not recognised when typed at the top level.
+
+
 ### Placeholders
 
 Tab Stops can also include default values or text used as hint on what each tab stop value is for.  These are referred to as placeholders.
 
 `${1:default-value}` is the form of a placeholder for tab stop 1.  When the cursor tabs to tab stop 1, the default-value text is highlighted and replaces as soon as characters are typed.
+
+Placeholder text is not replaced for `$0` tab-stop, as the snippet interaction is effectively over at this point.
 
 The `deftest` custom snippet shows examples of placeholders for three tab stops.
 
@@ -81,4 +87,7 @@ The built-in `defn` snippet uses Clojure code to help generate the snippet.
 
 The syntax for built-in snippets is slightly different that the `:additional-syntax` form.  The internal form uses `:label` for `:name` and `:insert-text` for `:snippet`.
 
-> Clojure code only works for built-in snippets and not `:additional-snippets`. Clojure LSP is compiled by Graal to a native binary, including the built-in snippets.  To include Clojure code in a snippet then consider submitting a pull request to the Clojure LSP project to add a built-in snippet.
+> #### Hint::
+> Clojure code only works for built-in snippets and not for `:additional-snippets`.
+>
+> Clojure LSP is compiled by Graal to a native binary, including the built-in snippets.  To include Clojure code in a snippet then consider submitting a pull request to the Clojure LSP project to add a built-in snippet.
