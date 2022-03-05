@@ -3946,61 +3946,156 @@
 <p>Custom snippets created by Practicalli and added via the <code>:additional-snippets</code> key in the Clojure LSP configuration (<code>.lsp/config.edn</code> or user level configuration).  Snippets are defined as a vector of hash-maps</p>
 <pre><code class="lang-clojure">{<span class="hljs-symbol">:additional-snippets</span> [{} {} {} ,,,]}
 </code></pre>
-<!-- TODO: create a shared repository for Clojure LSP snippets -->
-<h2 id="core-functions">Core functions</h2>
-<p>Create a public var using a <code>def</code> form with a doc-string, with placeholders for name and value.</p>
-<pre><code class="lang-clojure">{<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;def&quot;</span>
-   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;def with docstring&quot;</span>
-   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;(def ${1:name}\n\&quot;${2:doc-string}\&quot;\n${3:value})$0&quot;</span>}
-</code></pre>
-<p>Create a private var using a <code>def</code> form with <code>^:private</code> meta data and a doc-string, with placeholders for name and value.</p>
-<pre><code class="lang-clojure">{<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;def-&quot;</span>
-   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;def private&quot;</span>
-   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;(def ^:private ${1:name}\n\&quot;${2:doc-string}\&quot;\n${3:value})$0&quot;</span>}
-</code></pre>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="install-practicalli-custom-snippets"><i class="fa fa-lightbulb-o"></i> Install Practicalli Custom Snippets</h3></div><div class="panel-body"><p><a href="https://practical.li/spacemacs/install-spacemacs/clojure-lsp/snippets.md" target="_blank">Install practicalli/clojure-lsp-snippets guide</a></p></div></div>
 <h2 id="documentation">Documentation</h2>
 <p>A comment heading to describe the purpose and important information about the current namesapce.</p>
-<pre><code class="lang-clojure">{<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;comment-heading&quot;</span>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;comment-heading&quot;</span>
    <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Comment Header&quot;</span>
-   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n;; ${1:Namespace summary title}\n ;;\n ;; ${2:Brief description}\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n&quot;</span>}
+   <span class="hljs-symbol">:snippet</span>
+   <span class="hljs-string">&quot;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;; ${1:Namespace summary title}
+    ;;
+    ;; ${2:Brief description}\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n$0&quot;</span>}
 </code></pre>
 <p>A comment separator for marking logical sections within a namespace, useful for navigating code and identifying opportunities to refactor a namespace into multiple namespaces.</p>
-<pre><code class="lang-clojure">{<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;comment-separator&quot;</span>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;comment-separator&quot;</span>
    <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Comment Separator&quot;</span>
-   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;;; ${1:Namespace summary title}\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n&quot;</span>}
+   <span class="hljs-symbol">:snippet</span>
+   <span class="hljs-string">&quot;;; ${1:Namespace summary title}\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n$0&quot;</span>}
 </code></pre>
+<h2 id="repl-driven-development">REPL Driven Development</h2>
 <p>A rich comment block typically used to hold function calls to show how to make use of the important aspects of the current namespace.  For example, calls to <code>start</code>, <code>restart</code>, <code>stop</code> functions in a namespace that defines the service life-cycle.</p>
 <p>This provides a live executable guide to using the namespace, without being called if the whole namespace is evaluated.</p>
 <p>A commented expression is placed before the closing paren to ensure that closing paren is not folded up into the previous line.  This makes it easier to add further code to the rich comment block.</p>
-<pre><code class="lang-clojure">{<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;rich-comment&quot;</span>
- <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Create rich comment&quot;</span>
- <span class="hljs-symbol">:snippet</span>
- <span class="hljs-string">&quot;(comment
-    ${0:body}
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;rich-comment&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Create rich comment&quot;</span>
+   <span class="hljs-symbol">:snippet</span>
+   <span class="hljs-string">&quot;(comment
+      $0
   #_()) ;; End of rich comment&quot;</span>}
 </code></pre>
 <p>A modified rich comment block with clj-kondo configuration to suppress warnings for duplicate function definition names, supporting alternative function implementations as part of a REPL driven development workflow.</p>
-<pre><code class="lang-clojure">{<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;rich-comment-rdd&quot;</span>
- <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Create comment block&quot;</span>
- <span class="hljs-symbol">:snippet</span>
- <span class="hljs-string">&quot;#_{:clj-kondo/ignore [:redefined-var]}
- (comment
-   ${0:body}
- #_()) ;; End of rich comment&quot;</span>}
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;rich-comment-rdd&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Create comment block&quot;</span>
+   <span class="hljs-symbol">:snippet</span>
+   <span class="hljs-string">&quot;#_{:clj-kondo/ignore [:redefined-var]}
+   (comment
+     $0
+   #_()) ;; End of rich comment&quot;</span>}
 </code></pre>
 <h2 id="hot-loading-library-dependencies">Hot loading library dependencies</h2>
 <p>Clojure CLI projects can <a href="https://practical.li/clojure/alternative-tools/clojure-cli/hotload-libraries.html" target="_blank">hotload library dependencies into a running Clojure REPL using the tools.deps library</a>.  This requires starting a REPL with the <code>clojure.tools.deps.alpha</code> library as a dependency which can be done by including the <a href="https://github.com/practicalli/clojure-deps-edn#hotload-libraries-into-a-running-repl" target="_blank"><code>:lib/hotload</code> alias from practicalli/clojure-deps-edn</a>.  Note this library is alpha and the API could change in future.</p>
 <p>Create a rich comment block that requires the <code>clojure.tools.deps.alpha</code> namespace and an <code>add-libs</code> expression to hotload one or more libraries in a hash-map.  Tab stops with placeholders are included for adding the first library to hotload.</p>
-<pre><code class="lang-clojure">{<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;rich-comment-hotload&quot;</span>
- <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Rich comment library hotload&quot;</span>
- <span class="hljs-symbol">:snippet</span>
- <span class="hljs-string">&quot;#_{:clj-kondo/ignore [:redefined-var]}
-  (comment
-    ;; Add-lib library for hot-loading
-    (require &apos;[clojure.tools.deps.alpha.repl :refer [add-libs]])
-    (add-libs &apos;{${1:domain/library-name} {:mvn/version \&quot;${2:1.0.0}\&quot;}})
-  ) ;; End of rich comment block
-&quot;</span>}
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;rich-comment-hotload&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Rich comment library hotload&quot;</span>
+   <span class="hljs-symbol">:snippet</span>
+   <span class="hljs-string">&quot;#_{:clj-kondo/ignore [:redefined-var]}
+    (comment
+      ;; Add-lib library for hot-loading
+      (require &apos;[clojure.tools.deps.alpha.repl :refer [add-libs]])
+      (add-libs &apos;{${1:domain/library-name} {:mvn/version \&quot;${2:1.0.0}\&quot;}$3})
+      $0
+    #_()) ;; End of rich comment block&quot;</span>}
+</code></pre>
+<h2 id="core-functions">Core functions</h2>
+<p>Create a public var using a <code>def</code> form with a doc-string, with placeholders for name and value.</p>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;def&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;def with docstring&quot;</span>
+   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;(def ${1:name}\n  \&quot;${2:docstring}\&quot;\n  $0)&quot;</span>}
+</code></pre>
+<p>Create a private var using a <code>def</code> form with <code>^:private</code> meta data and a doc-string, with placeholders for name and value.</p>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;def-&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;def private&quot;</span>
+   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;(def ^:private ${1:name}\n  \&quot;${2:doc-string}\&quot;\n $0)&quot;</span>}
+</code></pre>
+<p>A <code>defn</code> form with name, doc-string and args tab-stops</p>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;defn&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Create public function&quot;</span>
+   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;(defn ${1:name}\n  \&quot;${2:docstring}\&quot;\n   [${3:args}]\n  $0)&quot;</span>}
+</code></pre>
+<p>A <code>defn</code> form with private metatdata. Including name, doc-string and args tab-stops</p>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;defn-&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Create public function&quot;</span>
+   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;(defn ^:private ${1:name}\n  \&quot;${2:docstring}\&quot;\n   [${3:args}]\n  $0)&quot;</span>}
+</code></pre>
+<p>A namespace form with name, doc-string and require tab-stop.</p>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;ns&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Create ns&quot;</span>
+   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;(ns ${1:name}\n  \&quot;${2:docstring}\&quot;\n  ${3:require})&quot;</span>}
+</code></pre>
+<h2 id="clojure-cli-aliases-and-library-dependencies">Clojure CLI aliases and library dependencies</h2>
+<p>Add Clojure CLI alias to <code>deps.edn</code>, with an <code>:extra-paths</code> and <code>:extra-deps</code> section</p>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;deps-alias&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;deps.edn alias with extra path &amp; deps&quot;</span>
+   <span class="hljs-symbol">:snippet</span>
+   <span class="hljs-string">&quot;:${1:category/name}
+    {:extra-paths [\&quot;${2:path}\&quot;]
+     :extra-deps {${3:deps-maven or deps-git}}}$0&quot;</span>}
+</code></pre>
+<p>Add a Maven style dependency to a Clojure CLI <code>deps.edn</code> project.</p>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;deps-maven&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;deps.edn Maven dependency&quot;</span>
+   <span class="hljs-symbol">:snippet</span>
+   <span class="hljs-string">&quot;${1:domain/library-name} {:mvn/version \&quot;${2:1.0.0}\&quot;}$0&quot;</span>}
+</code></pre>
+<p>Add a dependency from a Git repository, where the library is named after the remote Git repository, i.e io.github.user|org/library-name for the GitHub repository <a href="https://github.com/user|org/library-name" target="_blank">https://github.com/user|org/library-name</a>.</p>
+<p>The <code>:git/sha</code> defines a specific commit to use for the dependency.</p>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;deps-git&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;deps.edn Git dependency&quot;</span>
+   <span class="hljs-symbol">:snippet</span>
+   <span class="hljs-string">&quot;${1:domain/library-name}
+       {:git/sha \&quot;${2:git-sha-value}\&quot;}$0&quot;</span>}
+</code></pre>
+<p>Additionally a Git tag can be specified, enabling the use of the short SHA value for <code>:git/sha</code> (short sha is the first 7 characters of the 40 character SHA-1 value).</p>
+<p>A Git client can obtain the short form of a SHA from a Git repository</p>
+<pre><code class="lang-bash">git rev-parse --short 1e872b59013425b7c404a91d16119e8452b983f2
+</code></pre>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;deps-git-tag&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Git dependency&quot;</span>
+   <span class="hljs-symbol">:snippet</span>
+   <span class="hljs-string">&quot;${1:domain/library-name}
+      {:git/tag \&quot;${2:git-tag-value}\&quot;
+       :git/sha \&quot;${3:git-sha-value}\&quot;}$0&quot;</span>}
+</code></pre>
+<p>If a library is not named after the domain of the Git repository, the URL of the Git repository must be specified using the <code>:git/url</code> key.</p>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;deps-git-url&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Git URL dependency&quot;</span>
+   <span class="hljs-symbol">:snippet</span>
+   <span class="hljs-string">&quot;${1:domain/library-name}
+      {:git/url \&quot;https://github.com/$1\&quot;
+       :git/sha \&quot;${2:git-sha-value}\&quot;}$0&quot;</span>}
+</code></pre>
+<p>Add a library dependency that is a local Clojure project.</p>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;deps-local&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;deps.edn Maven dependency&quot;</span>
+   <span class="hljs-symbol">:snippet</span>
+   <span class="hljs-string">&quot;${1:domain/library-name} {:local/root \&quot;${2:/path/to/project/root}\&quot;}$0&quot;</span>}
+</code></pre>
+<h2 id="require-library-dependencies">Require Library Dependencies</h2>
+<p>Require a library when using REPL driven development in a rich comment block, adding a <code>(require ,,,)</code> form when evaluating the use of a library without forcing it to be loaded when loading the namespace.</p>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;require-rdd&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;require for rich comment experiments&quot;</span>
+   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;(require &apos;[${1:namespace} :as ${2:alias}]$3)$0&quot;</span>}
+</code></pre>
+<p>A basic <code>:require</code> expression for an <code>ns</code> form.</p>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;require&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;ns require&quot;</span>
+   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;(:require [${1:namespace}])$0&quot;</span>}
+</code></pre>
+<p>A <code>:require</code> expression for an <code>ns</code> form, including a <code>:as</code> directive to define an alias for the required namespace.</p>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;require-as&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;ns require with :as alias&quot;</span>
+   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;(:require [${1:namespace} :as ${2:alias}]$3)$0&quot;</span>}
+</code></pre>
+<p>A <code>:require</code> expression for an <code>ns</code> form, including a <code>:refer</code> directive to include specific function definitions and vars by name.</p>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;require-refer&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;ns require with :refer&quot;</span>
+   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;(:require [${1:namespace} :refer [$2]]$3)$0&quot;</span>}
+</code></pre>
+<p>It is idiomatic to use require with refer to pull in specific functions and vars from another namespace.  The <code>use</code> function is not recommended as it can easily pull more transitive dependencies into the current namespace, causing unexpected results</p>
+<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;use&quot;</span>
+   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;require refer preferred over use&quot;</span>
+   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;(:require [${1:namespace} :refer [$2]])$0&quot;</span>}
 </code></pre>
 <h2 id="clojuretest-snippets">Clojure.test snippets</h2>
 <p>When writing a <code>deftest</code>, a new assertion written may be better in a new group.  The <code>testing</code> snippet will create a new <code>testing</code> form and pull in the following assertion.</p>
@@ -4016,45 +4111,7 @@
 <p>Using <code>testing</code> before an assertion form pull that assertion into the group</p>
 <pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;testing&quot;</span>
    <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;testing clojure.test&quot;</span>
-   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;(testing \&quot;${1:description-of-assertion-group}\&quot;\n $current-form$0)&quot;</span>}
-</code></pre>
-<h2 id="library-dependencies">Library Dependencies</h2>
-<p>Add a Maven style dependency to a Clojure CLI <code>deps.edn</code> project.</p>
-<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;deps-maven&quot;</span>
-   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Clojure CLI maven dependency&quot;</span>
-   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;${1:domain/library-name} {:mvn/version \&quot;${2:1.0.0}\&quot;}&quot;</span>}
-</code></pre>
-<p>Add a dependency from a Git repository, where the library is named after the remote Git repository, i.e io.github.user|org/library-name for the GitHub repository <a href="https://github.com/user|org/library-name" target="_blank">https://github.com/user|org/library-name</a>.</p>
-<p>The <code>:git/sha</code> defines a specific commit to use for the dependency.</p>
-<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;deps-git&quot;</span>
-   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Clojure CLI Git dependency&quot;</span>
-   <span class="hljs-symbol">:snippet</span>
-   <span class="hljs-string">&quot;${1:domain/library-name}
-      {:git/sha \&quot;${2:git-sha-value}\&quot;}$0&quot;</span>}
-</code></pre>
-<p>Additionally a Git tag can be specified, enabling the use of the short SHA value for <code>:git/sha</code> (short sha is the first 7 characters of the 40 character SHA-1 value).</p>
-<p>A Git client can obtain the short form of a SHA from a Git repository</p>
-<pre><code class="lang-bash">git rev-parse --short 1e872b59013425b7c404a91d16119e8452b983f2
-</code></pre>
-<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;deps-git-tag&quot;</span>
-   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Clojure CLI Git Tag dependency&quot;</span>
-   <span class="hljs-symbol">:snippet</span>
-   <span class="hljs-string">&quot;${1:domain/library-name}
-      {:git/tag \&quot;${1:git-tag-value}\&quot;
-       :git/sha \&quot;${2:git-sha-value}\&quot;}$0&quot;</span>}
-</code></pre>
-<p>If a library is not named after the domain of the Git repository, the URL of the Git repository must be specified using the <code>:git/url</code> key.</p>
-<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;deps-git-url&quot;</span>
-   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Clojure CLI Git URL dependency&quot;</span>
-   <span class="hljs-symbol">:snippet</span>
-   <span class="hljs-string">&quot;${1:domain/library-name}
-      {:git/url \&quot;https://github.com/${1:}\&quot;
-       :git/sha \&quot;${1:git-sha-value}\&quot;}$0&quot;</span>}
-</code></pre>
-<p>Add a library dependency that is a local Clojure project.</p>
-<pre><code class="lang-clojure">  {<span class="hljs-symbol">:name</span> <span class="hljs-string">&quot;deps-local&quot;</span>
-   <span class="hljs-symbol">:detail</span> <span class="hljs-string">&quot;Clojure CLI local dependency&quot;</span>
-   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;${1:domain/library-name} {:local/root \&quot;${2:/path/to/project/root}\&quot;}$0&quot;</span>}
+   <span class="hljs-symbol">:snippet</span> <span class="hljs-string">&quot;(testing \&quot;${1:description-of-assertion-group}\&quot;\n $0)&quot;</span>}
 </code></pre>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
@@ -4099,7 +4156,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Practicalli Snippets","level":"4.7.2.2","depth":3,"next":{"title":"Refactor code","level":"4.8","depth":1,"path":"refactor/index.md","ref":"refactor/index.md","articles":[{"title":"Similar function call name","level":"4.8.1","depth":2,"path":"refactor/similar-function-call-name.md","ref":"refactor/similar-function-call-name.md","articles":[]},{"title":"Within a function","level":"4.8.2","depth":2,"path":"refactor/within-a-function.md","ref":"refactor/within-a-function.md","articles":[]},{"title":"Within a namespace","level":"4.8.3","depth":2,"path":"refactor/within-a-namespace.md","ref":"refactor/within-a-namespace.md","articles":[]},{"title":"ns namespace definitions","level":"4.8.4","depth":2,"path":"refactor/namespace-definitions.md","ref":"refactor/namespace-definitions.md","articles":[]},{"title":"Within a project","level":"4.8.5","depth":2,"path":"refactor/within-a-project.md","ref":"refactor/within-a-project.md","articles":[]},{"title":"Clojure mode","level":"4.8.6","depth":2,"path":"refactor/clojure-mode/index.md","ref":"refactor/clojure-mode/index.md","articles":[]},{"title":"clj-refactor","level":"4.8.7","depth":2,"path":"refactor/clj-refactor/index.md","ref":"refactor/clj-refactor/index.md","articles":[{"title":"Managing Library Dependencies","level":"4.8.7.1","depth":3,"path":"refactor/clj-refactor/managing-library-dependencies.md","ref":"refactor/clj-refactor/managing-library-dependencies.md","articles":[]},{"title":"Managing Namespaces","level":"4.8.7.2","depth":3,"path":"refactor/clj-refactor/managing-namespaces.md","ref":"refactor/clj-refactor/managing-namespaces.md","articles":[]},{"title":"Collections","level":"4.8.7.3","depth":3,"path":"refactor/clj-refactor/collections.md","ref":"refactor/clj-refactor/collections.md","articles":[]},{"title":"Extracting","level":"4.8.7.4","depth":3,"path":"refactor/clj-refactor/extracting.md","ref":"refactor/clj-refactor/extracting.md","articles":[]},{"title":"Formatting Code","level":"4.8.7.5","depth":3,"path":"refactor/clj-refactor/formatting-code.md","ref":"refactor/clj-refactor/formatting-code.md","articles":[]}]}]},"previous":{"title":"Custom Snippets","level":"4.7.2.1","depth":3,"path":"snippets/clojure-lsp/custom-snippets.md","ref":"snippets/clojure-lsp/custom-snippets.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"snippets/clojure-lsp/practicalli-snippets.md","mtime":"2022-03-05T16:16:31.861Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-05T16:17:27.310Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Practicalli Snippets","level":"4.7.2.2","depth":3,"next":{"title":"Refactor code","level":"4.8","depth":1,"path":"refactor/index.md","ref":"refactor/index.md","articles":[{"title":"Similar function call name","level":"4.8.1","depth":2,"path":"refactor/similar-function-call-name.md","ref":"refactor/similar-function-call-name.md","articles":[]},{"title":"Within a function","level":"4.8.2","depth":2,"path":"refactor/within-a-function.md","ref":"refactor/within-a-function.md","articles":[]},{"title":"Within a namespace","level":"4.8.3","depth":2,"path":"refactor/within-a-namespace.md","ref":"refactor/within-a-namespace.md","articles":[]},{"title":"ns namespace definitions","level":"4.8.4","depth":2,"path":"refactor/namespace-definitions.md","ref":"refactor/namespace-definitions.md","articles":[]},{"title":"Within a project","level":"4.8.5","depth":2,"path":"refactor/within-a-project.md","ref":"refactor/within-a-project.md","articles":[]},{"title":"Clojure mode","level":"4.8.6","depth":2,"path":"refactor/clojure-mode/index.md","ref":"refactor/clojure-mode/index.md","articles":[]},{"title":"clj-refactor","level":"4.8.7","depth":2,"path":"refactor/clj-refactor/index.md","ref":"refactor/clj-refactor/index.md","articles":[{"title":"Managing Library Dependencies","level":"4.8.7.1","depth":3,"path":"refactor/clj-refactor/managing-library-dependencies.md","ref":"refactor/clj-refactor/managing-library-dependencies.md","articles":[]},{"title":"Managing Namespaces","level":"4.8.7.2","depth":3,"path":"refactor/clj-refactor/managing-namespaces.md","ref":"refactor/clj-refactor/managing-namespaces.md","articles":[]},{"title":"Collections","level":"4.8.7.3","depth":3,"path":"refactor/clj-refactor/collections.md","ref":"refactor/clj-refactor/collections.md","articles":[]},{"title":"Extracting","level":"4.8.7.4","depth":3,"path":"refactor/clj-refactor/extracting.md","ref":"refactor/clj-refactor/extracting.md","articles":[]},{"title":"Formatting Code","level":"4.8.7.5","depth":3,"path":"refactor/clj-refactor/formatting-code.md","ref":"refactor/clj-refactor/formatting-code.md","articles":[]}]}]},"previous":{"title":"Custom Snippets","level":"4.7.2.1","depth":3,"path":"snippets/clojure-lsp/custom-snippets.md","ref":"snippets/clojure-lsp/custom-snippets.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"snippets/clojure-lsp/practicalli-snippets.md","mtime":"2022-03-05T16:56:27.181Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-05T16:57:40.838Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
