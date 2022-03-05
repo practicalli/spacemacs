@@ -50,6 +50,8 @@ Tab Stops can also include default values or text used as hint on what each tab 
 
 `${1:default-value}` is the form of a placeholder for tab stop 1.  When the cursor tabs to tab stop 1, the default-value text is highlighted and replaces as soon as characters are typed.
 
+Placeholder text is not replaced for `$0` tab-stop, as the snippet interaction is effectively over at this point.
+
 The `deftest` custom snippet shows examples of placeholders for three tab stops.
 
 ```clojure
