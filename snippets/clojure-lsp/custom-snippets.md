@@ -40,6 +40,10 @@ When a Clojure LSP snipped includes `$current-form` then typing a snippet name i
                         :snippet "(let [$1 $current-form] $0)"}]}
 ```
 
+> #### WARNING::Limited scope with current-form
+> A Snippet including `$current-form` is only active when typed in front of an existing expression.  A snippet is not recognised when typed at the top level.
+
+
 ### Placeholders
 
 Tab Stops can also include default values or text used as hint on what each tab stop value is for.  These are referred to as placeholders.
