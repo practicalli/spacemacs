@@ -1,4 +1,4 @@
-# Custom snippets
+# Custom snippets for Clojure LSP
 
 [Custom snippets](https://clojure-lsp.io/settings/#snippets) are defined in the Clojure LSP EDN configuration using the `:additional-snipets` key.  The snippet body uses the same tab stop and placeholder syntax as Yasnipets, although the body is contained within a string.
 
@@ -87,4 +87,7 @@ The built-in `defn` snippet uses Clojure code to help generate the snippet.
 
 The syntax for built-in snippets is slightly different that the `:additional-syntax` form.  The internal form uses `:label` for `:name` and `:insert-text` for `:snippet`.
 
-> Clojure code only works for built-in snippets and not `:additional-snippets`. Clojure LSP is compiled by Graal to a native binary, including the built-in snippets.  To include Clojure code in a snippet then consider submitting a pull request to the Clojure LSP project to add a built-in snippet.
+> #### Hint::
+> Clojure code only works for built-in snippets and not for `:additional-snippets`.
+>
+> Clojure LSP is compiled by Graal to a native binary, including the built-in snippets.  To include Clojure code in a snippet then consider submitting a pull request to the Clojure LSP project to add a built-in snippet.
