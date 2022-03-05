@@ -1,6 +1,6 @@
 # Clojure LSP snippets
 
-Clojure LSP contains several built-in snippets.  [practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config) enhances and extends the available snippets, helping create code that documents its purpose clearly.
+Clojure LSP contains several [built-in snippets](https://clojure-lsp.io/features/#snippets). The [practicalli/clojure-lsp-config repository](https://github.com/practicalli/clojure-lsp-config) enhances and extends the available snippets, helping create code that documents its purpose clearly.
 
 **[Each snippet is described in the Clojure LSP reference](https://practical.li/spacemacs/snippets/clojure-lsp/practicalli-snippets.html)**, along with the configuration for each snippet.
 
