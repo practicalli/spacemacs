@@ -7,7 +7,7 @@ Clojure LSP contains several [built-in snippets](https://clojure-lsp.io/features
 
 ## Install Practicalli Clojure LSP snippets
 
-Clone [practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config) to `$XDG_CONFIG_HOME/clojure-lsp` or if that environment variable is not set, then `$HOME/.lsp`
+Clone [practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config) to `$XDG_CONFIG_HOME/clojure-lsp/` or if `XDG_CONFIG_HOME` environment variable is not set, then clone to `$HOME/.lsp/`.  Or simply copy the desired snippets to the `config.edn` file.
 
 Clojure LSP should automatically pick up the new changes without having to restart.
 
@@ -16,7 +16,7 @@ Clojure LSP should automatically pick up the new changes without having to resta
 
 ## Using snippets
 
-Start typing the name of the snippet and it should appear in the auto-completion pop-up menu
+Start typing the name of the snippet and it should appear in the auto-completion pop-up menu.  Matching entry names end with `(Snippet)`.
 
 ![Spacemacs Clojure LSP snippets - comment example](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-lsp-snippets-autocomplete-example-comment.png)
 
@@ -32,11 +32,13 @@ Edit the `config.edn` file.
 
 The `:additional-snippets` key has a collection of hash-maps, with each hash-map representing a snippet.
 
-`$n` represents a tab-stop, where the `TAB` key will jump throughout the snippet. `n` is an integer number that represents the order of the tab-stops.
+`$n` represents a tab-stop, where the `TAB` key will jump throughout the snippet. `n` is an integer number to define the order of the tab-stops, e.g. `$1`, `$2`, $3.
 
 `$0` is a special tab-stop that denotes the end of the tab-stops, ending the snippet interaction.
 
-`${n:placeholder text}` allows text to be placed at the tab-stop, to give an indication as to the value to be completed.  The placeholder text is automatically highlighted when tabbing into the tab-stop.  Highlighting the text is not guaranteed for the `$0` tab-stop.
+`${n:placeholder text}` allows text to be placed at the tab-stop to give an indication as to the value to be completed.  The placeholder text is automatically highlighted when tabbing into the tab-stop, so typing a new value replaces the placeholder text.
+
+Highlighting and replacing the text does not work for the `$0` tab-stop, so placeholder text should not be used with this specific tab-stop.
 
 > #### Hint::Placeholder text not replaced in final tab stop
 > practicalli/clojure-lsp-snippets over-rides some existing built-in snippets at they include placeholder text in the final, S0, location.  Practicalli snippets either replaces the final tab-stop with a consecutively numbered tab stop, or removes the placeholder text.
