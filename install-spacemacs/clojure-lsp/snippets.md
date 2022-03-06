@@ -39,6 +39,3 @@ The `:additional-snippets` key has a collection of hash-maps, with each hash-map
 `${n:placeholder text}` allows text to be placed at the tab-stop to give an indication as to the value to be completed.  The placeholder text is automatically highlighted when tabbing into the tab-stop, so typing a new value replaces the placeholder text.
 
 Highlighting and replacing the text does not work for the `$0` tab-stop, so placeholder text should not be used with this specific tab-stop.
-
-> #### Hint::Placeholder text not replaced in final tab stop
-> practicalli/clojure-lsp-snippets over-rides some existing built-in snippets at they include placeholder text in the final, S0, location.  Practicalli snippets either replaces the final tab-stop with a consecutively numbered tab stop, or removes the placeholder text.
