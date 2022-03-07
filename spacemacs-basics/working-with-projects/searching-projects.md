@@ -36,7 +36,7 @@ Searching requires an external tool to be available on your system PATH. [Ripgre
 
 ## Ripgrep search tool options
 
-Options can be passed to the search tool binary to tailor the results returned in the helm-ag pop-up window
+Option flags can be passed to the search tool binary to tailor the results returned in the helm-ag pop-up window.  The option flags can be used before or after the search pattern.
 
 `SPC h m rg` shows the man page for ripgrep which explains the options of that search tool.  Replace `rg` with the command line name of the search tool binary installed.
 
@@ -46,6 +46,7 @@ Including options without their correct argument will show a warning, e.g. the `
 
 
 ### Searching specific files
+
 Include or exclude specific files by their names or filename extensions.
 
 Use the `-g` option for a filename to search (globbing), or `-g!` for a filename to ignore.
@@ -73,6 +74,7 @@ This option can also be combined with the `-g` option above.
 
 
 ### Example search patterns
+
 Additional search patterns that work with `ripgrep` or `ag`.
 
 `-G*time` - search for the word "time" in all files
@@ -91,6 +93,7 @@ Ripgrep documentation has many [regular expression examples](https://docs.rs/reg
 
 
 ### Searching hidden files
+
 Searching a project using `SPC /` and `SPC s p` will ignore hidden files, those that start with `.`
 
 `-- --hidden` or `-- -uu` after the search pattern to include hidden files in the search
@@ -105,6 +108,7 @@ scissors -- --hidden
 
 
 ### Ripgrep configuration and arguments
+
 Define an environment variable called `RIPGREP_CONFIG_PATH` set to the file name and path
 
 ```
@@ -124,5 +128,6 @@ export RIPGREP_CONFIG_PATH=~/.config/ripgrep.config
 
 
 ## References
+
 * https://github.com/BurntSushi/ripgrep
 * https://blog.burntsushi.net/ripgrep/
