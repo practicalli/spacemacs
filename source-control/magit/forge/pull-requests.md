@@ -6,6 +6,7 @@ Magit Forge allows you to create a pull request from a branch and will even used
 
 
 ## Create a pull request
+
 Assumes you have a fork and original repository as remotes added to the local git repository.
 
 Create a branch on the fork with a descriptive name of the change you want to submit as a pull request.  Commit changes to that new branch.
@@ -16,7 +17,7 @@ Create a branch on the fork with a descriptive name of the change you want to su
 
 `r` to select the repository that the pull request will be created on (eg. the upstream repository, not the fork).
 
-[Spacemacs Magit Forge - create pull request forge repository](/images/spacemacs-magit-forge-create-pull-request-forge-repository.png)
+![Spacemacs Magit Forge - create pull request forge repository](/images/spacemacs-magit-forge-create-pull-request-forge-repository.png)
 
 `c p` to create a new pull request.
 

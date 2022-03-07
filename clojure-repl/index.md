@@ -1,10 +1,10 @@
 # Clojure Repl
 
-The Clojure REPL is a live environment in which Clojure code runs.
+The Clojure REPL is a live environment in which Clojure code runs, both for development and in production.
 
-A REPL gives you instant feedback when code is evaluated. Any amount of code can be evaluated, from a single expression to multiple namespaces.
+A REPL user interface (UI), a prompt or Clojure editor, provides instant feedback when code is evaluated. Any amount of code can be evaluated, from a single expression to multiple namespaces.
 
-Expressions such as function definitions can be re-evaluated, changing how the system behaves without having to restart everything.
+Expressions such as function definitions can be re-evaluated, changing how the system behaves without having to restart anything.
 
 The REPL provides the Clojure developer a fast and effective tool for developing the right data models and algorithms that define the system.
 
@@ -12,7 +12,7 @@ The REPL provides the Clojure developer a fast and effective tool for developing
 
 ## Editor Connected REPL
 
-All Clojure editors connect to an external REPL process, either connecting to an existing REPL or starting a new REPL from the editor.
+All Clojure editors connect to an external REPL process, either connecting to an existing process or starting a new process from the editor.
 
 | Approaches                    | Description                                                                                                        |
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------|
@@ -29,7 +29,6 @@ Open or select a Clojure buffer, this can be an `.edn`, `.clj`, `.cljc` or `.clj
 | Key bindings     | Description                                       |
 |------------------|---------------------------------------------------|
 | `, '` or `, m s` | `sesman-start` menu to start or connect to a REPL |
-|                  |                                                   |
 
 Select from one of the following types of REPL's
 * `cider-connect-clj` and `cider-jack-in-clj` for Clojure on the JVM
@@ -49,11 +48,13 @@ Once the REPL starts, [evaluate expressions using the source code buffer](/evalu
 
 `, e f` evaluate the current Clojure expression and show the results inline
 
+`, e e` evaluate the previous Clojure expression and show the results inline (useful for nested expressions)
+
 `, e ;` evaluate the current Clojure expression and show the results as a comment
 
 `SPC p a` toggle between matching source code and unit test buffers
 
-`, t a` run all test functions in the REPL using the cider test runner
+`, t a` run all test functions in the REPL using the cider test runner (evaluate changed code first)
 
 `, m q r` to restart the REPL (i.e. after adding a library as a dependency to the project)
 
