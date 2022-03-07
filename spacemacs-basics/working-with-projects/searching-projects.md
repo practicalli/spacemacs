@@ -34,7 +34,19 @@ Searching requires an external tool to be available on your system PATH. [Ripgre
 * [silver searcher (ag)](/alternative-tooling/silversearcher-ag.md)
 
 
-## Searching specific files
+## Ripgrep search tool options
+
+Option flags can be passed to the search tool binary to tailor the results returned in the helm-ag pop-up window.  The option flags can be used before or after the search pattern.
+
+`SPC h m rg` shows the man page for ripgrep which explains the options of that search tool.  Replace `rg` with the command line name of the search tool binary installed.
+
+Including options without their correct argument will show a warning, e.g. the `-g` option without a glob pattern or `-A` without a number.  Once the option has a valid value the error should be replaced by search results.
+
+![Spacemacs Helm-Ag globbing option error without pattern](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-project-wide-search-options-error.png)
+
+
+### Searching specific files
+
 Include or exclude specific files by their names or filename extensions.
 
 Use the `-g` option for a filename to search (globbing), or `-g!` for a filename to ignore.
@@ -48,7 +60,21 @@ Use the `-g` option for a filename to search (globbing), or `-g!` for a filename
 ![Spacemacs Helm-Ag ripgrep globbing not .md files](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-not-md.png)
 
 
-## Example search patterns
+### Showing more lines for each match
+
+`-A` option for ripgrep is used to show a number of lines after each match of the pattern.  `-A4` will show the 4 additional lines after the line containing a matching pattern.
+
+If there are multiple pattern matches in the same file within the scope of extra lines, then contiguous lines are shown with 4 lines after the final pattern line.
+
+`SPC /` with a pattern of `-A4 layout` will show each line containing the pattern layout and 4 lines after it.
+
+![Spacemacs Helm-Ag globbing option error without pattern](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-search-options-additional-lines.png)
+
+This option can also be combined with the `-g` option above.
+
+
+### Example search patterns
+
 Additional search patterns that work with `ripgrep` or `ag`.
 
 `-G*time` - search for the word "time" in all files
@@ -66,7 +92,8 @@ Additional search patterns that work with `ripgrep` or `ag`.
 Ripgrep documentation has many [regular expression examples](https://docs.rs/regex/1.3.6/regex/#syntax)
 
 
-## Searching hidden files
+### Searching hidden files
+
 Searching a project using `SPC /` and `SPC s p` will ignore hidden files, those that start with `.`
 
 `-- --hidden` or `-- -uu` after the search pattern to include hidden files in the search
@@ -80,7 +107,8 @@ scissors -- --hidden
 > #### Hint::Searching hidden files may slow searching
 
 
-## Ripgrep configuration and arguments
+### Ripgrep configuration and arguments
+
 Define an environment variable called `RIPGREP_CONFIG_PATH` set to the file name and path
 
 ```
@@ -100,5 +128,6 @@ export RIPGREP_CONFIG_PATH=~/.config/ripgrep.config
 
 
 ## References
+
 * https://github.com/BurntSushi/ripgrep
 * https://blog.burntsushi.net/ripgrep/
