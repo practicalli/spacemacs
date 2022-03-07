@@ -33,11 +33,16 @@ Searching requires an external tool to be available on your system PATH. [Ripgre
 * [Ripgrep install instructions](https://github.com/BurntSushi/ripgrep#installation)
 * [silver searcher (ag)](/alternative-tooling/silversearcher-ag.md)
 
-## Using Search tool options
+
+## Ripgrep search tool options
 
 Options can be passed to the search tool binary to tailor the results returned in the helm-ag pop-up window
 
-`SPC h m rg` shows the man page for ripgrep which explains the options of that search tool.
+`SPC h m rg` shows the man page for ripgrep which explains the options of that search tool.  Replace `rg` with the command line name of the search tool binary installed.
+
+Including options without their correct argument will show a warning, e.g. the `-g` option without a glob pattern or `-A` without a number.  Once the option has a valid value the error should be replaced by search results.
+
+![Spacemacs Helm-Ag globbing option error without pattern](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-project-wide-search-options-error.png)
 
 
 ### Searching specific files
@@ -52,10 +57,6 @@ Use the `-g` option for a filename to search (globbing), or `-g!` for a filename
 `-g!*.md map` will search for `map` for all files except those ending in `.md`
 
 ![Spacemacs Helm-Ag ripgrep globbing not .md files](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-not-md.png)
-
-When typing the `-g` option, helm will display a warning until a pattern is entered
-
-![Spacemacs Helm-Ag globbing option error without pattern](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-project-wide-search-options-error.png)
 
 
 ### Showing more lines for each match
