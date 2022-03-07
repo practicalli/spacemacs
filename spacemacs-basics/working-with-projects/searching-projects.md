@@ -17,6 +17,7 @@ Use `C-j` and `C-k` to move down and up through the search results.
 
 
 ## Open files from search results
+
 With a search open, `C-c C-f` enables `helm-follow`.  When moving through results with `C-j` and `C-k` the corresponding file is opened in the current buffer.
 
 Set `helm-follow-mode-persistent` to true in `.spacemacs` to remember the use of `C-c C-f` follow mode for helm actions.
@@ -28,6 +29,7 @@ Set `helm-follow-mode-persistent` to true in `.spacemacs` to remember the use of
 
 
 ## Search tool binary
+
 Searching requires an external tool to be available on your system PATH. [Ripgrep](https://github.com/BurntSushi/ripgrep) is the recommended search tool, although [silver searcher (ag)](/alternative-tooling/silversearcher-ag.md) is a viable alternative.  Using `grep` is noticeably slower and has fewer options for searching.
 
 * [Ripgrep install instructions](https://github.com/BurntSushi/ripgrep#installation)
