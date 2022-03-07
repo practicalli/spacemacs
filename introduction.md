@@ -2,7 +2,7 @@
 
 A practical guide to Spacemacs, a community driven Emacs configuration that makes it easy to use all the power of Emacs and Vim.  The guide contains specific sections on Clojure development, although the majority of the content is applicable to any language.
 
-This guide requires [Spacemacs Version 0.300, the Spacemacs develop branch](/install-spacemacs/).
+This guide requires [Spacemacs Version 0.300, the Spacemacs develop branch](/install-spacemacs/) (develop is now the default branch).
 
 {% youtube %}
 https://youtu.be/NDrpclY54E0
