@@ -10,7 +10,7 @@ Use `C-j` and `C-k` to move down and up through the search results.
 
 `M-n` and `M-p` will scroll through the search patterns whenever the search pop-up window is open
 
-![Spacemacs Helm-Ag ripgrep pattern search results](/images/spacemacs-helm-ag-ripgrep-pattern-search.png)
+![Spacemacs Helm-Ag ripgrep pattern search results](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-pattern-search.png)
 
 > #### Hint::Replacing text across a project
 > Use search results to [replace text across a project](/spacemacs-basics/evil-tools/replacing-text-across-projects.md).
@@ -33,22 +33,45 @@ Searching requires an external tool to be available on your system PATH. [Ripgre
 * [Ripgrep install instructions](https://github.com/BurntSushi/ripgrep#installation)
 * [silver searcher (ag)](/alternative-tooling/silversearcher-ag.md)
 
+## Using Search tool options
 
-## Searching specific files
+Options can be passed to the search tool binary to tailor the results returned in the helm-ag pop-up window
+
+`SPC h m rg` shows the man page for ripgrep which explains the options of that search tool.
+
+
+### Searching specific files
 Include or exclude specific files by their names or filename extensions.
 
 Use the `-g` option for a filename to search (globbing), or `-g!` for a filename to ignore.
 
 `-g*.clj map` shows only results of searching for `map` from files ending in `.clj`
 
-![Spacemacs Helm-Ag ripgrep globbing .clj files](/images/spacemacs-helm-ag-ripgrep-globbing-clj.png)
+![Spacemacs Helm-Ag ripgrep globbing .clj files](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-clj.png)
 
 `-g!*.md map` will search for `map` for all files except those ending in `.md`
 
-![Spacemacs Helm-Ag ripgrep globbing not .md files](/images/spacemacs-helm-ag-ripgrep-globbing-not-md.png)
+![Spacemacs Helm-Ag ripgrep globbing not .md files](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-not-md.png)
+
+When typing the `-g` option, helm will display a warning until a pattern is entered
+
+![Spacemacs Helm-Ag globbing option error without pattern](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-project-wide-search-options-error.png)
 
 
-## Example search patterns
+### Showing more lines for each match
+
+`-A` option for ripgrep is used to show a number of lines after each match of the pattern.  `-A4` will show the 4 additional lines after the line containing a matching pattern.
+
+If there are multiple pattern matches in the same file within the scope of extra lines, then contiguous lines are shown with 4 lines after the final pattern line.
+
+`SPC /` with a pattern of `-A4 layout` will show each line containing the pattern layout and 4 lines after it.
+
+![Spacemacs Helm-Ag globbing option error without pattern](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-search-options-additional-lines.png)
+
+This option can also be combined with the `-g` option above.
+
+
+### Example search patterns
 Additional search patterns that work with `ripgrep` or `ag`.
 
 `-G*time` - search for the word "time" in all files
@@ -66,7 +89,7 @@ Additional search patterns that work with `ripgrep` or `ag`.
 Ripgrep documentation has many [regular expression examples](https://docs.rs/regex/1.3.6/regex/#syntax)
 
 
-## Searching hidden files
+### Searching hidden files
 Searching a project using `SPC /` and `SPC s p` will ignore hidden files, those that start with `.`
 
 `-- --hidden` or `-- -uu` after the search pattern to include hidden files in the search
@@ -80,7 +103,7 @@ scissors -- --hidden
 > #### Hint::Searching hidden files may slow searching
 
 
-## Ripgrep configuration and arguments
+### Ripgrep configuration and arguments
 Define an environment variable called `RIPGREP_CONFIG_PATH` set to the file name and path
 
 ```
