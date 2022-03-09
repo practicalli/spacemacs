@@ -1,11 +1,14 @@
 # Configure default push remote branch
+
 The first time you pull changes from a repository, or clone via Magit, a prompt in the mini-buffer asks if the current remote branch should be used as the default remote repository to push to.
 
 `P p` will push changes to the default push remote repository.  A list of remotes is shown if no default remote is set.
 
 ![Spacemacs Magit push default upstream](/images/spacemacs-magit-push-remote-default.png)
 
+
 ## Changing the default remote
+
 The default push remote can be selected from remote repositories added as a remote, by cloning or using the `M` remote menu in the Magit Status buffer.
 
 `P` to open the push menu

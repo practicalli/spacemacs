@@ -1,4 +1,5 @@
 # Pull Changes
+
 Commits can be pulled or fetched from remote repositories.
 
 `SPC g s` to open Magit Status buffer
@@ -15,6 +16,7 @@ Use `e` to pull from a different repository.
 
 
 ## Rebase when pull
+
 `SPC g s` to open Magit Status buffer
 
 `F` to open the pull menu
@@ -25,6 +27,7 @@ Use `e` to pull from a different repository.
 
 
 ## Rebase local commits
+
 `SPC g s` to open Magit Status buffer
 
 `F` to open the pull menu
