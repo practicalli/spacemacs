@@ -226,6 +226,7 @@
         * [issues](source-control/magit/forge/issues.md)
         * [pull requests](source-control/magit/forge/pull-requests.md)
         * [forks](source-control/magit/forge/forks.md)
+        * [Add database](source-control/magit/forge/add-database.md)
     * [Changing History](source-control/magit/changing-history.md)
         * [Squash commits](source-control/magit/commit-squash.md)
         * [Interactive Rebasing](source-control/magit/interactive-rebasing.md)
