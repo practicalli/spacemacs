@@ -1,4 +1,5 @@
 # Configure default upstream remote branch
+
 The first time you pull changes from a repository (or if cloning via Magit), the default upstream remote and branch is set.
 
 `F u` will pull all the changes from the default upstream remote branch.
@@ -7,6 +8,7 @@ The first time you pull changes from a repository (or if cloning via Magit), the
 
 
 ## Changing the default remote
+
 To change the default upstream, first unset the default value and then add a new default.
 
 `F` to open the pull menu

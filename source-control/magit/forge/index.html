@@ -85,7 +85,7 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="issues.html" />
+    <link rel="next" href="add-database.html" />
     
     
     <link rel="prev" href="../remote-repositories/configure-default-push.html" />
@@ -2845,12 +2845,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="5.2.8.1" data-path="../remote-repositories/clone-fork.html">
+        <li class="chapter " data-level="5.2.8.1" data-path="../remote-repositories/add-remote.html">
             
-                <a href="../remote-repositories/clone-fork.html">
+                <a href="../remote-repositories/add-remote.html">
             
                     
-                    Clone and Fork
+                    Add Remote
             
                 </a>
             
@@ -2858,7 +2858,20 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2.8.2" data-path="../remote-repositories/checkout-remote-branch.html">
+        <li class="chapter " data-level="5.2.8.2" data-path="../remote-repositories/clone.html">
+            
+                <a href="../remote-repositories/clone.html">
+            
+                    
+                    Clone
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.8.3" data-path="../remote-repositories/checkout-remote-branch.html">
             
                 <a href="../remote-repositories/checkout-remote-branch.html">
             
@@ -2871,7 +2884,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2.8.3" data-path="../remote-repositories/pull-changes.html">
+        <li class="chapter " data-level="5.2.8.4" data-path="../remote-repositories/pull-changes.html">
             
                 <a href="../remote-repositories/pull-changes.html">
             
@@ -2884,7 +2897,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2.8.4" data-path="../remote-repositories/push-changes.html">
+        <li class="chapter " data-level="5.2.8.5" data-path="../remote-repositories/push-changes.html">
             
                 <a href="../remote-repositories/push-changes.html">
             
@@ -2897,7 +2910,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2.8.5" data-path="../remote-repositories/try-pull-requests.html">
+        <li class="chapter " data-level="5.2.8.6" data-path="../remote-repositories/try-pull-requests.html">
             
                 <a href="../remote-repositories/try-pull-requests.html">
             
@@ -2910,7 +2923,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2.8.6" data-path="../remote-repositories/configure-default-upstream.html">
+        <li class="chapter " data-level="5.2.8.7" data-path="../remote-repositories/configure-default-upstream.html">
             
                 <a href="../remote-repositories/configure-default-upstream.html">
             
@@ -2923,7 +2936,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2.8.7" data-path="../remote-repositories/configure-default-push.html">
+        <li class="chapter " data-level="5.2.8.8" data-path="../remote-repositories/configure-default-push.html">
             
                 <a href="../remote-repositories/configure-default-push.html">
             
@@ -2955,12 +2968,25 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="5.2.9.1" data-path="issues.html">
+        <li class="chapter " data-level="5.2.9.1" data-path="add-database.html">
+            
+                <a href="add-database.html">
+            
+                    
+                    Add database
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2.9.2" data-path="issues.html">
             
                 <a href="issues.html">
             
                     
-                    issues
+                    Issues
             
                 </a>
             
@@ -2968,12 +2994,12 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2.9.2" data-path="pull-requests.html">
+        <li class="chapter " data-level="5.2.9.3" data-path="pull-requests.html">
             
                 <a href="pull-requests.html">
             
                     
-                    pull requests
+                    Pull Requests
             
                 </a>
             
@@ -2981,12 +3007,12 @@
             
         </li>
     
-        <li class="chapter " data-level="5.2.9.3" data-path="forks.html">
+        <li class="chapter " data-level="5.2.9.4" data-path="forks.html">
             
                 <a href="forks.html">
             
                     
-                    forks
+                    Forks
             
                 </a>
             
@@ -3943,22 +3969,12 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="magit-forge---issues-prs-and-forking">Magit Forge - issues, PRs and forking</h1>
-<p>Magit Forge is used to talk to GitHub, GitLab and similar services, collectively referred to as forges.</p>
-<p>Forge can retrieve the list of issues and pull requests from a remote repository. Issues, pull requests and forks can be created on a remote repository.</p>
+<p>Magit Forge connects to the GitHub &amp; GitLab, collectively referred to as forges.  Magic Forge uses the APIs of these forges to manage issue and pull requests.</p>
+<p>Forge can retrieve the list of issues and pull requests from a remote repository.</p>
+<p>Issues, pull requests and forks can be created on a remote repository, once the repository has been added to the local dictionary.</p>
 <p><code>@</code> opens the forge menu from the Magit Status buffer, <code>, g s</code>, and therefore requires a local Git repository.</p>
 <p><img src="../../../images/spacmacs-magit-forge-menu.png" alt="Spacemacs Magit Forge"></p>
 <div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="requires-forge-configuration"><i class="fa fa-lightbulb-o"></i> Requires Forge Configuration</h3></div><div class="panel-body"><p><a href="../../forge-configuration.html">Configure forge with your remote repository</a> before using the forge commands.</p></div></div>
-<h2 id="using-magit-forge">Using Magit Forge</h2>
-<p>Add each repository to the forge database before running other forge commands.  The create fork command will automatically add the new repository to the forge.</p>
-<p><code>a</code> to add a remote repository to the forge database, defaulting to the URL of the current remote repository for the project.</p>
-<p><img src="../../../images/spacemacs-magit-forge-add-repository-name.png" alt="Spacemacs Magit Forge - add repository to database"></p>
-<p><code>r</code> switches between forks where multiple have been added to the forge database.</p>
-<p><img src="../../../images/spacemacs-magit-forge-repository-selection.png" alt="Spacemacs Magit Forge - repositories select"></p>
-<p>Using forge commands before adding the repository will cause an error</p>
-<p><img src="../../../images/spacemacs-magit-forge-require-forge-add-repository.png" alt="Spacemacs Magit - forge add repository"></p>
-<h2 id="fetching-topics-issues-and-pull-request-lists">Fetching topics (issues and pull request lists)</h2>
-<p><code>f f</code> will fetch issues and pull requests based on the <code>forge-topic-list-limit</code>.</p>
-<p>The list of issues and pull requests will show in the Magit Status buffer.</p>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -3991,7 +4007,7 @@
                 </a>
                 
                 
-                <a href="issues.html" class="navigation navigation-next " aria-label="Next page: issues">
+                <a href="add-database.html" class="navigation navigation-next " aria-label="Next page: Add database">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -4002,7 +4018,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Forge for GitHub/GitLab","level":"5.2.9","depth":2,"next":{"title":"issues","level":"5.2.9.1","depth":3,"path":"source-control/magit/forge/issues.md","ref":"source-control/magit/forge/issues.md","articles":[]},"previous":{"title":"Configure default push","level":"5.2.8.7","depth":3,"path":"source-control/magit/remote-repositories/configure-default-push.md","ref":"source-control/magit/remote-repositories/configure-default-push.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"source-control/magit/forge/index.md","mtime":"2022-03-07T23:47:36.574Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-07T23:48:51.449Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Forge for GitHub/GitLab","level":"5.2.9","depth":2,"next":{"title":"Add database","level":"5.2.9.1","depth":3,"path":"source-control/magit/forge/add-database.md","ref":"source-control/magit/forge/add-database.md","articles":[]},"previous":{"title":"Configure default push","level":"5.2.8.8","depth":3,"path":"source-control/magit/remote-repositories/configure-default-push.md","ref":"source-control/magit/remote-repositories/configure-default-push.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"source-control/magit/forge/index.md","mtime":"2022-03-09T22:15:53.094Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-09T22:16:54.419Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
