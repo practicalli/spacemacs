@@ -1,8 +1,10 @@
 # Forge Pull Requests
 
-Never leave Emacs when creating a pull request for GitHub / GitLab ever again.
+Create a pull request on GitHub or GitLab within the comfort of Spacemacs, using all the usual editor tools to write pull request descriptions.
 
-Magit Forge allows you to create a pull request from a branch and will even used a Pull Request template if added to the repository.
+Magit Forge will use a Pull Request template if one is added to the repository.
+
+
 
 
 ## Create a pull request
