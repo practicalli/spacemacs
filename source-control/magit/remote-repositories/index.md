@@ -1,24 +1,20 @@
 # Working with Remote Repositories
 
-`SPC g s` opens Magit Status (equivalent to git status)
+Magit provides tools for working with remote repositories
 
-`M` shows pop-up to work with remote repositories
+* [add a remote repository](add-remote.md) to a local repository
+* [clone remote repositories](clone.md)
+* [checkout remote branches and track them](checkout-remote-branch.md), including the [branch of a pull request](try-pull-requests.md)
+* [pull commits](pull-changes.md)
+* [push commits](push-changes.md)
 
-[![Spacemacs Magit - Remotes menu](/images/spacemacs-magit-remotes-menu.png)](/images/spacemacs-magit-remotes-menu.png)
+Magit Forge can also [create and fork a remote repository](../forge/forks.md), as well as [manage issues and pull requests](../forge/).
 
 
-## Adding a remote repository
+## Demo - Create a local Git Repository and add a GitHub remote
 
-Open Magit status using `SPC g s`.
-
-`M` opens the Remotes menu, showing a popup list of actions
-
-`a` prompts for the remote name, e.g. origin, followed by a prompt for the URL of the repository, e.g. a github / gitlab address.  The final prompt asks to set this new remote as the default, saying yes adds this to the `P` push menu.
+Adding a remote repository starts at 3 minutes and 50 seconds into this video. -->
 
 {% youtube %}
-https://www.youtube.com/embed/AdEOazt1rD0#t=3m50s?autoplay=1loop=1
+https://www.youtube.com/embed/AdEOazt1rD0
 {% endyoutube %}
-
-> #### Hint:: Jump to 3 minutes 50 seconds
-> Adding a remote repository starts at 3 minutes and 50 seconds into this video.
-> I will add an edited version at some point.
