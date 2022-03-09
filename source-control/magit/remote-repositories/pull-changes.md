@@ -33,4 +33,4 @@ Use `e` to pull from a different repository.
 
 `u` to pull from the upstream remote repository.  If this is not currently set, then a prompt appears to select the default upstream.
 
-If there are conflicts between the commits on the remote and local repositories then use the ediff tool or edit the files and delete the conflict markers and resolve conflicting text change.  Save the change and resume the rebase.
+If there are conflicts between the commits on the remote and local repositories then use the ediff tool or edit the files and delete the conflict markers and resolve conflicting text change.  Save the change and `r` to resume the rebase.
