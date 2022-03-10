@@ -54,9 +54,11 @@ Finally, delete the `~/.authinfo` file, so the token is no longer stored as plai
 
 
 ## Configure Spacemacs to use authentication
+
 Add the preferred file in which to store your token, by default this is `.authinfo`.  It is recommended to store this in `~/.authinfo.gpg`
 
 Add `auth-sources` to specify the location of the encrypted token file in the `dotspacemacs/user-config` section of your `.spacemacs` file
+
 ```elisp
   ;; Set the files that are searched for writing tokens
   ;; by default ~/.authinfo will be used
