@@ -5,8 +5,6 @@ Create a pull request on GitHub or GitLab within the comfort of Spacemacs, using
 Magit Forge will use a Pull Request template if one is added to the repository.
 
 
-
-
 ## Create a pull request
 
 Assumes you have a fork and original repository as remotes added to the local git repository.
@@ -36,6 +34,19 @@ The description of the change is show and can be edited for the pull request des
 `, ,` to confirm the message and create the pull request on the upstream repository. `, k` to cancel the pull request.
 
 ![Spacemacs Magit Forge - create pull request text](/images/spacemacs-magit-forge-create-pull-request-text.png)
+
+
+## Create a draft pull request
+
+A pull request can be marked as a draft when created by Magit Forge, to communicate that the PR is not ready for review or approval.
+
+With the pull request buffer opened, add yaml style front matter to the to define the PR as a draft.
+
+```yaml
+---
+draft: true
+---
+```
 
 
 ## Example pull request
