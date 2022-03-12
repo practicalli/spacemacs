@@ -1,7 +1,10 @@
 # Inspect Clojure values
+
 `, d v` is the Cider Inspector menu used to efficiently page through large data sets and easily navigate through nested data structures.
 
 The Cider Inspector opens in a new buffer that shows the underlying type of the value and all of its details. of the current symbol under the cursor.  This provides a very readable way to understand the value and browse through larger data sets.
+
+The Cider Inspector is used in the [REPL driven development with Spacemacs video](https://youtu.be/NDrpclY54E0).
 
 > #### Hint::Following the results in Cider Inspector
 > The Cider Inspector will show the results of any evaluation, from `, e` or `, d v` menus, whilst the buffer is visible.
