@@ -149,7 +149,6 @@
         * [Repeating Commands](structural-editing/repeating-commands.md)
         <!-- * [Splicing](structural-editing/lisp-state-splicing.md) -->
 * [Snippets](snippets/index.md)
-/home/practicalli/projects/practicalli/books/spacemacs/snippets/yasnippets/add-custom-snippets.md
     * [Yasnippets](snippets/yasnippets/index.md)
         * [Built-in Snippets](snippets/yasnippets/built-in-snippets.md)
         * [Clojure Snippets](snippets/yasnippets/clojure-snippets-reference.md)
@@ -174,7 +173,7 @@
         * [Extracting](refactor/clj-refactor/extracting.md)
         * [Formatting Code](refactor/clj-refactor/formatting-code.md)
 * [Debug Clojure](debug-clojure/index.md)
-    * [Understanding errors](debug-clojure/understanding-errors.md)
+    <!-- * [Understanding errors](debug-clojure/understanding-errors.md) -->
     * [Inspect values](debug-clojure/inspect-values.md)
     * [Cider debug](debug-clojure/cider-debug.md)
     * [Sayid debug & profile](debug-clojure/sayid-debug.md)
