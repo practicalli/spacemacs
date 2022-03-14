@@ -41,7 +41,7 @@ If multiple packages are causing issues after an update, or you are short on tim
 
 ![Spacemacs - Home buffer - Rollback package update](/images/spacemacs-home-rollback-package-update.png)
 
-## Pinning packages / using a recipe
+## Emacs package recipe for specific version
 Packages are installed from MELPA, which builds daily packages from the latest commit in their online repository (GitHub/GitLab).
 
 If a newly installed package has an issue, rather than rollback all the packages upgraded, configure a package recipe to point to an older version of the package.
