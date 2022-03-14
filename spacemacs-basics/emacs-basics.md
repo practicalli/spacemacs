@@ -1,47 +1,68 @@
 # Emacs Basics - Frames Buffers Windows
 
-Understanding the basic terminology will help you make the most out of Spacemacs and allow very efficient use.
+Understanding the basic terminology will help make the most out of Spacemacs and allow very effective use.
+
+![Emacs Terminology - Structure of Emacs](/images/emacs-terminology-structure.png)
 
 | Terminology | Description                                                                                                                                 |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | File        | A file on the file system                                                                                                                   |
-| Buffer      | A container to display a file or other information                                                                                          |
-| Window      | Contains a buffer, allowing you to organise multiple buffers in a frame                                                                     |
+| Buffer      | A container to display a file or other information (file navigation, REPL, data inspector, test report, etc.)                                                |
+| Window      | Contains a buffer, organises multiple buffers in a frame                                                                     |
 | Frame       | Holds one or more windows. Opening another frame gives you another instance of Emacs                                                        |
 | Status bar  | Information about current window and buffer, e.g. window number, buffer mode & name, location of cursor. Also referred to as the mode line. |
 | Mini-buffer | A command line for Emacs - shows commands and some results, acts as an interactive prompt for some commands                                 |
 
-![Emacs Terminology - Structure of Emacs](/images/emacs-terminology-structure.png)
+Spacemacs also adds [Layouts to manage a set of buffers within the scope of a project and Workspaces allow multiple window configurations](working-with-projects/layouts.md)
 
 
 ## Working with Frames
 
-When you open Emacs for the first time you are presented with a frame that contains a single window.
+By default, Spacemacs opens with a frame that contains a single window, that window containing the Spacemacs home buffer.
 
-If you run Emacs again, or if you make a new frame `SPC F n`, then a second frame will appear containing a single window.
+`SPC F n` creates a new frame containing a single window that contains a buffer.
 
-If you kill a frame, only that frame closes unless its the last Emacs frame running, then Emacs itself closes.
+`SPC F d` closes the current frame, unless its the last Emacs frame running, then Emacs itself closes.
 
-If you quit Emacs, then all frames are closed.
+`SPC q q` to quit Emacs closes all frames.
 
 
 ## Working with windows
 
-There can be one or more windows in Emacs.  Windows are used to split up the Emacs frame into sections.  This allows you to display multiple buffers (files, REPL, error messages, etc) at the same time.
+Each frame contains one or more windows. Each window is assigned a unique number when created, even across multiple frames.
 
-Each window has a number enabling you to jump between windows, e.g. `SPC 1` takes you to window number 1.
+`SPC` followed by a number jumps to the window with that number, e.g. `SPC 1` jumps to window number 1.
 
-Some of the common windows functions include:
+Windows are used to display multiple buffers (files, REPL, error messages, etc) within the same frame
 
-| keybinding | action                                                |
-|------------|-------------------------------------------------------|
-| `SPC w`    | Opens Window menu                                     |
-| `SPC w .`  | Open Window transient state menu for multiple command |
-| `SPC w 2`  | 2 window layout - shows current buffer in new window  |
-| `SPC w 3`  | 3 window layout - shows current buffer in new windows |
-| `SPC w m`  | maximise the current buffer                           |
-| `SPC w d`  | delete current window                                 |
-| `SPC t g`  | toggles golden ratio view of windows                  |
+| Key Binding | Description                                           |
+|-------------|-------------------------------------------------------|
+| `SPC w .`   | Open Window transient state menu for multiple command |
+| `SPC w 2`   | 2 window layout - shows current buffer in new window  |
+| `SPC w 3`   | 3 window layout - shows current buffer in new windows |
+| `SPC w m`   | maximise the current buffer                           |
+| `SPC w d`   | delete current window                                 |
+| `SPC t g`   | toggles golden ratio view of windows                  |
+
+
+## Working with windows
+
+A buffer is the fundamental presentation of information in Emacs.  Buffers can show the contents of a file, search results in a helm-popup, an interactive process e.g. REPL buffer, etc.
+
+`SPC TAB` toggles between the current buffer and the last active buffer
+
+| Key Binding | Description                                                                              |
+|-------------|------------------------------------------------------------------------------------------|
+| `SPC b .`   | Open buffer transient state menu for multiple command                                    |
+| `SPC b b`   | Show list of open buffers and recently opened buffers                                    |
+| `SPC b d`   | Kill current buffer                                                                      |
+| `SPC b h`   | Open Spacemacs Home buffer                                                               |
+| `SPC b m`   | Open Spacemacs `*messages*` buffer - log of Emacs actions and commands                   |
+| `SPC b s`   | Open Spacemacs scratch buffer - a persistent buffer for random note taking               |
+| `SPC b w`   | Toggle read-only mode on a buffer (Spacemacs Org docs open in Read-only mode by default) |
+| `SPC b x`   | Kill buffer and the window containing it                                                 |
+| `SPC b R`   | Revert buffer to file saved on disk (causes .dir-locals.el to load into Emacs)           |
+| `SPC b Y`   | Copy contents of a whole buffer                                                          |
 
 
 ## Golden Ratio
