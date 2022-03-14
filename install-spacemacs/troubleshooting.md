@@ -42,9 +42,21 @@ If multiple packages are causing issues after an update, or you are short on tim
 ![Spacemacs - Home buffer - Rollback package update](/images/spacemacs-home-rollback-package-update.png)
 
 ## Pinning packages / using a recipe
-If a package has an issue in its newest version, you can configure spacemacs to use an older version of the package.
+Packages are installed from MELPA, which builds daily packages from the latest commit in their online repository (GitHub/GitLab).
 
-* [Spacemacs - managing broken Emacs packages](http://jr0cket.co.uk/2017/03/spacemacs-managing-broken-emacs-packages.html)
+If a newly installed package has an issue, rather than rollback all the packages upgraded, configure a package recipe to point to an older version of the package.
+
+For example, pin CIDER to an earlier version by adding the following recipe to `dotspacemacs/additional-packages`
+
+```elisp
+(cider :location
+   (recipe :fetcher github
+           :repo "clojure-emacs/cider"
+           :commit "ae376429a8cf22b82a9e18ff844bdfbe5fc7ecc1"))
+```
+
+Delete the package from `~/.emacs.d/elpa/` directory and reload the Spacemacs configuration, `SPC f e R` (or restart Emacs `SPC q r`)
+
 
 ## Scorched Earth approach
 Delete `~/.emacs.d/elpa` director and `SPC q r` to restart Spacemacs.  This will remove any complied Emacs packages that may have become corrupted or replace older packages that are now causing issues.
