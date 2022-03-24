@@ -1,5 +1,6 @@
-# Evil Basics - Vim Style Editing
-Evil provides multiple editing states, [multi-modal editing](/why-spacemacs/states.md), simplifying keybindings by reducing the need for simultaneous key presses.
+# Evil for Vim Style Editing
+
+[Evil (extensible vi layer for Emacs)](https://github.com/emacs-evil/evil) provides multiple editing states, [multi-modal editing](/why-spacemacs/states.md), simplifying keybindings by reducing the need for simultaneous key presses.
 
 Spacemacs provides Evil editing states and simplified keybindings throughout all layers and major modes.
 
@@ -17,8 +18,9 @@ First get familiar with **normal**, **insert** and **visual** states.  Then when
 > Evil normal state should be used most of the time, unless you are writing code or creating lots of text.
 
 
-## Learning Vim-style editing
-Vim style editing is arguably the most effective way for touch typists to use a text editor and you can edit and manipulate text far faster once you are practiced.
+## Learn Vim-style editing
+
+Vim-style editing is arguably the most effective way to work with text, supporting changes as much thorugh through text manipulation as editing text.  Once practised, vim-style editing is far faster than uni-mode eiting.
 
 The recommended way to learn vim style editing is to practice and ideally use it for everything you do.
 
@@ -31,16 +33,7 @@ To help make Vim style editing become a sub-conscious act you should [learn to s
 [![Vim Adventures - learn VIM while playing a game](/images/vim-adventures.png)](https://vim-adventures.com/)
 
 
-## Lecture and exercises on Vim
-A very interesting lecture on editors, focused on learning Vim and understanding why its so powerful.  [Transcript and exercises](https://missing.csail.mit.edu/2020/editors/) are also available.
-
-{% youtube %}
-https://youtu.be/a6Q8Na575qc
-{% endyoutube %}
-
-
-
-## Other learning resource for Vim include:
+## Learning resource for Evil
 
 * [Spacemacs: Migrating from Vim](http://spacemacs.org/doc/VIMUSERS.html)
 * [Spacemacs Vim Cheatsheet](https://simpletutorials.com/c/3036/Spacemacs)
@@ -49,3 +42,10 @@ https://youtu.be/a6Q8Na575qc
 * [Vim Casts](http://vimcasts.org/)
 * [Editing as a power user - Vim to Spacemacs](https://steemit.com/vim/@hansvb/text-editing-as-a-power-user-from-vim-to-spacemacs-or-how-to-get-things-done)
 * [Vim versus Spacemacs](https://www.slant.co/versus/42/69/~vim_vs_spacemacs)
+
+
+A focused on learning Vim and understanding why its so powerful.  [Transcript and exercises](https://missing.csail.mit.edu/2020/editors/) are also available.
+
+{% youtube %}
+https://youtu.be/a6Q8Na575qc
+{% endyoutube %}
