@@ -957,12 +957,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="../../spacemacs-basics/vim-basics.html">
+        <li class="chapter " data-level="3.2" data-path="../../spacemacs-basics/evil/">
             
-                <a href="../../spacemacs-basics/vim-basics.html">
+                <a href="../../spacemacs-basics/evil/">
             
                     
-                    Vim Basics
+                    Evil Basics
             
                 </a>
             
@@ -971,9 +971,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.2.1" data-path="../../spacemacs-basics/evil-states.html">
+        <li class="chapter " data-level="3.2.1" data-path="../../spacemacs-basics/evil/editing-states.html">
             
-                <a href="../../spacemacs-basics/evil-states.html">
+                <a href="../../spacemacs-basics/evil/editing-states.html">
             
                     
                     Evil States
@@ -3972,17 +3972,17 @@
 <tr>
 <td>cider-completion-use-context</td>
 <td></td>
-<td>When true, uses context at point to improve completion suggestions</td>
+<td><code>true</code> - use context at point to improve completion suggestions</td>
 </tr>
 <tr>
 <td>cider-annotate-completion-candidates</td>
 <td></td>
-<td>When true, annotate completion candidates with some extra information</td>
+<td><code>true</code> - annotate completion candidates</td>
 </tr>
 <tr>
 <td>cider-annotate-completion-function</td>
 <td></td>
-<td>annotations for completion candidates are formatted. Must be a function that takes two arguments: the abbreviation of the candidate type according to `cider-completion-annotations-alist&apos; and the candidate&apos;s namespace</td>
+<td>function to format annotations for completion candidates - takes 2 arguments: abbreviation candidate type (<code>cider-completion-annotations-alist</code>) and candidate namespace</td>
 </tr>
 <tr>
 <td>cider-completion-annotations-alist</td>
@@ -3992,7 +3992,7 @@
 <tr>
 <td>cider-completion-annotations-include-ns</td>
 <td></td>
-<td>Pass namespace to <code>cider-annotate-completion-function&apos;,</code>&apos;always<code>passed if namespace is available.</code>&apos;unqualified` only pass namespace if not namespace-qualified.</td>
+<td>Pass namespace to <code>cider-annotate-completion-function</code>, <code>&apos;always</code> passed if namespace is available. <code>&apos;unqualified</code> only pass namespace if not namespace-qualified.</td>
 </tr>
 </tbody>
 </table>
@@ -4008,48 +4008,48 @@
 <tbody>
 <tr>
 <td>cider-eval-spinner-type</td>
-<td>&apos;progress-bar</td>
-<td>Type of evaluation spinner (<code>describe-variable spinner-types</code>)</td>
+<td><code>&apos;progress-bar</code></td>
+<td>Type of evaluation spinner <code>(describe-variable spinner-types)</code></td>
 </tr>
 <tr>
 <td>cider-show-eval-spinner</td>
 <td><code>t</code></td>
-<td>show evaluation spinner in mode line</td>
+<td>Show evaluation spinner in mode line</td>
 </tr>
 <tr>
 <td>cider-eval-spinner-delay</td>
 <td><code>1</code></td>
-<td>Time (seconds) elapsed before evaluation spinner shown (default: 1)</td>
+<td>Time (seconds) elapsed before evaluation spinner shown (default: <code>1</code>)</td>
 </tr>
 <tr>
 <td>cider-enhanced-cljs-completion-p</td>
 <td><code>t</code></td>
-<td>- enable dynamic cljs completions. Expressions at point evaluated, resulting value are used to compute completions.&quot;</td>
+<td>Enable dynamic cljs completions. Expressions at point evaluated, resulting value are used to compute completions</td>
 </tr>
 <tr>
 <td>cider-print-fn</td>
-<td></td>
-<td>Function use for printing. <code>&apos;pprint</code> clojure.pprint, <code>pr</code> <code>clojure.core/pr</code>, <code>fipp</code> fast idiomatic pprint, <code>puget</code> serialisation on top of <code>fipp</code>, <code>zprint</code> zprint library, <code>nil</code> defer to REPL, namespace qualified var (args: object to print, java.io.PrintWriter, option map)</td>
+<td><code>nil</code></td>
+<td>Pretty print function: <code>&apos;pprint</code> clojure.pprint, <code>pr</code> <code>clojure.core/pr</code>, <code>fipp</code> fast idiomatic pprint, <code>puget</code> serialised <code>fipp</code>, <code>zprint</code> zprint library, <code>nil</code> defer to REPL</td>
 </tr>
 <tr>
 <td>cider-print-options</td>
 <td><code>nil</code></td>
-<td>options map passed to <code>cider-print-fn&apos;, pprint example:</code>&apos;((\&quot;length\&quot; 50) (\&quot;right-margin\&quot; 70))`</td>
+<td>Options map passed to <code>cider-print-fn</code>, pprint example: <code>&apos;((\&quot;length\&quot; 50) (\&quot;right-margin\&quot; 70))</code></td>
 </tr>
 <tr>
 <td>cider-print-quota</td>
 <td><code>(* 1024 1024)</code></td>
-<td>hard limit on the number of bytes to return from any printing operation, <code>nil</code> for no limit</td>
+<td>Hard limit on the number of bytes to return from any printing operation, <code>nil</code> for no limit</td>
 </tr>
 <tr>
 <td>cider-print-buffer-size</td>
 <td><code>(* 4 1024)</code></td>
-<td>chunk size in bytes for print streaming. Smaller chunks, faster feedback and smaller results (only a single chunk result can be font-locked)</td>
+<td>Chunk size (bytes) for print streaming. Smaller chunks, faster feedback and smaller results (only single chunk result can be font-locked)</td>
 </tr>
 <tr>
 <td>cider-filtered-namespaces-regexps</td>
 <td></td>
-<td>filter var/symbol/namespace with list of Clojure regex patters (double backslashes as passed through CIDER middleware)</td>
+<td>Filter var/symbol/namespace with list of Clojure regex patters (double backslashes as passed through CIDER middleware)</td>
 </tr>
 </tbody>
 </table>
@@ -4066,27 +4066,27 @@
 <tr>
 <td>cider-eldoc-max-num-sexps-to-skip</td>
 <td><code>30</code></td>
-<td>The maximum number of sexps to skip while searching the beginning of current sexp.</td>
+<td>Maximum number of sexps to skip while searching the beginning of current sexp</td>
 </tr>
 <tr>
 <td>cider-eldoc-ns-function</td>
 <td><code>#&apos;identity</code></td>
-<td>Function returning a ns string to be used by eldoc. Takes a namespace name as argument. Convenience functions: <code>cider-abbreviate-ns&apos;, and</code>cider-last-ns-segment&apos;.</td>
+<td>Function returning a ns string to eldoc. Takes namespace name as argument. Convenience functions: <code>cider-abbreviate-ns</code>, and <code>cider-last-ns-segment</code></td>
 </tr>
 <tr>
 <td>cider-eldoc-max-class-names-to-display</td>
 <td><code>3</code></td>
-<td>Maximum number of classes to display in an eldoc string. An eldoc string for Java interop forms can have a number of classes prefixed to it, when the form belongs to more than 1 class.  When not nil, only display the names of first <code>cider-eldoc-max-class-names-to-display&apos; classes and add a</code>&quot;&amp; x more&quot;` suffix. Otherwise, all the classes are displayed.&quot;</td>
+<td>Maximum number of classes to display in eldoc string (Java interop forms may have several classes), with <code>&quot;&amp; x more&quot;</code> suffix. <code>nil</code> - all classes are displayed</td>
 </tr>
 <tr>
 <td>cider-eldoc-display-for-symbol-at-point</td>
 <td><code>t</code></td>
-<td><code>t</code> display eldoc for symbol at point, e.g. (map inc ...) when the cursor is over inc its eldoc is displayed.  <code>nil</code> always display eldoc for first symbol of the sexp.</td>
+<td><code>t</code> display eldoc for symbol at point.  <code>nil</code> always display eldoc for first symbol of the sexp.</td>
 </tr>
 <tr>
 <td>cider-eldoc-display-context-dependent-info</td>
 <td><code>nil</code></td>
-<td><code>t</code> display context dependent info in the eldoc. CIDER will try to add expected function arguments based on the current context, for example for the datomic.api/q function where it will show the expected inputs of the query at point</td>
+<td><code>t</code> display context dependent info in the eldoc. CIDER adds expected function arguments based on the current context</td>
 </tr>
 </tbody>
 </table>
@@ -4103,22 +4103,26 @@
 <tr>
 <td>cider-debug-prompt</td>
 <td><code>&apos;overlay</code></td>
-<td>Where to show keys while debugging. <code>overlay&apos; show debug keys in an overlay above the current function.</code>minibuffer&apos; show debug keys in the minibuffer along with the return value.   <code>t</code> shows as overlay and minibuffer. <code>nil</code> don&apos;t show debug keys at all.</td>
+<td>Position of debug key binding menu. <code>overlay</code> overlay above the current function. <code>minibuffer</code> in minibuffer with return value. <code>t</code> overlay and minibuffer. <code>nil</code> no menu</td>
 </tr>
 <tr>
 <td>cider-debug-use-overlays</td>
 <td><code>t</code></td>
-<td>Highlight debugging information with overlays. Same values as <code>cider-use-overlays&apos;, but only applies to values displayed during debugging sessions. To control the overlay that lists possible keys above the current function, configure</code>cider-debug-prompt&apos; instead.</td>
+<td>Highlight debug information with overlays. Same values as <code>cider-use-overlays</code></td>
 </tr>
 <tr>
 <td>cider-debug-display-locals</td>
 <td><code>nil</code></td>
-<td><code>t</code> local variables displayed while debugging. Toggled with `cider-debug-toggle-locals&apos;</td>
+<td><code>t</code> local variable display during debugging. Toggled with <code>cider-debug-toggle-locals</code></td>
 </tr>
 <tr>
 <td>cider-debug-prompt-commands</td>
 <td></td>
-<td>&quot;List of debugger command specs in the format (KEY COMMAND-NAME DISPLAY-NAME?). KEY is a character mapped to the command COMMAND-NAME which is a valid debug command to be passed to the cider-nrepl middleware  DISPLAY-NAME is the string displayed in the debugger overlay.   If DISPLAY-NAME is nil, that command is hidden from the overlay but still callable. The rest of the commands are displayed in the same order as this list.&quot;</td>
+<td>List of debugger command specs in the format (KEY COMMAND-NAME DISPLAY-NAME?). KEY is a character mapped to the command COMMAND-NAME which is a valid debug command to be passed to the cider-nrepl middleware  DISPLAY-NAME is the string displayed in the debugger overlay.   If DISPLAY-NAME is nil, that command is hidden from the overlay but still callable. The rest of the commands are displayed in the same order as this list.&quot;</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -4140,22 +4144,22 @@
 <tr>
 <td>cider-overlays-use-font-lock</td>
 <td><code>t</code></td>
-<td><code>t</code> results overlays are font-locked as Clojure code. <code>nil</code>, apply `cider-result-overlay-face&apos; to the entire overlay instead of font-locking it.</td>
+<td><code>t</code> results overlays are font-locked as Clojure code. <code>nil</code> apply <code>cider-result-overlay-face</code> to the entire overlay instead</td>
 </tr>
 <tr>
 <td>cider-use-overlays</td>
 <td>&apos;both</td>
-<td>Display evaluation results with overlays. <code>t</code> use overlays determined by <code>cider-result-overlay-position&apos;.</code>nil<code>display on the echo area.</code>both` display on both places.</td>
+<td>Display evaluation results with overlays. <code>t</code> overlays determined by <code>cider-result-overlay-position</code>. <code>nil</code> display on the echo area. <code>both</code> display on both places.</td>
 </tr>
 <tr>
 <td>cider-result-overlay-position</td>
 <td><code>&apos;at-eol</code></td>
-<td>display result overlays for inline evaluation and the debugger. If <code>&apos;at-eol</code> display at the end of the line. <code>&apos;at-point</code> display at the end of the respective sexp.</td>
+<td>Display result overlays for inline evaluation and the debugger. If <code>&apos;at-eol</code> display at the end of the line. <code>&apos;at-point</code> display at the end of the respective sexp.</td>
 </tr>
 <tr>
 <td>cider-eval-result-prefix</td>
 <td><code>&quot;=&gt;&quot;</code></td>
-<td>The prefix displayed in the minibuffer before a result value.</td>
+<td>Prefix displayed in minibuffer before a result value</td>
 </tr>
 <tr>
 <td>cider-eval-result-duration</td>
@@ -4175,20 +4179,24 @@
 <tr>
 <th>Variables</th>
 <th>Default value</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>cider-inspector-page-size</td>
-<td><code>32</code> number of results per page in paginated inspector view <code>s</code> to interactively change</td>
+<td><code>32</code></td>
+<td>Results per page in paginated inspector view, <code>s</code> to interactively change</td>
 </tr>
 <tr>
 <td>cider-inspector-fill-frame</td>
-<td><code>nil</code> should cider inspector window fill its frame</td>
+<td><code>nil</code></td>
+<td><code>t</code> cider inspector window fills its frame</td>
 </tr>
 <tr>
 <td>cider-inspector-skip-uninteresting</td>
-<td><code>t</code> skips values when navigating with `cider-inspector-*-inspectable-object&apos; commands</td>
+<td><code>t</code></td>
+<td>skips values when navigating with `cider-inspector-*-inspectable-object&apos; commands</td>
 </tr>
 </tbody>
 </table>
@@ -4205,12 +4213,12 @@
 <tr>
 <td>cider-repl-history-display-style</td>
 <td><code>&apos;separated</code></td>
-<td>Display CIDER command history: <code>&apos;separated</code> display <code>cider-repl-history-separator</code> between entries, <code>one-line</code> replace newlines with <code>&quot;\n&quot;</code> .</td>
+<td><code>&apos;separated</code> display <code>cider-repl-history-separator</code> between entries. <code>&apos;one-line</code> replace newlines with <code>&quot;\n&quot;</code></td>
 </tr>
 <tr>
 <td>cider-repl-history-quit-action</td>
 <td><code>&apos;quit-window</code></td>
-<td>Action when <code>cider-repl-history-quit&apos; is called.</code>bury-buffer&apos; bury the <em>cider-repl-history</em> buffer but keep the window, <code>bury-and-delete-window</code> bury the buffer and delete window if more than one window in frame. <code>delete-and-restore</code> restore window configuration to before <code>cider-repl-history&apos; was called and kill the *cider-repl-history* buffer,</code>quit-window<code>restore window configuration to that before</code>cider-repl-history&apos; was called and bury <em>cider-repl-history</em>. <code>kill-and-delete-window</code> kill the <em>cider-repl-history</em> buffer and delete the window on close. Otherwise, it should be a function to call.</td>
+<td>Action when <code>cider-repl-history-quit</code> called. <code>&apos;bury-buffer</code> bury <em>cider-repl-history</em> buffer but keep window, <code>&apos;bury-and-delete-window</code> bury buffer and delete window if more than one window in frame. <code>&apos;delete-and-restore</code> restore window layout and kill <em>cider-repl-history</em> buffer. <code>&apos;quit-window</code> restore window layout and bury <em>cider-repl-history</em>. <code>&apos;kill-and-delete-window</code> kill the <em>cider-repl-history</em> buffer and delete the window on close.</td>
 </tr>
 <tr>
 <td>cider-repl-history-resize-window</td>
@@ -4220,52 +4228,52 @@
 <tr>
 <td>cider-repl-history-separator</td>
 <td><code>&quot;;;;;;;;;;;&quot;</code></td>
-<td>The string separating entries in the <code>separated&apos; style. See</code>cider-repl-history-display-style&apos;.</td>
+<td>String separating entries in the <code>separated</code> style. See <code>cider-repl-history-display-style</code></td>
 </tr>
 <tr>
 <td>cider-repl-history-recenter</td>
 <td><code>nil</code></td>
-<td><code>t</code> always keep the current entry at the top of the window.</td>
+<td><code>t</code> always keep current entry at the top of the window</td>
 </tr>
 <tr>
 <td>cider-repl-history-highlight-current-entry</td>
 <td><code>nil</code></td>
-<td><code>t</code> highlight the currently selected command history entry.</td>
+<td><code>t</code> highlight currently selected command history entry</td>
 </tr>
 <tr>
 <td>cider-repl-history-highlight-inserted-item</td>
 <td><code>nil</code></td>
-<td><code>t</code> temporarily highlight the inserted command history entry. A value controls item is highlighted: <code>solid</code> highlight the inserted text for a fixed period of time <code>pulse</code> fade out the highlighting gradually. <code>t</code> uses the default highlighting style <code>pulse&apos;.</code>cider-repl-history-inserted-item-face&apos; contains the face used for highlighting.</td>
+<td><code>t</code> temporarily highlight inserted command history entry. <code>&apos;solid</code> highlight inserted text for a fixed period of time. <code>&apos;pulse</code> fade out the highlight gradually.  <code>cider-repl-history-inserted-item-face</code> face used for highlighting.</td>
 </tr>
 <tr>
 <td>cider-repl-history-separator-face</td>
 <td><code>&apos;bold</code></td>
-<td>Face in which to highlight the <code>cider-repl-history-separator</code>.</td>
+<td>Face to highlight <code>cider-repl-history-separator</code></td>
 </tr>
 <tr>
 <td>cider-repl-history-current-entry-face</td>
 <td><code>&apos;highlight</code></td>
-<td>The face in which to highlight the command history current entry.</td>
+<td>Face to highlight command history current entry</td>
 </tr>
 <tr>
 <td>cider-repl-history-inserted-item-face</td>
 <td><code>&apos;highlight</code></td>
-<td>The face in which to highlight the inserted item.</td>
+<td>Face to highlight inserted item</td>
 </tr>
 <tr>
 <td>cider-repl-history-maximum-display-length</td>
 <td><code>nil</code></td>
-<td>Limit the length of displayed items. integer command history will be limited to that many characters. Setting this variable to nil means no Limit.</td>
+<td>Limit the length of displayed items. Command history limited to number of characters. <code>nil</code> means no limit</td>
 </tr>
 <tr>
 <td>cider-repl-history-display-duplicates</td>
 <td><code>t</code></td>
-<td><code>t</code> display duplicate items in the command history.</td>
+<td><code>t</code> display duplicate items in the command history</td>
 </tr>
 <tr>
 <td>cider-repl-history-display-duplicate-highest</td>
 <td><code>t</code></td>
-<td>When `cider-repl-history-display-duplicates&apos; is nil, display highest (most recent) duplicate items in the command history.</td>
+<td>When <code>cider-repl-history-display-duplicates</code> is nil, display most recent duplicate items in command history</td>
 </tr>
 <tr>
 <td>cider-repl-history-text-properties</td>
@@ -4275,12 +4283,12 @@
 <tr>
 <td>cider-repl-history-hook</td>
 <td><code>nil</code></td>
-<td>List of functions to call after `cider-repl-history&apos;.</td>
+<td>List of functions to call after `cider-repl-history&apos;</td>
 </tr>
 <tr>
 <td>cider-repl-history-show-preview</td>
 <td><code>nil</code></td>
-<td><code>t</code> show preview of the inserted text in the REPL buffer using the item under point were inserted.</td>
+<td><code>t</code> show preview of inserted text in REPL buffer using item under point where inserted</td>
 </tr>
 </tbody>
 </table>
@@ -4297,7 +4305,7 @@
 <tr>
 <td>cider-xref-actions</td>
 <td><code>&apos;((&quot;display-doc&quot; . cider-doc-lookup)</code></td>
-<td>Actions applied on the symbol found by an xref search. First action key in list will be selected as default, if only one the associated action function is applied automatically.  An action function is any function that receives the symbol found by the xref search as argument.</td>
+<td>Actions applied on symbol found by xref search. First action in list selected as default. If only one action function, its applied automatically</td>
 </tr>
 </tbody>
 </table>
@@ -4314,12 +4322,12 @@
 <tr>
 <td>cider-font-lock-max-length</td>
 <td><code>10000</code></td>
-<td>The max length of strings to fontify in <code>cider-font-lock-as&apos;.</code>nil` removes the fontification restriction.</td>
+<td>Maxiumum length of strings to fontify in <code>cider-font-lock-as</code>. <code>nil</code> removes the fontification restriction</td>
 </tr>
 <tr>
 <td>cider-doc-xref-regexp</td>
 <td></td>
-<td>The regexp used to search Clojure vars in doc buffers.</td>
+<td>Regexp to search Clojure vars in doc buffers</td>
 </tr>
 <tr>
 <td>cider-jdk-src-paths</td>
@@ -4341,27 +4349,27 @@
 <tr>
 <td>cider-repl-pop-to-buffer-on-connect</td>
 <td><code>t</code></td>
-<td>Focus REPL buffer on connect. <code>nil</code> REPL buffer is created but not displayed.  <code>display-only</code> REPL buffer displayed but not focused.  Otherwise REPL buffer is displayed and focused.</td>
+<td>Display and Focus REPL buffer on connect. <code>nil</code> REPL buffer is created but not displayed. <code>display-only</code> REPL buffer displayed but not focused.</td>
 </tr>
 <tr>
 <td>cider-repl-display-in-current-window</td>
 <td><code>nil</code></td>
-<td>Should REPL buffer be displayed in the current window.</td>
+<td>Display REPL buffer in the current window.</td>
 </tr>
 <tr>
 <td>cider-repl-use-pretty-printing</td>
 <td><code>t</code></td>
-<td>Should results in REPL buffer be pretty-printed. Uses printer specified in <code>cider-pprint-fn</code>.  <code>cider-toggle-pretty-printing</code> command interactively changes the value.</td>
+<td>REPL buffer results pretty-printed.  <code>cider-toggle-pretty-printing</code> interactively toggles. Specify printer function in <code>cider-pprint-fn</code>.</td>
 </tr>
 <tr>
 <td>cider-repl-use-content-types</td>
 <td><code>nil</code></td>
-<td>REPL results presented using content-type information. `cider-repl-toggle-content-types&apos; command interactively changes the value.</td>
+<td>REPL results presented using content-type information. <code>cider-repl-toggle-content-types</code> interactively toggles</td>
 </tr>
 <tr>
 <td>cider-repl-auto-detect-type</td>
 <td><code>t</code></td>
-<td>Auto-detect REPL type using track-state information. If you disable this you&apos;ll have to manually change the REPL type between Clojure and ClojureScript when invoking REPL type changing forms. Use `cider-set-repl-type&apos; to manually change the REPL type.</td>
+<td>Auto-detect REPL type using track-state information. <code>cider-set-repl-type</code> to manually change REPL between Clojure and ClojureScript REPL</td>
 </tr>
 <tr>
 <td>cider-repl-use-clojure-font-lock</td>
@@ -4371,17 +4379,17 @@
 <tr>
 <td>cider-repl-require-ns-on-set</td>
 <td><code>nil</code></td>
-<td>Should the namespace be required before setting it in the REPL.</td>
+<td>Should the namespace be required before setting it in the REPL</td>
 </tr>
 <tr>
 <td>cider-repl-result-prefix</td>
 <td><code>&quot;&quot;</code></td>
-<td>Display prefix characters in the REPL before a result value, egl <code>&quot;=&gt;&quot;</code> if want results to stand out more. No prefix used by default.</td>
+<td>Display prefix characters in the REPL before a result value, e.g. <code>&quot;=&gt;&quot;</code> may make results stand out more</td>
 </tr>
 <tr>
 <td>cider-repl-tab-command</td>
 <td><code>&apos;cider-repl-indent-and-complete-symbol</code></td>
-<td>Command invoked by TAB key. Default option is <code>cider-repl-indent-and-complete-symbol&apos;.</code>indent-for-tab-command` to use the default Emacs behavior.</td>
+<td>Command invoked by <code>TAB</code> key. Default option is <code>cider-repl-indent-and-complete-symbol</code>. <code>indent-for-tab-command</code> to use the default Emacs behavior.</td>
 </tr>
 <tr>
 <td>cider-repl-init-code</td>
@@ -4391,42 +4399,42 @@
 <tr>
 <td>cider-repl-display-help-banner</td>
 <td><code>t</code></td>
-<td><code>t</code> help text will be displayed on REPL start.</td>
+<td><code>t</code> help text will be displayed on REPL start</td>
 </tr>
 <tr>
 <td>cider-repl-prompt-function</td>
 <td><code>#&apos;cider-repl-prompt-default</code></td>
-<td>Function that takes a namespace name and returns a prompt string. Convenience functions: <code>cider-repl-prompt-lastname</code>, <code>cider-repl-prompt-abbreviated</code>, and <code>cider-repl-prompt-default</code></td>
+<td>Function takes a namespace name and returns a prompt string. Convenience functions: <code>cider-repl-prompt-lastname</code>, <code>cider-repl-prompt-abbreviated</code> and <code>cider-repl-prompt-default</code></td>
 </tr>
 <tr>
 <td>cider-repl-image-margin</td>
 <td><code>10</code></td>
-<td>Margin applied to images displayed in REPL buffer. A single number of pixels as a symmetric margin, or pair of numbers <code>(x . y)</code> encoding an arbitrary margin.</td>
+<td>Margin applied to images in REPL buffer. Single number of pixels as symmetric margin, pair of numbers <code>(x . y)</code> for an arbitrary margin</td>
 </tr>
 <tr>
 <td>cider-locref-regexp-alist</td>
 <td></td>
-<td>Alist holding regular expressions for inline location references. Each element in the alist has the form (NAME REGEXP HIGHLIGHT VAR FILE LINE), where NAME is the identifier of the regexp, REGEXP - regexp matching a location, HIGHLIGHT - sub-expression matching region to highlight on mouse-over, VAR - sub-expression giving Clojure VAR to look up.  FILE is currently only used when VAR is nil and must be full resource path in that case.</td>
+<td>Regular expressions for inline location references. (NAME REGEXP HIGHLIGHT VAR FILE LINE), NAME identifier of the regexp, REGEXP regexp matching a location, HIGHLIGHT sub-expression matching region to highlight on mouse-over, VAR sub-expression giving Clojure VAR to look up.  FILE only used when VAR is nil and must be full resource path</td>
 </tr>
 <tr>
 <td>cider-repl-wrap-history</td>
 <td><code>nil</code></td>
-<td>T to wrap history around when the end is reached.</td>
+<td><code>t</code> to wrap history when the end is reached</td>
 </tr>
 <tr>
 <td>cider-repl-history-size</td>
 <td><code>500</code></td>
-<td>The maximum number of items to keep in the REPL history.</td>
+<td>Maximum number of items to keep in the REPL history</td>
 </tr>
 <tr>
 <td>cider-repl-history-file</td>
 <td><code>nil</code></td>
-<td>File to save the persistent REPL history to.</td>
+<td>File to save the persistent REPL history</td>
 </tr>
 <tr>
 <td>cider-repl-shortcut-dispatch-char</td>
 <td><code>?\,</code></td>
-<td>Character used to distinguish REPL commands from Lisp forms.</td>
+<td>Character used to distinguish REPL commands from Lisp forms</td>
 </tr>
 <tr>
 <td><code>cider-repl-buffer-size-limit</code></td>
@@ -4448,17 +4456,17 @@
 <tr>
 <td>cider-lein-command</td>
 <td></td>
-<td>Command used to execute Leiningen.</td>
+<td>Command used to execute Leiningen</td>
 </tr>
 <tr>
 <td>cider-lein-global-options</td>
 <td></td>
-<td>Command global options used to execute Leiningen (e.g.: -o for offline).</td>
+<td>Command global options used to execute Leiningen (e.g. <code>-o</code> for offline).</td>
 </tr>
 <tr>
 <td>cider-lein-parameters</td>
 <td></td>
-<td>Params passed to Leiningen to start an nREPL server via `cider-jack-in&apos;.</td>
+<td>Params passed to Leiningen to start an nREPL server via <code>cider-jack-in</code>.</td>
 </tr>
 <tr>
 <td>cider-boot-command</td>
@@ -4468,42 +4476,47 @@
 <tr>
 <td>cider-boot-global-options</td>
 <td></td>
-<td>Command global options used to execute Boot (e.g.: -c for checkouts).</td>
+<td>Command global options used to execute Boot (e.g. <code>-c</code> for checkouts).</td>
 </tr>
 <tr>
 <td>cider-boot-parameters</td>
 <td></td>
-<td>Params passed to boot to start an nREPL server via `cider-jack-in&apos;.</td>
+<td>Params passed to boot to start an nREPL server via <code>cider-jack-in</code>.</td>
 </tr>
 <tr>
 <td>cider-clojure-cli-command</td>
 <td></td>
-<td>Command execute clojure with tools.deps (Clojure 1.9+). clj wrapper doesn&apos;t work when spawned from Emacs due to it using rlwrap.  If &quot;clojure&quot; executable is not found on Windows, default to &quot;powershell&quot;</td>
+<td>Command execute Clojure CLI deps.edn. If <code>clojure</code> executable is not found on Windows, default to <code>powershell</code></td>
 </tr>
 <tr>
 <td>cider-clojure-cli-global-options</td>
 <td></td>
-<td>Command line options used to execute clojure with tools.deps.</td>
+<td>Command line options used to execute Clojure CLI - also see <code>cider-clojure-cli-aliases</code></td>
+</tr>
+<tr>
+<td>cider-clojure-cli-aliases</td>
+<td></td>
+<td>Aliases to be added to Clojure CLI command (inserted before <code>:cider/nrepl</code>)</td>
 </tr>
 <tr>
 <td>cider-clojure-cli-parameters</td>
 <td></td>
-<td>Params passed to clojure to start an nREPL server via <code>cider-jack-in&apos;. This is evaluated using</code>format&apos;, with the first argument being the Clojure vector of middleware variables as a string.</td>
+<td>Params to start an nREPL server via <code>cider-jack-in</code>. evaluated using <code>format</code>, with the first argument being the Clojure vector of middleware variables as a string.</td>
 </tr>
 <tr>
 <td>cider-shadow-cljs-command</td>
 <td></td>
-<td>The command used to execute shadow-cljs. By default we favor the project-specific shadow-cljs over the system-wide.</td>
+<td>The command used to execute shadow-cljs. By default we favour the project-specific shadow-cljs over the system-wide.</td>
 </tr>
 <tr>
 <td>cider-shadow-cljs-global-options</td>
 <td></td>
-<td>Command line options used to execute shadow-cljs (e.g.: -v for verbose mode).</td>
+<td>Command line options used to execute shadow-cljs (e.g. <code>-v</code> for verbose mode).</td>
 </tr>
 <tr>
 <td>cider-shadow-cljs-parameters</td>
 <td></td>
-<td>Params passed to shadow-cljs to start an nREPL server via `cider-jack-in&apos;.</td>
+<td>Params passed to shadow-cljs to start an nREPL server via <code>cider-jack-in</code>.</td>
 </tr>
 <tr>
 <td>cider-gradle-command</td>
@@ -4513,32 +4526,32 @@
 <tr>
 <td>cider-gradle-global-options</td>
 <td></td>
-<td>Command line options used to execute Gradle (e.g.: -m for dry run).</td>
+<td>Command line options used to execute Gradle (e.g.: <code>-m</code> for dry run).</td>
 </tr>
 <tr>
 <td>cider-gradle-parameters</td>
 <td></td>
-<td>Params passed to gradle to start an nREPL server via `cider-jack-in&apos;</td>
+<td>Params passed to gradle to start an nREPL server via <code>cider-jack-in</code></td>
 </tr>
 <tr>
 <td>cider-jack-in-default</td>
 <td><code>(if (executable-find &quot;clojure&quot;) &apos;clojure-cli &apos;lein)</code></td>
-<td>Default tool when `cider-jack-in&apos; outside a project. The Clojure CLI is is the default. Fallback to Leiningen if Clojure CLI not available</td>
+<td>Default tool when <code>cider-jack-in</code> outside a project. The Clojure CLI is is the default. Fallback to Leiningen if Clojure CLI not available</td>
 </tr>
 <tr>
 <td>cider-preferred-build-tool</td>
 <td></td>
-<td>User prompted when there are multiple project configuration files (deps.edn, project.clj, build.boot) unless set. <code>&apos;clojure-cli</code> uses deps.edn file, <code>lein</code> uses project.clj file, <code>boot</code> uses build.boot file.</td>
+<td>Unless set, prompt when multiple project configuration files (deps.edn, project.clj, build.boot)</td>
 </tr>
 <tr>
 <td>cider-allow-jack-in-without-project</td>
 <td><code>&apos;warn</code></td>
-<td><code>&apos;warn</code> prompt to confirm jack-in command when not in a Clojure project. <code>t</code> <code>cider-jack-in&apos; quietly continues.</code>nil<code> </code>cider-jack-in&apos; fails.</td>
+<td><code>&apos;warn</code> prompt to confirm jack-in command when not in a Clojure project. <code>t</code> <code>cider-jack-in&apos;</code>quietly continues. <code>nil</code> <code>cider-jack-in</code> fails.</td>
 </tr>
 <tr>
 <td>cider-known-endpoints</td>
 <td><code>nil</code></td>
-<td>List of connection endpoints, each endpoint is a list, eg.  <code>\\=&apos;((\&quot;label\&quot; \&quot;host\&quot; \&quot;port\&quot;))</code>. Label is optional <code>\\=&apos;(\&quot;host\&quot; \&quot;port\&quot;)</code> Variable is used by `cider-connect&apos;</td>
+<td>List of connection endpoints for <code>cider-connect</code> eg. <code>&apos;((\&quot;label\&quot; \&quot;host\&quot; \&quot;port\&quot;))</code> (label optional)</td>
 </tr>
 <tr>
 <td>cider-connected-hook</td>
@@ -4553,7 +4566,7 @@
 <tr>
 <td>cider-inject-dependencies-at-jack-in</td>
 <td><code>t</code></td>
-<td><code>nil</code> do not inject REPL dependencies (most likely nREPL middlewares) at `cider-jack-in&apos; time.</td>
+<td><code>nil</code> do not inject REPL dependencies (i.e. nREPL middleware) for <code>cider-jack-in</code></td>
 </tr>
 <tr>
 <td>cider-offer-to-open-cljs-app-in-browser</td>
@@ -4563,7 +4576,7 @@
 <tr>
 <td>cider-jack-in-auto-inject-clojure</td>
 <td><code>nil</code></td>
-<td>Clojure version to auto-inject into REPL. <code>nil</code> Clojure version not injected. <code>latest&apos;, inject</code>cider-latest-clojure-version&apos; inject most recent version of Clojure. <code>minimal&apos;, inject</code>cider-minimum-clojure-version&apos; inject lowest Clojure version CIDER supports.  Use a string for explicit version number.  Using list, first element should be a string specifying the artifact ID and the second element the version number.</td>
+<td><code>nil</code> Clojure version not injected. <code>latest</code> inject <code>cider-latest-clojure-version</code>,  <code>minimal</code> inject <code>cider-minimum-clojure-version</code> <code>&quot;1.10.3&quot;</code>  explicit version.  Using list, first element is artifact ID string, second element is version number</td>
 </tr>
 <tr>
 <td>cider-check-cljs-repl-requirements</td>
@@ -4573,12 +4586,12 @@
 <tr>
 <td>cider-custom-cljs-repl-init-form</td>
 <td><code>nil</code></td>
-<td>Form used to start custom ClojureScript REPL  (becomes the return value of the `cider-custom-cljs-repl-init-form&apos; function which prompts for the init form) Intended for use with .dir-locals.el for cases where it doesn&apos;t make sense to register a new ClojureScript REPL type.</td>
+<td>Form to start custom ClojureScript REPL  (becomes return value of <code>cider-custom-cljs-repl-init-form</code> function which prompts for init form). Use with <code>.dir-locals.el</code> where it doesn&apos;t make sense to register a new ClojureScript REPL type</td>
 </tr>
 <tr>
 <td>cider-default-cljs-repl</td>
 <td><code>nil</code></td>
-<td>ClojureScript REPL to start for cljs jack-in commands (.dir-locals.el approach recommended)</td>
+<td>ClojureScript REPL to start for cljs jack-in commands (<code>.dir-locals.el</code> approach recommended)</td>
 </tr>
 <tr>
 <td>cider-edit-jack-in-command</td>
@@ -4648,22 +4661,22 @@
 <tr>
 <td>cider-ns-save-files-on-refresh-modes</td>
 <td><code>&apos;(clojure-mode)</code></td>
-<td>&quot;List of modes used to determine which modified files are saved before refreshing. An major mode derived from list of the modes. <code>t</code> all modified files on the classpath are saved.</td>
+<td>List of modes to determine which modified files are saved before refreshing. A major mode derived from list of the modes. <code>t</code> all modified files on the classpath are saved.</td>
 </tr>
 <tr>
 <td>cider-ns-refresh-show-log-buffer</td>
 <td><code>nil</code></td>
-<td><code>nil</code> log buffer will be written to but not displayed automatically (relevant info shown in mini-buffer  <code>t</code> log buffer will be displayed every time `cider-ns-refresh&apos; is called.</td>
+<td><code>nil</code> log buffer will be written to but not displayed automatically (relevant info shown in mini-buffer  <code>t</code> log buffer will be displayed every time <code>cider-ns-refresh</code> is called.</td>
 </tr>
 <tr>
 <td>cider-ns-refresh-before-fn</td>
 <td><code>nil</code></td>
-<td>Clojure namespace-qualified function of zero arity called by <code>cider-ns-refresh&apos; before reloading.</code>nil` no function called before reloading. Any thrown exception will prevent reloading.</td>
+<td>Clojure namespace-qualified function of zero arity called by <code>cider-ns-refresh</code> before reloading. <code>nil</code> no function called before reloading. Any thrown exception will prevent reloading.</td>
 </tr>
 <tr>
 <td>cider-ns-refresh-after-fn</td>
 <td><code>nil</code></td>
-<td>Clojure namespace-qualified function of zero arity for <code>cider-ns-refresh&apos; to call after reloading.</code>nil` no function invoked after reloading.</td>
+<td>Clojure namespace-qualified function of zero arity for <code>cider-ns-refresh</code> to call after reloading. <code>nil</code> no function invoked after reloading.</td>
 </tr>
 </tbody>
 </table>
@@ -4680,12 +4693,12 @@
 <tr>
 <td>cider-macroexpansion-display-namespaces</td>
 <td><code>tidy</code></td>
-<td>Should full namespace be shown for vars in macroexpansion buffer &apos;tidy not shown for locally defined or referred vars, <code>&apos;qualified</code> fully qualified vars shown, <code>&apos;none</code> no namespace qualification</td>
+<td>Should full namespace be shown for vars in macroexpansion buffer <code>&apos;tidy</code> not shown for locally defined or referred vars, <code>&apos;qualified</code> fully qualified vars shown, <code>&apos;none</code> no namespace qualification</td>
 </tr>
 <tr>
 <td>cider-macroexpansion-print-metadata</td>
 <td><code>nil</code></td>
-<td>Include metadata in macroexpansion results if <code>t</code></td>
+<td><code>t</code> include metadata in macroexpansion results</td>
 </tr>
 </tbody>
 </table>
@@ -4702,7 +4715,7 @@
 <tr>
 <td>cider-test-show-report-on-success</td>
 <td><code>nil</code></td>
-<td>Generate report and show <code>*cider-test-report*</code> buffer for successful tests, <code>nil</code> only generates report when tests fail and subsequent test runs</td>
+<td>Show <code>*cider-test-report*</code> buffer for successful tests, <code>nil</code> only generates report when tests fail and subsequent test runs</td>
 </tr>
 <tr>
 <td>cider-auto-select-test-report-buffer</td>
@@ -4712,12 +4725,12 @@
 <tr>
 <td>cider-test-defining-forms</td>
 <td><code>&apos;(&quot;deftest&quot; &quot;defspec&quot;)</code></td>
-<td>Forms that define individual tests. CIDER considers the \&quot;top-level\&quot; form around point to define a test if the form starts with one of these forms. Add to this list to have CIDER recognize additional test defining macros.</td>
+<td>Forms that define top level of individual unit tests</td>
 </tr>
 <tr>
 <td>cider-test-infer-test-ns</td>
 <td><code>&apos;cider-test-default-test-ns-fn</code></td>
-<td>infer the test namespace. Default uses Clojure convention of appending &apos;-test&apos; to the namespace name</td>
+<td>infer test namespace. Defaults to <code>-test</code> postfix on the namespace name</td>
 </tr>
 </tbody>
 </table>
@@ -4744,12 +4757,12 @@
 <tr>
 <td>cider-jump-to-pop-to-buffer-actions</td>
 <td></td>
-<td><a href="https://docs.cider.mx/cider/repl/configuration.html#_control_what_window_to_use_when_jumping_to_a_definition" target="_blank">window <code>cider-jump-to</code> uses</a>. If target file is visible, reuse it. Otherwise open buffer in current window</td>
+<td><a href="https://docs.cider.mx/cider/repl/configuration.html#_control_what_window_to_use_when_jumping_to_a_definition" target="_blank">window <code>cider-jump-to</code> uses</a>. If target file visible, reuse it. Otherwise open buffer in current window</td>
 </tr>
 <tr>
 <td>cider-path-translations</td>
 <td>nil</td>
-<td>Alist of path prefixes to path prefixes.  Example: intercept location of a path in a docker image and translate to the original location.  Mapping for project located at <code>\&quot;~/projects/foo\&quot;</code> with src directory of foo mounted at <code>\&quot;/src\&quot;</code> in the docker container  <code>`((\&quot;/src\&quot; \&quot;~/projects/foo/src\&quot;))</code></td>
+<td>alist of path prefixes to path prefixes.  Example: Map project located at <code>\&quot;~/projects/foo\&quot;</code> with src directory of foo mounted at <code>\&quot;/src\&quot;</code> in docker container  <code>`((\&quot;/src\&quot; \&quot;~/projects/foo/src\&quot;))</code></td>
 </tr>
 <tr>
 <td>cider-prefer-local-resources</td>
@@ -4771,12 +4784,12 @@
 <tr>
 <td>cider-doc-auto-select-buffer</td>
 <td><code>t</code></td>
-<td>auto-select the doc popup buffer.</td>
+<td>auto-select the doc popup buffer</td>
 </tr>
 <tr>
 <td>cider-docview-fill-column</td>
 <td><code>fill-column</code></td>
-<td>Fill column for docstrings in doc buffer.</td>
+<td>Fill column for docstrings in doc buffer</td>
 </tr>
 </tbody>
 </table>
@@ -4790,16 +4803,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>;; nrepl-buffer-name-separator</td>
-<td><code>&quot; &quot;</code></td>
-<td>(make-obsolete-variable &apos;nrepl-buffer-name-separator &apos;cider-session-name-template &quot;0.18&quot;)</td>
-</tr>
-<tr>
-<td>;; nrepl-buffer-name-show-port</td>
-<td><code>nil</code></td>
-<td>(make-obsolete-variable &apos;nrepl-buffer-name-show-port &apos;cider-session-name-template &quot;0.18&quot;)</td>
-</tr>
 <tr>
 <td>nrepl-connected-hook</td>
 <td><code>nil</code></td>
@@ -4833,7 +4836,7 @@
 <tr>
 <td>nrepl-log-messages</td>
 <td><code>nil</code></td>
-<td><code>t</code> log protocol messages to nREPL messages buffer. During debug, allows inspection of communication between Emacs and nREPL server.  Logging may negatively impact performance</td>
+<td><code>t</code> log protocol messages to nREPL messages buffer. During debug, allows inspection of communication between Emacs and nREPL server.  Logging may impact performance</td>
 </tr>
 <tr>
 <td>nrepl-message-colors</td>
@@ -4882,7 +4885,7 @@
 <tr>
 <td>cider-show-error-buffer</td>
 <td><code>t</code></td>
-<td>popup behavior of cider stacktraces <code>t</code>/<code>&apos;always</code>, <code>&apos;except-in-repl</code>, <code>&apos;only-in-repl</code>, <code>nil</code> no stack trace shown. `cider-error-buffer&apos; always generated in background</td>
+<td>popup behavior of cider stack traces. <code>&apos;always</code>, <code>&apos;except-in-repl</code>, <code>&apos;only-in-repl</code>, <code>nil</code> no stack trace shown. <code>cider-error-buffer</code> always generated in background</td>
 </tr>
 <tr>
 <td>cider-auto-jump-to-error</td>
@@ -4892,12 +4895,12 @@
 <tr>
 <td>cider-auto-select-error-buffer</td>
 <td><code>t</code></td>
-<td>auto-select the error popup buffer.</td>
+<td>auto-select the error popup buffer</td>
 </tr>
 <tr>
 <td>cider-auto-track-ns-form-changes</td>
 <td><code>t</code></td>
-<td>auto-evaluate a source buffer&apos;s ns form when changed. <code>nil</code> no evaluation of ns forms</td>
+<td>auto-evaluate ns form of source buffer when changed. <code>nil</code> no evaluation of ns forms</td>
 </tr>
 <tr>
 <td>cider-auto-inspect-after-eval</td>
@@ -4954,7 +4957,7 @@
 <tr>
 <td>cider-mode-line</td>
 <td>display current connection</td>
-<td>Mode line lighter to display cider status, <code>nil</code> disables status. variable is a mode line template as in <code>mode-line-format&apos;. Info Node</code>(elisp)Mode Line Format&apos; for mode line templates.</td>
+<td>Mode line lighter to display cider status, <code>nil</code> disables status. variable is a mode line template as in <code>mode-line-format</code>. Info Node <code>(elisp)Mode Line Format</code> for mode line templates.</td>
 </tr>
 <tr>
 <td>cider-switch-to-repl-after-insert-p</td>
@@ -4979,7 +4982,7 @@
 <tr>
 <td>cider-font-lock-dynamically</td>
 <td><code>&apos;(macro core deprecated)</code></td>
-<td>Apply syntax highlighting to vars defined in active nREPL connection, in addition to <code>clojure-mode</code> static font-lock. Value is list of symbols: <code>macro</code> any defined macro gets <code>font-lock-keyword-face&apos;,</code>function<code>defined function gets the</code>font-lock-function-face&apos;, <code>var</code> non-local var gets the <code>font-lock-variable-name-face&apos;,</code>deprecated<code>deprecated var gets the</code>cider-deprecated-face&apos;, <code>core</code> symbol from clojure.core (face depends on type), <code>t</code> font lock as much as possible</td>
+<td>Apply syntax highlighting to vars defined in active nREPL connection, in addition to <code>clojure-mode</code> static font-lock. Value is list of symbols: <code>macro</code> any defined macro gets <code>font-lock-keyword-face</code>, <code>function</code> defined function gets the <code>font-lock-function-face</code>, <code>var</code> non-local var gets the <code>font-lock-variable-name-face</code>, <code>deprecated</code> deprecated var gets the <code>cider-deprecated-face</code>, <code>core</code> symbol from clojure.core (face depends on type), <code>t</code> font lock as much as possible</td>
 </tr>
 <tr>
 <td>cider-font-lock-reader-conditionals</td>
@@ -5006,7 +5009,7 @@
 <tr>
 <td>cider-session-name-template</td>
 <td><code>&quot;%J:%h:%p&quot;</code></td>
-<td>String format for session names - describe `cider-format-connection-params&apos; for available formats</td>
+<td>String format for session names - describe <code>cider-format-connection-params</code> for available formats</td>
 </tr>
 <tr>
 <td>cider-connection-message-fn</td>
@@ -5068,7 +5071,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Config Variables","level":"8.1.4.1","depth":3,"next":{"title":"Clojure","level":"8.1.5","depth":2,"path":"reference/clojure/index.md","ref":"reference/clojure/index.md","articles":[{"title":"Strings","level":"8.1.5.1","depth":3,"path":"reference/clojure/strings.md","ref":"reference/clojure/strings.md","articles":[]},{"title":"Maths","level":"8.1.5.2","depth":3,"path":"reference/clojure/maths.md","ref":"reference/clojure/maths.md","articles":[]},{"title":"Data Structures","level":"8.1.5.3","depth":3,"path":"reference/clojure/data-structures.md","ref":"reference/clojure/data-structures.md","articles":[]},{"title":"Functions","level":"8.1.5.4","depth":3,"path":"reference/clojure/functions.md","ref":"reference/clojure/functions.md","articles":[]},{"title":"Control flow","level":"8.1.5.5","depth":3,"path":"reference/clojure/control-flow.md","ref":"reference/clojure/control-flow.md","articles":[]},{"title":"Local Assignment","level":"8.1.5.6","depth":3,"path":"reference/clojure/local-assignment.md","ref":"reference/clojure/local-assignment.md","articles":[]}]},"previous":{"title":"CIDER","level":"8.1.4","depth":2,"path":"reference/cider/index.md","ref":"reference/cider/index.md","articles":[{"title":"Config Variables","level":"8.1.4.1","depth":3,"path":"reference/cider/configuration-variables.md","ref":"reference/cider/configuration-variables.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"reference/cider/configuration-variables.md","mtime":"2022-03-24T13:59:23.437Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-24T14:00:38.627Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Config Variables","level":"8.1.4.1","depth":3,"next":{"title":"Clojure","level":"8.1.5","depth":2,"path":"reference/clojure/index.md","ref":"reference/clojure/index.md","articles":[{"title":"Strings","level":"8.1.5.1","depth":3,"path":"reference/clojure/strings.md","ref":"reference/clojure/strings.md","articles":[]},{"title":"Maths","level":"8.1.5.2","depth":3,"path":"reference/clojure/maths.md","ref":"reference/clojure/maths.md","articles":[]},{"title":"Data Structures","level":"8.1.5.3","depth":3,"path":"reference/clojure/data-structures.md","ref":"reference/clojure/data-structures.md","articles":[]},{"title":"Functions","level":"8.1.5.4","depth":3,"path":"reference/clojure/functions.md","ref":"reference/clojure/functions.md","articles":[]},{"title":"Control flow","level":"8.1.5.5","depth":3,"path":"reference/clojure/control-flow.md","ref":"reference/clojure/control-flow.md","articles":[]},{"title":"Local Assignment","level":"8.1.5.6","depth":3,"path":"reference/clojure/local-assignment.md","ref":"reference/clojure/local-assignment.md","articles":[]}]},"previous":{"title":"CIDER","level":"8.1.4","depth":2,"path":"reference/cider/index.md","ref":"reference/cider/index.md","articles":[{"title":"Config Variables","level":"8.1.4.1","depth":3,"path":"reference/cider/configuration-variables.md","ref":"reference/cider/configuration-variables.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"reference/cider/configuration-variables.md","mtime":"2022-03-26T15:42:27.086Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-26T15:43:23.626Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

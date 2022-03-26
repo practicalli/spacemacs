@@ -957,12 +957,12 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="vim-basics.html">
+        <li class="chapter " data-level="3.2" data-path="evil/">
             
-                <a href="vim-basics.html">
+                <a href="evil/">
             
                     
-                    Vim Basics
+                    Evil Basics
             
                 </a>
             
@@ -971,9 +971,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.2.1" data-path="evil-states.html">
+        <li class="chapter " data-level="3.2.1" data-path="evil/editing-states.html">
             
-                <a href="evil-states.html">
+                <a href="evil/editing-states.html">
             
                     
                     Evil States
@@ -3956,8 +3956,8 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="spacemacs-basics">Spacemacs Basics</h1>
-<p>Understanding the <a href="emacs-basics.html">Emacs basic concepts and terminology</a> will help speed your adoption of Spacemacs.</p>
-<p>You will gradually discover the power and pleasure of using <a href="vim-basics.html">Vim and modal editing</a>, using different states for specific tasks and reducing your cognitive load (and strain from keybinding combinations).  The <a href="vim-style/vim-quick-reference.html">Vim Quick Reference</a> will help you use Spacemacs more effectively.</p>
+<p>Understanding the <a href="emacs-basics.html">Emacs basic concepts and terminology</a> will help speed adoption of Spacemacs.</p>
+<p>Gradually discover the power and pleasure of using <a href="evil/">Vim and modal editing</a>, using <a href="evil/editing-states.html">different editing states for specific tasks</a> and reducing your cognitive load (and strain from keybinding combinations).  The <a href="vim-style/vim-quick-reference.html">Vim Quick Reference</a> will help you use Spacemacs more effectively.</p>
 <div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="spacemacs-for-vim-users"><i class="fa fa-lightbulb-o"></i> Spacemacs for Vim users</h3></div><div class="panel-body"><p><a href="https://github.com/syl20bnr/spacemacs/blob/develop/doc/VIMUSERS.org" target="_blank">Migrating from Vim</a> article to help those with Vim experience to get up to speed with Spacemacs.</p></div></div>
 <p>The two most important things to learn about Spacemacs first are the Space menu, <code>SPC</code>, and the Help system, <code>SPC h</code>.</p>
 <h2 id="space-bar---main-menu">Space bar - main menu</h2>
@@ -3965,7 +3965,7 @@
 <p><code>SPC</code> displays a mnemonic menu (<code>which-key</code>) to easily navigate through the multitude of functions you can call.</p>
 <p><code>SPC SPC</code> displays a popup listing all Spacemacs commands, typing will start narrowing the list of commands using fuzzy logic, helping you find the right command quickly. This is equivalent to <code>M-x</code> in Emacs.</p>
 <p><a href="../images/spacemacs-main-menu.png"><img src="../images/spacemacs-main-menu.png" alt="Spacemacs - space menu"></a></p>
-<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="holy-mode-emacs-style-editing"><i class="fa fa-lightbulb-o"></i> Holy mode (Emacs) style editing</h3></div><div class="panel-body"><p><code>M-m</code> is the equivalent of <code>SPC</code> in Evil (Vim) style editing</p><p><code>M-RET</code> opens the major mode menu (e.g. Clojure specific menu in clojure-mode), the equivalent of <code>,</code> in Evil.</p></div></div>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="holy-mode-emacs-essential-key-bindings"><i class="fa fa-lightbulb-o"></i> Holy mode (Emacs) Essential Key bindings</h3></div><div class="panel-body"><p>In Holy mode, <code>M-m</code> is the equivalent of <code>SPC</code> in Evil (Vim) style editing</p><p><code>M-RET</code> opens the major mode menu (e.g. Clojure specific menu in clojure-mode), the equivalent of <code>,</code> in Evil.</p></div></div>
 <h2 id="spacemacs-help-system">Spacemacs Help system</h2>
 <p>Spacemacs has a built in help system to help you find out what layers, commands and keybindings do.</p>
 <p>Every function has a description of how to use it as well as a link to its source code (in case you need more than the description).</p>
@@ -3992,7 +3992,7 @@
 </tr>
 </tbody>
 </table>
-<p>Online help</p>
+<h2 id="online-help">Online help</h2>
 <ul>
 <li><a href="https://develop.spacemacs.org/doc/DOCUMENTATION.html" target="_blank">Spacemacs online documentation</a></li>
 <li><a href="https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#key-bindings" target="_blank">Spacemacs key bindings</a></li>
@@ -4045,7 +4045,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Spacemacs Basics","level":"3.1","depth":1,"next":{"title":"Frames Windows Buffers","level":"3.1.1","depth":2,"path":"spacemacs-basics/emacs-basics.md","ref":"spacemacs-basics/emacs-basics.md","articles":[]},"previous":{"title":"Troubleshooting","level":"2.5","depth":1,"path":"install-spacemacs/troubleshooting.md","ref":"install-spacemacs/troubleshooting.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"spacemacs-basics/index.md","mtime":"2022-03-24T13:59:23.441Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-24T14:00:38.627Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Spacemacs Basics","level":"3.1","depth":1,"next":{"title":"Frames Windows Buffers","level":"3.1.1","depth":2,"path":"spacemacs-basics/emacs-basics.md","ref":"spacemacs-basics/emacs-basics.md","articles":[]},"previous":{"title":"Troubleshooting","level":"2.5","depth":1,"path":"install-spacemacs/troubleshooting.md","ref":"install-spacemacs/troubleshooting.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"spacemacs-basics/index.md","mtime":"2022-03-26T15:42:27.090Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-26T15:43:23.626Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
