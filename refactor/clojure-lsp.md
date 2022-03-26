@@ -17,7 +17,7 @@ Symbols such as namespace names, function definitions, names bound to values and
 
 `, a a` opens the LSP code actions menu to provide context specific refactor tools
 
-lsp-ui sidebar shows available code actions when enabled
+lsp-ui sidebar shows available code actions when the following variables are added to the `lsp` layer in the .spacemacs layer configuration:
 
 ```elisp
 lsp-ui-sideline-enable t
