@@ -1,9 +1,17 @@
 # Cider configuration variables.
-The following in not an authoritative list of configuration variables.  The list was created from the [clojure-emacs/cider](https://github.com/clojure-emacs/cider) project as of 21st June 2020, searching for `defcustom` and editing the results list with multiple cursors.
+
+The following in non-authoritative list of configuration variables, created by searching for `defcustom` across the [clojure-emacs/cider](https://github.com/clojure-emacs/cider) project.
 
 Variables are grouped by the files they are defined in throughout the [clojure-emacs/cider](https://github.com/clojure-emacs/cider) project.
 
-Variables can be used in `.dir-locals.el` files for project specific configuration (recommended for most variables), or in the Spacemacs `dotspacemacs/user-config` section of `.spacemacs`
+CIDER Variables can be set via:
+
+* `.dir-locals.el` files for [project specific configuration](/clojure-projects/project-configuration.md)
+* `(clojure :variables variable-name value)` in .spacemacs layers list
+* `(setq variable-name value)` in `dotspacemacs/user-config` section of `.spacemacs`
+
+> #### Hint::Clojure Project Configuration
+> Examples of using `.dir-locals.el` for Clojure projects are covered in the [project level configuration page](/clojure-projects/project-configuration.md)
 
 
 ## Completion
