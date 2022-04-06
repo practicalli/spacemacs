@@ -21,9 +21,8 @@ Practice speaking evil with these examples
 
 | Keybinding  | Description                                                           |
 |-------------|-----------------------------------------------------------------------|
-| `c i s`     | change inside sentence                                                |
-| `c i "`     | change inside double quotes                                           |
 | `c i s`     | change inside current sentence (change the whole sentence)            |
+| `c i "`     | change inside double quotes                                           |
 | `c f )`     | change from cursor to next `)` character                              |
 | `c s ' "`   | change by the surrounding single quotes with double quotes            |
 | `c t X`     | change till the character `X` (not including `X`)                     |
@@ -32,13 +31,14 @@ Practice speaking evil with these examples
 | `d i w`     | delete inside the current word (delete word)                          |
 | `v t SPC`   | visual select till the next `Space` character                         |
 | `v s ]`     | visually select and surround with `[]` without spaces                 |
-| `g v`       | go to last visual selection                                           |
+| `v s [`     | as above with `[ ]` with spaces between parens and content            |
+| `g v`       | go to last visual selection (select last visual selection)            |
 | `v a p`     | visually select around current paragraph                              |
 | `SPC v s "` | visually select current work and surround with `""`                   |
 | `v i w s "` | visually select, insert around current word, and surround with quotes |
 | `y y`       | yank (copy) current line                                              |
 | `y w`       | yank (copy) current word                                              |
-| `y ' a`     | yank (copy) to mark `a` (`m a` creates a mark called `a`)             |
+| `y @ a`     | yank (copy) to mark `a` (`m a` creates a mark called `a`)             |
 
 
 > #### Hint:: Evil Reference and Tips
