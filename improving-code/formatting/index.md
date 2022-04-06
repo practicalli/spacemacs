@@ -1,23 +1,36 @@
-# Formatting code
+# Formatting Code
 
-[The Clojure Style Guide](https://guide.clojure.style/) is a very complete guide to the best practices in writing Clojure code, ensuring it is as easy as possible to read and maintain by Clojure developers.
+Spacemacs automatically formats code as its written.
 
-Spacemacs Clojure layer will carry out basic formatting as you type using .
+`, =` or `M-RET =` is the format menu in Spacemacs across all languages
 
-* `RET` the cursor correctly indents on new lines.
-* `TAB` key will left align the current line of code or selected region.
+`TAB` indents the current line of code (or selected region).  Not that `TAB` may also trigger auto-completion too.
+
+Clojure code is typically formatted following the [Clojure Style Guide](https://github.com/bbatsov/clojure-style-guide), although this is only a guide.
 
 
-## Recommended Formatting configuration
 
-These are the recommended settings to add to the `dotspacemacs/user-config` section of `.spacemacs`
+## Cider format tools
 
-```elisp
-(add-hook 'clojure-mode-hook #'aggressive-indent-mode)
-(setq clojure-indent-style 'align-arguments)
-(setq clojure-align-forms-automatically t)
+`, = b` (`cider-format-buffer`) - format the Clojure code in the current buffer.
+
+`, = l` (`clojure-align`) - vertically align the current line within the context of the top level form or selected area
+
+For example, vertically align the values in a map
+
+```clojure
+(def my-map
+  {:a-key 1
+   :other-key 2})
+
+(def my-map
+  {:a-key     1
+   :other-key 2})
 ```
 
-Read the rest of this section for a deeper explanation of the above configuration.
+> This can also be done automatically (as part of indentation) by turning on clojure-align-forms-automatically. This way it will happen whenever you select some code and hit TAB.
 
-Alternatively, jump to the section on [Linting](/improving-code/linting/)
+
+## Clojure LSP
+
+Clojure LSP uses cljfmt which has a large number of very strict rules, although all rules can be tailored or disabled as required.

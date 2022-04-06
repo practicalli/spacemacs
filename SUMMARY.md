@@ -87,7 +87,7 @@
 * [Clojure Projects](clojure-projects/index.md)
     * [Adding Files](clojure-projects/adding-files.md)
     * [Rename - Delete Files](clojure-projects/rename-delete-files.md)
-    * [Project configuration](clojure-projects/project-configuration.md)
+    * [Project configuration .dir-locals.el](clojure-projects/project-configuration.md)
     * [Monorepo / Nested projects](clojure-projects/monorepo-nested-projects.md)
 * [The REPL](clojure-repl/index.md)
     * [Connect to REPL](clojure-repl/connect-to-repl.md)
@@ -172,7 +172,6 @@
         <!-- * [Forms](refactor/clj-refactor/forms.md) -->
         * [Collections](refactor/clj-refactor/collections.md)
         * [Extracting](refactor/clj-refactor/extracting.md)
-        * [Formatting Code](refactor/clj-refactor/formatting-code.md)
 * [Debug Clojure](debug-clojure/index.md)
     <!-- * [Understanding errors](debug-clojure/understanding-errors.md) -->
     * [Inspect values](debug-clojure/inspect-values.md)
