@@ -30,23 +30,26 @@ If you are unsure if you have found an issue, or do not understand why some beha
 Please do not raise an issue directly via the GitHub website.  If you do, you will slow down the response to this issue and the first response to your issue will be to provide system information.
 
 ## Specific Package Issue
-Delete a package from the `~/.emacs.d/elpa` directory if it does not seem to be working, is generating warnings or errors or is simply not working correctly.
+If there are issues with a particular package, delete the package directory from the `~/.emacs.d/elpa/<emacs-version>/develop/` directory.
 
 `SPC q r` to restart Spacemacs and download the package again.
 
-## Issues after package update
+### Issues after package update
 If multiple packages are causing issues after an update, or you are short on time to diagnose an issue, then rollback to the packages used before the update.
 
 `SPC b h` to visit the Spacemacs home page and select **Rollback Package Update**
 
 ![Spacemacs - Home buffer - Rollback package update](/images/spacemacs-home-rollback-package-update.png)
 
-## Emacs package recipe for specific version
-Packages are installed from MELPA, which builds daily packages from the latest commit in their online repository (GitHub/GitLab).
+> Instead of a full rollback, copy specific package directories from `~/.emacs.d/.cache/.rollback/<emacs-version>/develop` to the elpa directory `~/.emacs.d/elpa/<emacs-version>/develop`
+
+
+### Emacs package recipe for specific version
+Spacemacs installs packages from [MELPA](https://melpa.org/), which builds Emacs packages from the latest commit (GitHub/GitLab).
 
 If a newly installed package has an issue, rather than rollback all the packages upgraded, configure a package recipe to point to an older version of the package.
 
-For example, pin CIDER to an earlier version by adding the following recipe to `dotspacemacs/additional-packages`
+For example, pin the `cider` package to a specific Git commit by adding the following recipe to `dotspacemacs-additional-packages`
 
 ```elisp
 (cider :location
@@ -57,8 +60,9 @@ For example, pin CIDER to an earlier version by adding the following recipe to `
 
 Delete the package from `~/.emacs.d/elpa/` directory and reload the Spacemacs configuration, `SPC f e R` (or restart Emacs `SPC q r`)
 
+Related or dependent packages may also need a recipe or at least their packages removed from the elpa directory.
 
-## Scorched Earth approach
+### Scorched Earth approach
 Delete `~/.emacs.d/elpa` director and `SPC q r` to restart Spacemacs.  This will remove any complied Emacs packages that may have become corrupted or replace older packages that are now causing issues.
 
 As there are 100's of packages, the scorched earth approach of just deleting them and downloading fresh copies can be surprisingly effective at resolving issues with very little effort.
