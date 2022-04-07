@@ -181,6 +181,7 @@
     * [Formatting](improving-code/formatting/index.md)
         * [Automatic Indenting](improving-code/formatting/automatic-indenting.md)
         * [Aligning forms](improving-code/formatting/aligning-forms-expressions.md)
+        * [Format Clojure](improving-code/formatting/clojure.md)
     * [Live Linting](improving-code/live-linting.md)
     * [Batch linting](improving-code/batch-linting.md)
     * [Idiomatic code checking](improving-code/idiomatic-code-checking.md)
