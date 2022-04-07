@@ -177,6 +177,7 @@
     * [Inspect values](debug-clojure/inspect-values.md)
     * [Cider debug](debug-clojure/cider-debug.md)
     * [Sayid debug & profile](debug-clojure/sayid-debug.md)
+    * [Format Errors](debug-clojure/format-error-messages.md)
 * [Improving Code](improving-code/index.md)
     * [Formatting](improving-code/formatting/index.md)
         * [Automatic Indenting](improving-code/formatting/automatic-indenting.md)
