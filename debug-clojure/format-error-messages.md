@@ -47,4 +47,4 @@ lein with-profiles +pretty run
 ```
 
 
-TODO: add Clojure CLI alias for running pretty
+<!-- TODO: add Clojure CLI alias for running pretty -->
