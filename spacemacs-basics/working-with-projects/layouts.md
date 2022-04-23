@@ -4,7 +4,7 @@
 ## Working with buffers in a layout
 `SPC b b` shows only the buffers for the current layout, making it easy to switch between them.  `SPC b B` will show all buffers.
 
-`SPC TAB` will toggle between the previous buffer and current buffer, regardless of layer the previous buffer is in.  Add `(spacemacs-layouts :variables spacemacs-layouts-restrict-spc-tab t)` to the `dotspacemacs-configuration-layers` in your `.spacemacs` file to limit `SPC TAB` to buffers of the current layer.
+`SPC TAB` will toggle between the previous buffer and current buffer, regardless of layout the previous buffer is in.  Add `(spacemacs-layouts :variables spacemacs-layouts-restrict-spc-tab t)` to the `dotspacemacs-configuration-layers` in your `.spacemacs` file to limit `SPC TAB` to buffers of the current layout.
 
 
 ## Managing Layouts
@@ -14,7 +14,7 @@
 
 ![Spacemacs Layouts - transient state](/images/spacemacs-layouts-transient-state-list.png)
 
-`SPC l l` lists the current layers with a helm prompt to narrow the list.  Entering a new name will prompt to create a new layout (perspective)
+`SPC l l` lists the current layouts with a helm prompt to narrow the list.  Entering a new name will prompt to create a new layout (perspective)
 
 The current layout name appears on the far left of the mode-line.
 
@@ -26,7 +26,7 @@ The current layout name appears on the far left of the mode-line.
 dotspacemacs-auto-resume-layouts t
 ```
 
-`SPC l x`  kill current layout with its buffers, `SPC l d` deletes the layer and keeps the buffers available
+`SPC l x`  kill current layout with its buffers, `SPC l d` deletes the layout and keeps the buffers available
 
 `SPC l ?` will show the help menu
 
