@@ -23,7 +23,7 @@ The layer name shows in the mode line.
 
 The transient state also lists all the current layouts.
 
-![Spacemacs Layers - example layer list](/images/spacemacs-layouts-transient-state-list.png)
+![Spacemacs Layers - practicalli example layer list](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-layouts-transient-state-practicalli-layouts.png)
 
 The most layouts common commands are:
 
