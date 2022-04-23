@@ -12,7 +12,7 @@
 
 `SPC l` enters the layout transient state
 
-![Spacemacs Layouts - transient state](/images/spacemacs-layouts-transient-state-list.png)
+![Spacemacs Layouts - transient state](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-layouts-transient-state-practicalli-layouts.png)
 
 `SPC l l` lists the current layouts with a helm prompt to narrow the list.  Entering a new name will prompt to create a new layout (perspective)
 
