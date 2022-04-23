@@ -162,6 +162,7 @@
     * [Similar function call name](refactor/similar-function-call-name.md)
     * [Within a function](refactor/within-a-function.md)
     * [Within a namespace](refactor/within-a-namespace.md)
+    * [namespace names](refactor/namespace-definitions.md)
     * [Within a project](refactor/within-a-project.md)
     * [Clojure mode](refactor/clojure-mode/index.md)
     * [Clojure LSP](refactor/clojure-lsp.md)
