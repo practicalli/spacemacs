@@ -48,9 +48,25 @@ Cloning the repository adds a `.spacemacs.d/init.el` configuration file which sh
 
 Before running Emacs, [install Fira Code fonts](#install-fira-code-system-font) or update `dotspacemacs-default-font` value in  `.spacemacs.d/init.el` to a name of a font installed on the operating system.
 
-> #### Hint::Configuration options
-> `.spacemacs.d/init.el` file is the recommended location for a Spacemacs configuration as the `.spacemacs.d` directory is a git repository, so its contents can be version controlled, including snippets, layouts, etc.
+### Version Control the Spacemacs Configuration
+
+Using `~/.spacemacs.d` provides a simple way to version control your Spacemacs configuration, including snippets and layouts.  This is the approach taken with [practicalli/spacemacs.d]({{ book.P9ISpacemacsD }})
+
+`.spacemacs.d/init.el` is the main configuration file, replacing `~/.spacemacs`  (if `.spacemacs` file exists when Emacs starts it will be used instead of `.spacemacs/init.el`)
+
 > If the practicalli.spacemacs.d repository is not used, then a `.spacemacs` configuration file is created when Spacemacs first runs. Read the [additional configuration section](additional-configuration.md) to add support for Clojure and many other development tools.   The `.spacemacs` file can be backed up at a GitHub Gist, `SPC g g b`.
+
+The `.spacemacs.d/init.el` configuration separates the Emacs settings into a `emacs-custom-setting` file within `.spacemacs.d`.  The `emacs-custom-setting` file only needs to be added to version control if the Emacs `customize` menu has been used to define different settings.
+
+The `emacs-custom-file` is defined in the `dotspacemacs/user-init` of the Spacemacs configuration
+
+
+```elisp
+  (setq custom-file (file-truename (concat dotspacemacs-directory "emacs-custom-settings.el")))
+  (load custom-file)
+```
+
+A specific path could also be used to define the location of the custom file: `(setq custom-file "~/.emacs.d/.cache/custom-settings")`
 
 
 ## Adding icon fonts for doom modeline
