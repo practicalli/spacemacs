@@ -1,6 +1,6 @@
 #  Clojure snippets reference
 
-Spacemacs included the [yasnippet official snippets repository](https://github.com/AndreaCrotti/yasnippet-snippets) and [clojure-snippets package](https://github.com/mpenet/clojure-snippets), providing an extensive collection of snippets for Clojure.
+Spacemacs includes the [yasnippet official snippets repository](https://github.com/AndreaCrotti/yasnippet-snippets) and [clojure-snippets package](https://github.com/mpenet/clojure-snippets), providing an extensive collection of snippets for Clojure.
 
 * [Datomic snippets package](https://github.com/magnars/datomic-snippets) contains specific snippets for [Cognitect Datomic database](https://www.datomic.com/)
 * [mpenet/clojure-snippets](https://github.com/mpenet/clojure-snippets) has several additional Clojure snippets (although not included in Spacemacs by default)

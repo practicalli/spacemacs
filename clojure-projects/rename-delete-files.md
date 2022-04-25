@@ -9,7 +9,7 @@
 
 `, r r` on a namespace name uses LSP to rename that namespace and file name consistently, especially where a namespace is required within other namespace forms.
 
-When changing a namespace, the Vars, `def` / `defn` expressions, it contains should be removed from the running REPL, to prevent inconsistencies between the code and REPL.
+When changing a namespace, the Vars, `def` / `defn` expressions, its contents should be removed from the running REPL, to prevent inconsistencies between the code and REPL.
 
 `, e u` (`cider-undef`) will remove the current var from the REPL (uses nREPL undef command)
 

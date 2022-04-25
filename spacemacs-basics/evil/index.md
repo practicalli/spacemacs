@@ -20,7 +20,7 @@ First get familiar with **normal**, **insert** and **visual** states.  Then when
 
 ## Learn Vim-style editing
 
-Vim-style editing is arguably the most effective way to work with text, supporting changes as much thorugh through text manipulation as editing text.  Once practised, vim-style editing is far faster than uni-mode eiting.
+Vim-style editing is arguably the most effective way to work with text, supporting changes as much through text manipulation as editing text.  Once practised, vim-style editing is far faster than uni-mode editing.
 
 The recommended way to learn vim style editing is to practice and ideally use it for everything you do.
 
