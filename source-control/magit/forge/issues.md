@@ -54,7 +54,7 @@ In the issue list buffer, navigate (`j`, `k`) to the issue to be edited.
 
 `j` / `k` to navigate to each section of the issue (title, assignee, label, mark, description, comments)
 
-`C-c C-e` to edit the current section of the issue.
+`,e ` or `C-c C-e` to edit the current section of the issue.
 
 For title, assignee, label and mark a prompt shows in the mini-buffer.  Enter a value and press `RET`
 
