@@ -1,6 +1,6 @@
 # Lisp State
 
-[Lisp state](https://develop.spacemacs.org/layers/+spacemacs/spacemacs-evil/README.html) provides a fast an convenient way to manipulate the structure of your Clojure whist keeping it valid, i.e. avoiding unbalanced parenthesis.
+[Lisp state](https://develop.spacemacs.org/layers/+spacemacs/spacemacs-evil/README.html) provides a fast and convenient way to manipulate the structure of your Clojure code whilst keeping it valid, i.e. avoiding unbalanced parenthesis.
 
 `SPC k` opens the lisp state menu, providing commands for structural editing with Smartparens.  Any command will put the current buffer into lisp state, a transient state where you can use single character keybindings for the commands (no need to use `SPC k` each time).
 
