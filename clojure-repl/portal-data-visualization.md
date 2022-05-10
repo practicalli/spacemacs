@@ -1,5 +1,5 @@
 ## Starting a REPL with Portal data inspector
-Portal is a web browser data inspector that can be configures as the `tap>` source for a project.  Any expression surrounded by `(tap> ,,,)` has its evaluated result sent to Portal.
+Portal is a web browser data inspector that can be configured as the `tap>` source for a project.  Any expression surrounded by `(tap> ,,,)` has its evaluated result sent to Portal.
 
 <!-- TODO add image showing off Portal -->
 
