@@ -3198,51 +3198,6 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="../../github/">
-            
-                <a href="../../github/">
-            
-                    
-                    GitHub
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.3.1" data-path="../../github/gists.html">
-            
-                <a href="../../github/gists.html">
-            
-                    
-                    Gists
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4" data-path="../../gitlab/">
-            
-                <a href="../../gitlab/">
-            
-                    
-                    GitLab
-            
-                </a>
-            
-
-            
-        </li>
-    
 
     
         
@@ -4027,12 +3982,14 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="magit-forge---issues-prs-and-forking">Magit Forge - issues, PRs and forking</h1>
-<p>Magit Forge connects to the GitHub &amp; GitLab, collectively referred to as forges.  Magic Forge uses the APIs of these forges to manage issue and pull requests.</p>
-<p>Forge can retrieve the list of issues and pull requests from a remote repository.</p>
+<p>Magit Forge connects to the GitHub &amp; GitLab via their open APIs, collectively referred to as forges.</p>
+<p>Topics (the collective name for issues and pull requests) from a repository can be created, edited, commented upon and assigned to people.</p>
+<p>Magic Forge uses the APIs of these forges to manage issue and pull requests, collectively referred to as topics.</p>
+<p><code>@ a</code> to add a repository from the current project to a local database, to cache a list of topics (issues and pull requests) from a remote repository.</p>
 <p>Issues, pull requests and forks can be created on a remote repository, once the repository has been added to the local dictionary.</p>
 <p><code>@</code> opens the forge menu from the Magit Status buffer, <code>, g s</code>, and therefore requires a local Git repository.</p>
 <p><img src="../../../images/spacmacs-magit-forge-menu.png" alt="Spacemacs Magit Forge"></p>
-<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="requires-forge-configuration"><i class="fa fa-lightbulb-o"></i> Requires Forge Configuration</h3></div><div class="panel-body"><p><a href="../../forge-configuration.html">Configure forge with your remote repository</a> before using the forge commands.</p></div></div>
+<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="requires-forge-configuration"><i class="fa fa-lightbulb-o"></i> Requires Forge Configuration</h3></div><div class="panel-body"><p><a href="../../forge-configuration.html">Create an encrypted <code>.authinfo.gpg</code> file for connection details of each forge used</a> before using the Magit Forge commands.</p></div></div>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -4076,7 +4033,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Forge for GitHub/GitLab","level":"5.2.9","depth":2,"next":{"title":"Add database","level":"5.2.9.1","depth":3,"path":"source-control/magit/forge/add-database.md","ref":"source-control/magit/forge/add-database.md","articles":[]},"previous":{"title":"Configure default push","level":"5.2.8.8","depth":3,"path":"source-control/magit/remote-repositories/configure-default-push.md","ref":"source-control/magit/remote-repositories/configure-default-push.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"source-control/magit/forge/index.md","mtime":"2022-05-10T10:00:52.617Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-10T10:02:03.223Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Forge for GitHub/GitLab","level":"5.2.9","depth":2,"next":{"title":"Add database","level":"5.2.9.1","depth":3,"path":"source-control/magit/forge/add-database.md","ref":"source-control/magit/forge/add-database.md","articles":[]},"previous":{"title":"Configure default push","level":"5.2.8.8","depth":3,"path":"source-control/magit/remote-repositories/configure-default-push.md","ref":"source-control/magit/remote-repositories/configure-default-push.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"source-control/magit/forge/index.md","mtime":"2022-05-12T12:23:04.111Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-12T12:24:02.072Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -3198,51 +3198,6 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="../../source-control/github/">
-            
-                <a href="../../source-control/github/">
-            
-                    
-                    GitHub
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="5.3.1" data-path="../../source-control/github/gists.html">
-            
-                <a href="../../source-control/github/gists.html">
-            
-                    
-                    Gists
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="5.4" data-path="../../source-control/gitlab/">
-            
-                <a href="../../source-control/gitlab/">
-            
-                    
-                    GitLab
-            
-                </a>
-            
-
-            
-        </li>
-    
 
     
         
@@ -4030,36 +3985,21 @@
 <p>The Language Server Protocol (LSP) is a specification for tooling developers, defining a protocol for editors to talk to a language server and provide static analysis features, such as refactoring, symbol navigation, code completion, syntax highlighting.</p>
 <p>A standard protocol means an LSP server implementation can support a wide range of tools, reducing the work of editor maintainers and helping ensure common features are available across all editors. LSP does not provide any implementation, this is left to tooling and editor developers.</p>
 <p><a href="https://github.com/practicalli/spacemacs.d" target="_blank">practicalli/spacemacs.d</a> provides an LSP configuration with minimal UI elements and no conflicts with CIDER.</p>
-<p>Adding the <code>lsp</code> layer to <code>.spacemacs</code> will automatically use LSP for Clojure.  By default LSP will override some features provided by CIDER, so you may wish to <a href="configure-lsp-and-cider.html">configure lsp and lsp UI</a>.</p>
+<pre><code class="lang-elisp">     (lsp :variables
+          lsp-ui-doc-enable nil       ;; disable all doc popups
+          lsp-ui-sideline-enable nil  ;; disable sideline bar for less distraction
+          treemacs-space-between-root-nodes nil) ;; no spacing in treemacs views
+</code></pre>
+<p>Adding the <code>lsp</code> layer to <code>.spacemacs</code> will automatically use LSP for Clojure formatting, autocompletion and syntax checking.</p>
+<p>LSP will override some features provided by CIDER, so you may wish to <a href="configure-lsp-and-cider.html">configure lsp and lsp UI</a>.</p>
 <p><img src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-language-server.png" alt="Clojure Language Server Protocol LSP"></p>
 <div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="lsp-and-the-repl"><i class="fa fa-lightbulb-o"></i> LSP and the REPL</h3></div><div class="panel-body"><p>The REPL does the most important and unique part of Clojure (lisp) development, providing immediate feedback on what code expressions do when they are evaluated.  REPL</p><p>You may decide the REPL provides all the tools you need all by itself.  Or if you may decide that some or all of the LSP features are useful.</p></div></div>
-<h2 id="clojure-lsp-project">Clojure-lsp project</h2>
-<p>The <a href="https://clojure-lsp.github.io/clojure-lsp/" target="_blank">clojure-lsp project</a> provides the only implementation of a language server for Clojure.  It provides a relatively small native binary file (GraalVM native compilation of Clojure).</p>
-<p>The language server provides these features for any editor that connects via the language server protocol.</p>
+<h2 id="references">References</h2>
 <ul>
-<li>Auto-complete</li>
-<li>Navigation (jump to definitions)</li>
-<li>Show references (where functions are called from, call hierarchy)</li>
-<li>Code actions (extracting function / let, etc.)</li>
-<li>Refactor code (renaming, etc.)</li>
-<li>Surfacing Errors as they occur</li>
-<li>Automatic namespace management</li>
-<li>Code lens</li>
-<li>Semantic tokens (syntax highlighting)</li>
+<li><a href="https://emacs-lsp.github.io/lsp-mode/tutorials/clojure-guide/" target="_blank">Configure Emacs as a Clojure IDE guide</a></li>
+<li><a href="https://emacs-lsp.github.io/lsp-mode/tutorials/how-to-turn-off/" target="_blank">A guide on disabling/enabling lsp-mode features</a></li>
+<li><a href="https://emacs-lsp.github.io/lsp-ui/" target="_blank">Emacs LSP UI website</a> and <a href="https://github.com/emacs-lsp/lsp-ui" target="_blank">emacs-lsp/lsp-ui repository</a></li>
 </ul>
-<p>The project is under active development and many people from the community are actively engaging with this project.</p>
-<div class="panel panel-success"><div class="panel-heading"><h3 class="panel-title" id="spacemacs-and-cider"><i class="fa fa-lightbulb-o"></i> Spacemacs and CIDER</h3></div><div class="panel-body"><p>Many features available in LSP are already available via Emacs packages and Cider in some form, especially if you are familiar with tools such as iedit, narrowing and helm-ag.</p><p>LSP uses static analysis of Clojure code to drive its features, so lsp can make some features simpler to use or provide greater accuracy of scope.</p><p>Finding a balance between CIDER and Clojure-lsp requires some understanding of which features from each best supports your workflow.</p></div></div>
-<h2 id="what-is-the-language-server-protocol">What is the Language Server Protocol?</h2>
-<p>Adding features like auto complete, go to definition, or documentation on hover for a programming language takes significant effort. Traditionally this work had to be repeated for each development tool, as each tool provides different APIs for implementing the same feature.</p>
-<p>A Language Server is meant to provide the language-specific smarts and communicate with development tools over a protocol that enables inter-process communication.</p>
-<p>The idea behind the Language Server Protocol (LSP) is to standardize the protocol for how such servers and development tools communicate. This way, a single Language Server can be re-used in multiple development tools, which in turn can support multiple languages with minimal effort.</p>
-<p>LSP is a win for both language providers and tooling vendors!</p>
-<p>The Language Server Protocol (LSP) defines the protocol used between an editor or IDE and a language server that provides language features like auto complete, go to definition, find all references etc. The goal of the Language Server Index Format (LSIF, pronounced like &quot;else if&quot;) is to support rich code navigation in development tools or a Web UI without needing a local copy of the source code.</p>
-<p>LSP was originally developed by Microsoft for Visual Studio Code, Language Server Protocol is now and open standard.</p>
-<h2 id="other-clojure-tooling-support">Other Clojure tooling support</h2>
-<p>Spacemacs and Doom Emacs support LSP via the lsp and lsp-ui packages.</p>
-<p>VS Code and Calva support LSP and Calva is making heavy use of clojure-lsp and clj-kondo to reduce the amount of tooling development required to support a fully featured Clojure development environment.</p>
-<p>Neovim support LSP and Clojure support is available via Conjure or vim-fireplace.  Packages such as <a href="https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features" target="_blank">Command of Completion also support LSP servers</a></p>
  <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/app.klipse.tech/css/codemirror.css"> <script>     window.klipse_settings = {         selector: ".language-klipse, .lang-eval-clojure",         selector_eval_js: ".lang-eval-js",         selector_eval_python_client: ".lang-eval-python",         selector_eval_php: ".lang-eval-php",         selector_eval_scheme: ".lang-eval-scheme",         selector_eval_ruby: ".lang-eval-ruby",         selector_reagent: ".lang-reagent",        selector_google_charts: ".lang-google-chart",        selector_es2017: ".lang-eval-es2017",        selector_jsx: ".lang-eval-jsx",        selector_transpile_jsx: ".lang-transpile-jsx",        selector_render_jsx: ".lang-render-jsx",        selector_react: ".lang-react",        selector_eval_markdown: ".lang-render-markdown",        selector_eval_lambdaway: ".lang-render-lambdaway",        selector_eval_cpp: ".lang-eval-cpp",        selector_eval_html: ".lang-render-html",        selector_sql: ".lang-eval-sql",        selector_brainfuck: "lang-eval-brainfuck",        selector_js: ".lang-transpile-cljs"    }; </script> <script src="https://storage.googleapis.com/app.klipse.tech/plugin/js/klipse_plugin.js"></script>
                                 
                                 </section>
@@ -4103,7 +4043,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Clojure-lsp","level":"2.2.1.3","depth":3,"next":{"title":"Configure lsp and Cider","level":"2.2.1.3.1","depth":4,"path":"install-spacemacs/clojure-lsp/configure-lsp-and-cider.md","ref":"install-spacemacs/clojure-lsp/configure-lsp-and-cider.md","articles":[]},"previous":{"title":"clj-kondo via LSP","level":"2.2.1.2.4","depth":4,"path":"install-spacemacs/clj-kondo-via-lsp.md","ref":"install-spacemacs/clj-kondo-via-lsp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"install-spacemacs/clojure-lsp/index.md","mtime":"2022-05-10T10:00:52.613Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-10T10:02:03.223Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Clojure-lsp","level":"2.2.1.3","depth":3,"next":{"title":"Configure lsp and Cider","level":"2.2.1.3.1","depth":4,"path":"install-spacemacs/clojure-lsp/configure-lsp-and-cider.md","ref":"install-spacemacs/clojure-lsp/configure-lsp-and-cider.md","articles":[]},"previous":{"title":"clj-kondo via LSP","level":"2.2.1.2.4","depth":4,"path":"install-spacemacs/clj-kondo-via-lsp.md","ref":"install-spacemacs/clj-kondo-via-lsp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"install-spacemacs/clojure-lsp/index.md","mtime":"2022-05-12T12:23:04.107Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-12T12:24:02.072Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

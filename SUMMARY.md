@@ -238,9 +238,9 @@
     * [Timemachine](source-control/magit/timemachine.md)
     * [Highlight Changes in file](source-control/magit/version-highlighting.md)
     * [Clean up Magit sessions](source-control/magit/clean-up-magit-sessions.md)
-* [GitHub](source-control/github/index.md)
-    * [Gists](source-control/github/gists.md)
-* [GitLab](source-control/gitlab/index.md)
+<!-- * [GitHub](source-control/github/index.md) -->
+<!--     * [Gists](source-control/github/gists.md) -->
+<!-- * [GitLab](source-control/gitlab/index.md) -->
 
 
 
