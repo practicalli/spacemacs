@@ -5,7 +5,16 @@ A standard protocol means an LSP server implementation can support a wide range 
 
 [practicalli/spacemacs.d]({{ book.P9ISpacemacsD}}) provides an LSP configuration with minimal UI elements and no conflicts with CIDER.
 
-Adding the `lsp` layer to `.spacemacs` will automatically use LSP for Clojure.  By default LSP will override some features provided by CIDER, so you may wish to [configure lsp and lsp UI](configure-lsp-and-cider.md).
+```elisp
+     (lsp :variables
+          lsp-ui-doc-enable nil       ;; disable all doc popups
+          lsp-ui-sideline-enable nil  ;; disable sideline bar for less distraction
+          treemacs-space-between-root-nodes nil) ;; no spacing in treemacs views
+```
+
+Adding the `lsp` layer to `.spacemacs` will automatically use LSP for Clojure formatting, autocompletion and syntax checking.
+
+LSP will override some features provided by CIDER, so you may wish to [configure lsp and lsp UI](configure-lsp-and-cider.md).
 
 ![Clojure Language Server Protocol LSP](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-language-server.png)
 
