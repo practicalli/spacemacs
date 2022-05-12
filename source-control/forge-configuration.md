@@ -65,6 +65,14 @@ Add `auth-sources` to specify the location of the encrypted token file in the `d
   (setq auth-sources '("~/.authinfo.gpg"))
 ```
 
+If using `XDG_CONFIG_HOME` for the location of the `authinfo.gpg` file.  The default location in `HOME` can also be included and the first file found will be used.
+
+```elisp
+  (setq auth-sources (list
+                      (concat (getenv "XDG_CONFIG_HOME") "/authinfo.gpg")
+                      "~/.authinfo.gpg"))
+```
+
 [practicalli/spacemacs.d]({{ book.P9ISpacemacsD }}) configuration contains this setting.
 
 
