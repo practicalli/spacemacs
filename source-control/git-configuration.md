@@ -1,8 +1,8 @@
 # Git Configuration
 
-Git uses the `~/.gitconfig` configuration file for user level settings.
+Git uses either `XDG_CONFIG_HOME/git/config` or `$HOME/.gitconfig` configuration file for user level settings.
 
-It is useful to add your identity so that each commit you make is associated to you.  Ideally, this identity should be the same as used on GitHub, GitLab and BitBucket accounts.
+An identity is required when sharing commits via services such as GitHub/GitLab and so that each commit you make is associated to you.
 
 
 ## Add an identity to Git configuration
@@ -12,14 +12,14 @@ Define your git identity using the following commands in a terminal window
 ```shell
 git config --global user.name "practicalli"
 
-git config --global user.email github@practical.li
+git config --global user.email ***+github-account@noreploy.github.com
 ```
 
-These commands update the `[user]` section of the `~/.gitconfig` file, automatically creating that file if it does not exist.
+These commands update the `[user]` section of the Git configuration file, automatically creating that file if it does not exist.
 
 ![Git Configuration file - user name and email](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-git-configuration-user-private-email.png)
 
-## Using a private email address
+### Using a private email address
 
 To avoid sharing your real email address (to minimise spam), consider using a private email address
 
@@ -28,7 +28,7 @@ In your GitHub account, [visit the email settings](https://github.com/settings/e
 A new email of the form `250870+practicalli-john@users.noreply.github.com` is created which must be set as your user email address
 
 ```shell
-git config --global user.email "250870+practicalli-john@users.noreply.github.com"
+git config --global user.email "******+practicalli-john@users.noreply.github.com"
 ```
 
 For additional security, select the option **Block command line pushes that expose my email** to prevent commits being pushed to GitHub using your public email address.
@@ -103,3 +103,24 @@ To provide greater security when using the token, consider using the [Git Creden
 > [Magit Forge also requires a personal access token](forge-configuration.md), although this can be saved in the encrypted file `~/.authinfo.pgg` for greater security.  The Magit Forge token includes permissions required to access remote repositories over HTTPS
 >
 > For greater security, use separate tokens if placing the HTTPS tokein in a plain text file).
+
+
+## Diff 3 Support
+
+Diff 3 standard included the parent of two changes in conflict, providing additional context when deciding which change should take precedence
+
+```
+git config --global merge.conflictstyle diff3
+```
+
+This command adds a `conflictstyle` entry in the `[merge]` section of the Git configuration file.
+
+```
+[merge]
+    # Include common parent when merge conflicts arise
+    conflictstyle = diff3
+```
+
+Magit supports the Diff3 standard, so a common parent will be shown when this feature is enabled.
+
+![Git Diff3 standard supported by Magit in Spacemacs](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png)
