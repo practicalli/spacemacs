@@ -26,7 +26,7 @@ A list of commits, 'cherries', are show to help narrow down which commits could 
 > `A` with the point on one of the cherries, or with one or more cherries selected, will start the Applying of commits
 
 
-## List of branches
+## Find commits via list of branches
 
 `l o` in Magit Status will list the other branches.
 
