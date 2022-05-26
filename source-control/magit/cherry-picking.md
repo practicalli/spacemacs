@@ -1,8 +1,12 @@
 # Cherry Picking commits
 
-The main use of cherry picking it to copy one or more commits from one branch and apply them to another branch.
-
 Cherry Picking is a way to be specific about which commits from a branch are incorporated into another branch.  Where as merging a branch into another would take the full commit history.
+
+`SPC g s` to open magit status provides the `A` Apply menu.
+
+`A` with the point on any commit (or with commits selected in a list) allows cherry picking from the related branch.
+
+A common use of cherry picking it to copy one or more commits from one branch and apply them to another branch.
 
 Cherry picking may also be used as part of a pull request process, rather than merging the pull request directly, avoiding any unintentional commits that may be part of that pull request.
 
@@ -13,13 +17,20 @@ Cherry picking may also be used as part of a pull request process, rather than m
 
 Select the **Cherry head** - the branch containing commits (cherries) that are to be copied
 
-Select the **Cherry head** - the branch that would receive the commits (cherries)
+Select the **Cherry upstream** - the branch that would receive the commits (cherries)
 
 A list of commits, 'cherries', are show to help narrow down which commits could be cherry picked.
 
 ![Spacemacs Magit Cherry Picking - list of cherries](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-cherries.png)
 
 > `A` with the point on one of the cherries, or with one or more cherries selected, will start the Applying of commits
+
+
+## List of branches
+
+`l o` in Magit Status will list the other branches.
+
+Navigate to the branch and commit (or commits) to cherry pick.  Use visual select state, `v` to select multiple commits (`C-SPC` in holy mode)
 
 
 ## Applying commits
