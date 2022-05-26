@@ -52,6 +52,11 @@ A spell checking binary is usually installed on Unix systems by default.
 ## Clojure Linter - clj-kondo
 clj-kondo provides live linting when developing with the Clojure language and is highly recommended.
 
+> #### Hint::Clojure LSP provides clj-kondo
+> A manual install of clj-kondo is only required when not using LSP.
+>
+> The LSP layer will prompt to download the clojure-lsp server when first opening a Clojure project.
+
 * [clj-kondo binary install guide](https://github.com/borkdude/clj-kondo/blob/master/doc/install.md)
 
 Use the [practicalli/spacemacs.d]({{ book.P9ISpacemacsD }}) configuration or see [Install Clojure section](install-clojure.md) for details on how to use clj-kondo with Spacemacs.
