@@ -216,6 +216,7 @@
         * [Extend commit](source-control/magit/commit-extend.md)
         * [Rewrite commit](source-control/magit/commit-rewrite.md)
         * [Tag commit](source-control/magit/tag-commit.md)
+    * [Cherry Picking](source-control/magit/cherry-picking.md)
     * [Remote repositories](source-control/magit/remote-repositories/index.md)
         * [Add Remote](source-control/magit/remote-repositories/add-remote.md)
         * [Clone](source-control/magit/remote-repositories/clone.md)
