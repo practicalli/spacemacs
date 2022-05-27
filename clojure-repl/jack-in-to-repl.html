@@ -85,7 +85,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="configure-repl-start.html" />
+    <link rel="next" href="clojure-cli-jack-in-configure.html" />
     
     
     <link rel="prev" href="reveal-data-visualization.html" />
@@ -1367,12 +1367,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="4.2.5.1" data-path="configure-repl-start.html">
+        <li class="chapter " data-level="4.2.5.1" data-path="clojure-cli-jack-in-configure.html">
             
-                <a href="configure-repl-start.html">
+                <a href="clojure-cli-jack-in-configure.html">
             
                     
-                    Configure Jack-in
+                    Clojure CLI Configuration
             
                 </a>
             
@@ -3995,8 +3995,26 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="cider-jack-in-to-the-repl">Cider Jack-in to the REPL</h1>
-<p>Spacemacs can start a REPL for the current Clojure project, calling out to the Clojure CLI tools (<code>deps.edn</code>), Leiningen (<code>project.clj</code>) or Boot (<code>boot.build</code>) based on which configuration file is found in the root of the project.  A prompt is displayed if there are multiple project configuration files to choose from.</p>
-<h2 id="common-repl-start--restart-keybindings">Common REPL start / restart keybindings</h2>
+<p><code>, &apos;</code> or <code>, m s</code> (<code>sesman-start</code>)  and select a <code>cider-jack-in</code> command to start a REPL process</p>
+<h2 id="what-is-jack-in">What is jack-in</h2>
+<p>Jack-in will start a new REPL process and automatically connect to that process from the editor.</p>
+<p>Jack-in will call either the <code>clojure</code> or <code>lein</code> command to start the REPL process, based on what project configuration files are found (<code>project.clj</code> for Leiningen and <code>deps.edn</code> for Clojure CLI) in the root of the current project. A prompt is displayed if there are multiple project configuration files to choose from.</p>
+<p>Jack-in ensures the REPL process is started with the libraries and middleware required by CIDER.  Then the rest of the jack-in process is the same as connect, but done so automatically.</p>
+<h2 id="customise-jack-in">Customise jack-in</h2>
+<p><code>SPC u , m s</code> opens the jack-in command in the minibuffer and that command can be edited to customise how the Clojure REPL process starts.</p>
+<p><a href="clojure-cli-jack-in-configure.html">Clojure CLI jack-in customisation</a> are used to add development-time only libraries and paths</p>
+<p>Leiningen controls the REPL startup process, often using profiles.  Read <a href="https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md" target="_blank">the Leiningen tutorial for detailed examples</a>.</p>
+<blockquote>
+<p><a href="https://practical.li/clojure/clojure-cli/projects/configure-repl-startup.html" target="_blank">A <code>user</code> namespace</a> allows for further customisation of the REPL startup</p>
+</blockquote>
+<h2 id="multiple-project-configuration-files">Multiple project configuration files</h2>
+<p>If both a <code>project.clj</code> file and a <code>deps.edn</code> file exist in the root of a project, Cider jack-in will prompt for the command to use</p>
+<p>Use a <code>.dir-locals.el</code> file to set the command that Cider jack-in will use each time</p>
+<p>For Leiningen:</p>
+<pre><code>((clojure-mode (cider-preferred-build-tool . clojure-cli)))
+</code></pre><p>For Clojure CLI:</p>
+<pre><code>((clojure-mode (cider-preferred-build-tool . lein)))
+</code></pre><h2 id="common-repl-start--restart-keybindings">Common REPL start / restart keybindings</h2>
 <table>
 <thead>
 <tr>
@@ -4067,7 +4085,7 @@
                 </a>
                 
                 
-                <a href="configure-repl-start.html" class="navigation navigation-next " aria-label="Next page: Configure Jack-in">
+                <a href="clojure-cli-jack-in-configure.html" class="navigation navigation-next " aria-label="Next page: Clojure CLI Configuration">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -4078,7 +4096,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Jack-in to REPL","level":"4.2.5","depth":2,"next":{"title":"Configure Jack-in","level":"4.2.5.1","depth":3,"path":"clojure-repl/configure-repl-start.md","ref":"clojure-repl/configure-repl-start.md","articles":[]},"previous":{"title":"Reveal data visualization","level":"4.2.4","depth":2,"path":"clojure-repl/reveal-data-visualization.md","ref":"clojure-repl/reveal-data-visualization.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"clojure-repl/jack-in-to-repl.md","mtime":"2022-05-26T16:19:46.979Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-26T16:20:50.740Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Jack-in to REPL","level":"4.2.5","depth":2,"next":{"title":"Clojure CLI Configuration","level":"4.2.5.1","depth":3,"path":"clojure-repl/clojure-cli-jack-in-configure.md","ref":"clojure-repl/clojure-cli-jack-in-configure.md","articles":[]},"previous":{"title":"Reveal data visualization","level":"4.2.4","depth":2,"path":"clojure-repl/reveal-data-visualization.md","ref":"clojure-repl/reveal-data-visualization.md","articles":[]},"dir":"ltr"},"config":{"plugins":["callouts","codeblock-disable-glossary","ga","gist","heading-anchors","klipse","sectionx","simpletabs","toggle-chapters","toolbar","youtube","wide-page"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"callouts":{"showTypeInHeader":false,"star":{"alert":"warning","picto":"fa-star"}},"gist":{},"youtube":{},"search":{},"wide-page":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"simpletabs":{},"codeblock-disable-glossary":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{"tag":"b"},"heading-anchors":{},"highlight":{},"ga":{"configuration":"auto","token":"UA-28030709-9"},"klipse":{"myConfigKey":"it's the default value"},"toolbar":{"buttons":[{"label":"Clojurians Slack","icon":"fa fa-comments-o","url":"http://clojurians.slack.com/messages/practicalli"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/practicalli/spacemacs-content/projects/1"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"introduction.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"P9IClojure":"https://practical.li/clojure/","P9IPullRequestsUrl":"https://github.com/practicalli/spacemacs-content/pulls","P9IClojureDepsEdn":"https://github.com/practicalli/clojure-deps-edn","host":"practical.li","P9IClojureThroughCode":"https://github.com/practicalli/clojure-through-code","url":"https://practical.li/spacemacs","P9IClojureDepsEdnInstall":"https://practical.li/clojure/clojure-cli/install/community-tools.html","P9IIssuesUrl":"https://github.com/practicalli/spacemacs-content/issues","P9ISpacemacsD":"https://github.com/practicalli/spacemacs.d"},"title":"Clojure development with Spacemacs & Cider","links":{"sidebar":{"Spacemacs (develop)":"http://develop.spacemacs.org/","Practical.li":"https://practicalli.github.io"}},"gitbook":">=3.0.0","description":"Speedy Clojure development in Spacemacs, covering all the features you need for daily hugging of your code"},"file":{"path":"clojure-repl/jack-in-to-repl.md","mtime":"2022-05-27T12:27:09.405Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-27T12:28:03.485Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

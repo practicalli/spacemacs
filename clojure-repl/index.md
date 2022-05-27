@@ -1,6 +1,6 @@
-# Clojure Repl
+# Clojure REPL
 
-The Clojure REPL is a live environment in which Clojure code runs, both for development and in production.
+The Clojure REPL is a live environment in which Clojure code runs, it is the same process for both development and production.
 
 A REPL user interface (UI), a prompt or Clojure editor, provides instant feedback when code is evaluated. Any amount of code can be evaluated, from a single expression to multiple namespaces.
 
@@ -10,21 +10,21 @@ The REPL provides the Clojure developer a fast and effective tool for developing
 
 ![Clojure aware editors](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-terminal-editor.png)
 
+
 ## Editor Connected REPL
 
-All Clojure editors connect to an external REPL process, either connecting to an existing process or starting a new process from the editor.
+All Clojure editors connect to an external run REPL process, either connecting to an existing process (connect) or starting a new process from the editor (jack-in).
 
-| Approaches                    | Description                                                                                                        |
-|-------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| [connect](connect-to-repl.md) | flexible and robust approach supporting rich configurations, starting an external REPL via a command line terminal |
-| [jack-in](jack-in-to-repl.md) | start an external REPL from the editor, injecting editor specific configuration and then connecting                |
+| Approaches                    | Description                                                                                                |
+|-------------------------------|------------------------------------------------------------------------------------------------------------|
+| [connect](connect-to-repl.md) | connecting to a local or remote REPL process - robust approach supporting rich REPL startup configurations |
+| [jack-in](jack-in-to-repl.md) | start an external REPL from the editor, injecting editor specific configuration and then connecting        |
 
-> Practicalli recommends using the [connect](connect-to-repl.md) approach for all but the most simplest of workflows
 
 
 ## Quick start
 
-Open or select a Clojure buffer, this can be an `.edn`, `.clj`, `.cljc` or `.cljs` file.
+Open or select a Clojure buffer, an `.edn`, `.clj`, `.cljc` or `.cljs` file.
 
 | Key bindings     | Description                                       |
 |------------------|---------------------------------------------------|
@@ -37,24 +37,29 @@ Select from one of the following types of REPL's
 
 Once the REPL starts, [evaluate expressions using the source code buffer](/evaluating-clojure/).
 
+> #### Hint::Eval namespace or buffer to load Clojure into CIDER
+> `, e b` to evaluate the current buffer also loads Clojure core into CIDER, making the documentation and other Cider tools fully operational.  Or evaluate any valid `ns` form in the project.
 
-## REPL cheatsheet
+
+## CIDER workflow overview
 
 `SPC p f` open a file from the current project (`SPC f f` if not in a project)
 
-`, '` to start a Clojure REPL using [Clojure CLI](http://practical.li/clojure/clojure-cli/install/install-clojure.html), Leiningen or Boot.
+`, '` or `, m s` and start a Clojure REPL using `cider-jack-in-clj` (may take a few seconds if there are dependencies to download)
 
 `, e b` evaluate the current buffer (also loads Clojure core into CIDER)
 
-`, e f` evaluate the current Clojure expression and show the results inline
+`, e f` evaluate the current top-level expression and show the result inline
 
-`, e e` evaluate the previous Clojure expression and show the results inline (useful for nested expressions)
+`, e e` evaluate the previous expression and show the result inline (useful for nested expressions)
 
-`, e ;` evaluate the current Clojure expression and show the results as a comment
+`, e ;` evaluate the current Clojure expression and print the result as a comment
+
+`, e p f` evaluate the current top-level expression and pretty-print the result in a separate buffer
 
 `SPC p a` toggle between matching source code and unit test buffers
 
-`, t a` run all test functions in the REPL using the cider test runner (evaluate changed code first)
+`, t a` run all test functions in the REPL using the cider test runner (evaluate changed test & source code first)
 
 `, m q r` to restart the REPL (i.e. after adding a library as a dependency to the project)
 
