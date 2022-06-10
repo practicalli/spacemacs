@@ -4,7 +4,7 @@ Magit can retrieve issues and pull request for a project and even create a new p
 
 > #### Hint::Configure Git access and define a gpg key first
 > You should [configure Git access](git-configuration.md) to repositories on these services before configuring Forge
-> You should [create a gpg key](encryption/create-gpg-key.md) (Pretty Good Privacy) to encrypt your GitHub/GitLab personal access token in a file called `.authinfo.gpg`.
+> You should [create a gpg key](/encryption/create-gpg-key.md) (Pretty Good Privacy) to encrypt your GitHub/GitLab personal access token in a file called `.authinfo.gpg`.
 
 ## Set the username for the service used
 
