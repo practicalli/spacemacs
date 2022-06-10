@@ -1,12 +1,14 @@
 # Magit Forge
 
-Magit can retrieve issues and pull request for a project and even create a new pull request, when connect to services provided by GitHub, GitLab and your own hosted environments.  Magit uses Forge to talk to these services.
+Magit can retrieve issues and pull request for a project and even create a new pull request, when connect to services provided by GitHub, GitLab and your own hosted environments.  Magit uses Forge to talk to these services and refers to these services collectively as forges.
 
-> #### Hint::Configure Git access and define a gpg key first
-> You should [configure Git access](git-configuration.md) to repositories on these services before configuring Forge
-> You should [create a gpg key](/encryption/create-gpg-key.md) (Pretty Good Privacy) to encrypt your GitHub/GitLab personal access token in a file called `.authinfo.gpg`.
+> #### Hint::Configure Git identity and create a GPG key first
+> [Configure a Git identity](git-configuration.md) to repositories on these services before configuring Forge
+>
+> [Create a gpg key](/encryption/create-gpg-key.md) (Pretty Good Privacy) to encrypt your GitHub/GitLab personal access token in a file called `.authinfo.gpg`.
 
-## Set the username for the service used
+
+## Set username for the Forge service
 
 Add your Forge username to your `~/.gitconfig` file for your operating system account.
 
@@ -21,7 +23,7 @@ If using GitLab, replace `github.user` with `gitlab.user` in the above command.
 
 ## Generating a token for API access
 
-You need a token personal access token for the forge with the correct permissions, which can be generated via your account on those services.
+A personal access token is used to authenticate your identify with the forge. The respective services provide a means to generate that token:
 
 * [GitHub personal access tokens](https://github.com/settings/tokens) should be created with `repo`, `user` and `read:org` permissions.
 * [GitLab personal access tokens](https://gitlab.com/profile/personal_access_tokens) should be created with `api` permissions.
@@ -29,28 +31,53 @@ You need a token personal access token for the forge with the correct permission
 Personal Access tokens can be revoked and recreated at any time, so are a safer approach than using a password.  Some services will prevent authentication via password, so a token is the only option.
 
 
-### Create an encrypted .authinfo.gpg file
+### Encrypted forge connection in .authinfo.gpg
 
-Create a file called `~/.authinfo`
+`SPC f f` to open a file called `~/.authinfo`.  If the file does not exist it will be created when saving the file.
 
-Add the Auth Source line to the file, using your GitHub or GitLab name and associated personal access token.
+Add the Auth Source line to the file, using your GitHub or GitLab name and associated personal access token. For example, the GitHub account name is practicalli and the personal access token is the password (this is not a real token or account, do not share your token publicly)
 
-For example, the GitHub account name is practicalli and the personal access token is the password (this is not a real token or account, do not share your token publicly)
 ```
 machine api.github.com login practicalli^forge password 01personal02access03token
 ```
 
-Use `SPC SPC epa-encrypt-file` to encrypt the file with gpg.  A prompt shows to select an account to encrypt too (select `OK` if no keys have been created).
+`SPC a Y e` to call `epa-encrypt-file`
 
-![Spacemacs - Magit Forge - epa-encrypt-file - select account](/images/spacemacs-magit-forge-pgp-encrypt-authinfo-pgp.png)
+![Spacemacs Encryption - eazypg encrypt file - authinfo](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-encryption-eazypg-encript-file-authinfo.png)
 
-At the next prompt, enter the password to encrypt the file.
+Select recipients for encryption prompt, so select a PGP key to encrypt the file with.
+
+`j` and `k` to navigate to line with existing PGP key
+
+`m` to toggle mark the key to use (should show a star next to the key)
+
+`RET` with cursor over the `[ok]` text menu in the pop-up
 
 A new encrypted file is created using the original name with `.gpg` postfixed to the end, creating the  `~/.authinfo.gpg` file.
 
 `SPC f f` and open `~/.authinfo.gpg` to check Emacs can decrypt the file.  A plain text version of the file will open and a message appears in the mini-buffer saying the file is being decrypted.
 
 Finally, delete the `~/.authinfo` file, so the token is no longer stored as plain text.
+
+
+> #### Info::Without a PGP key
+> When the recipients for encryption prompt appears, select `OK` if no keys have been created. At the next prompt, enter the password to encrypt the file.
+>
+![Spacemacs - Magit Forge - epa-encrypt-file - select account](/images/spacemacs-magit-forge-pgp-encrypt-authinfo-pgp.png)
+
+#### Encrypt and decrypt via terminal CLI
+
+Open a terminal and encrypt the `.authinfo` file using the following command, specifying the email address of the key to use for the encryption
+
+```
+gpg --output ~/.authinfo.gpg --encrypt --recipient email-name@domain.tld ~/.authinfo
+```
+
+Decrypt the `.authinfo.gpg` file using:
+
+```
+gpg --output ~/.authinfo --decrypt ~/.authinfo.gpg
+```
 
 
 ## Configure Spacemacs to use authentication
