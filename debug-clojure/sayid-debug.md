@@ -36,7 +36,13 @@ To enable sayid, add the following `:variable` to the `clojure` layer in `.space
 
 `, m s cider-jack-in-clj` to start the Clojure REPL via Cider jack-in, which should automatically include the Sayid nrepl middleware.
 
-Include sayid as a dev-dependency in Leiningen or as an alias in Clojure CLI projects (e.g. `:lib/sayid` from [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn))
+For a Leiningen project, sayid library should be added as a dev-dependency
+
+For a Clojure CLI projects, include sayid library as an alias (e.g. `:lib/sayid` from [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn))
+
+```clojure
+{:lib/sayid {com.billpiel/sayid {:mvn/version "0.1.0"}}}
+```
 
 
 ## Cider Connect
@@ -72,6 +78,12 @@ If also using clj-refactor with Cider, then that nrepl middleware as well as say
    :main-opts  ["-m" "nrepl.cmdline"
                 "--middleware" "[com.billpiel.sayid.nrepl-middleware/wrap-sayid,refactor-nrepl.middleware/wrap-refactor,cider.nrepl/cider-middleware]"
                 "--interactive"]}
+```
+
+Now run the REPL process in a terminal with the following command
+
+```
+clojure -M:repl/cider-debug
 ```
 
 > Cider connect will only work if the sayid nrepl middleware is added to the aliases used to configure the nREPL middleware.
