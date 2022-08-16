@@ -49,8 +49,32 @@ Leiningen projects must include the Sayid plugin in order to use Cider Connect.
         :dependencies [[nrepl/nrepl "0.7.0"]]}}
 ```
 
-> #### Warning::Cider Connect not documented for Clojure CLI projects
-> Cider connect will only work if the sayid nrepl middleware is added to the aliases used to configure the nREPL middleware.  Documentation has not yet been found as to the name of this middleware, so Cider jack-in is the only known approach that works.
+Clojure CLI projects will need to explicitly include the middleware configuration in the same alias that configures nrepl, e.g.
+
+```clojure
+  :repl/cider-debug
+  {:extra-deps {nrepl/nrepl        {:mvn/version "0.9.0"}
+                com.billpiel/sayid {:mvn/version "0.1.0"}
+                cider/cider-nrepl  {:mvn/version "0.28.5"}}
+   :main-opts  ["-m" "nrepl.cmdline"
+                "--middleware" "[com.billpiel.sayid.nrepl-middleware/wrap-sayid,cider.nrepl/cider-middleware]"
+                "--interactive"]}
+```
+
+If also using clj-refactor with Cider, then that nrepl middleware as well as sayid and cider will need to be included
+
+```clojure
+  :repl/cider-refactor-debug
+  {:extra-deps {nrepl/nrepl                   {:mvn/version "0.9.0"}
+                com.billpiel/sayid            {:mvn/version "0.1.0"}
+                cider/cider-nrepl             {:mvn/version "0.28.5"}
+                refactor-nrepl/refactor-nrepl {:mvn/version "3.5.3"}}
+   :main-opts  ["-m" "nrepl.cmdline"
+                "--middleware" "[com.billpiel.sayid.nrepl-middleware/wrap-sayid,refactor-nrepl.middleware/wrap-refactor,cider.nrepl/cider-middleware]"
+                "--interactive"]}
+```
+
+> Cider connect will only work if the sayid nrepl middleware is added to the aliases used to configure the nREPL middleware.
 
 
 ## Learning Sayid
