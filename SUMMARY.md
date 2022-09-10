@@ -61,6 +61,7 @@
         * [Layouts](spacemacs-basics/working-with-projects/layouts.md)
         * [Treemacs](spacemacs-basics/working-with-projects/treemacs.md)
         * [Ranger](spacemacs-basics/working-with-projects/ranger.md)
+        * [dird](spacemacs-basics/working-with-projects/dird.md)
     * [Visual Select](spacemacs-basics/visual-select.md)
     * [Spell Checking](spacemacs-basics/spell-checking.md)
 * [Evil Basics](spacemacs-basics/evil/index.md)
