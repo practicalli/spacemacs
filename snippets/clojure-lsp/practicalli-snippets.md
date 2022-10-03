@@ -1,6 +1,6 @@
 # Practicalli Snippets for Clojure LSP
 
-Custom snippets created by Practicalli and added via the `:additional-snippets` key in the Clojure LSP configuration (`.lsp/config.edn` or user level configuration).  Snippets are defined as a vector of hash-maps
+[Custom snippets created by Practicalli](https://github.com/practicalli/clojure-lsp-config) and added via the `:additional-snippets` key in the Clojure LSP configuration (`.lsp/config.edn` or user level configuration).  Snippets are defined as a vector of hash-maps
 
 ```clojure
 {:additional-snippets [{} {} {} ,,,]}
@@ -18,10 +18,10 @@ A comment heading to describe the purpose and important information about the cu
   {:name "comment-heading"
    :detail "Comment Header"
    :snippet
-   ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-    ;; ${1:Namespace summary title}
+   ";; ---------------------------------------------------------
+    ;; ${1:Heading summary title}
     ;;
-    ;; ${2:Brief description}\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n$0"}
+    ;; ${2:Brief description}\n;; ---------------------------------------------------------\n\n$0"}
 ```
 
 A comment separator for marking logical sections within a namespace, useful for navigating code and identifying opportunities to refactor a namespace into multiple namespaces.
@@ -30,7 +30,17 @@ A comment separator for marking logical sections within a namespace, useful for 
   {:name "comment-separator"
    :detail "Comment Separator"
    :snippet
-   ";; ${1:Namespace summary title}\n;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;\n\n$0"}
+   ";; ---------------------------------------------------------\n;; ${1:Section title}\n\n$0"}
+```
+
+A comment section with start and end titles for marking logical sections within a namespace, again for navigation and identifying opportunities to refactor a namespace.
+
+```clojure
+  {:name "comment-section"
+   :detail "Comment Section"
+   :snippet
+   ";; ---------------------------------------------------------\n;; ${1:Section title}\n\n$0\n\n
+    ;; End of $1\n;; ---------------------------------------------------------\n\n"}
 ```
 
 
@@ -61,6 +71,26 @@ A modified rich comment block with clj-kondo configuration to suppress warnings 
    (comment
      $0
    #_()) ;; End of rich comment"}
+```
+
+Wrap an existing form in a rich comment
+
+```clojure
+  {:name "wrap-rich-comment"
+   :detail "Wrap current expression with rich comment form"
+   :snippet
+   "(comment
+      $current-form
+      $0
+   #_()) ;; End of rich comment"}
+```
+
+Comment an existing form with the Clojure Comment macro, `_#`
+
+```clojure
+  {:name "wrap-reader-comment"
+   :detail "Wrap current expression with Comment Reader macro"
+   :snippet "#_$current-form"}
 ```
 
 
@@ -268,4 +298,12 @@ Using `testing` before an assertion form pull that assertion into the group
   {:name "testing"
    :detail "testing clojure.test"
    :snippet "(testing \"${1:description-of-assertion-group}\"\n $0)"}
+```
+
+Define an `is` assertion for a `deftest`
+
+```clojure
+  {:name "is"
+   :detail "assertion for clojure.test"
+   :snippet "(is (= ${1:function call} ${2:expected result}))$0"}
 ```
