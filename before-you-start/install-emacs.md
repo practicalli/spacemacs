@@ -4,8 +4,10 @@
 
 Emacs is available for Linux, MacOSX and Windows.  The [Spacemacs Readme suggested ways to install Emacs](https://github.com/syl20bnr/spacemacs/tree/develop#emacs)
 
-> ####Info::Minimum Emacs Version - 26.3
-> This guide used the `develop` version of Spacemacs which requires Emacs 26.3 or greater.
+> ####Info::Emacs Version - 28.2 recommended
+> Emacs 28.2 is recommended, especially when it includes native compilation of Elisp, which can have a significant improvement on Emacs package performance.
+>
+> Emacs 27.1 or greater should work correctly with ths guide
 
 Here is a summary of the Emacs installation process for several operating system.
 
@@ -14,15 +16,23 @@ Here is a summary of the Emacs installation process for several operating system
 <!-- Ubuntu Install -->
 {% content "ubuntu" %}
 
-Emacs is available via the Ubuntu software manager. Check which version is available using `apt-cache show emacs`
+Emacs is available via the Ubuntu software manager. 
 
-```
-sudo apt-get install emacs
+`apt-cache show emacs` to check available versions of Emacs in the Ubuntu package manager.
+
+If Emacs 27.1 or greater is available, install using the Ubuntu package manager.
+
+```bash
+sudo apt install emacs
 ```
 
-> ####Hint::Ubuntu Personal Package Archives
-> If the Emacs version you want is not available, add the Personal Package Archive from the [Ubuntu Emacs Team](https://launchpad.net/~ubuntu-elisp/+archive/ubuntu/ppa).
-> Try the latest nightly builds of Emacs using the `emacs-snapshot` package, although be aware that some things may break.  You can install `emacs` and `emacs-snapshot` packages at the same time, calling `emacs` or `emacs-snapshot` to run the respective versions of Emacs.
+Additional versions of Emacs are available via the [Ubuntu Emacs Team Personal Package Archive](https://launchpad.net/~ubuntu-elisp/+archive/ubuntu/ppa).
+
+`sudo apt install emacs-snapshot` package to use the latest nightly build of Emacs, although be aware that some things may break. 
+
+
+> ####HINT::Build Emacs 28 from source
+> [Building Emacs 28 from source code on Ubuntu](https://practical.li/blog/posts/build-emacs-28-on-ubuntu/) is relatively straight forward, although will take a little time to compile.  Building Emacs allows customisation of some features, such as native compilatin of elisp to enhance the performance of Emacs.
 
 
 <!-- MacOSX Install -->
@@ -30,7 +40,7 @@ sudo apt-get install emacs
 
 Spacemacs documentation suggests [several Homebrew recipes for installs for Emacs](https://github.com/syl20bnr/spacemacs/tree/develop#macos).
 
-For a self-contained install, download Emacs 26.3 or later from the [Emacs for OSX website](https://emacsformacosx.com/).
+For a self-contained install, download Emacs 28.2 or later from the [Emacs for OSX website](https://emacsformacosx.com/).
 
 Alternative, [use Homebrew](https://formulae.brew.sh/cask/emacs) and run the following command:
 
@@ -38,12 +48,11 @@ Alternative, [use Homebrew](https://formulae.brew.sh/cask/emacs) and run the fol
 brew install -cask emacs
 ```
 
-> There is another [Homebrew emacs formula](https://formulae.brew.sh/formula/emacs), but this seems to suggest using the above now.
 
 <!-- Windows Install -->
 {% content "windows" %}
 
-Download Emacs-26.3 from the [GNU repository](http://ftp.gnu.org/gnu/emacs/windows/emacs-26) and extract the zip file to `%AppData%/local/Programs/emacs`.
+Download Emacs-28.2 from the [GNU repository](http://ftp.gnu.org/gnu/emacs/windows/emacs-26) and extract the zip file to `%AppData%/local/Programs/emacs`.
 
 Alternatively, if you are using the [Chocolatey package manager](https://chocolatey.org/) then install [Emacs version 26](https://chocolatey.org/packages/emacs)
 
