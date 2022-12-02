@@ -67,6 +67,7 @@
 * [Evil Basics](spacemacs-basics/evil/index.md)
     * [Evil States](spacemacs-basics/evil/editing-states.md)
     * [Speaking Evil](spacemacs-basics/vim-style/speaking-evil.md)
+    * [Common Evil](spacemacs-basics/vim-style/common-evil.md)
     * [Vim Quick Reference](spacemacs-basics/vim-style/vim-quick-reference.md)
     * [Vim Tips for developers](spacemacs-basics/vim-style/vim-tips-for-developers.md)
     * [Keybinding reference](spacemacs-basics/vim-style/key-binding-reference.md)
