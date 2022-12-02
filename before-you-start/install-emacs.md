@@ -16,7 +16,7 @@ Here is a summary of the Emacs installation process for several operating system
 <!-- Ubuntu Install -->
 {% content "ubuntu" %}
 
-Emacs is available via the Ubuntu software manager. 
+Emacs is available via the Ubuntu software manager.
 
 `apt-cache show emacs` to check available versions of Emacs in the Ubuntu package manager.
 
@@ -28,7 +28,7 @@ sudo apt install emacs
 
 Additional versions of Emacs are available via the [Ubuntu Emacs Team Personal Package Archive](https://launchpad.net/~ubuntu-elisp/+archive/ubuntu/ppa).
 
-`sudo apt install emacs-snapshot` package to use the latest nightly build of Emacs, although be aware that some things may break. 
+`sudo apt install emacs-snapshot` package to use the latest nightly build of Emacs, although be aware that some things may break.
 
 
 > ####HINT::Build Emacs 28 from source
@@ -38,15 +38,26 @@ Additional versions of Emacs are available via the [Ubuntu Emacs Team Personal P
 <!-- MacOSX Install -->
 {% content "macosx" %}
 
-Spacemacs documentation suggests [several Homebrew recipes for installs for Emacs](https://github.com/syl20bnr/spacemacs/tree/develop#macos).
+[Emacs Plus](https://github.com/d12frosted/homebrew-emacs-plus) from Homebrew provides many options, including native compilation and Spacemacs Icon for application launchers.
 
-For a self-contained install, download Emacs 28.2 or later from the [Emacs for OSX website](https://emacsformacosx.com/).
-
-Alternative, [use Homebrew](https://formulae.brew.sh/cask/emacs) and run the following command:
-
-```bash
-brew install -cask emacs
 ```
+brew tap d12frosted/emacs-plus`
+brew install emacs-plus@28 --with-native-comp --with-spacemacs-icon
+```
+
+Emacs.app is installed to: `/usr/local/opt/emacs-plus@28`
+
+Optionally run Emacs plus as a service
+```
+brew services start d12frosted/emacs-plus/emacs-plus@28
+```
+
+Run `emacs`
+
+Get a hot cup of something as Emacs native compilation compiles all the things.
+
+
+> The [Spacemacs README lists other options for MacOSX](https://github.com/syl20bnr/spacemacs#macos).
 
 
 <!-- Windows Install -->
