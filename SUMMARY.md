@@ -272,6 +272,13 @@
 
 <!-- TODO: shadow-cljs section -->
 
+## More Tools
+
+* [Database Access](database-access/index.md)
+    * [SQL layer and LSP](database-access/add-sql-layer-and-lsp.md)
+
+
+
 ## Org mode
 
 * [Org-mode](org-mode/index.md)
