@@ -35,6 +35,16 @@ Issues and pull requests are most welcome.  Please detail issues as much as you 
 
 [practicalli/spacemacs.d ](https://github.com/practicalli/spacemacs.d/)GitHub repository contains the complete Spacemacs configuration used in this guide and issues and pull requests can also be made there.
 
+
+## Sponsor my work
+
+[![Sponsor practicalli-john](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png)](https://github.com/sponsors/practicalli-john/)
+
+The majority of my work is focused on the [Practicalli series of books and videos](https://practical.li/) and an advisory role with several communities
+
+Thank you to [Cognitect](https://www.cognitect.com/), [Nubank](https://nubank.com.br/) and a wide range of other [sponsors](https://github.com/sponsors/practicalli-john#sponsors) for your continued support
+
+
 ## License
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
