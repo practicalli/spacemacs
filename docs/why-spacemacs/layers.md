@@ -7,15 +7,15 @@ Spacemacs uses Layers that organise these packages and the configuration to make
 
 [![Emacs - butterfly mode](https://imgs.xkcd.com/comics/real_programmers.png)](https://imgs.xkcd.com/comics/real_programmers.png)
 
-> ####Hint::
-> `SPC SPC butterfly` to activate in Spacemacs.  Use this great power very carefully.
+!!! HINT "Butterfly"
+    `SPC SPC butterfly` to activate in Spacemacs.  Use this great power very carefully.
 
 
 ## Simple Configuration
 
 Spacemacs provides a well tested configuration file called `~/.spacemacs` that provides lots of sensible defaults and makes customising your experience very easy.  This file is created during the Spacemacs installation.
 
-`.spacemacs.d/init.el` file can be used as an alternative location for `.spacemacs` and is easier to manage in its own version control project.
+`.spacemacs.d/init.el` file can be used as an alternative location for `.spacemacs` and is easier to manage changes via version control.
 
 The `~/.spacemacs` configuration file is composed of three important sections
 
@@ -25,8 +25,8 @@ The `~/.spacemacs` configuration file is composed of three important sections
 | **dotspacemacs/init**        | configuration applied when Spacemacs first starts, eg evil or holy mode(emacs), themes, fonts, full screen, recent files, etc                                                                                                         |
 | **dotspacemacs/user-config** | Add your own customisation here                                                                                                                                                                                                       |
 
-> ####Info::Example .spacemacs configuration
-> Review the authors [current .spacemacs.d/init.el configuration file]({{ book.P9ISpacemacsD }}) for examples of changes and the [dotfile configuration](http://spacemacs.org/doc/DOCUMENTATION.html#dotfile-configuration) section of the Spacemacs documentation for a complete overview.
+!!! INFO "Spacemacs dotfile configuration"
+    [dotfile configuration](http://spacemacs.org/doc/DOCUMENTATION.html#dotfile-configuration) details installation and syncronisation options 
 
 
 ## Opening and reloading the configuration file
@@ -38,10 +38,11 @@ Spacemacs provides specific keybindings for opening and reloading the `~/.spacem
 | `SPC f e d` | `M-m f e d` | open the `~/.spacemacs` file                 |
 | `SPC f e R` | `M-m f e R` | reload the configuration from `~/.spacemacs` |
 
-> ####Hint::Restart after changing configuration
-> The bigger a change you are making in the `~/.spacemacs` configuration file, the more desirable it is to restart Emacs.  For example, if you are adding a large layer or multiple layers and pulling in a number of packages.
-> Unless its a small change, then restart Emacs with `SPC q r`
->
+!!! Hint "Restart after changing configuration"
+    `SPC q r` after changes to the Spacemacs configuration file is recommended, especially after significant changes, e.g. adding multiple layers 
+
+    `SPC F e R` to update the Spacemacs configuration without restarting Emacs.
+
 
 ## Adding a Layer
 
@@ -59,20 +60,13 @@ See the Spacemacs documentation for a [list of layers](http://spacemacs.org/laye
 Create your own layers with `SPC SPC configuration-layer/create-layer`.  See the Spacemacs docs and [Configuring Spacemacs, a tutorial](http://thume.ca/howto/2015/03/07/configuring-spacemacs-a-tutorial/) for more information.
 
 
-> #### Hint:: Spacemacs Clojure configuration example
-> Trying to use packages-list-packages to install packages directly is simply ignored by Spacemacs.  See how to [configure a package without a layer](http://spacemacs.org/doc/DOCUMENTATION.html#without-a-layer) in the Spacemacs documentation.
->
-> The Spacemacs menu system use a mnemonic system for organising its menus and commands.  So to access a menu of file related commands, you press `SPC f` and for a menu of buffer commands you would use `SPC b`.
->
-> The keybindings to open the **file** of the **emacs** **dotfile** (.spacemacs) are therefore: `SPC f e d`
-
-
 ## Existing Emacs users
 
-If you have configured Emacs before, you can consider the `.spacemacs` file as a replacement for the `init.el` file you would otherwise use to define your Emacs configuration.
+Consider the `.spacemacs` configuration file a replacement for the `init.el` file that would otherwise be use to define an Emacs configuration.
 
-Installing packages via the `packages-list-packages` method is ignored by Spacemacs.  Any packages installed in this way will be ignored.
+Installing packages via the `packages-list-packages` method is ignored by Spacemacs.  Any packages installed in this way will be ignored and deleted on Emacs startup.
 
-If no layer exists for a package, you can [use a package without a layer](http://spacemacs.org/doc/DOCUMENTATION.html#without-a-layer).
+If a desired package is not included in any layer, [a package can be used without a layer](http://spacemacs.org/doc/DOCUMENTATION.html#without-a-layer).
 
-You can add what ever elisp you like to the **dotspacemacs/user-config** section of the `~/.spacemacs` configuration file.
+**dotspacemacs/user-config** section of the `~/.spacemacs` configuration file should contain personal Emacs Lisp configuration and is the last section of the Spacemacs configuration to load.
+

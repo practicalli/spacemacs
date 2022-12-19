@@ -1,5 +1,7 @@
 # Editor states - Evil or Holy
 
+Multi-modal editing simplifies keybindings for everything, keeping your hands centered on the keyboard and increasing your productivity.  Multi-modal approach minimizing the need for  key chords that are slower and a common source of repetitive strain e.g. `C-c C-x M-j`
+
 When installing Spacemacs you have the choice of editor styles
 
 | Editing style                                         | Description                                                                                |
@@ -7,13 +9,19 @@ When installing Spacemacs you have the choice of editor styles
 | Among the stars aboard the Evil flagship (Vim)        | Vim multi-model editing (normal, insert, visual, lisp, etc. `C-z` for classic Emacs editor |
 | On the planet Emacs in the Holy control tower (Emacs) | Emacs only editing (No Vim states)                                                         |
 
+<!-- TODO: Add background to spacemacs-states-vim-emacs graphic for dark theme readability -->
+![Spacemacs states](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/concepts/spacemacs-states-vim-emacs.png){target=_blank}
 
-![Spacemacs states](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/concepts/spacemacs-states-vim-emacs.png)
+Evil provide Vim style editing across all languages and modes in Emacs, simplifying the editing of files and keyboard shortcuts (keybindings)
+
+Vim is a language for manipulating text files that goes far beyond editing files.  Learning this simple language removes cognitive load.  Speak vim and your fingers efficiently make the changes you want.
 
 
-## Evil flagship states
+## Evil states
 
-If you have never used Vim before, having all these states may be confusing.  Each state has a specific purpose, eg. normal mode is about manipulating existing text where insert state is about adding more text.
+Multi-modal editing can take some adjustment and time to become comfortable. `Normal`, `Insert` and `Visual` states are the first ones to get used to.
+
+Each state has a specific purpose, eg. normal mode is about manipulating existing text where insert state is about adding more text.
 
 Using a state for different types of editing actions greatly simplifies the keyboard bindings and arguably makes editing faster, especially once you get used to multi-state editing.
 
@@ -23,10 +31,9 @@ If you are deeply connected to the with Emacs keybindings, then probably best to
 
 If you are new to Emacs or you just want to take advantage of Vim, then select Evil mode.
 
-> ####Hint::Evil flagship - toggling between Emacs
-> You can toggle between any of the Vim states and the Emacs state with `C-z`.  This only works if you selected the Evil flagship editing style.
+!!! HINT "Evil flagship - toggling between Emacs"
+    `C-z` toggles between Vim states and the Emacs state when Evil Flagship editing states are used.
 
-<hr />
 
 Here is the list of all the possible states, some of which are automatically applied (eg. magit git client is automatically evilified).
 
@@ -44,5 +51,31 @@ Here is the list of all the possible states, some of which are automatically app
 | `iedit`        | red           | Spacemacs - navigate between multiple regions of text                                |
 | `iedit-insert` | red           | Spacemacs - replace multiple regions of text                                         |
 
-> ####Hint::Spacemacs state documentation
-> States and other concepts are explained further in the [Spacemacs concepts](https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#editing-styles) documentation.
+!!! INFO "Spacemacs state documentation"
+    States and other concepts are explained further in the [Spacemacs concepts](https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#editing-styles){target=_blank} documentation.
+
+
+## Transient State menus
+
+Transient state menus make it simple to run commands multiple times, using a single key press, from a specific sub-set of commands.
+
+For example, Font Scaling transient state menu allows you to repeatedly increase the size of the buffer font just by using the `+` key.  The Font Scaling transient state menu contains the sub-set of commands related to scaling, so you can decrease the font size just with the `-` key and reset the font with `0`.
+
+![Transient State - scaling text](https://github.com/syl20bnr/spacemacs/raw/master/doc/img/spacemacs-scale-transient-state.png)
+
+Transient-states are usually triggered by using a keybinding with the following pattern: `<Leader> <group> .` where group is the category the transient-state falls under.
+
+When in a transient-state you will see documentation at the bottom of your window. To exit a transient-state press q.
+
+### Examples of transient state menus
+
+| Keybindings   | Transient state description       |
+| ------------- | ------------------------------    |
+| `SPC b .`     | buffer management                 |
+| `SPC e .`     | errors                            |
+| `SPC k .`     | lisp state for structured editing |
+| `SPC w .`     | window management                 |
+| `SPC z .`     | code folding                      |
+| `SPC z f`     | zoom frame size                   |
+| `SPC z x`     | Font Scaling (x for text)         |
+| `SPC n +/-`   | Change the value of a number      |
