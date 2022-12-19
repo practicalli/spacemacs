@@ -20,7 +20,7 @@ helm-swoop is also available in the [symbol highlight transient menu](/navigatin
 
 For example, navigate to a function definition and all the places that function is called in a project using helm-multi-swoop.
 
-![Helm multi-swoop](https://raw.githubusercontent.com/ShingoFukuyama/images/master/helm-multi-swoop.gif)
+![Helm multi-swoop](https://raw.githubusercontent.com/ShingoFukuyama/spacemacs/images/master/helm-multi-swoop.gif)
 
 > #### Hint::Refactor code
 > [Refactor section](/refactor/) provides examples of using helm-ag, helm-swoop, iedit, narrowing and clj-refactor.

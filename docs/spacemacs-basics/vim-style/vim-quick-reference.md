@@ -247,7 +247,7 @@ Here are the most commonly used buffer commands
 
 See the full buffer menu via `SPC b`
 
-![Spacemacs Buffer Menu](/images/spacemacs-buffer-menu.png)
+![Spacemacs Buffer Menu](/spacemacs/images/spacemacs-buffer-menu.png)
 
 
 ## Managing Files

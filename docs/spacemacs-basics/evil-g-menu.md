@@ -1,7 +1,7 @@
 # Evil G menu
 `g` in normal mode opens a menu of convenient utilities.  Practicalli uses this menu to comment existing lines, edit with multiple cursors, jumping to top or bottom of the buffer and joining lines together.
 
-[![Spacemacs Vim Normal - g menu](/images/spacemacs-vim-normal-g-menu.png)](/images/spacemacs-vim-normal-g-menu.png)
+[![Spacemacs Vim Normal - g menu](/spacemacs/images/spacemacs-vim-normal-g-menu.png)](/spacemacs/images/spacemacs-vim-normal-g-menu.png)
 
 
 ## Comment lines and regions

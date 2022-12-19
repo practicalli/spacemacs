@@ -9,7 +9,7 @@ Spacemacs gives you several options for managing the files in your project and y
 
 Find, copy, delete, rename, sudo-edit, bookmark and browse files.
 
-![Spacemacs - File menu](/images/spacemacs-file-menu.png)
+![Spacemacs - File menu](/spacemacs/images/spacemacs-file-menu.png)
 
 Read [Open and Create files](open-and-create-files.md) section for more details.
 
@@ -18,7 +18,7 @@ Read [Open and Create files](open-and-create-files.md) section for more details.
 
 list, show and delete buffers.  A buffer is a container for file content and any other text and images (if images support is included in your Emacs install)
 
-![Spacemacs - Buffer menu](/images/spacemacs-buffer-menu.png)
+![Spacemacs - Buffer menu](/spacemacs/images/spacemacs-buffer-menu.png)
 
 Read the [Managing Buffers](managing-buffers.md) section for more details.
 
@@ -27,7 +27,7 @@ Read the [Managing Buffers](managing-buffers.md) section for more details.
 
 find files and search/replace text in the current project (e.g. local git project or arbitrary `.projectile` defined project) and many other project specific functions.
 
-![Spacemacs - Project menu](/images/spacemacs-project-menu.png)
+![Spacemacs - Project menu](/spacemacs/images/spacemacs-project-menu.png)
 
 Read the [Projectile](projectile.md) section for more details.
 
@@ -36,7 +36,7 @@ Read the [Projectile](projectile.md) section for more details.
 
 Layouts providing an easy way to group buffers together, for projects or any arbitrary grouping you decide.
 
-![Spacemacs - Project menu](/images/spacemacs-layouts-help.png)
+![Spacemacs - Project menu](/spacemacs/images/spacemacs-layouts-help.png)
 
 Read the [Layouts and Workspaces](layouts.md) section for more details.
 
@@ -45,6 +45,6 @@ Read the [Layouts and Workspaces](layouts.md) section for more details.
 
 [Treemacs](treemacs.md) and [Ranger](ranger.md) are file managers that help you browse through files and directories.
 
-![Treemacs](/images/spacemacs-treemacs-project-example.png)
+![Treemacs](/spacemacs/images/spacemacs-treemacs-project-example.png)
 
-![Spacemacs - Ranger file manager](/images/spacemacs-ranger-example-book.png)
+![Spacemacs - Ranger file manager](/spacemacs/images/spacemacs-ranger-example-book.png)

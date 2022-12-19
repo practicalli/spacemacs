@@ -1,6 +1,6 @@
-# Learning Evil by Speaking Vim (Vi)
+# Speaking Evil
 
-Vim can be easier to learn if you learn to speak commands as sentences.
+Evil is easier to learn if you learn to speak commands as sentences.
 
 First learn some verbs:
 
@@ -15,7 +15,7 @@ Then learn the text objects you can apply verbs and modifiers too
 `b` block/parentheses, `p` paragraph, `s` sentence  `t` tag - html/xml, `w` word
 
 
-## Examples of speaking Evil (Vi)
+## Examples of speaking Evil
 
 Practice speaking evil with these examples
 
@@ -41,7 +41,7 @@ Practice speaking evil with these examples
 | `y @ a`     | yank (copy) to mark `a` (`m a` creates a mark called `a`)             |
 
 
-> #### Hint:: Evil Reference and Tips
-> [Evil quick reference guide](vim-quick-reference.md)
-> [Evil tips for developers](vim-tips-for-developers.md)
-> [Speaking Vim](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118)
+!!! HINT "Evil Reference and Tips"
+    [Evil quick reference guide](vim-quick-reference.md)
+    [Evil tips for developers](vim-tips-for-developers.md)
+    [Speaking Vim](https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118){target=_blank}

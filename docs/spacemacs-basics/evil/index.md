@@ -4,7 +4,7 @@
 
 Spacemacs provides Evil editing states and simplified keybindings throughout all layers and major modes.
 
-![Spacemacs - Evil states](/images/spacemacs-states-vim.png)
+![Spacemacs - Evil states](/spacemacs/images/spacemacs-states-vim.png)
 
 * **normal** - for manipulating and navigating existing text (default state)
 * **insert** - for writing new text
@@ -30,7 +30,7 @@ To help make Vim style editing become a sub-conscious act you should [learn to s
 
 [Vim Adventures](https://vim-adventures.com/) is a web-based game that is an alternative to practising Vim.
 
-[![Vim Adventures - learn VIM while playing a game](/images/vim-adventures.png)](https://vim-adventures.com/)
+[![Vim Adventures - learn VIM while playing a game](/spacemacs/images/vim-adventures.png)](https://vim-adventures.com/)
 
 
 ## Learning resource for Evil

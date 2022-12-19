@@ -9,11 +9,11 @@ https://www.youtube.com/embed/oOzzkUjtgZc?autoplay=1loop=1
 
 Using the **File** menu you can open files from anywhere on your file space.  New files and directories can also be created.
 
-![Spacemacs - File menu](/images/spacemacs-file-menu.png)
+![Spacemacs - File menu](/spacemacs/images/spacemacs-file-menu.png)
 
 **Find File**, `SPC f f` will open a file from anywhere on the file system.  A **helm** pop-up window appears at the bottom listing directories and files from the current directory.
 
-![Spacemacs - File menu - Find File helm popup](/images/spacemacs-file-menu-find-helm-popup.png)
+![Spacemacs - File menu - Find File helm popup](/spacemacs/images/spacemacs-file-menu-find-helm-popup.png)
 
 As you type the name you are looking for, the list of matching directory and file names narrows to just those that match.
 

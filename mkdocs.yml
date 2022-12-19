@@ -64,30 +64,6 @@ nav:
   - Spacemacs Basics:
       - spacemacs-basics/index.md
       - spacemacs-basics/emacs-basics.md
-      - spacemacs-basics/emacs-quick-reference.md
-      - spacemacs-basics/spacemacs-documentation.md
-      - spacemacs-basics/spell-checking.md
-      - spacemacs-basics/visual-select.md
-      - Vim Style Editing:
-          - spacemacs-basics/vim-style/key-binding-reference.md
-          - spacemacs-basics/vim-style/speaking-evil.md
-          - spacemacs-basics/vim-style/vim-quick-reference.md
-          - spacemacs-basics/vim-style/vim-tips-for-developers.md
-      - spacemacs-basics/evil-g-menu.md
-      - spacemacs-basics/evil-z-menu.md
-      - spacemacs-basics/evil/index.md
-      - spacemacs-basics/evil/editing-states.md
-      - Evil Tools:
-          - spacemacs-basics/evil-tools/index.md
-          - spacemacs-basics/evil-tools/helm-swoop.md
-          - spacemacs-basics/evil-tools/iedit-a-function.md
-          - spacemacs-basics/evil-tools/iedit-find-replace.md
-          - spacemacs-basics/evil-tools/iedit-in-action.md
-          - spacemacs-basics/evil-tools/iedit-replace-multiple-words.md
-          - spacemacs-basics/evil-tools/iedit.md
-          - spacemacs-basics/evil-tools/multiple-cursors.md
-          - spacemacs-basics/evil-tools/narrowing.md
-          - spacemacs-basics/evil-tools/replacing-text-across-projects.md
       - Projects:
           - spacemacs-basics/working-with-projects/index.md
           - spacemacs-basics/working-with-projects/dird.md
@@ -100,6 +76,28 @@ nav:
           - spacemacs-basics/working-with-projects/searching-projects.md
           - spacemacs-basics/working-with-projects/tidying-up-buffers.md
           - spacemacs-basics/working-with-projects/treemacs.md
+      - spacemacs-basics/visual-select.md
+      - spacemacs-basics/spell-checking.md
+  - Evil Basics:
+      - spacemacs-basics/evil/index.md
+      - spacemacs-basics/evil/editing-states.md
+      - spacemacs-basics/vim-style/key-binding-reference.md
+      - spacemacs-basics/vim-style/speaking-evil.md
+      - spacemacs-basics/vim-style/vim-quick-reference.md
+      - spacemacs-basics/vim-style/vim-tips-for-developers.md
+      - spacemacs-basics/evil-g-menu.md
+      - spacemacs-basics/evil-z-menu.md
+      - Evil Tools:
+          - spacemacs-basics/evil-tools/index.md
+          - spacemacs-basics/evil-tools/helm-swoop.md
+          - spacemacs-basics/evil-tools/iedit-a-function.md
+          - spacemacs-basics/evil-tools/iedit-find-replace.md
+          - spacemacs-basics/evil-tools/iedit-in-action.md
+          - spacemacs-basics/evil-tools/iedit-replace-multiple-words.md
+          - spacemacs-basics/evil-tools/iedit.md
+          - spacemacs-basics/evil-tools/narrowing.md
+          - spacemacs-basics/evil-tools/replacing-text-across-projects.md
+          - spacemacs-basics/evil-tools/multiple-cursors.md
   - Clojure Development:
       - Projects:
           - clojure-projects/index.md
@@ -338,6 +336,7 @@ nav:
       - misc/unicode-characters.md
   - Reference:
       - reference/index.md
+      - reference/emacs-quick-reference.md
       - reference/hydra-menus.md
       - reference/projectile.md
       - reference/cider/index.md

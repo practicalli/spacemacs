@@ -18,7 +18,7 @@
 
 The current layout name appears on the far left of the mode-line.
 
-![Spacemacs layers - practicalli spacemacs](/images/spacemacs-layers-name.png)
+![Spacemacs layers - practicalli spacemacs](/spacemacs/images/spacemacs-layers-name.png)
 
 `SPC l s` saves the current layouts to a file, `SPC l L` loads a layout from a file.  Layouts are kept when restarting Spacemacs with `SPC q r` and can be configured to auto-resume when starting Emacs.
 
@@ -30,7 +30,7 @@ dotspacemacs-auto-resume-layouts t
 
 `SPC l ?` will show the help menu
 
-![Spacemacs Layouts - transient state](/images/spacemacs-layouts-help.png)
+![Spacemacs Layouts - transient state](/spacemacs/images/spacemacs-layouts-help.png)
 
 
 
@@ -57,7 +57,7 @@ Pressing a workspace number will activate it or create a new one. `Ctrl-<number>
 
 `SPC l w ?` to toggle the full help.
 
-![Spacemacs Layouts - Workspaces help](/images/spacemacs-layouts-workspaces-help.png)
+![Spacemacs Layouts - Workspaces help](/spacemacs/images/spacemacs-layouts-workspaces-help.png)
 
 There are also some handy globally available key bindings related to workspaces:
 

@@ -2,7 +2,7 @@
 
 Buffers manage the display of files and other information. Opening a file replaces the content in the current buffer.
 
-[![Spacemacs Buffer menu](/images/spacemacs-buffer-menu.png)](/images/spacemacs-buffer-menu.png)
+[![Spacemacs Buffer menu](/spacemacs/images/spacemacs-buffer-menu.png)](/spacemacs/images/spacemacs-buffer-menu.png)
 
 ## Listing open buffers
 
@@ -10,7 +10,7 @@ Buffers manage the display of files and other information. Opening a file replac
 
 A helm pop-up window appears at the bottom listing all open buffers.  The helm popup window also shows recently opened buffers.
 
-![Spacemacs - Buffer menu - List Buffers - Helm Mini buffer](/images/spacemacs-buffer-menu-list-buffers-helm-mini.png)
+![Spacemacs - Buffer menu - List Buffers - Helm Mini buffer](/spacemacs/images/spacemacs-buffer-menu-list-buffers-helm-mini.png)
 
 Using the buffer menu, `SPC b b` you can switch to any buffer currently open, especially useful for those buffers that are not currently being shown in a window.
 
@@ -25,7 +25,7 @@ With a single key you can cycle quickly through all open buffers, forward with `
 
 Use `d` to kill the current buffer.
 
-![Spacemacs - Buffer Transient State](/images/spacemacs-buffers-transient-state-menu.png)
+![Spacemacs - Buffer Transient State](/spacemacs/images/spacemacs-buffers-transient-state-menu.png)
 
 
 ### Commonly used keybindings

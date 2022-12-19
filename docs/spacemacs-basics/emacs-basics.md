@@ -1,14 +1,14 @@
-# Emacs Basics - Frames Buffers Windows
+# Emacs Basics
 
 Understanding the basic terminology will help make the most out of Spacemacs and allow very effective use.
 
-![Emacs Terminology - Structure of Emacs](/images/emacs-terminology-structure.png)
+![Emacs Terminology - Structure of Emacs](/spacemacs/images/emacs-terminology-structure.png)
 
 | Terminology | Description                                                                                                                                 |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | File        | A file on the file system                                                                                                                   |
-| Buffer      | A container to display a file or other information (file navigation, REPL, data inspector, test report, etc.)                                                |
-| Window      | Contains a buffer, organises multiple buffers in a frame                                                                     |
+| Buffer      | A container to display a file or other information (file navigation, REPL, data inspector, test report, etc.)                               |
+| Window      | Contains a buffer, organises multiple buffers in a frame                                                                                    |
 | Frame       | Holds one or more windows. Opening another frame gives you another instance of Emacs                                                        |
 | Status bar  | Information about current window and buffer, e.g. window number, buffer mode & name, location of cursor. Also referred to as the mode line. |
 | Mini-buffer | A command line for Emacs - shows commands and some results, acts as an interactive prompt for some commands                                 |
@@ -20,53 +20,53 @@ Spacemacs also adds [Layouts to manage a set of buffers within the scope of a pr
 
 By default, Spacemacs opens with a frame that contains a single window, that window containing the Spacemacs home buffer.
 
-`SPC F n` creates a new frame containing a single window that contains a buffer.
+++spc++ ++f++ ++"n"++ creates a new frame containing a single window that contains a buffer.
 
-`SPC F d` closes the current frame, unless its the last Emacs frame running, then Emacs itself closes.
+++spc++ ++f++ ++"d"++ closes the current frame, unless its the last Emacs frame running, then Emacs itself closes.
 
-`SPC q q` to quit Emacs closes all frames.
+++spc++ ++"q"++ ++"q"++ to quit Emacs closes all frames.
 
 
 ## Working with windows
 
 Each frame contains one or more windows. Each window is assigned a unique number when created, even across multiple frames.
 
-`SPC` followed by a number jumps to the window with that number, e.g. `SPC 1` jumps to window number 1.
+++spc++ followed by a number jumps to the window with that number, e.g. ++spc++ ++1++ jumps to window number 1.
 
 Windows are used to display multiple buffers (files, REPL, error messages, etc) within the same frame
 
-| Key Binding | Description                                           |
-|-------------|-------------------------------------------------------|
-| `SPC w .`   | Open Window transient state menu for multiple command |
-| `SPC w 2`   | 2 window layout - shows current buffer in new window  |
-| `SPC w 3`   | 3 window layout - shows current buffer in new windows |
-| `SPC w m`   | maximise the current buffer                           |
-| `SPC w d`   | delete current window                                 |
-| `SPC t g`   | toggles golden ratio view of windows                  |
+| Key Binding                | Description                                           |
+|----------------------------|-------------------------------------------------------|
+| ++spc++ ++"w"++ ++period++ | Open Window transient state menu for multiple command |
+| ++spc++ ++"w"++ ++2++      | 2 window layout - shows current buffer in new window  |
+| ++spc++ ++"w"++ ++3++      | 3 window layout - shows current buffer in new windows |
+| ++spc++ ++"w"++ ++"m"++    | maximise the current buffer                           |
+| ++spc++ ++"w"++ ++"d"++    | delete current window                                 |
+| ++spc++ ++"w"++ ++"g"++    | toggles golden ratio view of windows                  |
 
 
 ## Working with windows
 
 A buffer is the fundamental presentation of information in Emacs.  Buffers can show the contents of a file, search results in a helm-popup, an interactive process e.g. REPL buffer, etc.
 
-`SPC TAB` toggles between the current buffer and the last active buffer
+++spc++ ++tab++ toggles between the current buffer and the last active buffer
 
-| Key Binding | Description                                                                              |
-|-------------|------------------------------------------------------------------------------------------|
-| `SPC b .`   | Open buffer transient state menu for multiple command                                    |
-| `SPC b b`   | Show list of open buffers and recently opened buffers                                    |
-| `SPC b d`   | Kill current buffer                                                                      |
-| `SPC b h`   | Open Spacemacs Home buffer                                                               |
-| `SPC b m`   | Open Spacemacs `*messages*` buffer - log of Emacs actions and commands                   |
-| `SPC b s`   | Open Spacemacs scratch buffer - a persistent buffer for random note taking               |
-| `SPC b w`   | Toggle read-only mode on a buffer (Spacemacs Org docs open in Read-only mode by default) |
-| `SPC b x`   | Kill buffer and the window containing it                                                 |
-| `SPC b R`   | Revert buffer to file saved on disk (causes .dir-locals.el to load into Emacs)           |
-| `SPC b Y`   | Copy contents of a whole buffer                                                          |
+| Key Binding                | Description                                                                              |
+|----------------------------|------------------------------------------------------------------------------------------|
+| ++spc++ ++"b"++ ++period++ | Open buffer transient state menu for multiple command                                    |
+| ++spc++ ++"b"++ ++"b"++    | Show list of open buffers and recently opened buffers                                    |
+| ++spc++ ++"b"++ ++"d"++    | Kill current buffer                                                                      |
+| ++spc++ ++"b"++ ++"h"++    | Open Spacemacs Home buffer                                                               |
+| ++spc++ ++"b"++ ++"m"++    | Open Spacemacs `*messages*` buffer - log of Emacs actions and commands                   |
+| ++spc++ ++"b"++ ++"s"++    | Open Spacemacs scratch buffer - a persistent buffer for random note taking               |
+| ++spc++ ++"b"++ ++"w"++    | Toggle read-only mode on a buffer (Spacemacs Org docs open in Read-only mode by default) |
+| ++spc++ ++"b"++ ++"x"++    | Kill buffer and the window containing it                                                 |
+| ++spc++ ++"b"++ ++"R"++    | Revert buffer to file saved on disk (causes .dir-locals.el to load into Emacs)           |
+| ++spc++ ++"b"++ ++"Y"++    | Copy contents of a whole buffer                                                          |
 
 
 ## Golden Ratio
 
-[Golden-ratio](https://github.com/roman/golden-ratio.el) automatically lays out windows in a Fibonacci style pattern.  The active window becomes the largest window and all other windows are automatically shrunk so they are out of the way, but still visible.
+[Golden-ratio](https://github.com/roman/golden-ratio.el){target=_blank} automatically lays out windows in a Fibonacci style pattern.  The active window becomes the largest window and all other windows are automatically shrunk so they are out of the way, but still visible.
 
 ![Spacemacs - Golden Ratio in action](https://camo.githubusercontent.com/26b1ac5fec67a2c557cfbe87382a0134d3443fd0/68747470733a2f2f7261772e6769746875622e636f6d2f726f6d616e2f676f6c64656e2d726174696f2e656c2f6173736574732f676f6c64656e5f726174696f5f656c2e676966)
