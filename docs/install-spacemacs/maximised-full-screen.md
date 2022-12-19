@@ -2,9 +2,9 @@
 
 You can configure Emacs to start in maximised mode (just like maximising an applications window) or in fullscreen mode for minimum distraction.
 
-Change one of the following option in the `dotspacemacs/init` function of `~/.spacemacs`. The fullscreen option overrides the maximised option.
+Change one of the following option in the `dotspacemacs/init` function of the Spacemacs configuration. The fullscreen option overrides the maximised option.
 
-```lisp
+```emacs
 dotspacemacs-fullscreen-at-startup t
 
 dotspacemacs-maximized-at-startup t
@@ -14,7 +14,7 @@ dotspacemacs-maximized-at-startup t
 
 Practicalli uses the following settings for these options:
 
-```elisp
+```emacs
    ;; If non nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
    dotspacemacs-fullscreen-at-startup nil
@@ -28,7 +28,6 @@ Practicalli uses the following settings for these options:
 ```
 
 
-> ####Hint::Option values
-> For all options, `t`  represents true, `nil` represents false.
->
-> Where a name is used for a value it should be preceded with a single quote character, eg, `'all`
+!!! HINT "Option values"
+    For all options, `t`  represents true, `nil` represents false.
+    Where a name is used for a value it should be preceded with a single quote character, eg, `'all`

@@ -1,12 +1,14 @@
 # Line Numbers
-`SPC t n` menu toggles line numbers, showing consecutive (absolute) `a`, relative `r` or visual `v` layout.
 
-Configure `dotspacemacs-line-numbers` in `.spacemacs` file to [show line numbers by default](#visual-style-line-number-configuration).
+++spc++ ++"t"++ ++"s"++ menu toggles line numbers, showing consecutive (absolute) ++a++, relative ++r++ or visual ++v++ layout.
 
-[![Spacemacs - Toggle menu](https://raw.githubusercontent.com/practicalli/graphic-design/master/spacemacs/spacemacs-line-numbers-comparison-labelled.png)](https://raw.githubusercontent.com/practicalli/graphic-design/master/spacemacs/spacemacs-line-numbers-comparison-labelled.png)
+Configure `dotspacemacs-line-numbers` in Spacemacs configuration file to [show line numbers by default](#visual-style-line-number-configuration).
+
+![Spacemacs - Toggle menu](https://raw.githubusercontent.com/practicalli/graphic-design/master/spacemacs/spacemacs-line-numbers-comparison-labelled.png)
 
 
-## Relative line numbering for Vim-style editing
+## Relative line numbers for Evil
+
 A relative numbering style (`visual`, `relative`) is highly recommended for [vim-style editing](/spacemacs-basics/vim-basics.md) as it provides an effective way to apply actions to multiple lines
 
 `10 j` in **Evil normal** mode will jump 10 lines forward
@@ -19,6 +21,7 @@ With relative numbering, the current line number is shown and all other numbers 
 
 
 ## Visual style line number configuration
+
 Practicalli recommends using visual line numbers for Vim style editing, which provides relative numbering that does not count hidden or [folded code](/spacemacs-basics/evil-z-menu.md).
 
 `SPC f e d` to open the `.spacemacs` file and `SPC s s`dotspacemacs-line-numbers` to jump to the configuration option.
@@ -37,12 +40,11 @@ The configuration provides visual line numbers for buffers all buffers except di
 
 Line numbers are also disabled for large files, as it can slow Emacs down considerably (although this may be less of a problem with Emacs 26.3 onward and native line numbers).
 
-If you want to turn line numbers off for all buffers by default, set the value back to the default `nil` value.
+Turn line numbers off for all buffers by setting the `dotspacemacs-line-numbers` value to the default `nil` value.
 
-```elisp
+```emacs
 dotspacemacs-line-numbers nil
 ```
 
-
-> ####Hint::Jumping to a line without line numbers
-> `SPC j l` will jump the cursor to the specified line by temporarily labelling each line with a unique letter combination.  This allows you to jump quickly to a line even if you are not using line numbers.
+!!! HINT "Jumping to a line without line numbers"
+    ++spc++ ++"j"++ ++"l"++ labels each line with a unique letter combination providing a quick way to a line even if there are no line numbers.

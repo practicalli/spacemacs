@@ -8,15 +8,10 @@ Saying yes will add `clojure` to the `~/.spacemacs` configuration and download a
 
 Once the Clojure packages have downloaded, you are ready to use all the Clojure features.
 
-> ####TODO::Create specific video
-> Create a specific video that shows how the Clojure layer is added when opening the your first Clojure file
->
-> Jump to 6 minutes 45 seconds in the video below to see the layer being installed.
-
-{% youtube %}
-https://www.youtube.com/watch?v=Uuwg-069NYE&t=405s
-{% endyoutube %}
+<p style="text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Uuwg-069NYE&t=405s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 
-> ####Hint::
-> If it seems like something is not working correctly, try restarting Emacs, `SPC q r`, to make sure all the packages that make up the Clojure layer are loaded.
+!!! Hint "Restart Spacemacs after larger changes"
+    ++spc++ ++"q"++ ++"r"++ to restart Spacemacs when significant changes are made or something is not working correctly

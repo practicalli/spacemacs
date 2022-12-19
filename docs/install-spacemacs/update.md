@@ -1,31 +1,21 @@
-# Updating Spacemacs and Packages
+# Update Spacemacs and Packages
 
 Updating Spacemacs comes in three sections:
 
-* Spacemacs project files
-* `.spacemacs` configuration file
-* Packages installed
+* Pull latest Spacemacs commits
+* Compare changes with `.spacemacs-template` file
+* Install Packages
 
-{% youtube %}
-https://youtu.be/XC7LGI0Q2u8
-{% endyoutube %}
+<p style="text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XC7LGI0Q2u8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 
 ## Update Spacemacs project files
 
-Choose the updates instructions based on the branch you use for Spacemacs, to select the appropriate process
+Open `$XDG_CONFIG_HOME/emacs/README.md` or `$HOME/.emacs.d/README.md`
 
-<!-- Spacemacs update options -->
-{% tabs develop="develop branch", master="master branch" %}
-
-<!-- Updating Spacemacs when using the develop branch -->
-{% content "develop" %}
-
-### Update Spacemacs via Magit ###
-
-Open a file in the `.emacs.d` directory, for example `.emacs.d/README.md`
-
-`SPC g s` opens Magit status for the Spacemacs project
+++spc++ ++"g"++ ++"s"++  opens Magit status for the Spacemacs project
 
 `F` pop-ups the pull menu, use `-r` to set rebase to `true`
 
@@ -35,42 +25,26 @@ If upstream is not set, Spacemacs will prompt you with a list of available remot
 
 Spacemacs should update itself using Git in a few seconds.
 
-`q` to quit out of Magit.
-
-
-<!-- Updating Spacemacs when using the master branch -->
-{% content "master" %}
-
-### Update Spacemacs via Spacemacs Home buffer ###
-
-`SPC b h` to open the Spacemacs Home buffer.
-
-Move the cursor to **Update Spacemacs** and press return
-
-Wait until Spacemacs finishes updating itself (should be less than a minute).
-
-
-{% endtabs %}
-<!-- End of Spacemacs update options -->
+`q` to quit Magit status buffer.
 
 
 ## Update the Spacemacs configuration
 
-`SPC f e D` opens an `ediff` session, comparing your current `.spacemacs` file with the latest `.spacemacs-template`.
+++spc++ ++"f"++ ++"e"++ ++d++ opens an `ediff` session, comparing your current `.spacemacs` file with the latest `.spacemacs-template`.
 
-`n`, `p` navigates (down/up) between each difference in the file.  `b` copies a change from the template to your `.spacemacs file`.  Accept all the changes from the template unless you know you made a specific change to your `.spacemacs` file.
+++n++, ++p++ navigates (down/up) between each difference in the file.  ++b++ copies a change from the template to your `.spacemacs file`.  Accept all the changes from the template unless you know you made a specific change to your `.spacemacs` file.
 
-`q` to quit the ediff session and `SPC f s` to save the `.spacemacs` file.
+++q++ to quit the ediff session and ++spc++ ++"f"++ ++"s"++ to save the changes to the Spacemacs configuration.
 
 
 ## Update Packages
 
-`SPC f e U` updates the packages.  Use this key binding from the Spacemacs Home buffer, `SPC b h`, to see the list of packages that will be updated
+++spc++ ++"f"++ ++"e"++ ++u++  updates shows the list of packages that will be updated
 
-`y` to confirm you want to install the packages
+++y++ to confirm you want to install the packages
 
-_Wait until Spacemacs prompts you to restart_
+_Wait until Spacemacs prompts to restart_
 
-`SPC q r` will restart Spacemacs, download all the new versions of the packages and install them.
+++spc++ ++"q"++ ++"r"++ to restart Spacemacs.  The new versions of the packages are install when Spacemacs starts up again.
 
-_If downloading a considerable number of packages, or you see a lot of warnings, then using `SPC q r` for a second time can be useful to ensure that all new packages have been installed correctly._
+_If downloading a considerable number of packages, or you see a lot of warnings, then using `SPC q r` for a second time can be useful to ensure that all new packages have been loaded correctly._

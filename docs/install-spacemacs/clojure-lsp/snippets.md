@@ -1,18 +1,43 @@
 # Clojure LSP snippets
 
-Clojure LSP contains several [built-in snippets](https://clojure-lsp.io/features/#snippets). The [practicalli/clojure-lsp-config repository](https://github.com/practicalli/clojure-lsp-config) enhances and extends the available snippets, helping create code that documents its purpose clearly.
+Clojure LSP contains several [built-in snippets](https://clojure-lsp.io/features/#snippets){target=_blank}. The [practicalli/clojure-lsp-config repository](https://github.com/practicalli/clojure-lsp-config){target=_blank} enhances and extends the available snippets, helping create code that documents its purpose clearly.
 
-**[Each snippet is described in the Clojure LSP reference](https://practical.li/spacemacs/snippets/clojure-lsp/practicalli-snippets.html)**, along with the configuration for each snippet.
+[Practicalli Snippets for Clojure LSP](https://practical.li/spacemacs/snippets/clojure-lsp/practicalli-snippets.html){ .md-button }
 
 
 ## Install Practicalli Clojure LSP snippets
 
-Clone [practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config) to `$XDG_CONFIG_HOME/clojure-lsp/` or if `XDG_CONFIG_HOME` environment variable is not set, then clone to `$HOME/.lsp/`.  Or simply copy the desired snippets to the `config.edn` file.
+[practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config) contains a wide range of snippets for Clojure LSP, some of which were contributed to the Clojure LSP project
+
+=== "Free Desktop XDG Config"
+
+    Clone via SSH
+    ```shell
+    git clone -o practicalli git@github.com:practicalli/clojure-lsp-config.git $XDG_CONFIG_HOME/clojure-lsp
+    ```
+
+    Clone via HTTPS
+    ```shell
+    git clone -o practicalli https://github.com/practicalli/clojure-lsp-config.git $XDG_CONFIG_HOME/clojure-lsp
+    ```
+
+=== "Classic Config"
+    Clone via SSH
+    ```shell
+    git clone -o practicalli git@github.com:practicalli/clojure-lsp-config.git $HOME/.clojure-lsp
+    ```
+
+    Clone via HTTPS
+    ```shell
+    git clone -o practicalli https://github.com/practicalli/clojure-lsp-config.git $HOME/.clojure-lsp
+    ```
+
 
 Clojure LSP should automatically pick up the new changes without having to restart.
 
-> #### Hint::Restart LSP Workspace
-> `, w r` will restart the current LSP workflow in the unlikely event the snippets are not showing
+!!! HINT "Restart LSP Workspace"
+    ++comma++ ++"b"++ ++"r"++ will restart the current LSP workspace in the event snippets are not showing
+
 
 ## Using snippets
 
@@ -20,9 +45,9 @@ Start typing the name of the snippet and it should appear in the auto-completion
 
 ![Spacemacs Clojure LSP snippets - comment example](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-lsp-snippets-autocomplete-example-comment.png)
 
-`RET` to expand the highlighted snipped
+++return++ to expand the highlighted snipped
 
-`TAB`, `C-j` & `C-k`, or arrow-keys navigate the auto-completion pop-up list when there are multiple entries.
+++tab++ / ++ctrl+"j"++ & ++ctrl+"k"++ or arrow-keys navigate the auto-completion pop-up list when there are multiple entries.
 
 
 

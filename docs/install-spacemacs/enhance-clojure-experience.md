@@ -1,4 +1,4 @@
-# Enhancing the Clojure experience
+# Enhanced Clojure experience
 
 Enhance the **clojure** layer by adding automatic linting (clj-kondo), refactoring (clj-refactor) and recommended CIDER options.  Complement the Clojure layer with general development tools including a git client (Magit), markdown and org-mode support.
 
@@ -19,12 +19,12 @@ Enhance the **clojure** layer by adding automatic linting (clj-kondo), refactori
 | `treemacs`         | visual file system browser (file explorer) `SPC p t`                                                                                                                                |
 | `version-control`  | general version control features, eg. ediff, fringe highlights                                                                                                                      |
 
-> ####WARNING::Install clj-kondo binary
->`clj-kondo` automatic linting requires the binary of `clj-kondo` installed on the operating system path in order to work.
-> Please read the [clj-kondo install guide](https://github.com/borkdude/clj-kondo/blob/master/doc/install.md) for details.
+!!! INFO "Install clj-kondo binary"
+    Automatic linting requires the clj-kondo binary installed on the operating system path, or the Clojure LSP server which contains clj-kondo.
+    [Practicalli Clojure](https://practical.li/clojure/clojure-cli/install/){target=_blank} contains install instructions for these tools.
 
 
-## Edit .spacemacs and add layers
+## Add layers
 
 `SPC f e d` opens the `.spacemacs` configuration file (`M-m f e d` holy mode)
 
@@ -37,19 +37,20 @@ Either copy the `dotspacemacs-configuration-layers` from practicalli/spacemacs.d
 `SPC q r` to restart Spacemacs which will load and configure all the new layers and their Emacs packages.
 
 
-> #### Hint::Reload Configuration or Restart Emacs
-> `SPC q r` to restart Emacs with a new configuration is recommended when making a big change or adding layers. For smaller changes you can reload the `~/.spacemacs` configuration using `SPC f e R`.
->
-> Practicalli recommends restarting Spacemacs, `SPC q r`, once more after all the packages have finished installing, ensuring all the Elisp code is loaded correctly.
+!!! Hint "Reload Configuration or Restart Emacs"
+    ++spc++ ++"q"++ ++"r"++ to restart Emacs with a new configuration is recommended when making a big change or adding layers.
+    ++spc++ ++"f"++ ++"e"++ ++R++ to reload the `~/.spacemacs` configuration for smaller changes.
+
+[Practicalli Spacemacs Example Configuration](https://github.com/practicalli/spacemacs.d/init.el){target=_blank .md-button }
 
 
-### Auto-completion
+## Auto-completion
 
 Enable auto-completion for programming languages.  In Clojure this includes functions, namespaces and other symbols.
 
 Yasnippet are included in the auto-completion popup and are sorted with the most frequently used snippets first.
 
-```lisp
+```emacs
 (auto-completion :variables
                  auto-completion-enable-help-tooltip t
                  auto-completion-enable-snippets-in-popup t
@@ -65,7 +66,7 @@ Enable Clojure support but differ the backend to Clojure LSP rather than CIDER. 
 
 Enable the kaocha-runner to use Kaocha test runner from within the REPL.
 
-```lisp
+```emacs
 (clojure :variables
          cider-repl-display-help-banner nil      ;; disable help banner
          cider-pprint-fn 'fipp                   ;; fast pretty printing
@@ -88,7 +89,7 @@ Enable GitHub features to clone repositories, push commits and create pull reque
 
 Enable fringe highlight of version control (Git) changes in buffers
 
-```lisp
+```emacs
 (git :variables
      git-magit-status-fullscreen t
      magit-diff-refine-hunk t
@@ -104,7 +105,7 @@ github
 
 Clojure LSP provides common editor features across all Clojure aware editors.  A configuration with minimal visual impact.
 
-```lisp
+```emacs
 (lsp :variables
      ;; Formatting and indentation
      lsp-enable-on-type-formatting t
@@ -144,7 +145,7 @@ Clojure LSP provides common editor features across all Clojure aware editors.  A
 
 Edit multiple lines of text concurrently by creating multiple cursors, especially useful for editing the form of lines which have different values.
 
-```lisp
+```emacs
 multiple-cursors
 ```
 
@@ -152,7 +153,7 @@ multiple-cursors
 
 Enable Spacemacs Org-mode with support for a range of additional features useful for development, including a custom TODO list workflow.
 
-```lisp
+```emacs
 (org :variables
      org-enable-github-support t
      org-enable-bootstrap-support t
@@ -179,7 +180,7 @@ spacemacs-layouts layer added to set variables, `SPC TAB` restricted to current 
 
 Kill buffers when killing layer - SPC l x
 
-```lisp
+```emacs
 (spacemacs-layouts :variables
                    spacemacs-layouts-restrict-spc-tab t
                    persp-autokill-buffer-on-remove 'kill-weak)
@@ -190,7 +191,7 @@ Kill buffers when killing layer - SPC l x
 
 Configuration used by Practicalli for the Doom modeline, based on the configuration: [seagle0128/doom-modeline](https://github.com/seagle0128/doom-modeline#customize)
 
-```lisp
+```emacs
 (spacemacs-modeline :variables
                     doom-modeline-height 12
                     doom-modeline-major-mode-color-icon t
@@ -207,7 +208,7 @@ Spell as you type with Flyspell package, which requires external command such as
 
 `SPC S s` to check the spelling of the current word
 
-```lisp
+```emacs
 spell-checking
 ```
 
@@ -218,7 +219,7 @@ Support font ligatures (fancy symbols) in all programming language modes, when u
 
 Including ligatures for text-mode may cause issues with org-mode and magit.
 
-```lisp
+```emacs
 (unicode-fonts :variables
                unicode-fonts-enable-ligatures t
                unicode-fonts-ligature-modes '(prog-mode))

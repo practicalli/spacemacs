@@ -2,11 +2,11 @@
 
 A simple shell can be run with the `shell` function.  This `shell` function opens a new buffer with a shell prompt and displays that buffer, replacing the currently highlighted buffer.
 
-`SPC '` to popup a shell buffer in the root of the user account. Consecutive presses toggle the shell popup buffer for quick access.
+++spc++ ++single-quote++ opens a popup shell buffer in the root of the user account. Consecutive presses toggle the shell popup buffer for quick access.
 
-`SPC p '` displays a popup buffer in the project directory.
+ ++spc++ ++"p"++ ++single-quote++ opens a popup buffer in the root of the current project directory.
 
-Use the `exit` command to close the shell.
+`exit` command at the shell prompt to close the shell.
 
 
 ## Adding the shell layer
@@ -28,7 +28,7 @@ The shell popup is configured in the `dotspacemacs-configure-layers` section of 
 
 ## Customising eshell prompt
 
-Practicalli created a custom Eshell prompt.  The code can be found in the [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/blob/master/init.el#L872-L994) configuration, the [Eshell custom code in `dotspacemacs/user-config` section](https://github.com/practicalli/spacemacs.d/blob/live/init.el#L1110-L1206).
+Practicalli created a custom Eshell prompt.  The code can be found in the [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/blob/master/init.el) configuration, in the `dotspacemacs/user-config` section.
 
 ![Spacemacs Eshell custom prompt](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-shell-poppup.png)
 
@@ -48,7 +48,7 @@ Here is an example with the multi-term shell set, along with popup size and loca
             shell-default-position 'bottom)
 ```
 
-`M-m '` now opens a shell buffer as a popup with the default shell of your operating system terminal.
+++spc++ ++single-quote++  now opens a shell buffer as a popup with the default shell of your operating system terminal.
 
 
 # Configure multi-term to use zsh
@@ -61,8 +61,8 @@ Add the following to `dotspacemacs/user-config` in your `~/.spacemacs` file
 (setq multi-term-program "/usr/bin/zsh")
 ```
 
-`SPC f s` to save the `~/.spacemacs` file.
+++spc++ ++"f"++ ++"e"++ to save the `~/.spacemacs` file.
 
-`SPC f e R` to reload the configuration, or `SPC q r` to restart Spacemacs.
+++spc++ ++"f"++ ++"e"++ ++r++ to reload the configuration, or `SPC q r` to restart Spacemacs.
 
 ![Spacemacs Shell - Multi-term zsh](/image/spacemacs-shell-popup-multi-term-zsh.png)
