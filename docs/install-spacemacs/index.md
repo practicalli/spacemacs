@@ -1,6 +1,6 @@
 # Install Spacemacs
 
-[Install prerequisites: Emacs, Java 17, Clojure CLI and Command Line tools ](/spacemacs/before-you-start/){.md-button target=_blank}
+[Install prerequisites: Emacs, Java 17, Clojure CLI and Command Line tools ](/install-spacemacs/pre-install/){.md-button}
 
 1. [Clone or download Spacemacs](#clojure-spacemacs), removing `~/.emacs.d` if it already exists
 2. [Clone the practicalli/spacemacs.d configuration](#clone-practicalli-spacemacs-configuration) to add common layers for Clojure development.  Or start Emacs and use the Spacemacs install wizard for basic config, follow the [manual configuration section](manual-configuration/) for additional features.
