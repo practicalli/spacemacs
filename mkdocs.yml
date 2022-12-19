@@ -1,0 +1,481 @@
+---
+# Practicalli Neovim
+site_name: Practicalli Spacemacs
+site_url: https://practical.li/spacemacs
+site_description: Practical guide to Clojure development with Spacemacs
+site_author: Practicalli
+copyright: Copyright &copy 2023  Practicali <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+repo_url: https://github.com/practicalli/spacemacs/
+edit_uri: https://github.com/practicalli/spacemacs/edit/main/docs/
+
+# Deployment
+# remote_name: origin
+remote_branch: gh-pages # deployment branch
+
+# Navigation
+nav:
+  - Overview:
+      - index.md
+      - REPL Workflow: repl-workflow.md
+      - Why Spacemacs:
+          - why-spacemacs/index.md
+          - Extensive Languages: why-spacemacs/extensive-language-support.md
+          - Mneomic Menus: why-spacemacs/mnemonic-menu.md
+          - Multi-modal Editing: why-spacemacs/states.md
+          - Layer Configuration: why-spacemacs/layers.md
+          - Clojure Support: why-spacemacs/clojure-layer.md
+          - why-spacemacs/structural-editing.md
+          - Selection Narrowing: why-spacemacs/helm.md
+            # - why-spacemacs/helm-transient-state.md  # TODO: move content to helm.md
+          - why-spacemacs/project-file-navigation.md
+          - why-spacemacs/layouts.md
+          # - why-spacemacs/configuring-spacemacs.md
+      - Mini-cheatsheet: spacemacs-mini-cheatsheet.md
+      - Contributing: contributing.md
+      - Writing Tips: writing-tips.md
+      - Resources: introduction/additional-resources.md
+  - Pre-install: before-you-start/index.md
+  - Install:
+      - install-spacemacs/index.md
+      - Manual Configuration: install-spacemacs/manual-configuration.md
+      - Clojure Layer: install-spacemacs/clojure-layer.md
+      - Enhance Clojure:
+          - install-spacemacs/enhance-clojure-experience.md
+          - Smartparens: install-spacemacs/smartparens.md
+          - Evil Structural Editing: install-spacemacs/evil-structural-editing.md
+          - Fancy Symbols: install-spacemacs/fancify-symbols.md
+          - install-spacemacs/clj-kondo-via-lsp.md
+      - Clojure LSP:
+          - install-spacemacs/clojure-lsp/index.md
+          - install-spacemacs/clojure-lsp/configure-lsp-and-cider.md
+          - install-spacemacs/clojure-lsp/snippets.md
+      - Font: install-spacemacs/change-font.md
+      - Full Screen: install-spacemacs/maximised-full-screen.md
+      - Themes: install-spacemacs/themes.md
+      - Line Numbers: install-spacemacs/line-numbers.md
+      - Emacs Shell: install-spacemacs/eshell.md
+      - Start Emacs Instantly:
+          - install-spacemacs/emacsclient-server.md
+          - Git Commit Message: install-spacemacs/emacsclient-git-commit-messages.md
+      - Update Spacemacs:
+          - install-spacemacs/update.md
+          - Switch to develop: install-spacemacs/switch-to-develop.md
+      - Troubleshoot: install-spacemacs/troubleshooting.md
+  - Spacemacs Basics:
+      - spacemacs-basics/index.md
+      - spacemacs-basics/emacs-basics.md
+      - spacemacs-basics/emacs-quick-reference.md
+      - spacemacs-basics/spacemacs-documentation.md
+      - spacemacs-basics/spell-checking.md
+      - spacemacs-basics/visual-select.md
+      - Vim Style Editing:
+          - spacemacs-basics/vim-style/key-binding-reference.md
+          - spacemacs-basics/vim-style/speaking-evil.md
+          - spacemacs-basics/vim-style/vim-quick-reference.md
+          - spacemacs-basics/vim-style/vim-tips-for-developers.md
+      - spacemacs-basics/evil-g-menu.md
+      - spacemacs-basics/evil-z-menu.md
+      - spacemacs-basics/evil/index.md
+      - spacemacs-basics/evil/editing-states.md
+      - Evil Tools:
+          - spacemacs-basics/evil-tools/index.md
+          - spacemacs-basics/evil-tools/helm-swoop.md
+          - spacemacs-basics/evil-tools/iedit-a-function.md
+          - spacemacs-basics/evil-tools/iedit-find-replace.md
+          - spacemacs-basics/evil-tools/iedit-in-action.md
+          - spacemacs-basics/evil-tools/iedit-replace-multiple-words.md
+          - spacemacs-basics/evil-tools/iedit.md
+          - spacemacs-basics/evil-tools/multiple-cursors.md
+          - spacemacs-basics/evil-tools/narrowing.md
+          - spacemacs-basics/evil-tools/replacing-text-across-projects.md
+      - Projects:
+          - spacemacs-basics/working-with-projects/index.md
+          - spacemacs-basics/working-with-projects/dird.md
+          - spacemacs-basics/working-with-projects/layouts.md
+          - spacemacs-basics/working-with-projects/managing-buffers.md
+          - spacemacs-basics/working-with-projects/managing-windows.md
+          - spacemacs-basics/working-with-projects/open-and-create-files.md
+          - spacemacs-basics/working-with-projects/projectile.md
+          - spacemacs-basics/working-with-projects/ranger.md
+          - spacemacs-basics/working-with-projects/searching-projects.md
+          - spacemacs-basics/working-with-projects/tidying-up-buffers.md
+          - spacemacs-basics/working-with-projects/treemacs.md
+  - Clojure Development:
+      - Projects:
+          - clojure-projects/index.md
+          - clojure-projects/adding-files.md
+          - clojure-projects/monorepo-nested-projects.md
+          - clojure-projects/project-configuration.md
+          - clojure-projects/rename-delete-files.md
+      - REPL:
+          - clojure-repl/index.md
+          - clojure-repl/clear-repl-buffer.md
+          - clojure-repl/clojure-cli-jack-in-configure.md
+          - clojure-repl/clojurescript-repl.md
+          - clojure-repl/component-lifecycle.md
+          - clojure-repl/connect-to-remote-repl.md
+          - clojure-repl/connect-to-repl.md
+          - clojure-repl/jack-in-to-repl.md
+          - clojure-repl/portal-data-visualization.md
+          - clojure-repl/refresh-restart-repl.md
+          - clojure-repl/reveal-data-visualization.md
+          - External REPL:
+              - external-repl/index.md
+              - external-repl/connect-to-running-repl.md
+              - external-repl/repl-command-menu.md
+              - external-repl/repl-history.md
+              - external-repl/show-repl-on-connect.md
+              - external-repl/switching-to-repl.md
+      - Documentation:
+          - documentation/index.md
+          - Comments: documentation/comments.md
+          - Apropos: documentation/apropos.md
+          - Cider-doc: documentation/cider-doc.md
+          - Javadoc: documentation/javadoc.md
+      - Evaluate Clojure:
+          - evaluating-clojure/index.md
+          - Expressions: evaluating-clojure/expressions.md
+          - Region: evaluating-clojure/region.md
+          - Pretty Print: evaluating-clojure/pretty-print.md
+          - Inspect Values: evaluating-clojure/inspect.md
+          - Interupt Eval: evaluating-clojure/interupt.md
+          - Remove Eval: evaluating-clojure/undefine.md
+          - Intermediate values: evaluating-clojure/enlighten.md
+          - Macro Expand: evaluating-clojure/macro-expand.md
+          - evaluating-clojure/evaluate-in-repl-buffer.md
+      - Testing:
+          - testing/index.md
+          - testing/kaocha-test-runner.md
+          - testing/unit-testing/index.md
+          - testing/unit-testing/cider-test-deps-edn-projects.md
+          - testing/unit-testing/clojure-test-expectations.md
+          - testing/unit-testing/configure-cider-test-runner.md
+          - testing/unit-testing/re-run-tests-from-test-report-buffer.md
+          - testing/unit-testing/refactor-unit-tests.md
+          - testing/unit-testing/running-tests.md
+          - testing/unit-testing/writing-unit-tests.md
+      - Navigating Code:
+          - navigating-code/index.md
+          - navigating-code/code-folding-methods.md
+          - navigating-code/code-folding.md
+          - navigating-code/expressions.md
+          - navigating-code/find-usages.md
+          - navigating-code/function-definitions.md
+          - navigating-code/java-definitions.md
+          - navigating-code/local-java-sources.md
+          - navigating-code/markers.md
+          - navigating-code/names-symbols.md
+          - navigating-code/namespaces.md
+      - Structural Editing:
+          - structural-editing/index.md
+          - structural-editing/barf.md
+          - structural-editing/classic-emacs.md
+          - structural-editing/cleverparens.md
+          - structural-editing/emacs-killing-code-softly.md
+          - structural-editing/lisp-state-deleting.md
+          - structural-editing/lisp-state-raising.md
+          - structural-editing/lisp-state-slurp-barf.md
+          - structural-editing/lisp-state-splicing.md
+          - structural-editing/lisp-state-wrap-unwrap.md
+          - structural-editing/lisp-state.md
+          - structural-editing/repeating-commands.md
+          - structural-editing/slurp.md
+          - structural-editing/smartparens-cheatsheet.md
+          - structural-editing/smartparens.md
+      - Snippets:
+          - snippets/index.md
+          - snippets/clojure-lsp/index.md
+          - snippets/clojure-lsp/custom-snippets.md
+          - snippets/clojure-lsp/practicalli-snippets.md
+          - snippets/yasnippets/index.md
+          - snippets/yasnippets/built-in-snippets.md
+          - snippets/yasnippets/clojure-snippets-reference.md
+          - snippets/yasnippets/create-snippets.md
+          - snippets/yasnippets/practicalli-snippets.md
+          - snippets/yasnippets/writing-snippets.md
+      - Refactor:
+          - refactor/index.md
+          - refactor/clojure-mode/index.md
+          - refactor/clojure-lsp.md
+          - refactor/namespace-definitions.md
+          - refactor/similar-function-call-name.md
+          - refactor/within-a-function.md
+          - refactor/within-a-namespace.md
+          - refactor/within-a-project.md
+          - clj-refactor:
+              - refactor/clj-refactor/index.md
+              - refactor/clj-refactor/collections.md
+              - refactor/clj-refactor/extracting.md
+              - refactor/clj-refactor/forms.md
+              - refactor/clj-refactor/managing-library-dependencies.md
+              - refactor/clj-refactor/managing-namespaces.md
+              - refactor/clj-refactor/reference.md
+      - Debug:
+          - debug-clojure/index.md
+          - debug-clojure/understanding-errors.md
+          - debug-clojure/deconstruct-stack-traces.md
+          - debug-clojure/format-error-messages.md
+          - debug-clojure/inspect-values.md
+          - debug-clojure/cider-debug.md
+          - debug-clojure/cider-error-report.md
+          - debug-clojure/classpath-issues.md
+          - debug-clojure/core-async.md
+          - debug-clojure/sayid-debug.md
+      - Code Quality:
+          - improving-code/index.md
+          - improving-code/batch-linting.md
+          - improving-code/idiomatic-code-checking.md
+          - improving-code/live-linting.md
+          - improving-code/formatting/index.md
+          - improving-code/formatting/aligning-forms-expressions.md
+          - improving-code/formatting/automatic-indenting.md
+          - improving-code/formatting/clojure.md
+  - ClojureScript:
+      - clojurescript/index.md
+      - clojurescript/additional-features.md
+      - clojurescript/build-process.md
+      - clojurescript/css-rainbow-colors.md
+      - clojurescript/why-clojurescript.md
+      - Figwheel:
+          - figwheel/index.md
+          - figwheel/broadcasting.md
+          - figwheel/clojurescript-repl.md
+          - figwheel/error-reporting.md
+          - figwheel/heads-up-display.md
+          - figwheel/live-code-reload.md
+          - figwheel/live-css-reload.md
+          - figwheel/multiple-environments.md
+          - figwheel/other-options.md
+          - figwheel/static-content.md
+          - using-figwheel/index.md
+          - using-figwheel/chestnut-template.md
+          - using-figwheel/starting-chestnut-emacs.md
+          - using-figwheel/starting-chestnut-terminal.md
+  - Source Control:
+      - source-control/index.md
+      - source-control/configure-layers.md
+      - source-control/git-configuration.md
+      - source-control/forge-configuration.md
+      - source-control/forge-self-hosted-configuration.md
+      - GitHub:
+          - source-control/github/index.md
+          - source-control/github-clone.md
+          - source-control/github/gists.md
+      - GitLab: source-control/gitlab/index.md
+      - Magit Git Client:
+          - source-control/magit/index.md
+          - source-control/magit/blame.md
+          - source-control/magit/branching.md
+          - source-control/magit/changing-history.md
+          - source-control/magit/cherry-picking.md
+          - source-control/magit/clean-up-magit-sessions.md
+          - source-control/magit/commit-amend.md
+          - source-control/magit/commit-changes.md
+          - source-control/magit/commit-create.md
+          - source-control/magit/commit-extend.md
+          - source-control/magit/commit-rewrite.md
+          - source-control/magit/commit-squash.md
+          - source-control/magit/create-local-repository.md
+          - source-control/magit/interactive-rebasing.md
+          - source-control/magit/list-local-repositories.md
+          - source-control/magit/reset-commit-history.md
+          - source-control/magit/staging-changes.md
+          - source-control/magit/stashing.md
+          - source-control/magit/status-fullscreen.md
+          - source-control/magit/status.md
+          - source-control/magit/tag-commit.md
+          - source-control/magit/timemachine.md
+          - source-control/magit/version-highlighting.md
+          - source-control/magit/forge/index.md
+          - source-control/magit/forge/add-database.md
+          - source-control/magit/forge/forks.md
+          - source-control/magit/forge/issues.md
+          - source-control/magit/forge/pull-requests.md
+          - source-control/magit/remote-repositories/index.md
+          - source-control/magit/remote-repositories/add-remote.md
+          - source-control/magit/remote-repositories/checkout-remote-branch.md
+          - source-control/magit/remote-repositories/clone.md
+          - source-control/magit/remote-repositories/configure-default-push.md
+          - source-control/magit/remote-repositories/configure-default-upstream.md
+          - source-control/magit/remote-repositories/pull-changes.md
+          - source-control/magit/remote-repositories/push-changes.md
+          - source-control/magit/remote-repositories/try-pull-requests.md
+  - Markdown:
+      - markdown-mode/index.md
+  - Org-mode:
+      - org-mode/index.md
+      - org-mode/code-blocks.md
+      - org-mode/get-things-done.md
+      - org-mode/headings.md
+      - org-mode/linking.md
+      - org-mode/lists-and-checkboxes.md
+      - org-mode/org-journal.md
+      - org-mode/org-mode-tweaks.md
+      - org-mode/tables.md
+      - org-mode/todo-states-customise.md
+      - org-mode/todo-states.md
+      - org-mode/yasnippets.md
+      - org-mode/literate-programming/index.md
+  - Database:
+      - database-access/index.md
+      - database-access/add-sql-layer-and-lsp.md
+      - database-access/connection-configuration.md
+      - database-access/external-dependencies.md
+      - database-access/local-docker-database.md
+      - database-access/using-sql.md
+  - Ultra-Mobile Neovim:
+      - termux/index.md
+      - F-Droid: termux/fdroid-install.md
+      - Termux Setup: termux/setup.md
+      - Using Termux: termux/using-termux.md
+      - Git: termux/git.md
+      - Zsh: termux/custom-shell.md
+      - Clojure: termux/clojure-development.md
+      - Neovim: termux/spacemacs.md
+  - Misc:
+      - misc/index.md
+      - misc/artist-mode.md
+      - misc/unicode-characters.md
+  - Reference:
+      - reference/index.md
+      - reference/hydra-menus.md
+      - reference/projectile.md
+      - reference/cider/index.md
+      - reference/cider/configuration-variables.md
+      - Clojure Standard Library:
+          - reference/clojure/index.md
+          - reference/clojure/control-flow.md
+          - reference/clojure/data-structures.md
+          - reference/clojure/functions.md
+          - reference/clojure/maths.md
+          - reference/clojure/strings.md
+      - Clojure LSP:
+          - reference/clojure-lsp/index.md
+          - LSP Variables: reference/clojure-lsp/lsp-variables-reference.md
+      - reference/keybindings/index.md
+      - reference/keybindings/cider-keybindings.md
+      - reference/keybindings/vim-keybindings.md
+      - reference/vim/getting-comfortable.md
+      - reference/vim/key-bindings.md
+      - os-specific-config/macosx.md
+  - Emacs:
+      - emacs-lisp/index.md
+      - encryption/index.md
+      - encryption/create-gpg-key.md
+      - writing-emacs-lisp/index.md
+  - Alternative Tools:
+      - alternative-tooling/index.md
+      - alternative-tooling/joker.md
+      - alternative-tooling/leiningen.md
+      - alternative-tooling/linting.md
+      - alternative-tooling/neotree.md
+      - alternative-tooling/org-easy-templates.md
+      - alternative-tooling/paredit-keybindings.md
+      - alternative-tooling/paredit.md
+      - alternative-tooling/parinfer.md
+      - alternative-tooling/silversearcher-ag.md
+
+  - To Review:
+      - spacemacs-on-android.md
+      - why-move-from-vi-to-spacemacs.md
+      - introduction/workshop-conventions.md
+      - spacemacs-basics/vim-style/common-evil.md
+      - why-spacemacs/why-evil.md
+
+
+# - Contributors: contributors.md
+# - work-in-progress.md
+# - spacemacs-on-android.md
+
+# Theme and styling
+theme:
+  name: material
+  logo: assets/images/practicalli-logo.png
+  favicon: assets/favicon.svg
+  features:
+    - navigation.top
+    - content.code.annotate
+    - content.tabs.link
+    - navigation.instant  # Avoid page reloading for internal links
+    - navigation.tracking # Update URL with anchor
+    - navigation.indexes # Nav sections can have files
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+      # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  # Override theme
+  custom_dir: overrides
+
+## Additional styling
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html # Grids
+  - footnotes # footnotes and abbreviations
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys # keyboard keys
+  - pymdownx.magiclink
+  - def_list # lists
+  - pymdownx.tasklist:
+      custom_checkbox: true # checkboxes
+  - toc:
+      permalink: λ︎
+
+## Plugins
+plugins:
+  # Explicitly add search plugin when defining plugins in this configuration file
+  - search
+  - callouts
+  - glightbox # Image aligning
+  - git-revision-date-localized: # Update and Creation date of each page
+      # enable_creation_date: true
+      fallback_to_build_date: true
+
+  # Generate Social Cards via CI only
+  # in assets/images/social
+  - social:
+      cards: !ENV [MKDOCS_SOCIAL_CARDS_GENERATE, true]
+
+
+# Footer / Social Media
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/jr0cket/
+    - icon: fontawesome/brands/slack
+      link: https://clojurians.slack.com/messages/practicalli
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/practical_li
+    - icon: fontawesome/brands/github
+      link: https://github.com/practicalli
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/practicalli
