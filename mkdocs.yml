@@ -98,13 +98,8 @@ nav:
           - spacemacs-basics/evil-tools/narrowing.md
           - spacemacs-basics/evil-tools/replacing-text-across-projects.md
           - spacemacs-basics/evil-tools/multiple-cursors.md
-  - Clojure Development:
-      - Projects:
-          - clojure-projects/index.md
-          - clojure-projects/adding-files.md
-          - clojure-projects/monorepo-nested-projects.md
-          - clojure-projects/project-configuration.md
-          - clojure-projects/rename-delete-files.md
+  - Clojure:
+      - clojure-development/index.md
       - REPL:
           - clojure-repl/index.md
           - clojure-repl/clear-repl-buffer.md
@@ -124,6 +119,9 @@ nav:
               - external-repl/repl-history.md
               - external-repl/show-repl-on-connect.md
               - external-repl/switching-to-repl.md
+      - Project Config:
+          - clojure-development/project-configuration.md
+          - Monorepo: clojure-projects/monorepo-nested-projects.md
       - Documentation:
           - documentation/index.md
           - Comments: documentation/comments.md

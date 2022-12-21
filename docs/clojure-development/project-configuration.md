@@ -1,16 +1,13 @@
-# Project level configuration
+# Emacs Project configuration
 
-`.dir-locals.el` files provide project level configuration, configuring the default project type, build tool and other CIDER actions.
+`.dir-locals.el` files provide project level configuration where the default aliases, build tool and other CIDER actions can be defined.
 
 There are many [CIDER configuration variables](/reference/cider/configuration-variables.md) that can be added to `.dir-locals.el`
 
 `SPC p e` to create or edit a `.dir-locals.el` file in the current project.
 
-> #### Hint::Force loading the .dir-locals.el configuration
-> If a `.dir-locals.el` file is created or edited after a file from the project is open, then the variables will not be applied when using a command in that buffer.
->
-> `SPC b R` (`revert-buffer`) to reload an already open buffer and the variables in the `.dir-locals.el` file will be loaded and available to any command called from that buffer.  Switching to a buffer that has not been reverted (or re-opened) may not pick up the changes to the `.dir-locals.el` file.
-
+??? HINT "Force loading the .dir-locals.el configuration"
+    The definitions in a `.dir-locals.el` are only ready when opening a file from the current project, so a file must be opened or reloaded, ++spc++ ++"b"++ ++r++ (`revert-buffer`).  Switching to another buffer that has not been reverted (or re-opened) may not pick up the changes to the `.dir-locals.el` file.
 
 
 ## Example configurations
@@ -32,6 +29,7 @@ An example of a ClojureScript project using figwheel-main, Clojure CLI and hidin
 ```
 
 ## Only Clojure CLI tools alias
+
 The `cider-jack-in` command injects dependencies via the `--deps` command line argument and includes the `--middleware` option for nrepl.  This auto-injected configuration can affect project or user level aliases used with jack-in.
 
 Use the following `.dir-locals.el` configuration to just use the configuration defined in the named alias
@@ -49,29 +47,31 @@ Use the following `.dir-locals.el` configuration to just use the configuration d
 
 
 ## Shared and local configurations
+
 Assuming a team agrees to keep a shared `.dir-locals.el` configuration in a project repository, each developer can [add their own configuration in a `.dir-locals-2.el` file](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html).
 
 The `.dir-locals-2.el` will be loaded in addition to `.dir-locals.el`.
 
-> #### Hint::Keep tooling config in a separate repository
-> Tooling configuration is generally not project specific, so if sharing that configuration in a team simply create a repository for tooling.
-> Or add tooling configuration to the project documentation.
+!!! HINT "Keep tooling config in a separate repository"
+    Tooling configuration is generally not project specific, so if sharing that configuration in a team simply create a repository for tooling.
+    Or add tooling configuration to the project documentation.
 
 
 ## Common configurations
+
 [CIDER documentation - basic configuration](https://docs.cider.mx/cider/) describes many of the configuration variables available.
 
 Practicalli also create [a list of variables](/reference/cider/configuration-variables.md) extracted from the [clojure-emacs/cider](/reference/cider/configuration-variables.md) project.
 
 `.dir-locals.el` is also useful for setting Projectile configuration, e.g. the project-type.  This is especially useful for [monorepo or nested projects](monorepo-nested-projects.md).
 
-> #### Hint::Set as Global options
-> The variables can also be added using `(setq )` to `dotspacemacs/user-config` section of `.spacemacs` to set a default variable for all projects.  The `.dir-locals.el` file will over-ride the global settings.
->
-> `(setq (cider-preferred-build-tool 'clojure-cli))`
+??? HINT "Set as Global options"
+    Variables can also be added using `(setq )` to the `dotspacemacs/user-config` section of `.spacemacs` to set a default variable for all projects.  The `.dir-locals.el` file will over-ride the global settings.
+    `(setq (cider-preferred-build-tool 'clojure-cli))`
 
 
 ## Understanding the syntax
+
 Elisp uses a two-element tuples called cons cells, create using the cons function, or with a dotted-pair notation.  This is loosely equivalent to key-value pairs in a Clojure hash-map.
 
 cons cell example
@@ -101,11 +101,12 @@ Multiple key-value pairs are defined as a collection of these cons cells in a li
 
 The configuration variables are set when a file is open in a specific Emacs major mode.
 
-> #### Hint::Avoid using `nil` for major mode
-> Avoid  using `nil` for the major mode as this will apply the variables in all buffers regardless of their major mode, potentially leading to conflicts.  Ensure that if `nil` is used that testing is done to ensure issues do not arise.
+??? HINT "Avoid using `nil` for major mode"
+    Use the major mode name rather than `nil` to ensure the variable is only applied to the specific mode.  `nil` applies the variables in all buffers regardless of their major mode, potentially leading to conflicts.
 
 
 ## Custom code
+
 `eval` variable will evaluate custom code specified when a variable is used. For example, if using a new type of ClojureScript REPL that CIDER does not currently know, then custom elisp code can be added to make CIDER do the required actions.
 
 ```elisp
@@ -115,6 +116,7 @@ The configuration variables are set when a file is open in a specific Emacs majo
 
 
 ## More examples
+
 The [chui ClojureScript test runner](https://github.com/lambdaisland/chui/blob/master/.dir-locals.el) project [uses a .dir-locals.el](https://github.com/lambdaisland/chui/blob/master/.dir-locals.el) file with example custom code.  One custom expression ensures nrepl middleware is injected into the environment so CIDER can connect.  The other custom expression sets the indent size.
 
 ```elisp
@@ -134,6 +136,7 @@ The [chui ClojureScript test runner](https://github.com/lambdaisland/chui/blob/m
 ```
 
 ## References
+
 * [CIDER list of configuration variables](/reference/cider/configuration-variables.md)
 * [Hard CIDER: Project specific configuration](https://metaredux.com/posts/2019/10/05/hard-cider-project-specific-configuration.html)
 * [Emacs Wiki: per-directory local variables](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html)
