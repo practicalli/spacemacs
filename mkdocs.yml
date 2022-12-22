@@ -120,8 +120,8 @@ nav:
               - external-repl/show-repl-on-connect.md
               - external-repl/switching-to-repl.md
       - Project Config:
-          - clojure-development/project-configuration.md
-          - Monorepo: clojure-projects/monorepo-nested-projects.md
+          - clojure-development/project-configuration/index.md
+          - Monorepo: clojure-development/project-configuration/monorepo-nested-projects.md
       - Documentation:
           - documentation/index.md
           - Comments: documentation/comments.md
