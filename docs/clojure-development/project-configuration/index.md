@@ -2,7 +2,7 @@
 
 `.dir-locals.el` files provide project level configuration where the default aliases, build tool and other CIDER actions can be defined.
 
-There are many [CIDER configuration variables](/reference/cider/configuration-variables.md) that can be added to `.dir-locals.el`
+There are many [CIDER configuration variables](/spacemacs/reference/cider/configuration-variables.md) that can be added to `.dir-locals.el`
 
 `SPC p e` to create or edit a `.dir-locals.el` file in the current project.
 
@@ -61,7 +61,7 @@ The `.dir-locals-2.el` will be loaded in addition to `.dir-locals.el`.
 
 [CIDER documentation - basic configuration](https://docs.cider.mx/cider/) describes many of the configuration variables available.
 
-Practicalli also create [a list of variables](/reference/cider/configuration-variables.md) extracted from the [clojure-emacs/cider](/reference/cider/configuration-variables.md) project.
+Practicalli also create [a list of variables](/spacemacs/reference/cider/configuration-variables.md) extracted from the [clojure-emacs/cider](/spacemacs/reference/cider/configuration-variables.md) project.
 
 `.dir-locals.el` is also useful for setting Projectile configuration, e.g. the project-type.  This is especially useful for [monorepo or nested projects](monorepo-nested-projects.md).
 
@@ -115,9 +115,9 @@ The configuration variables are set when a file is open in a specific Emacs majo
 ```
 
 
-## More examples
+## Further examples
 
-The [chui ClojureScript test runner](https://github.com/lambdaisland/chui/blob/master/.dir-locals.el) project [uses a .dir-locals.el](https://github.com/lambdaisland/chui/blob/master/.dir-locals.el) file with example custom code.  One custom expression ensures nrepl middleware is injected into the environment so CIDER can connect.  The other custom expression sets the indent size.
+The [chui ClojureScript test runner](https://github.com/lambdaisland/chui/blob/master/.dir-locals.el){target=_blank} project [uses a .dir-locals.el](https://github.com/lambdaisland/chui/blob/master/.dir-locals.el){target=_blank} file with example custom code.  One custom expression ensures nrepl middleware is injected into the environment so CIDER can connect.  The other custom expression sets the indent size.
 
 ```elisp
 ((clojure-mode . ((cider-clojure-cli-aliases     . "-M:env/dev:env/test")
@@ -135,12 +135,12 @@ The [chui ClojureScript test runner](https://github.com/lambdaisland/chui/blob/m
                             (ex-info 0))))))
 ```
 
-## References
+## Reference
 
-* [CIDER list of configuration variables](/reference/cider/configuration-variables.md)
-* [Hard CIDER: Project specific configuration](https://metaredux.com/posts/2019/10/05/hard-cider-project-specific-configuration.html)
-* [Emacs Wiki: per-directory local variables](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html)
-* [Project level Emacs config with .dir-locals.el](https://lambdaisland.com/blog/2019-12-21-advent-of-parens-21-project-config-dir-locals) - lambdaisland
+* [CIDER list of configuration variables](/reference/cider/configuration-variables.md){target=_blank}
+* [Hard CIDER: Project specific configuration](https://metaredux.com/posts/2019/10/05/hard-cider-project-specific-configuration.html){target=_blank}
+* [Emacs Wiki: per-directory local variables](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html){target=_blank}
+* [Project level Emacs config with .dir-locals.el](https://lambdaisland.com/blog/2019-12-21-advent-of-parens-21-project-config-dir-locals){target=_blank} - lambdaisland
 
 Also review directory variables in the Emacs the info pages
 
