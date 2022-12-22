@@ -1,10 +1,8 @@
-![Java banner](https://raw.githubusercontent.com/practicalli/clojure-content/master/images/java-banner.png)
-
 # Javadoc - Java API documentation
 
-`, h j` will show the javadoc information for a Java method or class, opening the relevant page on the Oracle website for Java.
+++comma++ ++"h"++ ++"j"++ shows javadoc information for a Java method or class, opening the relevant page on the Oracle website for Java.
 
-![Spacemacs Clojure - Java docs website](/images/spacemacs-clojure-docs-java-docs-website.png)
+![Spacemacs Clojure - Java docs website](/spacemacs/images/spacemacs-clojure-docs-java-docs-website.png)
 
 
 ## Include Java Sources
@@ -15,10 +13,6 @@ Download the Java JDK sources or install via the operating system package manage
 
 Use an alias that adds the sources as an `:extra-deps` via a `:local/root`
 
-{% tabs practicalli="practicalli/clojure-deps-edn", manual="Manually add Alias" %}
-
-{% content "practicalli" %}
-
 `:src/java17` alias includes the sources for Java 17 on the classpath, making them available for the Cider `clj-find-var` lookup.
 
 The alias assumes the sources are located at `/usr/lib/jvm/openjdk-17/lib/src.zip`
@@ -26,30 +20,17 @@ The alias assumes the sources are located at `/usr/lib/jvm/openjdk-17/lib/src.zi
 `clojure -M:src/java17:repl/rebel` starts a rich terminal UI REPL including the Java sources on the class path.
 
 
-{% content "manual" %}
-
-Add the `:src/java17` alias to the project `deps.edn` file
-
-```clojure
-:src/java17
-{:extra-deps
- {openjdk/java-sources {:local/root "/usr/lib/jvm/openjdk-17/lib/src.zip"}}}
-```
-
-{% endtabs %}
-
-
 ## Navigate Java Source code
 
-`, g g` to run the command `clj-find-var` which shows
+++comma++ ++"g"++ ++"g"++ to run the command `clj-find-var` which shows
 
 > Clojure LSP hijacks the `, g g` key binding, so use `SPC SPC clj-find-var` instead.
 
-![Spacemacs Clojure - find Java sources](/images/spacemacs-clojure-java-find-var.png)
+![Spacemacs Clojure - find Java sources](/spacemacs/images/spacemacs-clojure-java-find-var.png)
 
 Selecting a specific Java package (namespace) will open the  Java source code in a buffer
 
-![Spacemac Clojure - Java source code example](/images/spacemacs-clojure-find-var-java-source-code.png)
+![Spacemac Clojure - Java source code example](/spacemacs/images/spacemacs-clojure-find-var-java-source-code.png)
 
 
 ## Clojure LSP Java Sources

@@ -1,8 +1,8 @@
 # Spacemacs Comments
 
-`M-;` creates a line comment on a new line or adds a comment at the end of an existing line.
+++meta++ ++comma++ creates a line comment on a new line or adds a comment at the end of an existing line.
 
-`g c c` toggles a line commend for the current line, `g c` to toggle the selected region.
+++"g"++ ++"c"++ ++"c"++ `g c c` toggles a line commend for the current line, ++"g"++ ++"c"++  to toggle the selected region.
 
 
 ## Spacemacs comment key bindings
@@ -24,12 +24,13 @@ If a mode does not have a comment character, Spacemacs will prompt for one in th
 | `M-;`  (any state)        | New comment line or add comment to end of line   |
 
 
-> ####Info::Evil-commentary layer
-> Spacemacs uses the [evil-commentary layer](https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Bvim/evil-commentary) to provide a commenting tool for all other layers.
+!!! INFO "Evil-commentary layer"
+    Spacemacs uses the [evil-commentary layer](https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Bvim/evil-commentary){target=_blank} to provide a commenting tool for all other layers.
+
 
 ## Clojure comments
 
-[Clojure uses line comments, the comment function and the `#_` reader macro](https://practical.li/clojure/reference/clojure-syntax/comments.html "Practicalli Clojure: Comments").
+[Clojure uses line comments, the comment function and the `#_` reader macro](https://practical.li/clojure/reference/clojure-syntax/comments.html "Practicalli Clojure: Comments"){target=_blank}.
 
 
 
@@ -70,15 +71,4 @@ Sections are defined using consecutive line comments characters, which can easil
 
 Or Emacs repeat using Control and a number to repeat the following character `C-42`
 
-* `C-7 ;`  - ;;;;;;;
-* `C-24 ;` - ;;;;;;;;;;;;;;;;;;;;;;;;
-* `C-42 ;` - ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-> #### Hint::Multiple digit repeats
-> hold the control key and press the first number, then release both keys and press the remaining numbers followed by the character to repeat
->
-> Use `C-g` if you want to cancel at any time before hitting the character to be repeated
-
-
-
-## Classic Emacs comments
+++ctrl+2++ +7++ ++semi-colon++ - `;;;;;;;;;;;;;;;;;;;;;;;;`
