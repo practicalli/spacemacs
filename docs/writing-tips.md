@@ -12,6 +12,21 @@ Add `{target=_blank}` to the end of a link to configure opening in a new tab
 [link text](url){target=_blank}
 ```
 
+## Buttons
+
+Convert any link into a button by adding `{ .md-button }` class names to end of the markdown for a link, which uses `.md-button-primary` by default.  Include `target=_blank` for buttons with links to external sites.
+
+```
+[link text](http://practical.li/blog){ .md-button target=_blank }
+```
+
+[:octicons-heart-fill-24: Practicalli Blog](http://practical.li/blog){ .md-button .md-button-primary }
+
+Add an icon to the button with fontawsome
+
+[:fontawesome-brands-github: Practicalli Issues](http://practical.li/blog){ .md-button .md-button-primary }
+
+
 ## YouTube video
 
 Use an iframe element to include a YouTube video, wrapping in a paragraph tag with center alignment to place the video in a centered horizontal position
@@ -22,7 +37,7 @@ Use an iframe element to include a YouTube video, wrapping in a paragraph tag wi
 </p>
 ```
 
-mkdocs material does not have direct support for adding a YouTube video via markdown.
+> mkdocs material does not have direct support for adding a YouTube video via markdown.
 
 
 ## Admonitions
@@ -119,23 +134,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
 
-
-
-## Buttons
-
-Convert any link into a button by adding `{ .md-button }` class names to end of the markdown for a link
-
-```
-[link text](http://practical.li/blog){ .md-button .md-button-primary }
-```
-
-
-[:octicons-heart-fill-24: Practicalli Blog](http://practical.li/blog){ .md-button .md-button-primary }
-
-Add an icon to the button with fontawsome
-
-
-[:fontawesome-brands-github: Practicalli Issues](http://practical.li/blog){ .md-button .md-button-primary }
 
 
 ## Code blocks
