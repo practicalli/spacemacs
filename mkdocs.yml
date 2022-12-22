@@ -112,13 +112,6 @@ nav:
           - clojure-repl/portal-data-visualization.md
           - clojure-repl/refresh-restart-repl.md
           - clojure-repl/reveal-data-visualization.md
-          - External REPL:
-              - external-repl/index.md
-              - external-repl/connect-to-running-repl.md
-              - external-repl/repl-command-menu.md
-              - external-repl/repl-history.md
-              - external-repl/show-repl-on-connect.md
-              - external-repl/switching-to-repl.md
       - Project Config:
           - clojure-development/project-configuration/index.md
           - Monorepo: clojure-development/project-configuration/monorepo-nested-projects.md
@@ -339,6 +332,13 @@ nav:
       - reference/projectile.md
       - reference/cider/index.md
       - reference/cider/configuration-variables.md
+      - Clojure REPL:
+          - external-repl/index.md
+          - external-repl/connect-to-running-repl.md
+          - external-repl/switching-to-repl.md
+          - external-repl/show-repl-on-connect.md
+          - external-repl/repl-command-menu.md
+          - external-repl/repl-history.md
       - Clojure Standard Library:
           - reference/clojure/index.md
           - reference/clojure/control-flow.md
