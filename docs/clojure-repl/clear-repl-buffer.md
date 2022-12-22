@@ -1,25 +1,27 @@
 # Clear REPL Buffer
-Emacs has one weakness, the processing of large files, especially with very long lines.  When large results are returned from Clojure code they can eventually cause a slow-down of Emacs. Clearing the REPL buffer can restore Emacs to its usual speedy self.
 
-[Auto-trimming of the REPL buffer](https://docs.cider.mx/cider/repl/configuration.html#auto-trimming-the-repl-buffer) is a new feature that automatically deletes the oldest output, based on a given size.
+When large results are returned from Clojure code they can eventually cause a slow-down of Emacs. Clearing the REPL buffer can restore Emacs to its usual speedy self.
 
-> #### Hint::Use cider-inspector and Source Code buffers
-> `, d v` will show values in the `cider-inspector`, allowing navigation of nested data structures and paging through large data sets.  Or consider using the [Portal data navigation tool](http://practical.li/clojure/clojure-cli/data-browsers/portal.html).
->
-> All evaluations in a Clojure source code buffer are limited to 100 results and do not add to the REPL buffer, so avoids any slow-down from large results.  Use `, e p` menu to pretty print the results of evaluations.
+[Auto-trimming of the REPL buffer](https://docs.cider.mx/cider/repl/configuration.html#auto-trimming-the-repl-buffer) automatically deletes the oldest output, based on a given size.
+
+!!! HINT "Use cider-inspector and Source Code buffers"
+    `, d v` displays values in the `cider-inspector` allowing navigation of nested data structures and paging through large data sets. [Portal data navigation tool](http://practical.li/clojure/clojure-cli/data-browsers/portal.html) is an external tool that also provides navigation and paging of data as well as other data visualisation.
+
+    Evaluation in a Clojure source code buffer are limited to 100 results so avoids potential slow-down from large results.  Use `, e p` menu to pretty print the results of evaluations in a temporary buffer.
 
 
 ## Clear the REPL buffer from any buffer
 
-`, s l`  to remove the output of the last evaluation from the REPL buffer, `spacemacs/cider-find-and-clear-repl-buffer`.
+++comma++ ++"s"++ ++"l"++ to remove the output of the last evaluation from the REPL buffer, `spacemacs/cider-find-and-clear-repl-buffer`.
 
-`, s L`  clear all the output from the entire REPL session, `cider-find-and-clear-repl-output`.
+++comma++ ++"s"++ ++l++ clear all the output from the entire REPL session, `cider-find-and-clear-repl-output`.
 
 
 ## In the REPL buffer
-`, s a` to switch to the REPL buffer
 
-In Evil Insert mode use the `,` menu to call commands to clear the REPL buffer:
+++comma++ ++"s"++ ++"l"++ to switch to the REPL buffer
+
+In Evil Insert mode use the ++comma++ menu to call commands to clear the REPL buffer:
 
 `clear` to clear the whole buffer history
 
@@ -27,6 +29,7 @@ In Evil Insert mode use the `,` menu to call commands to clear the REPL buffer:
 
 
 ## Configure auto-trimming
+
 Auto-trimming is not enabled by default in CIDER, it must be set with a specific value.
 
 Add the layer variable `cider-repl-buffer-size-limit` to have all Clojure projects auto-trim the REPL

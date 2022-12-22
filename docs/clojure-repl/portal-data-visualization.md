@@ -5,7 +5,7 @@ Portal is a web browser data inspector that can be configured as the `tap>` sour
 
 [Portal](https://github.com/djblue/portal) navigates data in the form of edn, json and transit (with vega graphic support coming soon)
 
-[Practicalli Clojure -data browsers section - portal](https://practical.li/clojure/clojure-cli/data-browsers/portal.html)
+[Practicalli Clojure -data browsers section - portal](https://practical.li/clojure/clojure-cli/data-browsers/portal.html){target=_blank .md-button}
 
 Portal is simple to add to a REPL as it only requires the Portal library to be added as a dependency.
 
@@ -19,6 +19,7 @@ practicalli/clojure-deps-edn includes several aliases for portal, depending on t
 
 
 ### Using Portal
+
 `(require '[portal.api :as portal])` once the REPL starts.  For `inspect/portal-web` use `(require '[portal.web :as portal])` instead
 
 `(portal/open)` to open the web based inspector window in a browser.
@@ -32,35 +33,31 @@ practicalli/clojure-deps-edn includes several aliases for portal, depending on t
 `(portal/close)` to close the inspector window.
 
 
-### Rich comment block for Portal
+### Rich comment for Portal
 
-```clojure
-  ;; Portal helpers
-  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Add a `(comment ,,,)` form in the source code file to start and control Portal
 
-  ;; Require the portal namespace
-  (require '[portal.api :as portal])
+```clojure title="Rich comment"
+  (require '[portal.api :as portal])  ; Require portal namespace
 
-  ;; Open Portal window with solarized-dark theme
-  (inspect/open {:portal.colors/theme :portal.colors/solarized-dark})
+  (inspect/open {:portal.colors/theme :portal.colors/solarized-dark}) ; (1) Open with theme
 
-  ;; Open Portal window with solarized-light theme
-  (inspect/open {:portal.colors/theme :portal.colors/solarized-light})
-
-  ;; Clear all values in the portal inspector window
-  (inspect/clear)
-
-  ;; Close the portal window
-  (inspect/close)
+  (inspect/clear)  ; Clear all values in the portal inspector window
+  (inspect/close)  ; Close the portal window
 ```
+1.  Solarized Light is an alternative light theme for portal
+    ```clojure
+    (inspect/open {:portal.colors/theme :portal.colors/solarized-light})
+    ```
 
 
 ## Automatically start Portal
+
 `user` is the default namespace when a Clojure REPL starts.  If there is a `user.clj` file on the classpath, the code it contains is automatically loaded once the REPL has started.
 
 Create a `user` namespace in the file `dev/user.clj`. Require the portal library in the namespace definition, using the alias `inspect`. Call the `inspect/open` function to launch Portal in a browser tab. Call `inspect/tap` to add portal as the `tap>` source for the project (there can only be one `tap>` source)
 
-```clojure
+```clojure title="dev/user.clj"
 (ns user
   (:require
      [portal.api :as inspect]))
@@ -73,7 +70,8 @@ Create a `user` namespace in the file `dev/user.clj`. Require the portal library
 (inspect/tap)
 ```
 
-Include the `dev` directory when starting the REPL and the `dev/user.clj` code will be loaded.  The `:env/dev` alias from [`practicalli/clojure-deps-edn`]({{book.P9IClojureDepsEdnInstall}}) adds `dev` directory to the classpath.
+The `:env/dev` alias from [`practicalli/clojure-deps-edn`](https://practical.li/clojure/clojure-cli/install/community-tools.html) adds `dev` directory to the classpath, so the `user` namespace in `dev/user.clj` is loaded when starting the REPL.
+
 
 ```shell
 clojure -M:env/dev:repl/rebel

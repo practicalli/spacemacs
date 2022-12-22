@@ -2,7 +2,7 @@
 
 [Practicalli ClojureScript](https://practicalli.github.io/clojurescript/) covers the development of websites and single page apps (SPA) with figwheel-main build tool and the react-style reagent library
 
-[practicalli/clojure-deps-edn]({{book.P9IClojureDepsEdn}}) defines the `:middleware/cider-cljs` alias which provides the nREPL connection support specifically for a ClojureScript REPL.
+[practicalli/clojure-deps-edn](https://practical.li/clojure/clojure-cli/install/community-tools.html) defines the `:middleware/cider-cljs` alias which provides the nREPL connection support specifically for a ClojureScript REPL.
 
 
 ## Figwheel-main projects
@@ -18,23 +18,23 @@ clojurescript-figwheel-main-external-repl-middleware-cider-cljs.png
 
 Choose `cider-connect-cljs` when using `sesman-start`
 
-![ClojureScript figwheel-main connect-cljs](/images/clojurescript-figwheel-main-connect-command-cljs.png)
+![ClojureScript figwheel-main connect-cljs](/spacemacs/images/clojurescript-figwheel-main-connect-command-cljs.png)
 
 Confirm
-![ClojureScript figwheel-main connect-cljs localhost](/images/clojurescript-figwheel-main-connect-host-localhost.png)
+![ClojureScript figwheel-main connect-cljs localhost](/spacemacs/images/clojurescript-figwheel-main-connect-host-localhost.png)
 
 Confirm localhost post for tictactoe project
 
-![ClojureScript figwheel-main connect-cljs localhost port](/images/clojurescript-figwheel-main-connect-port-tictactoe.png)
+![ClojureScript figwheel-main connect-cljs localhost port](/spacemacs/images/clojurescript-figwheel-main-connect-port-tictactoe.png)
 
 Confirm figwheel-main build tool
 
-![ClojureScript figwheel-main connect-cljs figwheel-main build tool](/images/clojurescript-figwheel-main-connect-repl-type-figwheel-main.png)
+![ClojureScript figwheel-main connect-cljs figwheel-main build tool](/spacemacs/images/clojurescript-figwheel-main-connect-repl-type-figwheel-main.png)
 
 Confirm dev build configuration
 
-![ClojureScript figwheel-main connect-cljs figwheel-main build configuration dev](/images/clojurescript-figwheel-main-connect-build-dev.png)
+![ClojureScript figwheel-main connect-cljs figwheel-main build configuration dev](/spacemacs/images/clojurescript-figwheel-main-connect-build-dev.png)
 
 `SPC b m` to open the message buffer which shows the output from nREPL server.
 
-![ClojureScript figwheel-main connect-cljs nrepl output in message buffer](/images/clojurescript-figwheel-main-connect-nrepl-output.png)
+![ClojureScript figwheel-main connect-cljs nrepl output in message buffer](/spacemacs/images/clojurescript-figwheel-main-connect-nrepl-output.png)

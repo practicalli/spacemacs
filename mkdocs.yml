@@ -102,16 +102,14 @@ nav:
       - clojure-development/index.md
       - REPL:
           - clojure-repl/index.md
-          - clojure-repl/clear-repl-buffer.md
-          - clojure-repl/clojure-cli-jack-in-configure.md
-          - clojure-repl/clojurescript-repl.md
-          - clojure-repl/component-lifecycle.md
-          - clojure-repl/connect-to-remote-repl.md
           - clojure-repl/connect-to-repl.md
+          - clojure-repl/connect-to-remote-repl.md
           - clojure-repl/jack-in-to-repl.md
           - clojure-repl/portal-data-visualization.md
+          - clojure-repl/clojurescript-repl.md
           - clojure-repl/refresh-restart-repl.md
-          - clojure-repl/reveal-data-visualization.md
+          - clojure-repl/component-lifecycle.md
+          - clojure-repl/clear-repl-buffer.md
       - Project Config:
           - clojure-development/project-configuration/index.md
           - Monorepo: clojure-development/project-configuration/monorepo-nested-projects.md

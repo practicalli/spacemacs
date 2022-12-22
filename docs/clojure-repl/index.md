@@ -15,10 +15,10 @@ The REPL provides the Clojure developer a fast and effective tool for developing
 
 All Clojure editors connect to an external run REPL process, either connecting to an existing process (connect) or starting a new process from the editor (jack-in).
 
-| Approaches                    | Description                                                                                                |
-|-------------------------------|------------------------------------------------------------------------------------------------------------|
-| [connect](connect-to-repl.md) | connecting to a local or remote REPL process - robust approach supporting rich REPL startup configurations |
-| [jack-in](jack-in-to-repl.md) | start an external REPL from the editor, injecting editor specific configuration and then connecting        |
+| Approaches                 | Description                                                                                                                  |
+|----------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| [connect](connect-to-repl) | connecting to a local or remote REPL process - robust approach supporting rich REPL startup configurations and collaboration |
+| [jack-in](jack-in-to-repl) | start an external REPL from the editor, injecting editor specific configuration and then connecting                          |
 
 
 
@@ -26,9 +26,9 @@ All Clojure editors connect to an external run REPL process, either connecting t
 
 Open or select a Clojure buffer, an `.edn`, `.clj`, `.cljc` or `.cljs` file.
 
-| Key bindings     | Description                                       |
-|------------------|---------------------------------------------------|
-| `, '` or `, m s` | `sesman-start` menu to start or connect to a REPL |
+| Key bindings                                            | Description                                       |
+|---------------------------------------------------------|---------------------------------------------------|
+| ++comma++ ++single-quote++ or ++comma++ ++"m"++ ++"s"++ | `sesman-start` menu to start or connect to a REPL |
 
 Select from one of the following types of REPL's
 * `cider-connect-clj` and `cider-jack-in-clj` for Clojure on the JVM
@@ -37,32 +37,32 @@ Select from one of the following types of REPL's
 
 Once the REPL starts, [evaluate expressions using the source code buffer](/evaluating-clojure/).
 
-> #### Hint::Eval namespace or buffer to load Clojure into CIDER
-> `, e b` to evaluate the current buffer also loads Clojure core into CIDER, making the documentation and other Cider tools fully operational.  Or evaluate any valid `ns` form in the project.
+!!! HINT "Eval namespace or buffer to load Clojure into CIDER"
+    ++comma++ ++"e"++ ++"b"++ to evaluate the current buffer and load Clojure core into CIDER, making the documentation and other Cider tools fully operational.  Or evaluate any valid `ns` form in the project.
 
 
 ## CIDER workflow overview
 
-`SPC p f` open a file from the current project (`SPC f f` if not in a project)
+++spc++ ++"p"++ ++"f"++ open a file from the current project (++spc++ ++"f"++ ++"f"++  if not in a project)
 
-`, '` or `, m s` and start a Clojure REPL using `cider-jack-in-clj` (may take a few seconds if there are dependencies to download)
+++comma++ ++single-quote++ or ++comma++ ++"m"++ ++"s"++ and start a Clojure REPL using `cider-jack-in-clj` (may take a few seconds if there are dependencies to download)
 
-`, e b` evaluate the current buffer (also loads Clojure core into CIDER)
+++comma++ ++"e"++ ++"b"++ evaluate the current buffer (also loads Clojure core into CIDER)
 
-`, e f` evaluate the current top-level expression and show the result inline
+++comma++ ++"e"++ ++"f"++ evaluate the current top-level expression and show the result inline
 
-`, e e` evaluate the previous expression and show the result inline (useful for nested expressions)
+++comma++ ++"e"++ ++"e"++ evaluate the previous expression and show the result inline (useful for nested expressions)
 
-`, e ;` evaluate the current Clojure expression and print the result as a comment
+++comma++ ++"e"++ ++semi-colon++ evaluate the current Clojure expression and print the result as a comment
 
-`, e p f` evaluate the current top-level expression and pretty-print the result in a separate buffer
+++comma++ ++"e"++ ++"f"++ evaluate the current top-level expression and pretty-print the result in a separate buffer
 
-`SPC p a` toggle between matching source code and unit test buffers
+++spc++ ++"p"++ ++"a"++ toggle between matching source code and unit test buffers
 
-`, t a` run all test functions in the REPL using the cider test runner (evaluate changed test & source code first)
+++comma++ ++"t"++ ++"a"++ run all test functions in the REPL using the cider test runner (evaluate changed test & source code first)
 
-`, m q r` to restart the REPL (i.e. after adding a library as a dependency to the project)
+++comma++ ++"m"++ ++"q"++ ++"r"++ to restart the REPL (i.e. after adding a library as a dependency to the project)
 
 
-> #### Hint::Documentation enabled after evaluating a namespace
-> `, h h` shows the documentation for a function under the cursor, but only if a namespace has been evaluated first.  This applies to `clojure.core` functions as well as project and library specific functions.
+!!! HINT "Documentation enabled after evaluating a namespace"
+    ++comma++ ++"h"++ ++"h"++  shows the documentation for a function under the cursor, but only if a namespace has been evaluated first.  This applies to `clojure.core` functions as well as project and library specific functions.
