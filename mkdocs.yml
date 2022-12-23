@@ -140,16 +140,14 @@ nav:
           - testing/unit-testing/configure-cider-test-runner.md
       - Navigating Code:
           - navigating-code/index.md
-          - navigating-code/code-folding-methods.md
-          - navigating-code/code-folding.md
-          - navigating-code/expressions.md
-          - navigating-code/find-usages.md
-          - navigating-code/function-definitions.md
-          - navigating-code/java-definitions.md
-          - navigating-code/local-java-sources.md
-          - navigating-code/markers.md
-          - navigating-code/names-symbols.md
-          - navigating-code/namespaces.md
+          - Expressions: navigating-code/expressions.md
+          - Markers: navigating-code/markers.md
+          - Namespaces: navigating-code/namespaces.md
+          - Symbols: navigating-code/names-symbols.md
+          - Functions: navigating-code/function-definitions.md
+          - Java: navigating-code/java-definitions.md
+          - Code Folding: navigating-code/code-folding.md
+          - Find Uses: navigating-code/find-usages.md
       - Structural Editing:
           - structural-editing/index.md
           - structural-editing/barf.md
