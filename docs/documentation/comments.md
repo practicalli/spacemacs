@@ -2,7 +2,7 @@
 
 ++meta++ ++comma++ creates a line comment on a new line or adds a comment at the end of an existing line.
 
-++"g"++ ++"c"++ ++"c"++ `g c c` toggles a line commend for the current line, ++"g"++ ++"c"++  to toggle the selected region.
+++"g"++ ++"c"++ ++"c"++ toggles a line commend for the current line, ++"g"++ ++"c"++  to toggle the selected region.
 
 
 ## Spacemacs comment key bindings
@@ -28,10 +28,20 @@ If a mode does not have a comment character, Spacemacs will prompt for one in th
     Spacemacs uses the [evil-commentary layer](https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Bvim/evil-commentary){target=_blank} to provide a commenting tool for all other layers.
 
 
+## Clojure LSP snippets
+
+Logical sections within a namespace aid navigation and understanding, as well as identifying opportunities to refactor a namespace as it grows in size.
+
+`comment-header` and `comment-section` are Clojure LSP snippets defined in [practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config){target=_blank}
+
+`comment-header` provides a comment block to describe the overall purpose of the namespace
+
+`comment-section` provides a comment block to demarcate sections of the namespace, such as helper functions, state, system, etc.  Sections help identify groups of code that could be organised into their own namespace as the code grows.
+
+
 ## Clojure comments
 
 [Clojure uses line comments, the comment function and the `#_` reader macro](https://practical.li/clojure/reference/clojure-syntax/comments.html "Practicalli Clojure: Comments"){target=_blank}.
-
 
 
 ## Evaluating forms in Rich comments
@@ -58,17 +68,4 @@ Setting `clojure-toplevel-inside-comment-form` to true in the Clojure layer enab
   )
 ```
 
-> Example rich comment from [Banking on Clojure project](https://practical.li/clojure-web-services/projects/banking-on-clojure/application-server-configuration.html#repl-driven-development-helpers) in [Practicalli Clojure Web Services](https://practical.li/clojure-web-services/projects/banking-on-clojure/application-server-configuration.html#repl-driven-development-helpers)
-
-
-## Creating sections with line comments
-
-Logical sections within a namespace aid navigation and understanding, as well as identifying opportunities to refactor a namespace as it grows in size.
-
-Sections are defined using consecutive line comments characters, which can easily be generated using Evil repeat.
-
-`42 i ; ESC` will create a line of 42 `;` characters.
-
-Or Emacs repeat using Control and a number to repeat the following character `C-42`
-
-++ctrl+2++ +7++ ++semi-colon++ - `;;;;;;;;;;;;;;;;;;;;;;;;`
+> Example rich comment from [Banking on Clojure project](https://practical.li/clojure-web-services/projects/banking-on-clojure/application-server-configuration.html#repl-driven-development-helpers){target=_blank} in [Practicalli Clojure Web Services](https://practical.li/clojure-web-services/projects/banking-on-clojure/application-server-configuration.html#repl-driven-development-helpers){target=_blank}
