@@ -4,18 +4,20 @@ Structural Editing is a way to navigate and refactor your code without breaking 
 
 You can quickly jump between the start and end of expressions.  It is easy to move expressions around, pull code into expressions or push code out of expressions too.
 
-> ####TODO::Add video of structural editing in practice
+<!--
+TODO::Add video of structural editing in practice
 > Watch [Parens of the Dead](http://www.parens-of-the-dead.com/) to see live coding with structural editing
+-->
 
 ## Smartparens - writing structural text
 
 Spacemacs uses [smart parens](https://github.com/Fuco1/smartparens) to help you write structural code really fast and also move expressions around.
 
-`SPC SPC sp-cheat-sheet`  lists all the smartparens commands available and we will cover the most common commands in this section.
+++spc++ ++spc++ `sp-cheat-sheet`  lists all the smartparens commands available and we will cover the most common commands in this section.
 
-> ####Hint::Smartparens is not just for lisps
-> Smartparens is the default package that supports all languages in Spacemacs.  So as well as all lisp languages, it also support closing & matching for things like tags in HTML.
-> Smart parens is a newer implementation of the classic _paredit_ package.
+!!! HINT "Smartparens is not just for lisps"
+    Smartparens supports structural editing for all languages in Spacemacs, event closing & matching for markup languages such as tags in HTML.  Smartparens is a newer implementation of the classic _paredit_ package.
+
 
 ## Lisp mode - manipulating structural text
 
@@ -38,37 +40,24 @@ The common commands I use are
 
 ## Enable Vim support for Structural editing
 
-Safe Structural editing in Vim normal state respects structural editing too, meaning the standard vim commands can be used for cutting and deleting text without breaking Clojure or Lisp code structures.
+++comma++ ++t++ ++"s"++ toggles evil safe structural editing in all languages that support using [evil-cleverparens](https://github.com/emacs-evil/evil-cleverparens){target=_blank}.  This package is included in the Clojure layer, but by default this mode is not activated.
 
-Safe structural editing is provided by the package [evil-cleverparens](https://github.com/luxbock/evil-cleverparens) which is included in the Clojure layer. By default this mode is not activated.
-
-| Spacemacs   | Vim     | Description                                                |
-|-------------|---------|------------------------------------------------------------|
-| `SPC m T s` | `, T s` | Enable evil safe structural editing for the current buffer |
-
-When enabled the symbol `🆂` is displayed in the mode-line.
+Safe Structural editing in Vim normal state respects structural editing, meaning the standard vim commands can be used for cutting and deleting text without breaking Clojure or Lisp code structures.
+`🆂` symbol is displayed in the mode-line when evil safe structural editing is enabled.
 
 ![Spacemacs - Clojure - Safe Structural Editing mode enabled](/images/spacemacs-clojure-safe-structural-editing-mode.png)
 
 Enable for all clojure buffers by adding the following function in `dotspacemacs/user-config`
 
-```
+```emacs
 (spacemacs/toggle-evil-safe-lisp-structural-editing-on-register-hook-clojure-mode)
 ```
 
  To enable evil safe structural editing for all supported modes:
 
-```
+```emacs
 (spacemacs/toggle-evil-safe-lisp-structural-editing-on-register-hooks)
 ```
 
-By adding [clever-smartparens]() or [evil-smartparens](https://github.com/expez/evil-smartparens) then Vim Normal state editing
-
-
-
->####TODO::Move Vim alternatives to own section
-Although it is not structural editing, in Vim mode you can delete to a particular character.  So if you wish to delete a form ending in `)` then vim allows you to delete to `)`.
-
-1. Enter **normal** mode
-2. Move to the starting point of the text you wish to delete
-3. Delete everything up to, but not including the closing parenthesis - `d t )`
+!!! HINT "Evil Cleverparents for Evil state"
+     ensures Vim Normal commands respect the structure of the language, i.e. will not delete parents that contain code.

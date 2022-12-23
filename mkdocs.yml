@@ -150,20 +150,14 @@ nav:
           - Find Uses: navigating-code/find-usages.md
       - Structural Editing:
           - structural-editing/index.md
-          - structural-editing/barf.md
-          - structural-editing/classic-emacs.md
-          - structural-editing/cleverparens.md
-          - structural-editing/emacs-killing-code-softly.md
-          - structural-editing/lisp-state-deleting.md
-          - structural-editing/lisp-state-raising.md
-          - structural-editing/lisp-state-slurp-barf.md
-          - structural-editing/lisp-state-splicing.md
-          - structural-editing/lisp-state-wrap-unwrap.md
-          - structural-editing/lisp-state.md
-          - structural-editing/repeating-commands.md
-          - structural-editing/slurp.md
-          - structural-editing/smartparens-cheatsheet.md
-          - structural-editing/smartparens.md
+          - Smartparens: structural-editing/smartparens.md
+          - Evil Cleverparens: structural-editing/cleverparens.md
+          - Lisp State:
+              - structural-editing/lisp-state/index.md
+              - Wrap Unrap: structural-editing/lisp-state/wrap-unwrap.md
+              - Slurp Barf: structural-editing/lisp-state/slurp-barf.md
+              - Deleting: structural-editing/lisp-state/deleting.md
+              - Raising: structural-editing/lisp-state/raising.md
       - Snippets:
           - snippets/index.md
           - snippets/clojure-lsp/index.md
@@ -342,6 +336,7 @@ nav:
       - Clojure LSP:
           - reference/clojure-lsp/index.md
           - LSP Variables: reference/clojure-lsp/lsp-variables-reference.md
+      - reference/structural-editing/smartparens-cheatsheet.md
       - reference/keybindings/index.md
       - reference/keybindings/cider-keybindings.md
       - reference/keybindings/vim-keybindings.md

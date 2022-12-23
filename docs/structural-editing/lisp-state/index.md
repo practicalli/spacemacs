@@ -4,9 +4,11 @@
 
 `SPC k` opens the lisp state menu, providing commands for structural editing with Smartparens.  Any command will put the current buffer into lisp state, a transient state where you can use single character keybindings for the commands (no need to use `SPC k` each time).
 
-Evil numeric values can be used with the Lisp state commands
+# Repeating Lisp State Commands
 
-`3 s` slurp three times
+In Lisp State, as with Evil normal, typing a number before the command will repeat that command.  For example
+
+`2 s` slurp two times, starting from Evil normal state
 
 `w 2 s` wrap a symbol in parenthesis then slurp two times
 
