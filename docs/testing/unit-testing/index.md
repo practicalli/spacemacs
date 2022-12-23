@@ -6,6 +6,7 @@ In Clojure the unit under test is the function.  Unit test coverage should test 
 
 
 ## Principles for writing test code
+
 * One `test` namespace for each `src` namespace
 * One `deftest` function for each function under test
 * Multiple `is` assertions for one function
@@ -13,38 +14,33 @@ In Clojure the unit under test is the function.  Unit test coverage should test 
 
 
 ## Requiring Namespaces
+
 A test namespace has a singular purpose to test a matching application namespace.  Therefore the idiomatic approach is to `:refer` specific functions from `clojure.test`.
 
-{% tabs repl="In the REPL", project="In a Clojure Project" %}
+=== "REPL"
 
-{% content "repl" %}
-```clojure
-(require '[clojure.test :refer [deftest is testing]])
-```
+    ```clojure
+    (require '[clojure.test :refer [deftest is testing]])
+    ```
 
-The namespace under test should be referred, typically using the alias SUT for software under test.
+    The namespace under test should be referred, using a meaningful alias name.
 
-```clojure
-(require '[practicalli.playground :as SUT])
-```
+    ```clojure
+    (require '[practicalli.playground :as playground])
+    ```
 
+=== "Clojure Project"
 
-{% content "project" %}
+    Add `clojure.test` to the namespace definition along with the namespace under test.
 
-Add `clojure.test` to the namespace definition along with the namespace under test.
+    ```clojure
+    (ns practicalli.app-namespace-test
+      (:require '[clojure.test :refer [deftest is testing]]
+                 [practicalli.app-namespace :as app-namespace]))
+    ```
 
-```clojure
-(ns practicalli.app-namespace-test
-  (:require '[clojure.test :refer [deftest is testing]]
-             [practicalli.app-namespace :as app-namespace]))
-```
+    Providing an alias that is the same name as the namespace being tested creates easily readable test code.
 
-Providing an alias that is the same name as the namespace being tested creates easily readable test code.
-
-{% endtabs %}
-
-> #### INFO::SUT alias - software under test
-> A TDD approach is to use `SUT` to represent the namespace or package being tested. SUT stands for software under test
 
 
 ## Project structure with tests
@@ -55,15 +51,14 @@ For each source code file in `src` there should be a corresponding file in test 
 
 For example, code to test the `src/codewars/rock_paper_scissors.clj` is saved in the file `src/codewars/rock_paper_scissors_test.clj` file.
 
-![Clojure project structure - src and test branches](/images/clojure-project-structure-src-test-tree.png)
+![Clojure project structure - src and test branches](/spacemacs/images/clojure-project-structure-src-test-tree.png)
 
-> #### Hint::Create Projects from templates
-> Templates typically include a parallel `test` and `src` directory structure.  The `clj-new` tool has build it templates (app, lib) and will create `src` and `test` directories in the projects it creates.
->
-> `clojure -X:project/new :template app :name practicalli/rock-paper-scissors-lizard-spock`
+!!! HINT "Create Projects from templates"
+    Templates typically include a parallel `test` and `src` directory structure.  The `clj-new` tool has build it templates (app, lib) and will create `src` and `test` directories in the projects it creates.
 
-<!-- TODO: clj-new - does this add a test namespace if you add a src namesspace to an existing project? -->
+    `clojure -X:project/new :template app :name practicalli/rock-paper-scissors-lizard-spock`
+
 
 ## References
-* [Example based unit testing in Clojure](https://purelyfunctional.tv/mini-guide/example-based-unit-testing-in-clojure/) - PurelyFunctional.tv
-https://purelyfunctional.tv/mini-guide/example-based-unit-testing-in-clojure/
+
+* [Example based unit testing in Clojure](https://purelyfunctional.tv/mini-guide/example-based-unit-testing-in-clojure/){target=_blank} - PurelyFunctional.tv

@@ -1,10 +1,10 @@
 # Kaocha Test Runner
 
-[LambdaIsland/Kaocha](https://github.com/lambdaisland/kaocha "LambdaIsland Kaocha GitHub Repository") is a feature rich test runner for Clojure and ClojureScript.
+[LambdaIsland/Kaocha](https://github.com/lambdaisland/kaocha "LambdaIsland Kaocha GitHub Repository"){target=_blank} is a feature rich test runner for Clojure and ClojureScript.
 
 Koacha is typically run on the command line or as part of a continuous integration workflow.
 
-Kaocha can also be run as an alternative to the cider-test runner as the Spacemacs Clojure layer [now includes kaocha-runner.el](https://github.com/syl20bnr/spacemacs/pull/15268).  Kaocha provides options to fail-fast (stops when a test fails) and
+Kaocha can also be run as an alternative to the cider-test runner as the Spacemacs Clojure layer [now includes kaocha-runner.el](https://github.com/syl20bnr/spacemacs/pull/15268){target=_blank}.  Kaocha provides options to fail-fast (stops when a test fails) and
 
 
 ## Using Kaocha from Emacs Cider
@@ -13,7 +13,7 @@ Kaocha can also be run as an alternative to the cider-test runner as the Spacema
 
 Start a REPL process that includes the kaocha library
 
-`:lib/kaocha` alias in [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn) includes Kaocha as a library
+`:lib/kaocha` alias in [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn){target=_blank} includes Kaocha as a library
 
 ```bash
 clojure -M:lib/kaocha:repl/rebel
@@ -31,15 +31,15 @@ clojure -M:lib/kaocha:repl/rebel
 
 `, t k h` to hide the kaocha test window
 
-> #### Hint::Kaochan runner uses kaocha.repl
-> kaocha-runner.el uses the the same appraoch as [running Kaocha from the REPL](https://cljdoc.org/d/lambdaisland/kaocha/1.60.977/doc/5-running-kaocha-from-the-repl "Kaocha cljdoc")
+!!! HINT "Kaochan runner uses kaocha.repl"
+    kaocha-runner.el uses the the same appraoch as [running Kaocha from the REPL](https://cljdoc.org/d/lambdaisland/kaocha/1.60.977/doc/5-running-kaocha-from-the-repl "Kaocha cljdoc"){target=_blank}
 
 
 ## Using Kaocha from Command Line
 
 Kaocha on the command line will run tests from the saved code files, so is very useful to run before committing files as well as during a Continuous Integration workflow.
 
-[practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn) defines aliases to run Kaocha from the `clojure` command:
+[practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn){target=_blank} defines aliases to run Kaocha from the `clojure` command:
 
 `clojure -X:test/run` will run all tests found in the project, unless there is a failing test which will end the test run.
 
@@ -48,9 +48,9 @@ Kaocha on the command line will run tests from the saved code files, so is very 
 
 ### Kaocha shell script
 
-[Kaocha install guide](https://cljdoc.org/d/lambdaisland/kaocha/1.60.977/doc/2-installing) recommends creating an executable shell script file, i.e. `bin/kaocha`
+[Kaocha install guide](https://cljdoc.org/d/lambdaisland/kaocha/1.60.977/doc/2-installing){target=_blank} recommends creating an executable shell script file, i.e. `bin/kaocha`
 
-Use the `:test/run` alias from [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn) (or create an alias in the project `deps.edn` file)
+Use the `:test/run` alias from [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn){target=_blank} (or create an alias in the project `deps.edn` file)
 
 ```bash
 #!/usr/bin/env bash
@@ -78,8 +78,8 @@ Or define a binary that always watches, e.g. `bin/kaocha-watch` using the `:test
 clojure -X:test/watch "$@"
 ```
 
-> #### Hint::Configure kaocha in tests.edn
-> `tests.edn` in the root of a project can define the [full range of options for Kaocha configuration options](https://cljdoc.org/d/lambdaisland/kaocha/1.62.993/doc/3-configuration) and is the preferred approach.
+!!! HINT "Configure kaocha in tests.edn"
+   `tests.edn` in the root of a project can define the [full range of options for Kaocha configuration options](https://cljdoc.org/d/lambdaisland/kaocha/1.62.993/doc/3-configuration){target=_blank} and is the preferred approach.
 
 
 ## Continuous Integration workflow
@@ -88,4 +88,4 @@ Add `:test/run` alias to the project `deps.edn` file and define kaocha configura
 
 Define a job that runs the tests that calls either the kaocha script or the `clojure` command to run all the tests.
 
-* [Banking on Clojure - using Kaocha Orb with Circle CI](https://practical.li/clojure-web-services/projects/banking-on-clojure/continuous-integration.html)
+* [Banking on Clojure - using Kaocha Orb with Circle CI](https://practical.li/clojure-web-services/projects/banking-on-clojure/continuous-integration.html){target=_blank}

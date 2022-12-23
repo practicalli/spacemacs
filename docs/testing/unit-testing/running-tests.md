@@ -8,7 +8,7 @@
 
 The results of running the tests are displayed in the mini-buffer, showing the number of tests run and how many passed and failed.
 
-![Spacemacs Cider tests - results in mini-buffer](/images/spacemacs-cider-test-run-tests-results-mini-buffer.png)
+![Spacemacs Cider tests - results in mini-buffer](/spacemacs/images/spacemacs-cider-test-run-tests-results-mini-buffer.png)
 
 > #### Hint::Spacemacs loads current buffer before running tests
 > Run unit tests from the buffer that has changes or new tests.  Otherwise, ensure all buffers with changes have been evaluated to ensure the tests run with the right src and test code.
@@ -29,11 +29,11 @@ Using the universal argument before calling CIDER test runner will prompt for te
 
 CIDER first prompts for the test selectors to include:
 
-![Spacemacs Clojure Cider Test Runner test selector prompt - include](/images/spacemacs-clojure-test-selectors-prompt.png)
+![Spacemacs Clojure Cider Test Runner test selector prompt - include](/spacemacs/images/spacemacs-clojure-test-selectors-prompt.png)
 
 Then prompts for the test selectors to exclude.  A warning displays in the power line if CIDER does not find the test selector name.
 
-![Spacemacs Clojure Cider Test Runner test selector prompt - include](/images/spacemacs-clojure-test-selectors-integration-not-found.png)
+![Spacemacs Clojure Cider Test Runner test selector prompt - include](/spacemacs/images/spacemacs-clojure-test-selectors-integration-not-found.png)
 
 
 ## Running tests in the REPL buffer

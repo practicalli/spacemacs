@@ -133,12 +133,11 @@ nav:
           - testing/kaocha-test-runner.md
           - testing/unit-testing/index.md
           - testing/unit-testing/cider-test-deps-edn-projects.md
-          - testing/unit-testing/clojure-test-expectations.md
-          - testing/unit-testing/configure-cider-test-runner.md
+          - testing/unit-testing/writing-unit-tests.md
+          - testing/unit-testing/running-tests.md
           - testing/unit-testing/re-run-tests-from-test-report-buffer.md
           - testing/unit-testing/refactor-unit-tests.md
-          - testing/unit-testing/running-tests.md
-          - testing/unit-testing/writing-unit-tests.md
+          - testing/unit-testing/configure-cider-test-runner.md
       - Navigating Code:
           - navigating-code/index.md
           - navigating-code/code-folding-methods.md
