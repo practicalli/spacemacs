@@ -6,7 +6,7 @@
 
 When cursor is not on a function name or any var, the mini-buffer prompts for the name to undefine.
 
-> #### Hint::Cider refresh or restart for multiple changes
+### Hint::Cider refresh or restart for multiple changes
 > [Refresh or restart the REPL](https://practical.li/spacemacs/clojure-repl/refresh-restart-repl.html) when there are multiple changes made to a namespace or across multiple namespaces.
 
 
@@ -23,7 +23,7 @@ If the name of an existing test is changed, the original test will still run whe
 
 `TAB` when typing the symbol name will popup a list of matching symbols available in the REPL.  Select the name you wish to undef
 
-[![Spacemacs Clojure REPL undef symbol helm narrowing](/images/spacemacs-clojure-repl-undef-symbol-helm-narrowing.png)](/images/spacemacs-clojure-repl-undef-symbol-helm-narrowing.png)
+[![Spacemacs Clojure REPL undef symbol helm narrowing](/spacemacs/images/spacemacs-clojure-repl-undef-symbol-helm-narrowing.png)](/spacemacs/images/spacemacs-clojure-repl-undef-symbol-helm-narrowing.png)
 
 
 ## Undefine using Clojure
@@ -83,8 +83,8 @@ The refresh function will load all namespaces found and list them as the output.
 :ok
 ```
 
-> #### WARNING::All Code must be loadable
-> If there are errors in one or more namespaces that prevent them from successfully loading, then reresh will error, showing which namespaces had issues to resolve.
+!!! WARNING "All Code must be loadable"
+    If there are errors in one or more namespaces that prevent them from successfully loading, then reresh will error, showing which namespaces had issues to resolve.
 
 
 ### Use refresh in a rich comment block

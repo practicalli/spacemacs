@@ -122,8 +122,6 @@ nav:
       - Evaluate Clojure:
           - evaluating-clojure/index.md
           - Expressions: evaluating-clojure/expressions.md
-          - Region: evaluating-clojure/region.md
-          - Pretty Print: evaluating-clojure/pretty-print.md
           - Inspect Values: evaluating-clojure/inspect.md
           - Interupt Eval: evaluating-clojure/interupt.md
           - Remove Eval: evaluating-clojure/undefine.md
