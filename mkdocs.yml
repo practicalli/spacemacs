@@ -173,21 +173,11 @@ nav:
               - snippets/yasnippets/writing-snippets.md
       - Refactor:
           - refactor/index.md
-          - refactor/clojure-mode/index.md
-          - refactor/clojure-lsp.md
-          - refactor/namespace-definitions.md
-          - refactor/similar-function-call-name.md
-          - refactor/within-a-function.md
-          - refactor/within-a-namespace.md
-          - refactor/within-a-project.md
-          - clj-refactor:
-              - refactor/clj-refactor/index.md
-              - refactor/clj-refactor/collections.md
-              - refactor/clj-refactor/extracting.md
-              - refactor/clj-refactor/forms.md
-              - refactor/clj-refactor/managing-library-dependencies.md
-              - refactor/clj-refactor/managing-namespaces.md
-              - refactor/clj-refactor/reference.md
+          - Function: refactor/functions.md
+          - Namespace: refactor/namespace.md
+          - Project: refactor/project.md
+          - Clojure Mode: refactor/clojure-mode.md
+          - Clojure LSP: refactor/clojure-lsp.md
       - Debug:
           - debug-clojure/index.md
           - debug-clojure/understanding-errors.md
