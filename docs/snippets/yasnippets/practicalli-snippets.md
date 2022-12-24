@@ -1,6 +1,6 @@
 # Practicalli Clojure mode Yasnippets
 
-[Practicalli Snippets for Yasnippet](https://github.com/practicalli/spacemacs.d/tree/live/snippets).
+[Practicalli Snippets for Yasnippet](https://github.com/practicalli/spacemacs.d/tree/live/snippets){target=_blank}.
 
 
 ## Clojure.core

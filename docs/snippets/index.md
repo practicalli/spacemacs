@@ -9,28 +9,27 @@ The content of a snippet can be anything, from a simple piece of text or a more 
 Snippets can include code which is evaluated, allowing the snippet to tap into all the features of Emacs (Yasnippets) or Clojure (Clojure LSP).
 
 
+## Clojure LSP snippets
+
+Clojure LSP snippets are editor agnostic although the editor needs to provide a Clojure LSP client. Snippets support tab stops, placeholders with default values and can pull in a following form (`$current-form`).
+
+[Built-in snippets](https://clojure-lsp.io/features/#snippets){target=_blank} appear in the completion menu when typing.
+
+Custom snippets are defined in the Clojure LSP configuration using the `:additional-snipets` key.
+
+[practicalli/clojure-lsp-config snippets](https://github.com/practicalli/clojure-lsp-config#custom-snippets){target=_blank .md-button}
+
+
 ## Emacs Yasnippets
 
-[YASnippets](https://github.com/joaotavora/yasnippet/blob/master/doc/index.org) uses plain text templates and so are very easy to learn and write.  Snippets are specific to an Emacs major mode.  They include tab stops, placoders with default values and markers to ensure correct indentation.
+[YASnippets](https://github.com/joaotavora/yasnippet/blob/master/doc/index.org){target=_blank} uses plain text templates and so are very easy to learn and write.  Snippets are specific to an Emacs major mode.  They include tab stops, placoders with default values and markers to ensure correct indentation.
 
-`M-/` expands the text under the point by any of the methods registered with hippie-expand. Yasnippets is one of the methods registered.
+++meta++ ++slash++ expands the text under the point by any of the methods registered with hippie-expand. Yasnippets is one of the methods registered.
 
-`TAB` will jump through the expanded snippet if it contains markers.
+++tab++ will jump through the expanded snippet if it contains markers.
 
 For example, `defn` is a snippet that expands into the full function definition form, tab stops jump the cursor through the snippet to add specific values to quickly complete the specifics of that function definition.
 
 Yasnippets can also execute Elisp code, opening up a large number of Emacs functions to use within a snippet.
 
-Spacemacs automatically includes [snippets for many programming languages and text formats](https://github.com/AndreaCrotti/yasnippet-snippets), including [snippets for Clojure](https://github.com/AndreaCrotti/yasnippet-snippets/tree/master/snippets/clojure-mode).
-
-> #### Hint::Start REPL for autocomplete menu entries
-> Private snippets only appear in the auto-completion popup once the REPL process has started.
-
-
-## Clojure LSP snippets
-
-Clojure LSP snippets are editor agnostic (although the editor needs to support Clojure LSP). Snippets support tab stops, placeholders with default values and can pull in a following form (`$current-form`).
-
-[Built-in snippets](https://clojure-lsp.io/features/#snippets) appear in the completion menu when typing.
-
-Custom snippets are defined in the Clojure LSP configuration using the `:additional-snipets` key.
+Spacemacs automatically includes [snippets for many programming languages and text formats](https://github.com/AndreaCrotti/yasnippet-snippets){target=_blank}, including [snippets for Clojure](https://github.com/AndreaCrotti/yasnippet-snippets/tree/master/snippets/clojure-mode){target=_blank}.

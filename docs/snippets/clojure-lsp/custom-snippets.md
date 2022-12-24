@@ -4,10 +4,10 @@
 
 Built-in snippets can include Clojure code for generating the text of the snippet when expanded.  Custom snippets do not currently support evaluation of code in the snippet.
 
-> #### Hint::Clojuse LSP Configuration locations
-> Project specific configuration resides in `.lsp/config.edn`
->
-> User level configuration is either `$XDG_CONFIG_HOME/clojure-lsp/config.edn` or `$HOME/.lsp/config`
+!!! HINT "Clojure LSP Configuration locations"
+    Project specific configuration resides in `.lsp/config.edn`
+
+    User level configuration is either `$XDG_CONFIG_HOME/clojure-lsp/config.edn` or `$HOME/.clojure-lsp/config`
 
 
 ## Snippet definition
@@ -40,8 +40,8 @@ When a Clojure LSP snipped includes `$current-form` then typing a snippet name i
                         :snippet "(let [$1 $current-form] $0)"}]}
 ```
 
-> #### WARNING::Limited scope with current-form
-> A Snippet including `$current-form` is only active when typed in front of an existing expression.  A snippet is not recognised when typed at the top level.
+!!! WARNING "Limited scope with current-form"
+    A Snippet including `$current-form` is only active when typed in front of an existing expression.  A snippet is not recognised when typed at the top level.
 
 
 ### Placeholders
@@ -64,8 +64,8 @@ The `deftest` custom snippet shows examples of placeholders for three tab stops.
   $0"}
 ```
 
-> #### Hint::Escape string quotes in snippet body
-> Use `\` character before the open and closing `"` character of any string that is part of the snippet body.  For example, doc-strings in function definitions or the string in `testing` function.
+!!! HINT "Escape string quotes in snippet body"
+    Use ++backslash++ character before the open and closing ++double-quote++ character of any string that is part of the snippet body.  For example, doc-strings in function definitions or the string in `testing` function.
 
 
 ### Clojure code driven snippet - built-in snippets only
@@ -87,7 +87,7 @@ The built-in `defn` snippet uses Clojure code to help generate the snippet.
 
 The syntax for built-in snippets is slightly different that the `:additional-syntax` form.  The internal form uses `:label` for `:name` and `:insert-text` for `:snippet`.
 
-> #### Hint::
-> Clojure code only works for built-in snippets and not for `:additional-snippets`.
->
-> Clojure LSP is compiled by Graal to a native binary, including the built-in snippets.  To include Clojure code in a snippet then consider submitting a pull request to the Clojure LSP project to add a built-in snippet.
+!!! HINT "Clojure Code for Built-in snippets only"
+    Clojure code only works for built-in snippets and not for `:additional-snippets`.
+
+    Clojure LSP is compiled by Graal to a native binary, including the built-in snippets.  To include Clojure code in a snippet then consider submitting a pull request to the Clojure LSP project to add a built-in snippet.

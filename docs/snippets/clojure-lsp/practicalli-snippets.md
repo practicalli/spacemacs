@@ -1,14 +1,14 @@
 # Practicalli Snippets for Clojure LSP
 
-[Custom snippets created by Practicalli](https://github.com/practicalli/clojure-lsp-config) and added via the `:additional-snippets` key in the Clojure LSP configuration (`.lsp/config.edn` or user level configuration).  Snippets are defined as a vector of hash-maps
+[Custom snippets created by Practicalli](https://github.com/practicalli/clojure-lsp-config){target=_blank .md-button}
+
+Use [practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config){target=_blank} as the user level configuration or copy the desired snippets to `:additional-snippets` key in the Clojure LSP configuration (project `.lsp/config.edn` or user level configuration).
+
+Snippets are defined as a vector of hash-maps
 
 ```clojure
 {:additional-snippets [{} {} {} ,,,]}
 ```
-
-> #### Hint::Install Practicalli Custom Snippets
-> [Install practicalli/clojure-lsp-snippets guide](https://practical.li/spacemacs/install-spacemacs/clojure-lsp/snippets.md)
-
 
 ## Documentation
 

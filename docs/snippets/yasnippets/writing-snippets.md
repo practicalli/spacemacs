@@ -31,11 +31,12 @@ As Practicalli develops the book content its useful to highlight sections which 
 > **Fixme** work in progress
 ```
 
-When you expand this snippet with `M-/` then the snippet name is replaced by the content.
+When you expand this snippet with ++meta++ ++slash++ then the snippet name is replaced by the content.
 
 ## Example: Using tab stops
 
-[Yasnippets official snippets repository](https://github.com/AndreaCrotti/yasnippet-snippets) contains a snippet called `form` in the `html-mode`.  This expands into a html form and jumps from method, id, action and content.
+[Yasnippets official snippets repository](https://github.com/AndreaCrotti/yasnippet-snippets){target=_blank} contains a snippet called `form` in the `html-mode`.  This expands into a html form and jumps from method, id, action and content.
+
 ```
 # key : form
 # contributor : Practicalli <info@practical.li>
@@ -51,10 +52,10 @@ When the snippet is expanded, the snippet name is replaced by the content as usu
 `$0` is our exit point from the snippet, so pressing `TAB` reverts to the usual behaviour outside of YASnippet.
 
 
-Further examples are covered in the [Emacs YASnippet video tutorial](https://www.youtube.com/watch?v=-4O-ZYjQxks) or [Adding YASnippets snippets](http://jotham-city.com/blog/2015/03/21/adding-yasnippets-snippets/) & [Snippet expansion with YASnippet](http://cupfullofcode.com/blog/2013/02/26/snippet-expansion-with-yasnippet/index.html)
+Further examples are covered in the [Emacs YASnippet video tutorial](https://www.youtube.com/watch?v=-4O-ZYjQxks){target=_blank} or [Adding YASnippets snippets](http://jotham-city.com/blog/2015/03/21/adding-yasnippets-snippets/){target=_blank} & [Snippet expansion with YASnippet](http://cupfullofcode.com/blog/2013/02/26/snippet-expansion-with-yasnippet/index.html){target=_blank}
 
 
-# Testing your snippets
+# Testing snippets
 
 `M-x yas-tryout-snippet`  opens a new empty buffer in the appropriate major mode and inserts the snippet so you can then test it with `M-/`.
 
@@ -62,6 +63,7 @@ Further examples are covered in the [Emacs YASnippet video tutorial](https://www
 
 `M-x yas-load-snippet-buffer-and-close` also loads the new snippet into the correct major mode and kills the snippet buffer (prompting to save first if necessary).
 
+<!--
 > #### Todo::PR for yasnippet key bindings
 > `SPC x s` key bindings for yasnippet commands in Spacemacs.
 > `SPC x s e` to edit an existing snippet (`yas/visit-snippet-file`).
@@ -69,3 +71,4 @@ Further examples are covered in the [Emacs YASnippet video tutorial](https://www
 > `SPC x s t` to try a snippet.
 > `SPC x s l` to load a snippet.
 > `SPC x s L` to load a snippet and close the snippet buffer
+  -->
