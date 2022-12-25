@@ -1,2 +1,0 @@
-# ClojureScript REPL
-
