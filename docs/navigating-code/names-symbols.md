@@ -2,7 +2,7 @@
 
 `#` or `*` enters **symbol highlight transient state** allowing you to jump between the current symbol name and any other instance in the buffer.
 
-[![Spacemacs Vim Normal - Symbol highlight transient state](/spacemacs/images/spacemacs-vim-normal-symbol-highlight-transient-state.png)](/spacemacs/images/spacemacs-vim-normal-symbol-highlight-transient-state.png)
+[![Spacemacs Vim Normal - Symbol highlight transient state](/images/spacemacs-vim-normal-symbol-highlight-transient-state.png)](/images/spacemacs-vim-normal-symbol-highlight-transient-state.png)
 
 `e` to start iedit state and edit all the symbols concurrently.  This is so amazing.
 

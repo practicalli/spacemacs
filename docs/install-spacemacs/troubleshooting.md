@@ -49,7 +49,7 @@ If multiple packages are causing issues after an update, or you are short on tim
 
 ++spc++ ++"b"++ ++"h"++ to visit the Spacemacs home page and select **Rollback Package Update**
 
-![Spacemacs - Home buffer - Rollback package update](/spacemacs/images/spacemacs-home-rollback-package-update.png)
+![Spacemacs - Home buffer - Rollback package update](/images/spacemacs-home-rollback-package-update.png)
 
 
 !!! TIP "Restore individual packages"
@@ -93,7 +93,7 @@ The [Spacemacs debugging page](https://github.com/syl20bnr/spacemacs/wiki/Debugg
 
 `SPC a p` (`list-processes`) lists the processes started by or from within Spacemacs, eg. for Clojure its `nrepl-server` and `nrepl-connection` processes when running `cider-jack-in`. Use `SPC a P` (`proced`) to see all operating system processes.
 
-![Spacemacs Applications - Process list](/spacemacs/images/spacemacs-application-processes-buffer.png)
+![Spacemacs Applications - Process list](/images/spacemacs-application-processes-buffer.png)
 
 `d` to immediately kill a process (no prompt is given to confirm kill action).
 
@@ -116,6 +116,6 @@ If there are problems shutting down the REPL, `, s q q` (`cider-quit`),  check t
 
 ++spc++ ++spc++ ++"profiler-report"++ displays buffers showing the results of profiling Emacs.
 
-[![Spacemacs Emacs Profiler report](/spacemacs/images/spacemacs-profiler-report-memory-cpu.png)](/spacemacs/images/spacemacs-profiler-report-memory-cpu.png)
+[![Spacemacs Emacs Profiler report](/images/spacemacs-profiler-report-memory-cpu.png)](/images/spacemacs-profiler-report-memory-cpu.png)
 
 ++spc++ ++spc++ ++"profiler-stop"++ to stop profiling Emacs.

@@ -25,7 +25,7 @@ Type `history` at the REPL command menu prompt, press `RET` to select.
 
 A new buffer opens in Vim normal mode and shows all the previous history, separated by comments.
 
-[![Spacemacs Clojure REPL history](/spacemacs/images/spacemacs-clojure-repl-history-buffer.png)](/spacemacs/images/spacemacs-clojure-repl-history-buffer.png)
+[![Spacemacs Clojure REPL history](/images/spacemacs-clojure-repl-history-buffer.png)](/images/spacemacs-clojure-repl-history-buffer.png)
 
 
 > #### Hint:: Switch to Vim insert or Emacs state
@@ -44,4 +44,4 @@ In Evil Normal state:
 `SPC SPC cider-history-use-and-quit` sends the current expression to the REPL buffer and closes the REPL history.
 
 
-[![Spacemacs Clojure REPL History - keybindings code](/spacemacs/images/spacemacs-clojure-repl-history-keybindings-code.png)](/spacemacs/images/spacemacs-clojure-repl-history-keybindings-code.png)
+[![Spacemacs Clojure REPL History - keybindings code](/images/spacemacs-clojure-repl-history-keybindings-code.png)](/images/spacemacs-clojure-repl-history-keybindings-code.png)

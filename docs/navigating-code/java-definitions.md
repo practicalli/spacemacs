@@ -40,7 +40,7 @@ Or include both Java and Clojure Java sources
                   (cider-preferred-build-tool . "clojure-cli"))))
 ```
 
-![Spacemacs navigation Java definitions](/spacemacs/images/spacemacs-navigation-definitions-java.png)
+![Spacemacs navigation Java definitions](/images/spacemacs-navigation-definitions-java.png)
 
 
 ## Adding Local Clojure and Java sources

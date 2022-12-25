@@ -10,7 +10,7 @@ Spacemacs is a configuration for Emacs, so naturally [Emacs](#install-emacs) sho
 
 ## Install Emacs
 
-![GNU Emacs banner](/spacemacs/images/emacs-logo-text.png)
+![GNU Emacs banner](/images/emacs-logo-text.png)
 
 Emacs 28 is recommended as it includes native compilation support and optomised JSON support which is valuable for Language Server Protocol servers.
 

@@ -12,7 +12,6 @@
 ![Spacemacs Whichkey major mode menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-whichkey-clojure-major-mode-menu-dark.png#only-dark)
 
 
-
 !!! INFO "Key combination guide"
     ++spc++ means press the space bar and release
 

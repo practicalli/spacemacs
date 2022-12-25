@@ -2,7 +2,7 @@
 
 `SPC p` opens the projectile menu allowing you to run commands relative to the project of the active buffer.
 
-[![Spacemacs Projectile menu](/spacemacs/images/spacemacs-projectile-menu.png)](/spacemacs/images/spacemacs-projectile-menu.png)
+[![Spacemacs Projectile menu](/images/spacemacs-projectile-menu.png)](/images/spacemacs-projectile-menu.png)
 
 ## What is a Projectile project
 
@@ -21,7 +21,7 @@ A project can be one or more of the following things
 
 This is a good approach if you know the name but not the directory path of the file.  Use `SPC f f` if you know the directory but not the name of the file you want.
 
-[![Spacemacs Projectile File - new file](/spacemacs/images/spacemacs-projectile-file-new-file--light.png)](/spacemacs/images/spacemacs-projectile-file-new-file--light.png)
+[![Spacemacs Projectile File - new file](/images/spacemacs-projectile-file-new-file--light.png)](/images/spacemacs-projectile-file-new-file--light.png)
 
 
 ## Switching between buffers

@@ -8,4 +8,4 @@ As a homage to [LightTable](https://lighttable.com) live evaluation, you can ena
 
 This provides a basic version of the [Cider inspector](inspect.md) which is always on (until you toggle it off).
 
-[![Spacemacs - Clojure Enlighten mode](/spacemacs/images/spacemacs-clojure-evaluation-enlighten-example.png)](/spacemacs/images/spacemacs-clojure-evaluation-enlighten-example.png)
+[![Spacemacs - Clojure Enlighten mode](/images/spacemacs-clojure-evaluation-enlighten-example.png)](/images/spacemacs-clojure-evaluation-enlighten-example.png)

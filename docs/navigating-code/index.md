@@ -27,7 +27,7 @@ Folding code hides away details, so you can just look at the function definition
 
 `z` opens a menu to allow you to un/fold your code quickly.
 
-[![Spacemacs Zoom menu](/spacemacs/images/spacemacs-vim-normal-z-menu.png)](/spacemacs/images/spacemacs-vim-normal-z-menu.png)
+[![Spacemacs Zoom menu](/images/spacemacs-vim-normal-z-menu.png)](/images/spacemacs-vim-normal-z-menu.png)
 
 `SPC z .` is the code fold transient menu should you wish to un/fold code many times.
 
@@ -40,4 +40,4 @@ See the [code folding](/navigating-code/code-folding.md) section for more detail
 
 `hjkl` to navigate the cursor across symbols and open/close parens
 
-![Spacemacs Structural Editing - Lisp state menu](/spacemacs/images/spacemacs-lisp-state-menu.png)
+![Spacemacs Structural Editing - Lisp state menu](/images/spacemacs-lisp-state-menu.png)

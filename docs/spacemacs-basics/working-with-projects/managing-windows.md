@@ -4,7 +4,7 @@ Windows in Spacemacs allow you to organise your buffers, splitting horizontally 
 
 `SPC w` is the windows menu.
 
-[![Spacemacs - window menu](/spacemacs/images/spacemacs-window-menu-zoomed.png)](/spacemacs/images/spacemacs-window-menu.png)
+[![Spacemacs - window menu](/images/spacemacs-window-menu-zoomed.png)](/images/spacemacs-window-menu.png)
 
 `SPC w u` will undo a change to the windows.
 
@@ -18,4 +18,4 @@ Golden ratio automatically makes the active window the largest in the frame.  Ch
 
 `SPC W .` opens the Windows Transient state menu, enabling single character keybindings for window commands, simplifying multiple commands.
 
-![Spacemacs - window menu - transient state](/spacemacs/images/spacemacs-window-menu-transient-state.png)
+![Spacemacs - window menu - transient state](/images/spacemacs-window-menu-transient-state.png)

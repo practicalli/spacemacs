@@ -19,7 +19,7 @@ Add `clojure-backend 'cider` as a clojure layer variable to the `clojure` layer 
 
 `SPC SPC all-the-icons-install-fonts` command will install icons that support the [breadcrumbs on headerline feature](https://emacs-lsp.github.io/lsp-mode/page/main-features/#breadcrumb-on-headerline) of LSP UI.  This provides the director path, file name and symbol as a breadcrumb trail at the top of each buffer.
 
-![Spacemacs LSP breadcrumbs](/spacemacs/images/spacemacs-lsp-breadcumbs.png)
+![Spacemacs LSP breadcrumbs](/images/spacemacs-lsp-breadcumbs.png)
 
 
 ## Optional - clj-kondo
@@ -149,7 +149,7 @@ In this example, the default orange background color is removed and the font wei
          (lsp-face-highlight-read :background nil :weight bold))))
 ```
 
-![doom gruvbox light - bold highlight for lsp](/spacemacs/images/doom-gruvbox-light-bold.png)
+![doom gruvbox light - bold highlight for lsp](/images/doom-gruvbox-light-bold.png)
 
 
 ## Key bindings over-ridden by lsp include

@@ -14,7 +14,7 @@ Opening the treemacs project root will show the directory list for the project t
 | `SPC p t`  | `M-m p t` | treemacs-find-project-root | Show project root in treemacs  |
 | `SPC 0`    | `M-m 0`   | `select-window-0`          | Switch to open treemacs buffer |
 
-![Treemacs](/spacemacs/images/spacemacs-treemacs-project-example.png)
+![Treemacs](/images/spacemacs-treemacs-project-example.png)
 
 
 ## Treemacs shows version control changes
@@ -23,11 +23,11 @@ New and changed files are highlighted in Treemacs against the current version co
 
 Directory names turn blue when they contain changes.  Filenames turn green when they are changed.
 
-![Treemacs - showing uncommitted changes](/spacemacs/images/spacemacs-treemacs-project-changes.png)
+![Treemacs - showing uncommitted changes](/images/spacemacs-treemacs-project-changes.png)
 
 
 ## Treemacs Keybindings
 
 Press `?` in the treemacs buffer to see the available keybindings to control treemacs and use more of its features.
 
-![Spacemacs Treemacs Key Hints](/spacemacs/images/spacemacs-treemacs-keybindings.png)
+![Spacemacs Treemacs Key Hints](/images/spacemacs-treemacs-keybindings.png)

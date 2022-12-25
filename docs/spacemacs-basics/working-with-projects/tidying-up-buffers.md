@@ -23,13 +23,13 @@ There are a range of actions you can run from the Helm transient state or even w
 
 `C-z` displays list of available actions for a buffer
 
-[![Spacemacs Buffers - Helm Actions](/spacemacs/images/spacemacs-buffers-helm-actions.png)](/spacemacs/images/spacemacs-buffers-helm-actions.png)
+[![Spacemacs Buffers - Helm Actions](/images/spacemacs-buffers-helm-actions.png)](/images/spacemacs-buffers-helm-actions.png)
 
 
 # Helm Transient state menu
 `M-SPC` to open Helm transient state menu, simplifying the keybindings for tidying up lots of buffers.
 
-[![Spacemacs - Helm Transient State menu](/spacemacs/images/spacemacs-helm-transient-state-menu.png)](/spacemacs/images/spacemacs-helm-transient-state-menu.png)
+[![Spacemacs - Helm Transient State menu](/images/spacemacs-helm-transient-state-menu.png)](/images/spacemacs-helm-transient-state-menu.png)
 
 
 > #### Hint::Gnome Desktop keybinding conflict

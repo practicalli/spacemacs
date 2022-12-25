@@ -6,4 +6,4 @@ The recommended Structural editing approach with Spacemacs is to use smartparens
 
 Please read the [parinfer for emacs documentation](https://github.com/DogLooksGood/parinfer-mode) before [adding the parinfer layer](http://develop.spacemacs.org/layers/+misc/parinfer/README.html), to ensure you understand the approach it takes.
 
-![Parinfer for Emacs](https://github.com/DogLooksGood/parinfer-mode/raw/master/images/demo.gif)
+![Parinfer for Emacs](https://github.com/DogLooksGood/parinfer-mode/raw/master/spacemacs/images/demo.gif)

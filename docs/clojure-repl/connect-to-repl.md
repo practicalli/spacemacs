@@ -19,7 +19,7 @@ clojure -M:repl/headless
 
 The REPL will start along with an nREPL server, showing the connection details.
 
-![Clojure Terminal REPL UI with Rebel readline](/spacemacs/images/clojure-repl-terminal-rebel-nrepl.png)
+![Clojure Terminal REPL UI with Rebel readline](/images/clojure-repl-terminal-rebel-nrepl.png)
 
 An `.nrepl-port` file is created in the root of the Clojure project, containing the port number the nREPL server is listening upon.
 
@@ -41,15 +41,15 @@ ssh remote
 
 `, '` to call `sesman-start` and choose `cider-connect-clj` which should find the right host and port
 
-![Clojure Terminal REPL UI with Rebel readline](/spacemacs/images/spacemacs-clojure-cider-connect-clj.png)
+![Clojure Terminal REPL UI with Rebel readline](/images/spacemacs-clojure-cider-connect-clj.png)
 
 Confirm the host name, typically `localhost` when running the REPL locally
 
-![Clojure Terminal REPL UI with Rebel readline](/spacemacs/images/spacemacs-clojure-cider-connect-host.png)
+![Clojure Terminal REPL UI with Rebel readline](/images/spacemacs-clojure-cider-connect-host.png)
 
 Confirm the port number the nREPL server is listening too
 
-![Clojure Terminal REPL UI with Rebel readline](/spacemacs/images/spacemacs-clojure-cider-connect-port.png)
+![Clojure Terminal REPL UI with Rebel readline](/images/spacemacs-clojure-cider-connect-port.png)
 
 
 Spacemacs is now connected to the REPL and Clojure code can be evaluated in the source code buffers.

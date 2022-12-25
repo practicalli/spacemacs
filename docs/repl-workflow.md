@@ -96,7 +96,7 @@ Pretty print shows the structure of results from function calls in a human-frien
 
 `, d v` is the Cider Inspect menu for paging through very large data sets and navigate nested data structures in detail.
 
-![Clojure - viewing large data sets](/spacemacs/images/spacemace-clojure-inspect-java-lang-persistentvector.png)
+![Clojure - viewing large data sets](/images/spacemace-clojure-inspect-java-lang-persistentvector.png)
 
 `, d` is the Cider debug menu which can inspect view intermediate values and data structures during the debugging of Clojure function calls.
 
@@ -113,7 +113,7 @@ Clojure aware editors should automatically apply formatting that follows the [Cl
 
 Live linting with [clj-kondo](https://github.com/borkdude/clj-kondo){target=_blank} suggests common idioms and highlights a wide range of syntax errors as code is written, minimizing bugs and therefore speeding up the development process.
 
-![clj-kondo static analysis for live linting of Clojure code](/spacemacs/images/spacemacs-clojure-linting-code-marks-and-flycheck-list-errors.png)
+![clj-kondo static analysis for live linting of Clojure code](/images/spacemacs-clojure-linting-code-marks-and-flycheck-list-errors.png)
 
 > The [Clojure Style guide](https://github.com/bbatsov/clojure-style-guide){target=_blank} provides examples of common formatting approaches, although the development team should decide which of these to adopt.  Emacs `clojure-mode` will automatically format code and so will Clojure LSP (via cljfmt).  These tools are configurable and should be tailored to the teams standard.
 

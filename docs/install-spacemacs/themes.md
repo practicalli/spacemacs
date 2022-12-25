@@ -11,7 +11,7 @@ You can select a different theme or cycle through the currently added themes.
 | ++spc++ ++t++ ++"s"++                           | Select theme from list (all themes from gallery)                         |
 | ++spc++ ++t++ ++"s"++ ++ctrl+"c"++ ++ctrl+"f"++ | Apply themes when scrolling through the list of names (helm-follow-mode) |
 
-[![Spacemacs Themes menu](/spacemacs/images/spacemacs-themes-menu.png)](/spacemacs/images/spacemacs-themes-menu.png)
+[![Spacemacs Themes menu](/images/spacemacs-themes-menu.png)](/images/spacemacs-themes-menu.png)
 
 
 ## Adding Themes to Spacemacs
@@ -44,25 +44,25 @@ There are many [themes available](http://themegallery.robdor.com/){target=_blank
 
 This guide uses the minimal theme provided by doom modeline and doom-gruvbox-light theme.
 
-![Spacemacs theme - doom solarized light](/spacemacs/images/spacemacs-doom-gruvbox-light-theme-example-clojure-spec.png)
+![Spacemacs theme - doom solarized light](/images/spacemacs-doom-gruvbox-light-theme-example-clojure-spec.png)
 
 
 Doom Solarized Light is also an excellent theme for working during the day, as well as presentations and videos due to a lighter color set having a better contrast.
 
-![Spacemacs theme - doom solarized light](/spacemacs/images/spacemacs-themes-doom-solarized-light.png)
+![Spacemacs theme - doom solarized light](/images/spacemacs-themes-doom-solarized-light.png)
 
 Doom Solarized Dark is a good theme for darker environments.
 
-![Spacemacs theme - doom solarized dark](/spacemacs/images/spacemacs-themes-doom-solarized-dark.png)
+![Spacemacs theme - doom solarized dark](/images/spacemacs-themes-doom-solarized-dark.png)
 
 
 Spacemacs has two default themes included, one light and one dark.  There are also many [themes available](http://themegallery.robdor.com/){target=_blank} that you can select and load on demand, ++spc++ ++t++ ++"s"++
 
-![Spacemacs theme - spacemacs-dark](/spacemacs/images/spacemacs-theme-dark.png)
+![Spacemacs theme - spacemacs-dark](/images/spacemacs-theme-dark.png)
 
-![Spacemacs theme - spacemacs-light](/spacemacs/images/spacemacs-theme-light.png)
+![Spacemacs theme - spacemacs-light](/images/spacemacs-theme-light.png)
 
 
 The cyberpunk theme used a very striking color palette, familiar to those who use to use Emacs Live distribution (now deceased).
 
-![Spacemacs theme - spacemacs-cyberpunk](/spacemacs/images/spacemacs-theme-cyberpunk.png)
+![Spacemacs theme - spacemacs-cyberpunk](/images/spacemacs-theme-cyberpunk.png)
