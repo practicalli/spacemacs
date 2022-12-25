@@ -12,8 +12,8 @@ For Clojure / ClojureScript language, add
 
 ## Aggressive Indentation
 
-> #### DANGER::LSP clashes with aggressive indent
-> Avoid running LSP format as type and aggressive indent as they will interact with each others changes and cause very strange side effects
+!!! WARNING "LSP clashes with aggressive indent"
+    Avoid running LSP format as type and aggressive indent as they will interact with each others changes and cause very strange side effects
 
 Set aggressive indentation for all languages using the following code instead
 

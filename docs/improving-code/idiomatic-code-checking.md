@@ -54,7 +54,8 @@ The output excerpt shows two different suggestions: Simplifying an `if` to a `wh
 `lein kibit --replace --interactive` will automatically walk you through each recommendation and ask if want to use it.
 
 
-
+<!--
 > #### TODO::Using Kibit with a CD/CI server - eg. CircleCI
 > reject a build if Kibit finds issues with your code
 > automatically apply and commit recommendations from kibit into a Pull Request
+ -->

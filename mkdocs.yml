@@ -189,13 +189,13 @@ nav:
           - Sayid Debug: debug-clojure/sayid-debug.md
       - Code Quality:
           - improving-code/index.md
+          - improving-code/live-linting.md
           - improving-code/batch-linting.md
           - improving-code/idiomatic-code-checking.md
-          - improving-code/live-linting.md
           - improving-code/formatting/index.md
+          - improving-code/formatting/clojure.md
           - improving-code/formatting/aligning-forms-expressions.md
           - improving-code/formatting/automatic-indenting.md
-          - improving-code/formatting/clojure.md
   - ClojureScript:
       - clojurescript/index.md
       - clojurescript/additional-features.md
@@ -340,15 +340,13 @@ nav:
       - writing-emacs-lisp/index.md
   - Alternative Tools:
       - alternative-tooling/index.md
-      - alternative-tooling/joker.md
       - alternative-tooling/leiningen.md
-      - alternative-tooling/linting.md
-      - alternative-tooling/neotree.md
       - alternative-tooling/org-easy-templates.md
       - alternative-tooling/paredit-keybindings.md
       - alternative-tooling/paredit.md
       - alternative-tooling/parinfer.md
       - alternative-tooling/silversearcher-ag.md
+      - clojure-repl/reveal-data-visualization.md
 
   - To Review:
       - spacemacs-on-android.md

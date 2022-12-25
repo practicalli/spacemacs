@@ -8,8 +8,9 @@ Clojure code should be kept readable and consistently use idiomatic style, which
 | Formatter       | Formats the code for readability  | Automatically              |
 | Static analyser | Suggests idiomatic use of Clojure | Regularly (before pushing) |
 
-> #### Hint::Clojure style guide
-> Linting and formatting follow the practices documented in the [Clojure style guide](https://guide.clojure.style/).
+!!! HINT "Clojure style guide"
+    Linting and formatting follow the practices documented in the [Clojure style guide](https://guide.clojure.style/){target=_blank}.
+
 
 ## Linting
 

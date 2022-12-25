@@ -21,9 +21,6 @@ The total number of errors and warnings are show in in the Space bar.
 
 Keeping the flycheck buffer open will update as you move to linting errors in the source code buffer.
 
-> #### Hint::Not all error menu commands work
-> Some commands in the error menu [do not currently work with linting in Clojure](https://github.com/syl20bnr/spacemacs/issues/12919).
-
 
 ## Configure Spacemacs Clojure layer with clj-kondo
 
@@ -44,5 +41,5 @@ Add a variable called `clojure-enable-linters` to the `clojure` with the value '
 `SPC q r` to restart Spacemacs (or simply `SPC f e R` to reload the configuration)
 
 
-> #### Hint::Conflicts
-> Using the unofficial `clojure-lint` layer will cause conflicts and may interfere with clj-kondo live linting.
+!!! HINT "Conflicts"
+    Using the unofficial `clojure-lint` layer will cause conflicts and may interfere with clj-kondo live linting.
