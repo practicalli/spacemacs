@@ -4,7 +4,10 @@ The Clojure layer includes the `cider-inspector`
 
 `, d v` opens the `cider-inspector` on the current symbol, allowing you to traverse its value.
 
-> #### Hint:: Clojure Inspector in more detail
-> The `cider-inspector` is covered in more detail in the [Evaluate Clojure > Inspect section](/evaluating-clojure/inspect.md)
->
-> An example of using the Inspector can be seen in the [REPL driven development with Spacemacs video](https://youtu.be/NDrpclY54E0).
+!!! HINT "Clojure Inspector in more detail"
+    The `cider-inspector` is covered in more detail in the [Evaluate Clojure > Inspect section](/evaluating-clojure/inspect.md)
+
+
+<p style="text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NDrpclY54E0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>

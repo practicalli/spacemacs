@@ -15,12 +15,15 @@ Sayid is a comprehensive debug and profile tool, useful when debugging needs are
 | [sayid debug](sayid-debug.md)                                                             | debug the whole project (code must compile) and profile project |
 | [cider inspector](/evaluating-clojure/inspect.md)                                         | navigate through data structures, paging through large data     |
 | [data inspector: portal](http://practical.li/clojure/clojure-cli/data-browsers/portal.md) | visualize and navigate through data structures                  |
-| [data inspector: reveal](http://practical.li/clojure/clojure-cli/data-browsers/reveal.md) | visualize and navigate through data structures                  |
 
-<div style="position: relative;padding-bottom: 56.25%;padding-top: 25px;height: 0;">
-  <iframe frameborder="0" allowfullscreen style="border: none;position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="//www.youtube.com/embed/pyIbP4BOGpQ?start=1150"></iframe></div>
+<p style="text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pyIbP4BOGpQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
-<p></p>
+
+<!-- TODO: add video of navigating the cider errors buffer
+# Navigate CIDER error report
+-->
 
 
 ## Inspect as a debug tool
@@ -35,4 +38,5 @@ Cider provides a data inspector to navigate nested data structures and page thro
 
 
 ## References
+
 * [docs.cider.mx - debugging](https://docs.cider.mx/cider/0.26/debugging/debugger.md)

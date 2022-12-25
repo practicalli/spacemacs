@@ -1,4 +1,5 @@
 ## Debug core.async
+
 <!-- TODO: WIP: debug core.async -->
 Push extra information onto the channel that can be ignored when debugging is not required.
 
@@ -14,7 +15,6 @@ Use an expression to wrap a form
 ```clojure
 (doto form (->> (pr-str) (str "DEBUG: ") js/console.log))
 ```
-
 
 Logging to the console tends to be more effective than breakpoint debugging in the browser developer tools.
 

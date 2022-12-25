@@ -2,8 +2,8 @@
 
 [Sayid](http://bpiel.github.io/sayid/), pronounced "siy EED", is an extensive debug and profile tool for Clojure projects. To debug or profile code it must be able to compile or sayid will fail to work.
 
-> #### Hint::cider-debug - a simpler approach
-> [cider-debug](cider-debug.md) is simpler and quicker approach to debugging.
+!!! HINT "cider-debug - a simpler approach"
+    [cider-debug](cider-debug.md) is simpler and quicker approach to debugging.
 
 Sayid works by intercepting and recording the inputs and outputs of functions. It can even record function calls that occur inside of functions. The user can select which functions to trace. Functions can be selected individually or by namespace. The recorded data can be displayed, queried and profiled.
 
@@ -22,7 +22,7 @@ Sayid currently has three components:
 
 ## Configure Sayid
 
-[Sayid](http://bpiel.github.io/sayid/) is an optional package in the Clojure layer for Spacemacs.
+[Sayid](http://bpiel.github.io/sayid/){target=_blank} is an optional package in the Clojure layer for Spacemacs.
 
 To enable sayid, add the following `:variable` to the `clojure` layer in `.spacemacs`
 
@@ -93,6 +93,6 @@ clojure -M:repl/cider-debug
 
 There is a noticeable learn curve to Sayid as it is quite comprehensive
 
-{% youtube %}
-https://www.youtube.com/watch?v=wkduA4py-qk?autoplay=1loop=1
-{% endyoutube %}
+<p style="text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wkduA4py-qk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>

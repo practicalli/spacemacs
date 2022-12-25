@@ -180,15 +180,13 @@ nav:
           - Clojure LSP: refactor/clojure-lsp.md
       - Debug:
           - debug-clojure/index.md
-          - debug-clojure/understanding-errors.md
-          - debug-clojure/deconstruct-stack-traces.md
-          - debug-clojure/format-error-messages.md
-          - debug-clojure/inspect-values.md
-          - debug-clojure/cider-debug.md
-          - debug-clojure/cider-error-report.md
-          - debug-clojure/classpath-issues.md
-          - debug-clojure/core-async.md
-          - debug-clojure/sayid-debug.md
+          - Understand Errors: debug-clojure/understanding-errors.md
+          - Format Errors: debug-clojure/format-error-messages.md
+          - Inspect values: debug-clojure/inspect-values.md
+          - Cider debug: debug-clojure/cider-debug.md
+          - Classpath Issues: debug-clojure/classpath-issues.md
+          - core-async: debug-clojure/core-async.md
+          - Sayid Debug: debug-clojure/sayid-debug.md
       - Code Quality:
           - improving-code/index.md
           - improving-code/batch-linting.md

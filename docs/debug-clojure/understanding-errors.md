@@ -13,7 +13,7 @@ The Clojure compiler will catch an error exception, unwrap, and re-throw excepti
 
 `Exception in thread...` should be at the top of the stack trace, followed by the call stack in descending chronological time
 
-TODO: example call stack
+<!-- TODO: example call stack -->
 
 
 ### Understanding Exception
@@ -81,26 +81,8 @@ Separate the classpath output into individual lines with this vim command (`:` e
 :s/:/\n/g
 ```
 
-> #### Hint::Diff - compare differences between files
-> `SPC D f f` and selecting two files will open `ediff` and show a comparison.   Navigate the changes using `j` and `k`.  `a` to copy a change from the left buffer to the right buffer, `b` to copy right to left.
-
-
-<!-- ## Errors tend to require decoding -->
-
-<!-- he messages in the errors could be vastly improved to include things like variable names and provide better wording. A simple example is something like this: -->
-
-<!-- (map [1 2 3] inc) -->
-
-<!-- the error is -->
-
-<!-- Don't know how to create ISeq from: clojure.core$inc -->
-
-<!-- a much better error would be -->
-
-<!-- invalid parameters to map, expecting [fn coll], got [coll fn] -->
-
-<!-- or something along those lines -->
-
+!!! HINT "Diff - compare differences between files"
+    `SPC D f f` and selecting two files will open `ediff` and show a comparison.   Navigate the changes using `j` and `k`.  `a` to copy a change from the left buffer to the right buffer, `b` to copy right to left.
 
 
 ## Reading and understanding Clojure errors
@@ -272,11 +254,9 @@ Implementing interfaces
 | IFn                   | Function              | anonymous function or symbol that points to a function definition |
 | ISeq                  | Sequence              | list, result from sequence function e.g. map, filter, etc.        |
 | IPersistentCollection | Persistent Collection | list, vector, hash-map or set                                     |
-|                       |                       |                                                                   |
 
 
 | Error                                         | Description                                                  |
 |:----------------------------------------------|--------------------------------------------------------------|
 | `Don't know how to create ISeq from:` <value> | Expecting a sequence (list, vector) rather than the value    |
 | `Don't know how to create IFn from:` <value>  | Expecting a symbol name that points to a function definition |
-|                                               |                                                              |
