@@ -92,13 +92,13 @@ The design journal can be used to create meaningful documentation for the projec
 
 Pretty print shows the structure of results from function calls in a human-friendly form, making it easier for a developer to parse and more likely to notice incorrect results.
 
-`, e p` on the Spacemacs Clojure menu has several commands to Pretty Print data structure results when evaluating code.
+++comma++ ++"e"++ ++"p"++ on the Spacemacs Clojure menu has several commands to Pretty Print data structure results when evaluating code.
 
-`, d v` is the Cider Inspect menu for paging through very large data sets and navigate nested data structures in detail.
+++comma++ ++"d"++ ++"v"++ is the Cider Inspect menu for paging through very large data sets and navigate nested data structures in detail.
 
-![Clojure - viewing large data sets](/images/spacemace-clojure-inspect-java-lang-persistentvector.png)
+![Clojure - viewing large data sets](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemace-clojure-inspect-java-lang-persistentvector.png)
 
-`, d` is the Cider debug menu which can inspect view intermediate values and data structures during the debugging of Clojure function calls.
+++comma++ ++"d"++ is the Cider debug menu which can inspect view intermediate values and data structures during the debugging of Clojure function calls.
 
 [Cider inspector](evaluating-clojure/inspect.md) is an effective way to navigate nested data and page through large data sets.
 
