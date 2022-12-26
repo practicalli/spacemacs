@@ -48,6 +48,10 @@ docs-changed:  ## Build only changed files and run mkdocs in local server
 	$(info --------- Mkdocs Local Server ---------)
 	mkdocs serve --dirtyreload --dev-addr localhost:7777
 
+docs-build:  ## Build mkdocs
+	$(info --------- Mkdocs Local Server ---------)
+	mkdocs build
+
 # ------------------------------------ #
 
 
