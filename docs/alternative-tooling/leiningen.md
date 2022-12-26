@@ -37,7 +37,7 @@ When you create a project with Leiningen, the configuration is created in a file
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.8.0"]])
+  :dependencies [[org.clojure/clojure "1.11.1"]])
 ```
 
-> **Hint** The Clojure library is very small (~3.6Mb) and Leiningen caches it and all other libraries locally in the same folder structure that Maven uses, eg  Clojure version 0.1.8 would be cached in `.m2/repository/org/clojure/clojure/1.8.0`
+> **Hint** The Clojure library is very small (~3.6Mb) and Leiningen caches it and all other libraries locally in the same folder structure that Maven uses, eg  Clojure version 0.1.8 would be cached in `.m2/repository/org/clojure/clojure/1.11.1`

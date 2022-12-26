@@ -1,4 +1,4 @@
-# Workshop Conventions
+# Spacemacs Conventions
 
 ## Keybinding conventions
 

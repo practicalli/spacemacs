@@ -272,6 +272,7 @@ nav:
   - Reference:
       - reference/index.md
       - reference/emacs-quick-reference.md
+      - reference/spacemacs-conventions.md
       - reference/hydra-menus.md
       - reference/projectile.md
       - reference/cider/index.md
@@ -309,23 +310,9 @@ nav:
       - alternative-tooling/index.md
       - alternative-tooling/leiningen.md
       - alternative-tooling/org-easy-templates.md
-      - alternative-tooling/paredit-keybindings.md
-      - alternative-tooling/paredit.md
-      - alternative-tooling/parinfer.md
-      - alternative-tooling/silversearcher-ag.md
-      - clojure-repl/reveal-data-visualization.md
-
   - To Review:
-      - spacemacs-on-android.md
-      - why-move-from-vi-to-spacemacs.md
-      - introduction/workshop-conventions.md
       - spacemacs-basics/vim-style/common-evil.md
       - why-spacemacs/why-evil.md
-
-
-# - Contributors: contributors.md
-# - work-in-progress.md
-# - spacemacs-on-android.md
 
 # Theme and styling
 theme:

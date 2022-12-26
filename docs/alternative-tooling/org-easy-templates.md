@@ -1,7 +1,7 @@
 # Org-mode Easy Templates
 
-> #### Hint::Additional configuration required
-> `(require 'org-tempo)` must be added to `dotspacemacs/user-config` in the `.spacemacs` file for Easy Templates to work.  `org-reveal` also conflicts with newer versions of
+!!! HINT "Additional configuration required"
+    `(require 'org-tempo)` must be added to `dotspacemacs/user-config` in the `.spacemacs` file for Easy Templates to work.
 
 Org-mode [easy templates](https://www.gnu.org/software/emacs/manual/html_node/org/Easy-templates.html) provide source code block and other highlight sections.
 
@@ -23,4 +23,4 @@ Org-mode [easy templates](https://www.gnu.org/software/emacs/manual/html_node/or
 | i    | #+INDEX: line                     |                      |
 | I    | #+INCLUDE: line                   |                      |
 
-Add custom templates by adding to the `org-structure-template-alist`
+Add custom templates by adding to the `org-structure-template-alist` to Spacemacs configuration file.
