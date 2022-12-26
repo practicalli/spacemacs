@@ -21,6 +21,5 @@ The rest of this section goes into more details as to why you would choose Space
 * [Consistently discoverable commands with mnemonic menu](mnemonic-menu.md)
 * [narrowing & completion](helm.md) to quickly find files and commands
 * [Effective editing with multiple states](states.md)
-    * [Transient State menus for repetitive actions](transient-state-menus.md)
 * [Structural editing with Smartparens and Lisp mode](structural-editing.md)
 * [Fast project & file management with Projectile](project-file-navigation.md), simple window & buffer management
