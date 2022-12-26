@@ -412,6 +412,11 @@ plugins:
   - social:
       cards: !ENV [MKDOCS_SOCIAL_CARDS_GENERATE, true]
 
+ # Redirect pages when moved or changed
+ # - redirects:
+ #     redirect_maps:
+ #       changelog/insiders.md: insiders/changelog.md
+ #       reference/meta-tags.md: reference/index.md
 
 # Footer / Social Media
 extra:
