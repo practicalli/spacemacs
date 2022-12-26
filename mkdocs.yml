@@ -264,7 +264,7 @@ nav:
       - Git: termux/git.md
       - Zsh: termux/custom-shell.md
       - Clojure: termux/clojure-development.md
-      - Neovim: termux/spacemacs.md
+      - Spacemacs: termux/spacemacs.md
   - Misc:
       - misc/index.md
       - misc/artist-mode.md
