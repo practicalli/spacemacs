@@ -6,7 +6,7 @@ First learn some verbs:
 
 `c` (change), `d` (delete), `g` go, `v` visual (select), `y` yank (copy)
 
-Then use those verbs with some modifiers
+Then use those verbs with some modifiers (motions)
 
 `'` mark, `{ }` beginning/end of paragraph, `a` around, `f` find (includes character), `i` inside, `s` surround, `t` till (just before a character)
 

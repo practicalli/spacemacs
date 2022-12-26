@@ -90,11 +90,8 @@ nav:
       - Evil Tools:
           - spacemacs-basics/evil-tools/index.md
           - spacemacs-basics/evil-tools/helm-swoop.md
-          - spacemacs-basics/evil-tools/iedit-a-function.md
-          - spacemacs-basics/evil-tools/iedit-find-replace.md
-          - spacemacs-basics/evil-tools/iedit-in-action.md
-          - spacemacs-basics/evil-tools/iedit-replace-multiple-words.md
           - spacemacs-basics/evil-tools/iedit.md
+          - spacemacs-basics/evil-tools/iedit-in-action.md
           - spacemacs-basics/evil-tools/narrowing.md
           - spacemacs-basics/evil-tools/replacing-text-across-projects.md
           - spacemacs-basics/evil-tools/multiple-cursors.md

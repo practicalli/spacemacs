@@ -2,7 +2,7 @@
 
 Make multiple matching edits within a buffer
 
-`SPC s e` to start [`evil-iedit-state`](https://github.com/syl20bnr/evil-iedit-state) to quickly edit multiple occurrences of a symbol within a buffer or selection. Use iedit with helm-ag to [make multiple matching edits across a project](replacing-text-across-projects.md).
+`SPC s e` to start [`evil-iedit-state`](https://github.com/syl20bnr/evil-iedit-state){target=_blank} to quickly edit multiple occurrences of a symbol within a buffer or selection. Use iedit with helm-ag to [make multiple matching edits across a project](replacing-text-across-projects.md).
 
 `e` within visual state and symbol highlight transient state also enables iedit.
 
@@ -12,9 +12,9 @@ Make multiple matching edits within a buffer
 
 `n` or `N` to jump between occurrences, `TAB` to deselect or re-select the specific occurrence
 
-{% youtube %}
-https://youtu.be/VCxJy8abkfA
-{% endyoutube %}
+<p style="text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VCxJy8abkfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 
 ### Refining text selection
@@ -56,10 +56,11 @@ Narrowing, `SPC n`, limits the scope of iedit so only the relevant occurrences a
 | `U`   | Up-case the occurrences                                                             |
 | `C-U` | down-case the occurrences                                                           |
 
-> #### Hint::
+!!! Hint
 > `0`, `$`, `A` and `I` have the default Vim behavior when used outside of an `occurrence`.
 
 
 ## Reference
-* [iedit GitHub project](https://github.com/victorhge/iedit)
-* [evil-iedit-state](https://github.com/syl20bnr/evil-iedit-state)
+
+* [iedit GitHub project](https://github.com/victorhge/iedit){target=_blank}
+* [evil-iedit-state](https://github.com/syl20bnr/evil-iedit-state){target=_blank}
