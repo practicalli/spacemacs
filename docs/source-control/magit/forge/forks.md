@@ -15,7 +15,7 @@ Prompt for the name of the new remote repository
 >
 > Add `(setq forge-owned-blacklist '(("bad-hacks" "really-bad-hacks")))` to define accounts and organisations not to include.  This over-rides the `forge-owned-accounts` setting.
 >
-> [practicalli/spacemacs.d]({{ book.P9ISpacemacsD }}) repository contains these settings.
+> [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d) repository contains these settings.
 
 
  GitHub user and organization accounts owned

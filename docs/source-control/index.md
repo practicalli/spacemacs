@@ -11,10 +11,10 @@ Highlight changes in file buffers and the local Git repository can be shown in t
 
 ## Configure Spacemacs for Source Control
 
-{% youtube %}
-https://youtu.be/LoI5mlDv8gE
-{% endyoutube %}
+<p style="text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LoI5mlDv8gE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 
-> #### Hint::github layer deprecated
-> The `github` layer has been [marked as deprecated](https://github.com/syl20bnr/spacemacs/pull/15381) as almost all of its functionality is provided by the `git` layer.  Only `grep-mode` remains in the layer for previewing GitHub flavoured Markdown and that package should be moved to either the markdown layer or org layer (or possibly both) as an optional feature.
+!!! HINT "GitHub layer deprecated"
+    The Spacemacs `github` layer has been [marked as deprecated](https://github.com/syl20bnr/spacemacs/pull/15381) as all the working packages are provided by the `git` layer.

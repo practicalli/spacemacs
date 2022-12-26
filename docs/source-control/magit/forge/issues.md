@@ -20,7 +20,7 @@ In the issue list buffer:
 >
 > Or `(setq  forge-topic-list-limit '(100 . -10))` and use `SPC SPC forge-toggle-closed-visibility` to toggle showing 10 of the latest closed topics for issues and pull requests.
 >
-> [practicalli/spacemacs.d]({{ book.P9ISpacemacsD }}) configuration contains this setting.
+> [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d) configuration contains this setting.
 
 
 ## Create an issue

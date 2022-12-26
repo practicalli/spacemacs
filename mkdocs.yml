@@ -219,53 +219,45 @@ nav:
           - using-figwheel/starting-chestnut-terminal.md
   - Source Control:
       - source-control/index.md
-      - source-control/configure-layers.md
-      - source-control/git-configuration.md
-      - source-control/forge-configuration.md
-      - source-control/forge-self-hosted-configuration.md
-      - GitHub:
-          - source-control/github/index.md
-          - source-control/github-clone.md
-          - source-control/github/gists.md
-      - GitLab: source-control/gitlab/index.md
+      - Git Layer: source-control/configure-layers.md
+      - Git Config: source-control/git-configuration.md
+      - Forge Config: source-control/forge-configuration.md
+      - GitHub Clone: source-control/github-clone.md
+      # - GitLab: source-control/gitlab/index.md
       - Magit Git Client:
           - source-control/magit/index.md
-          - source-control/magit/blame.md
-          - source-control/magit/branching.md
-          - source-control/magit/changing-history.md
-          - source-control/magit/cherry-picking.md
-          - source-control/magit/clean-up-magit-sessions.md
-          - source-control/magit/commit-amend.md
-          - source-control/magit/commit-changes.md
-          - source-control/magit/commit-create.md
-          - source-control/magit/commit-extend.md
-          - source-control/magit/commit-rewrite.md
-          - source-control/magit/commit-squash.md
           - source-control/magit/create-local-repository.md
-          - source-control/magit/interactive-rebasing.md
           - source-control/magit/list-local-repositories.md
-          - source-control/magit/reset-commit-history.md
+          - source-control/magit/status.md
+          - source-control/magit/branching.md
           - source-control/magit/staging-changes.md
           - source-control/magit/stashing.md
-          - source-control/magit/status-fullscreen.md
-          - source-control/magit/status.md
+          - source-control/magit/commit-changes.md
           - source-control/magit/tag-commit.md
           - source-control/magit/timemachine.md
+          - source-control/magit/reset-commit-history.md
+          - source-control/magit/interactive-rebasing.md
+          - source-control/magit/cherry-picking.md
+          - source-control/magit/blame.md
+          - source-control/magit/changing-history.md
+          - source-control/magit/clean-up-magit-sessions.md
           - source-control/magit/version-highlighting.md
-          - source-control/magit/forge/index.md
-          - source-control/magit/forge/add-database.md
-          - source-control/magit/forge/forks.md
-          - source-control/magit/forge/issues.md
-          - source-control/magit/forge/pull-requests.md
-          - source-control/magit/remote-repositories/index.md
-          - source-control/magit/remote-repositories/add-remote.md
-          - source-control/magit/remote-repositories/checkout-remote-branch.md
-          - source-control/magit/remote-repositories/clone.md
-          - source-control/magit/remote-repositories/configure-default-push.md
-          - source-control/magit/remote-repositories/configure-default-upstream.md
-          - source-control/magit/remote-repositories/pull-changes.md
-          - source-control/magit/remote-repositories/push-changes.md
-          - source-control/magit/remote-repositories/try-pull-requests.md
+          - Remote Repository:
+              - source-control/magit/remote-repositories/index.md
+              - source-control/magit/remote-repositories/add-remote.md
+              - source-control/magit/remote-repositories/checkout-remote-branch.md
+              - source-control/magit/remote-repositories/clone.md
+              - source-control/magit/remote-repositories/configure-default-push.md
+              - source-control/magit/remote-repositories/configure-default-upstream.md
+              - source-control/magit/remote-repositories/pull-changes.md
+              - source-control/magit/remote-repositories/push-changes.md
+              - source-control/magit/remote-repositories/try-pull-requests.md
+          - Forge:
+              - source-control/magit/forge/index.md
+              - source-control/magit/forge/add-database.md
+              - source-control/magit/forge/forks.md
+              - source-control/magit/forge/issues.md
+              - source-control/magit/forge/pull-requests.md
   - Markdown:
       - markdown-mode/index.md
   - Org-mode:
