@@ -6,8 +6,6 @@ Recommended layers to add source control support:
 * `github` - access GitHub / GitLab APIs to access and create issues, pull requests, etc.
 * `version-control` - general features including diff highlights in the window fringe
 
-[Add an SSH key](ssh-remote-repositories.md) when using SSH URLs to connect to GitHub / GitLab.
-
 Git should be [configured for Magit](git-configuration.md), Magit Forge [configured to access for issues and pull requests](forge-configuration.md) and optionally [github-clone configured](github-clone.md) to search GitHub for repositories by name.
 
 
@@ -24,8 +22,6 @@ Add the following configuration to provide the recommended setup.
           git-magit-status-fullscreen t
           magit-diff-refine-hunk t
           git-enable-magit-todos-plugin t)
-
-     github
 
      (version-control :variables
                       version-control-diff-tool 'diff-hl
@@ -53,21 +49,6 @@ The layers and variables are explained in their own sections below.
 ```
 
 Ensure you follow the [Git Configuration steps](git-configuration.md) required for this layer.
-
-
-## github layer
-
-`github` provided [Magit forge for API access to remote repository services](forge-configuration.md), i.e. GitHub / GitLab.
-
-`github-clone` is also provided, although there are security concerns when [configuring this service](github-clone.md).
-
-Layer variables are not set for this layer
-
-```lisp
-     github
-```
-
-Ensure you follow the [GitHub Configuration steps](github-configuration.md) required for this layer.
 
 
 ## version-control layer

@@ -34,7 +34,7 @@ git config --global user.email "******+practicalli-john@users.noreply.github.com
 For additional security, select the option **Block command line pushes that expose my email** to prevent commits being pushed to GitHub using your public email address.
 
 
-## Accessing remote repositories
+## Access remote repositories
 
 GitHub repositories can be accessed via HTTPS or SSH URL.
 

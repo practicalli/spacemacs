@@ -217,7 +217,6 @@ nav:
           - source-control/magit/interactive-rebasing.md
           - source-control/magit/cherry-picking.md
           - source-control/magit/blame.md
-          - source-control/magit/changing-history.md
           - source-control/magit/clean-up-magit-sessions.md
           - source-control/magit/version-highlighting.md
           - Remote Repository:
