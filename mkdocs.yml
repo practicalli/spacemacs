@@ -240,16 +240,14 @@ nav:
       - markdown-mode/index.md
   - Org-mode:
       - org-mode/index.md
-      - org-mode/code-blocks.md
-      - org-mode/get-things-done.md
       - org-mode/headings.md
-      - org-mode/linking.md
       - org-mode/lists-and-checkboxes.md
-      - org-mode/org-journal.md
-      - org-mode/org-mode-tweaks.md
-      - org-mode/tables.md
-      - org-mode/todo-states-customise.md
+      - org-mode/linking.md
       - org-mode/todo-states.md
+      - org-mode/tables.md
+      - org-mode/code-blocks.md
+      - org-mode/org-mode-tweaks.md
+      - org-mode/org-journal.md
       - org-mode/yasnippets.md
       - org-mode/literate-programming/index.md
   - Database:

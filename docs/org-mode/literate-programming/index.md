@@ -1,6 +1,6 @@
 # Literate Programming
 
-[Literate programming ](https://en.wikipedia.org/wiki/Literate_programming) is a document written in a natural language, interspersed with snippets of code that can be executed and results visualised as text or graphics.  It is an interactive document that can update sections of itself from the code that runs inside.
+[Literate programming ](https://en.wikipedia.org/wiki/Literate_programming){target=_blank} is a document written in a natural language, interspersed with snippets of code that can be executed and results visualised as text or graphics.  It is an interactive document that can update sections of itself from the code that runs inside.
 
 In Spacemacs and Clojure development, it means you could write a document explaining your project or library and include code that can execute and give results in the document itself.
 
@@ -25,30 +25,27 @@ Literate programming can be used with any working Clojure project, using either 
 
 Create a project using either Clojure CLI tools or Leiningen.  Dependencies, apart from Clojure, itself are not required.
 
-{% tabs cli="Clojure CLI project", lein="Leiningnen project" %}
+=== "Clojure CLI"
 
-{% content "cli" %}
-```shell
-clojure -T:project/new :template app :name practicalli/literate
-```
+    ```shell
+    clojure -T:project/new :template app :name practicalli/literate
+    ```
 
-{% content "lein" %}
-```shell
-lein new app literate
-```
+=== "Leiningen"
 
-{% endtabs %}
+    ```shell
+    lein new app literate
+    ```
 
-
-> #### Hint::Simple example project
-> Clone [practicalli/literate-programming-in-clojure](https://github.com/practicalli/literate-programming-in-clojure) project for a simple example project that works.
+!!! HINT "Simple example project"
+    Clone [practicalli/literate-programming-in-clojure](https://github.com/practicalli/literate-programming-in-clojure) project for a simple example project that works.
 
 
 ### Run a Clojure REPL
 
 Open the `deps.edn`, `project.clj`, or any source code file from the project.
 
-`, '` or `M-RET '` to start a REPL.
+++comma++ ++"m"++ ++"s"++ and select `cider-jack-in-clj` to start a REPL.
 
 
 ### Create an org file with Clojure code blocks
@@ -59,45 +56,45 @@ Write the text of the document and use `, b d` to add a code block, selecting `c
 
 Add `:results value` after `clojure` in the code block `BEGIN` line.
 
-In the code block write your clojure code, eg `(+ 1 2 3)`
+In the code block write your clojure code, e.g. `(+ 1 2 3)`
 
-`C-c C-c` to evaluate the code block at the cursor point. The result is pasted underneath the code block.
+++ctrl+c+ctrl+"c"++ to evaluate the code block at the cursor point. The result is pasted underneath the code block.
 
 
 ## Clojure Literate programming examples
 
 Starting with a very basic Clojure expression to test evaluation is working correctly.  Using `:results silent` will not add the result to the `.org` file.
 
-```none
+```org
 #+begin_src clojure :results silent
   (+ 1 4)
 #+end_src
 ```
 
-`C-c C-c` with the cursor placed in the code block
+++ctrl+c+ctrl+"c"++ with the cursor placed in the code block
 
 This should evaluate the Clojure form and echo the results: "5" in the mini-buffer.
 
 Now insert the results into the org buffer immediately after the Clojure code block
 
-```none
+```org
 #+begin_src clojure :results value
   [ 1 2 3 4]
 #+end_src
 ```
 
-`C-c C-c` with the cursor placed in the code block
+++ctrl+c+ctrl+"c"++ with the cursor placed in the code block
 
 The following results block will be inserted immediately following the code block
 
-```none
+```org
 #+RESULTS
 [ 1 2 3 4]
 ```
 
 Multiple expressions can be defined.  First define a Clojure data structure (hash-map) and then use a keyword as a function to retrieve a specific value from the hash-map.
 
-```none
+```org
 #+begin_src clojure :results value
   (def small-map {:a 2 :b 4 :c 8})
   (:b small-map)
@@ -109,41 +106,37 @@ Multiple expressions can be defined.  First define a Clojure data structure (has
 
 Make a Graph of the results
 
-Using the Clojure [Incanter library](https://github.com/incanter/incanter) to create a line plot graph using the Incanter xy-plot function.
+Using the Clojure [Incanter library](https://github.com/incanter/incanter){target=_blank} to create a line plot graph using the Incanter xy-plot function.
 
 The Incanter library should first be added to the Clojure project as a dependency.
 
-{% tabs cli="Clojure CLI project", lein="Leiningnen project" %}
+=== "Clojure CLI"
 
-{% content "cli" %}
+    Add Incanter to the `:deps` key of the `deps.edn` file
 
-Add Incanter to the `:deps` key of the `deps.edn` file
+    ```clojure
+    {:paths ["src" "resources"]
+     :deps {org.clojure/clojure {:mvn/version "1.10.3"}
+            incanter/incanter   {:mvn/version "1.9.3"}}}
+    ```
 
-```clojure
-{:paths ["src" "resources"]
- :deps {org.clojure/clojure {:mvn/version "1.10.3"}
-        incanter/incanter   {:mvn/version "1.9.3"}}}
-```
+=== "Leiningen"
 
-{% content "lein" %}
+    Add Incanter to the `:dependencies` key of the `project.clj` file
 
-Add Incanter to the `:dependencies` key of the `project.clj` file
-
-```clojure
-(defproject clojure-literate-programming "0.1.0"
-  :description "Literate Programming with Incanter"
-  :license {:name "Creative Commons Attribution Share-Alike 4.0 International"
-            :url "https://creativecommons.org/"}
-  :dependencies [[org.clojure/clojure "1.10.3"]
-                 [incanter "1.9.3"]])
-```
-
-{% endtabs %}
+    ```clojure
+    (defproject clojure-literate-programming "0.1.0"
+      :description "Literate Programming with Incanter"
+      :license {:name "Creative Commons Attribution Share-Alike 4.0 International"
+                :url "https://creativecommons.org/"}
+      :dependencies [[org.clojure/clojure "1.10.3"]
+                     [incanter "1.9.3"]])
+    ```
 
 
 Use the Incanter library to create an x-y line plot. The `view` function displays the line plot. The plot is also saved to both PDF and PNG format image files.
 
-```
+```org
 #+begin_src clojure
   (use '(incanter core charts pdf))
   ;;; Create the x and y data:
@@ -158,7 +151,7 @@ Use the Incanter library to create an x-y line plot. The `view` function display
 
 Insert the image into the exported PDF document:
 
-```
+```org
 #+CAPTION: A basic x-y line plot
 #+NAME: fig:xy-line
 [[./incanter-xy-line.pdf]]
@@ -169,13 +162,14 @@ Files are saved to the root of the Clojure project.
 
 ## Export to LaTeX or HTML
 
-`C-c C-e l l` to export to LaTeX.
+++ctrl+c+ctrl+"e"++ ++"l"++ ++"l"++ to export to LaTeX.
 
-`C-c C-e h h` to export to HTML.
+ ++ctrl+c+ctrl+"e"++ ++"h"++ ++"h"++ to export to HTML.
 
 The exported HTML code will hyperlink the PDF file. To embed the image in the HTML, switch to the PNG image file.
 
 The exported LaTeX (.tex) file will embed either the PDF or PNG file. Graphical quality will be superior with the PDF file.
+
 
 ## Session Evaluation
 
@@ -183,8 +177,8 @@ Use the `:session` option to run all Clojure code in the same REPL process
 
 Without `:session` each individual code block will execute by starting a Clojure REPL process. Due to the start-up time of a Java virtual machine, this can make execution of many blocks slow.
 
-> #### Hint::Sessions changed in Org 9
-> The `:session` option may not be required in Org version 9.  Testing is required.
+!!! HINT "Sessions changed in Org 9"
+    The `:session` option may not be required in Org version 9.  Testing is required.
 
 
 ## Specify a namespace
@@ -193,7 +187,7 @@ Each code block will execute in the default `user` namespace, unless changed via
 
 A namespace can be specified in a code block using the Clojure `ns` function.
 
-```
+```org
 #+begin_src clojure :results pp
 (ns practicalli.greet)
 (def hello "Hello Practicalli, this is the greet namespace")
@@ -205,7 +199,7 @@ A namespace can be specified in a code block using the Clojure `ns` function.
 
 Following code blocks in the .org file will continue to use the specified namespace.
 
-```
+```org
 #+begin_src clojure :results value :ns kk2
 *ns*
 #+end_src
@@ -216,4 +210,4 @@ Following code blocks in the .org file will continue to use the specified namesp
 
 ## References
 
-* [Incanter examples](https://github.com/incanter/incanter#usage)
+[Incanter examples](https://github.com/incanter/incanter#usage){target=_blank .md-button}

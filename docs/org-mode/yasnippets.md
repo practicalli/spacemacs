@@ -1,11 +1,12 @@
 # Yasnippets for Org-mode
+
 Snippets provide a way to add common code or text.
 
 `<ta M-/` adds a two column table snippet with a caption.  The cursor is the first tab stop, followed by the first column name, then the second column name.
 
 ## Yasnippets official snippets - org-mode
 
-The current snippets for org-mode from the [yasnippet official snippet collection](https://github.com/AndreaCrotti/yasnippet-snippets/tree/master/snippets/org-mode).
+The current snippets for org-mode from the [yasnippet official snippet collection](https://github.com/AndreaCrotti/yasnippet-snippets/tree/master/snippets/org-mode){target=_blank}
 
 | Snippet name        | Key         | Description                             |
 |---------------------|-------------|-----------------------------------------|
@@ -46,4 +47,5 @@ The current snippets for org-mode from the [yasnippet official snippet collectio
 | video               | <vi         | org link to video file                  |
 
 ## Reference
-* [Create your own snippets](/snippets/add-your-own-snippets.md)
+
+* [Create your own snippets](/spacemacs/snippets/add-your-own-snippets.md)

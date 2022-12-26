@@ -5,7 +5,7 @@ Here are some simple tweaks to `org-mode` that you may find useful.
 
 ## Wrapping lines with `truncate lines`
 
-The command `SPC t l` toggles `truncate-lines` in a buffer, the same as wrap lines in other editors.  `truncate-lines` will wrap at what ever size the buffer…org-mode with truncate lines on.  There may be some other minor conflicts
+++spc++ ++"t"++ ++"l"++ toggles `truncate-lines` in a buffer, the same as wrap lines in other editors.  `truncate-lines` will wrap at what ever size the buffer…org-mode with truncate lines on.  There may be some other minor conflicts
 
 If `truncate-line` is what…`dotspacemacs/user-config` section:  …`(add-hook 'org-mode-hook (lambda () (setq truncate-lines t)))`
 

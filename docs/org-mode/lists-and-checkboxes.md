@@ -1,7 +1,9 @@
 # Lists and Checkboxes
+
 List and Checkboxes are useful for organizing and tracking tasks.
 
 ## Using lists
+
 `-` creates a list item in Evil insert mode
 
 `o` on a list item creates a new list item below when in Evil normal mode. `O` creates a checkbox above.
@@ -23,6 +25,7 @@ When a child checkbox is marked, the parent has a dash to show partial completio
 
 
 ## Tracking checkbox completion
+
 Add `[/]` to the end of a heading that contains checkboxes to track the number of completed checkboxes and the total number of checkboxes.
 
 Totals will automatically update when the status of a checkbox updates.

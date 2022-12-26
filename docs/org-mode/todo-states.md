@@ -1,12 +1,14 @@
 # Org-mode TODO states
+
 Show progress by adding TODO states to the headings of an .org document.  The default states are `TODO` `DOING` and `DONE`.  States can be added to any org document by simply typing them, or using commands to cycle through the states.
 
-`t` calls `org-todo` which cycles through all the TODO states for the current heading. If the current line is not a heading, the parent heading is updated.
+++comma++ ++"t"++ calls `org-todo` which cycles through all the TODO states for the current heading. If the current line is not a heading, the parent heading is updated.
 
-`, L` or `S-🡆` (`org-shiftright`) move the current TODO state forward to the next. `, H` or `S-🡄` move to the previous TODO states.
+++comma++ ++l++ or ++shift+arrow-right++ (`org-shiftright`) move the current TODO state forward to the next. ++comma++ ++h++ or ++shift+arrow-left++ move to the previous TODO states.
 
 
 ## Custom TODO States
+
 A custom set of states can be configured, although it seems useful to keep the defaults and simply add custom states.
 
 [Practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d) includes a simple kanban style of states.  The `|` character denotes closed TODO states.
@@ -49,7 +51,19 @@ In `dotspacemacs/user-config` in the `.spacemacs` file, add following to configu
            ("archived" .  "SlateBlue"))))
 ```
 
-> #### Hint::Theme faces may over-ride your custom color settings
-> `SPC h d F` will list all the faces used with the current buffer. `RET` on a face name to find out where it is defined.
->
-> Use the `SPC SPC customize` command to explore and change faces
+!!! HINT "Theme faces may over-ride your custom color settings"
+   ++spc++ ++"h"++ ++"d"++ ++f++ will list all the faces used with the current buffer. `RET` on a face name to find out where it is defined.
+
+    Use the `SPC SPC customize` command to explore and change faces
+
+    colour names such as `green`, `blue`, `yellow` are easier to undertand than colour codes, such as `#242424`
+
+
+## Automatically log completion date-time
+
+When a heading status enters `DONE`, add a `closed:` property with current date-time stamp
+
+```elisp
+  (with-eval-after-load 'org
+    (setq org-log-done 'time))
+```
