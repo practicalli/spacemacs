@@ -10,7 +10,7 @@ Connection configuration should be added to the `dotspacemacs/user-config` secti
 Set the `sql-postgres-login-params` variable to define a single PostgreSQL connection.  There are similar variables for each type of database.
 
 
-```elisp
+```lisp
 (setq sql-postgres-login-params
       '((user :default "username")
         (database :default "database-name")
@@ -18,13 +18,13 @@ Set the `sql-postgres-login-params` variable to define a single PostgreSQL conne
         (port :default 5432)))
 ```
 
-`, e e` to evaluate with the cursor after the closing paren of the setq expression
+++comma++ ++"e"++ ++"e"++ to evaluate with the cursor after the closing paren of the setq expression
 
 
 ### Multiple database connections
 
 
-```elisp
+```lisp
 (setq sql-connection-alist
       '((game-scores (sql-product 'postgres)
                      (sql-port 5432)
@@ -40,15 +40,15 @@ Set the `sql-postgres-login-params` variable to define a single PostgreSQL conne
                   (sql-database ""))))
 ```
 
-> Use an [Encrypted password](#encrypt-connection-password) when connecting to databases containing sensitive data or leave out the password from the connection configuration and Emacs will prompt
->
-> A password if okay if using a local database, or connecting to a database via a read-only account where the database contains only non-sensitive data
+!!! HINT "Use encrypted password"
+    Use an [Encrypted password](#encrypt-connection-password) when connecting to databases containing sensitive data or leave out the password from the connection configuration and Emacs will prompt
 
+    A password if okay if using a local database, or connecting to a database via a read-only account where the database contains only non-sensitive data
 
 
 ## Connection helper functions
 
-```elisp
+```lisp
 (defun practicalli/db-connect-sql-server (product connection)
   ;; remember to set the sql-product, otherwise, it will fail for the first time
   ;; you call the function
@@ -58,7 +58,7 @@ Set the `sql-postgres-login-params` variable to define a single PostgreSQL conne
 
 Define interactive functions that call a specific server, so they can be called without providing arguments and therefore be bound to keys very easily.
 
-```elisp
+```lisp
 (defun practicalli/db-connect-sql-game-scores ()
   (interactive)
   (practicalli/db-connect-sql-server 'postgres 'game-scores))
@@ -70,13 +70,12 @@ Define interactive functions that call a specific server, so they can be called 
 
 Define key bindings to call the db connections, e.g. `SPC o d g` for game server and `SPC o d c` for customer accounts
 
-```elisp
+```lisp
   (spacemacs/set-leader-keys "odg" 'practicalli/db-connect-sql-game-scores)
   (spacemacs/set-leader-keys "odc" 'practicalli/db-connect-sql-cutomer-accounts)
 ```
 
 ## Encrypt connection password
-
 
 Create a `db-connection-secrets.el.gpg` file to hold one or more passwords, using the key name used to define the rest of the database connection in `sql-connection-alist`
 

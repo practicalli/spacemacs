@@ -19,13 +19,13 @@ gem install sqlint
 
 When committing queries it is useful to define a Git pre-commit hook to check the syntax of the query before the commit completes
 
-If using [pre-commit](https://pre-commit.com/) to manage hooks, edit the Git `.pre-commit-hooks.yaml`
+If using [pre-commit](https://pre-commit.com/){target=_blank} to manage hooks, edit the Git `.pre-commit-hooks.yaml`
 
 ```yaml
--   repo: https://github.com/purcell/sqlint
-    rev: master
-    hooks:
-    -   id: sqlint
+- repo: https://github.com/purcell/sqlint
+  rev: master
+  hooks:
+  - id: sqlint
 ```
 
 
@@ -33,5 +33,8 @@ If using [pre-commit](https://pre-commit.com/) to manage hooks, edit the Git `.p
 
 Formatting: Install sqlfmt and move it into your $PATH
 
- Download and extract the binary 0.4.0 for linux
+Download and extract the binary 0.4.0 for linux
+
+```shell
 wget -q -O - https://github.com/mjibson/sqlfmt/releases/latest/download/sqlfmt_0.4.0_linux_amd64.tar.gz | tar -xpvzf - --directory "${installdir}/bin"
+```

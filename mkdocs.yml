@@ -255,7 +255,6 @@ nav:
       - database-access/add-sql-layer-and-lsp.md
       - database-access/connection-configuration.md
       - database-access/external-dependencies.md
-      - database-access/local-docker-database.md
       - database-access/using-sql.md
   - Ultra-Mobile Neovim:
       - termux/index.md

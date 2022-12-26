@@ -10,12 +10,9 @@ SQLi is integrated in Emacs and supports these databases if their client executa
 
 Connection configuration can be defined for a specific database, e.g.  `sql-mysql-login-params`.  Multiple database connections are defined using the `sql-connection-alist` variable.
 
-Add connection configuration to the `dotspacemacs/user-config` to the Spacemacs configuration file (`SPC f e d` )
+++spc++ ++"f"++ ++"e"++ ++"d"++ to open the Spacemacs configuration and add database connection configuration to the `dotspacemacs/user-config` section.
 
-`SPC h SPC sql-help`
-
-> #### Hint::Add Database Configuration to `dotspacemacs/user-config`
-> All database configuration and helper functions should be added to the `dotspacemacs/user-config` section of the Spacemacs configuration file, opened with `SPC f e d`
+++spc++ ++"h"++ ++spc++ `sql-help` for help with SQL query syntax.
 
 ## Resources
 

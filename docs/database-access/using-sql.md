@@ -5,7 +5,7 @@ Once the sql layer is installed and connections are configured, connect to a dat
 
 ## Connect to PostgreSQL
 
-`SPC SPC sql-postgres` will create a database connection using the `sql-postgres-login-params` and prompt for the password.
+++spc++ ++spc++ `sql-postgres` will create a database connection using the `sql-postgres-login-params` and prompt for the password.
 
 If the connection is not defined, Emacs prompts for all the server connection information.
 
@@ -18,8 +18,7 @@ Type SQL commands into the SQLi buffer to execute
 
 Compose queries in the SQL buffer.  Run a query by selecting the query and run the command `SPC SPC sql-send-region`
 
-(bound to C-c C-r by default) to execute or sql-send-buffer (bound to C-c C-b by default) to execute all the buffer.
-
+(bound to ++ctrl+c++ ++ctrl+r++ by default) to execute or sql-send-buffer (bound to ++ctrl+c++ ++ctrl+b++ by default) to execute all the buffer.
 
 
 ## SQL product
@@ -42,7 +41,7 @@ To specify the SQL product, prefix the call with SPC u.  To set the buffer name 
 ## Tweaks
 
 
-```elisp
+```lisp
 (add-hook 'sql-interactive-mode-hook
           (lambda ()
             (toggle-truncate-lines t)))
