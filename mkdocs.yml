@@ -202,7 +202,6 @@ nav:
       - Git Config: source-control/git-configuration.md
       - Forge Config: source-control/forge-configuration.md
       - GitHub Clone: source-control/github-clone.md
-      # - GitLab: source-control/gitlab/index.md
       - Magit Git Client:
           - source-control/magit/index.md
           - source-control/magit/create-local-repository.md
