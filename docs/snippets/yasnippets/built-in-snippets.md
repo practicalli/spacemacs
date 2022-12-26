@@ -37,10 +37,10 @@ With snippets added to the auto-completion tooltip, typing `def` show the matchi
 | require    | `:require` expression with library and alias            | library, alias                   |
 | test       | `deftest` expression                                    | test description, value/expected |
 
-See the [Clojure Snippets](clojure-snippets.md) for a complete reference
+See the [Clojure Snippets Reference](clojure-snippets-reference.md) for a complete list
 
 !!! HINT "Write your own snippets"
-    [writing your own snippets](add-your-own-snippets.md) is fairly simple for Clojure or any other language you use with Spacemacs / Emacs
+    [writing your own snippets](writing-snippets.md) is fairly simple for Clojure or any other language you use with Spacemacs / Emacs
 
 
 ## Clojure namespace snippet
