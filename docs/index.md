@@ -1,33 +1,14 @@
 ![Practicalli Spacemacs book cover](https://raw.githubusercontent.com/practicalli/graphic-design/live/book-covers/practicalli-spacemacs-book-banner.png)
 
-
-<!-- ![Clojure-cider-spacemacs-logo](images/practicalli-spacemacs-book-banner.png) -->
-
 A practical guide to Spacemacs, a community driven Emacs configuration that makes it easy to use all the power of Emacs and Vim.  The guide contains specific sections on Clojure development, although the majority of the content is applicable to any language.
-
-This guide uses [Spacemacs Version 0.300, the Spacemacs develop branch](/install-spacemacs/) (develop is now the default branch).
 
 <p style="text-align:center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NDrpclY54E0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
-<!-- Buttons for main section shortcuts -->
-<table>
-  <tr>
-    <td>
-      <a href="why-spacemacs/index.html"><img src="images/button-why-spacemacs.png" /></a>
-    </td>
-    <td>
-      <a href="install-spacemacs/index.html"><img src="images/button-install-spacemacs.png" /></a>
-    </td>
-    <td>
-      <a href="https://github.com/practicalli/spacemacs.d/"><img src="images/button-my-spacemacs-config.png" /></a>
-    </td>
-    <td>
-      <a href="clojure-projects/index.html"><img src="images/button-code-with-clojure.png" /></a>
-    </td>
-  </tr>
-</table>
+[Why Spacemacs](why-spacemacs/){.md-button}
+[Install Spacemacs](install-spacemacs/){.md-button}
+[Clojure Development](clojure-development/){.md-button}
 
 [Emacs](https://www.gnu.org/software/emacs/){target=_blank} has been a shining beacon of Free and Open Source software from the early 1970's and has grown to be a versatile set of development tools for all languages.  This long history has given [Emacs](https://www.gnu.org/software/emacs/){target=_blank} the ability to interact with almost every aspect of your digital life.
 
@@ -38,9 +19,7 @@ This guide uses [Spacemacs Version 0.300, the Spacemacs develop branch](/install
 
 ## Practicalli Spacemacs configuration
 
-[practicalli/spacemacs.d repository](https://github.com/practicalli/spacemacs-config){target=_blank} contains a rich configuration for Clojure development and supporting tools.
-
-[Browse the repository online](https://github.com/practicalli/spacemacs.d){target=_blank} or fork / clone the repository
+[practicalli/spacemacs.d repository](https://github.com/practicalli/spacemacs-config){target=_blank} contains a rich configuration for Clojure development and supporting tools. [Browse the repository online](https://github.com/practicalli/spacemacs.d){target=_blank} or fork / clone the repository
 
 === "Free Desktop XDG Config"
     ```bash
