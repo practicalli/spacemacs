@@ -8,7 +8,6 @@ Refactor `ns` forms using `clojure-mode`, meaning these refactor commands work e
 | ++comma++ ++"r"++ ++"a"++ ++n++   | `clojure-insert-ns-form-at-point` | Add current namespace (from file name) at point                |
 | ++comma++ ++"r"++ ++"s"++ ++"n"++ | `clojure-sort-ns`                 | Sort namespaces inside an `ns` form (e.g. required namespaces) |
 
-clj-refactor contains [commands to add require forms to the `ns` form](clj-refactor/managing-namespaces.md).
 
 
 ## Organizing by purpose
@@ -50,10 +49,4 @@ Make the changes to the highlighted text and all instances of that text will cha
 
 
 !!! HINT "Narrow to function or text region"
-   ++spc++ ++"n"++ ++"f"++ to narrowing to a function before selecting / searching to be more selective in what text is show and therefore highlighted and changed.  E.g. if you just want to [change a specific function](within-a-function.md).
-
-
-## Alternatives - multiple cursors
-
-> #### TODO::work in progress, sorry
-> Any feedback on using multiple cursors is most welcome.
+   ++spc++ ++"n"++ ++"f"++ to narrowing to a function before selecting / searching to be more selective in what text is show and therefore highlighted and changed.  E.g. if you just want to [change a specific function](functions.md).

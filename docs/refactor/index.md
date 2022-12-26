@@ -1,6 +1,6 @@
 # Refactor Clojure Code
 
-General refactor steps such as changing function names can be done with the [Evil tools](/spacemacs/spacemacs-basics/evil-tools/), `iedit`, `narrowing` and `helm-ag`. These do not require a running Clojure REPL. Examples of refactoring names: [within a function](within-a-function.md), [within a namespace](within-a-namespace.md), [within a project](within-a-project.md).
+General refactor steps such as changing function names can be done with the [Evil tools](/spacemacs/spacemacs-basics/evil-tools/), `iedit`, `narrowing` and `helm-ag`. These do not require a running Clojure REPL. Examples of refactoring names: [functions](functions.md), [namespace](namespace.md) or [project](project.md).
 
 [Structural editing](/spacemacs/structural-editing/) via the `SPC k` lisp state uses `smartparens` to alter the your code whist respecting the structure, as defined by parens, `[ ] { } ( )` and even `" "`.  Smartparens works for all languages, although is most useful with lisp syntax.
 
