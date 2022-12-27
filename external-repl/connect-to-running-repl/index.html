@@ -1,0 +1,2094 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Practical guide to Clojure development with Spacemacs" name="description"/>
+<meta content="Practicalli" name="author"/>
+<link href="https://practical.li/spacemacs/external-repl/connect-to-running-repl/" rel="canonical"/>
+<link href="../../assets/favicon.svg" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<title>Connect to a running Repl - Practicalli Spacemacs</title>
+<link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<meta content="website" property="og:type"/>
+<meta content="Connect to a running Repl - Practicalli Spacemacs" property="og:title"/>
+<meta content="Practical guide to Clojure development with Spacemacs" property="og:description"/>
+<meta content="https://practical.li/spacemacs/assets/images/social/external-repl/connect-to-running-repl.png" property="og:image"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="https://practical.li/spacemacs/external-repl/connect-to-running-repl/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Connect to a running Repl - Practicalli Spacemacs" name="twitter:title"/>
+<meta content="Practical guide to Clojure development with Spacemacs" name="twitter:description"/>
+<meta content="https://practical.li/spacemacs/assets/images/social/external-repl/connect-to-running-repl.png" name="twitter:image"/>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="deep-purple" data-md-color-primary="purple" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#connect-to-a-running-repl">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Practicalli Spacemacs" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Practicalli Spacemacs">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Practicalli Spacemacs
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Connect to a running Repl
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="deep-purple" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="purple" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="purple" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/practicalli/spacemacs/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Practicalli Spacemacs" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Practicalli Spacemacs">
+<img alt="logo" src="../../assets/images/practicalli-logo.png"/>
+</a>
+    Practicalli Spacemacs
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/practicalli/spacemacs/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../..">Overview</a>
+<label for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Overview" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../repl-workflow/">
+        REPL Workflow
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_3" id="__nav_1_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../why-spacemacs/">Why Spacemacs</a>
+<label for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Why Spacemacs" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+          Why Spacemacs
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../why-spacemacs/extensive-language-support/">
+        Extensive Languages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../why-spacemacs/mnemonic-menu/">
+        Mneomic Menus
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../why-spacemacs/states/">
+        Multi-modal Editing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../why-spacemacs/layers/">
+        Layer Configuration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../why-spacemacs/clojure-layer/">
+        Clojure Support
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../why-spacemacs/structural-editing/">
+        Structural Editing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../why-spacemacs/helm/">
+        Selection Narrowing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../why-spacemacs/project-file-navigation/">
+        Project and File Navigation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../why-spacemacs/layouts/">
+        Layouts
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-mini-cheatsheet/">
+        Mini-cheatsheet
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../contributing/">
+        Contributing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writing-tips/">
+        Writing Tips
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../introduction/additional-resources/">
+        Resources
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/pre-install/">
+        Pre-install
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../install-spacemacs/">Install</a>
+<label for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Install" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Install
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/manual-configuration/">
+        Manual Configuration
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/clojure-layer/">
+        Clojure Layer
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4">
+          Enhance Clojure
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Enhance Clojure" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+          Enhance Clojure
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/enhance-clojure-experience/">
+        Enhanced Clojure experience
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/smartparens/">
+        Smartparens
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/evil-structural-editing/">
+        Evil Structural Editing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/fancify-symbols/">
+        Fancy Symbols
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/clj-kondo-via-lsp/">
+        clj-kondo Server
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../install-spacemacs/clojure-lsp/">Clojure LSP</a>
+<label for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Clojure LSP" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Clojure LSP
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/clojure-lsp/configure-lsp-and-cider/">
+        Configure LSP and Cider
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/clojure-lsp/snippets/">
+        Clojure LSP snippets
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/change-font/">
+        Font
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/maximised-full-screen/">
+        Full Screen
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/themes/">
+        Themes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/line-numbers/">
+        Line Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/eshell/">
+        Emacs Shell
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11" id="__nav_3_11" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_11">
+          Start Emacs Instantly
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Start Emacs Instantly" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_11">
+<span class="md-nav__icon md-icon"></span>
+          Start Emacs Instantly
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/emacsclient-server/">
+        emacsclient and persistent server
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/emacsclient-git-commit-messages/">
+        Git Commit Message
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12" id="__nav_3_12" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_12">
+          Update Spacemacs
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Update Spacemacs" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_12">
+<span class="md-nav__icon md-icon"></span>
+          Update Spacemacs
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/update/">
+        Update Spacemacs and Packages
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/switch-to-develop/">
+        Switch to develop
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../install-spacemacs/troubleshooting/">
+        Troubleshoot
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../spacemacs-basics/">Spacemacs Basics</a>
+<label for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Spacemacs Basics" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Spacemacs Basics
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/emacs-basics/">
+        Emacs Basics
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../spacemacs-basics/working-with-projects/">Projects</a>
+<label for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Projects" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+          Projects
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/working-with-projects/dird/">
+        dired Emacs directory editor
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/working-with-projects/layouts/">
+        Layouts and Workspaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/working-with-projects/managing-buffers/">
+        Buffer management
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/working-with-projects/managing-windows/">
+        Managing Windows
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/working-with-projects/open-and-create-files/">
+        Open and creating Files (and directories)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/working-with-projects/projectile/">
+        Projectile - project specific commands
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/working-with-projects/ranger/">
+        Ranger file manager
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/working-with-projects/searching-projects/">
+        Searching Projects
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/working-with-projects/tidying-up-buffers/">
+        Tidying up buffers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/working-with-projects/treemacs/">
+        Treemacs - Visualise your project structure
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/visual-select/">
+        Visual Select
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/spell-checking/">
+        Spell checking in Spacemacs
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../spacemacs-basics/evil/">Evil Basics</a>
+<label for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Evil Basics" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Evil Basics
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/evil/editing-states/">
+        Evil editing states
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/vim-style/key-binding-reference/">
+        Evil Keybinding Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/vim-style/speaking-evil/">
+        Speaking Evil
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/vim-style/vim-quick-reference/">
+        Vim Quick Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/vim-style/vim-tips-for-developers/">
+        Vim editing for Clojure developers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/evil-g-menu/">
+        Evil G menu
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/evil-z-menu/">
+        Evil Z menu
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_9" id="__nav_5_9" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../spacemacs-basics/evil-tools/">Evil Tools</a>
+<label for="__nav_5_9">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Evil Tools" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_9">
+<span class="md-nav__icon md-icon"></span>
+          Evil Tools
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/evil-tools/helm-swoop/">
+        Helm-swoop
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/evil-tools/iedit/">
+        Editing with Vim and iedit
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/evil-tools/iedit-in-action/">
+        iedit in action
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/evil-tools/narrowing/">
+        Narrowing - very selective editing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/evil-tools/replacing-text-across-projects/">
+        Replacing text across projects
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/evil-tools/multiple-cursors/">
+        Multiple Cursors
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../clojure-development/">Clojure</a>
+<label for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Clojure" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          Clojure
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../clojure-repl/">REPL</a>
+<label for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="REPL" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          REPL
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clojure-repl/connect-to-repl/">
+        Connect to a Clojure REPL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clojure-repl/connect-to-remote-repl/">
+        Connect to Remote REPL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clojure-repl/jack-in-to-repl/">
+        Cider Jack-in
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clojure-repl/portal-data-visualization/">
+        Portal data visualization
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clojure-repl/clojurescript-repl/">
+        ClojureScript projects
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clojure-repl/refresh-restart-repl/">
+        Refresh or Restart the REPL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clojure-repl/component-lifecycle/">
+        Component Lifecycle
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clojure-repl/clear-repl-buffer/">
+        Clear REPL Buffer
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" id="__nav_6_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../clojure-development/project-configuration/">Project Config</a>
+<label for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Project Config" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+          Project Config
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../clojure-development/project-configuration/monorepo-nested-projects/">
+        Monorepo
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" id="__nav_6_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../documentation/">Documentation</a>
+<label for="__nav_6_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Documentation" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_4">
+<span class="md-nav__icon md-icon"></span>
+          Documentation
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../documentation/comments/">
+        Comments
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../documentation/apropos/">
+        Apropos
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../documentation/cider-doc/">
+        Cider-doc
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../documentation/javadoc/">
+        Javadoc
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" id="__nav_6_5" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../evaluating-clojure/">Evaluate Clojure</a>
+<label for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Evaluate Clojure" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_5">
+<span class="md-nav__icon md-icon"></span>
+          Evaluate Clojure
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../evaluating-clojure/expressions/">
+        Expressions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../evaluating-clojure/inspect/">
+        Inspect Values
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../evaluating-clojure/interupt/">
+        Interupt Eval
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../evaluating-clojure/undefine/">
+        Remove Eval
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../evaluating-clojure/enlighten/">
+        Intermediate values
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../evaluating-clojure/macro-expand/">
+        Macro Expand
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../evaluating-clojure/evaluate-in-repl-buffer/">
+        Evaluate in the REPL Buffer
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" id="__nav_6_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../testing/">Testing</a>
+<label for="__nav_6_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Testing" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_6">
+<span class="md-nav__icon md-icon"></span>
+          Testing
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../testing/kaocha-test-runner/">
+        Kaocha Test Runner
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../testing/unit-testing/">
+        Unit Testing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../testing/unit-testing/cider-test-deps-edn-projects/">
+        Cider test deps edn projects
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../testing/unit-testing/writing-unit-tests/">
+        Writing Unit Tests with clojure.test
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../testing/unit-testing/running-tests/">
+        Running unit tests in Cider
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../testing/unit-testing/re-run-tests-from-test-report-buffer/">
+        Re run tests from test report buffer
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../testing/unit-testing/refactor-unit-tests/">
+        Refactor Unit Tests
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../testing/unit-testing/configure-cider-test-runner/">
+        Configure CIDER test runner
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_7" id="__nav_6_7" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../navigating-code/">Navigating Code</a>
+<label for="__nav_6_7">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Navigating Code" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_7">
+<span class="md-nav__icon md-icon"></span>
+          Navigating Code
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../navigating-code/expressions/">
+        Expressions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../navigating-code/markers/">
+        Markers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../navigating-code/namespaces/">
+        Namespaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../navigating-code/names-symbols/">
+        Symbols
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../navigating-code/function-definitions/">
+        Functions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../navigating-code/java-definitions/">
+        Java
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../navigating-code/code-folding/">
+        Code Folding
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../navigating-code/find-usages/">
+        Find Uses
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_8" id="__nav_6_8" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../structural-editing/">Structural Editing</a>
+<label for="__nav_6_8">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Structural Editing" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_8">
+<span class="md-nav__icon md-icon"></span>
+          Structural Editing
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../structural-editing/smartparens/">
+        Smartparens
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../structural-editing/cleverparens/">
+        Evil Cleverparens
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_8_4" id="__nav_6_8_4" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../structural-editing/lisp-state/">Lisp State</a>
+<label for="__nav_6_8_4">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Lisp State" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_8_4">
+<span class="md-nav__icon md-icon"></span>
+          Lisp State
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../structural-editing/lisp-state/wrap-unwrap/">
+        Wrap Unrap
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../structural-editing/lisp-state/slurp-barf/">
+        Slurp Barf
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../structural-editing/lisp-state/deleting/">
+        Deleting
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../structural-editing/lisp-state/raising/">
+        Raising
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" id="__nav_6_9" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../snippets/">Snippets</a>
+<label for="__nav_6_9">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Snippets" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_9">
+<span class="md-nav__icon md-icon"></span>
+          Snippets
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9_2" id="__nav_6_9_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../snippets/clojure-lsp/">Clojure LSP</a>
+<label for="__nav_6_9_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Clojure LSP" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_9_2">
+<span class="md-nav__icon md-icon"></span>
+          Clojure LSP
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../snippets/clojure-lsp/custom-snippets/">
+        Custom snippets for Clojure LSP
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../snippets/clojure-lsp/practicalli-snippets/">
+        Practicalli Snippets for Clojure LSP
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9_3" id="__nav_6_9_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../snippets/yasnippets/">Yasnippets</a>
+<label for="__nav_6_9_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Yasnippets" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_6_9_3">
+<span class="md-nav__icon md-icon"></span>
+          Yasnippets
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../snippets/yasnippets/built-in-snippets/">
+        Built in snippets
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../snippets/yasnippets/clojure-snippets-reference/">
+        Clojure snippets reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../snippets/yasnippets/create-snippets/">
+        Create snippets from existing text
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../snippets/yasnippets/practicalli-snippets/">
+        Practicalli Clojure mode Yasnippets
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../snippets/yasnippets/writing-snippets/">
+        Yasnippets Custom Snippets
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_10" id="__nav_6_10" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../refactor/">Refactor</a>
+<label for="__nav_6_10">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Refactor" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_10">
+<span class="md-nav__icon md-icon"></span>
+          Refactor
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../refactor/functions/">
+        Function
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../refactor/namespace/">
+        Namespace
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../refactor/project/">
+        Project
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../refactor/clojure-mode/">
+        Clojure Mode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../refactor/clojure-lsp/">
+        Clojure LSP
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_11" id="__nav_6_11" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../debug-clojure/">Debug</a>
+<label for="__nav_6_11">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Debug" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_11">
+<span class="md-nav__icon md-icon"></span>
+          Debug
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../debug-clojure/understanding-errors/">
+        Understand Errors
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../debug-clojure/format-error-messages/">
+        Format Errors
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../debug-clojure/inspect-values/">
+        Inspect values
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../debug-clojure/cider-debug/">
+        Cider debug
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../debug-clojure/classpath-issues/">
+        Classpath Issues
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../debug-clojure/core-async/">
+        core-async
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../debug-clojure/sayid-debug/">
+        Sayid Debug
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_12" id="__nav_6_12" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../improving-code/">Code Quality</a>
+<label for="__nav_6_12">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Code Quality" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_12">
+<span class="md-nav__icon md-icon"></span>
+          Code Quality
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../improving-code/live-linting/">
+        Live linting with clj-kondo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../improving-code/batch-linting/">
+        Batch Linting
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../improving-code/idiomatic-code-checking/">
+        Idiomatic code with Kibit
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../improving-code/formatting/">
+        Formatting Code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../improving-code/formatting/clojure/">
+        Formatting Clojure code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../improving-code/formatting/aligning-forms-expressions/">
+        Aligning forms and expressions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../improving-code/formatting/automatic-indenting/">
+        Automatic indenting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../source-control/">Source Control</a>
+<label for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Source Control" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          Source Control
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/configure-layers/">
+        Git Layer
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/git-configuration/">
+        Git Config
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/forge-configuration/">
+        Forge Config
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/github-clone/">
+        GitHub Clone
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_6" id="__nav_7_6" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../source-control/magit/">Magit Git Client</a>
+<label for="__nav_7_6">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Magit Git Client" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_7_6">
+<span class="md-nav__icon md-icon"></span>
+          Magit Git Client
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/create-local-repository/">
+        Create a local Git repository
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/list-local-repositories/">
+        List your local Git repositories
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/status/">
+        Magit Status
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/branching/">
+        Branching in Magit
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/staging-changes/">
+        Staging changes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/stashing/">
+        Stashing changes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/commit-changes/">
+        Committing changes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/tag-commit/">
+        Tag a commit
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/timemachine/">
+        Git Timemachine
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/reset-commit-history/">
+        Reset Commit History
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/interactive-rebasing/">
+        Interactive Rebasing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/cherry-picking/">
+        Cherry Picking commits
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/blame/">
+        Reviewing Commits with Git Blame
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/clean-up-magit-sessions/">
+        Cleaning up Magit sessions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/version-highlighting/">
+        Highlight Version Control Changes
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_6_17" id="__nav_7_6_17" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../source-control/magit/remote-repositories/">Remote Repository</a>
+<label for="__nav_7_6_17">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Remote Repository" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_6_17">
+<span class="md-nav__icon md-icon"></span>
+          Remote Repository
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/remote-repositories/add-remote/">
+        Add remote repository to local repository
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/remote-repositories/checkout-remote-branch/">
+        Magit checkout remote branches
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/remote-repositories/clone/">
+        Clone remote repositories
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/remote-repositories/configure-default-push/">
+        Configure default push remote branch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/remote-repositories/configure-default-upstream/">
+        Configure default upstream remote branch
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/remote-repositories/pull-changes/">
+        Pull Changes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/remote-repositories/push-changes/">
+        Push Changes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/remote-repositories/try-pull-requests/">
+        Try Pull Requests with Magit
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_6_18" id="__nav_7_6_18" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../source-control/magit/forge/">Forge</a>
+<label for="__nav_7_6_18">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Forge" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_7_6_18">
+<span class="md-nav__icon md-icon"></span>
+          Forge
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/forge/add-database/">
+        Add remote repositories to Magit Forge
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/forge/forks/">
+        Create a remote fork
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/forge/issues/">
+        Forge Issue management
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../source-control/magit/forge/pull-requests/">
+        Forge Pull Requests
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" id="__nav_8" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../markdown-mode/">Markdown</a>
+</div>
+<nav aria-label="Markdown" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          Markdown
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" id="__nav_9" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../org-mode/">Org-mode</a>
+<label for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Org-mode" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
+          Org-mode
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../org-mode/headings/">
+        Org-mode Headings
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../org-mode/lists-and-checkboxes/">
+        Lists and Checkboxes
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../org-mode/linking/">
+        Linking to files and websites
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../org-mode/todo-states/">
+        Org-mode TODO states
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../org-mode/tables/">
+        Org-mode Tables
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../org-mode/code-blocks/">
+        Org blocks - source code and more
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../org-mode/org-mode-tweaks/">
+        Org-mode tweaks
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../org-mode/org-journal/">
+        Org Journal
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../org-mode/yasnippets/">
+        Yasnippets for Org-mode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../org-mode/literate-programming/">
+        Literate Programming
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" id="__nav_10" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../database-access/">Database</a>
+<label for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Database" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
+          Database
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../database-access/add-sql-layer-and-lsp/">
+        Add SQL Layer and LSP support
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../database-access/connection-configuration/">
+        Configure connections
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../database-access/external-dependencies/">
+        SQL Layer External dependencies
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../database-access/using-sql/">
+        Using SQL from Spacemacs
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" id="__nav_11" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../termux/">Ultra-Mobile Neovim</a>
+<label for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Ultra-Mobile Neovim" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
+          Ultra-Mobile Neovim
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../termux/fdroid-install/">
+        F-Droid
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../termux/setup/">
+        Termux Setup
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../termux/using-termux/">
+        Using Termux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../termux/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../termux/custom-shell/">
+        Zsh
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../termux/clojure-development/">
+        Clojure
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../termux/spacemacs/">
+        Spacemacs
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" id="__nav_12" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../misc/">Misc</a>
+<label for="__nav_12">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Misc" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_12">
+<span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../misc/artist-mode/">
+        Artist Mode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../misc/unicode-characters/">
+        Unicode Characters
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" id="__nav_13" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../reference/">Reference</a>
+<label for="__nav_13">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Reference" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_13">
+<span class="md-nav__icon md-icon"></span>
+          Reference
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/emacs-quick-reference/">
+        Emacs Quick Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/spacemacs-conventions/">
+        Spacemacs Conventions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/hydra-menus/">
+        Hydra menus
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/projectile/">
+        Projectile
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/cider/">
+        Cider reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/cider/configuration-variables/">
+        Cider configuration variables.
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_8" id="__nav_13_8" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">Clojure REPL</a>
+<label for="__nav_13_8">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Clojure REPL" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_13_8">
+<span class="md-nav__icon md-icon"></span>
+          Clojure REPL
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Connect to a running Repl
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Connect to a running Repl
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-required">
+    Configuration Required
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../switching-to-repl/">
+        Switching to the REPL
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../show-repl-on-connect/">
+        Show REPL Buffer
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../repl-command-menu/">
+        REPL Command Menu
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../repl-history/">
+        REPL History
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_9" id="__nav_13_9" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../reference/clojure/">Clojure Standard Library</a>
+<label for="__nav_13_9">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Clojure Standard Library" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_13_9">
+<span class="md-nav__icon md-icon"></span>
+          Clojure Standard Library
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/clojure/control-flow/">
+        Control flow
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/clojure/data-structures/">
+        Data Structures
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/clojure/functions/">
+        Functions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/clojure/maths/">
+        Maths
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/clojure/strings/">
+        Strings
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13_10" id="__nav_13_10" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../reference/clojure-lsp/">Clojure LSP</a>
+<label for="__nav_13_10">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Clojure LSP" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_13_10">
+<span class="md-nav__icon md-icon"></span>
+          Clojure LSP
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/clojure-lsp/lsp-variables-reference/">
+        LSP Variables
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/structural-editing/smartparens-cheatsheet/">
+        Smartparens cheatsheet
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/keybindings/">
+        Reference: Keybindings
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/keybindings/cider-keybindings/">
+        Common CIDER default keybindings for Emacs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/keybindings/vim-keybindings/">
+        Useful Vim key bindings
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/vim/getting-comfortable/">
+        Vim - Getting Comfortable
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../reference/vim/key-bindings/">
+        Evil Key Bindings Reference
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../os-specific-config/macosx/">
+        MacOSX Specific configuration
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_14" id="__nav_14" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../emacs-lisp/">Emacs</a>
+<label for="__nav_14">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Emacs" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_14">
+<span class="md-nav__icon md-icon"></span>
+          Emacs
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../encryption/">
+        Encryption in Emacs - EasyPG Assistant
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../encryption/create-gpg-key/">
+        Creating a gpg key
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../writing-emacs-lisp/">
+        Writing Emacs Lisp
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" id="__nav_15" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../alternative-tooling/">Alternative Tools</a>
+<label for="__nav_15">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="Alternative Tools" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_15">
+<span class="md-nav__icon md-icon"></span>
+          Alternative Tools
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../alternative-tooling/leiningen/">
+        Leiningen
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../alternative-tooling/org-easy-templates/">
+        Org-mode Easy Templates
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16" id="__nav_16" type="checkbox"/>
+<label class="md-nav__link" for="__nav_16">
+          To Review
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="To Review" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_16">
+<span class="md-nav__icon md-icon"></span>
+          To Review
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../spacemacs-basics/vim-style/common-evil/">
+        Common Tasks using Evil vim-style editing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../why-spacemacs/why-evil/">
+        Evil Vim Style Editing
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-required">
+    Configuration Required
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/practicalli/spacemacs/edit/main/docs/external-repl/connect-to-running-repl.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
+</a>
+<h1 id="connect-to-a-running-repl">Connect to a running Repl<a class="headerlink" href="#connect-to-a-running-repl" title="Permanent link">λ︎</a></h1>
+<p>You can connect to a REPL started elsewhere, for example the command line with <code>lein repl</code>, then connect to it from inside Spacemacs.  You will need to know:</p>
+<ul>
+<li>host name / ip address</li>
+<li>port the repl is listening too</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Spacemacs</th>
+<th>Major mode</th>
+<th>Emacs</th>
+<th>Evil</th>
+<th>Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SPC m s c</code></td>
+<td><code>M-RET s c</code></td>
+<td><code>C-c M-c</code></td>
+<td><code>, s c</code></td>
+<td><code>cider-connect</code></td>
+</tr>
+</tbody>
+</table>
+<p>Use the <code>lein repl</code> command to run a new REPL on the command line.  Then connect to that REPL using <code>M-x cider-connect</code></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-lein-new-spacemacs-workshop.png"><img alt="Leiningen REPL on the Command Line" src="/images/spacemacs-lein-new-spacemacs-workshop.png"/></a></p>
+<h2 id="configuration-required">Configuration Required<a class="headerlink" href="#configuration-required" title="Permanent link">λ︎</a></h2>
+<p>If you are going to connect to an external repl from Spacemacs, you will need to add the Leiningen plugin called <code>cider-nrepl</code> and the Clojure <code>tools.nrepl</code> library.  Rather than add this to all projects, you add these to your Leiningen configuration <code>~/.lein/profiles.clj</code> file.  The versions of each library also had to be kept in sync with updates in the Spacemacs Clojure layer.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span><span class="ss">:dev</span><span class="w"> </span><span class="p">{</span><span class="ss">:plugins</span><span class="w">      </span><span class="p">[[</span><span class="nv">cider/cider-nrepl</span><span class="w"> </span><span class="s">"0.15.0-SNAPSHOT"</span><span class="p">]</span><span class="w"></span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">                       </span><span class="p">[</span><span class="nv">refactor-nrepl</span><span class="w"> </span><span class="s">"2.3.0-SNAPSHOT"</span><span class="p">]]</span><span class="w"></span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="ss">:dependencies</span><span class="w"> </span><span class="p">[[</span><span class="nv">org.clojure/tools.nrepl</span><span class="w"> </span><span class="s">"0.2.12"</span><span class="p">]]}}</span><span class="w"></span>
+</code></pre></div>
+<p>Without this configuration, you will see warning messages in the repl buffer stating that the versions of ... are out of sync.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-cider-connect-warning-versions-out-of-sync.png"><img alt="Spacemacs - Cider connect - Warning - cider-repl &amp; tools-nrepl out of sync" src="/images/spacemacs-cider-connect-warning-versions-out-of-sync.png"/></a></p>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 25, 2022</span>
+</small>
+</div>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            Back to top
+          </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: External Clojure REPL" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              External Clojure REPL
+            </div>
+</div>
+</a>
+<a aria-label="Next: Switching to the REPL" class="md-footer__link md-footer__link--next" href="../switching-to-repl/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Switching to the REPL
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2023  Practicali <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+</div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://www.linkedin.com/in/jr0cket/" rel="noopener" target="_blank" title="www.linkedin.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>
+</a>
+<a class="md-social__link" href="https://clojurians.slack.com/messages/practicalli" rel="noopener" target="_blank" title="clojurians.slack.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"></path></svg>
+</a>
+<a class="md-social__link" href="https://twitter.com/practical_li" rel="noopener" target="_blank" title="twitter.com">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+</a>
+<a class="md-social__link" href="https://github.com/practicalli" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="https://hub.docker.com/u/practicalli" rel="noopener" target="_blank" title="hub.docker.com">
+<svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

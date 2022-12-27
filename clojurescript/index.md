@@ -1,2 +1,0 @@
-# Clojurescript Overview
-

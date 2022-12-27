@@ -1,2 +1,0 @@
-# Heads up display
-

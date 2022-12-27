@@ -1,2 +1,0 @@
-# Chestnut Template
-
