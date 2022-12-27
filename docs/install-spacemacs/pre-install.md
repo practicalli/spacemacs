@@ -18,8 +18,7 @@ Emacs is available for Linux, MacOSX and Windows.  The [Spacemacs Readme suggest
 
 ??? INFO "Emacs Version 28 recommended"
     Emacs 28 is recommended with native compilation of Elisp, which can have a significant improvement on Emacs package performance.
-
-   Emacs 27.1 is the minimum version supported by Practicalli Spacemacs
+    Emacs 27.1 is the minimum version supported by Practicalli Spacemacs
 
 
 === "Ubuntu / Debian"
