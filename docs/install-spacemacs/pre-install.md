@@ -10,7 +10,7 @@ Spacemacs is a configuration for Emacs, so naturally [Emacs](#install-emacs) sho
 
 ## Install Emacs
 
-![GNU Emacs banner](/images/emacs-logo-text.png)
+![GNU Emacs logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/emacs-icon.svg){align=right loading=lazy}
 
 Emacs 28 is recommended as it includes native compilation support and optomised JSON support which is valuable for Language Server Protocol servers.
 
@@ -84,6 +84,8 @@ Emacs is available for Linux, MacOSX and Windows.  The [Spacemacs Readme suggest
 
 ## Install Clojure CLI
 
+![Clojure logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/clojure-logo.svg){align=right loading=lazy}
+
 [Practicalli Clojure Install Guide](https://practical.li/clojure/clojure-cli/install/java.html){target=_blank .md-button }
 
 Clojure CLI provide a simple and configurable way to:
@@ -98,6 +100,8 @@ Follow the [Practicalli Clojure Install Guide](https://practical.li/clojure/cloj
 
 
 ## Command Line Tools
+
+![Command Line icon](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/terminal-emulator-green-screen.svg){align=right loading=lazy}
 
 Emacs uses several external command line tools.  There are some very efficient search tools that are recommended (ripgrep, silver searcher).
 
