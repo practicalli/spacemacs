@@ -28,7 +28,8 @@ Use the Helm transient state to navigate the Helm results using Vim keybindings 
 
 Enter this transient state with `M-SPC` or `S-M-SPC` while in a Helm buffer, for example, when navigating the results such as file find `SPC f f`, buffer list `SPC b b`, or Emacs commands list `SPC SPC`.
 
-[![Spacemacs - Helm Transient State menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-buffers-helm-transient-state.png)](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-buffers-helm-transient-state.png)
+![Spacemacs - Helm Transient State menu - light](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-buffers-helm-transient-state-light.png#only-light)
+![Spacemacs - Helm Transient State menu - dark](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-buffers-helm-transient-state-dark.png#only-dark)
 
 !!! WARNING "Gnome desktop binding clash"
     `M-SPC` is used by the Gnome desktop for the window menu, so recommend you change the Gnome keyboard settings to use a different binding, i.e. `Super w`.
@@ -79,4 +80,5 @@ In this example Helm Transient State menu is used to select and kill multiple bu
 
 Select `a` switches to the actions page, or using `C-z` displays the list off all the available actions for a buffer.
 
-![Spacemacs Buffers - Helm Actions](https://github.com/practicalli/graphic-design/blob/live/spacemacs/screenshots/spacemacs-helm-transient-state-actions.png)
+![Spacemacs Buffers - Helm Actions](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-actions-buffer-light.png#only-light)
+![Spacemacs Buffers - Helm Actions](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-actions-buffer-dark.png#only-dark)
