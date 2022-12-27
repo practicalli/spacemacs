@@ -76,7 +76,7 @@ Clone [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d) conf
 
 [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d) uses Fira Code, a mono-spaced font designed for source code and includes [ligatures](https://github.com/tonsky/FiraCode#whats-in-the-box) and [many other features](https://github.com/tonsky/FiraCode#whats-in-the-box).
 
-![Fira Code font - ligatures for Emacs and Clojure code](/images/fira-code-font-ligatures-clojure.png)
+![Fira Code font - ligatures for Emacs and Clojure code](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/fira-code-font-clojure-ligatures.png)
 
 !!!! TIP "Use a different font with practicalli/spacemacs.d"
     To use a different font when using the [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d), edit `.spacemacs.d/init.el` and update the value for `dotspacemacs-default-font` to a name of a font on your system.
@@ -92,7 +92,7 @@ Clone [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d) conf
 
 ++spc++ ++"q"++ ++"r"++ to restart Spacemacs and see the finished results
 
-![Spacemacs - doom-gruvbox-light theme - home and spacemacs config buffers](/images/spacemacs-doom-gruvbox-light-theme-examples-home-spacemacs-config.png)
+![Spacemacs - doom-gruvbox-light theme - home and spacemacs config buffers](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-doom-gruvbox-light-theme-examples-home-spacemacs-config.png)
 
 
 ## Spacemacs is ready for action
