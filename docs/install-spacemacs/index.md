@@ -78,7 +78,7 @@ Clone [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d) conf
 
 ![Fira Code font - ligatures for Emacs and Clojure code](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/fira-code-font-clojure-ligatures.png)
 
-!!!! TIP "Use a different font with practicalli/spacemacs.d"
+!!! HINT "Use a different font with practicalli/spacemacs.d"
     To use a different font when using the [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d), edit `.spacemacs.d/init.el` and update the value for `dotspacemacs-default-font` to a name of a font on your system.
 
 
