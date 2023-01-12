@@ -43,7 +43,6 @@ nav:
           - install-spacemacs/enhance-clojure-experience.md
           - Smartparens: install-spacemacs/smartparens.md
           - Evil Structural Editing: install-spacemacs/evil-structural-editing.md
-          - Fancy Symbols: install-spacemacs/fancify-symbols.md
           - install-spacemacs/clj-kondo-via-lsp.md
       - Clojure LSP:
           - install-spacemacs/clojure-lsp/index.md
