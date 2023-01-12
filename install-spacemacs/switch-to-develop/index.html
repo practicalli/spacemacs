@@ -8,10 +8,12 @@
 <meta content="Practical guide to Clojure development with Spacemacs" name="description"/>
 <meta content="Practicalli" name="author"/>
 <link href="https://practical.li/spacemacs/install-spacemacs/switch-to-develop/" rel="canonical"/>
+<link href="../update/" rel="prev"/>
+<link href="../troubleshooting/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
 <title>Switch to develop - Practicalli Spacemacs</title>
-<link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -289,7 +291,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_4" tabindex="0">
           Enhance Clojure
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -312,11 +314,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../evil-structural-editing/">
         Evil Structural Editing
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../fancify-symbols/">
-        Fancy Symbols
       </a>
 </li>
 <li class="md-nav__item">
@@ -381,7 +378,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11" id="__nav_3_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_11" tabindex="0">
           Start Emacs Instantly
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -406,7 +403,7 @@
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12" id="__nav_3_12" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_12">
+<label aria-expanded="true" class="md-nav__link" for="__nav_3_12" tabindex="0">
           Update Spacemacs
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1932,7 +1929,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16" id="__nav_16" type="checkbox"/>
-<label class="md-nav__link" for="__nav_16">
+<label aria-expanded="false" class="md-nav__link" for="__nav_16" tabindex="0">
           To Review
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1996,14 +1993,11 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/practicalli/spacemacs/edit/main/docs/install-spacemacs/switch-to-develop.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="switch-to-spacemacs-develop-branch">Switch to Spacemacs develop branch<a class="headerlink" href="#switch-to-spacemacs-develop-branch" title="Permanent link">λ︎</a></h1>
 <p>Until the release of Spacemacs 0.300 it is highly recommended to use the Spacemacs <code>develop</code> branch. If you have installed the default Spacemacs <code>master</code> branch, follow these steps to switch smoothly to Spacemacs <code>develop</code> branch.</p>
 <p>If you have not customized the <code>.spacemacs</code> file then simply delete it and checkout the <code>develop</code> branch in <code>.emacs.d</code>.  Starting Emacs will create a new .spacemacs file with the latest updates.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">cd</span> ~/.emacs.d
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>git checkout develop
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>~/.emacs.d
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>develop
 </code></pre></div>
 <h2 id="updating-to-develop-keeping-spacemacs-changes">Updating to develop - keeping .spacemacs changes<a class="headerlink" href="#updating-to-develop-keeping-spacemacs-changes" title="Permanent link">λ︎</a></h2>
 <p>If you have changes in the <code>.spacemacs</code> file you wish to keep, there are two approaches.  Either update Spacemacs on top of your changes or replace the configuration and use a diff tool to copy your changes back to the <code>.spacemacs</code> file.</p>
@@ -2012,8 +2006,8 @@
 <div class="tabbed-block">
 <p>Make a backup of your <code>.spacemacs</code> file.</p>
 <p>Change into the <code>~/.emacs.d/</code> directory and change the Git branch to <code>develop</code></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">cd</span> ~/.emacs.d/
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>git checkout develop
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>~/.emacs.d/
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>develop
 </code></pre></div>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd class="key-d">D</kbd></span> (<code>spacemacs/ediff-dotfile-and-template</code>) to compare the develop version of the <code>.spacemacs.template</code> with your customized <code>.spacemacs</code> configuration.</p>
 <p>In the ediff buffer, use <span class="keys"><kbd class="key-j">J</kbd></span> and <span class="keys"><kbd class="key-k">K</kbd></span> to navigate changes, <span class="keys"><kbd class="key-b">B</kbd></span> to copy changes from the <code>spacemacs.template</code> to your custom <code>.spacemacs</code> configuration.</p>
@@ -2025,7 +2019,7 @@
 <div class="tabbed-block">
 <p>Delete the <code>~/.emacs.d</code> directory (backup any changes made in <code>.emacs.d/private</code> if relevant).</p>
 <p>Clone Spacemacs specifying the <code>develop</code> branch</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>git clone -o upstream https://github.com/syl20bnr/spacemacs ~/.emacs.d
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>-o<span class="w"> </span>upstream<span class="w"> </span>https://github.com/syl20bnr/spacemacs<span class="w"> </span>~/.emacs.d
 </code></pre></div>
 <p>Move the  <code>~/.spacemacs</code> file or rename it, allowing Spacemacs to create an updated configuration from the <code>develop</code> branch.</p>
 </div>
@@ -2061,34 +2055,6 @@
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Update Spacemacs and Packages" class="md-footer__link md-footer__link--prev" href="../update/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              Update Spacemacs and Packages
-            </div>
-</div>
-</a>
-<a aria-label="Next: Troubleshoot" class="md-footer__link md-footer__link--next" href="../troubleshooting/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              Troubleshoot
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -2126,7 +2092,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

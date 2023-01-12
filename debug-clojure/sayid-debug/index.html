@@ -8,10 +8,12 @@
 <meta content="Practical guide to Clojure development with Spacemacs" name="description"/>
 <meta content="Practicalli" name="author"/>
 <link href="https://practical.li/spacemacs/debug-clojure/sayid-debug/" rel="canonical"/>
+<link href="../core-async/" rel="prev"/>
+<link href="../../improving-code/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
 <title>Sayid Debug - Practicalli Spacemacs</title>
-<link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -289,7 +291,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_4" tabindex="0">
           Enhance Clojure
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -312,11 +314,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../install-spacemacs/evil-structural-editing/">
         Evil Structural Editing
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../install-spacemacs/fancify-symbols/">
-        Fancy Symbols
       </a>
 </li>
 <li class="md-nav__item">
@@ -381,7 +378,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11" id="__nav_3_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_11" tabindex="0">
           Start Emacs Instantly
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -406,7 +403,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12" id="__nav_3_12" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_12">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_12" tabindex="0">
           Update Spacemacs
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1932,7 +1929,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16" id="__nav_16" type="checkbox"/>
-<label class="md-nav__link" for="__nav_16">
+<label aria-expanded="false" class="md-nav__link" for="__nav_16" tabindex="0">
           To Review
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1996,9 +1993,6 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/practicalli/spacemacs/edit/main/docs/debug-clojure/sayid-debug.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="sayid-debug-and-profile-tool">Sayid debug and profile tool<a class="headerlink" href="#sayid-debug-and-profile-tool" title="Permanent link">λ︎</a></h1>
 <p><a href="http://bpiel.github.io/sayid/">Sayid</a>, pronounced "siy EED", is an extensive debug and profile tool for Clojure projects. To debug or profile code it must be able to compile or sayid will fail to work.</p>
 <div class="admonition hint">
@@ -2039,39 +2033,39 @@
 <h2 id="configure-sayid">Configure Sayid<a class="headerlink" href="#configure-sayid" title="Permanent link">λ︎</a></h2>
 <p><a href="http://bpiel.github.io/sayid/" target="_blank">Sayid</a> is an optional package in the Clojure layer for Spacemacs.</p>
 <p>To enable sayid, add the following <code>:variable</code> to the <code>clojure</code> layer in <code>.spacemacs</code></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">     </span><span class="p">(</span><span class="nv">clojure</span><span class="w"> </span><span class="nb">:variables</span><span class="w"></span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">              </span><span class="nv">clojure-enable-sayid</span><span class="w"> </span><span class="no">t</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">     </span><span class="p">(</span><span class="nv">clojure</span><span class="w"> </span><span class="nb">:variables</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">              </span><span class="nv">clojure-enable-sayid</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="cider-jack-in">Cider Jack-in<a class="headerlink" href="#cider-jack-in" title="Permanent link">λ︎</a></h2>
 <p><code>, m s cider-jack-in-clj</code> to start the Clojure REPL via Cider jack-in, which should automatically include the Sayid nrepl middleware.</p>
 <p>For a Leiningen project, sayid library should be added as a dev-dependency</p>
 <p>For a Clojure CLI projects, include sayid library as an alias (e.g. <code>:lib/sayid</code> from <a href="https://github.com/practicalli/clojure-deps-edn">practicalli/clojure-deps-edn</a>)</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span><span class="ss">:lib/sayid</span><span class="w"> </span><span class="p">{</span><span class="nv">com.billpiel/sayid</span><span class="w"> </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"0.1.0"</span><span class="p">}}}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span><span class="ss">:lib/sayid</span><span class="w"> </span><span class="p">{</span><span class="nv">com.billpiel/sayid</span><span class="w"> </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"0.1.0"</span><span class="p">}}}</span>
 </code></pre></div>
 <h2 id="cider-connect">Cider Connect<a class="headerlink" href="#cider-connect" title="Permanent link">λ︎</a></h2>
 <p>Leiningen projects must include the Sayid plugin in order to use Cider Connect.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span><span class="ss">:user</span><span class="w"> </span><span class="p">{</span><span class="ss">:plugins</span><span class="w"> </span><span class="p">[[</span><span class="nv">cider/cider-nrepl</span><span class="w"> </span><span class="s">"0.25.3"</span><span class="p">]</span><span class="w"></span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">                  </span><span class="p">[</span><span class="nv">com.billpiel/sayid</span><span class="w"> </span><span class="s">"0.1.0"</span><span class="p">]]</span><span class="w"></span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">        </span><span class="ss">:dependencies</span><span class="w"> </span><span class="p">[[</span><span class="nv">nrepl/nrepl</span><span class="w"> </span><span class="s">"0.7.0"</span><span class="p">]]}}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span><span class="ss">:user</span><span class="w"> </span><span class="p">{</span><span class="ss">:plugins</span><span class="w"> </span><span class="p">[[</span><span class="nv">cider/cider-nrepl</span><span class="w"> </span><span class="s">"0.25.3"</span><span class="p">]</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">                  </span><span class="p">[</span><span class="nv">com.billpiel/sayid</span><span class="w"> </span><span class="s">"0.1.0"</span><span class="p">]]</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">        </span><span class="ss">:dependencies</span><span class="w"> </span><span class="p">[[</span><span class="nv">nrepl/nrepl</span><span class="w"> </span><span class="s">"0.7.0"</span><span class="p">]]}}</span>
 </code></pre></div>
 <p>Clojure CLI projects will need to explicitly include the middleware configuration in the same alias that configures nrepl, e.g.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="w">  </span><span class="ss">:repl/cider-debug</span><span class="w"></span>
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="p">{</span><span class="ss">:extra-deps</span><span class="w"> </span><span class="p">{</span><span class="nv">nrepl/nrepl</span><span class="w">        </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"0.9.0"</span><span class="p">}</span><span class="w"></span>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">                </span><span class="nv">com.billpiel/sayid</span><span class="w"> </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"0.1.0"</span><span class="p">}</span><span class="w"></span>
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">                </span><span class="nv">cider/cider-nrepl</span><span class="w">  </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"0.28.5"</span><span class="p">}}</span><span class="w"></span>
-<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">   </span><span class="ss">:main-opts</span><span class="w">  </span><span class="p">[</span><span class="s">"-m"</span><span class="w"> </span><span class="s">"nrepl.cmdline"</span><span class="w"></span>
-<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">                </span><span class="s">"--middleware"</span><span class="w"> </span><span class="s">"[com.billpiel.sayid.nrepl-middleware/wrap-sayid,cider.nrepl/cider-middleware]"</span><span class="w"></span>
-<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">                </span><span class="s">"--interactive"</span><span class="p">]}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="w">  </span><span class="ss">:repl/cider-debug</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="p">{</span><span class="ss">:extra-deps</span><span class="w"> </span><span class="p">{</span><span class="nv">nrepl/nrepl</span><span class="w">        </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"0.9.0"</span><span class="p">}</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">                </span><span class="nv">com.billpiel/sayid</span><span class="w"> </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"0.1.0"</span><span class="p">}</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">                </span><span class="nv">cider/cider-nrepl</span><span class="w">  </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"0.28.5"</span><span class="p">}}</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">   </span><span class="ss">:main-opts</span><span class="w">  </span><span class="p">[</span><span class="s">"-m"</span><span class="w"> </span><span class="s">"nrepl.cmdline"</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">                </span><span class="s">"--middleware"</span><span class="w"> </span><span class="s">"[com.billpiel.sayid.nrepl-middleware/wrap-sayid,cider.nrepl/cider-middleware]"</span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">                </span><span class="s">"--interactive"</span><span class="p">]}</span>
 </code></pre></div>
 <p>If also using clj-refactor with Cider, then that nrepl middleware as well as sayid and cider will need to be included</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="w">  </span><span class="ss">:repl/cider-refactor-debug</span><span class="w"></span>
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="p">{</span><span class="ss">:extra-deps</span><span class="w"> </span><span class="p">{</span><span class="nv">nrepl/nrepl</span><span class="w">                   </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"0.9.0"</span><span class="p">}</span><span class="w"></span>
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">                </span><span class="nv">com.billpiel/sayid</span><span class="w">            </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"0.1.0"</span><span class="p">}</span><span class="w"></span>
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">                </span><span class="nv">cider/cider-nrepl</span><span class="w">             </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"0.28.5"</span><span class="p">}</span><span class="w"></span>
-<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">                </span><span class="nv">refactor-nrepl/refactor-nrepl</span><span class="w"> </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"3.5.3"</span><span class="p">}}</span><span class="w"></span>
-<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">   </span><span class="ss">:main-opts</span><span class="w">  </span><span class="p">[</span><span class="s">"-m"</span><span class="w"> </span><span class="s">"nrepl.cmdline"</span><span class="w"></span>
-<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">                </span><span class="s">"--middleware"</span><span class="w"> </span><span class="s">"[com.billpiel.sayid.nrepl-middleware/wrap-sayid,refactor-nrepl.middleware/wrap-refactor,cider.nrepl/cider-middleware]"</span><span class="w"></span>
-<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">                </span><span class="s">"--interactive"</span><span class="p">]}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="w">  </span><span class="ss">:repl/cider-refactor-debug</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="p">{</span><span class="ss">:extra-deps</span><span class="w"> </span><span class="p">{</span><span class="nv">nrepl/nrepl</span><span class="w">                   </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"0.9.0"</span><span class="p">}</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">                </span><span class="nv">com.billpiel/sayid</span><span class="w">            </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"0.1.0"</span><span class="p">}</span>
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">                </span><span class="nv">cider/cider-nrepl</span><span class="w">             </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"0.28.5"</span><span class="p">}</span>
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">                </span><span class="nv">refactor-nrepl/refactor-nrepl</span><span class="w"> </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"3.5.3"</span><span class="p">}}</span>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">   </span><span class="ss">:main-opts</span><span class="w">  </span><span class="p">[</span><span class="s">"-m"</span><span class="w"> </span><span class="s">"nrepl.cmdline"</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">                </span><span class="s">"--middleware"</span><span class="w"> </span><span class="s">"[com.billpiel.sayid.nrepl-middleware/wrap-sayid,refactor-nrepl.middleware/wrap-refactor,cider.nrepl/cider-middleware]"</span>
+<a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">                </span><span class="s">"--interactive"</span><span class="p">]}</span>
 </code></pre></div>
 <p>Now run the REPL process in a terminal with the following command</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>clojure -M:repl/cider-debug
@@ -2102,34 +2096,6 @@
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: core-async" class="md-footer__link md-footer__link--prev" href="../core-async/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              core-async
-            </div>
-</div>
-</a>
-<a aria-label="Next: Improving Clojure code" class="md-footer__link md-footer__link--next" href="../../improving-code/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              Improving Clojure code
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -2167,7 +2133,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -8,10 +8,12 @@
 <meta content="Practical guide to Clojure development with Spacemacs" name="description"/>
 <meta content="Practicalli" name="author"/>
 <link href="https://practical.li/spacemacs/evaluating-clojure/undefine/" rel="canonical"/>
+<link href="../interupt/" rel="prev"/>
+<link href="../enlighten/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
 <title>Remove Eval - Practicalli Spacemacs</title>
-<link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -289,7 +291,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_4" tabindex="0">
           Enhance Clojure
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -312,11 +314,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../install-spacemacs/evil-structural-editing/">
         Evil Structural Editing
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../install-spacemacs/fancify-symbols/">
-        Fancy Symbols
       </a>
 </li>
 <li class="md-nav__item">
@@ -381,7 +378,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11" id="__nav_3_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_11" tabindex="0">
           Start Emacs Instantly
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -406,7 +403,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12" id="__nav_3_12" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_12">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_12" tabindex="0">
           Update Spacemacs
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1946,7 +1943,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16" id="__nav_16" type="checkbox"/>
-<label class="md-nav__link" for="__nav_16">
+<label aria-expanded="false" class="md-nav__link" for="__nav_16" tabindex="0">
           To Review
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -2024,9 +2021,6 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/practicalli/spacemacs/edit/main/docs/evaluating-clojure/undefine.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="un-define-expressions">Un-define expressions<a class="headerlink" href="#un-define-expressions" title="Permanent link">λ︎</a></h1>
 <p><code>def</code>, <code>defn</code> names change during development, especially when code is refactored.  Un-define removes unwanted vars and keeps the REPL clean and avoids the need to restart the REPL.</p>
 <p><code>, e u</code>  (<code>cider-undef</code>) un-defines the current function name or var, e.g. <code>defn</code>/<code>def</code> / <code>deftest</code>, removing it from the running REPL.</p>
@@ -2044,36 +2038,36 @@
 <p><a href="/images/spacemacs-clojure-repl-undef-symbol-helm-narrowing.png"><img alt="Spacemacs Clojure REPL undef symbol helm narrowing" src="/images/spacemacs-clojure-repl-undef-symbol-helm-narrowing.png"/></a></p>
 <h2 id="undefine-using-clojure">Undefine using Clojure<a class="headerlink" href="#undefine-using-clojure" title="Permanent link">λ︎</a></h2>
 <p><code>ns-unmap</code> will remove a symbol from the running REPL.  Use <code>*ns*</code> dynamic variable to represent the current namespace.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">(</span><span class="nb">ns-unmap </span><span class="nv">*ns*</span><span class="w"> </span><span class="ss">'name-before-refactor</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">(</span><span class="nb">ns-unmap </span><span class="nv">*ns*</span><span class="w"> </span><span class="ss">'name-before-refactor</span><span class="p">)</span>
 </code></pre></div>
 <p>Or specify the namespace if the symbol is not in the current namespace</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">(</span><span class="nb">ns-unmap </span><span class="ss">'practicalli.service</span><span class="w"> </span><span class="ss">'name-before-refactor</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">(</span><span class="nb">ns-unmap </span><span class="ss">'practicalli.service</span><span class="w"> </span><span class="ss">'name-before-refactor</span><span class="p">)</span>
 </code></pre></div>
 <p><code>ns-unalias</code> will remove an alias added via a require form</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">;; Require a neamespace</span><span class="w"></span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="p">(</span><span class="nf">require</span><span class="w"> </span><span class="o">'</span><span class="p">[</span><span class="nv">practicalli.service</span><span class="w"> </span><span class="ss">:as</span><span class="w"> </span><span class="nv">service</span><span class="p">])</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">;; Require a neamespace</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="p">(</span><span class="nf">require</span><span class="w"> </span><span class="o">'</span><span class="p">[</span><span class="nv">practicalli.service</span><span class="w"> </span><span class="ss">:as</span><span class="w"> </span><span class="nv">service</span><span class="p">])</span>
 <a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1">;; The service alias should now be in the current nammespace</span><span class="w"></span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">(</span><span class="nf">ns-aliases</span><span class="w"> </span><span class="nv">*ns*</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="c1">;; =&gt; {service #namespace[practicalli.service]}</span><span class="w"></span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1">;; The service alias should now be in the current nammespace</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">(</span><span class="nf">ns-aliases</span><span class="w"> </span><span class="nv">*ns*</span><span class="p">)</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="c1">;; =&gt; {service #namespace[practicalli.service]}</span>
 <a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">(</span><span class="nf">ns-unalias</span><span class="w"> </span><span class="nv">*ns*</span><span class="w"> </span><span class="ss">'service</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="c1">;; =&gt; nil</span><span class="w"></span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">(</span><span class="nf">ns-unalias</span><span class="w"> </span><span class="nv">*ns*</span><span class="w"> </span><span class="ss">'service</span><span class="p">)</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="c1">;; =&gt; nil</span>
 </code></pre></div>
 <h2 id="clojuretoolsnamespace">clojure.tools.namespace<a class="headerlink" href="#clojuretoolsnamespace" title="Permanent link">λ︎</a></h2>
 <p><code>refresh</code> function scans all directories on the classpath for source files, read their ns forms, builds a graph of their dependencies and load them in dependency order. <code>set-refresh-dirs</code> defines directories that should be scanned.</p>
 <p>Add the library as a dependency to the project file</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nv">org.clojure/tools.namespace</span><span class="w"> </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"1.2.0"</span><span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nv">org.clojure/tools.namespace</span><span class="w"> </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">"1.2.0"</span><span class="p">}</span>
 </code></pre></div>
 <p>Require the namespace and refer the function (refresh is the only public function in the namespace)</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">(</span><span class="nf">require</span><span class="w"> </span><span class="o">'</span><span class="p">[</span><span class="nv">clojure.tools.namespace.repl</span><span class="w"> </span><span class="ss">:refer</span><span class="w"> </span><span class="p">[</span><span class="nv">refresh</span><span class="p">]])</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">(</span><span class="nf">require</span><span class="w"> </span><span class="o">'</span><span class="p">[</span><span class="nv">clojure.tools.namespace.repl</span><span class="w"> </span><span class="ss">:refer</span><span class="w"> </span><span class="p">[</span><span class="nv">refresh</span><span class="p">]])</span>
 </code></pre></div>
 <p>Refresh the current namespace</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">(</span><span class="nf">refresh</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">(</span><span class="nf">refresh</span><span class="p">)</span>
 </code></pre></div>
 <p>The refresh function will load all namespaces found and list them as the output.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="ss">:reloading</span><span class="w"> </span><span class="p">(</span><span class="nf">com.example.util</span><span class="w"> </span><span class="nv">com.example.app</span><span class="w"> </span><span class="nv">com.example.app-test</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="ss">:ok</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="ss">:reloading</span><span class="w"> </span><span class="p">(</span><span class="nf">com.example.util</span><span class="w"> </span><span class="nv">com.example.app</span><span class="w"> </span><span class="nv">com.example.app-test</span><span class="p">)</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="ss">:ok</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">All Code must be loadable</p>
@@ -2082,12 +2076,12 @@
 <h3 id="use-refresh-in-a-rich-comment-block">Use refresh in a rich comment block<a class="headerlink" href="#use-refresh-in-a-rich-comment-block" title="Permanent link">λ︎</a></h3>
 <p>Use a rich comment block to ensure the refresh function is only called when directly evaluated.</p>
 <p>Code inside the rich comment block will not be evaluated when evaluating the current buffer or loading the namespace.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">(</span><span class="nf">comment</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">(</span><span class="nf">comment</span>
 <a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a>
-<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">  </span><span class="p">(</span><span class="nf">require</span><span class="w"> </span><span class="o">'</span><span class="p">[</span><span class="nv">clojure.tools.namespace.repl</span><span class="w"> </span><span class="ss">:refer</span><span class="w"> </span><span class="p">[</span><span class="nv">refresh</span><span class="p">]])</span><span class="w"></span>
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">  </span><span class="p">(</span><span class="nf">require</span><span class="w"> </span><span class="o">'</span><span class="p">[</span><span class="nv">clojure.tools.namespace.repl</span><span class="w"> </span><span class="ss">:refer</span><span class="w"> </span><span class="p">[</span><span class="nv">refresh</span><span class="p">]])</span>
 <a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a>
-<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">  </span><span class="p">(</span><span class="nf">refresh</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="p">)</span><span class="w"></span>
+<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">  </span><span class="p">(</span><span class="nf">refresh</span><span class="p">)</span>
+<a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="p">)</span>
 </code></pre></div>
 <hr/>
 <div class="md-source-file">
@@ -2107,34 +2101,6 @@
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Interupt Eval" class="md-footer__link md-footer__link--prev" href="../interupt/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              Interupt Eval
-            </div>
-</div>
-</a>
-<a aria-label="Next: Intermediate values" class="md-footer__link md-footer__link--next" href="../enlighten/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              Intermediate values
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -2172,7 +2138,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -8,10 +8,12 @@
 <meta content="Practical guide to Clojure development with Spacemacs" name="description"/>
 <meta content="Practicalli" name="author"/>
 <link href="https://practical.li/spacemacs/install-spacemacs/pre-install/" rel="canonical"/>
+<link href="../../introduction/additional-resources/" rel="prev"/>
+<link href="../" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
 <title>Pre-install - Practicalli Spacemacs</title>
-<link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -341,7 +343,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_4" tabindex="0">
           Enhance Clojure
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -364,11 +366,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../evil-structural-editing/">
         Evil Structural Editing
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../fancify-symbols/">
-        Fancy Symbols
       </a>
 </li>
 <li class="md-nav__item">
@@ -433,7 +430,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11" id="__nav_3_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_11" tabindex="0">
           Start Emacs Instantly
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -458,7 +455,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12" id="__nav_3_12" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_12">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_12" tabindex="0">
           Update Spacemacs
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1951,7 +1948,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16" id="__nav_16" type="checkbox"/>
-<label class="md-nav__link" for="__nav_16">
+<label aria-expanded="false" class="md-nav__link" for="__nav_16" tabindex="0">
           To Review
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -2034,9 +2031,6 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/practicalli/spacemacs/edit/main/docs/install-spacemacs/pre-install.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="pre-install">Pre-install<a class="headerlink" href="#pre-install" title="Permanent link">λ︎</a></h1>
 <p>Spacemacs is a configuration for Emacs, so naturally <a href="#install-emacs">Emacs</a> should be installed before Spacemacs can be used.</p>
 <p><a href="#install-clojure-cli">Clojure CLI</a> should be installed to support Clojure development, along with several supporting development tools.</p>
@@ -2054,7 +2048,7 @@ Emacs 27.1 is the minimum version supported by Practicalli Spacemacs</p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><code>apt-cache show emacs</code> to check available versions of Emacs in the Ubuntu package manager. If version 28 is available, install Emacs using the Ubuntu package manager.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo apt install emacs
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>emacs
 </code></pre></div>
 <p>Additional versions of Emacs are available via the <a href="https://launchpad.net/~ubuntu-elisp/+archive/ubuntu/ppa">Ubuntu Emacs Team Personal Package Archive</a>.</p>
 <p><code>sudo apt install emacs-snapshot</code> package to use the latest nightly build of Emacs, although be aware that some things may break.</p>
@@ -2140,12 +2134,12 @@ Emacs 27.1 is the minimum version supported by Practicalli Spacemacs</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Ubuntu / Debian</label><label for="__tabbed_3_2">Homebrew / MacOSX</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo apt install locate
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>locate
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <p><a class="md-button" href="https://formulae.brew.sh/formula/findutils" target="_blank">findutils Homebrew findutils</a>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>brew install findutils
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>brew<span class="w"> </span>install<span class="w"> </span>findutils
 </code></pre></div></p>
 </div>
 </div>
@@ -2168,34 +2162,6 @@ Emacs 27.1 is the minimum version supported by Practicalli Spacemacs</p>
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Resources" class="md-footer__link md-footer__link--prev" href="../../introduction/additional-resources/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              Resources
-            </div>
-</div>
-</a>
-<a aria-label="Next: Install Spacemacs" class="md-footer__link md-footer__link--next" href="../" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              Install Spacemacs
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -2233,7 +2199,7 @@ Emacs 27.1 is the minimum version supported by Practicalli Spacemacs</p>
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

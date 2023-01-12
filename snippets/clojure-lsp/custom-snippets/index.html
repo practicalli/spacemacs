@@ -8,10 +8,12 @@
 <meta content="Practical guide to Clojure development with Spacemacs" name="description"/>
 <meta content="Practicalli" name="author"/>
 <link href="https://practical.li/spacemacs/snippets/clojure-lsp/custom-snippets/" rel="canonical"/>
+<link href="../" rel="prev"/>
+<link href="../practicalli-snippets/" rel="next"/>
 <link href="../../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
 <title>Custom snippets for Clojure LSP - Practicalli Spacemacs</title>
-<link href="../../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -289,7 +291,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_4" tabindex="0">
           Enhance Clojure
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -312,11 +314,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../../install-spacemacs/evil-structural-editing/">
         Evil Structural Editing
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../install-spacemacs/fancify-symbols/">
-        Fancy Symbols
       </a>
 </li>
 <li class="md-nav__item">
@@ -381,7 +378,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11" id="__nav_3_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_11" tabindex="0">
           Start Emacs Instantly
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -406,7 +403,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12" id="__nav_3_12" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_12">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_12" tabindex="0">
           Update Spacemacs
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1941,7 +1938,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16" id="__nav_16" type="checkbox"/>
-<label class="md-nav__link" for="__nav_16">
+<label aria-expanded="false" class="md-nav__link" for="__nav_16" tabindex="0">
           To Review
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -2014,9 +2011,6 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/practicalli/spacemacs/edit/main/docs/snippets/clojure-lsp/custom-snippets.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="custom-snippets-for-clojure-lsp">Custom snippets for Clojure LSP<a class="headerlink" href="#custom-snippets-for-clojure-lsp" title="Permanent link">λ︎</a></h1>
 <p><a href="https://clojure-lsp.io/settings/#snippets">Custom snippets</a> are defined in the Clojure LSP EDN configuration using the <code>:additional-snipets</code> key.  The snippet body uses the same tab stop and placeholder syntax as Yasnipets, although the body is contained within a string.</p>
 <p>Built-in snippets can include Clojure code for generating the text of the snippet when expanded.  Custom snippets do not currently support evaluation of code in the snippet.</p>
@@ -2036,9 +2030,9 @@
 <p><code>$0</code> marks the final position of the cursor, after which <code>TAB</code> has no more positions in the snippet to jump to.</p>
 <h3 id="snippet-current-form">Snippet current-form<a class="headerlink" href="#snippet-current-form" title="Permanent link">λ︎</a></h3>
 <p>When a Clojure LSP snipped includes <code>$current-form</code> then typing a snippet name in front of an existing Clojure form includes that form in the generated code.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span><span class="ss">:additional-snippets</span><span class="w"> </span><span class="p">[{</span><span class="ss">:name</span><span class="w"> </span><span class="s">"wrap-let-sexpr"</span><span class="w"></span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">                        </span><span class="ss">:detail</span><span class="w"> </span><span class="s">"Wrap current sexpr in let"</span><span class="w"></span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">                        </span><span class="ss">:snippet</span><span class="w"> </span><span class="s">"(let [$1 $current-form] $0)"</span><span class="p">}]}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span><span class="ss">:additional-snippets</span><span class="w"> </span><span class="p">[{</span><span class="ss">:name</span><span class="w"> </span><span class="s">"wrap-let-sexpr"</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">                        </span><span class="ss">:detail</span><span class="w"> </span><span class="s">"Wrap current sexpr in let"</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">                        </span><span class="ss">:snippet</span><span class="w"> </span><span class="s">"(let [$1 $current-form] $0)"</span><span class="p">}]}</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Limited scope with current-form</p>
@@ -2049,13 +2043,13 @@
 <p><code>${1:default-value}</code> is the form of a placeholder for tab stop 1.  When the cursor tabs to tab stop 1, the default-value text is highlighted and replaces as soon as characters are typed.</p>
 <p>Placeholder text is not replaced for <code>$0</code> tab-stop, as the snippet interaction is effectively over at this point.</p>
 <p>The <code>deftest</code> custom snippet shows examples of placeholders for three tab stops.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span><span class="ss">:name</span><span class="w"> </span><span class="s">"deftest"</span><span class="w"></span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w"> </span><span class="ss">:detail</span><span class="w"> </span><span class="s">"deftest clojure.test"</span><span class="w"></span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w"> </span><span class="ss">:snippet</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span><span class="ss">:name</span><span class="w"> </span><span class="s">"deftest"</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w"> </span><span class="ss">:detail</span><span class="w"> </span><span class="s">"deftest clojure.test"</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w"> </span><span class="ss">:snippet</span>
 <a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w"> </span><span class="s">"(deftest ${1:name}-test</span>
 <a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="s">    (testing \"${2:Context of the test assertions}\"</span>
 <a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="s">      (is (= ${3:assertion-values}))$4))</span>
-<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="s">  $0"</span><span class="p">}</span><span class="w"></span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="s">  $0"</span><span class="p">}</span>
 </code></pre></div>
 <div class="admonition hint">
 <p class="admonition-title">Escape string quotes in snippet body</p>
@@ -2065,12 +2059,12 @@
 <p>The built-in <code>defn</code> snippet uses Clojure code to help generate the snippet.</p>
 <p><code>%s</code> is a substitution point within a snippet, used by the standard Clojure <code>format</code> command, used to included either <code>defn ^:private</code> or <code>defn-</code>, depending on the value returned from the <code>if</code> expression.</p>
 <p><code>:use-metadata-for-privacy?</code> is a key from the Clojure LSP configuration</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="w"> </span><span class="p">{</span><span class="ss">:label</span><span class="w"> </span><span class="s">"defn-"</span><span class="w"></span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="ss">:detail</span><span class="w"> </span><span class="s">"Create private function"</span><span class="w"></span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="ss">:insert-text</span><span class="w"> </span><span class="p">(</span><span class="nf">format</span><span class="w"> </span><span class="s">"(defn%s ${1:name} [$2]\n  ${0:body})"</span><span class="w"></span>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">                       </span><span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="ss">:use-metadata-for-privacy?</span><span class="w"> </span><span class="nv">settings</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">                         </span><span class="s">" ^:private"</span><span class="w"></span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">                         </span><span class="s">"-"</span><span class="p">))}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="w"> </span><span class="p">{</span><span class="ss">:label</span><span class="w"> </span><span class="s">"defn-"</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="ss">:detail</span><span class="w"> </span><span class="s">"Create private function"</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="ss">:insert-text</span><span class="w"> </span><span class="p">(</span><span class="nf">format</span><span class="w"> </span><span class="s">"(defn%s ${1:name} [$2]\n  ${0:body})"</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">                       </span><span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="ss">:use-metadata-for-privacy?</span><span class="w"> </span><span class="nv">settings</span><span class="p">)</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">                         </span><span class="s">" ^:private"</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">                         </span><span class="s">"-"</span><span class="p">))}</span>
 </code></pre></div>
 <p>The syntax for built-in snippets is slightly different that the <code>:additional-syntax</code> form.  The internal form uses <code>:label</code> for <code>:name</code> and <code>:insert-text</code> for <code>:snippet</code>.</p>
 <div class="admonition hint">
@@ -2096,34 +2090,6 @@
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Clojure LSP Snippets" class="md-footer__link md-footer__link--prev" href="../" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              Clojure LSP Snippets
-            </div>
-</div>
-</a>
-<a aria-label="Next: Practicalli Snippets for Clojure LSP" class="md-footer__link md-footer__link--next" href="../practicalli-snippets/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              Practicalli Snippets for Clojure LSP
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -2161,7 +2127,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.ba449ae6.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

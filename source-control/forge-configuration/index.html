@@ -8,10 +8,12 @@
 <meta content="Practical guide to Clojure development with Spacemacs" name="description"/>
 <meta content="Practicalli" name="author"/>
 <link href="https://practical.li/spacemacs/source-control/forge-configuration/" rel="canonical"/>
+<link href="../git-configuration/" rel="prev"/>
+<link href="../github-clone/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
 <title>Forge Config - Practicalli Spacemacs</title>
-<link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -289,7 +291,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_4">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_4" tabindex="0">
           Enhance Clojure
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -312,11 +314,6 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../install-spacemacs/evil-structural-editing/">
         Evil Structural Editing
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../install-spacemacs/fancify-symbols/">
-        Fancy Symbols
       </a>
 </li>
 <li class="md-nav__item">
@@ -381,7 +378,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11" id="__nav_3_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_11" tabindex="0">
           Start Emacs Instantly
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -406,7 +403,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12" id="__nav_3_12" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_12">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_12" tabindex="0">
           Update Spacemacs
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1955,7 +1952,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16" id="__nav_16" type="checkbox"/>
-<label class="md-nav__link" for="__nav_16">
+<label aria-expanded="false" class="md-nav__link" for="__nav_16" tabindex="0">
           To Review
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -2042,9 +2039,6 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/practicalli/spacemacs/edit/main/docs/source-control/forge-configuration.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="magit-forge">Magit Forge<a class="headerlink" href="#magit-forge" title="Permanent link">λ︎</a></h1>
 <p>Magit can retrieve issues and pull request for a project and even create a new pull request, when connect to services provided by GitHub, GitLab and your own hosted environments.  Magit uses Forge to talk to these services and refers to these services collectively as forges.</p>
 <div class="admonition hint">
@@ -2055,7 +2049,7 @@
 <h2 id="set-username-for-the-forge-service">Set username for the Forge service<a class="headerlink" href="#set-username-for-the-forge-service" title="Permanent link">λ︎</a></h2>
 <p>Add your Forge username to your <code>~/.gitconfig</code> file for your operating system account.</p>
 <p>For example, if your username on GitHub is <code>practicalli</code>, then run this command in a terminal:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>git config --global github.user practicalli
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>github.user<span class="w"> </span>practicalli
 </code></pre></div>
 <p>If using GitLab, replace <code>github.user</code> with <code>gitlab.user</code> in the above command.</p>
 <h2 id="generating-a-token-for-api-access">Generating a token for API access<a class="headerlink" href="#generating-a-token-for-api-access" title="Permanent link">λ︎</a></h2>
@@ -2098,14 +2092,14 @@
 <h2 id="configure-spacemacs-to-use-authentication">Configure Spacemacs to use authentication<a class="headerlink" href="#configure-spacemacs-to-use-authentication" title="Permanent link">λ︎</a></h2>
 <p>Add the preferred file in which to store your token, by default this is <code>.authinfo</code>.  It is recommended to store this in <code>~/.authinfo.gpg</code></p>
 <p>Add <code>auth-sources</code> to specify the location of the encrypted token file in the <code>dotspacemacs/user-config</code> section of your <code>.spacemacs</code> file</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="w">  </span><span class="c1">;; Set the files that are searched for writing tokens</span><span class="w"></span>
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="c1">;; by default ~/.authinfo will be used</span><span class="w"></span>
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">auth-sources</span><span class="w"> </span><span class="o">'</span><span class="p">(</span><span class="s">"~/.authinfo.gpg"</span><span class="p">))</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="w">  </span><span class="c1">;; Set the files that are searched for writing tokens</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="c1">;; by default ~/.authinfo will be used</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">auth-sources</span><span class="w"> </span><span class="o">'</span><span class="p">(</span><span class="s">"~/.authinfo.gpg"</span><span class="p">))</span>
 </code></pre></div>
 <p>If using <code>XDG_CONFIG_HOME</code> for the location of the <code>authinfo.gpg</code> file.  The default location in <code>HOME</code> can also be included and the first file found will be used.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="w">  </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">auth-sources</span><span class="w"> </span><span class="p">(</span><span class="nf">list</span><span class="w"></span>
-<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">                      </span><span class="p">(</span><span class="nf">concat</span><span class="w"> </span><span class="p">(</span><span class="nv">getenv</span><span class="w"> </span><span class="s">"XDG_CONFIG_HOME"</span><span class="p">)</span><span class="w"> </span><span class="s">"/authinfo.gpg"</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">                      </span><span class="s">"~/.authinfo.gpg"</span><span class="p">))</span><span class="w">  </span><span class="c1">; (1)!</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="w">  </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">auth-sources</span><span class="w"> </span><span class="p">(</span><span class="nf">list</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">                      </span><span class="p">(</span><span class="nf">concat</span><span class="w"> </span><span class="p">(</span><span class="nv">getenv</span><span class="w"> </span><span class="s">"XDG_CONFIG_HOME"</span><span class="p">)</span><span class="w"> </span><span class="s">"/authinfo.gpg"</span><span class="p">)</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">                      </span><span class="s">"~/.authinfo.gpg"</span><span class="p">))</span><span class="w">  </span><span class="c1">; (1)!</span>
 </code></pre></div>
 <ol>
 <li><a href="https://github.com/practicalli/spacemacs.d" target="_blank">practicalli/spacemacs.d</a> configuration contains the <code>auth-sources</code> setting.</li>
@@ -2113,14 +2107,14 @@
 <h2 id="configure-the-number-of-open-and-closed-topics-shown-in-forge">Configure the number of open and closed topics shown in forge<a class="headerlink" href="#configure-the-number-of-open-and-closed-topics-shown-in-forge" title="Permanent link">λ︎</a></h2>
 <p>A topic is an issue or pull request and the list of each can be configured to display a number of open and closed items.</p>
 <p>The configuration will show 100 open topics and never show any closed topics, for both issues and pull requests.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="w"> </span><span class="p">(</span><span class="k">setq</span><span class="w">  </span><span class="nv">forge-topic-list-limit</span><span class="w"> </span><span class="o">'</span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w">  </span><span class="c1">; (1)!</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="w"> </span><span class="p">(</span><span class="k">setq</span><span class="w">  </span><span class="nv">forge-topic-list-limit</span><span class="w"> </span><span class="o">'</span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w">  </span><span class="c1">; (1)!</span>
 </code></pre></div>
 <ol>
 <li><a href="https://github.com/practicalli/spacemacs.d" target="_blank">practicalli/spacemacs.d</a> configuration contains the forge list limit settings.</li>
 </ol>
 <p>To occasionally show closed topics, set the closed value to a negative number to the number of closed items wanted to be displayed.</p>
 <p><code>SPC SPC forge-toggle-closed-visibility</code> to toggle the view of closed topics in each list</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="w"> </span><span class="p">(</span><span class="k">setq</span><span class="w">  </span><span class="nv">forge-topic-list-limit</span><span class="w"> </span><span class="o">'</span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">-10</span><span class="p">))</span><span class="w">  </span><span class="c1">; (1)!</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="w"> </span><span class="p">(</span><span class="k">setq</span><span class="w">  </span><span class="nv">forge-topic-list-limit</span><span class="w"> </span><span class="o">'</span><span class="p">(</span><span class="mi">100</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="mi">-10</span><span class="p">))</span><span class="w">  </span><span class="c1">; (1)!</span>
 </code></pre></div>
 <ol>
 <li><a href="https://github.com/practicalli/spacemacs.d" target="_blank">practicalli/spacemacs.d</a> configuration contains the forge list limit settings.</li>
@@ -2130,11 +2124,11 @@
 <p>For GitHub enterprise or GitLab self-hosted service, <a href="https://magit.vc/manual/ghub/Setting-the-Username.html#Setting-the-Username" target="_blank">specify the user and API</a> that Forge should use to connect for the hosted service service</p>
 <p>For example, if the API is available at <a href="https://practical.li/api/v3">https://practical.li/api/v3</a></p>
 <p>Set the username for the specific service in the <code>~/.gitconfig</code> file:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>git config --global github.example.com/api/v3.user EMPLOYEE
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>github.example.com/api/v3.user<span class="w"> </span>EMPLOYEE
 </code></pre></div>
 <p>Add the API location to the local configuration of every repository that will use that service</p>
-<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nb">cd</span> /path/to/repo
-<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>git config github.host example.com/api/v3
+<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nb">cd</span><span class="w"> </span>/path/to/repo
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>git<span class="w"> </span>config<span class="w"> </span>github.host<span class="w"> </span>example.com/api/v3
 </code></pre></div>
 * <a href="https://mrdias.com/2018/04/01/using-magit-with-github-enterprise.html" target="_blank">Using magit GitHub Enterprise</a> - Jorge Dias</p>
 <hr/>
@@ -2155,34 +2149,6 @@
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Git Config" class="md-footer__link md-footer__link--prev" href="../git-configuration/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              Git Config
-            </div>
-</div>
-</a>
-<a aria-label="Next: GitHub Clone" class="md-footer__link md-footer__link--next" href="../github-clone/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              GitHub Clone
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -2220,7 +2186,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

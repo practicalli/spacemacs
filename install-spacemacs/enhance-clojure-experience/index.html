@@ -8,10 +8,12 @@
 <meta content="Practical guide to Clojure development with Spacemacs" name="description"/>
 <meta content="Practicalli" name="author"/>
 <link href="https://practical.li/spacemacs/install-spacemacs/enhance-clojure-experience/" rel="canonical"/>
+<link href="../clojure-layer/" rel="prev"/>
+<link href="../smartparens/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
 <title>Enhanced Clojure experience - Practicalli Spacemacs</title>
-<link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -289,7 +291,7 @@
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" id="__nav_3_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_4">
+<label aria-expanded="true" class="md-nav__link" for="__nav_3_4" tabindex="0">
           Enhance Clojure
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -383,11 +385,6 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../fancify-symbols/">
-        Fancy Symbols
-      </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="../clj-kondo-via-lsp/">
         clj-kondo Server
       </a>
@@ -449,7 +446,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11" id="__nav_3_11" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_11">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_11" tabindex="0">
           Start Emacs Instantly
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -474,7 +471,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12" id="__nav_3_12" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_12">
+<label aria-expanded="false" class="md-nav__link" for="__nav_3_12" tabindex="0">
           Update Spacemacs
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1967,7 +1964,7 @@
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_16" id="__nav_16" type="checkbox"/>
-<label class="md-nav__link" for="__nav_16">
+<label aria-expanded="false" class="md-nav__link" for="__nav_16" tabindex="0">
           To Review
           <span class="md-nav__icon md-icon"></span>
 </label>
@@ -2066,9 +2063,6 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/practicalli/spacemacs/edit/main/docs/install-spacemacs/enhance-clojure-experience.md" title="Edit this page">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="enhanced-clojure-experience">Enhanced Clojure experience<a class="headerlink" href="#enhanced-clojure-experience" title="Permanent link">λ︎</a></h1>
 <p>Enhance the <strong>clojure</strong> layer by adding automatic linting (clj-kondo), refactoring (clj-refactor) and recommended CIDER options.  Complement the Clojure layer with general development tools including a git client (Magit), markdown and org-mode support.</p>
 <p><a href="/install-spacemacs/#clone-practicalli-spacemacs-configuration">practicalli/spacemacs.d</a> provides a documented configuration of the layers for Clojure development and many useful customization's for Spacemacs.</p>
@@ -2150,126 +2144,126 @@
 <h2 id="auto-completion">Auto-completion<a class="headerlink" href="#auto-completion" title="Permanent link">λ︎</a></h2>
 <p>Enable auto-completion for programming languages.  In Clojure this includes functions, namespaces and other symbols.</p>
 <p>Yasnippet are included in the auto-completion popup and are sorted with the most frequently used snippets first.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">(</span><span class="nv">auto-completion</span><span class="w"> </span><span class="nb">:variables</span><span class="w"></span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">                 </span><span class="nv">auto-completion-enable-help-tooltip</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">                 </span><span class="nv">auto-completion-enable-snippets-in-popup</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">                 </span><span class="nv">auto-completion-enable-sort-by-usage</span><span class="w"> </span><span class="no">t</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">(</span><span class="nv">auto-completion</span><span class="w"> </span><span class="nb">:variables</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">                 </span><span class="nv">auto-completion-enable-help-tooltip</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">                 </span><span class="nv">auto-completion-enable-snippets-in-popup</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">                 </span><span class="nv">auto-completion-enable-sort-by-usage</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
 </code></pre></div>
 <p>To have auto-completion as soon as typing starts, add <code>auto-completion-idle-delay nil</code> to the auto-completion variables</p>
 <h2 id="clojure">Clojure<a class="headerlink" href="#clojure" title="Permanent link">λ︎</a></h2>
 <p>Enable Clojure support but differ the backend to Clojure LSP rather than CIDER.  The clojure-lsp binary should be downloaded automatically.</p>
 <p>Enable the kaocha-runner to use Kaocha test runner from within the REPL.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">(</span><span class="nv">clojure</span><span class="w"> </span><span class="nb">:variables</span><span class="w"></span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">         </span><span class="nv">cider-repl-display-help-banner</span><span class="w"> </span><span class="no">nil</span><span class="w">      </span><span class="c1">;; disable help banner</span><span class="w"></span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">         </span><span class="nv">cider-pprint-fn</span><span class="w"> </span><span class="ss">'fipp</span><span class="w">                   </span><span class="c1">;; fast pretty printing</span><span class="w"></span>
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">         </span><span class="nv">cider-overlays-use-font-lock</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">         </span><span class="nv">cider-repl-buffer-size-limit</span><span class="w"> </span><span class="mi">100</span><span class="w">        </span><span class="c1">;; limit lines shown in REPL buffer to prevent performance issues</span><span class="w"></span>
-<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">         </span><span class="nv">clojure-indent-style</span><span class="w"> </span><span class="ss">'align-arguments</span><span class="w"></span>
-<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">         </span><span class="nv">clojure-align-forms-automatically</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">         </span><span class="nv">clojure-toplevel-inside-comment-form</span><span class="w"> </span><span class="no">t</span><span class="w">  </span><span class="c1">;; evaluate expressions in comment as top level</span><span class="w"></span>
-<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">         </span><span class="nv">clojure-enable-kaocha-runner</span><span class="w"> </span><span class="no">t</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">(</span><span class="nv">clojure</span><span class="w"> </span><span class="nb">:variables</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">         </span><span class="nv">cider-repl-display-help-banner</span><span class="w"> </span><span class="no">nil</span><span class="w">      </span><span class="c1">;; disable help banner</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">         </span><span class="nv">cider-pprint-fn</span><span class="w"> </span><span class="ss">'fipp</span><span class="w">                   </span><span class="c1">;; fast pretty printing</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">         </span><span class="nv">cider-overlays-use-font-lock</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">         </span><span class="nv">cider-repl-buffer-size-limit</span><span class="w"> </span><span class="mi">100</span><span class="w">        </span><span class="c1">;; limit lines shown in REPL buffer to prevent performance issues</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">         </span><span class="nv">clojure-indent-style</span><span class="w"> </span><span class="ss">'align-arguments</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">         </span><span class="nv">clojure-align-forms-automatically</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">         </span><span class="nv">clojure-toplevel-inside-comment-form</span><span class="w"> </span><span class="no">t</span><span class="w">  </span><span class="c1">;; evaluate expressions in comment as top level</span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">         </span><span class="nv">clojure-enable-kaocha-runner</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
 </code></pre></div>
 <p>Add the variable <code>cider-result-overlay-position 'at-point</code> to show results shown right after expression (useful for evaluated a nested expression). Otherwise results from evaluating expressions show at the end of the top-level expression.</p>
 <h2 id="git-and-github">Git and GitHub<a class="headerlink" href="#git-and-github" title="Permanent link">λ︎</a></h2>
 <p>Enable Magit Git client in Emacs and open Magit Status, <code>SPC g s</code> full screen (q restores previous layout). Show word-granularity differences in current diff hunk.</p>
 <p>Enable GitHub features to clone repositories, push commits and create pull requests (Magit Forge) all from within Emacs.</p>
 <p>Enable fringe highlight of version control (Git) changes in buffers</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">(</span><span class="nv">git</span><span class="w"> </span><span class="nb">:variables</span><span class="w"></span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">     </span><span class="nv">git-magit-status-fullscreen</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">     </span><span class="nv">magit-diff-refine-hunk</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">     </span><span class="nv">git-enable-magit-todos-plugin</span><span class="w"> </span><span class="no">t</span><span class="p">)</span><span class="w"></span>
-<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nv">github</span><span class="w"></span>
-<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">(</span><span class="nv">version-control</span><span class="w"> </span><span class="nb">:variables</span><span class="w"></span>
-<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">                 </span><span class="nv">version-control-diff-tool</span><span class="w"> </span><span class="ss">'diff-hl</span><span class="w"></span>
-<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">                 </span><span class="nv">version-control-global-margin</span><span class="w"> </span><span class="no">t</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">(</span><span class="nv">git</span><span class="w"> </span><span class="nb">:variables</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">     </span><span class="nv">git-magit-status-fullscreen</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">     </span><span class="nv">magit-diff-refine-hunk</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">     </span><span class="nv">git-enable-magit-todos-plugin</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nv">github</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">(</span><span class="nv">version-control</span><span class="w"> </span><span class="nb">:variables</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">                 </span><span class="nv">version-control-diff-tool</span><span class="w"> </span><span class="ss">'diff-hl</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">                 </span><span class="nv">version-control-global-margin</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="language-server-protocol-lsp">Language Server Protocol (LSP)<a class="headerlink" href="#language-server-protocol-lsp" title="Permanent link">λ︎</a></h2>
 <p>Clojure LSP provides common editor features across all Clojure aware editors.  A configuration with minimal visual impact.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">(</span><span class="nv">lsp</span><span class="w"> </span><span class="nb">:variables</span><span class="w"></span>
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">     </span><span class="c1">;; Formatting and indentation</span><span class="w"></span>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">     </span><span class="nv">lsp-enable-on-type-formatting</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">     </span><span class="nv">lsp-enable-indentation</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">     </span><span class="nv">lsp-enable-snippet</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">(</span><span class="nv">lsp</span><span class="w"> </span><span class="nb">:variables</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">     </span><span class="c1">;; Formatting and indentation</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">     </span><span class="nv">lsp-enable-on-type-formatting</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">     </span><span class="nv">lsp-enable-indentation</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">     </span><span class="nv">lsp-enable-snippet</span><span class="w"> </span><span class="no">t</span>
 <a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a>
-<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">     </span><span class="nv">lsp-enable-symbol-highlighting</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">     </span><span class="nv">lsp-enable-symbol-highlighting</span><span class="w"> </span><span class="no">t</span>
 <a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>
-<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">     </span><span class="c1">;; popup documentation</span><span class="w"></span>
-<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">     </span><span class="nv">lsp-ui-doc-enable</span><span class="w"> </span><span class="no">t</span><span class="w">               </span><span class="c1">;; documentation popups</span><span class="w"></span>
-<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">     </span><span class="nv">lsp-ui-doc-show-with-cursor</span><span class="w"> </span><span class="no">nil</span><span class="w">   </span><span class="c1">;; doc popup triggered by cursor</span><span class="w"></span>
-<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">     </span><span class="nv">lsp-ui-doc-show-with-mouse</span><span class="w"> </span><span class="no">nil</span><span class="w">    </span><span class="c1">;; doc popup triggered by mouse</span><span class="w"></span>
-<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">     </span><span class="nv">lsp-ui-doc-delay</span><span class="w"> </span><span class="mi">1</span><span class="w">                </span><span class="c1">;; delay in seconds for popup to display</span><span class="w"></span>
-<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">     </span><span class="nv">lsp-ui-doc-include-signature</span><span class="w"> </span><span class="no">t</span><span class="w">    </span><span class="c1">;; include function signature</span><span class="w"></span>
-<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">     </span><span class="c1">;; lsp-ui-doc-position 'top       ;; top bottom at-point</span><span class="w"></span>
-<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">     </span><span class="c1">;; lsp-ui-doc-alignment 'window   ;; frame window</span><span class="w"></span>
+<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">     </span><span class="c1">;; popup documentation</span>
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">     </span><span class="nv">lsp-ui-doc-enable</span><span class="w"> </span><span class="no">t</span><span class="w">               </span><span class="c1">;; documentation popups</span>
+<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">     </span><span class="nv">lsp-ui-doc-show-with-cursor</span><span class="w"> </span><span class="no">nil</span><span class="w">   </span><span class="c1">;; doc popup triggered by cursor</span>
+<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">     </span><span class="nv">lsp-ui-doc-show-with-mouse</span><span class="w"> </span><span class="no">nil</span><span class="w">    </span><span class="c1">;; doc popup triggered by mouse</span>
+<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">     </span><span class="nv">lsp-ui-doc-delay</span><span class="w"> </span><span class="mi">1</span><span class="w">                </span><span class="c1">;; delay in seconds for popup to display</span>
+<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">     </span><span class="nv">lsp-ui-doc-include-signature</span><span class="w"> </span><span class="no">t</span><span class="w">    </span><span class="c1">;; include function signature</span>
+<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">     </span><span class="c1">;; lsp-ui-doc-position 'top       ;; top bottom at-point</span>
+<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">     </span><span class="c1">;; lsp-ui-doc-alignment 'window   ;; frame window</span>
 <a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a>
-<a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">     </span><span class="c1">;; code actions and diagnostics text as right-hand side of buffer</span><span class="w"></span>
-<a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">     </span><span class="nv">lsp-ui-sideline-enable</span><span class="w"> </span><span class="no">nil</span><span class="w"></span>
-<a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">     </span><span class="nv">lsp-ui-sideline-show-code-actions</span><span class="w"> </span><span class="no">nil</span><span class="w"></span>
-<a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">     </span><span class="c1">;; lsp-ui-sideline-delay 500</span><span class="w"></span>
-<a href="#__codelineno-3-22" id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">     </span><span class="c1">;; lsp-ui-sideline-show-diagnostics nil</span><span class="w"></span>
+<a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">     </span><span class="c1">;; code actions and diagnostics text as right-hand side of buffer</span>
+<a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">     </span><span class="nv">lsp-ui-sideline-enable</span><span class="w"> </span><span class="no">nil</span>
+<a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">     </span><span class="nv">lsp-ui-sideline-show-code-actions</span><span class="w"> </span><span class="no">nil</span>
+<a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">     </span><span class="c1">;; lsp-ui-sideline-delay 500</span>
+<a href="#__codelineno-3-22" id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">     </span><span class="c1">;; lsp-ui-sideline-show-diagnostics nil</span>
 <a href="#__codelineno-3-23" id="__codelineno-3-23" name="__codelineno-3-23"></a>
-<a href="#__codelineno-3-24" id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">     </span><span class="c1">;; function reference count and test coverage</span><span class="w"></span>
-<a href="#__codelineno-3-25" id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">     </span><span class="nv">lsp-lens-enable</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
+<a href="#__codelineno-3-24" id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">     </span><span class="c1">;; function reference count and test coverage</span>
+<a href="#__codelineno-3-25" id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">     </span><span class="nv">lsp-lens-enable</span><span class="w"> </span><span class="no">t</span>
 <a href="#__codelineno-3-26" id="__codelineno-3-26" name="__codelineno-3-26"></a>
-<a href="#__codelineno-3-27" id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">     </span><span class="c1">;; Efficient use of space in treemacs-lsp display</span><span class="w"></span>
-<a href="#__codelineno-3-28" id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">     </span><span class="nv">treemacs-space-between-root-nodes</span><span class="w"> </span><span class="no">nil</span><span class="w"></span>
+<a href="#__codelineno-3-27" id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">     </span><span class="c1">;; Efficient use of space in treemacs-lsp display</span>
+<a href="#__codelineno-3-28" id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">     </span><span class="nv">treemacs-space-between-root-nodes</span><span class="w"> </span><span class="no">nil</span>
 <a href="#__codelineno-3-29" id="__codelineno-3-29" name="__codelineno-3-29"></a>
-<a href="#__codelineno-3-30" id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">     </span><span class="c1">;; Optimization for large files</span><span class="w"></span>
-<a href="#__codelineno-3-31" id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">     </span><span class="nv">lsp-file-watch-threshold</span><span class="w"> </span><span class="mi">10000</span><span class="w"></span>
-<a href="#__codelineno-3-32" id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">     </span><span class="nv">lsp-log-io</span><span class="w"> </span><span class="no">nil</span><span class="p">)</span><span class="w"></span>
+<a href="#__codelineno-3-30" id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">     </span><span class="c1">;; Optimization for large files</span>
+<a href="#__codelineno-3-31" id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">     </span><span class="nv">lsp-file-watch-threshold</span><span class="w"> </span><span class="mi">10000</span>
+<a href="#__codelineno-3-32" id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">     </span><span class="nv">lsp-log-io</span><span class="w"> </span><span class="no">nil</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="multiple-cursors">Multiple cursors<a class="headerlink" href="#multiple-cursors" title="Permanent link">λ︎</a></h2>
 <p>Edit multiple lines of text concurrently by creating multiple cursors, especially useful for editing the form of lines which have different values.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nv">multiple-cursors</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nv">multiple-cursors</span>
 </code></pre></div>
 <h2 id="org-mode">Org-mode<a class="headerlink" href="#org-mode" title="Permanent link">λ︎</a></h2>
 <p>Enable Spacemacs Org-mode with support for a range of additional features useful for development, including a custom TODO list workflow.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">(</span><span class="nv">org</span><span class="w"> </span><span class="nb">:variables</span><span class="w"></span>
-<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">     </span><span class="nv">org-enable-github-support</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">     </span><span class="nv">org-enable-bootstrap-support</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">     </span><span class="nv">org-enable-reveal-js-support</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">     </span><span class="nv">org-want-todo-bindings</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">     </span><span class="nv">org-enable-org-journal-support</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">     </span><span class="nv">org-journal-dir</span><span class="w"> </span><span class="s">"~/projects/journal/"</span><span class="w"></span>
-<a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">     </span><span class="nv">org-journal-file-format</span><span class="w"> </span><span class="s">"%Y-%m-%d"</span><span class="w"></span>
-<a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">     </span><span class="nv">org-journal-date-prefix</span><span class="w"> </span><span class="s">"#+TITLE: "</span><span class="w"></span>
-<a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">     </span><span class="nv">org-journal-date-format</span><span class="w"> </span><span class="s">"%A, %B %d %Y"</span><span class="w"></span>
-<a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">     </span><span class="nv">org-journal-time-prefix</span><span class="w"> </span><span class="s">"* "</span><span class="w"></span>
-<a href="#__codelineno-5-12" id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">     </span><span class="nv">org-journal-time-format</span><span class="w"> </span><span class="s">""</span><span class="w"></span>
-<a href="#__codelineno-5-13" id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">     </span><span class="nv">org-journal-carryover-items</span><span class="w"> </span><span class="s">"TODO=\"TODO\"|TODO=\"DOING\"|TODO=\"BLOCKED\"|TODO=\"REVIEW\""</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">(</span><span class="nv">org</span><span class="w"> </span><span class="nb">:variables</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">     </span><span class="nv">org-enable-github-support</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">     </span><span class="nv">org-enable-bootstrap-support</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">     </span><span class="nv">org-enable-reveal-js-support</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">     </span><span class="nv">org-want-todo-bindings</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">     </span><span class="nv">org-enable-org-journal-support</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">     </span><span class="nv">org-journal-dir</span><span class="w"> </span><span class="s">"~/projects/journal/"</span>
+<a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">     </span><span class="nv">org-journal-file-format</span><span class="w"> </span><span class="s">"%Y-%m-%d"</span>
+<a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">     </span><span class="nv">org-journal-date-prefix</span><span class="w"> </span><span class="s">"#+TITLE: "</span>
+<a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">     </span><span class="nv">org-journal-date-format</span><span class="w"> </span><span class="s">"%A, %B %d %Y"</span>
+<a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">     </span><span class="nv">org-journal-time-prefix</span><span class="w"> </span><span class="s">"* "</span>
+<a href="#__codelineno-5-12" id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">     </span><span class="nv">org-journal-time-format</span><span class="w"> </span><span class="s">""</span>
+<a href="#__codelineno-5-13" id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">     </span><span class="nv">org-journal-carryover-items</span><span class="w"> </span><span class="s">"TODO=\"TODO\"|TODO=\"DOING\"|TODO=\"BLOCKED\"|TODO=\"REVIEW\""</span>
 <a href="#__codelineno-5-14" id="__codelineno-5-14" name="__codelineno-5-14"></a>
-<a href="#__codelineno-5-15" id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">     </span><span class="c1">;; org-enable-jira-support t</span><span class="w"></span>
-<a href="#__codelineno-5-16" id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">     </span><span class="c1">;; jiralib-url "https://org-domain.atlassian.net:443"</span><span class="w"></span>
-<a href="#__codelineno-5-17" id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">     </span><span class="p">)</span><span class="w"></span>
+<a href="#__codelineno-5-15" id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">     </span><span class="c1">;; org-enable-jira-support t</span>
+<a href="#__codelineno-5-16" id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">     </span><span class="c1">;; jiralib-url "https://org-domain.atlassian.net:443"</span>
+<a href="#__codelineno-5-17" id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">     </span><span class="p">)</span>
 </code></pre></div>
 <h2 id="layouts">Layouts<a class="headerlink" href="#layouts" title="Permanent link">λ︎</a></h2>
 <p>spacemacs-layouts layer added to set variables, <code>SPC TAB</code> restricted to current layout buffers</p>
 <p>Kill buffers when killing layer - SPC l x</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">(</span><span class="nv">spacemacs-layouts</span><span class="w"> </span><span class="nb">:variables</span><span class="w"></span>
-<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">                   </span><span class="nv">spacemacs-layouts-restrict-spc-tab</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">                   </span><span class="nv">persp-autokill-buffer-on-remove</span><span class="w"> </span><span class="ss">'kill-weak</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">(</span><span class="nv">spacemacs-layouts</span><span class="w"> </span><span class="nb">:variables</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">                   </span><span class="nv">spacemacs-layouts-restrict-spc-tab</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">                   </span><span class="nv">persp-autokill-buffer-on-remove</span><span class="w"> </span><span class="ss">'kill-weak</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="configure-doom-modeline">Configure Doom modeline<a class="headerlink" href="#configure-doom-modeline" title="Permanent link">λ︎</a></h2>
 <p>Configuration used by Practicalli for the Doom modeline, based on the configuration: <a href="https://github.com/seagle0128/doom-modeline#customize">seagle0128/doom-modeline</a></p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">(</span><span class="nv">spacemacs-modeline</span><span class="w"> </span><span class="nb">:variables</span><span class="w"></span>
-<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">                    </span><span class="nv">doom-modeline-height</span><span class="w"> </span><span class="mi">12</span><span class="w"></span>
-<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">                    </span><span class="nv">doom-modeline-major-mode-color-icon</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">                    </span><span class="nv">doom-modeline-buffer-file-name-style</span><span class="w"> </span><span class="ss">'relative-to-project</span><span class="w"></span>
-<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">                    </span><span class="nv">doom-modeline-display-default-persp-name</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">                    </span><span class="nv">doom-modeline-minor-modes</span><span class="w"> </span><span class="no">nil</span><span class="w"></span>
-<a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">                    </span><span class="nv">doom-modeline-modal-icon</span><span class="w"> </span><span class="no">nil</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">(</span><span class="nv">spacemacs-modeline</span><span class="w"> </span><span class="nb">:variables</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">                    </span><span class="nv">doom-modeline-height</span><span class="w"> </span><span class="mi">12</span>
+<a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">                    </span><span class="nv">doom-modeline-major-mode-color-icon</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">                    </span><span class="nv">doom-modeline-buffer-file-name-style</span><span class="w"> </span><span class="ss">'relative-to-project</span>
+<a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">                    </span><span class="nv">doom-modeline-display-default-persp-name</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">                    </span><span class="nv">doom-modeline-minor-modes</span><span class="w"> </span><span class="no">nil</span>
+<a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">                    </span><span class="nv">doom-modeline-modal-icon</span><span class="w"> </span><span class="no">nil</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="spell-checking">Spell checking<a class="headerlink" href="#spell-checking" title="Permanent link">λ︎</a></h2>
 <p>Spell as you type with Flyspell package, which requires external command such as ispell, hunspell, aspell</p>
 <p><code>SPC S s</code> to check the spelling of the current word</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nv">spell-checking</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nv">spell-checking</span>
 </code></pre></div>
 <h2 id="programming-ligatures">Programming Ligatures<a class="headerlink" href="#programming-ligatures" title="Permanent link">λ︎</a></h2>
 <p>Support font ligatures (fancy symbols) in all programming language modes, when using Fira Codes and other fonts that support ligatures.</p>
 <p>Including ligatures for text-mode may cause issues with org-mode and magit.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="p">(</span><span class="nv">unicode-fonts</span><span class="w"> </span><span class="nb">:variables</span><span class="w"></span>
-<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">               </span><span class="nv">unicode-fonts-enable-ligatures</span><span class="w"> </span><span class="no">t</span><span class="w"></span>
-<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">               </span><span class="nv">unicode-fonts-ligature-modes</span><span class="w"> </span><span class="o">'</span><span class="p">(</span><span class="nv">prog-mode</span><span class="p">))</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="p">(</span><span class="nv">unicode-fonts</span><span class="w"> </span><span class="nb">:variables</span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">               </span><span class="nv">unicode-fonts-enable-ligatures</span><span class="w"> </span><span class="no">t</span>
+<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">               </span><span class="nv">unicode-fonts-ligature-modes</span><span class="w"> </span><span class="o">'</span><span class="p">(</span><span class="nv">prog-mode</span><span class="p">))</span>
 </code></pre></div>
 <hr/>
 <div class="md-source-file">
@@ -2289,34 +2283,6 @@
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: Clojure Layer" class="md-footer__link md-footer__link--prev" href="../clojure-layer/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Previous
-              </span>
-              Clojure Layer
-            </div>
-</div>
-</a>
-<a aria-label="Next: Smartparens" class="md-footer__link md-footer__link--next" href="../smartparens/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                Next
-              </span>
-              Smartparens
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -2354,7 +2320,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
