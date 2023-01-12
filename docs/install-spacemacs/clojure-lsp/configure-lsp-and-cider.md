@@ -1,51 +1,52 @@
 # Configure LSP and Cider
 
-The [Spacemacs lsp layer](https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Btools/lsp){target=_blank} has a [default configuration](https://github.com/syl20bnr/spacemacs/blob/develop/layers/+tools/lsp/config.el){target=_blank} for all languages
+[Lsp layer](https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Btools/lsp){target=_blank} defines a [common configuration](https://github.com/syl20bnr/spacemacs/blob/develop/layers/+tools/lsp/config.el){target=_blank} for all languages in Spacemacs.
 
 The [LSP Mode website provides examples of LSP features](https://emacs-lsp.github.io/lsp-mode/){target=_blank} and there is a long [list of LSP settings](https://emacs-lsp.github.io/lsp-mode/page/settings/){target=_blank}
 
-Add `clojure-backend 'cider` as a clojure layer variable to the `clojure` layer in the `.spacemacs` file to run Cider without LSP features.
+
+!!! INFO "Disable LSP for Clojure"
+    Set the clojure layer variable `clojure-backend` to `cider` to disable LSP features and use CIDER for auto-completion and formatting of code.
 
 
-!!! HINT "Start with Minimal Features and add when useful"
+??? HINT "Start with Minimal Features and add when useful"
     Practicalli recommends starting with [a minimal LSP configuration](https://github.com/practicalli/spacemacs.d/){target=_blank} to avoid conflict with features that are present in Cider.  LSP features can be enabled when you find them valuable.
 
     [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/){target=_blank} configuration for Spacemacs included a minimal configuration for Cider and Clojure-lsp.
     This configuration uses predominately CIDER features.  Minimal LSP UI elements and features are added without distracting from the minimal Spacemacs experience.
 
 
-
 ## Pre-requisites
 
-`SPC SPC all-the-icons-install-fonts` command will install icons that support the [breadcrumbs on headerline feature](https://emacs-lsp.github.io/lsp-mode/page/main-features/#breadcrumb-on-headerline) of LSP UI.  This provides the director path, file name and symbol as a breadcrumb trail at the top of each buffer.
+LSP UI requires icons provides by the [all-the icons font](https://github.com/domtronn/all-the-icons.el) to support the [breadcrumbs on headerline feature](https://emacs-lsp.github.io/lsp-mode/page/main-features/#breadcrumb-on-headerline) and Treemacs visual elements.
+
+`SPC SPC all-the-icons-install-fonts` command installs the required icons
 
 ![Spacemacs LSP breadcrumbs](/images/spacemacs-lsp-breadcumbs.png)
 
 
-## Optional - clj-kondo
+### Disable Live Linting tools
 
-clojure-lsp includes the latest clj-kondo binary if not found on the execution path. so any external install of the clj-kondo binary is optional.
+clojure-lsp includes the latest clj-kondo binary which is used to generate the static analysis of the project code.
 
-Remove the flycheck-clj-kondo configuration, `clojure-enable-linters 'clj-kondo`, from the `clojure` layer in `.spacemacs` to avoid duplication of results.
+Remove `clojure-enable-linters 'clj-kondo` from the `clojure` layer variable in the Spacemacs configuration to avoid duplication of results.
 
 
 ## Spacemacs Clojure layer configuration
 
-[practicalli/spacemacs.d configuration](https://github.com/practicalli/spacemacs.d/){target=_blank} uses clojure-mode features for indenting and aligning forms as you type.
+[practicalli/spacemacs.d configuration](https://github.com/practicalli/spacemacs.d/){target=_blank} uses clojure-mode features for indenting and aligning forms as you type.  Optomisations include using fipp to generate pretty print output and limiting the size of the repl buffer to keep Emacs responsive.
 
-In .spacemacs, the clojure layer variables allow for evaluating top-level forms from within a rich comment block.  The size limit helps avoid slow-down of Emacs from too much output in the REPL buffer.
-
-```emacs title="Spacemacs configuration - `dotspacemacs-layer-configuration`"
+```emacs title="Spacemacs configuration - `dotspacemacs-configuration-layers`"
      (clojure :variables
      ;; clojure-backend 'cider               ;; use cider and disable lsp
      ;; clojure-enable-linters 'clj-kondo    ;; clj-kondo included in lsp
      cider-repl-display-help-banner nil      ;; disable help banner
      cider-pprint-fn 'fipp                   ;; fast pretty printing
-     clojure-indent-style 'align-arguments
-     clojure-align-forms-automatically t
+     clojure-indent-style 'align-arguments   ;; vertically align forms
+     clojure-align-forms-automatically t     ;; align form while typing
      clojure-toplevel-inside-comment-form t  ;; evaluate expressions in comment as top level
      cider-result-overlay-position 'at-point ;; results shown right after expression
-     cider-overlays-use-font-lock t
+     cider-overlays-use-font-lock t          ;; use font face everywhere
      cider-repl-buffer-size-limit 100        ;; limit lines shown in REPL buffer
      )
 ```
@@ -58,24 +59,9 @@ In .spacemacs, the clojure layer variables allow for evaluating top-level forms 
 !!! INFO "LSP aligning forms not fully supported"
     [Support for associative syntax alignment](https://github.com/weavejester/cljfmt/issues/36) is an issue to add aligning forms to cljfmt, which is used by LSP for formatting.
 
-Automatic aligning of forms works with `clojure-mode` by configuring `aggressive-indent-mode`, however, this seriously conflicts with LSP formatting creating an unworkable editing experience.
-
-To auto-align arguments using clojure-mode, set `lsp-enable-on-type-formatting` to `nil` in the `lsp` layer configuration.  Then add the following configuration in `dotspacemacs/user-config` section of `.spacemacs`
-
-```emacs title="Spacemacs Configuration - dotspacemacs/user-config"
-  ;; Indentation of function forms
-  ;; https://github.com/clojure-emacs/clojure-mode#indentation-of-function-forms
-  (setq clojure-indent-style 'align-arguments)
-  ;;
-  ;; Vertically align s-expressions
-  ;; https://github.com/clojure-emacs/clojure-mode#vertical-alignment
-  (setq clojure-align-forms-automatically t)
-  ;;
-  ;; Auto-indent code automatically
-  ;; WARNING - really conflicts with LSP formatting - set lsp-enable-on-type-formatting to nil in lsp layer
-  ;; https://emacsredux.com/blog/2016/02/07/auto-indent-your-code-with-aggressive-indent-mode/
-  (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
-```
+!!! WARNING "Aggressive Indent Mode conflicts with LSP"
+    Adding aggressive-indent-mode as a hoot to clojure-mode when Clojure LSP is configured to format and align code will cause a serious conflict, with each tool trying to change the alignment of the other tool, leading to very unpredictable events.
+    `(add-hook 'clojure-mode-hook #'aggressive-indent-mode)`
 
 
 ## LSP layer variables
@@ -125,15 +111,6 @@ Add the `lsp` layer to `.spacemacs` and include the following variables for an u
           lsp-log-io nil)
 ```
 
-## `dotspacemacs/user-config` settings
-
-Additional settings have been added to the `dotspacemacs/user-config` section of `.spacemacs` file as they were not working as layer variables.
-
-```emacs title="Spacemacs Configuration - dotspacemacs/user-config"
-(setq lsp-ui-sideline-enable nil)
-(setq lsp-modeline-diagnostics-scope :workspace)
-```
-
 
 ## Customising symbol highlighting
 
@@ -150,15 +127,3 @@ In this example, the default orange background color is removed and the font wei
 ```
 
 ![doom gruvbox light - bold highlight for lsp](/images/doom-gruvbox-light-bold.png)
-
-
-## Key bindings over-ridden by lsp include
-
-`, h h` calls `cider-doc` without LSP enabled.  With LSP enabled then `describe-thing-at-point` command is called instead.  This is similar to `cider-doc`, however, it does not allow the navigation to the source code definition of the function.
-
-
-## Yas-snippets and LSP
-
-LSP uses company-lsp mode and manages the auto-completion popup.  Yasnippets do not seem to work with company-lsp (although it should be possible in theory).
-
-`SPC i s` will run `helm-yas` and provides a menu to select and insert snippets into the current buffer.  `M-/` will expand a matching snippet too (although it seems to take a few tries).
