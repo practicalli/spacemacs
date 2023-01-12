@@ -27,17 +27,26 @@ All content and interaction with any persons or systems must be done so with res
 
 ![GitHub contributors](https://img.shields.io/github/contributors/practicalli/spacemacs?style=for-the-badge&label=github%20contributors)
 
-### Submit and issue or idea
 
-If something doesnt seem quite right or something is missing from the book, please [raise an issue via the GitHub repository](https://github.com/practicalli/spacemacs/issues){target=_blank} explaining in as much detail as you can.
+## Submit and issue or idea
 
-### Considering a Pull request?
+[Raise an issue via the GitHub repository](https://github.com/practicalli/spacemacs/issues){target=_blank} when
 
-Before investing any time in a pull request, please raise an issue explaining the situation.  This can save you and the maintainer time and avoid rejected pull requests.
+* a page contains examples or explaintions that are not clear, suggesting an alternative where relevant.
+* a topic is not covered or further examples are required
+
+For small issues or if a discussion is required, post a message on [#practicalli channel of the Clojurians Slack community](https://clojurians.slack.com/messages/practicalli).
+
+
+## Considering a Pull request?
+
+Before investing any time in a pull request, please raise a new issue explaining the situation.  This can save you and the maintainer time and avoid rejected pull requests.
 
 Please keep pull requests small and focused, as they are much quicker to review and easier to accept.  Ideally PR's should be for a specific page or at most a section.
 
-A PR with a list of changes across different sections will not be merged, it will be reviewed and changes merged eventually.
+A PR with a list of changes across different sections will not be merged, although it may be reviewed at some point with changes cherry picked.
+
+Issues such as grammar improvements are typically a sign of a rushed section that requires a rewrite, so a pull request to fix a typeographic error will probably not be merged.  Raise an issue, or post a thread in the [Clojurians Slack #practicall channel](https://clojurians.slack.com/messages/practicalli)
 
 <!-- TODO:  Add GitHub issue templates, similar to those on practicalli/blog-content -->
 
