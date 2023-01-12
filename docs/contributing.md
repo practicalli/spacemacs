@@ -21,7 +21,7 @@ All content and interaction with any persons or systems must be done so with res
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/spacemacs?label=commits&logo=github)](https://img.shields.io/github/commit-activity/y/practicalli/spacemacs?label=commits&logo=github){target=_blank}
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/spacemacs?label=pull%20requests&logo=github)](https://img.shields.io/github/issues-pr-raw/practicalli/spacemacs?label=pull%20requests&logo=github){target=_blank}
 
-[![MegaLinter](https://github.com/practicalli/spacemacs/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/spacemacs/actions/workflows/megalinter.yml){target=_blank}
+[![MegaLinter](https://github.com/practicalli/spacemacs/actions/workflows/megalinter.yaml/badge.svg)](https://github.com/practicalli/spacemacs/actions/workflows/megalinter.yaml){target=_blank}
 [![Publish Book](https://github.com/practicalli/spacemacs/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/spacemacs/actions/workflows/publish-book.yaml){target=_blank}
 [![pages-build-deployment](https://github.com/practicalli/spacemacs/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/practicalli/spacemacs/actions/workflows/pages/pages-build-deployment){target=_blank}
 
