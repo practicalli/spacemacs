@@ -10,7 +10,7 @@ Spacemacs is a configuration for Emacs, so naturally [Emacs](#install-emacs) sho
 
 ## Install Emacs
 
-![GNU Emacs logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/emacs-icon.svg){align=right loading=lazy}
+![GNU Emacs logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/emacs-icon.svg){align=right loading=lazy style="height:64px;width:64px"}
 
 Emacs 28 is recommended as it includes native compilation support and optomised JSON support which is valuable for Language Server Protocol servers.
 
@@ -83,7 +83,7 @@ Emacs is available for Linux, MacOSX and Windows.  The [Spacemacs Readme suggest
 
 ## Install Clojure CLI
 
-![Clojure logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/clojure-logo.svg){align=right loading=lazy}
+![Clojure logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/clojure-logo.svg){align=right loading=lazy style="height:64px;width:64px"}
 
 [Practicalli Clojure Install Guide](https://practical.li/clojure/clojure-cli/install/java.html){target=_blank .md-button }
 
