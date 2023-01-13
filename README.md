@@ -6,7 +6,7 @@ This is an introduction to developing Clojure applications using Emacs, specific
 
 Spacemacs is a community-driven project that provides a simple way to add lots of extra functionality to Emacs, without having to manage packages yourself or spend time writing common configuration code.
 
-[![Discuss this guide on #practicalli channel of the Clojurians Slack community](images/practicalli-slack-channel.png)](https://clojurians.slack.com/messages/practicalli).
+[Discuss this guide on #practicalli channel of the Clojurians Slack community](https://clojurians.slack.com/messages/practicalli).
 
 [Create a free Clojurians Slack community account](http://clojurians.net/).
 
