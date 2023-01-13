@@ -41,7 +41,7 @@ Emacs is available for Linux, MacOSX and Windows.  The [Spacemacs Readme suggest
     [Emacs Plus](https://github.com/d12frosted/homebrew-emacs-plus) from Homebrew provides many options, including native compilation and Spacemacs Icon for application launchers.
 
     ```
-    brew tap d12frosted/emacs-plus`
+    brew tap d12frosted/emacs-plus
     brew install emacs-plus@28 --with-native-comp --with-spacemacs-icon
     ```
 
