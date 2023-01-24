@@ -11,9 +11,9 @@
 <link href="../contributing/" rel="prev"/>
 <link href="../introduction/additional-resources/" rel="next"/>
 <link href="../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.4" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.6" name="generator"/>
 <title>Writing Tips - Practicalli Spacemacs</title>
-<link href="../assets/stylesheets/main.9c788c91.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.558e4712.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -114,7 +114,7 @@
 <div class="md-search-result__meta">
             Initializing search
           </div>
-<ol class="md-search-result__list"></ol>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
 </div>
 </div>
@@ -335,8 +335,8 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#formatting">
-    Formatting
+<a class="md-nav__link" href="#keyboard-keys">
+    Keyboard keys
   </a>
 </li>
 <li class="md-nav__item">
@@ -2130,8 +2130,8 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#formatting">
-    Formatting
+<a class="md-nav__link" href="#keyboard-keys">
+    Keyboard keys
   </a>
 </li>
 <li class="md-nav__item">
@@ -2183,17 +2183,23 @@
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>[<span class="nt">link text</span>](<span class="na">url</span>){target=_blank}
 </code></pre></div>
 <h2 id="buttons">Buttons<a class="headerlink" href="#buttons" title="Permanent link">λ︎</a></h2>
-<p>Convert any link into a button by adding <code>{ .md-button }</code> class names to end of the markdown for a link, which uses <code>.md-button-primary</code> by default.  Include <code>target=_blank</code> for buttons with links to external sites.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>[link text](http://practical.li/blog){ .md-button target=_blank }
+<p>Convert any link into a button by adding <code>{.md-button}</code> class names to end of the markdown for a link, which uses <code>.md-button-primary</code> by default.  Include <code>target=_blank</code> for buttons with links to external sites.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>[link text](http://practical.li/blog){.md-button target=_blank}
 </code></pre></div>
-<p><a class="md-button md-button-primary" href="http://practical.li/blog"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408z"></path></svg></span> Practicalli Blog</a></p>
-<p>Add an icon to the button with fontawsome</p>
-<p><a class="md-button md-button-primary" href="http://practical.li/blog"><span class="twemoji"><svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></span> Practicalli Issues</a></p>
+<p>Or specify a different class</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>[link text](http://practical.li/blog){.md-button .md-button-primary}
+</code></pre></div>
+<p>Add an icon to the button</p>
+<p><a class="md-button md-button-primary" href="http://practical.li/blog"><span class="twemoji"><svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></span> Practicalli Issues</a>
+<a class="md-button md-button-primary" href="http://practical.li/blog"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"></path></svg></span> Practicalli Blog</a></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>[<span class="nt">:fontawesome-brands-github: Practicalli Issues</span>](<span class="na">http://practical.li/blog</span>){ .md-button .md-button-primary }
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>[<span class="nt">:octicons-heart-fill-24: Practicalli Blog</span>](<span class="na">http://practical.li/blog</span>){ .md-button .md-button-primary }
+</code></pre></div>
 <h2 id="youtube-video">YouTube video<a class="headerlink" href="#youtube-video" title="Permanent link">λ︎</a></h2>
 <p>Use an iframe element to include a YouTube video, wrapping in a paragraph tag with center alignment to place the video in a centered horizontal position</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">"text-align:center"</span><span class="p">&gt;</span>
-<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">"560"</span> <span class="na">height</span><span class="o">=</span><span class="s">"315"</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://www.youtube.com/embed/rQ802kSaip4"</span> <span class="na">title</span><span class="o">=</span><span class="s">"YouTube video player"</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">"0"</span> <span class="na">allow</span><span class="o">=</span><span class="s">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">"text-align:center"</span><span class="p">&gt;</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">"560"</span> <span class="na">height</span><span class="o">=</span><span class="s">"315"</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://www.youtube.com/embed/rQ802kSaip4"</span> <span class="na">title</span><span class="o">=</span><span class="s">"YouTube video player"</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">"0"</span> <span class="na">allow</span><span class="o">=</span><span class="s">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
 <blockquote>
 <p>mkdocs material does not have direct support for adding a YouTube video via markdown.</p>
@@ -2295,63 +2301,63 @@ semper lorem quam in massa.</p>
 <h2 id="code-blocks">Code blocks<a class="headerlink" href="#code-blocks" title="Permanent link">λ︎</a></h2>
 <p>Code blocks include a copy icon automatically</p>
 <p>Syntax highlighting in code blocks</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">my-function</span><span class="w">  </span><span class="c1">; Write a simple function</span>
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">  </span><span class="s">"With a lovely doc-string"</span>
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">arguments</span><span class="p">]</span>
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">  </span><span class="p">(</span><span class="nb">map inc </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">]))</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">my-function</span><span class="w">  </span><span class="c1">; Write a simple function</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">  </span><span class="s">"With a lovely doc-string"</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">arguments</span><span class="p">]</span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">  </span><span class="p">(</span><span class="nb">map inc </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">]))</span>
 </code></pre></div>
 <p>Give the code block a title using <code>title=""</code> after the backtics and language name</p>
-<div class="highlight"><span class="filename">src/practicalli/gameboard.clj</span><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">my-function</span>
-<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="s">"With a lovely doc-string"</span>
-<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">arguments</span><span class="p">]</span>
-<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span><span class="p">(</span><span class="nb">map inc </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">]))</span>
+<div class="highlight"><span class="filename">src/practicalli/gameboard.clj</span><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">my-function</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">  </span><span class="s">"With a lovely doc-string"</span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">arguments</span><span class="p">]</span>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">  </span><span class="p">(</span><span class="nb">map inc </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">]))</span>
 </code></pre></div>
 <p>We all like line numbers, especially when you can set the starting line</p>
-<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">src/practicalli/gameboard.clj</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-42">42</a></span>
-<span class="normal"><a href="#__codelineno-5-43">43</a></span>
-<span class="normal"><a href="#__codelineno-5-44">44</a></span>
-<span class="normal"><a href="#__codelineno-5-45">45</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-42" name="__codelineno-5-42"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">my-function</span>
-<a id="__codelineno-5-43" name="__codelineno-5-43"></a><span class="w">  </span><span class="s">"With a lovely doc-string"</span>
-<a id="__codelineno-5-44" name="__codelineno-5-44"></a><span class="w">  </span><span class="p">[</span><span class="nv">arguments</span><span class="p">]</span>
-<a id="__codelineno-5-45" name="__codelineno-5-45"></a><span class="w">  </span><span class="p">(</span><span class="nb">map inc </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">]))</span>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">src/practicalli/gameboard.clj</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-42">42</a></span>
+<span class="normal"><a href="#__codelineno-7-43">43</a></span>
+<span class="normal"><a href="#__codelineno-7-44">44</a></span>
+<span class="normal"><a href="#__codelineno-7-45">45</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-42" name="__codelineno-7-42"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">my-function</span>
+<a id="__codelineno-7-43" name="__codelineno-7-43"></a><span class="w">  </span><span class="s">"With a lovely doc-string"</span>
+<a id="__codelineno-7-44" name="__codelineno-7-44"></a><span class="w">  </span><span class="p">[</span><span class="nv">arguments</span><span class="p">]</span>
+<a id="__codelineno-7-45" name="__codelineno-7-45"></a><span class="w">  </span><span class="p">(</span><span class="nb">map inc </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">]))</span>
 </code></pre></div></td></tr></table></div>
 <p>Add <code>linenums=42</code> to start line numbers from 42 onward</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>clojure linenums="42" title="src/practicalli/gameboard.clj"
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>clojure linenums="42" title="src/practicalli/gameboard.clj"
 </code></pre></div>
 <h3 id="annotations">Annotations<a class="headerlink" href="#annotations" title="Permanent link">λ︎</a></h3>
 <p>Add an annotation using <code># (1)</code> where 1 is the number of the annotation</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>ls<span class="w"> </span>-la<span class="w"> </span><span class="nv">$HOME</span>/Downloads<span class="w">  </span><span class="c1"># (1)</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>ls<span class="w"> </span>-la<span class="w"> </span><span class="nv">$HOME</span>/Downloads<span class="w">  </span><span class="c1"># (1)</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>1.  :woman_raising_hand: I'm a code annotation! I can contain `code`, __formatted text__, images, ... basically anything that can be written in Markdown.
-</code></pre></div>
+<ol>
+<li><img alt="🙋‍♀️" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f64b-200d-2640-fe0f.svg" title=":woman_raising_hand:"> I'm a code annotation! I can contain <code>code</code>, <strong>formatted text</strong>, images, ... basically anything that can be written in Markdown.</img></li>
+</ol>
 <p>Code blocks with annotation, add <code>!</code> after the annotation number to suppress the <code>#</code> character</p>
-<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">helper-function</span>
-<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">  </span><span class="s">"Doc-string with description of function purpose"</span><span class="w"> </span><span class="c1">; (1)!</span>
-<a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">data</span><span class="p">]</span>
-<a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">  </span><span class="p">(</span><span class="nb">merge </span><span class="p">{</span><span class="ss">:fish</span><span class="w"> </span><span class="mi">1</span><span class="p">}</span><span class="w"> </span><span class="nv">data</span><span class="p">)</span>
-<a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">  </span><span class="p">)</span>
+<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">helper-function</span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">  </span><span class="s">"Doc-string with description of function purpose"</span><span class="w"> </span><span class="c1">; (1)!</span>
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">data</span><span class="p">]</span>
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">  </span><span class="p">(</span><span class="nb">merge </span><span class="p">{</span><span class="ss">:fish</span><span class="w"> </span><span class="mi">1</span><span class="p">}</span><span class="w"> </span><span class="nv">data</span><span class="p">)</span>
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">  </span><span class="p">)</span>
 </code></pre></div>
 1.  Always include a doc-string in every function to describe the purpose of that function, identifying why it was added and what its value is.</p>
 <p>GitHub action example with multiple annotations</p>
-<p>GitHub action example with multiple annotations</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span><span class="w"> </span><span class="c1"># (1)!</span>
-<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="nt">on</span><span class="p">:</span>
-<a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span>
-<a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
-<a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span><span class="w"> </span><span class="c1"># (2)!</span>
-<a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
-<a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="nt">permissions</span><span class="p">:</span>
-<a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="nt">jobs</span><span class="p">:</span>
-<a href="#__codelineno-9-10" id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
-<a href="#__codelineno-9-11" id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<a href="#__codelineno-9-12" id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<a href="#__codelineno-9-13" id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
-<a href="#__codelineno-9-14" id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v4</span>
-<a href="#__codelineno-9-15" id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a href="#__codelineno-9-16" id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.x</span>
-<a href="#__codelineno-9-17" id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install mkdocs-material</span><span class="w"> </span><span class="c1"># (3)!</span>
-<a href="#__codelineno-9-18" id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs gh-deploy --force</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span><span class="w"> </span><span class="c1"># (1)!</span>
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="nt">on</span><span class="p">:</span>
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span><span class="w"> </span><span class="c1"># (2)!</span>
+<a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="nt">permissions</span><span class="p">:</span>
+<a href="#__codelineno-11-8" id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<a href="#__codelineno-11-9" id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="nt">jobs</span><span class="p">:</span>
+<a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
+<a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a href="#__codelineno-11-12" id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a href="#__codelineno-11-13" id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+<a href="#__codelineno-11-14" id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v4</span>
+<a href="#__codelineno-11-15" id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a href="#__codelineno-11-16" id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.x</span>
+<a href="#__codelineno-11-17" id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install mkdocs-material</span><span class="w"> </span><span class="c1"># (3)!</span>
+<a href="#__codelineno-11-18" id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs gh-deploy --force</span>
 </code></pre></div>
 <ol>
 <li>
@@ -2364,19 +2370,19 @@ semper lorem quam in massa.</p>
 <li>
 <p>This is the place to install further [MkDocs plugins] or Markdown
     extensions with <code>pip</code> to be used during the build:</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="se">\</span>
-<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">  </span>mkdocs-material<span class="w"> </span><span class="se">\</span>
-<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">  </span>mkdocs-awesome-pages-plugin<span class="w"> </span><span class="se">\</span>
-<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">  </span>...
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">  </span>mkdocs-material<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">  </span>mkdocs-awesome-pages-plugin<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">  </span>...
 </code></pre></div>
 </li>
 </ol>
 <h3 id="highlight-lines-in-code-blocks">Highlight lines in code blocks<a class="headerlink" href="#highlight-lines-in-code-blocks" title="Permanent link">λ︎</a></h3>
 <p><code>hl_lines="2"</code> where 2 is the line number to highlight</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">my-function</span>
-<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="hll"><span class="w">  </span><span class="s">"With a lovely doc-string"</span>
-</span><a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">arguments</span><span class="p">]</span>
-<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">  </span><span class="p">(</span><span class="nb">map inc </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">]))</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">my-function</span>
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="hll"><span class="w">  </span><span class="s">"With a lovely doc-string"</span>
+</span><a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">arguments</span><span class="p">]</span>
+<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">  </span><span class="p">(</span><span class="nb">map inc </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">]))</span>
 </code></pre></div>
 <h2 id="content-tabs">Content tabs<a class="headerlink" href="#content-tabs" title="Permanent link">λ︎</a></h2>
 <p>Create in page tabs that can also be</p>
@@ -2384,11 +2390,11 @@ semper lorem quam in massa.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Clojure CLI</label><label for="__tabbed_1_2">Leiningen</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>clojure<span class="w"> </span>-T:project/new<span class="w"> </span>:template<span class="w"> </span>app<span class="w"> </span>:name<span class="w"> </span>practicalli/gameboard
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>clojure<span class="w"> </span>-T:project/new<span class="w"> </span>:template<span class="w"> </span>app<span class="w"> </span>:name<span class="w"> </span>practicalli/gameboard
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>lein<span class="w"> </span>new<span class="w"> </span>app<span class="w"> </span>practicalli/gameboard
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>lein<span class="w"> </span>new<span class="w"> </span>app<span class="w"> </span>practicalli/gameboard
 </code></pre></div>
 </div>
 </div>
@@ -2399,11 +2405,11 @@ semper lorem quam in massa.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Clojure CLI</label><label for="__tabbed_2_2">Leiningen</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>clojure<span class="w"> </span>-T:repl/rebel
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>clojure<span class="w"> </span>-T:repl/rebel
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>lein<span class="w"> </span>repl
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>lein<span class="w"> </span>repl
 </code></pre></div>
 </div>
 </div>
@@ -2451,13 +2457,29 @@ semper lorem quam in massa.</p>
 <a href="https://mermaid-js.github.io/mermaid/#/requirementDiagram">requirement diagrams</a>, all of which are not officially supported by Material
 for MkDocs. Those diagrams should still work as advertised by [Mermaid.js], but
 we don't consider them a good choice, mostly as they don't work well on mobile.</p>
-<h2 id="formatting">Formatting<a class="headerlink" href="#formatting" title="Permanent link">λ︎</a></h2>
-<p><a href="https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index">Keyboard keys</a> for all those key bindings... each number and alphabet character has their own key</p>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> or <span class="keys"><kbd class="key-space">Space</kbd></span> for leader and <span class="keys"><kbd class="key-comma">,</kbd></span> for local leader</p>
-<p><a href="https://facelessuser.github.io/pymdown-extensions/extensions/keys/#punctuation-keys">Punctionation keys</a> by name, e.g. <span class="keys"><kbd class="key-bar">|</kbd></span></p>
-<p><span class="keys"><kbd class="key-arrow-left">Left</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd><span>+</span><kbd class="key-arrow-down">Down</kbd><span>+</span><kbd class="key-arrow-right">Right</kbd></span></p>
-<p><span class="keys"><kbd class="key-meta">Meta</kbd><span>+</span><kbd class="key-x">X</kbd></span> for all the classic Emacs fun</p>
-<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span></p>
+<h2 id="keyboard-keys">Keyboard keys<a class="headerlink" href="#keyboard-keys" title="Permanent link">λ︎</a></h2>
+<p>Represent key bindings with <a href="https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index" target="_blank">Keyboard keys</a>. Each number and alphabet character has their own key.</p>
+<ul>
+<li><span class="keys"><kbd class="key-1">1</kbd></span> <code>++1++</code> for numbers</li>
+<li><span class="keys"><kbd>l</kbd></span> <code>++"l"++</code> for lowercase character</li>
+<li><span class="keys"><kbd class="key-u">U</kbd></span> <code>++u++</code> for uppercase character or <code>++"U"++</code> for consistency</li>
+</ul>
+<p><a href="https://facelessuser.github.io/pymdown-extensions/extensions/keys/#punctuation-keys" target="_blank">Punctionation keys</a> use their name</p>
+<ul>
+<li><span class="keys"><kbd class="key-space">Space</kbd></span> <code>++spc++</code></li>
+<li><span class="keys"><kbd class="key-comma">,</kbd></span> <code>++comma++</code></li>
+<li><span class="keys"><kbd class="key-arrow-left">Left</kbd></span> <code>++arrow-left++</code></li>
+</ul>
+<p>For key sequences, place a space between each keyboard character</p>
+<ul>
+<li><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>s</kbd></span> <code>++spc++ ++"g"++ ++"s"++</code></li>
+</ul>
+<p>For key combinations, use join they key identifies with a <code>+</code></p>
+<ul>
+<li><span class="keys"><kbd class="key-meta">Meta</kbd><span>+</span><kbd class="key-x">X</kbd></span> <code>++meta+x++</code></li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span> <code>++ctrl+alt+del++</code></li>
+</ul>
+<p><a class="md-button" href="https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index" target="_blank">MkDocs keyboard keys reference</a></p>
 <h2 id="grids">Grids<a class="headerlink" href="#grids" title="Permanent link">λ︎</a></h2>
 <p>Useful for putting button links on the main page as quick links into the key parts of the book</p>
 <div class="grid cards">
@@ -2472,15 +2494,52 @@ we don't consider them a good choice, mostly as they don't work well on mobile.<
 <p>Sponsor only feature</p>
 </blockquote>
 <h2 id="images">Images<a class="headerlink" href="#images" title="Permanent link">λ︎</a></h2>
-<p>Oh yesssss... aligning images... I am in love... and lazy loading too</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-logo-name.svg"><img align="right" alt="Practicalli logo named" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-logo-name.svg"/></a></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.</p>
+<p>Markdown images can be appended with material tags to set the size of the image, whether to appear on light or dark theme and support lazy image loading in browsers</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><input id="__tabbed_3_5" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Size</label><label for="__tabbed_3_2">Lazy Loading</label><label for="__tabbed_3_3">Align</label><label for="__tabbed_3_4">Theme Specific</label><label for="__tabbed_3_5">All Image Attributes</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><code>{style="height:150px;width:150px"}</code> specifies the image size
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){style="height:150px;width:150px"}
+</code></pre></div></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark"><img alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark" style="height:150px;width:150px"/></a></p>
+</div>
+<div class="tabbed-block">
+<p><code>{loading=lazy}</code> specifies an image should lazily load in the browser
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png</span>){loading=lazy}
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p><code>{aligh=left}</code> or <code>{aligh=right}</code> specifies the page alignment of an image.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){align=right}
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light</span>){align=right}
+</code></pre></div></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png"><img align="left" alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png" style="height:64px;width:64px"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png"><img align="right" alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png" style="height:64px;width:64px"/></a>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.</p>
+</div>
+<div class="tabbed-block">
+<p><code>![Kitty Logo](image/kitty-light.png#only-dark)</code> or <code>![Kitty Logo](image/kitty-light.png#only-light)</code>  specifies the theme the image should be shown, allowing different versions of images to be shown based on the theme.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){style="height:150px;width:150px"}
+<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light</span>){style="height:150px;width:150px"}
+</code></pre></div>
+Use the theme toggle in the top nav bar to see the icon change between light and dark.
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark"><img alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark" style="height:150px;width:150px"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light"><img alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light" style="height:150px;width:150px"/></a></p>
 <blockquote>
-<p>If the image is too big then it will simply take up the whole width of the page</p>
+<p>Requires the <a href="https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle">color pallet toggle</a></p>
 </blockquote>
-<p>When adding the <a href="https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle">color pallet toggle</a>, have different images for light and dark</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://dummyimage.com/600x400/f5f5f5/aaaaaa#only-light"><img alt="Image title" src="https://dummyimage.com/600x400/f5f5f5/aaaaaa#only-light"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://dummyimage.com/600x400/21222c/d5d7e2#only-dark"><img alt="Image title" src="https://dummyimage.com/600x400/21222c/d5d7e2#only-dark"/></a></p>
+</div>
+<div class="tabbed-block">
+<p>Alight right, lazy load and set image to 150x150</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){align=right loading=lazy style="height:64px;width:64px"}
+<a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light</span>){align=right loading=lazy style="height:64px;width:64px"}
+</code></pre></div>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark"><img align="right" alt="Kitty Logo" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark" style="height:64px;width:64px"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light"><img align="left" alt="Kitty Logo" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light" style="height:64px;width:64px"/></a>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.</p>
+</div>
+</div>
+</input></input></input></input></input></div>
 <h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">λ︎</a></h2>
 <p>Task lists</p>
 <ul class="task-list">
@@ -2513,7 +2572,7 @@ we don't consider them a good choice, mostly as they don't work well on mobile.<
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 22, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 24, 2023</span>
 </small>
 </div>
 </article>
@@ -2564,6 +2623,6 @@ we don't consider them a good choice, mostly as they don't work well on mobile.<
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
+<script src="../assets/javascripts/bundle.51d95adb.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
