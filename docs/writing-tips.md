@@ -14,17 +14,28 @@ Add `{target=_blank}` to the end of a link to configure opening in a new tab
 
 ## Buttons
 
-Convert any link into a button by adding `{ .md-button }` class names to end of the markdown for a link, which uses `.md-button-primary` by default.  Include `target=_blank` for buttons with links to external sites.
+Convert any link into a button by adding `{.md-button}` class names to end of the markdown for a link, which uses `.md-button-primary` by default.  Include `target=_blank` for buttons with links to external sites.
 
 ```
-[link text](http://practical.li/blog){ .md-button target=_blank }
+[link text](http://practical.li/blog){.md-button target=_blank}
 ```
 
-[:octicons-heart-fill-24: Practicalli Blog](http://practical.li/blog){ .md-button .md-button-primary }
+Or specify a different class
 
-Add an icon to the button with fontawsome
+```
+[link text](http://practical.li/blog){.md-button .md-button-primary}
+```
+
+Add an icon to the button
 
 [:fontawesome-brands-github: Practicalli Issues](http://practical.li/blog){ .md-button .md-button-primary }
+[:octicons-heart-fill-24: Practicalli Blog](http://practical.li/blog){ .md-button .md-button-primary }
+
+```markdown
+[:fontawesome-brands-github: Practicalli Issues](http://practical.li/blog){ .md-button .md-button-primary }
+[:octicons-heart-fill-24: Practicalli Blog](http://practical.li/blog){ .md-button .md-button-primary }
+```
+
 
 
 ## YouTube video
@@ -183,8 +194,7 @@ Add an annotation using `# (1)` where 1 is the number of the annotation
 ls -la $HOME/Downloads  # (1)
 ```
 
-    1.  :woman_raising_hand: I'm a code annotation! I can contain `code`, __formatted text__, images, ... basically anything that can be written in Markdown.
-
+1.  :woman_raising_hand: I'm a code annotation! I can contain `code`, __formatted text__, images, ... basically anything that can be written in Markdown.
 
 
 Code blocks with annotation, add `!` after the annotation number to suppress the `#` character
@@ -197,9 +207,6 @@ Code blocks with annotation, add `!` after the annotation number to suppress the
   )
 ```
 1.  Always include a doc-string in every function to describe the purpose of that function, identifying why it was added and what its value is.
-
-
-GitHub action example with multiple annotations
 
 
 GitHub action example with multiple annotations
@@ -244,7 +251,6 @@ jobs:
 ### Highlight lines in code blocks
 
 `hl_lines="2"` where 2 is the line number to highlight
-
 
 ```clojure hl_lines="2"
 (defn my-function
@@ -360,21 +366,30 @@ we don't consider them a good choice, mostly as they don't work well on mobile.
   [requirement diagrams]: https://mermaid-js.github.io/mermaid/#/requirementDiagram
 
 
-## Formatting
+## Keyboard keys
 
-[Keyboard keys] for all those key bindings... each number and alphabet character has their own key
+Represent key bindings with [Keyboard keys](https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index){target=_blank}. Each number and alphabet character has their own key.
 
-++spc++ or ++space++ for leader and ++comma++ for local leader
+* ++1++ `++1++` for numbers
+* ++"l"++ `++"l"++` for lowercase character
+* ++u++ `++u++` for uppercase character or `++"U"++` for consistency
 
-[Punctionation keys](https://facelessuser.github.io/pymdown-extensions/extensions/keys/#punctuation-keys) by name, e.g. ++bar++
+[Punctionation keys](https://facelessuser.github.io/pymdown-extensions/extensions/keys/#punctuation-keys){target=_blank} use their name
 
-++arrow-left+arrow-up+arrow-down+arrow-right++
+* ++spc++ `++spc++`
+* ++comma++ `++comma++`
+* ++arrow-left++ `++arrow-left++`
 
-++meta+x++ for all the classic Emacs fun
+For key sequences, place a space between each keyboard character
 
-++ctrl+alt+del++
+* ++spc++ ++"g"++ ++"s"++  `++spc++ ++"g"++ ++"s"++`
 
-[Keyboard keys]: https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index
+For key combinations, use join they key identifies with a `+`
+
+* ++meta+x++ `++meta+x++`
+* ++ctrl+alt+del++ `++ctrl+alt+del++`
+
+[MkDocs keyboard keys reference](https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index){target=_blank .md-button}
 
 
 ## Grids
@@ -395,19 +410,63 @@ Useful for putting button links on the main page as quick links into the key par
 
 ## Images
 
-Oh yesssss... aligning images... I am in love... and lazy loading too
+Markdown images can be appended with material tags to set the size of the image, whether to appear on light or dark theme and support lazy image loading in browsers
 
-![Practicalli logo named](https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-logo-name.svg){ align=right loading=lazy }
+=== "Size"
+    `{style="height:150px;width:150px"}` specifies the image size
+    ```markdown
+    ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark){style="height:150px;width:150px"}
+    ```
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
-
-> If the image is too big then it will simply take up the whole width of the page
+    ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark){style="height:150px;width:150px"}
 
 
-When adding the [color pallet toggle](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle), have different images for light and dark
+=== "Lazy Loading"
 
-![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa#only-light)
-![Image title](https://dummyimage.com/600x400/21222c/d5d7e2#only-dark)
+    `{loading=lazy}` specifies an image should lazily load in the browser
+    ```markdown
+    ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png){loading=lazy}
+    ```
+
+=== "Align"
+
+    `{aligh=left}` or `{aligh=right}` specifies the page alignment of an image.
+    ```markdown
+    ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark){align=right}
+    ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light){align=right}
+    ```
+
+    ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png){align=left style="height:64px;width:64px"}
+    ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png){align=right style="height:64px;width:64px"}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
+
+
+=== "Theme Specific"
+
+    `![Kitty Logo](image/kitty-light.png#only-dark)` or `![Kitty Logo](image/kitty-light.png#only-light)`  specifies the theme the image should be shown, allowing different versions of images to be shown based on the theme.
+    ```markdown
+    ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark){style="height:150px;width:150px"}
+    ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light){style="height:150px;width:150px"}
+    ```
+    Use the theme toggle in the top nav bar to see the icon change between light and dark.
+    ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark){style="height:150px;width:150px"}
+    ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light){style="height:150px;width:150px"}
+
+    > Requires the [color pallet toggle](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle)
+
+
+=== "All Image Attributes"
+    Alight right, lazy load and set image to 150x150
+
+    ```markdown
+    ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark){align=right loading=lazy style="height:64px;width:64px"}
+    ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light){align=right loading=lazy style="height:64px;width:64px"}
+    ```
+
+    ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark){align=right loading=lazy style="height:64px;width:64px"}
+    ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light){align=left loading=lazy style="height:64px;width:64px"}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
+
 
 
 ## Lists
