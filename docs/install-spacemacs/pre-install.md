@@ -85,17 +85,17 @@ Emacs is available for Linux, MacOSX and Windows.  The [Spacemacs Readme suggest
 
 ![Clojure logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/clojure-logo.svg){align=right loading=lazy style="height:64px;width:64px"}
 
-[Practicalli Clojure Install Guide](https://practical.li/clojure/clojure-cli/install/java.html){target=_blank .md-button }
+[Practicalli Clojure Install Guide](https://practical.li/clojure/install/){target=_blank .md-button}
 
 Clojure CLI provide a simple and configurable way to:
 
 * Run Clojure programs and tools
-* Run an interactive REPL (Read-Eval-Print Loop) and evaluate Clojure expressions, usually with a [Clojure aware editor](/clojure-editors/)
+* Run an interactive REPL (Read-Eval-Print Loop) and evaluate Clojure expressions, usually with a [Clojure aware editor](https://practical.li/clojure/clojure-editors/)
 * Managing dependencies (via tools.deps) from Maven and Git repositories
 
 Using community tools on top of Clojure CLI tools provides tasks to create, develop, build and deploy Clojure applications and services
 
-Follow the [Practicalli Clojure Install Guide](https://practical.li/clojure/clojure-cli/install/java.html) to install Clojure and supporting tools.
+Follow the [Practicalli Clojure Install Guide](https://practical.li/clojure/install/) to install Clojure and supporting tools.
 
 
 ## Command Line Tools
