@@ -7,7 +7,6 @@ Spacemacs is a configuration for Emacs, so naturally [Emacs](#install-emacs) sho
 [Command Line Tools](#command-line-tools) support searching for files and spell checking.
 
 
-
 ## Install Emacs
 
 ![GNU Emacs logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/emacs-icon.svg){align=right loading=lazy style="height:64px;width:64px"}
@@ -118,7 +117,7 @@ Consider installing these tools to enhance your Spacemacs experience.
     `brew install aspell`
 
 === "Manual"
-    [Aspell Install](http://aspell.net/){ .md-button target=_blank}
+    [Aspell Install](http://aspell.net/){.md-button target=_blank}
 
 
 ### Text search
@@ -127,8 +126,8 @@ Search text buffers uses an external search tool. Although grep is available in 
 
 `dotspacemacs-search-tools '("rg" "ag" "pt" "ack" "grep")` in the Spacemacs configuration defines the order of preference for the search tool to use.
 
-[ripgrep (rg)](https://github.com/BurntSushi/ripgrep){ .md-button target=_blank}
-[Silver Searcher (ag)](https://github.com/ggreer/the_silver_searcher){ .md-button target=_blank}
+[ripgrep (rg)](https://github.com/BurntSushi/ripgrep){.md-button target=_blank}
+[Silver Searcher (ag)](https://github.com/ggreer/the_silver_searcher){.md-button target=_blank}
 
 
 ### Find files
@@ -137,7 +136,7 @@ Search text buffers uses an external search tool. Although grep is available in 
 
 `fd` is an external command line binary that is faster than the `find` command.  If installed, projectile will automatically use `fd` instead of `find`
 
-[fd install instructions by operating system ](https://github.com/sharkdp/fd#installation){ .md-button target=_blank}
+[fd install instructions by operating system ](https://github.com/sharkdp/fd#installation){.md-button target=_blank}
 
 
 ### helm-locate
@@ -152,7 +151,7 @@ The `locate` binary is used by ++spc++ ++"f"++ ++l++ (`helm-locate`) to find fil
     ```
 
 === "Homebrew / MacOSX"
-    [findutils Homebrew findutils](https://formulae.brew.sh/formula/findutils){ .md-button target=_blank}
+    [findutils Homebrew findutils](https://formulae.brew.sh/formula/findutils){.md-button target=_blank}
     ```shell
     brew install findutils
     ```
