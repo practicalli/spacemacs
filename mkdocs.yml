@@ -12,6 +12,107 @@ edit_uri: https://github.com/practicalli/spacemacs/edit/main/docs/
 # remote_name: origin
 remote_branch: gh-pages # deployment branch
 
+# Theme and styling
+theme:
+  name: material
+  logo: assets/images/practicalli-logo.png
+  favicon: assets/favicon.svg
+  features:
+    - navigation.top
+    - content.code.annotate
+    - content.tabs.link
+    - navigation.instant # Avoid page reloading for internal links
+    - navigation.tracking # Update URL with anchor
+    - navigation.indexes # Nav sections can have files
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+      # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  # Override theme
+  # custom_dir: overrides
+
+extra_css:
+  - stylesheets/extra.css
+
+## Additional styling
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html # Grids
+  - footnotes # footnotes and abbreviations
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.keys # keyboard keys
+  - pymdownx.magiclink
+  - def_list # lists
+  - pymdownx.tasklist:
+      custom_checkbox: true # checkboxes
+  - toc:
+      permalink: λ︎
+
+## Plugins
+plugins:
+  # Explicitly add search plugin when defining plugins in this configuration file
+  - search
+  - callouts
+  - glightbox # Image aligning
+  - git-revision-date-localized: # Update and Creation date of each page
+      # enable_creation_date: true
+      fallback_to_build_date: true
+
+  # Generate Social Cards via CI only
+  # in assets/images/social
+  - social:
+      cards: !ENV [MKDOCS_SOCIAL_CARDS_GENERATE, true]
+
+  # Redirect pages when moved or changed
+  # - redirects:
+  #     redirect_maps:
+  #       changelog/insiders.md: insiders/changelog.md
+  #       reference/meta-tags.md: reference/index.md
+
+# Footer / Social Media
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/jr0cket/
+    - icon: fontawesome/brands/slack
+      link: https://clojurians.slack.com/messages/practicalli
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/practical_li
+    - icon: fontawesome/brands/github
+      link: https://github.com/practicalli
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/practicalli
+
 # Navigation
 nav:
   - Overview:
@@ -308,108 +409,3 @@ nav:
   - To Review:
       - spacemacs-basics/vim-style/common-evil.md
       - why-spacemacs/why-evil.md
-
-# Theme and styling
-theme:
-  name: material
-  logo: assets/images/practicalli-logo.png
-  favicon: assets/favicon.svg
-  extra_css:
-    - stylesheets/extra.css
-  features:
-    - navigation.top
-    - content.code.annotate
-    - content.tabs.link
-    - navigation.instant  # Avoid page reloading for internal links
-    - navigation.tracking # Update URL with anchor
-    - navigation.indexes # Nav sections can have files
-  palette:
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: purple
-      accent: deep purple
-      extra_css:
-        - stylesheets/extra.css
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-
-      # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: deep purple
-      accent: purple
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-  # Override theme
-  # custom_dir: overrides
-
-extra_css:
-  - stylesheets/extra.css
-
-## Additional styling
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - attr_list
-  - md_in_html # Grids
-  - footnotes # footnotes and abbreviations
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.keys # keyboard keys
-  - pymdownx.magiclink
-  - def_list # lists
-  - pymdownx.tasklist:
-      custom_checkbox: true # checkboxes
-  - toc:
-      permalink: λ︎
-
-## Plugins
-plugins:
-  # Explicitly add search plugin when defining plugins in this configuration file
-  - search
-  - callouts
-  - glightbox # Image aligning
-  - git-revision-date-localized: # Update and Creation date of each page
-      # enable_creation_date: true
-      fallback_to_build_date: true
-
-  # Generate Social Cards via CI only
-  # in assets/images/social
-  - social:
-      cards: !ENV [MKDOCS_SOCIAL_CARDS_GENERATE, true]
-
- # Redirect pages when moved or changed
- # - redirects:
- #     redirect_maps:
- #       changelog/insiders.md: insiders/changelog.md
- #       reference/meta-tags.md: reference/index.md
-
-# Footer / Social Media
-extra:
-  social:
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/jr0cket/
-    - icon: fontawesome/brands/slack
-      link: https://clojurians.slack.com/messages/practicalli
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/practical_li
-    - icon: fontawesome/brands/github
-      link: https://github.com/practicalli
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/u/practicalli
