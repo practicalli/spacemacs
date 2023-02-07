@@ -43,6 +43,8 @@ The issue is added to the Issues section of Magit status.
 
     ``code`` for code / key highlighting, `#` for headings, `----` for horizontal lines
 
+    ![Spacemacs Magit Forge Topic Issue description with Clojure code block example](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-issue-details-clojure-code-example-dark.png)
+
 
 ## Update an issue
 
