@@ -1452,29 +1452,11 @@
 <a class="md-nav__link" href="#view-issues-list">
     View issues list
   </a>
-<nav aria-label="View issues list" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hintconfigure-number-of-open-and-closed-items-shown">
-    Hint::Configure number of open and closed items shown
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#create-an-issue">
     Create an issue
   </a>
-<nav aria-label="Create an issue" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hintmarkdown-support">
-    Hint::Markdown support
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#update-an-issue">
@@ -1985,29 +1967,11 @@
 <a class="md-nav__link" href="#view-issues-list">
     View issues list
   </a>
-<nav aria-label="View issues list" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hintconfigure-number-of-open-and-closed-items-shown">
-    Hint::Configure number of open and closed items shown
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#create-an-issue">
     Create an issue
   </a>
-<nav aria-label="Create an issue" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hintmarkdown-support">
-    Hint::Markdown support
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#update-an-issue">
@@ -2025,30 +1989,30 @@
 <p>Issues can be viewed, created and updated, providing full synchronisation between Emacs and the remote GitHub / GitLab service.</p>
 <h2 id="view-issues-list">View issues list<a class="headerlink" href="#view-issues-list" title="Permanent link">λ︎</a></h2>
 <p><code>@ l i</code> opens a buffer with a list of issues with the most recent at the top.  Issue labels also show in the list using the the color assigned on GitHub.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-magit-forge-issues-status.png"><img alt="Spacemacs Magit Forge Issues list with labels" src="/images/spacemacs-magit-forge-issues-status.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-issues-status-light.png"><img alt="Spacemacs Magit Forge Issues list with labels" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-issues-status-light.png"/></a></p>
 <p>In the issue list buffer:</p>
 <p><code>o</code> opens the list in the default browser</p>
 <p><code>j</code> to navigate down, <code>k</code> to navigate up the list</p>
 <p><code>q</code> to quit and close the buffer</p>
-<blockquote>
-<h4 id="hintconfigure-number-of-open-and-closed-items-shown">Hint::Configure number of open and closed items shown<a class="headerlink" href="#hintconfigure-number-of-open-and-closed-items-shown" title="Permanent link">λ︎</a></h4>
-<p>Add  <code>(setq  forge-topic-list-limit '(100 . 0))</code> to the <code>dotspacemacs/user-config</code> section of <code>.spacemacs</code> to hide all closed issues and pull requests from the list, showing up to 100 open items from each.</p>
-<p>Or <code>(setq  forge-topic-list-limit '(100 . -10))</code> and use <code>SPC SPC forge-toggle-closed-visibility</code> to toggle showing 10 of the latest closed topics for issues and pull requests.</p>
+<details class="hint">
+<summary>Configure number of open and closed items shown</summary>
+<p><code>(setq  forge-topic-list-limit '(100 . 0))</code> added to the <code>dotspacemacs/user-config</code> section of <code>.spacemacs</code> hides all closed issues and pull requests from the list, showing up to 100 open items from each.</p>
+<p><code>(setq  forge-topic-list-limit '(100 . -10))</code> and use <code>SPC SPC forge-toggle-closed-visibility</code> to toggle showing 10 of the latest closed topics for issues and pull requests.</p>
 <p><a href="https://github.com/practicalli/spacemacs.d">practicalli/spacemacs.d</a> configuration contains this setting.</p>
-</blockquote>
+</details>
 <h2 id="create-an-issue">Create an issue<a class="headerlink" href="#create-an-issue" title="Permanent link">λ︎</a></h2>
 <p><code>@ c i</code> to create a new issue on the current repository.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-magit-forge-create-issue-post.png"><img alt="Spacemacs Magit Forge - create issue post" src="/images/spacemacs-magit-forge-create-issue-post.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-create-issue-post-light.png"><img alt="Spacemacs Magit Forge - create issue post" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-create-issue-post-light.png"/></a></p>
 <p>The issue is added to the Issues section of Magit status.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-magit-forge-issues-status-list.png"><img alt="Spacemacs Magit Forge - Issue added to Issues in Magit Status" src="/images/spacemacs-magit-forge-issues-status-list.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-issues-status-list-light.png"><img alt="Spacemacs Magit Forge - Issue added to Issues in Magit Status" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-issues-status-list-light.png"/></a></p>
 <p><code>RET</code> on the issue opens the issue and shows the details.  Related issues are shown as a link, <code>RET</code> on the link opens the related issue in the browser.</p>
 <p><code>, ,</code> to save and create the issue on the remote forge.  <code>, k</code> to cancel.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-magit-forge-issue-details.png"><img alt="Spacemacs Magit Forge - Issue details" src="/images/spacemacs-magit-forge-issue-details.png"/></a></p>
-<blockquote>
-<h4 id="hintmarkdown-support">Hint::Markdown support<a class="headerlink" href="#hintmarkdown-support" title="Permanent link">λ︎</a></h4>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-issue-details-light.png"><img alt="Spacemacs Magit Forge - Issue details" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-issue-details-light.png"/></a></p>
+<div class="admonition hint">
+<p class="admonition-title">Markdown support</p>
 <p>Pull Request descriptions will use markdown when displayed in GitHub.</p>
 <p><code>code</code> for code / key highlighting, <code>#</code> for headings, <code>----</code> for horizontal lines</p>
-</blockquote>
+</div>
 <h2 id="update-an-issue">Update an issue<a class="headerlink" href="#update-an-issue" title="Permanent link">λ︎</a></h2>
 <p><code>@ l i</code> to list the current issues (<code>@ f f</code> to update the topics if the issue is not listed)</p>
 <p>In the issue list buffer, navigate (<code>j</code>, <code>k</code>) to the issue to be edited.</p>
@@ -2066,7 +2030,7 @@
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 26, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 7, 2023</span>
 </small>
 </div>
 </article>
