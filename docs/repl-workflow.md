@@ -1,23 +1,27 @@
 # REPL Driven Development
 
-![Clojure repl driven development](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-driven-development-lifecycle-concept.png){ align=left loading=lazy }
+![Clojure repl driven development](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-workflow-concept.png){loading=lazy}
+
+
+!!! Quote "Always be REPL'ing"
+    Coding without a REPL feels limiting. The REPL provides fast feedback from code as its crafted, testing assumptions and design choices every step of the journey to a solution
+     - John Stevenson, Practical.li
+
 
 Clojure is a powerful, fun and highly productive language for developing applications and services.
  The clear language design is supported by a powerful development environment known as the REPL (read, evaluate, print, loop).  The REPL gives you instant feedback on what your code does and enables you to test either a single expression or run the whole application (including tests).
 
 **REPL driven development is the foundation of working with Clojure effectively**
 
-Coding with a REPL provides instant feedback as design decisions are coded.  The REPL feedback helps test the assumptions that are driving the design choices.  Important design choices should be codified in unit tests, optionally using spec.
+An effective Clojure workflow begins by running a REPL process.  Clojure expressions are written and evaluated immediately to provide instant feedback. The REPL feedback helps test the assumptions that are driving the design choices.
 
 * Read - code is read by the Clojure reader, passing any macros to the macro reader which converts those macros into Clojure code.
 * Evaluate - code is compiled into the host language (e.g. Java bytecode) and executed
 * Print - results of the code are displayed, either in the REPL or as part of the application.
 * Loop - the REPL is a continuous process that evaluates code, either a single expression or the whole application.
 
+Design decisions and valuable data from REPL experiments can be codified as [specifications](#data-and-function-specifications) and [unit tests](#test-driven-development-and-repl-driven-development)
 
-!!! Quote "Always be REPL'ing"
-    _Coding without a REPL feels like so limiting.  I want instant fast feedback from my code as I craft it, testing my assumptions and design choices every step of the journey to a solution_
-     - John Stevenson, Practical.li
 
 
 ## Evaluating source code
@@ -26,7 +30,7 @@ Coding with a REPL provides instant feedback as design decisions are coded.  The
 
 A REPL connected editor is the primary tool for evaluating Clojure code from source code files, displaying the results inline.
 
-Source code is evaluated in its respective namespace, removing the need to change namespaces in the REPL directly, (`in-ns`), or use fully qualified names to call functions.
+Source code automatically is evaluated in its respective namespace, removing the need to change namespaces in the REPL directly, (`in-ns`), or use fully qualified names to call functions.
 
 !!! HINT "Evaluate Clojure in Spacemacs"
     `, e f` evaluates the top level form under the cursor, `, e e` evaluated the expression immediately before the cursor (useful for evaluating nested expressions)
@@ -34,7 +38,6 @@ Source code is evaluated in its respective namespace, removing the need to chang
 <p style="text-align:center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rQ802kSaip4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
-
 
 !!! Hint Evaluate to Comment for results history
     `, e ;` (`cider-eval-defun-to-comment`) evaluates the current form and prints the result under the expression as a comment
@@ -48,7 +51,7 @@ The `(comment ,,,)` function wraps code that is only run directly by the develop
 
 Expressions in rich comment blocks can represent how to use the functions that make up the namespace API.  For example, starting/restarting the system, updating the database, etc.  Expressions provide examples of calling functions with typical arguments and make a project more accessible and easier to work with.
 
-![Practicalli Clojure Repl Driven Development - Rich comment blocks example](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/practicalli-clojure-repl-driven-development-rich-comment-blocks.png)
+![Practicalli Clojure Repl Driven Development - Rich comment blocks example](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/practicalli-clojure-repl-driven-development-rich-comment-light.png)
 
 Rich comment blocks are very useful for rapidly iterating over different design decisions by including the same function but with different implementations.  Hide [clj-kondo linter](https://practical.li/clojure/clojure-cli/install/code-analysis.html){target=_blank} warnings for redefined vars (`def`, `defn`) when using this approach.
 
@@ -120,6 +123,34 @@ Live linting with [clj-kondo](https://github.com/borkdude/clj-kondo){target=_bla
     The [Clojure Style guide](https://github.com/bbatsov/clojure-style-guide){target=_blank} provides examples of common formatting approaches, although the development team should decide which of these to adopt.  Emacs `clojure-mode` will automatically format code and so will Clojure LSP (via cljfmt).  These tools are configurable and should be tailored to the teams standard.
 
 
+## Data and Function specifications
+
+[Clojure spec](https://practical.li/clojure/clojure-spec/){target=_blank} is used to define a contract on incoming and outgoing data, to ensure it is of the correct form.
+
+As data structures are identified in REPL experiments, create data specification to validate the keys and value types of that data.
+
+```clojure
+;; ---------------------------------------------------
+;; Address specifications
+(spec/def ::house-number string?)
+(spec/def ::street string?)
+(spec/def ::postal-code string?)
+(spec/def ::city string?)
+(spec/def ::country string?)
+(spec/def ::additional string?)
+
+(spec/def ::address   ; Composite data specification
+  (spec/keys
+   :req-un [::street ::postal-code ::city ::country]
+   :opt-un [::house-number ::additional]))
+;; ---------------------------------------------------
+```
+
+As the public API is designed, specifications for each functions arguments are added to validate the correct data is used when calling those functions.
+
+[Generative testing](https://practical.li/clojure/clojure-spec/generative-testing/){target=_blank} provides a far greater scope of test values used incorporated into unit tests. Data uses clojure.spec to randomly generate data for testing on each test run.
+
+
 ## Test Driven Development and REPL Driven Development
 
 ![Clojure REPL driven development (RDD) and Test Driven Development (TDD)](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/repl-tdd-flow.png){ align=right loading=lazy }
@@ -144,6 +175,7 @@ Clojure has a number of [test runners](https://practical.li/clojure/testing/test
     ```bash
     clojure -X:test/watch
     ```
+
 
 ## Continuous Integration and Deployment
 
