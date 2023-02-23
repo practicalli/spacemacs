@@ -12,12 +12,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guide to Clojure development with Spacemacs" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/spacemacs/evaluating-clojure/interupt/" rel="canonical"/>
+<link href="https://practical.li/spacemacs/evaluating-clojure/interrupt/" rel="canonical"/>
 <link href="../inspect/" rel="prev"/>
 <link href="../undefine/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.14" name="generator"/>
-<title>Interupt Eval - Practicalli Spacemacs</title>
+<title>Interrupt Eval - Practicalli Spacemacs</title>
 <link href="../../assets/stylesheets/main.113286f1.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -28,17 +28,17 @@
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-YBK519HFM6"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-YBK519HFM6",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-YBK519HFM6",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 <meta content="website" property="og:type"/>
-<meta content="Interupt Eval - Practicalli Spacemacs" property="og:title"/>
+<meta content="Interrupt Eval - Practicalli Spacemacs" property="og:title"/>
 <meta content="Practical guide to Clojure development with Spacemacs" property="og:description"/>
-<meta content="https://practical.li/spacemacs/assets/images/social/evaluating-clojure/interupt.png" property="og:image"/>
+<meta content="https://practical.li/spacemacs/assets/images/social/evaluating-clojure/interrupt.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/spacemacs/evaluating-clojure/interupt/" property="og:url"/>
+<meta content="https://practical.li/spacemacs/evaluating-clojure/interrupt/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Interupt Eval - Practicalli Spacemacs" name="twitter:title"/>
+<meta content="Interrupt Eval - Practicalli Spacemacs" name="twitter:title"/>
 <meta content="Practical guide to Clojure development with Spacemacs" name="twitter:description"/>
-<meta content="https://practical.li/spacemacs/assets/images/social/evaluating-clojure/interupt.png" name="twitter:image"/>
+<meta content="https://practical.li/spacemacs/assets/images/social/evaluating-clojure/interrupt.png" name="twitter:image"/>
 <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
@@ -57,7 +57,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#interrupting-evaluations">
+<a class="md-skip" href="#interrupt-evaluations">
           Skip to content
         </a>
 </div>
@@ -96,7 +96,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Interupt Eval
+              Interrupt Eval
             
           </span>
 </div>
@@ -586,7 +586,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../spacemacs-basics/vim-style/vim-quick-reference/">
-        Vim Quick Reference
+        Evil Quick Reference
       </a>
 </li>
 <li class="md-nav__item">
@@ -811,11 +811,11 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Interupt Eval
+          Interrupt Eval
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Interupt Eval
+        Interrupt Eval
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -2013,8 +2013,9 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="interrupting-evaluations">Interrupting Evaluations<a class="headerlink" href="#interrupting-evaluations" title="Permanent link">λ︎</a></h1>
-<p><code>, e i</code> (<code>cider-interupt</code>) will stop the current evaluation, useful if that evaluation is taking a long time.  This may occur when processing a large data set or stuck in a non-terminating loop.</p>
+<h1 id="interrupt-evaluations">interrupt Evaluations<a class="headerlink" href="#interrupt-evaluations" title="Permanent link">λ︎</a></h1>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd>i</kbd></span> calls <code>cider-interrupt</code> which will stop the current evaluation.</p>
+<p>A long running evaluation may occur when processing a large data set or in a non-terminating loop.</p>
 <h2 id="repl-status-in-buffer-mini-bar">REPL status in buffer mini-bar<a class="headerlink" href="#repl-status-in-buffer-mini-bar" title="Permanent link">λ︎</a></h2>
 <p>The REPL buffer shows a <a href="https://docs.cider.mx/cider/usage/code_evaluation.html#display-spinner-during-evaluation">visual indicator of evaluation</a>, known as a spinner e.g. <code>[=== ]</code>, in the mode line when the current evaluation is taking more than one seconds to complete.</p>
 <p>The visual indicator spinner shows the REPL is actively processing an evaluation, although is not an indicator of how much progress has been attained or time left for completion.</p>
@@ -2066,7 +2067,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 2, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
 </small>
 </div>
 </article>

@@ -17,7 +17,7 @@
 <link href="../vim-tips-for-developers/" rel="next"/>
 <link href="../../../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.0.14" name="generator"/>
-<title>Vim Quick Reference - Practicalli Spacemacs</title>
+<title>Evil Quick Reference - Practicalli Spacemacs</title>
 <link href="../../../assets/stylesheets/main.113286f1.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -28,7 +28,7 @@
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-YBK519HFM6"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-YBK519HFM6",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-YBK519HFM6",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 <meta content="website" property="og:type"/>
-<meta content="Vim Quick Reference - Practicalli Spacemacs" property="og:title"/>
+<meta content="Evil Quick Reference - Practicalli Spacemacs" property="og:title"/>
 <meta content="Practical guide to Clojure development with Spacemacs" property="og:description"/>
 <meta content="https://practical.li/spacemacs/assets/images/social/spacemacs-basics/vim-style/vim-quick-reference.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
@@ -36,7 +36,7 @@
 <meta content="630" property="og:image:height"/>
 <meta content="https://practical.li/spacemacs/spacemacs-basics/vim-style/vim-quick-reference/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Vim Quick Reference - Practicalli Spacemacs" name="twitter:title"/>
+<meta content="Evil Quick Reference - Practicalli Spacemacs" name="twitter:title"/>
 <meta content="Practical guide to Clojure development with Spacemacs" name="twitter:description"/>
 <meta content="https://practical.li/spacemacs/assets/images/social/spacemacs-basics/vim-style/vim-quick-reference.png" name="twitter:image"/>
 <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
@@ -57,7 +57,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#vim-quick-reference">
+<a class="md-skip" href="#evil-quick-reference">
           Skip to content
         </a>
 </div>
@@ -96,7 +96,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Vim Quick Reference
+              Evil Quick Reference
             
           </span>
 </div>
@@ -587,11 +587,11 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Vim Quick Reference
+          Evil Quick Reference
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Vim Quick Reference
+        Evil Quick Reference
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -622,15 +622,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <a class="md-nav__link" href="#searching">
     Searching
   </a>
-<nav aria-label="Searching" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hintensure-ret-is-pressed-after-search">
-    Hint::Ensure RET is pressed after / search
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#text-editing">
@@ -641,15 +632,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <a class="md-nav__link" href="#return-to-normal-state">
     Return to Normal state
   </a>
-<nav aria-label="Return to Normal state" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hint">
-    Hint::
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#copy-cut-paste-undo-redo">
@@ -722,36 +704,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <a class="md-nav__link" href="#quit-or-restart-emacs">
     Quit or Restart Emacs
   </a>
-<nav aria-label="Quit or Restart Emacs" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hintwork-in-progress-sorry">
-    Hint::Work in progress - sorry
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#classic-vim-commands">
-    Classic Vim commands
-  </a>
-<nav aria-label="Classic Vim commands" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#todoreference-section">
-    Todo::Reference section
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#substitution">
-    Substitution
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#external-commands">
-    External commands
-  </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#spelling-checking">
@@ -762,19 +714,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <a class="md-nav__link" href="#scrolling">
     Scrolling
   </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#jump-around">
-    Jump around
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#searching_1">
-    Searching
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -999,8 +938,8 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../evaluating-clojure/interupt/">
-        Interupt Eval
+<a class="md-nav__link" href="../../../evaluating-clojure/interrupt/">
+        Interrupt Eval
       </a>
 </li>
 <li class="md-nav__item">
@@ -2168,15 +2107,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <a class="md-nav__link" href="#searching">
     Searching
   </a>
-<nav aria-label="Searching" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hintensure-ret-is-pressed-after-search">
-    Hint::Ensure RET is pressed after / search
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#text-editing">
@@ -2187,15 +2117,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <a class="md-nav__link" href="#return-to-normal-state">
     Return to Normal state
   </a>
-<nav aria-label="Return to Normal state" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hint">
-    Hint::
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#copy-cut-paste-undo-redo">
@@ -2268,36 +2189,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <a class="md-nav__link" href="#quit-or-restart-emacs">
     Quit or Restart Emacs
   </a>
-<nav aria-label="Quit or Restart Emacs" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hintwork-in-progress-sorry">
-    Hint::Work in progress - sorry
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#classic-vim-commands">
-    Classic Vim commands
-  </a>
-<nav aria-label="Classic Vim commands" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#todoreference-section">
-    Todo::Reference section
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#substitution">
-    Substitution
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#external-commands">
-    External commands
-  </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#spelling-checking">
@@ -2309,19 +2200,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
     Scrolling
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#jump-around">
-    Jump around
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#searching_1">
-    Searching
-  </a>
-</li>
-</ul>
-</nav>
-</li>
 </ul>
 </nav>
 </div>
@@ -2329,9 +2207,9 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="vim-quick-reference">Vim Quick Reference<a class="headerlink" href="#vim-quick-reference" title="Permanent link">λ︎</a></h1>
-<p>A reference of the most common keybindings available in Vim Normal mode. <a href="https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#key-bindings">Spacemacs DOCUMENTATION key bindings section</a> contains full details</p>
-<p><code>.</code> repeats the last keybinding sequence used in Vim Normal mode or a change made within a complete Vim Insert session.</p>
+<h1 id="evil-quick-reference">Evil Quick Reference<a class="headerlink" href="#evil-quick-reference" title="Permanent link">λ︎</a></h1>
+<p>A reference of the most common keybindings available in Evil Normal mode. <a href="https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#key-bindings">Spacemacs DOCUMENTATION key bindings section</a> contains full details</p>
+<p><span class="keys"><kbd class="key-period">.</kbd></span> repeats the last keybinding sequence used in Vim Normal mode or a change made within a complete Vim Insert session.</p>
 <h2 id="moving-around">Moving around<a class="headerlink" href="#moving-around" title="Permanent link">λ︎</a></h2>
 <p>In <strong>normal</strong> mode you can keep your fingers resting on the main row of your keyboard to move around.</p>
 <table>
@@ -2522,7 +2400,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <h2 id="searching">Searching<a class="headerlink" href="#searching" title="Permanent link">λ︎</a></h2>
 <p>Searching buffers and projects with <code>helm-swoop</code> is recommended.</p>
 <p><code>SPC s s</code> - helm-swoop - shows a buffer with all search results, <code>C-j</code> and <code>C-k</code> navigates through results.</p>
-<p><code>SPC s p</code> for a project wide search.</p>
+<p><code>SPC /</code> or <code>SPC s p</code> for a project wide search.</p>
 <p><code>\b</code> defines a boundary around the search term. For example <code>search\b</code> will match search, but not searching.</p>
 <table>
 <thead>
@@ -2558,11 +2436,11 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </tr>
 </tbody>
 </table>
-<blockquote>
-<h4 id="hintensure-ret-is-pressed-after-search">Hint::Ensure <code>RET</code> is pressed after <code>/</code> search<a class="headerlink" href="#hintensure-ret-is-pressed-after-search" title="Permanent link">λ︎</a></h4>
+<div class="admonition hint">
+<p class="admonition-title">Ensure <code>RET</code> is pressed after <code>/</code> search</p>
 <p>Using <code>/</code> to search should be completed by pressing <code>RET</code> or deleting the search term in the mini-buffer before using Evil keybindings.  When in the search state the Evil keybindings act more destructively.</p>
-<p>Use <code>SPC s s</code> for helm swoop rather than <code>/</code></p>
-</blockquote>
+<p>Use ++src++ <span class="keys"><kbd>s</kbd></span> <span class="keys"><kbd>s</kbd></span> for helm swoop</p>
+</div>
 <h2 id="text-editing">Text Editing<a class="headerlink" href="#text-editing" title="Permanent link">λ︎</a></h2>
 <p>The following commands put you into the Evil Insert state</p>
 <table>
@@ -2600,16 +2478,15 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </tbody>
 </table>
 <h2 id="return-to-normal-state">Return to Normal state<a class="headerlink" href="#return-to-normal-state" title="Permanent link">λ︎</a></h2>
-<p>Regularly switch between <strong>normal</strong> and <strong>insert</strong> states is normal practice in Spacemacs.  As soon as you finish typing some new text, it should become second nature to go back to <strong>normal</strong> state.
-c
-Switching from <strong>insert</strong> to <strong>normal</strong> state:</p>
+<p>Regularly switch between <strong>normal</strong> and <strong>insert</strong> states is normal practice in Spacemacs.  As soon as you finish typing some new text, it should become second nature to go back to <strong>normal</strong> state.</p>
+<p>Switching from <strong>insert</strong> to <strong>normal</strong> state:</p>
 <p><code>ESC</code> or press <code>f d</code> keys in extremely quick succession.</p>
-<blockquote>
-<h4 id="hint">Hint::<a class="headerlink" href="#hint" title="Permanent link">λ︎</a></h4>
-<p>Using <code>f d</code> together is low risk as if you dont get it right it will either add the characters or try find the next <code>d</code> character (as <code>f</code> moves to the next character).
-Keep trying this key combination as once in normal state you can use <code>u</code> to undo any <code>f d</code> characters inserted.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Using <code>f d</code> together is low risk as if you dont get it right it will either add the characters or try find the next <code>d</code> character (as <code>f</code> moves to the next character).</p>
+<p>Keep trying this key combination as once in normal state you can use <code>u</code> to undo any <code>f d</code> characters inserted.</p>
+</div>
 <p>The character sequence can be <a href="http://spacemacs.org/doc/DOCUMENTATION.html#commands">customized</a> or deactivated by adding <code>evil-escape</code> to <code>dotspacemacs-excluded-packages</code> in the <code>~/.spacemacs</code> configuration file.</p>
-</blockquote>
 <h2 id="copy-cut-paste-undo-redo">Copy, cut, paste, undo, redo<a class="headerlink" href="#copy-cut-paste-undo-redo" title="Permanent link">λ︎</a></h2>
 <p><code>v</code> in Vim normal mode changes to Visual select mode.  Use the navigation keys or any other movement keys to select text to copy or cut.</p>
 <table>
@@ -2935,78 +2812,28 @@ Press <code>ESC</code> or <code>fd</code> to leave insert mode and insert all 42
 <td><code>SPS q R</code></td>
 <td>Restart Spacemacs</td>
 </tr>
-</tbody>
-</table>
-<blockquote>
-<h4 id="hintwork-in-progress-sorry">Hint::Work in progress - sorry<a class="headerlink" href="#hintwork-in-progress-sorry" title="Permanent link">λ︎</a></h4>
-<p>The rest of this section is work in progress and a little messy.</p>
-</blockquote>
-<h2 id="classic-vim-commands">Classic Vim commands<a class="headerlink" href="#classic-vim-commands" title="Permanent link">λ︎</a></h2>
-<blockquote>
-<h4 id="todoreference-section">Todo::Reference section<a class="headerlink" href="#todoreference-section" title="Permanent link">λ︎</a></h4>
-<p>The classic vim commands are also available, however, I dont think they are as nice to learn.  Adding as reference for those used to Vim already and would miss them.</p>
-</blockquote>
-<h3 id="substitution">Substitution<a class="headerlink" href="#substitution" title="Permanent link">λ︎</a></h3>
-<table>
-<thead>
 <tr>
-<th>key</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>:s/old/new</code></td>
-<td>substitute new for the first old pattern</td>
-</tr>
-<tr>
-<td><code>:s/old/new/g</code></td>
-<td>substitute new for all 'old's on a line</td>
-</tr>
-<tr>
-<td><code>:#,#s/old/new/g</code></td>
-<td>substitute phrases between two line #'s type</td>
-</tr>
-<tr>
-<td><code>:%s/old/new/g</code></td>
-<td>substitute all occurrences in the file</td>
-</tr>
-<tr>
-<td><code>:%s/old/new/gc</code></td>
-<td>as above, asking for confirmation each time</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h3 id="external-commands">External commands<a class="headerlink" href="#external-commands" title="Permanent link">λ︎</a></h3>
-<p>You can run external commands using <code>:!</code> followed by a command.  For example:</p>
-<p><code>:!ls</code> - run the <code>ls</code> command</p>
-<blockquote>
-<p>Spacemacs shell can be configured to pop-up a shell buffer to run commands from the directory of the current buffer.</p>
-</blockquote>
-<h3 id="spelling-checking">Spelling Checking<a class="headerlink" href="#spelling-checking" title="Permanent link">λ︎</a></h3>
-<p>As you are typing in any(?) buffer then Spacemacs is checking your spelling as you type.  If you type a word that Spacemacs does not recognise then that word is underscored in red.  To correct a spelling:</p>
-<ul>
-<li>Move to the word that is incorrectly spelt</li>
-<li><code>SPC S c</code> to change the word and show a list of suggested words</li>
-<li>Either type in a new spelling or use <code>C-j</code> and <code>C-k</code> keys to move down and back up the list of words, using <code>RET</code> to select that word.</li>
-</ul>
-<h3 id="scrolling">Scrolling<a class="headerlink" href="#scrolling" title="Permanent link">λ︎</a></h3>
+<h2 id="spelling-checking">Spelling Checking<a class="headerlink" href="#spelling-checking" title="Permanent link">λ︎</a></h2>
+<p>Spacemacs checks spelling as you type, adding an underscored in red to any words not recognised.</p>
+<p><code>SPC S c</code> to check the current word and show a list of suggested words if spelt incorrectly.</p>
+<p>Either type in a new spelling or use <code>C-j</code> and <code>C-k</code> keys to move down and back up the list of words, using <code>RET</code> to select that word.</p>
+<h2 id="scrolling">Scrolling<a class="headerlink" href="#scrolling" title="Permanent link">λ︎</a></h2>
 <p>In evil command mode you can scroll just the text using the classic vi bindings.  This does not scroll the cursor unless the cursor hist the top or bottom of the window, in which case the cursor stays at that window boundary.</p>
 <ul>
 <li><code>C-y</code> - scroll down</li>
 <li><code>C-e</code> - scroll text up</li>
 </ul>
-<h3 id="jump-around">Jump around<a class="headerlink" href="#jump-around" title="Permanent link">λ︎</a></h3>
-<p><code>SPC j i</code> shows imenu that lists all the def and defn expressions in the current buffer, allowing you to jump to one of these definitions directly by typing its name or using <code>C-j</code> and <code>C-k</code> to select the name and pressing <code>RET</code> to jump to the name in the buffer</p>
-<p><code>SPC j l</code> labels each line of the buffer with a short, unique character code.  By entering the character code you are taken directly to the specific line.  This is the <code>avy goto line</code> function and this works on all visible buffers by default, although it can be just shown on the current buffer (TODO: how is this set).</p>
-<h3 id="searching_1">Searching<a class="headerlink" href="#searching_1" title="Permanent link">λ︎</a></h3>
-<p>Search with <code>SPC /</code></p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 25, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
 </small>
 </div>
 </article>

@@ -586,7 +586,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../spacemacs-basics/vim-style/vim-quick-reference/">
-        Vim Quick Reference
+        Evil Quick Reference
       </a>
 </li>
 <li class="md-nav__item">
@@ -809,8 +809,8 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../evaluating-clojure/interupt/">
-        Interupt Eval
+<a class="md-nav__link" href="../../evaluating-clojure/interrupt/">
+        Interrupt Eval
       </a>
 </li>
 <li class="md-nav__item">
@@ -1763,18 +1763,9 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#view-the-whole-history-with-cider-repl-history">
-    View the whole history with cider-repl-history
+<a class="md-nav__link" href="#cider-repl-history-complete-history">
+    cider-repl-history complete history
   </a>
-<nav aria-label="View the whole history with cider-repl-history" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hint-switch-to-vim-insert-or-emacs-state">
-    Hint:: Switch to Vim insert or Emacs state
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -1983,18 +1974,9 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#view-the-whole-history-with-cider-repl-history">
-    View the whole history with cider-repl-history
+<a class="md-nav__link" href="#cider-repl-history-complete-history">
+    cider-repl-history complete history
   </a>
-<nav aria-label="View the whole history with cider-repl-history" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hint-switch-to-vim-insert-or-emacs-state">
-    Hint:: Switch to Vim insert or Emacs state
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -2004,51 +1986,37 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="repl-history">REPL History<a class="headerlink" href="#repl-history" title="Permanent link">λ︎</a></h1>
-<p>You can scroll back through the history in the REPL buffer, allowing you to evaluate previous expressions evaluated in the REPL.  You can also change any of the previous expressions before evaluating.</p>
-<p>In Vim Insert state or Emacs state.</p>
-<table>
-<thead>
-<tr>
-<th>Vim Insert state</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>C-🡅</code></td>
-<td>scrolls backwards through the history</td>
-</tr>
-<tr>
-<td><code>C-🡇</code></td>
-<td>scrolls forwards through the history</td>
-</tr>
-</tbody>
-</table>
-<p>The above commands do not work in Vim normal state.</p>
-<h2 id="view-the-whole-history-with-cider-repl-history">View the whole history with <code>cider-repl-history</code><a class="headerlink" href="#view-the-whole-history-with-cider-repl-history" title="Permanent link">λ︎</a></h2>
-<p>You can view the history of expressions in a separate buffer via the REPL Command menu, available when the REPL buffer is active.  This does not include the history of results (data inspectors like Portal can be used to navigate evaluated history).</p>
-<p>In Vim Insert state or Emacs state:</p>
-<p><code>,</code> open the REPL command menu</p>
-<p>Type <code>history</code> at the REPL command menu prompt, press <code>RET</code> to select.</p>
-<p>A new buffer opens in Vim normal mode and shows all the previous history, separated by comments.</p>
-<p><a href="/images/spacemacs-clojure-repl-history-buffer.png"><img alt="Spacemacs Clojure REPL history" src="/images/spacemacs-clojure-repl-history-buffer.png"/></a></p>
+<p>Scroll back through the history in the REPL buffer, allowing evaluation of previously entered expressions. Any of the previous expressions can be edited before evaluating.</p>
+<p>In Evil Insert state or Emacs state:</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd></span> - scrolls backwards through the history</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd></span> - scrolls forwards through the history</p>
 <blockquote>
-<h4 id="hint-switch-to-vim-insert-or-emacs-state">Hint:: Switch to Vim insert or Emacs state<a class="headerlink" href="#hint-switch-to-vim-insert-or-emacs-state" title="Permanent link">λ︎</a></h4>
-<p>The REPL History buffer only accepts commands when in Vim insert or Emacs state</p>
-<p><code>i</code> evil insert state
-<code>C-z</code> emacs state</p>
+<p>History navigation not supported in Evil Normal state</p>
 </blockquote>
+<h2 id="cider-repl-history-complete-history"><code>cider-repl-history</code> complete history<a class="headerlink" href="#cider-repl-history-complete-history" title="Permanent link">λ︎</a></h2>
+<p>View the complete history of expressions in a separate buffer via the REPL Command menu, available when the REPL buffer is active.  This does not include the history of results (use a data inspector such as Portal).</p>
+<p>In Evil Insert state or Emacs state:</p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> open the REPL command menu</p>
+<p>Type <code>history</code> at the REPL command menu prompt, press <code>RET</code> to select.</p>
+<p>A new buffer opens in Evil Normal mode and shows all the previous history, separated by comments.</p>
+<p><a href="/images/spacemacs-clojure-repl-history-buffer.png">Spacemacs Clojure REPL history</a></p>
+<div class="admonition hint">
+<p class="admonition-title">Switch to Vim insert or Emacs state</p>
+<p>The REPL History buffer only accepts commands when in Vim insert or Emacs state</p>
+</div>
+<p><span class="keys"><kbd>i</kbd></span> evil insert state</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>z</kbd></span> emacs state</p>
 <p>In Evil Insert or Emacs state:</p>
-<p><code>RTN</code> or <code>SPC</code> will send the current expression under the cursor to the REPL buffer and close the repl-history buffer.</p>
+<p><span class="keys"><kbd class="key-enter">Enter</kbd></span> or <span class="keys"><kbd class="key-space">Space</kbd></span> will send the current expression under the cursor to the REPL buffer and close the repl-history buffer.</p>
 <p>In Evil Normal state:</p>
-<p><code>SPC SPC cider-history-use-and-quit</code> sends the current expression to the REPL buffer and closes the REPL history.</p>
-<p><a href="/images/spacemacs-clojure-repl-history-keybindings-code.png"><img alt="Spacemacs Clojure REPL History - keybindings code" src="/images/spacemacs-clojure-repl-history-keybindings-code.png"/></a></p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-space">Space</kbd></span> <code>cider-history-use-and-quit</code> sends the current expression to the REPL buffer and closes the REPL history.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-clojure-repl-history-keybindings-code.png"><img alt="Spacemacs Clojure REPL History - keybindings code" src="/images/spacemacs-clojure-repl-history-keybindings-code.png"/></a></p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 25, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
 </small>
 </div>
 </article>
