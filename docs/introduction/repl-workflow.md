@@ -30,7 +30,7 @@ Design decisions and valuable data from REPL experiments can be codified as [spe
 
 A REPL connected editor is the primary tool for evaluating Clojure code from source code files, displaying the results inline.
 
-Source code automatically is evaluated in its respective namespace, removing the need to change namespaces in the REPL directly, (`in-ns`), or use fully qualified names to call functions.
+Source code is automatically evaluated in its respective namespace, removing the need to change namespaces in the REPL with (`in-ns`) or use fully qualified names to call functions.
 
 !!! HINT "Evaluate Clojure in Spacemacs"
     `, e f` evaluates the top level form under the cursor, `, e e` evaluated the expression immediately before the cursor (useful for evaluating nested expressions)
