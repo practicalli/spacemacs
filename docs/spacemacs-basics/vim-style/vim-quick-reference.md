@@ -1,7 +1,9 @@
-# Vim Quick Reference
-A reference of the most common keybindings available in Vim Normal mode. [Spacemacs DOCUMENTATION key bindings section](https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#key-bindings) contains full details
+# Evil Quick Reference
 
-`.` repeats the last keybinding sequence used in Vim Normal mode or a change made within a complete Vim Insert session.
+A reference of the most common keybindings available in Evil Normal mode. [Spacemacs DOCUMENTATION key bindings section](https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#key-bindings) contains full details
+
+++period++ repeats the last keybinding sequence used in Vim Normal mode or a change made within a complete Vim Insert session.
+
 
 ## Moving around
 
@@ -69,7 +71,7 @@ Searching buffers and projects with `helm-swoop` is recommended.
 
 `SPC s s` - helm-swoop - shows a buffer with all search results, `C-j` and `C-k` navigates through results.
 
-`SPC s p` for a project wide search.
+`SPC /` or `SPC s p` for a project wide search.
 
 `\b` defines a boundary around the search term. For example `search\b` will match search, but not searching.
 
@@ -83,10 +85,10 @@ Searching buffers and projects with `helm-swoop` is recommended.
 | `n` | once searching: find forward                  |
 | `N` | once searching: find backwards                |
 
-> #### Hint::Ensure `RET` is pressed after `/` search
-> Using `/` to search should be completed by pressing `RET` or deleting the search term in the mini-buffer before using Evil keybindings.  When in the search state the Evil keybindings act more destructively.
->
-> Use `SPC s s` for helm swoop rather than `/`
+!!! HINT "Ensure `RET` is pressed after `/` search"
+    Using `/` to search should be completed by pressing `RET` or deleting the search term in the mini-buffer before using Evil keybindings.  When in the search state the Evil keybindings act more destructively.
+
+    Use ++src++ ++"s"++ ++"s"++ for helm swoop
 
 
 ## Text Editing
@@ -106,17 +108,18 @@ The following commands put you into the Evil Insert state
 ## Return to Normal state
 
 Regularly switch between **normal** and **insert** states is normal practice in Spacemacs.  As soon as you finish typing some new text, it should become second nature to go back to **normal** state.
-c
+
 Switching from **insert** to **normal** state:
 
 `ESC` or press `f d` keys in extremely quick succession.
 
 
-> ####Hint::
-> Using `f d` together is low risk as if you dont get it right it will either add the characters or try find the next `d` character (as `f` moves to the next character).
-> Keep trying this key combination as once in normal state you can use `u` to undo any `f d` characters inserted.
->
-> The character sequence can be [customized](http://spacemacs.org/doc/DOCUMENTATION.html#commands) or deactivated by adding `evil-escape` to `dotspacemacs-excluded-packages` in the `~/.spacemacs` configuration file.
+!!! HINT
+    Using `f d` together is low risk as if you dont get it right it will either add the characters or try find the next `d` character (as `f` moves to the next character).
+
+    Keep trying this key combination as once in normal state you can use `u` to undo any `f d` characters inserted.
+
+   The character sequence can be [customized](http://spacemacs.org/doc/DOCUMENTATION.html#commands) or deactivated by adding `evil-escape` to `dotspacemacs-excluded-packages` in the `~/.spacemacs` configuration file.
 
 
 ## Copy, cut, paste, undo, redo
@@ -270,61 +273,21 @@ I recommend using the Spacemacs menu from **normal** mode to quit / restart Spac
 | `SPC q q` | Quit Spacemacs                                             |
 | `SPS q r` | Restart Spacemacs keeping current window and buffer layout |
 | `SPS q R` | Restart Spacemacs                                          |
+|           |                                                            |
 
 
-> #### Hint::Work in progress - sorry
-> The rest of this section is work in progress and a little messy.
+## Spelling Checking
+
+Spacemacs checks spelling as you type, adding an underscored in red to any words not recognised.
+
+`SPC S c` to check the current word and show a list of suggested words if spelt incorrectly.
+
+Either type in a new spelling or use `C-j` and `C-k` keys to move down and back up the list of words, using `RET` to select that word.
 
 
-## Classic Vim commands
-
-> ####Todo::Reference section
-> The classic vim commands are also available, however, I dont think they are as nice to learn.  Adding as reference for those used to Vim already and would miss them.
-
-### Substitution
-
-| key               | Action                                       |
-|-------------------|----------------------------------------------|
-| `:s/old/new`      | substitute new for the first old pattern     |
-| `:s/old/new/g`    | substitute new for all 'old's on a line      |
-| `:#,#s/old/new/g` | substitute phrases between two line #'s type |
-| `:%s/old/new/g`   | substitute all occurrences in the file       |
-| `:%s/old/new/gc`  | as above, asking for confirmation each time  |
-
-
-### External commands
-
-You can run external commands using `:!` followed by a command.  For example:
-
-`:!ls` - run the `ls` command
-
-> Spacemacs shell can be configured to pop-up a shell buffer to run commands from the directory of the current buffer.
-
-
-### Spelling Checking
-
-As you are typing in any(?) buffer then Spacemacs is checking your spelling as you type.  If you type a word that Spacemacs does not recognise then that word is underscored in red.  To correct a spelling:
-
-* Move to the word that is incorrectly spelt
-* `SPC S c` to change the word and show a list of suggested words
-* Either type in a new spelling or use `C-j` and `C-k` keys to move down and back up the list of words, using `RET` to select that word.
-
-
-### Scrolling
+## Scrolling
 
 In evil command mode you can scroll just the text using the classic vi bindings.  This does not scroll the cursor unless the cursor hist the top or bottom of the window, in which case the cursor stays at that window boundary.
 
 * `C-y` - scroll down
 * `C-e` - scroll text up
-
-
-### Jump around
-
-`SPC j i` shows imenu that lists all the def and defn expressions in the current buffer, allowing you to jump to one of these definitions directly by typing its name or using `C-j` and `C-k` to select the name and pressing `RET` to jump to the name in the buffer
-
-
-`SPC j l` labels each line of the buffer with a short, unique character code.  By entering the character code you are taken directly to the specific line.  This is the `avy goto line` function and this works on all visible buffers by default, although it can be just shown on the current buffer (TODO: how is this set).
-
-### Searching
-
-Search with `SPC /`
