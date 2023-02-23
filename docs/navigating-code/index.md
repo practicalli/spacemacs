@@ -6,7 +6,7 @@ Jumping, marks, code folding and searching are effective ways of navigating a co
 
 Use Evil normal mode to quickly jump around your code.
 
-| Key binding      | Description                                                                                                          |
+| Key binding       | Description                                                                                                          |
 |-------------------|----------------------------------------------------------------------------------------------------------------------|
 | `SPC j j`         | Search across all windows for given character(s), type highlighted character(s) to jump to location                  |
 | `SPC j C`         | Jump to first unbalanced parens                                                                                      |

@@ -117,7 +117,7 @@ CIDER Variables can be set via:
 | Variables                  | Default value                         | Description                                                                                                                                                                 |
 |----------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | cider-font-lock-max-length | `10000`                               | Maxiumum length of strings to fontify in `cider-font-lock-as`. `nil` removes the fontification restriction                                                                  |
-| cider-doc-xref-regexp      |                                       | Regexp to search Clojure vars in doc buffers                                                                                                                      |
+| cider-doc-xref-regexp      |                                       | Regexp to search Clojure vars in doc buffers                                                                                                                                |
 | cider-jdk-src-paths        | `'("/usr/lib/jvm/openjdk-8/src.zip")` | Source code used by `cider-stacktrace-navigate'. Zip/jar file or extracted directory (recommended). Clojure sources: https://mvnrepository.com/artifact/org.clojure/clojure |
 
 
@@ -177,7 +177,7 @@ CIDER Variables can be set via:
 | cider-jack-in-auto-inject-clojure       | `nil`                                                 | `nil` Clojure version not injected. `latest` inject `cider-latest-clojure-version`,  `minimal` inject `cider-minimum-clojure-version` `"1.10.3"`  explicit version.  Using list, first element is artifact ID string, second element is version number |
 | cider-check-cljs-repl-requirements      | `t`                                                   | Run requirement checks for the cljs REPLs. (only disable if experiencing a faulty check)                                                                                                                                                               |
 | cider-custom-cljs-repl-init-form        | `nil`                                                 | Form to start custom ClojureScript REPL  (becomes return value of `cider-custom-cljs-repl-init-form` function which prompts for init form). Use with `.dir-locals.el` where it doesn't make sense to register a new ClojureScript REPL type            |
-| cider-default-cljs-repl                 | `nil`                                                 | ClojureScript REPL to start for cljs jack-in commands (`.dir-locals.el` approach recommended)                                                                                                                                                            |
+| cider-default-cljs-repl                 | `nil`                                                 | ClojureScript REPL to start for cljs jack-in commands (`.dir-locals.el` approach recommended)                                                                                                                                                          |
 | cider-edit-jack-in-command              | `nil`                                                 | `t` allow the user to edit the `cider-jack-in-*` command line                                                                                                                                                                                          |
 | cider-infer-remote-nrepl-ports          | `nil`                                                 | `t` cider will use ssh to try to infer nREPL ports on remote hosts                                                                                                                                                                                     |
 
@@ -193,7 +193,6 @@ CIDER Variables can be set via:
 | Variables                     | Default value | Description                                      |
 |-------------------------------|---------------|--------------------------------------------------|
 | cider-scratch-initial-message |               | Initial message displayed in new scratch buffers |
-|                               |               |                                                  |
 
 
 ## ns
@@ -211,7 +210,7 @@ CIDER Variables can be set via:
 | Variables                               | Default value | Description                                                                                                                                                                                          |
 |-----------------------------------------|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | cider-macroexpansion-display-namespaces | `tidy`        | Should full namespace be shown for vars in macroexpansion buffer `'tidy` not shown for locally defined or referred vars, `'qualified` fully qualified vars shown, `'none` no namespace qualification |
-| cider-macroexpansion-print-metadata     | `nil`         | `t` include metadata in macroexpansion results
+| cider-macroexpansion-print-metadata     | `nil`         | `t` include metadata in macroexpansion results                                                                                                                                                       |
 
 
 ## test
@@ -271,8 +270,8 @@ CIDER Variables can be set via:
 |-------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | cider-show-error-buffer                   | `t`            | popup behavior of cider stack traces. `'always`, `'except-in-repl`, `'only-in-repl`, `nil` no stack trace shown. `cider-error-buffer` always generated in background |
 | cider-auto-jump-to-error                  | `t`            | automatically jump to error location. `'errors-only` don't jump to warnings                                                                                          |
-| cider-auto-select-error-buffer            | `t`            | auto-select the error popup buffer                                                                                                                                  |
-| cider-auto-track-ns-form-changes          | `t`            | auto-evaluate ns form of source buffer when changed. `nil` no evaluation of ns forms                                                                                |
+| cider-auto-select-error-buffer            | `t`            | auto-select the error popup buffer                                                                                                                                   |
+| cider-auto-track-ns-form-changes          | `t`            | auto-evaluate ns form of source buffer when changed. `nil` no evaluation of ns forms                                                                                 |
 | cider-auto-inspect-after-eval             | `t`            | auto-update inspector buffer after eval when *cider-inspect* buffer is visible                                                                                       |
 | cider-save-file-on-load                   | `'prompt`      | prompt to save the file when loading a buffer. `t` save file without confirmation. `nil` files are not saved.                                                        |
 | cider-file-loaded-hook                    | `nil`          | List of functions to call when a load file has completed                                                                                                             |

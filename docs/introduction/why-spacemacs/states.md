@@ -69,13 +69,13 @@ When in a transient-state you will see documentation at the bottom of your windo
 
 ### Examples of transient state menus
 
-| Keybindings   | Transient state description       |
-| ------------- | ------------------------------    |
-| `SPC b .`     | buffer management                 |
-| `SPC e .`     | errors                            |
-| `SPC k .`     | lisp state for structured editing |
-| `SPC w .`     | window management                 |
-| `SPC z .`     | code folding                      |
-| `SPC z f`     | zoom frame size                   |
-| `SPC z x`     | Font Scaling (x for text)         |
-| `SPC n +/-`   | Change the value of a number      |
+| Keybindings | Transient state description       |
+|-------------|-----------------------------------|
+| `SPC b .`   | buffer management                 |
+| `SPC e .`   | errors                            |
+| `SPC k .`   | lisp state for structured editing |
+| `SPC w .`   | window management                 |
+| `SPC z .`   | code folding                      |
+| `SPC z f`   | zoom frame size                   |
+| `SPC z x`   | Font Scaling (x for text)         |
+| `SPC n +/-` | Change the value of a number      |
