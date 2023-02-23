@@ -46,7 +46,7 @@ theme:
   custom_dir: overrides
 
 extra_css:
-  - stylesheets/extra.css
+  - assets/stylesheets/extra.css
 
 ## Additional styling
 markdown_extensions:
