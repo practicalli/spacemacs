@@ -12,34 +12,34 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guide to Clojure development with Spacemacs" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/spacemacs/repl-workflow/" rel="canonical"/>
-<link href=".." rel="prev"/>
-<link href="../why-spacemacs/" rel="next"/>
-<link href="../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
-<title>REPL Workflow - Practicalli Spacemacs</title>
-<link href="../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
-<link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<link href="https://practical.li/spacemacs/introduction/why-spacemacs/mnemonic-menu/" rel="canonical"/>
+<link href="../extensive-language-support/" rel="prev"/>
+<link href="../states/" rel="next"/>
+<link href="../../../assets/favicon.svg" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.14" name="generator"/>
+<title>Mneomic Menus - Practicalli Spacemacs</title>
+<link href="../../../assets/stylesheets/main.113286f1.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../stylesheets/extra.css" rel="stylesheet"/>
-<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<link href="../../../assets/stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-YBK519HFM6"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-YBK519HFM6",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-YBK519HFM6",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 <meta content="website" property="og:type"/>
-<meta content="REPL Workflow - Practicalli Spacemacs" property="og:title"/>
+<meta content="Mneomic Menus - Practicalli Spacemacs" property="og:title"/>
 <meta content="Practical guide to Clojure development with Spacemacs" property="og:description"/>
-<meta content="https://practical.li/spacemacs/assets/images/social/repl-workflow.png" property="og:image"/>
+<meta content="https://practical.li/spacemacs/assets/images/social/introduction/why-spacemacs/mnemonic-menu.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/spacemacs/repl-workflow/" property="og:url"/>
+<meta content="https://practical.li/spacemacs/introduction/why-spacemacs/mnemonic-menu/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="REPL Workflow - Practicalli Spacemacs" name="twitter:title"/>
+<meta content="Mneomic Menus - Practicalli Spacemacs" name="twitter:title"/>
 <meta content="Practical guide to Clojure development with Spacemacs" name="twitter:description"/>
-<meta content="https://practical.li/spacemacs/assets/images/social/repl-workflow.png" name="twitter:image"/>
-<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<meta content="https://practical.li/spacemacs/assets/images/social/introduction/why-spacemacs/mnemonic-menu.png" name="twitter:image"/>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -50,20 +50,23 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="deep-purple" data-md-color-primary="purple" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#repl-driven-development">
+<a class="md-skip" href="#mnemonic-menu-with-which-key">
           Skip to content
         </a>
 </div>
 <div data-md-component="announce">
 <aside class="md-banner">
 <div class="md-banner__inner md-grid md-typeset">
+<button aria-label="Don't show this again" class="md-banner__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
             
             
 
@@ -72,12 +75,13 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 
 
           </div>
+<script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
 </aside>
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="Practicalli Spacemacs" class="md-header__button md-logo" data-md-component="logo" href=".." title="Practicalli Spacemacs">
-<img alt="logo" src="../assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Spacemacs" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Practicalli Spacemacs">
+<img alt="logo" src="../../../assets/images/practicalli-logo.png"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
@@ -92,7 +96,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              REPL Workflow
+              Mneomic Menus
             
           </span>
 </div>
@@ -158,8 +162,8 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="Practicalli Spacemacs" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Practicalli Spacemacs">
-<img alt="logo" src="../assets/images/practicalli-logo.png"/>
+<a aria-label="Practicalli Spacemacs" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Practicalli Spacemacs">
+<img alt="logo" src="../../../assets/images/practicalli-logo.png"/>
 </a>
     Practicalli Spacemacs
   </label>
@@ -177,7 +181,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="..">Overview</a>
+<a href="../../..">Introduction</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -185,17 +189,41 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
-          Overview
+          Introduction
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../repl-workflow.md">
+        REPL Workflow
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">Why Spacemacs</a>
+<label for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_1_3">
+<span class="md-nav__icon md-icon"></span>
+          Why Spacemacs
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../extensive-language-support/">
+        Extensive Languages
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          REPL Workflow
+          Mneomic Menus
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        REPL Workflow
+        Mneomic Menus
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -204,109 +232,45 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#evaluating-source-code">
-    Evaluating source code
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rich-comment-blocks-living-documentation">
-    Rich Comment blocks - living documentation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#design-journal">
-    Design Journal
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#viewing-data-structures">
-    Viewing data structures
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#code-style-and-idiomatic-clojure">
-    Code Style and idiomatic Clojure
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#data-and-function-specifications">
-    Data and Function specifications
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#test-driven-development-and-repl-driven-development">
-    Test Driven Development and REPL Driven Development
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#continuous-integration-and-deployment">
-    Continuous Integration and Deployment
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#live-coding-with-data-stuart-halloway">
-    Live Coding with Data - Stuart Halloway
+<a class="md-nav__link" href="#which-key-menu-controls">
+    Which-key menu controls
   </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
-<div class="md-nav__link md-nav__link--index">
-<a href="../why-spacemacs/">Why Spacemacs</a>
-<label for="__nav_1_3">
-<span class="md-nav__icon md-icon"></span>
-</label>
-</div>
-<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_1_3">
-<span class="md-nav__icon md-icon"></span>
-          Why Spacemacs
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../why-spacemacs/extensive-language-support/">
-        Extensive Languages
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../why-spacemacs/mnemonic-menu/">
-        Mneomic Menus
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../why-spacemacs/states/">
+<a class="md-nav__link" href="../states/">
         Multi-modal Editing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../why-spacemacs/layers/">
+<a class="md-nav__link" href="../layers/">
         Layer Configuration
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../why-spacemacs/clojure-layer/">
+<a class="md-nav__link" href="../clojure-layer/">
         Clojure Support
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../why-spacemacs/structural-editing/">
+<a class="md-nav__link" href="../structural-editing/">
         Structural Editing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../why-spacemacs/helm/">
+<a class="md-nav__link" href="../helm/">
         Selection Narrowing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../why-spacemacs/project-file-navigation/">
+<a class="md-nav__link" href="../project-file-navigation/">
         Project and File Navigation
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../why-spacemacs/layouts/">
+<a class="md-nav__link" href="../layouts/">
         Layouts
       </a>
 </li>
@@ -314,22 +278,22 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-mini-cheatsheet/">
+<a class="md-nav__link" href="../../../spacemacs-mini-cheatsheet/">
         Mini-cheatsheet
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../contributing/">
+<a class="md-nav__link" href="../../contributing/">
         Contributing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../writing-tips/">
+<a class="md-nav__link" href="../../writing-tips/">
         Writing Tips
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../introduction/additional-resources/">
+<a class="md-nav__link" href="../../additional-resources/">
         Resources
       </a>
 </li>
@@ -337,14 +301,14 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/pre-install/">
+<a class="md-nav__link" href="../../../install-spacemacs/pre-install/">
         Pre-install
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../install-spacemacs/">Install</a>
+<a href="../../../install-spacemacs/">Install</a>
 <label for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -356,12 +320,12 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/manual-configuration/">
+<a class="md-nav__link" href="../../../install-spacemacs/manual-configuration/">
         Manual Configuration
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/clojure-layer/">
+<a class="md-nav__link" href="../../../install-spacemacs/clojure-layer/">
         Clojure Layer
       </a>
 </li>
@@ -378,22 +342,22 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/enhance-clojure-experience/">
+<a class="md-nav__link" href="../../../install-spacemacs/enhance-clojure-experience/">
         Enhanced Clojure experience
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/smartparens/">
+<a class="md-nav__link" href="../../../install-spacemacs/smartparens/">
         Smartparens
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/evil-structural-editing/">
+<a class="md-nav__link" href="../../../install-spacemacs/evil-structural-editing/">
         Evil Structural Editing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/clj-kondo-via-lsp/">
+<a class="md-nav__link" href="../../../install-spacemacs/clj-kondo-via-lsp/">
         clj-kondo Server
       </a>
 </li>
@@ -403,7 +367,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../install-spacemacs/clojure-lsp/">Clojure LSP</a>
+<a href="../../../install-spacemacs/clojure-lsp/">Clojure LSP</a>
 <label for="__nav_3_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -415,12 +379,12 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/clojure-lsp/configure-lsp-and-cider/">
+<a class="md-nav__link" href="../../../install-spacemacs/clojure-lsp/configure-lsp-and-cider/">
         Configure LSP and Cider
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/clojure-lsp/snippets/">
+<a class="md-nav__link" href="../../../install-spacemacs/clojure-lsp/snippets/">
         Clojure LSP snippets
       </a>
 </li>
@@ -428,27 +392,27 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/change-font/">
+<a class="md-nav__link" href="../../../install-spacemacs/change-font/">
         Font
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/maximised-full-screen/">
+<a class="md-nav__link" href="../../../install-spacemacs/maximised-full-screen/">
         Full Screen
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/themes/">
+<a class="md-nav__link" href="../../../install-spacemacs/themes/">
         Themes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/line-numbers/">
+<a class="md-nav__link" href="../../../install-spacemacs/line-numbers/">
         Line Numbers
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/eshell/">
+<a class="md-nav__link" href="../../../install-spacemacs/eshell/">
         Emacs Shell
       </a>
 </li>
@@ -465,12 +429,12 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/emacsclient-server/">
+<a class="md-nav__link" href="../../../install-spacemacs/emacsclient-server/">
         emacsclient and persistent server
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/emacsclient-git-commit-messages/">
+<a class="md-nav__link" href="../../../install-spacemacs/emacsclient-git-commit-messages/">
         Git Commit Message
       </a>
 </li>
@@ -490,12 +454,12 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/update/">
+<a class="md-nav__link" href="../../../install-spacemacs/update/">
         Update Spacemacs and Packages
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/switch-to-develop/">
+<a class="md-nav__link" href="../../../install-spacemacs/switch-to-develop/">
         Switch to develop
       </a>
 </li>
@@ -503,7 +467,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../install-spacemacs/troubleshooting/">
+<a class="md-nav__link" href="../../../install-spacemacs/troubleshooting/">
         Troubleshoot
       </a>
 </li>
@@ -513,7 +477,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../spacemacs-basics/">Spacemacs Basics</a>
+<a href="../../../spacemacs-basics/">Spacemacs Basics</a>
 <label for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -525,14 +489,14 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/emacs-basics/">
+<a class="md-nav__link" href="../../../spacemacs-basics/emacs-basics/">
         Emacs Basics
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../spacemacs-basics/working-with-projects/">Projects</a>
+<a href="../../../spacemacs-basics/working-with-projects/">Projects</a>
 <label for="__nav_4_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -544,52 +508,52 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/working-with-projects/dird/">
+<a class="md-nav__link" href="../../../spacemacs-basics/working-with-projects/dird/">
         dired Emacs directory editor
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/working-with-projects/layouts/">
+<a class="md-nav__link" href="../../../spacemacs-basics/working-with-projects/layouts/">
         Layouts and Workspaces
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/working-with-projects/managing-buffers/">
+<a class="md-nav__link" href="../../../spacemacs-basics/working-with-projects/managing-buffers/">
         Buffer management
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/working-with-projects/managing-windows/">
+<a class="md-nav__link" href="../../../spacemacs-basics/working-with-projects/managing-windows/">
         Managing Windows
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/working-with-projects/open-and-create-files/">
+<a class="md-nav__link" href="../../../spacemacs-basics/working-with-projects/open-and-create-files/">
         Open and creating Files (and directories)
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/working-with-projects/projectile/">
+<a class="md-nav__link" href="../../../spacemacs-basics/working-with-projects/projectile/">
         Projectile - project specific commands
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/working-with-projects/ranger/">
+<a class="md-nav__link" href="../../../spacemacs-basics/working-with-projects/ranger/">
         Ranger file manager
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/working-with-projects/searching-projects/">
+<a class="md-nav__link" href="../../../spacemacs-basics/working-with-projects/searching-projects/">
         Searching Projects
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/working-with-projects/tidying-up-buffers/">
+<a class="md-nav__link" href="../../../spacemacs-basics/working-with-projects/tidying-up-buffers/">
         Tidying up buffers
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/working-with-projects/treemacs/">
+<a class="md-nav__link" href="../../../spacemacs-basics/working-with-projects/treemacs/">
         Treemacs - Visualise your project structure
       </a>
 </li>
@@ -597,12 +561,12 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/visual-select/">
+<a class="md-nav__link" href="../../../spacemacs-basics/visual-select/">
         Visual Select
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/spell-checking/">
+<a class="md-nav__link" href="../../../spacemacs-basics/spell-checking/">
         Spell checking in Spacemacs
       </a>
 </li>
@@ -612,7 +576,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../spacemacs-basics/evil/">Evil Basics</a>
+<a href="../../../spacemacs-basics/evil/">Evil Basics</a>
 <label for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -624,44 +588,44 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/evil/editing-states/">
+<a class="md-nav__link" href="../../../spacemacs-basics/evil/editing-states/">
         Evil editing states
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/vim-style/key-binding-reference/">
+<a class="md-nav__link" href="../../../spacemacs-basics/vim-style/key-binding-reference/">
         Evil Keybinding Reference
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/vim-style/speaking-evil/">
+<a class="md-nav__link" href="../../../spacemacs-basics/vim-style/speaking-evil/">
         Speaking Evil
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/vim-style/vim-quick-reference/">
+<a class="md-nav__link" href="../../../spacemacs-basics/vim-style/vim-quick-reference/">
         Vim Quick Reference
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/vim-style/vim-tips-for-developers/">
+<a class="md-nav__link" href="../../../spacemacs-basics/vim-style/vim-tips-for-developers/">
         Vim editing for Clojure developers
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/evil-g-menu/">
+<a class="md-nav__link" href="../../../spacemacs-basics/evil-g-menu/">
         Evil G menu
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/evil-z-menu/">
+<a class="md-nav__link" href="../../../spacemacs-basics/evil-z-menu/">
         Evil Z menu
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_5_9" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../spacemacs-basics/evil-tools/">Evil Tools</a>
+<a href="../../../spacemacs-basics/evil-tools/">Evil Tools</a>
 <label for="__nav_5_9">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -673,32 +637,32 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/evil-tools/helm-swoop/">
+<a class="md-nav__link" href="../../../spacemacs-basics/evil-tools/helm-swoop/">
         Helm-swoop
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/evil-tools/iedit/">
+<a class="md-nav__link" href="../../../spacemacs-basics/evil-tools/iedit/">
         Editing with Vim and iedit
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/evil-tools/iedit-in-action/">
+<a class="md-nav__link" href="../../../spacemacs-basics/evil-tools/iedit-in-action/">
         iedit in action
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/evil-tools/narrowing/">
+<a class="md-nav__link" href="../../../spacemacs-basics/evil-tools/narrowing/">
         Narrowing - very selective editing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/evil-tools/replacing-text-across-projects/">
+<a class="md-nav__link" href="../../../spacemacs-basics/evil-tools/replacing-text-across-projects/">
         Replacing text across projects
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/evil-tools/multiple-cursors/">
+<a class="md-nav__link" href="../../../spacemacs-basics/evil-tools/multiple-cursors/">
         Multiple Cursors
       </a>
 </li>
@@ -711,7 +675,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../clojure-development/">Clojure</a>
+<a href="../../../clojure-development/">Clojure</a>
 <label for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -725,7 +689,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../clojure-repl/">REPL</a>
+<a href="../../../clojure-repl/">REPL</a>
 <label for="__nav_6_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -737,42 +701,42 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../clojure-repl/connect-to-repl/">
+<a class="md-nav__link" href="../../../clojure-repl/connect-to-repl/">
         Connect to a Clojure REPL
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../clojure-repl/connect-to-remote-repl/">
+<a class="md-nav__link" href="../../../clojure-repl/connect-to-remote-repl/">
         Connect to Remote REPL
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../clojure-repl/jack-in-to-repl/">
+<a class="md-nav__link" href="../../../clojure-repl/jack-in-to-repl/">
         Cider Jack-in
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../clojure-repl/portal-data-visualization/">
+<a class="md-nav__link" href="../../../clojure-repl/portal-data-visualization/">
         Portal data visualization
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../clojure-repl/clojurescript-repl/">
+<a class="md-nav__link" href="../../../clojure-repl/clojurescript-repl/">
         ClojureScript projects
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../clojure-repl/refresh-restart-repl/">
+<a class="md-nav__link" href="../../../clojure-repl/refresh-restart-repl/">
         Refresh or Restart the REPL
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../clojure-repl/component-lifecycle/">
+<a class="md-nav__link" href="../../../clojure-repl/component-lifecycle/">
         Component Lifecycle
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../clojure-repl/clear-repl-buffer/">
+<a class="md-nav__link" href="../../../clojure-repl/clear-repl-buffer/">
         Clear REPL Buffer
       </a>
 </li>
@@ -782,7 +746,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../clojure-development/project-configuration/">Project Config</a>
+<a href="../../../clojure-development/project-configuration/">Project Config</a>
 <label for="__nav_6_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -794,7 +758,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../clojure-development/project-configuration/monorepo-nested-projects/">
+<a class="md-nav__link" href="../../../clojure-development/project-configuration/monorepo-nested-projects/">
         Monorepo
       </a>
 </li>
@@ -804,7 +768,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../documentation/">Documentation</a>
+<a href="../../../documentation/">Documentation</a>
 <label for="__nav_6_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -816,22 +780,22 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../documentation/comments/">
+<a class="md-nav__link" href="../../../documentation/comments/">
         Comments
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../documentation/apropos/">
+<a class="md-nav__link" href="../../../documentation/apropos/">
         Apropos
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../documentation/cider-doc/">
+<a class="md-nav__link" href="../../../documentation/cider-doc/">
         Cider-doc
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../documentation/javadoc/">
+<a class="md-nav__link" href="../../../documentation/javadoc/">
         Javadoc
       </a>
 </li>
@@ -841,7 +805,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_5" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../evaluating-clojure/">Evaluate Clojure</a>
+<a href="../../../evaluating-clojure/">Evaluate Clojure</a>
 <label for="__nav_6_5">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -853,37 +817,37 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../evaluating-clojure/expressions/">
+<a class="md-nav__link" href="../../../evaluating-clojure/expressions/">
         Expressions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../evaluating-clojure/inspect/">
+<a class="md-nav__link" href="../../../evaluating-clojure/inspect/">
         Inspect Values
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../evaluating-clojure/interupt/">
+<a class="md-nav__link" href="../../../evaluating-clojure/interupt/">
         Interupt Eval
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../evaluating-clojure/undefine/">
+<a class="md-nav__link" href="../../../evaluating-clojure/undefine/">
         Remove Eval
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../evaluating-clojure/enlighten/">
+<a class="md-nav__link" href="../../../evaluating-clojure/enlighten/">
         Intermediate values
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../evaluating-clojure/macro-expand/">
+<a class="md-nav__link" href="../../../evaluating-clojure/macro-expand/">
         Macro Expand
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../evaluating-clojure/evaluate-in-repl-buffer/">
+<a class="md-nav__link" href="../../../evaluating-clojure/evaluate-in-repl-buffer/">
         Evaluate in the REPL Buffer
       </a>
 </li>
@@ -893,7 +857,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../testing/">Testing</a>
+<a href="../../../testing/">Testing</a>
 <label for="__nav_6_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -905,42 +869,42 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../testing/kaocha-test-runner/">
+<a class="md-nav__link" href="../../../testing/kaocha-test-runner/">
         Kaocha Test Runner
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../testing/unit-testing/">
+<a class="md-nav__link" href="../../../testing/unit-testing/">
         Unit Testing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../testing/unit-testing/cider-test-deps-edn-projects/">
+<a class="md-nav__link" href="../../../testing/unit-testing/cider-test-deps-edn-projects/">
         Cider test deps edn projects
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../testing/unit-testing/writing-unit-tests/">
+<a class="md-nav__link" href="../../../testing/unit-testing/writing-unit-tests/">
         Writing Unit Tests with clojure.test
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../testing/unit-testing/running-tests/">
+<a class="md-nav__link" href="../../../testing/unit-testing/running-tests/">
         Running unit tests in Cider
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../testing/unit-testing/re-run-tests-from-test-report-buffer/">
+<a class="md-nav__link" href="../../../testing/unit-testing/re-run-tests-from-test-report-buffer/">
         Re run tests from test report buffer
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../testing/unit-testing/refactor-unit-tests/">
+<a class="md-nav__link" href="../../../testing/unit-testing/refactor-unit-tests/">
         Refactor Unit Tests
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../testing/unit-testing/configure-cider-test-runner/">
+<a class="md-nav__link" href="../../../testing/unit-testing/configure-cider-test-runner/">
         Configure CIDER test runner
       </a>
 </li>
@@ -950,7 +914,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_7" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../navigating-code/">Navigating Code</a>
+<a href="../../../navigating-code/">Navigating Code</a>
 <label for="__nav_6_7">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -962,42 +926,42 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../navigating-code/expressions/">
+<a class="md-nav__link" href="../../../navigating-code/expressions/">
         Expressions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../navigating-code/markers/">
+<a class="md-nav__link" href="../../../navigating-code/markers/">
         Markers
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../navigating-code/namespaces/">
+<a class="md-nav__link" href="../../../navigating-code/namespaces/">
         Namespaces
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../navigating-code/names-symbols/">
+<a class="md-nav__link" href="../../../navigating-code/names-symbols/">
         Symbols
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../navigating-code/function-definitions/">
+<a class="md-nav__link" href="../../../navigating-code/function-definitions/">
         Functions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../navigating-code/java-definitions/">
+<a class="md-nav__link" href="../../../navigating-code/java-definitions/">
         Java
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../navigating-code/code-folding/">
+<a class="md-nav__link" href="../../../navigating-code/code-folding/">
         Code Folding
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../navigating-code/find-usages/">
+<a class="md-nav__link" href="../../../navigating-code/find-usages/">
         Find Uses
       </a>
 </li>
@@ -1007,7 +971,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_8" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../structural-editing/">Structural Editing</a>
+<a href="../../../structural-editing/">Structural Editing</a>
 <label for="__nav_6_8">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1019,19 +983,19 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../structural-editing/smartparens/">
+<a class="md-nav__link" href="../../../structural-editing/smartparens/">
         Smartparens
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../structural-editing/cleverparens/">
+<a class="md-nav__link" href="../../../structural-editing/cleverparens/">
         Evil Cleverparens
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_8_4" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../structural-editing/lisp-state/">Lisp State</a>
+<a href="../../../structural-editing/lisp-state/">Lisp State</a>
 <label for="__nav_6_8_4">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1043,22 +1007,22 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../structural-editing/lisp-state/wrap-unwrap/">
+<a class="md-nav__link" href="../../../structural-editing/lisp-state/wrap-unwrap/">
         Wrap Unrap
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../structural-editing/lisp-state/slurp-barf/">
+<a class="md-nav__link" href="../../../structural-editing/lisp-state/slurp-barf/">
         Slurp Barf
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../structural-editing/lisp-state/deleting/">
+<a class="md-nav__link" href="../../../structural-editing/lisp-state/deleting/">
         Deleting
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../structural-editing/lisp-state/raising/">
+<a class="md-nav__link" href="../../../structural-editing/lisp-state/raising/">
         Raising
       </a>
 </li>
@@ -1071,7 +1035,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_9" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../snippets/">Snippets</a>
+<a href="../../../snippets/">Snippets</a>
 <label for="__nav_6_9">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1085,7 +1049,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_9_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../snippets/clojure-lsp/">Clojure LSP</a>
+<a href="../../../snippets/clojure-lsp/">Clojure LSP</a>
 <label for="__nav_6_9_2">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1097,12 +1061,12 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../snippets/clojure-lsp/custom-snippets/">
+<a class="md-nav__link" href="../../../snippets/clojure-lsp/custom-snippets/">
         Custom snippets for Clojure LSP
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../snippets/clojure-lsp/practicalli-snippets/">
+<a class="md-nav__link" href="../../../snippets/clojure-lsp/practicalli-snippets/">
         Practicalli Snippets for Clojure LSP
       </a>
 </li>
@@ -1112,7 +1076,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_9_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../snippets/yasnippets/">Yasnippets</a>
+<a href="../../../snippets/yasnippets/">Yasnippets</a>
 <label for="__nav_6_9_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1124,27 +1088,27 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../snippets/yasnippets/built-in-snippets/">
+<a class="md-nav__link" href="../../../snippets/yasnippets/built-in-snippets/">
         Built in snippets
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../snippets/yasnippets/clojure-snippets-reference/">
+<a class="md-nav__link" href="../../../snippets/yasnippets/clojure-snippets-reference/">
         Clojure snippets reference
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../snippets/yasnippets/create-snippets/">
+<a class="md-nav__link" href="../../../snippets/yasnippets/create-snippets/">
         Create snippets from existing text
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../snippets/yasnippets/practicalli-snippets/">
+<a class="md-nav__link" href="../../../snippets/yasnippets/practicalli-snippets/">
         Practicalli Clojure mode Yasnippets
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../snippets/yasnippets/writing-snippets/">
+<a class="md-nav__link" href="../../../snippets/yasnippets/writing-snippets/">
         Yasnippets Custom Snippets
       </a>
 </li>
@@ -1157,7 +1121,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_10" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../refactor/">Refactor</a>
+<a href="../../../refactor/">Refactor</a>
 <label for="__nav_6_10">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1169,27 +1133,27 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../refactor/functions/">
+<a class="md-nav__link" href="../../../refactor/functions/">
         Function
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../refactor/namespace/">
+<a class="md-nav__link" href="../../../refactor/namespace/">
         Namespace
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../refactor/project/">
+<a class="md-nav__link" href="../../../refactor/project/">
         Project
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../refactor/clojure-mode/">
+<a class="md-nav__link" href="../../../refactor/clojure-mode/">
         Clojure Mode
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../refactor/clojure-lsp/">
+<a class="md-nav__link" href="../../../refactor/clojure-lsp/">
         Clojure LSP
       </a>
 </li>
@@ -1199,7 +1163,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_11" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../debug-clojure/">Debug</a>
+<a href="../../../debug-clojure/">Debug</a>
 <label for="__nav_6_11">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1211,37 +1175,37 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../debug-clojure/understanding-errors/">
+<a class="md-nav__link" href="../../../debug-clojure/understanding-errors/">
         Understand Errors
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../debug-clojure/format-error-messages/">
+<a class="md-nav__link" href="../../../debug-clojure/format-error-messages/">
         Format Errors
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../debug-clojure/inspect-values/">
+<a class="md-nav__link" href="../../../debug-clojure/inspect-values/">
         Inspect values
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../debug-clojure/cider-debug/">
+<a class="md-nav__link" href="../../../debug-clojure/cider-debug/">
         Cider debug
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../debug-clojure/classpath-issues/">
+<a class="md-nav__link" href="../../../debug-clojure/classpath-issues/">
         Classpath Issues
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../debug-clojure/core-async/">
+<a class="md-nav__link" href="../../../debug-clojure/core-async/">
         core-async
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../debug-clojure/sayid-debug/">
+<a class="md-nav__link" href="../../../debug-clojure/sayid-debug/">
         Sayid Debug
       </a>
 </li>
@@ -1251,7 +1215,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6_12" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../improving-code/">Code Quality</a>
+<a href="../../../improving-code/">Code Quality</a>
 <label for="__nav_6_12">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1263,37 +1227,37 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../improving-code/live-linting/">
+<a class="md-nav__link" href="../../../improving-code/live-linting/">
         Live linting with clj-kondo
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../improving-code/batch-linting/">
+<a class="md-nav__link" href="../../../improving-code/batch-linting/">
         Batch Linting
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../improving-code/idiomatic-code-checking/">
+<a class="md-nav__link" href="../../../improving-code/idiomatic-code-checking/">
         Idiomatic code with Kibit
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../improving-code/formatting/">
+<a class="md-nav__link" href="../../../improving-code/formatting/">
         Formatting Code
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../improving-code/formatting/clojure/">
+<a class="md-nav__link" href="../../../improving-code/formatting/clojure/">
         Formatting Clojure code
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../improving-code/formatting/aligning-forms-expressions/">
+<a class="md-nav__link" href="../../../improving-code/formatting/aligning-forms-expressions/">
         Aligning forms and expressions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../improving-code/formatting/automatic-indenting/">
+<a class="md-nav__link" href="../../../improving-code/formatting/automatic-indenting/">
         Automatic indenting
       </a>
 </li>
@@ -1306,7 +1270,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../source-control/">Source Control</a>
+<a href="../../../source-control/">Source Control</a>
 <label for="__nav_7">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1318,29 +1282,29 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/configure-layers/">
+<a class="md-nav__link" href="../../../source-control/configure-layers/">
         Git Layer
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/git-configuration/">
+<a class="md-nav__link" href="../../../source-control/git-configuration/">
         Git Config
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/forge-configuration/">
+<a class="md-nav__link" href="../../../source-control/forge-configuration/">
         Forge Config
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/github-clone/">
+<a class="md-nav__link" href="../../../source-control/github-clone/">
         GitHub Clone
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_7_6" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../source-control/magit/">Magit Git Client</a>
+<a href="../../../source-control/magit/">Magit Git Client</a>
 <label for="__nav_7_6">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1352,84 +1316,84 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/create-local-repository/">
+<a class="md-nav__link" href="../../../source-control/magit/create-local-repository/">
         Create a local Git repository
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/list-local-repositories/">
+<a class="md-nav__link" href="../../../source-control/magit/list-local-repositories/">
         List your local Git repositories
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/status/">
+<a class="md-nav__link" href="../../../source-control/magit/status/">
         Magit Status
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/branching/">
+<a class="md-nav__link" href="../../../source-control/magit/branching/">
         Branching in Magit
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/staging-changes/">
+<a class="md-nav__link" href="../../../source-control/magit/staging-changes/">
         Staging changes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/stashing/">
+<a class="md-nav__link" href="../../../source-control/magit/stashing/">
         Stashing changes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/commit-changes/">
+<a class="md-nav__link" href="../../../source-control/magit/commit-changes/">
         Committing changes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/tag-commit/">
+<a class="md-nav__link" href="../../../source-control/magit/tag-commit/">
         Tag a commit
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/timemachine/">
+<a class="md-nav__link" href="../../../source-control/magit/timemachine/">
         Git Timemachine
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/reset-commit-history/">
+<a class="md-nav__link" href="../../../source-control/magit/reset-commit-history/">
         Reset Commit History
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/interactive-rebasing/">
+<a class="md-nav__link" href="../../../source-control/magit/interactive-rebasing/">
         Interactive Rebasing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/cherry-picking/">
+<a class="md-nav__link" href="../../../source-control/magit/cherry-picking/">
         Cherry Picking commits
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/blame/">
+<a class="md-nav__link" href="../../../source-control/magit/blame/">
         Reviewing Commits with Git Blame
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/clean-up-magit-sessions/">
+<a class="md-nav__link" href="../../../source-control/magit/clean-up-magit-sessions/">
         Cleaning up Magit sessions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/version-highlighting/">
+<a class="md-nav__link" href="../../../source-control/magit/version-highlighting/">
         Highlight Version Control Changes
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_7_6_17" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../source-control/magit/remote-repositories/">Remote Repository</a>
+<a href="../../../source-control/magit/remote-repositories/">Remote Repository</a>
 <label for="__nav_7_6_17">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1441,42 +1405,42 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/remote-repositories/add-remote/">
+<a class="md-nav__link" href="../../../source-control/magit/remote-repositories/add-remote/">
         Add remote repository to local repository
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/remote-repositories/checkout-remote-branch/">
+<a class="md-nav__link" href="../../../source-control/magit/remote-repositories/checkout-remote-branch/">
         Magit checkout remote branches
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/remote-repositories/clone/">
+<a class="md-nav__link" href="../../../source-control/magit/remote-repositories/clone/">
         Clone remote repositories
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/remote-repositories/configure-default-push/">
+<a class="md-nav__link" href="../../../source-control/magit/remote-repositories/configure-default-push/">
         Configure default push remote branch
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/remote-repositories/configure-default-upstream/">
+<a class="md-nav__link" href="../../../source-control/magit/remote-repositories/configure-default-upstream/">
         Configure default upstream remote branch
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/remote-repositories/pull-changes/">
+<a class="md-nav__link" href="../../../source-control/magit/remote-repositories/pull-changes/">
         Pull Changes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/remote-repositories/push-changes/">
+<a class="md-nav__link" href="../../../source-control/magit/remote-repositories/push-changes/">
         Push Changes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/remote-repositories/try-pull-requests/">
+<a class="md-nav__link" href="../../../source-control/magit/remote-repositories/try-pull-requests/">
         Try Pull Requests with Magit
       </a>
 </li>
@@ -1486,7 +1450,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_7_6_18" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../source-control/magit/forge/">Forge</a>
+<a href="../../../source-control/magit/forge/">Forge</a>
 <label for="__nav_7_6_18">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1498,22 +1462,22 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/forge/add-database/">
+<a class="md-nav__link" href="../../../source-control/magit/forge/add-database/">
         Add remote repositories to Magit Forge
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/forge/forks/">
+<a class="md-nav__link" href="../../../source-control/magit/forge/forks/">
         Create a remote fork
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/forge/issues/">
+<a class="md-nav__link" href="../../../source-control/magit/forge/issues/">
         Forge Issue management
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../source-control/magit/forge/pull-requests/">
+<a class="md-nav__link" href="../../../source-control/magit/forge/pull-requests/">
         Forge Pull Requests
       </a>
 </li>
@@ -1529,7 +1493,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../markdown-mode/">Markdown</a>
+<a href="../../../markdown-mode/">Markdown</a>
 </div>
 <nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_8">
@@ -1543,7 +1507,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../org-mode/">Org-mode</a>
+<a href="../../../org-mode/">Org-mode</a>
 <label for="__nav_9">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1555,52 +1519,52 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../org-mode/headings/">
+<a class="md-nav__link" href="../../../org-mode/headings/">
         Org-mode Headings
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../org-mode/lists-and-checkboxes/">
+<a class="md-nav__link" href="../../../org-mode/lists-and-checkboxes/">
         Lists and Checkboxes
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../org-mode/linking/">
+<a class="md-nav__link" href="../../../org-mode/linking/">
         Linking to files and websites
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../org-mode/todo-states/">
+<a class="md-nav__link" href="../../../org-mode/todo-states/">
         Org-mode TODO states
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../org-mode/tables/">
+<a class="md-nav__link" href="../../../org-mode/tables/">
         Org-mode Tables
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../org-mode/code-blocks/">
+<a class="md-nav__link" href="../../../org-mode/code-blocks/">
         Org blocks - source code and more
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../org-mode/org-mode-tweaks/">
+<a class="md-nav__link" href="../../../org-mode/org-mode-tweaks/">
         Org-mode tweaks
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../org-mode/org-journal/">
+<a class="md-nav__link" href="../../../org-mode/org-journal/">
         Org Journal
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../org-mode/yasnippets/">
+<a class="md-nav__link" href="../../../org-mode/yasnippets/">
         Yasnippets for Org-mode
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../org-mode/literate-programming/">
+<a class="md-nav__link" href="../../../org-mode/literate-programming/">
         Literate Programming
       </a>
 </li>
@@ -1610,7 +1574,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_10" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../database-access/">Database</a>
+<a href="../../../database-access/">Database</a>
 <label for="__nav_10">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1622,22 +1586,22 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../database-access/add-sql-layer-and-lsp/">
+<a class="md-nav__link" href="../../../database-access/add-sql-layer-and-lsp/">
         Add SQL Layer and LSP support
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../database-access/connection-configuration/">
+<a class="md-nav__link" href="../../../database-access/connection-configuration/">
         Configure connections
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../database-access/external-dependencies/">
+<a class="md-nav__link" href="../../../database-access/external-dependencies/">
         SQL Layer External dependencies
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../database-access/using-sql/">
+<a class="md-nav__link" href="../../../database-access/using-sql/">
         Using SQL from Spacemacs
       </a>
 </li>
@@ -1647,7 +1611,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../termux/">Ultra-Mobile Neovim</a>
+<a href="../../../termux/">Ultra-Mobile Neovim</a>
 <label for="__nav_11">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1659,37 +1623,37 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../termux/fdroid-install/">
+<a class="md-nav__link" href="../../../termux/fdroid-install/">
         F-Droid
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../termux/setup/">
+<a class="md-nav__link" href="../../../termux/setup/">
         Termux Setup
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../termux/using-termux/">
+<a class="md-nav__link" href="../../../termux/using-termux/">
         Using Termux
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../termux/git/">
+<a class="md-nav__link" href="../../../termux/git/">
         Git
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../termux/custom-shell/">
+<a class="md-nav__link" href="../../../termux/custom-shell/">
         Zsh
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../termux/clojure-development/">
+<a class="md-nav__link" href="../../../termux/clojure-development/">
         Clojure
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../termux/spacemacs/">
+<a class="md-nav__link" href="../../../termux/spacemacs/">
         Spacemacs
       </a>
 </li>
@@ -1699,7 +1663,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_12" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../misc/">Misc</a>
+<a href="../../../misc/">Misc</a>
 <label for="__nav_12">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1711,12 +1675,12 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../misc/artist-mode/">
+<a class="md-nav__link" href="../../../misc/artist-mode/">
         Artist Mode
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../misc/unicode-characters/">
+<a class="md-nav__link" href="../../../misc/unicode-characters/">
         Unicode Characters
       </a>
 </li>
@@ -1726,7 +1690,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_13" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../reference/">Reference</a>
+<a href="../../../reference/">Reference</a>
 <label for="__nav_13">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1738,39 +1702,39 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/emacs-quick-reference/">
+<a class="md-nav__link" href="../../../reference/emacs-quick-reference/">
         Emacs Quick Reference
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/spacemacs-conventions/">
+<a class="md-nav__link" href="../../../reference/spacemacs-conventions/">
         Spacemacs Conventions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/hydra-menus/">
+<a class="md-nav__link" href="../../../reference/hydra-menus/">
         Hydra menus
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/projectile/">
+<a class="md-nav__link" href="../../../reference/projectile/">
         Projectile
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/cider/">
+<a class="md-nav__link" href="../../../reference/cider/">
         Cider reference
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/cider/configuration-variables/">
+<a class="md-nav__link" href="../../../reference/cider/configuration-variables/">
         Cider configuration variables.
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_13_8" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../external-repl/">Clojure REPL</a>
+<a href="../../../external-repl/">Clojure REPL</a>
 <label for="__nav_13_8">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1782,27 +1746,27 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../external-repl/connect-to-running-repl/">
+<a class="md-nav__link" href="../../../external-repl/connect-to-running-repl/">
         Connect to a running Repl
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../external-repl/switching-to-repl/">
+<a class="md-nav__link" href="../../../external-repl/switching-to-repl/">
         Switching to the REPL
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../external-repl/show-repl-on-connect/">
+<a class="md-nav__link" href="../../../external-repl/show-repl-on-connect/">
         Show REPL Buffer
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../external-repl/repl-command-menu/">
+<a class="md-nav__link" href="../../../external-repl/repl-command-menu/">
         REPL Command Menu
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../external-repl/repl-history/">
+<a class="md-nav__link" href="../../../external-repl/repl-history/">
         REPL History
       </a>
 </li>
@@ -1812,7 +1776,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_13_9" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../reference/clojure/">Clojure Standard Library</a>
+<a href="../../../reference/clojure/">Clojure Standard Library</a>
 <label for="__nav_13_9">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1824,27 +1788,27 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/clojure/control-flow/">
+<a class="md-nav__link" href="../../../reference/clojure/control-flow/">
         Control flow
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/clojure/data-structures/">
+<a class="md-nav__link" href="../../../reference/clojure/data-structures/">
         Data Structures
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/clojure/functions/">
+<a class="md-nav__link" href="../../../reference/clojure/functions/">
         Functions
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/clojure/maths/">
+<a class="md-nav__link" href="../../../reference/clojure/maths/">
         Maths
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/clojure/strings/">
+<a class="md-nav__link" href="../../../reference/clojure/strings/">
         Strings
       </a>
 </li>
@@ -1854,7 +1818,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_13_10" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../reference/clojure-lsp/">Clojure LSP</a>
+<a href="../../../reference/clojure-lsp/">Clojure LSP</a>
 <label for="__nav_13_10">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1866,7 +1830,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/clojure-lsp/lsp-variables-reference/">
+<a class="md-nav__link" href="../../../reference/clojure-lsp/lsp-variables-reference/">
         LSP Variables
       </a>
 </li>
@@ -1874,37 +1838,37 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/structural-editing/smartparens-cheatsheet/">
+<a class="md-nav__link" href="../../../reference/structural-editing/smartparens-cheatsheet/">
         Smartparens cheatsheet
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/keybindings/">
+<a class="md-nav__link" href="../../../reference/keybindings/">
         Reference: Keybindings
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/keybindings/cider-keybindings/">
+<a class="md-nav__link" href="../../../reference/keybindings/cider-keybindings/">
         Common CIDER default keybindings for Emacs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/keybindings/vim-keybindings/">
+<a class="md-nav__link" href="../../../reference/keybindings/vim-keybindings/">
         Useful Vim key bindings
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/vim/getting-comfortable/">
+<a class="md-nav__link" href="../../../reference/vim/getting-comfortable/">
         Vim - Getting Comfortable
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../reference/vim/key-bindings/">
+<a class="md-nav__link" href="../../../reference/vim/key-bindings/">
         Evil Key Bindings Reference
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../os-specific-config/macosx/">
+<a class="md-nav__link" href="../../../os-specific-config/macosx/">
         MacOSX Specific configuration
       </a>
 </li>
@@ -1914,7 +1878,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_14" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../emacs-lisp/">Emacs</a>
+<a href="../../../emacs-lisp/">Emacs</a>
 <label for="__nav_14">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1926,17 +1890,17 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../encryption/">
+<a class="md-nav__link" href="../../../encryption/">
         Encryption in Emacs - EasyPG Assistant
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../encryption/create-gpg-key/">
+<a class="md-nav__link" href="../../../encryption/create-gpg-key/">
         Creating a gpg key
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../writing-emacs-lisp/">
+<a class="md-nav__link" href="../../../writing-emacs-lisp/">
         Writing Emacs Lisp
       </a>
 </li>
@@ -1946,7 +1910,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_15" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../alternative-tooling/">Alternative Tools</a>
+<a href="../../../alternative-tooling/">Alternative Tools</a>
 <label for="__nav_15">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -1958,12 +1922,12 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../alternative-tooling/leiningen/">
+<a class="md-nav__link" href="../../../alternative-tooling/leiningen/">
         Leiningen
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../alternative-tooling/org-easy-templates/">
+<a class="md-nav__link" href="../../../alternative-tooling/org-easy-templates/">
         Org-mode Easy Templates
       </a>
 </li>
@@ -1983,12 +1947,12 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../spacemacs-basics/vim-style/common-evil/">
+<a class="md-nav__link" href="../../../spacemacs-basics/vim-style/common-evil/">
         Common Tasks using Evil vim-style editing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../why-spacemacs/why-evil/">
+<a class="md-nav__link" href="../why-evil/">
         Evil Vim Style Editing
       </a>
 </li>
@@ -2010,48 +1974,8 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#evaluating-source-code">
-    Evaluating source code
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rich-comment-blocks-living-documentation">
-    Rich Comment blocks - living documentation
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#design-journal">
-    Design Journal
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#viewing-data-structures">
-    Viewing data structures
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#code-style-and-idiomatic-clojure">
-    Code Style and idiomatic Clojure
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#data-and-function-specifications">
-    Data and Function specifications
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#test-driven-development-and-repl-driven-development">
-    Test Driven Development and REPL Driven Development
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#continuous-integration-and-deployment">
-    Continuous Integration and Deployment
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#live-coding-with-data-stuart-halloway">
-    Live Coding with Data - Stuart Halloway
+<a class="md-nav__link" href="#which-key-menu-controls">
+    Which-key menu controls
   </a>
 </li>
 </ul>
@@ -2061,151 +1985,56 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="repl-driven-development">REPL Driven Development<a class="headerlink" href="#repl-driven-development" title="Permanent link">λ︎</a></h1>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-workflow-concept.png"><img alt="Clojure repl driven development" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-workflow-concept.png"/></a></p>
-<div class="admonition quote">
-<p class="admonition-title">Always be REPL'ing</p>
-<p>Coding without a REPL feels limiting. The REPL provides fast feedback from code as its crafted, testing assumptions and design choices every step of the journey to a solution
- - John Stevenson, Practical.li</p>
-</div>
-<p>Clojure is a powerful, fun and highly productive language for developing applications and services.
- The clear language design is supported by a powerful development environment known as the REPL (read, evaluate, print, loop).  The REPL gives you instant feedback on what your code does and enables you to test either a single expression or run the whole application (including tests).</p>
-<p><strong>REPL driven development is the foundation of working with Clojure effectively</strong></p>
-<p>An effective Clojure workflow begins by running a REPL process.  Clojure expressions are written and evaluated immediately to provide instant feedback. The REPL feedback helps test the assumptions that are driving the design choices.</p>
-<ul>
-<li>Read - code is read by the Clojure reader, passing any macros to the macro reader which converts those macros into Clojure code.</li>
-<li>Evaluate - code is compiled into the host language (e.g. Java bytecode) and executed</li>
-<li>Print - results of the code are displayed, either in the REPL or as part of the application.</li>
-<li>Loop - the REPL is a continuous process that evaluates code, either a single expression or the whole application.</li>
-</ul>
-<p>Design decisions and valuable data from REPL experiments can be codified as <a href="#data-and-function-specifications">specifications</a> and <a href="#test-driven-development-and-repl-driven-development">unit tests</a></p>
-<h2 id="evaluating-source-code">Evaluating source code<a class="headerlink" href="#evaluating-source-code" title="Permanent link">λ︎</a></h2>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-driven-development-clojure-aware-editor.png"><img align="right" alt="Clojure repl driven development using Clojure aware editor" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-driven-development-clojure-aware-editor.png"/></a></p>
-<p>A REPL connected editor is the primary tool for evaluating Clojure code from source code files, displaying the results inline.</p>
-<p>Source code automatically is evaluated in its respective namespace, removing the need to change namespaces in the REPL directly, (<code>in-ns</code>), or use fully qualified names to call functions.</p>
-<div class="admonition hint">
-<p class="admonition-title">Evaluate Clojure in Spacemacs</p>
-<p><code>, e f</code> evaluates the top level form under the cursor, <code>, e e</code> evaluated the expression immediately before the cursor (useful for evaluating nested expressions)</p>
-</div>
-<p style="text-align:center">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/rQ802kSaip4" title="YouTube video player" width="560"></iframe>
-</p>
-<div class="admonition hint evaluate to comment for results history">
-<p class="admonition-title">Hint</p>
-<p><code>, e ;</code> (<code>cider-eval-defun-to-comment</code>) evaluates the current form and prints the result under the expression as a comment</p>
-<p>Adding result comment is an effective way to show the expected results of the code design, especially as a journal.</p>
-</div>
-<h2 id="rich-comment-blocks-living-documentation">Rich Comment blocks - living documentation<a class="headerlink" href="#rich-comment-blocks-living-documentation" title="Permanent link">λ︎</a></h2>
-<p>The <code>(comment ,,,)</code> function wraps code that is only run directly by the developer using a <a href="https://practical.li/clojure/clojure-editors/" target="_blank">Clojure aware editor</a>.</p>
-<p>Expressions in rich comment blocks can represent how to use the functions that make up the namespace API.  For example, starting/restarting the system, updating the database, etc.  Expressions provide examples of calling functions with typical arguments and make a project more accessible and easier to work with.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/practicalli-clojure-repl-driven-development-rich-comment-light.png"><img alt="Practicalli Clojure Repl Driven Development - Rich comment blocks example" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/practicalli-clojure-repl-driven-development-rich-comment-light.png"/></a></p>
-<p>Rich comment blocks are very useful for rapidly iterating over different design decisions by including the same function but with different implementations.  Hide <a href="https://practical.li/clojure/clojure-cli/install/code-analysis.html" target="_blank">clj-kondo linter</a> warnings for redefined vars (<code>def</code>, <code>defn</code>) when using this approach.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">;; Rich comment block with redefined vars ignored</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="o">#</span><span class="nv">_</span><span class="p">{</span><span class="ss">:clj-kondo/ignore</span><span class="w"> </span><span class="p">[</span><span class="ss">:redefined-var</span><span class="p">]}</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">(</span><span class="nf">comment</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="p">(</span><span class="kd">defn </span><span class="nv">value-added-tax</span><span class="w"> </span><span class="p">[]</span>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="c1">;; algorithm design - first try)</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="p">(</span><span class="kd">defn </span><span class="nv">value-added-tax</span><span class="w"> </span><span class="p">[]</span>
-<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="c1">;; algorithm design - first try)</span>
-<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>
-<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="c1">;; End of rich comment block</span>
-</code></pre></div>
-<p>The "Rich" in the name is an honourary mention to Rich Hickey, the author and benevolent dictator of Clojure design.</p>
-<h2 id="design-journal">Design Journal<a class="headerlink" href="#design-journal" title="Permanent link">λ︎</a></h2>
-<p>A journal of design decisions makes the code easier to understand and maintain.  Code examples of design decisions and alternative design discussions are captured, reducing the time spent revisiting those discussions.</p>
-<p>Journals simplify the developer on-boarding processes as the journey through design decisions are already documented.</p>
-<p>A Design Journal is usually created in a separate namespace, although it may start as a rich comment at the bottom of a namespace.</p>
-<p>A journal should cover the following aspects</p>
-<ul>
-<li>Relevant expressions use to test assumptions about design options.</li>
-<li>Examples of design choices not taken and discussions why (saves repeating the same design discussions)</li>
-<li>Expressions that can be evaluated to explain how a function or parts of a function work</li>
-</ul>
-<p>The design journal can be used to create meaningful documentation for the project very easily and should prevent time spent on repeating the same conversations.</p>
-<div class="admonition hint">
-<p class="admonition-title">Example design journal</p>
-<p><a href="https://github.com/jr0cket/tictactoe-reagent/blob/master/src/tictactoe_reagent/core.cljs#L124" target="_blank">Design journal for TicTacToe game using Reagent, ClojureScript and Scalable Vector Graphics</a></p>
-</div>
-<h2 id="viewing-data-structures">Viewing data structures<a class="headerlink" href="#viewing-data-structures" title="Permanent link">λ︎</a></h2>
-<p>Pretty print shows the structure of results from function calls in a human-friendly form, making it easier for a developer to parse and more likely to notice incorrect results.</p>
-<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd>p</kbd></span> on the Spacemacs Clojure menu has several commands to Pretty Print data structure results when evaluating code.</p>
-<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>d</kbd></span> <span class="keys"><kbd>v</kbd></span> is the Cider Inspect menu for paging through very large data sets and navigate nested data structures in detail.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemace-clojure-inspect-java-lang-persistentvector.png"><img alt="Clojure - viewing large data sets" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemace-clojure-inspect-java-lang-persistentvector.png"/></a></p>
-<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>d</kbd></span> is the Cider debug menu which can inspect view intermediate values and data structures during the debugging of Clojure function calls.</p>
-<p><a href="../evaluating-clojure/inspect/">Cider inspector</a> is an effective way to navigate nested data and page through large data sets.</p>
-<p><a href="https://practical.li/clojure/clojure-tools/data-browsers/" target="_blank">External data browsers</a> can visualise data in many different forms.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/portal/portal-data-browser-example.png"><img alt="Portal - viewing Clojure data" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/portal/portal-data-browser-example.png"/></a></p>
-<h2 id="code-style-and-idiomatic-clojure">Code Style and idiomatic Clojure<a class="headerlink" href="#code-style-and-idiomatic-clojure" title="Permanent link">λ︎</a></h2>
-<p>Clojure aware editors should automatically apply formatting that follows the <a href="https://github.com/bbatsov/clojure-style-guide" target="_blank">Clojure Style guide</a>.</p>
-<p>Live linting with <a href="https://github.com/borkdude/clj-kondo" target="_blank">clj-kondo</a> suggests common idioms and highlights a wide range of syntax errors as code is written, minimizing bugs and therefore speeding up the development process.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-light.png#only-light"><img alt="Clojure code static analysis for live linting" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-light.png#only-light"/></a>
-<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-dark.png#only-dark"><img alt="Clojure code static analysis for live linting" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-dark.png#only-dark"/></a></p>
-<div class="admonition info">
-<p class="admonition-title">Clojure Style Guide</p>
-<p>The <a href="https://github.com/bbatsov/clojure-style-guide" target="_blank">Clojure Style guide</a> provides examples of common formatting approaches, although the development team should decide which of these to adopt.  Emacs <code>clojure-mode</code> will automatically format code and so will Clojure LSP (via cljfmt).  These tools are configurable and should be tailored to the teams standard.</p>
-</div>
-<h2 id="data-and-function-specifications">Data and Function specifications<a class="headerlink" href="#data-and-function-specifications" title="Permanent link">λ︎</a></h2>
-<p><a href="https://practical.li/clojure/clojure-spec/" target="_blank">Clojure spec</a> is used to define a contract on incoming and outgoing data, to ensure it is of the correct form.</p>
-<p>As data structures are identified in REPL experiments, create data specification to validate the keys and value types of that data.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">;; ---------------------------------------------------</span>
-<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">;; Address specifications</span>
-<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">(</span><span class="nf">spec/def</span><span class="w"> </span><span class="ss">::house-number</span><span class="w"> </span><span class="nv">string?</span><span class="p">)</span>
-<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">(</span><span class="nf">spec/def</span><span class="w"> </span><span class="ss">::street</span><span class="w"> </span><span class="nv">string?</span><span class="p">)</span>
-<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="p">(</span><span class="nf">spec/def</span><span class="w"> </span><span class="ss">::postal-code</span><span class="w"> </span><span class="nv">string?</span><span class="p">)</span>
-<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">(</span><span class="nf">spec/def</span><span class="w"> </span><span class="ss">::city</span><span class="w"> </span><span class="nv">string?</span><span class="p">)</span>
-<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">(</span><span class="nf">spec/def</span><span class="w"> </span><span class="ss">::country</span><span class="w"> </span><span class="nv">string?</span><span class="p">)</span>
-<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">(</span><span class="nf">spec/def</span><span class="w"> </span><span class="ss">::additional</span><span class="w"> </span><span class="nv">string?</span><span class="p">)</span>
-<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>
-<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="p">(</span><span class="nf">spec/def</span><span class="w"> </span><span class="ss">::address</span><span class="w">   </span><span class="c1">; Composite data specification</span>
-<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">  </span><span class="p">(</span><span class="nf">spec/keys</span>
-<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">   </span><span class="ss">:req-un</span><span class="w"> </span><span class="p">[</span><span class="ss">::street</span><span class="w"> </span><span class="ss">::postal-code</span><span class="w"> </span><span class="ss">::city</span><span class="w"> </span><span class="ss">::country</span><span class="p">]</span>
-<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">   </span><span class="ss">:opt-un</span><span class="w"> </span><span class="p">[</span><span class="ss">::house-number</span><span class="w"> </span><span class="ss">::additional</span><span class="p">]))</span>
-<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="c1">;; ---------------------------------------------------</span>
-</code></pre></div>
-<p>As the public API is designed, specifications for each functions arguments are added to validate the correct data is used when calling those functions.</p>
-<p><a href="https://practical.li/clojure/clojure-spec/generative-testing/" target="_blank">Generative testing</a> provides a far greater scope of test values used incorporated into unit tests. Data uses clojure.spec to randomly generate data for testing on each test run.</p>
-<h2 id="test-driven-development-and-repl-driven-development">Test Driven Development and REPL Driven Development<a class="headerlink" href="#test-driven-development-and-repl-driven-development" title="Permanent link">λ︎</a></h2>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/repl-tdd-flow.png"><img align="right" alt="Clojure REPL driven development (RDD) and Test Driven Development (TDD)" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/repl-tdd-flow.png"/></a></p>
-<p>Test Driven Development (TDD) and REPL Driven Development (RDD) complement each other as they both encourage incremental changes and continuous feedback.</p>
-<blockquote>
-<p>Test Driven Development fits well with Hammock Time, as good design comes from deep thought</p>
-</blockquote>
-<ul>
-<li>RDD enables rapid design experiments so different approaches can easily and quickly be evaluated .</li>
-<li>TDD focuses the results of the REPL experiments into design decisions, codified as unit tests.  These tests guide the correctness of specific implementations and provide critical feedback when changes break that design.</li>
-</ul>
-<p><a href="https://practical.li/clojure/testing/unit-testing/" target="_blank">Unit tests</a> should support the public API of each namespace in a project to help prevent regressions in the code.  Its far more efficient in terms of thinking time to define unit tests as the design starts to stabilize than as an after thought.</p>
-<p><code>clojure.test</code> library is part of the Clojure standard library that provides a simple way to start writing unit tests.</p>
-<p><a href="https://practical.li/clojure/clojure-spec/" target="_blank">Clojure spec</a> can also be used for generative testing, providing far greater scope in values used when running unit tests.  Specifications can be defined for values and functions.</p>
-<p>Clojure has a number of <a href="https://practical.li/clojure/testing/test-runners/" target="_blank">test runners</a> available.  Kaocha is a test runner that will run unit tests and function specification checks.</p>
-<div class="admonition hint">
-<p class="admonition-title">Automate local test runner</p>
-<p>Use <a href="https://practical.li/clojure/testing/test-runners/kaocha-test-runner.html" target="_blank">kaocha test runner</a> in watch mode to run tests and specification check automatically (when changes are saved)
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>clojure<span class="w"> </span>-X:test/watch
-</code></pre></div></p>
-</div>
-<h2 id="continuous-integration-and-deployment">Continuous Integration and Deployment<a class="headerlink" href="#continuous-integration-and-deployment" title="Permanent link">λ︎</a></h2>
-<p>Add a <a href="https://practical.li/clojure/continuous-integration/" target="_blank">continuous integration service</a> to run tests and builds code on every shared commit.  Spin up testable review deployments when commits pushed to a pull request branch, before pushing commits to the main deployment branch, creating an effective pipeline to gain further feedback.</p>
-<ul>
-<li><a href="https://practical.li/clojure/continuous-integration/circle-ci/" target="_blank">CircleCI</a> provides a simple to use service that supports Clojure projects.</li>
-<li><a href="https://docs.github.com/en/actions/using-workflows" target="_blank">GitHub Workflows</a> and <a href="https://github.com/marketplace?type=actions" target="_blank">GitHub actions marketplace </a> to quickly build a tailored continuous integration service, e.g. <a href="https://github.com/marketplace/actions/setup-clojure" target="_blank">Setup Clojure GitHub Action</a>.</li>
-<li><a href="https://docs.gitlab.com/ee/ci/introduction/index.html" target="_blank">GitLab CI</a></li>
-</ul>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/continuous-integration/continuous-integration-overview.svg"><img alt="Continuous Integration" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/continuous-integration/continuous-integration-overview.svg"/></a></p>
-<h2 id="live-coding-with-data-stuart-halloway">Live Coding with Data - Stuart Halloway<a class="headerlink" href="#live-coding-with-data-stuart-halloway" title="Permanent link">λ︎</a></h2>
-<p>There are few novel features of programming languages, but each combination has different properties. The combination of dynamic, hosted, functional and extended Lisp in Clojure gives developers the tools for making effective programs. The ways in which Clojure's unique combination of features can yield a highly effective development process.</p>
-<p>Over more than a decade we have developed an effective approach to writing code in Clojure whose power comes from composing many of its key features. As different as Clojure programs are from e.g. Java programs, so to can and should be the development experience. You are not in Kansas anymore!</p>
-<p>This talk presents a demonstration of the leverage you can get when writing programs in Clojure, with examples, based on my experiences as a core developer of Clojure and Datomic.</p>
-<p style="text-align:center">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/Qx0-pViyIDU" title="YouTube video player" width="560"></iframe>
-</p>
+<h1 id="mnemonic-menu-with-which-key">Mnemonic Menu with Which-Key<a class="headerlink" href="#mnemonic-menu-with-which-key" title="Permanent link">λ︎</a></h1>
+<p>Spacemacs uses <a href="https://github.com/justbur/emacs-which-key">which-key</a> to create a menus system of keybindings for the most commonly used commands.</p>
+<p>Which-key provides single chord keybindings, <code>SCP p f</code> rather than <code>C-x C-p C-f</code>.  Single chord key bindings are easier to remember and therefore make Spacemacs simpler to learn and faster to use.  Single chorded key bindings are also less of a strain on hands when typing.</p>
+<p>Mnemonic characters for keys are used where possible, using the first character of a command or a prominent character if a particular character is already taken.  Sub-menus are added to increase the range of characters available for a menu.  Spacemacs prefers a sub-menu rather than upper case or non-mnemonic characters.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-menu-main.png"><img alt="Spacemacs Which-Key" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-menu-main.png"/></a></p>
+<h2 id="which-key-menu-controls">Which-key menu controls<a class="headerlink" href="#which-key-menu-controls" title="Permanent link">λ︎</a></h2>
+<p><code>C-h</code> opens the which-key command menu, allowing navigation through menus and sub-menus.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-which-key-paging-help-menu.png"><img alt="which-key menu - C-h" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-which-key-paging-help-menu.png"/></a></p>
+<p><code>C-h n</code> shows the next page of commands when a menu is so large it is be spanned over several pages. <code>C-h p</code> shows the previous menu page.</p>
+<p><code>C-h u</code> to show the parent of the current menu, useful if you navigated to an incorrect sub-menu.</p>
+<table>
+<thead>
+<tr>
+<th>Keybinding</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>C-h</code></td>
+<td>Paging / help menu</td>
+</tr>
+<tr>
+<td><code>n</code></td>
+<td>next page in menu</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td>previous page in menu</td>
+</tr>
+<tr>
+<td><code>u</code></td>
+<td>up to parent menu</td>
+</tr>
+<tr>
+<td><code>h</code></td>
+<td>help</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>abort</td>
+</tr>
+</tbody>
+</table>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 10, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
 </small>
 </div>
 </article>
@@ -2255,7 +2084,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

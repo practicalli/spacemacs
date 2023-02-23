@@ -12,33 +12,31 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guide to Clojure development with Spacemacs" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/spacemacs/why-spacemacs/states/" rel="canonical"/>
-<link href="../mnemonic-menu/" rel="prev"/>
-<link href="../layers/" rel="next"/>
+<link href="https://practical.li/spacemacs/introduction/repl-workflow/" rel="canonical"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
-<title>Multi-modal Editing - Practicalli Spacemacs</title>
-<link href="../../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.14" name="generator"/>
+<title>REPL Driven Development - Practicalli Spacemacs</title>
+<link href="../../assets/stylesheets/main.113286f1.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-YBK519HFM6"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-YBK519HFM6",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-YBK519HFM6",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 <meta content="website" property="og:type"/>
-<meta content="Multi-modal Editing - Practicalli Spacemacs" property="og:title"/>
+<meta content="REPL Driven Development - Practicalli Spacemacs" property="og:title"/>
 <meta content="Practical guide to Clojure development with Spacemacs" property="og:description"/>
-<meta content="https://practical.li/spacemacs/assets/images/social/why-spacemacs/states.png" property="og:image"/>
+<meta content="https://practical.li/spacemacs/assets/images/social/introduction/repl-workflow.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/spacemacs/why-spacemacs/states/" property="og:url"/>
+<meta content="https://practical.li/spacemacs/introduction/repl-workflow/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Multi-modal Editing - Practicalli Spacemacs" name="twitter:title"/>
+<meta content="REPL Driven Development - Practicalli Spacemacs" name="twitter:title"/>
 <meta content="Practical guide to Clojure development with Spacemacs" name="twitter:description"/>
-<meta content="https://practical.li/spacemacs/assets/images/social/why-spacemacs/states.png" name="twitter:image"/>
+<meta content="https://practical.li/spacemacs/assets/images/social/introduction/repl-workflow.png" name="twitter:image"/>
 <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
@@ -57,13 +55,16 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#editor-states-evil-or-holy">
+<a class="md-skip" href="#repl-driven-development">
           Skip to content
         </a>
 </div>
 <div data-md-component="announce">
 <aside class="md-banner">
 <div class="md-banner__inner md-grid md-typeset">
+<button aria-label="Don't show this again" class="md-banner__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
             
             
 
@@ -72,6 +73,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 
 
           </div>
+<script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
 </aside>
 </div>
 <header class="md-header" data-md-component="header">
@@ -92,7 +94,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Multi-modal Editing
+              REPL Driven Development
             
           </span>
 </div>
@@ -174,113 +176,81 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </a>
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../..">Overview</a>
+<a href="../..">Introduction</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
-          Overview
+          Introduction
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../repl-workflow/">
+<a class="md-nav__link" href="../../repl-workflow.md">
         REPL Workflow
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Why Spacemacs</a>
+<a href="../why-spacemacs/">Why Spacemacs</a>
 <label for="__nav_1_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_1_3">
 <span class="md-nav__icon md-icon"></span>
           Why Spacemacs
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../extensive-language-support/">
+<a class="md-nav__link" href="../why-spacemacs/extensive-language-support/">
         Extensive Languages
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mnemonic-menu/">
+<a class="md-nav__link" href="../why-spacemacs/mnemonic-menu/">
         Mneomic Menus
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Multi-modal Editing
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../why-spacemacs/states/">
         Multi-modal Editing
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#evil-states">
-    Evil states
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#transient-state-menus">
-    Transient State menus
-  </a>
-<nav aria-label="Transient State menus" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#examples-of-transient-state-menus">
-    Examples of transient state menus
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../layers/">
+<a class="md-nav__link" href="../why-spacemacs/layers/">
         Layer Configuration
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../clojure-layer/">
+<a class="md-nav__link" href="../why-spacemacs/clojure-layer/">
         Clojure Support
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../structural-editing/">
+<a class="md-nav__link" href="../why-spacemacs/structural-editing/">
         Structural Editing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../helm/">
+<a class="md-nav__link" href="../why-spacemacs/helm/">
         Selection Narrowing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../project-file-navigation/">
+<a class="md-nav__link" href="../why-spacemacs/project-file-navigation/">
         Project and File Navigation
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../layouts/">
+<a class="md-nav__link" href="../why-spacemacs/layouts/">
         Layouts
       </a>
 </li>
@@ -293,17 +263,17 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../contributing/">
+<a class="md-nav__link" href="../contributing/">
         Contributing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../writing-tips/">
+<a class="md-nav__link" href="../writing-tips/">
         Writing Tips
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../introduction/additional-resources/">
+<a class="md-nav__link" href="../additional-resources/">
         Resources
       </a>
 </li>
@@ -1962,7 +1932,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../why-evil/">
+<a class="md-nav__link" href="../why-spacemacs/why-evil/">
         Evil Vim Style Editing
       </a>
 </li>
@@ -1984,23 +1954,49 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#evil-states">
-    Evil states
+<a class="md-nav__link" href="#evaluating-source-code">
+    Evaluating source code
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#transient-state-menus">
-    Transient State menus
-  </a>
-<nav aria-label="Transient State menus" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#examples-of-transient-state-menus">
-    Examples of transient state menus
+<a class="md-nav__link" href="#rich-comment-blocks-living-documentation">
+    Rich Comment blocks - living documentation
   </a>
 </li>
-</ul>
-</nav>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#design-journal">
+    Design Journal
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#viewing-data-structures">
+    Viewing data structures
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-style-and-idiomatic-clojure">
+    Code Style and idiomatic Clojure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-and-function-specifications">
+    Data and Function specifications
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#test-driven-development-and-repl-driven-development">
+    Test Driven Development and REPL Driven Development
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#continuous-integration-and-deployment">
+    Continuous Integration and Deployment
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#live-coding-with-data-stuart-halloway">
+    Live Coding with Data - Stuart Halloway
+  </a>
 </li>
 </ul>
 </nav>
@@ -2009,168 +2005,151 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="editor-states-evil-or-holy">Editor states - Evil or Holy<a class="headerlink" href="#editor-states-evil-or-holy" title="Permanent link">λ︎</a></h1>
-<p>Multi-modal editing simplifies keybindings for everything, keeping your hands centered on the keyboard and increasing your productivity.  Multi-modal approach minimizing the need for  key chords that are slower and a common source of repetitive strain e.g. <code>C-c C-x M-j</code></p>
-<p>When installing Spacemacs you have the choice of editor styles</p>
-<table>
-<thead>
-<tr>
-<th>Editing style</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Among the stars aboard the Evil flagship (Vim)</td>
-<td>Vim multi-model editing (normal, insert, visual, lisp, etc. <code>C-z</code> for classic Emacs editor</td>
-</tr>
-<tr>
-<td>On the planet Emacs in the Holy control tower (Emacs)</td>
-<td>Emacs only editing (No Vim states)</td>
-</tr>
-</tbody>
-</table>
-<!-- TODO: Add background to spacemacs-states-vim-emacs graphic for dark theme readability -->
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/concepts/spacemacs-states-vim-emacs.png"><img alt="Spacemacs states" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/concepts/spacemacs-states-vim-emacs.png" target="_blank"/></a></p>
-<p>Evil provide Vim style editing across all languages and modes in Emacs, simplifying the editing of files and keyboard shortcuts (keybindings)</p>
-<p>Vim is a language for manipulating text files that goes far beyond editing files.  Learning this simple language removes cognitive load.  Speak vim and your fingers efficiently make the changes you want.</p>
-<h2 id="evil-states">Evil states<a class="headerlink" href="#evil-states" title="Permanent link">λ︎</a></h2>
-<p>Multi-modal editing can take some adjustment and time to become comfortable. <code>Normal</code>, <code>Insert</code> and <code>Visual</code> states are the first ones to get used to.</p>
-<p>Each state has a specific purpose, eg. normal mode is about manipulating existing text where insert state is about adding more text.</p>
-<p>Using a state for different types of editing actions greatly simplifies the keyboard bindings and arguably makes editing faster, especially once you get used to multi-state editing.</p>
-<p>This speed is in part due to simpler keybinding when in normal mode as you are not typing content into the editor, simply running commands with each key press.  This means you can have single characters to do many of the common commands, eg <code>l</code> instead of <code>C-f</code> for moving the cursor forward.</p>
-<p>If you are deeply connected to the with Emacs keybindings, then probably best to stick to holy mode.</p>
-<p>If you are new to Emacs or you just want to take advantage of Vim, then select Evil mode.</p>
+<h1 id="repl-driven-development">REPL Driven Development<a class="headerlink" href="#repl-driven-development" title="Permanent link">λ︎</a></h1>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-workflow-concept.png"><img alt="Clojure repl driven development" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-workflow-concept.png"/></a></p>
+<div class="admonition quote">
+<p class="admonition-title">Always be REPL'ing</p>
+<p>Coding without a REPL feels limiting. The REPL provides fast feedback from code as its crafted, testing assumptions and design choices every step of the journey to a solution
+ - John Stevenson, Practical.li</p>
+</div>
+<p>Clojure is a powerful, fun and highly productive language for developing applications and services.
+ The clear language design is supported by a powerful development environment known as the REPL (read, evaluate, print, loop).  The REPL gives you instant feedback on what your code does and enables you to test either a single expression or run the whole application (including tests).</p>
+<p><strong>REPL driven development is the foundation of working with Clojure effectively</strong></p>
+<p>An effective Clojure workflow begins by running a REPL process.  Clojure expressions are written and evaluated immediately to provide instant feedback. The REPL feedback helps test the assumptions that are driving the design choices.</p>
+<ul>
+<li>Read - code is read by the Clojure reader, passing any macros to the macro reader which converts those macros into Clojure code.</li>
+<li>Evaluate - code is compiled into the host language (e.g. Java bytecode) and executed</li>
+<li>Print - results of the code are displayed, either in the REPL or as part of the application.</li>
+<li>Loop - the REPL is a continuous process that evaluates code, either a single expression or the whole application.</li>
+</ul>
+<p>Design decisions and valuable data from REPL experiments can be codified as <a href="#data-and-function-specifications">specifications</a> and <a href="#test-driven-development-and-repl-driven-development">unit tests</a></p>
+<h2 id="evaluating-source-code">Evaluating source code<a class="headerlink" href="#evaluating-source-code" title="Permanent link">λ︎</a></h2>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-driven-development-clojure-aware-editor.png"><img align="right" alt="Clojure repl driven development using Clojure aware editor" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-driven-development-clojure-aware-editor.png"/></a></p>
+<p>A REPL connected editor is the primary tool for evaluating Clojure code from source code files, displaying the results inline.</p>
+<p>Source code is automatically evaluated in its respective namespace, removing the need to change namespaces in the REPL with (<code>in-ns</code>) or use fully qualified names to call functions.</p>
 <div class="admonition hint">
-<p class="admonition-title">Evil flagship - toggling between Emacs</p>
-<p><code>C-z</code> toggles between Vim states and the Emacs state when Evil Flagship editing states are used.</p>
+<p class="admonition-title">Evaluate Clojure in Spacemacs</p>
+<p><code>, e f</code> evaluates the top level form under the cursor, <code>, e e</code> evaluated the expression immediately before the cursor (useful for evaluating nested expressions)</p>
 </div>
-<p>Here is the list of all the possible states, some of which are automatically applied (eg. magit git client is automatically evilified).</p>
-<table>
-<thead>
-<tr>
-<th>State</th>
-<th>Default Color</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>normal</code></td>
-<td>orange</td>
-<td>Vim <code>normal</code> - used to execute and combine commands</td>
-</tr>
-<tr>
-<td><code>insert</code></td>
-<td>green</td>
-<td>Vim <code>insert</code> - used to actually insert text</td>
-</tr>
-<tr>
-<td><code>visual</code></td>
-<td>gray</td>
-<td>Vim <code>visual</code> mode of Vim=, used to make text selection</td>
-</tr>
-<tr>
-<td><code>motion</code></td>
-<td>purple</td>
-<td>Evil - used to navigate read only buffers</td>
-</tr>
-<tr>
-<td><code>emacs</code></td>
-<td>blue</td>
-<td>This state is like using a regular Emacs without Vim</td>
-</tr>
-<tr>
-<td><code>replace</code></td>
-<td>chocolate</td>
-<td>Evil - overwrites the character under point instead of inserting a new one</td>
-</tr>
-<tr>
-<td><code>hybrid</code></td>
-<td>blue</td>
-<td>Spacemacs - use Emacs state instead of the Vim insert</td>
-</tr>
-<tr>
-<td><code>evilified</code></td>
-<td>light brown</td>
-<td>Spacemacs - an <code>emacs</code> state modified to bring Vim navigation, selection and search.</td>
-</tr>
-<tr>
-<td><code>lisp</code></td>
-<td>pink</td>
-<td>Spacemacs - structural editing for Lisp code (and Clojure)</td>
-</tr>
-<tr>
-<td><code>iedit</code></td>
-<td>red</td>
-<td>Spacemacs - navigate between multiple regions of text</td>
-</tr>
-<tr>
-<td><code>iedit-insert</code></td>
-<td>red</td>
-<td>Spacemacs - replace multiple regions of text</td>
-</tr>
-</tbody>
-</table>
+<p style="text-align:center">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/rQ802kSaip4" title="YouTube video player" width="560"></iframe>
+</p>
+<div class="admonition hint evaluate to comment for results history">
+<p class="admonition-title">Hint</p>
+<p><code>, e ;</code> (<code>cider-eval-defun-to-comment</code>) evaluates the current form and prints the result under the expression as a comment</p>
+<p>Adding result comment is an effective way to show the expected results of the code design, especially as a journal.</p>
+</div>
+<h2 id="rich-comment-blocks-living-documentation">Rich Comment blocks - living documentation<a class="headerlink" href="#rich-comment-blocks-living-documentation" title="Permanent link">λ︎</a></h2>
+<p>The <code>(comment ,,,)</code> function wraps code that is only run directly by the developer using a <a href="https://practical.li/clojure/clojure-editors/" target="_blank">Clojure aware editor</a>.</p>
+<p>Expressions in rich comment blocks can represent how to use the functions that make up the namespace API.  For example, starting/restarting the system, updating the database, etc.  Expressions provide examples of calling functions with typical arguments and make a project more accessible and easier to work with.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/practicalli-clojure-repl-driven-development-rich-comment-light.png"><img alt="Practicalli Clojure Repl Driven Development - Rich comment blocks example" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/practicalli-clojure-repl-driven-development-rich-comment-light.png"/></a></p>
+<p>Rich comment blocks are very useful for rapidly iterating over different design decisions by including the same function but with different implementations.  Hide <a href="https://practical.li/clojure/clojure-cli/install/code-analysis.html" target="_blank">clj-kondo linter</a> warnings for redefined vars (<code>def</code>, <code>defn</code>) when using this approach.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">;; Rich comment block with redefined vars ignored</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="o">#</span><span class="nv">_</span><span class="p">{</span><span class="ss">:clj-kondo/ignore</span><span class="w"> </span><span class="p">[</span><span class="ss">:redefined-var</span><span class="p">]}</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">(</span><span class="nf">comment</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="p">(</span><span class="kd">defn </span><span class="nv">value-added-tax</span><span class="w"> </span><span class="p">[]</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="c1">;; algorithm design - first try)</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="p">(</span><span class="kd">defn </span><span class="nv">value-added-tax</span><span class="w"> </span><span class="p">[]</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="c1">;; algorithm design - first try)</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="c1">;; End of rich comment block</span>
+</code></pre></div>
+<p>The "Rich" in the name is an honourary mention to Rich Hickey, the author and benevolent dictator of Clojure design.</p>
+<h2 id="design-journal">Design Journal<a class="headerlink" href="#design-journal" title="Permanent link">λ︎</a></h2>
+<p>A journal of design decisions makes the code easier to understand and maintain.  Code examples of design decisions and alternative design discussions are captured, reducing the time spent revisiting those discussions.</p>
+<p>Journals simplify the developer on-boarding processes as the journey through design decisions are already documented.</p>
+<p>A Design Journal is usually created in a separate namespace, although it may start as a rich comment at the bottom of a namespace.</p>
+<p>A journal should cover the following aspects</p>
+<ul>
+<li>Relevant expressions use to test assumptions about design options.</li>
+<li>Examples of design choices not taken and discussions why (saves repeating the same design discussions)</li>
+<li>Expressions that can be evaluated to explain how a function or parts of a function work</li>
+</ul>
+<p>The design journal can be used to create meaningful documentation for the project very easily and should prevent time spent on repeating the same conversations.</p>
+<div class="admonition hint">
+<p class="admonition-title">Example design journal</p>
+<p><a href="https://github.com/jr0cket/tictactoe-reagent/blob/master/src/tictactoe_reagent/core.cljs#L124" target="_blank">Design journal for TicTacToe game using Reagent, ClojureScript and Scalable Vector Graphics</a></p>
+</div>
+<h2 id="viewing-data-structures">Viewing data structures<a class="headerlink" href="#viewing-data-structures" title="Permanent link">λ︎</a></h2>
+<p>Pretty print shows the structure of results from function calls in a human-friendly form, making it easier for a developer to parse and more likely to notice incorrect results.</p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd>p</kbd></span> on the Spacemacs Clojure menu has several commands to Pretty Print data structure results when evaluating code.</p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>d</kbd></span> <span class="keys"><kbd>v</kbd></span> is the Cider Inspect menu for paging through very large data sets and navigate nested data structures in detail.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemace-clojure-inspect-java-lang-persistentvector.png"><img alt="Clojure - viewing large data sets" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemace-clojure-inspect-java-lang-persistentvector.png"/></a></p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>d</kbd></span> is the Cider debug menu which can inspect view intermediate values and data structures during the debugging of Clojure function calls.</p>
+<p><a href="evaluating-clojure/inspect.md">Cider inspector</a> is an effective way to navigate nested data and page through large data sets.</p>
+<p><a href="https://practical.li/clojure/clojure-tools/data-browsers/" target="_blank">External data browsers</a> can visualise data in many different forms.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/portal/portal-data-browser-example.png"><img alt="Portal - viewing Clojure data" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/portal/portal-data-browser-example.png"/></a></p>
+<h2 id="code-style-and-idiomatic-clojure">Code Style and idiomatic Clojure<a class="headerlink" href="#code-style-and-idiomatic-clojure" title="Permanent link">λ︎</a></h2>
+<p>Clojure aware editors should automatically apply formatting that follows the <a href="https://github.com/bbatsov/clojure-style-guide" target="_blank">Clojure Style guide</a>.</p>
+<p>Live linting with <a href="https://github.com/borkdude/clj-kondo" target="_blank">clj-kondo</a> suggests common idioms and highlights a wide range of syntax errors as code is written, minimizing bugs and therefore speeding up the development process.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-light.png#only-light"><img alt="Clojure code static analysis for live linting" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-light.png#only-light"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-dark.png#only-dark"><img alt="Clojure code static analysis for live linting" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-dark.png#only-dark"/></a></p>
 <div class="admonition info">
-<p class="admonition-title">Spacemacs state documentation</p>
-<p>States and other concepts are explained further in the <a href="https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#editing-styles" target="_blank">Spacemacs concepts</a> documentation.</p>
+<p class="admonition-title">Clojure Style Guide</p>
+<p>The <a href="https://github.com/bbatsov/clojure-style-guide" target="_blank">Clojure Style guide</a> provides examples of common formatting approaches, although the development team should decide which of these to adopt.  Emacs <code>clojure-mode</code> will automatically format code and so will Clojure LSP (via cljfmt).  These tools are configurable and should be tailored to the teams standard.</p>
 </div>
-<h2 id="transient-state-menus">Transient State menus<a class="headerlink" href="#transient-state-menus" title="Permanent link">λ︎</a></h2>
-<p>Transient state menus make it simple to run commands multiple times, using a single key press, from a specific sub-set of commands.</p>
-<p>For example, Font Scaling transient state menu allows you to repeatedly increase the size of the buffer font just by using the <code>+</code> key.  The Font Scaling transient state menu contains the sub-set of commands related to scaling, so you can decrease the font size just with the <code>-</code> key and reset the font with <code>0</code>.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://github.com/syl20bnr/spacemacs/raw/master/doc/img/spacemacs-scale-transient-state.png"><img alt="Transient State - scaling text" src="https://github.com/syl20bnr/spacemacs/raw/master/doc/img/spacemacs-scale-transient-state.png"/></a></p>
-<p>Transient-states are usually triggered by using a keybinding with the following pattern: <code>&lt;Leader&gt; &lt;group&gt; .</code> where group is the category the transient-state falls under.</p>
-<p>When in a transient-state you will see documentation at the bottom of your window. To exit a transient-state press q.</p>
-<h3 id="examples-of-transient-state-menus">Examples of transient state menus<a class="headerlink" href="#examples-of-transient-state-menus" title="Permanent link">λ︎</a></h3>
-<table>
-<thead>
-<tr>
-<th>Keybindings</th>
-<th>Transient state description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>SPC b .</code></td>
-<td>buffer management</td>
-</tr>
-<tr>
-<td><code>SPC e .</code></td>
-<td>errors</td>
-</tr>
-<tr>
-<td><code>SPC k .</code></td>
-<td>lisp state for structured editing</td>
-</tr>
-<tr>
-<td><code>SPC w .</code></td>
-<td>window management</td>
-</tr>
-<tr>
-<td><code>SPC z .</code></td>
-<td>code folding</td>
-</tr>
-<tr>
-<td><code>SPC z f</code></td>
-<td>zoom frame size</td>
-</tr>
-<tr>
-<td><code>SPC z x</code></td>
-<td>Font Scaling (x for text)</td>
-</tr>
-<tr>
-<td><code>SPC n +/-</code></td>
-<td>Change the value of a number</td>
-</tr>
-</tbody>
-</table>
+<h2 id="data-and-function-specifications">Data and Function specifications<a class="headerlink" href="#data-and-function-specifications" title="Permanent link">λ︎</a></h2>
+<p><a href="https://practical.li/clojure/clojure-spec/" target="_blank">Clojure spec</a> is used to define a contract on incoming and outgoing data, to ensure it is of the correct form.</p>
+<p>As data structures are identified in REPL experiments, create data specification to validate the keys and value types of that data.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">;; ---------------------------------------------------</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">;; Address specifications</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">(</span><span class="nf">spec/def</span><span class="w"> </span><span class="ss">::house-number</span><span class="w"> </span><span class="nv">string?</span><span class="p">)</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">(</span><span class="nf">spec/def</span><span class="w"> </span><span class="ss">::street</span><span class="w"> </span><span class="nv">string?</span><span class="p">)</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="p">(</span><span class="nf">spec/def</span><span class="w"> </span><span class="ss">::postal-code</span><span class="w"> </span><span class="nv">string?</span><span class="p">)</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">(</span><span class="nf">spec/def</span><span class="w"> </span><span class="ss">::city</span><span class="w"> </span><span class="nv">string?</span><span class="p">)</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">(</span><span class="nf">spec/def</span><span class="w"> </span><span class="ss">::country</span><span class="w"> </span><span class="nv">string?</span><span class="p">)</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">(</span><span class="nf">spec/def</span><span class="w"> </span><span class="ss">::additional</span><span class="w"> </span><span class="nv">string?</span><span class="p">)</span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="p">(</span><span class="nf">spec/def</span><span class="w"> </span><span class="ss">::address</span><span class="w">   </span><span class="c1">; Composite data specification</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">  </span><span class="p">(</span><span class="nf">spec/keys</span>
+<a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">   </span><span class="ss">:req-un</span><span class="w"> </span><span class="p">[</span><span class="ss">::street</span><span class="w"> </span><span class="ss">::postal-code</span><span class="w"> </span><span class="ss">::city</span><span class="w"> </span><span class="ss">::country</span><span class="p">]</span>
+<a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">   </span><span class="ss">:opt-un</span><span class="w"> </span><span class="p">[</span><span class="ss">::house-number</span><span class="w"> </span><span class="ss">::additional</span><span class="p">]))</span>
+<a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="c1">;; ---------------------------------------------------</span>
+</code></pre></div>
+<p>As the public API is designed, specifications for each functions arguments are added to validate the correct data is used when calling those functions.</p>
+<p><a href="https://practical.li/clojure/clojure-spec/generative-testing/" target="_blank">Generative testing</a> provides a far greater scope of test values used incorporated into unit tests. Data uses clojure.spec to randomly generate data for testing on each test run.</p>
+<h2 id="test-driven-development-and-repl-driven-development">Test Driven Development and REPL Driven Development<a class="headerlink" href="#test-driven-development-and-repl-driven-development" title="Permanent link">λ︎</a></h2>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/repl-tdd-flow.png"><img align="right" alt="Clojure REPL driven development (RDD) and Test Driven Development (TDD)" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/repl-tdd-flow.png"/></a></p>
+<p>Test Driven Development (TDD) and REPL Driven Development (RDD) complement each other as they both encourage incremental changes and continuous feedback.</p>
+<blockquote>
+<p>Test Driven Development fits well with Hammock Time, as good design comes from deep thought</p>
+</blockquote>
+<ul>
+<li>RDD enables rapid design experiments so different approaches can easily and quickly be evaluated .</li>
+<li>TDD focuses the results of the REPL experiments into design decisions, codified as unit tests.  These tests guide the correctness of specific implementations and provide critical feedback when changes break that design.</li>
+</ul>
+<p><a href="https://practical.li/clojure/testing/unit-testing/" target="_blank">Unit tests</a> should support the public API of each namespace in a project to help prevent regressions in the code.  Its far more efficient in terms of thinking time to define unit tests as the design starts to stabilize than as an after thought.</p>
+<p><code>clojure.test</code> library is part of the Clojure standard library that provides a simple way to start writing unit tests.</p>
+<p><a href="https://practical.li/clojure/clojure-spec/" target="_blank">Clojure spec</a> can also be used for generative testing, providing far greater scope in values used when running unit tests.  Specifications can be defined for values and functions.</p>
+<p>Clojure has a number of <a href="https://practical.li/clojure/testing/test-runners/" target="_blank">test runners</a> available.  Kaocha is a test runner that will run unit tests and function specification checks.</p>
+<div class="admonition hint">
+<p class="admonition-title">Automate local test runner</p>
+<p>Use <a href="https://practical.li/clojure/testing/test-runners/kaocha-test-runner.html" target="_blank">kaocha test runner</a> in watch mode to run tests and specification check automatically (when changes are saved)
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>clojure<span class="w"> </span>-X:test/watch
+</code></pre></div></p>
+</div>
+<h2 id="continuous-integration-and-deployment">Continuous Integration and Deployment<a class="headerlink" href="#continuous-integration-and-deployment" title="Permanent link">λ︎</a></h2>
+<p>Add a <a href="https://practical.li/clojure/continuous-integration/" target="_blank">continuous integration service</a> to run tests and builds code on every shared commit.  Spin up testable review deployments when commits pushed to a pull request branch, before pushing commits to the main deployment branch, creating an effective pipeline to gain further feedback.</p>
+<ul>
+<li><a href="https://practical.li/clojure/continuous-integration/circle-ci/" target="_blank">CircleCI</a> provides a simple to use service that supports Clojure projects.</li>
+<li><a href="https://docs.github.com/en/actions/using-workflows" target="_blank">GitHub Workflows</a> and <a href="https://github.com/marketplace?type=actions" target="_blank">GitHub actions marketplace </a> to quickly build a tailored continuous integration service, e.g. <a href="https://github.com/marketplace/actions/setup-clojure" target="_blank">Setup Clojure GitHub Action</a>.</li>
+<li><a href="https://docs.gitlab.com/ee/ci/introduction/index.html" target="_blank">GitLab CI</a></li>
+</ul>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/continuous-integration/continuous-integration-overview.svg"><img alt="Continuous Integration" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/continuous-integration/continuous-integration-overview.svg"/></a></p>
+<h2 id="live-coding-with-data-stuart-halloway">Live Coding with Data - Stuart Halloway<a class="headerlink" href="#live-coding-with-data-stuart-halloway" title="Permanent link">λ︎</a></h2>
+<p>There are few novel features of programming languages, but each combination has different properties. The combination of dynamic, hosted, functional and extended Lisp in Clojure gives developers the tools for making effective programs. The ways in which Clojure's unique combination of features can yield a highly effective development process.</p>
+<p>Over more than a decade we have developed an effective approach to writing code in Clojure whose power comes from composing many of its key features. As different as Clojure programs are from e.g. Java programs, so to can and should be the development experience. You are not in Kansas anymore!</p>
+<p>This talk presents a demonstration of the leverage you can get when writing programs in Clojure, with examples, based on my experiences as a core developer of Clojure and Datomic.</p>
+<p style="text-align:center">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/Qx0-pViyIDU" title="YouTube video player" width="560"></iframe>
+</p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
 </small>
 </div>
 </article>
@@ -2220,7 +2199,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

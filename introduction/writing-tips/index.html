@@ -12,33 +12,33 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Practical guide to Clojure development with Spacemacs" name="description"/>
 <meta content="Practicalli" name="author"/>
-<link href="https://practical.li/spacemacs/why-spacemacs/clojure-layer/" rel="canonical"/>
-<link href="../layers/" rel="prev"/>
-<link href="../structural-editing/" rel="next"/>
+<link href="https://practical.li/spacemacs/introduction/writing-tips/" rel="canonical"/>
+<link href="../contributing/" rel="prev"/>
+<link href="../additional-resources/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.13" name="generator"/>
-<title>Clojure Support - Practicalli Spacemacs</title>
-<link href="../../assets/stylesheets/main.ffa9267a.min.css" rel="stylesheet"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.14" name="generator"/>
+<title>Writing Tips - Practicalli Spacemacs</title>
+<link href="../../assets/stylesheets/main.113286f1.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<link href="../../stylesheets/extra.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/extra.css" rel="stylesheet"/>
 <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-YBK519HFM6"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-YBK519HFM6",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-YBK519HFM6",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 <meta content="website" property="og:type"/>
-<meta content="Clojure Support - Practicalli Spacemacs" property="og:title"/>
+<meta content="Writing Tips - Practicalli Spacemacs" property="og:title"/>
 <meta content="Practical guide to Clojure development with Spacemacs" property="og:description"/>
-<meta content="https://practical.li/spacemacs/assets/images/social/why-spacemacs/clojure-layer.png" property="og:image"/>
+<meta content="https://practical.li/spacemacs/assets/images/social/introduction/writing-tips.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://practical.li/spacemacs/why-spacemacs/clojure-layer/" property="og:url"/>
+<meta content="https://practical.li/spacemacs/introduction/writing-tips/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Clojure Support - Practicalli Spacemacs" name="twitter:title"/>
+<meta content="Writing Tips - Practicalli Spacemacs" name="twitter:title"/>
 <meta content="Practical guide to Clojure development with Spacemacs" name="twitter:description"/>
-<meta content="https://practical.li/spacemacs/assets/images/social/why-spacemacs/clojure-layer.png" name="twitter:image"/>
+<meta content="https://practical.li/spacemacs/assets/images/social/introduction/writing-tips.png" name="twitter:image"/>
 <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
@@ -57,13 +57,16 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#spacemacs-clojure-layer-overview">
+<a class="md-skip" href="#writing-tips-for-mkdocs">
           Skip to content
         </a>
 </div>
 <div data-md-component="announce">
 <aside class="md-banner">
 <div class="md-banner__inner md-grid md-typeset">
+<button aria-label="Don't show this again" class="md-banner__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
             
             
 
@@ -72,6 +75,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 
 
           </div>
+<script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
 </aside>
 </div>
 <header class="md-header" data-md-component="header">
@@ -92,7 +96,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Clojure Support
+              Writing Tips
             
           </span>
 </div>
@@ -177,7 +181,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
 <input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../..">Overview</a>
+<a href="../..">Introduction</a>
 <label for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
 </label>
@@ -185,93 +189,70 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
-          Overview
+          Introduction
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../repl-workflow/">
+<a class="md-nav__link" href="../../repl-workflow.md">
         REPL Workflow
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
-<a href="../">Why Spacemacs</a>
+<a href="../why-spacemacs/">Why Spacemacs</a>
 <label for="__nav_1_3">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="true" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_1_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_1_3">
 <span class="md-nav__icon md-icon"></span>
           Why Spacemacs
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../extensive-language-support/">
+<a class="md-nav__link" href="../why-spacemacs/extensive-language-support/">
         Extensive Languages
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mnemonic-menu/">
+<a class="md-nav__link" href="../why-spacemacs/mnemonic-menu/">
         Mneomic Menus
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../states/">
+<a class="md-nav__link" href="../why-spacemacs/states/">
         Multi-modal Editing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../layers/">
+<a class="md-nav__link" href="../why-spacemacs/layers/">
         Layer Configuration
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Clojure Support
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../why-spacemacs/clojure-layer/">
         Clojure Support
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#features-of-the-clojure-layer">
-    Features of the Clojure layer
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#further-reading">
-    Further reading
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../structural-editing/">
+<a class="md-nav__link" href="../why-spacemacs/structural-editing/">
         Structural Editing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../helm/">
+<a class="md-nav__link" href="../why-spacemacs/helm/">
         Selection Narrowing
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../project-file-navigation/">
+<a class="md-nav__link" href="../why-spacemacs/project-file-navigation/">
         Project and File Navigation
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../layouts/">
+<a class="md-nav__link" href="../why-spacemacs/layouts/">
         Layouts
       </a>
 </li>
@@ -284,17 +265,141 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../contributing/">
+<a class="md-nav__link" href="../contributing/">
         Contributing
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../writing-tips/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Writing Tips
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Writing Tips
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hypertext-links">
+    Hypertext links
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../introduction/additional-resources/">
+<a class="md-nav__link" href="#buttons">
+    Buttons
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#youtube-video">
+    YouTube video
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#admonitions">
+    Admonitions
+  </a>
+<nav aria-label="Admonitions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#collapsing-admonitions">
+    Collapsing admonitions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inline-blocks">
+    Inline blocks
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-blocks">
+    Code blocks
+  </a>
+<nav aria-label="Code blocks" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#annotations">
+    Annotations
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#highlight-lines-in-code-blocks">
+    Highlight lines in code blocks
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#content-tabs">
+    Content tabs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#diagrams">
+    Diagrams
+  </a>
+<nav aria-label="Diagrams" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#other-diagram-types">
+    Other diagram types
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#keyboard-keys">
+    Keyboard keys
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grids">
+    Grids
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#images">
+    Images
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lists">
+    Lists
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tooltips">
+    Tooltips
+  </a>
+<nav aria-label="Tooltips" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abreviations">
+    Abreviations
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#magic-links">
+    Magic links
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../additional-resources/">
         Resources
       </a>
 </li>
@@ -1953,7 +2058,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../why-evil/">
+<a class="md-nav__link" href="../why-spacemacs/why-evil/">
         Evil Vim Style Editing
       </a>
 </li>
@@ -1975,13 +2080,114 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#features-of-the-clojure-layer">
-    Features of the Clojure layer
+<a class="md-nav__link" href="#hypertext-links">
+    Hypertext links
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#further-reading">
-    Further reading
+<a class="md-nav__link" href="#buttons">
+    Buttons
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#youtube-video">
+    YouTube video
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#admonitions">
+    Admonitions
+  </a>
+<nav aria-label="Admonitions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#collapsing-admonitions">
+    Collapsing admonitions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inline-blocks">
+    Inline blocks
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-blocks">
+    Code blocks
+  </a>
+<nav aria-label="Code blocks" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#annotations">
+    Annotations
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#highlight-lines-in-code-blocks">
+    Highlight lines in code blocks
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#content-tabs">
+    Content tabs
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#diagrams">
+    Diagrams
+  </a>
+<nav aria-label="Diagrams" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#other-diagram-types">
+    Other diagram types
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#keyboard-keys">
+    Keyboard keys
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grids">
+    Grids
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#images">
+    Images
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lists">
+    Lists
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tooltips">
+    Tooltips
+  </a>
+<nav aria-label="Tooltips" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abreviations">
+    Abreviations
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#magic-links">
+    Magic links
   </a>
 </li>
 </ul>
@@ -1991,41 +2197,409 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="spacemacs-clojure-layer-overview">Spacemacs Clojure Layer Overview<a class="headerlink" href="#spacemacs-clojure-layer-overview" title="Permanent link">λ︎</a></h1>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/banners/practicalli-banner-spacemacs-clojure-layer.png"><img alt="Spacemacs Clojure Layer" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/banners/practicalli-banner-spacemacs-clojure-layer.png"/></a></p>
-<p>The <a href="https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Blang/clojure" target="_blank">Clojure layer</a> provides full language support and tooling including, autocomplete, refactor, inspector and debug, etc.</p>
-<p>Projects managed by <a href="https://leiningen.org" target="_blank">Leiningen</a>, <a href="http://boot-clj.com/" target="_blank">Boot</a> and <a href="https://clojure.org/guides/deps_and_cli" target="_blank">Clojure CLI</a> (<code>deps.edn</code>) are supported and automatically detected when running the REPL.</p>
-<div class="admonition hint">
-<p class="admonition-title">CIDER is provided by the Clojure layer</p>
-<p><a href="https://github.com/clojure-emacs/cider" target="_blank">CIDER</a> is the predominant package for Clojure development with Emacs and includes a range of supporting Emacs packages, curated to ensure those packages work well together.</p>
-<p>The <a href="/spacemacs/install-spacemacs/manually-add-clojure-layer.md">Clojure layer</a> uses the <a href="https://melpa.org/#/cider">latest version of CIDER on Melpa</a>, either release or latest snapshot.</p>
+<h1 id="writing-tips-for-mkdocs">Writing tips for MkDocs<a class="headerlink" href="#writing-tips-for-mkdocs" title="Permanent link">λ︎</a></h1>
+<p>Making the docs more engaging using the <a href="https://squidfunk.github.io/mkdocs-material/reference/" target="_blank">mkdocs-material theme reference guide</a></p>
+<details class="info">
+<summary>Configuring Colors</summary>
+<p><a href="https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/" target="_blank">Material for MkDocs - Changing the colors</a> lists the primary and accent colors available.</p>
+<p><a href="https://hslpicker.com/">HSL Color Picker</a> for codes to modify the theme style, overriding colors in <code>docs/assets/stylesheets/extra.css</code></p>
+</details>
+<h2 id="hypertext-links">Hypertext links<a class="headerlink" href="#hypertext-links" title="Permanent link">λ︎</a></h2>
+<p>Links open in the same browser window/tab by default.</p>
+<p>Add <code>{target=_blank}</code> to the end of a link to configure opening in a new tab</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>[<span class="nt">link text</span>](<span class="na">url</span>){target=_blank}
+</code></pre></div>
+<h2 id="buttons">Buttons<a class="headerlink" href="#buttons" title="Permanent link">λ︎</a></h2>
+<p>Convert any link into a button by adding <code>{.md-button}</code> class names to end of the markdown for a link, which uses <code>.md-button-primary</code> by default.  Include <code>target=_blank</code> for buttons with links to external sites.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>[link text](http://practical.li/blog){.md-button target=_blank}
+</code></pre></div>
+<p>Or specify a different class</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>[link text](http://practical.li/blog){.md-button .md-button-primary}
+</code></pre></div>
+<p>Add an icon to the button</p>
+<p><a class="md-button md-button-primary" href="http://practical.li/blog"><span class="twemoji"><svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></span> Practicalli Issues</a>
+<a class="md-button md-button-primary" href="http://practical.li/blog"><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 20.408c-.492.308-.903.546-1.192.709-.153.086-.308.17-.463.252h-.002a.75.75 0 0 1-.686 0 16.709 16.709 0 0 1-.465-.252 31.147 31.147 0 0 1-4.803-3.34C3.8 15.572 1 12.331 1 8.513 1 5.052 3.829 2.5 6.736 2.5 9.03 2.5 10.881 3.726 12 5.605 13.12 3.726 14.97 2.5 17.264 2.5 20.17 2.5 23 5.052 23 8.514c0 3.818-2.801 7.06-5.389 9.262A31.146 31.146 0 0 1 14 20.408Z"></path></svg></span> Practicalli Blog</a></p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>[<span class="nt">:fontawesome-brands-github: Practicalli Issues</span>](<span class="na">http://practical.li/blog</span>){ .md-button .md-button-primary }
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>[<span class="nt">:octicons-heart-fill-24: Practicalli Blog</span>](<span class="na">http://practical.li/blog</span>){ .md-button .md-button-primary }
+</code></pre></div>
+<h2 id="youtube-video">YouTube video<a class="headerlink" href="#youtube-video" title="Permanent link">λ︎</a></h2>
+<p>Use an iframe element to include a YouTube video, wrapping in a paragraph tag with center alignment to place the video in a centered horizontal position</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">"text-align:center"</span><span class="p">&gt;</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">"560"</span> <span class="na">height</span><span class="o">=</span><span class="s">"315"</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://www.youtube.com/embed/rQ802kSaip4"</span> <span class="na">title</span><span class="o">=</span><span class="s">"YouTube video player"</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">"0"</span> <span class="na">allow</span><span class="o">=</span><span class="s">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<blockquote>
+<p>mkdocs material does not have direct support for adding a YouTube video via markdown.</p>
+</blockquote>
+<h2 id="admonitions">Admonitions<a class="headerlink" href="#admonitions" title="Permanent link">λ︎</a></h2>
+<p><a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types">Supported admonition types</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <code>!!!</code> followed by <code>NOTE</code></p>
 </div>
-<h2 id="features-of-the-clojure-layer">Features of the Clojure layer<a class="headerlink" href="#features-of-the-clojure-layer" title="Permanent link">λ︎</a></h2>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-cider-logo.png"><img align="right" alt="Practicalli Cider Logo" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-cider-logo.png"/></a></p>
-<p><a href="https://docs.cider.mx/cider/1.2/index.html#features" target="_blank">CIDER</a> provides a comprehensive range of tools to create quality Clojure code.</p>
-<p>Start a REPL (Clojure runtime environment) from Spacemacs and evaluate one or more expressions to see the results in the source code buffer, giving extremely fast feedback on the behavior of that code.</p>
+<div class="admonition note">
+<p class="admonition-title">Adding a title</p>
+<p>Use <code>!!!</code> followed by <code>NOTE</code> and a <code>"title in double quotes"</code></p>
+</div>
+<div class="admonition note">
+<p>Shh, no title bar just the text...
+Use <code>!!!</code> followed by <code>NOTE</code> and a <code>""</code> empty double quotes</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>Use <code>!!!</code> followed by <code>ABSTRACT</code></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Use <code>!!!</code> followed by <code>INFO</code></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use <code>!!!</code> followed by <code>TIP</code></p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>Use <code>!!!</code> followed by <code>SUCCESS</code></p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>Use <code>!!!</code> followed by <code>QUESTION</code></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Use <code>!!!</code> followed by <code>WARNING</code></p>
+</div>
+<div class="admonition failure">
+<p class="admonition-title">Failure</p>
+<p>Use <code>!!!</code> followed by <code>FAILURE</code></p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Use <code>!!!</code> followed by <code>DANGER</code></p>
+</div>
+<div class="admonition bug">
+<p class="admonition-title">Bug</p>
+<p>Use <code>!!!</code> followed by <code>BUG</code></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Use <code>!!!</code> followed by <code>EXAMPLE</code></p>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Quote</p>
+<p>Use <code>!!!</code> followed by <code>QUOTE</code></p>
+</div>
+<h3 id="collapsing-admonitions">Collapsing admonitions<a class="headerlink" href="#collapsing-admonitions" title="Permanent link">λ︎</a></h3>
+<details class="note">
+<summary>Note</summary>
+<p>Collapse those admonitions using <code>???</code> instead of <code>!!!</code></p>
+</details>
+<details class="note">
+<summary>Replace with a title</summary>
+<p>Use <code>???</code> followed by <code>NOTE</code> and a <code>"title in double quotes"</code></p>
+</details>
+<details class="note" open="open">
+<summary>Expanded by default</summary>
+<p>Use <code>???+</code>, note the <code>+</code> character,  followed by <code>NOTE</code> and a <code>"title in double quotes"</code></p>
+</details>
+<h3 id="inline-blocks">Inline blocks<a class="headerlink" href="#inline-blocks" title="Permanent link">λ︎</a></h3>
+<p>Inline blocks of text to make a very specific callout within text</p>
+<div class="admonition info inline">
+<p class="admonition-title">Info</p>
+<p>Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Nulla et euismod nulla.
+Curabitur feugiat, tortor non consequat
+finibus, justo purus auctor massa, nec
+semper lorem quam in massa.</p>
+</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.</p>
+<p>Adding something to then end of text is probably my favourite</p>
+<div class="admonition info inline end">
+<p class="admonition-title">Info</p>
+<p>Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Nulla et euismod nulla.
+Curabitur feugiat, tortor non consequat
+finibus, justo purus auctor massa, nec
+semper lorem quam in massa.</p>
+</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.</p>
+<h2 id="code-blocks">Code blocks<a class="headerlink" href="#code-blocks" title="Permanent link">λ︎</a></h2>
+<p>Code blocks include a copy icon automatically</p>
+<p>Syntax highlighting in code blocks</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">my-function</span><span class="w">  </span><span class="c1">; Write a simple function</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">  </span><span class="s">"With a lovely doc-string"</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">arguments</span><span class="p">]</span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">  </span><span class="p">(</span><span class="nb">map inc </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">]))</span>
+</code></pre></div>
+<p>Give the code block a title using <code>title=""</code> after the backtics and language name</p>
+<div class="highlight"><span class="filename">src/practicalli/gameboard.clj</span><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">my-function</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">  </span><span class="s">"With a lovely doc-string"</span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">arguments</span><span class="p">]</span>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">  </span><span class="p">(</span><span class="nb">map inc </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">]))</span>
+</code></pre></div>
+<p>We all like line numbers, especially when you can set the starting line</p>
+<div class="highlight"><table class="highlighttable"><tr><th class="filename" colspan="2"><span class="filename">src/practicalli/gameboard.clj</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-42">42</a></span>
+<span class="normal"><a href="#__codelineno-7-43">43</a></span>
+<span class="normal"><a href="#__codelineno-7-44">44</a></span>
+<span class="normal"><a href="#__codelineno-7-45">45</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-42" name="__codelineno-7-42"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">my-function</span>
+<a id="__codelineno-7-43" name="__codelineno-7-43"></a><span class="w">  </span><span class="s">"With a lovely doc-string"</span>
+<a id="__codelineno-7-44" name="__codelineno-7-44"></a><span class="w">  </span><span class="p">[</span><span class="nv">arguments</span><span class="p">]</span>
+<a id="__codelineno-7-45" name="__codelineno-7-45"></a><span class="w">  </span><span class="p">(</span><span class="nb">map inc </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">]))</span>
+</code></pre></div></td></tr></table></div>
+<p>Add <code>linenums=42</code> to start line numbers from 42 onward</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>clojure linenums="42" title="src/practicalli/gameboard.clj"
+</code></pre></div>
+<h3 id="annotations">Annotations<a class="headerlink" href="#annotations" title="Permanent link">λ︎</a></h3>
+<p>Add an annotation using <code># (1)</code> where 1 is the number of the annotation</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>ls<span class="w"> </span>-la<span class="w"> </span><span class="nv">$HOME</span>/Downloads<span class="w">  </span><span class="c1"># (1)</span>
+</code></pre></div>
+<ol>
+<li><img alt="🙋‍♀️" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f64b-200d-2640-fe0f.svg" title=":woman_raising_hand:"> I'm a code annotation! I can contain <code>code</code>, <strong>formatted text</strong>, images, ... basically anything that can be written in Markdown.</img></li>
+</ol>
+<p>Code blocks with annotation, add <code>!</code> after the annotation number to suppress the <code>#</code> character</p>
+<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">helper-function</span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">  </span><span class="s">"Doc-string with description of function purpose"</span><span class="w"> </span><span class="c1">; (1)!</span>
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">data</span><span class="p">]</span>
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">  </span><span class="p">(</span><span class="nb">merge </span><span class="p">{</span><span class="ss">:fish</span><span class="w"> </span><span class="mi">1</span><span class="p">}</span><span class="w"> </span><span class="nv">data</span><span class="p">)</span>
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">  </span><span class="p">)</span>
+</code></pre></div>
+1.  Always include a doc-string in every function to describe the purpose of that function, identifying why it was added and what its value is.</p>
+<p>GitHub action example with multiple annotations</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span><span class="w"> </span><span class="c1"># (1)!</span>
+<a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="nt">on</span><span class="p">:</span>
+<a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<a href="#__codelineno-11-5" id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">master</span><span class="w"> </span><span class="c1"># (2)!</span>
+<a href="#__codelineno-11-6" id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<a href="#__codelineno-11-7" id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="nt">permissions</span><span class="p">:</span>
+<a href="#__codelineno-11-8" id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
+<a href="#__codelineno-11-9" id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="nt">jobs</span><span class="p">:</span>
+<a href="#__codelineno-11-10" id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">  </span><span class="nt">deploy</span><span class="p">:</span>
+<a href="#__codelineno-11-11" id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a href="#__codelineno-11-12" id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a href="#__codelineno-11-13" id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+<a href="#__codelineno-11-14" id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v4</span>
+<a href="#__codelineno-11-15" id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a href="#__codelineno-11-16" id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.x</span>
+<a href="#__codelineno-11-17" id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip install mkdocs-material</span><span class="w"> </span><span class="c1"># (3)!</span>
+<a href="#__codelineno-11-18" id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mkdocs gh-deploy --force</span>
+</code></pre></div>
+<ol>
+<li>
+<p>You can change the name to your liking.</p>
+</li>
+<li>
+<p>At some point, GitHub renamed <code>master</code> to <code>main</code>. If your default branch
+    is named <code>master</code>, you can safely remove <code>main</code>, vice versa.</p>
+</li>
+<li>
+<p>This is the place to install further [MkDocs plugins] or Markdown
+    extensions with <code>pip</code> to be used during the build:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">  </span>mkdocs-material<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">  </span>mkdocs-awesome-pages-plugin<span class="w"> </span><span class="se">\</span>
+<a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">  </span>...
+</code></pre></div>
+</li>
+</ol>
+<h3 id="highlight-lines-in-code-blocks">Highlight lines in code blocks<a class="headerlink" href="#highlight-lines-in-code-blocks" title="Permanent link">λ︎</a></h3>
+<p><code>hl_lines="2"</code> where 2 is the line number to highlight</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">my-function</span>
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="hll"><span class="w">  </span><span class="s">"With a lovely doc-string"</span>
+</span><a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">arguments</span><span class="p">]</span>
+<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">  </span><span class="p">(</span><span class="nb">map inc </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">]))</span>
+</code></pre></div>
+<h2 id="content-tabs">Content tabs<a class="headerlink" href="#content-tabs" title="Permanent link">λ︎</a></h2>
+<p>Create in page tabs that can also be</p>
+<p>Setting up a project</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Clojure CLI</label><label for="__tabbed_1_2">Leiningen</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>clojure<span class="w"> </span>-T:project/new<span class="w"> </span>:template<span class="w"> </span>app<span class="w"> </span>:name<span class="w"> </span>practicalli/gameboard
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>lein<span class="w"> </span>new<span class="w"> </span>app<span class="w"> </span>practicalli/gameboard
+</code></pre></div>
+</div>
+</div>
+</input></input></div>
+<p>Or nest the content tabs in an admonition</p>
+<div class="admonition info">
+<p class="admonition-title">Run a terminal REPL</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Clojure CLI</label><label for="__tabbed_2_2">Leiningen</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>clojure<span class="w"> </span>-T:repl/rebel
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>lein<span class="w"> </span>repl
+</code></pre></div>
+</div>
+</div>
+</input></input></div>
+</div>
+<h2 id="diagrams">Diagrams<a class="headerlink" href="#diagrams" title="Permanent link">λ︎</a></h2>
+<p>Neat flow diagrams</p>
+<pre class="mermaid"><code>graph LR
+  A[Start] --&gt; B{Error?};
+  B --&gt;|Yes| C[Hmm...];
+  C --&gt; D[Debug];
+  D --&gt; B;
+  B ----&gt;|No| E[Yay!];</code></pre>
+<p>UML Sequence Diagrams</p>
+<pre class="mermaid"><code>sequenceDiagram
+  Alice-&gt;&gt;John: Hello John, how are you?
+  loop Healthcheck
+      John-&gt;&gt;John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts!
+  John--&gt;&gt;Alice: Great!
+  John-&gt;&gt;Bob: How about you?
+  Bob--&gt;&gt;John: Jolly good!</code></pre>
+<p>state transition diagrams</p>
+<pre class="mermaid"><code>stateDiagram-v2
+  state fork_state &lt;&lt;fork&gt;&gt;
+    [*] --&gt; fork_state
+    fork_state --&gt; State2
+    fork_state --&gt; State3
+
+    state join_state &lt;&lt;join&gt;&gt;
+    State2 --&gt; join_state
+    State3 --&gt; join_state
+    join_state --&gt; State4
+    State4 --&gt; [*]</code></pre>
+<p>Class diagrams - but dont need them.</p>
+<p>Entity relationship diagrams are handy though</p>
+<pre class="mermaid"><code>erDiagram
+  CUSTOMER ||--o{ ORDER : places
+  ORDER ||--|{ LINE-ITEM : contains
+  CUSTOMER }|..|{ DELIVERY-ADDRESS : uses</code></pre>
+<h3 id="other-diagram-types">Other diagram types<a class="headerlink" href="#other-diagram-types" title="Permanent link">λ︎</a></h3>
+<p>Besides the diagram types listed above, [Mermaid.js] provides support for
+<a href="https://mermaid-js.github.io/mermaid/#/pie">pie charts</a>, <a href="https://mermaid-js.github.io/mermaid/#/gantt">gantt charts</a>, <a href="https://mermaid-js.github.io/mermaid/#/user-journey">user journeys</a>, <a href="https://mermaid-js.github.io/mermaid/#/gitgraph">git graphs</a> and
+<a href="https://mermaid-js.github.io/mermaid/#/requirementDiagram">requirement diagrams</a>, all of which are not officially supported by Material
+for MkDocs. Those diagrams should still work as advertised by [Mermaid.js], but
+we don't consider them a good choice, mostly as they don't work well on mobile.</p>
+<h2 id="keyboard-keys">Keyboard keys<a class="headerlink" href="#keyboard-keys" title="Permanent link">λ︎</a></h2>
+<p>Represent key bindings with <a href="https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index" target="_blank">Keyboard keys</a>. Each number and alphabet character has their own key.</p>
 <ul>
-<li>REPL based Test runner and test reports</li>
-<li><a href="https://github.com/clojure-emacs/ac-cider" target="_blank">smart code completion</a></li>
-<li>live static analysis with <a href="https://github.com/borkdude/clj-kondo" target="_blank">clj-kondo</a> and Clojure LSP</li>
-<li>Documentation and source navigation</li>
-<li>Error report filtering</li>
-<li>Value inspector to visualise and navigate evaluation results</li>
-<li>Interactive debugging</li>
-<li>nREPL session management</li>
+<li><span class="keys"><kbd class="key-1">1</kbd></span> <code>++1++</code> for numbers</li>
+<li><span class="keys"><kbd>l</kbd></span> <code>++"l"++</code> for lowercase character</li>
+<li><span class="keys"><kbd class="key-u">U</kbd></span> <code>++u++</code> for uppercase character or <code>++"U"++</code> for consistency</li>
 </ul>
-<h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">λ︎</a></h2>
+<p><a href="https://facelessuser.github.io/pymdown-extensions/extensions/keys/#punctuation-keys" target="_blank">Punctionation keys</a> use their name</p>
 <ul>
-<li><a href="https://cider.readthedocs.io/en/latest/" target="_blank">Official CIDER docs</a> for comprehensive details</li>
-<li><a href="https://github.com/clojure-emacs/cider#keyboard-shortcuts" target="_blank">Cider Emacs style key bindings</a></li>
-<li><a href="http://blog.jenkster.com/2013/12/a-cider-excursion.html" target="_blank">Clojure on Emacs - A CIDER workflow hack</a> - Kris Jenkins, December 2013</li>
+<li><span class="keys"><kbd class="key-space">Space</kbd></span> <code>++spc++</code></li>
+<li><span class="keys"><kbd class="key-comma">,</kbd></span> <code>++comma++</code></li>
+<li><span class="keys"><kbd class="key-arrow-left">Left</kbd></span> <code>++arrow-left++</code></li>
 </ul>
+<p>For key sequences, place a space between each keyboard character</p>
+<ul>
+<li><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>s</kbd></span> <code>++spc++ ++"g"++ ++"s"++</code></li>
+</ul>
+<p>For key combinations, use join they key identifies with a <code>+</code></p>
+<ul>
+<li><span class="keys"><kbd class="key-meta">Meta</kbd><span>+</span><kbd class="key-x">X</kbd></span> <code>++meta+x++</code></li>
+<li><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-delete">Del</kbd></span> <code>++ctrl+alt+del++</code></li>
+</ul>
+<p><a class="md-button" href="https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index" target="_blank">MkDocs keyboard keys reference</a></p>
+<h2 id="grids">Grids<a class="headerlink" href="#grids" title="Permanent link">λ︎</a></h2>
+<p>Useful for putting button links on the main page as quick links into the key parts of the book</p>
+<div class="grid cards">
+<ul>
+<li><span class="twemoji"><svg viewbox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m0 32 34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"></path></svg></span> <strong>HTML</strong> for content and structure</li>
+<li><span class="twemoji"><svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"></path></svg></span> <strong>JavaScript</strong> for interactivity</li>
+<li><span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="m480 32-64 368-223.3 80L0 400l19.6-94.8h82l-8 40.6L210 390.2l134.1-44.4 18.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82H480z"></path></svg></span> <strong>CSS</strong> for text running out of boxes</li>
+<li><span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M483.049 159.706c10.855-24.575 21.424-60.438 21.424-87.871 0-72.722-79.641-98.371-209.673-38.577-107.632-7.181-211.221 73.67-237.098 186.457 30.852-34.862 78.271-82.298 121.977-101.158C125.404 166.85 79.128 228.002 43.992 291.725 23.246 329.651 0 390.94 0 436.747c0 98.575 92.854 86.5 180.251 42.006 31.423 15.43 66.559 15.573 101.695 15.573 97.124 0 184.249-54.294 216.814-146.022H377.927c-52.509 88.593-196.819 52.996-196.819-47.436H509.9c6.407-43.581-1.655-95.715-26.851-141.162zM64.559 346.877c17.711 51.15 53.703 95.871 100.266 123.304-88.741 48.94-173.267 29.096-100.266-123.304zm115.977-108.873c2-55.151 50.276-94.871 103.98-94.871 53.418 0 101.981 39.72 103.981 94.871H180.536zm184.536-187.6c21.425-10.287 48.563-22.003 72.558-22.003 31.422 0 54.274 21.717 54.274 53.722 0 20.003-7.427 49.007-14.569 67.867-26.28-42.292-65.986-81.584-112.263-99.586z"></path></svg></span> <strong>Internet Explorer</strong> ... huh?</li>
+</ul>
+</div>
+<blockquote>
+<p>Sponsor only feature</p>
+</blockquote>
+<h2 id="images">Images<a class="headerlink" href="#images" title="Permanent link">λ︎</a></h2>
+<p>Markdown images can be appended with material tags to set the size of the image, whether to appear on light or dark theme and support lazy image loading in browsers</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><input id="__tabbed_3_5" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Size</label><label for="__tabbed_3_2">Lazy Loading</label><label for="__tabbed_3_3">Align</label><label for="__tabbed_3_4">Theme Specific</label><label for="__tabbed_3_5">All Image Attributes</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><code>{style="height:150px;width:150px"}</code> specifies the image size
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){style="height:150px;width:150px"}
+</code></pre></div></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark"><img alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark" style="height:150px;width:150px"/></a></p>
+</div>
+<div class="tabbed-block">
+<p><code>{loading=lazy}</code> specifies an image should lazily load in the browser
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png</span>){loading=lazy}
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p><code>{aligh=left}</code> or <code>{aligh=right}</code> specifies the page alignment of an image.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){align=right}
+<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light</span>){align=right}
+</code></pre></div></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png"><img align="left" alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png" style="height:64px;width:64px"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png"><img align="right" alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png" style="height:64px;width:64px"/></a>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.</p>
+</div>
+<div class="tabbed-block">
+<p><code>![Kitty Logo](image/kitty-light.png#only-dark)</code> or <code>![Kitty Logo](image/kitty-light.png#only-light)</code>  specifies the theme the image should be shown, allowing different versions of images to be shown based on the theme.
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){style="height:150px;width:150px"}
+<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light</span>){style="height:150px;width:150px"}
+</code></pre></div>
+Use the theme toggle in the top nav bar to see the icon change between light and dark.
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark"><img alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark" style="height:150px;width:150px"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light"><img alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light" style="height:150px;width:150px"/></a></p>
+<blockquote>
+<p>Requires the <a href="https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle">color pallet toggle</a></p>
+</blockquote>
+</div>
+<div class="tabbed-block">
+<p>Alight right, lazy load and set image to 150x150</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){align=right loading=lazy style="height:64px;width:64px"}
+<a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light</span>){align=right loading=lazy style="height:64px;width:64px"}
+</code></pre></div>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark"><img align="right" alt="Kitty Logo" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark" style="height:64px;width:64px"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light"><img align="left" alt="Kitty Logo" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light" style="height:64px;width:64px"/></a>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.</p>
+</div>
+</div>
+</input></input></input></input></input></div>
+<h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">λ︎</a></h2>
+<p>Task lists</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Vestibulum convallis sit amet nisi a tincidunt<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> In hac habitasse platea dictumst</li>
+<li class="task-list-item"><label class="task-list-control"><input checked="" disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> In scelerisque nibh non dolor mollis congue sed et metus</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Praesent sed risus massa</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</li>
+</ul>
+<h2 id="tooltips">Tooltips<a class="headerlink" href="#tooltips" title="Permanent link">λ︎</a></h2>
+<p>The humble tool tip</p>
+<p><a href="https://example.com" title="I'm a tooltip!">Hover me</a></p>
+<p>with references</p>
+<p><a href="https://example.com" title="I'm a tooltip!">Hover me</a></p>
+<p>Icon tool tip with a title</p>
+<p><span class="twemoji" title="Important information"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2v6Z"></path></svg></span></p>
+<h3 id="abreviations">Abreviations<a class="headerlink" href="#abreviations" title="Permanent link">λ︎</a></h3>
+<p>The HTML specification is maintained by the W3C.</p>
+<p><em>[HTML]: Hyper Text Markup Language
+</em>[W3C]: World Wide Web Consortium</p>
+<h2 id="magic-links">Magic links<a class="headerlink" href="#magic-links" title="Permanent link">λ︎</a></h2>
+<p><a href="https://facelessuser.github.io/pymdown-extensions/extensions/magiclink/">MagicLink</a> can auto-link HTML, FTP, and email links. It can auto-convert repository links (GitHub, GitLab, and Bitbucket) and display them in a more concise, shorthand format.</p>
+<p><a href="mailto:info@">Email Practicalli</a></p>
+<p><a href="https://github.com/practicalli/neovim">Practicalli Neovim</a></p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
 </small>
 </div>
 </article>
@@ -2075,7 +2649,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
 <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
