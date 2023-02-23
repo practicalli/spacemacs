@@ -31,8 +31,8 @@ clojure -M:lib/kaocha:repl/rebel
 
 `, t k h` to hide the kaocha test window
 
-!!! HINT "Kaochan runner uses kaocha.repl"
-    kaocha-runner.el uses the the same appraoch as [running Kaocha from the REPL](https://cljdoc.org/d/lambdaisland/kaocha/1.60.977/doc/5-running-kaocha-from-the-repl "Kaocha cljdoc"){target=_blank}
+!!! HINT "Kaocha runner uses kaocha.repl"
+    kaocha-runner.el uses the the same approach as [running Kaocha from the REPL](https://cljdoc.org/d/lambdaisland/kaocha/1.60.977/doc/5-running-kaocha-from-the-repl "Kaocha cljdoc"){target=_blank}
 
 
 ## Using Kaocha from Command Line

@@ -40,7 +40,7 @@ The **navigation drawer** is shown by swiping inwards from the left of the scree
 > If gesture navigation is enabled in Android, hold the edge of the screen briefly before swiping to bring up the navigation drawer
 
 
-The **Android notification menu** contains a Termux section. Press the Termux section to show the current terminal session or expand the Termux section to exiting all running terminal sessions or aquire a wake lock to avoid Termux entering sleep mode. A wake lock allows server and other background processes to run reliably and to continue to receive notifications
+The **Android notification menu** contains a Termux section. Press the Termux section to show the current terminal session or expand the Termux section to exiting all running terminal sessions or acquire a wake lock to avoid Termux entering sleep mode. A wake lock allows server and other background processes to run reliably and to continue to receive notifications
 
 
 ## Package management
@@ -60,7 +60,7 @@ Termux provides a Linux command line experience, providing a wide range of Unix 
 
 ## Byobu terminal tab manager
 
-Byobu is an alternative to Termux provides a single terminal prompt. Byobu provides multiple shell prompts, allowing individual Clojure tools and editors to be run from the Termux prompt simultaneously.  Practicalli uses byobu to run Neovim, a Clojure REPL and unit test watcher in separate byobu tabs with the ability to add further tabs for other command line tools.
+Byobu is an alternative to Termux provides a single terminal prompt. Byobu provides multiple shell prompts, allowing individual Clojure tools and editors to be run from the Termux prompt simultaneously.  Practicalli uses byobu to run Spacemacs, a Clojure REPL and unit test watcher in separate byobu tabs with the ability to add further tabs for other command line tools.
 
 ```
 pkg install byobu

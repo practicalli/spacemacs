@@ -10,7 +10,7 @@ Copy, cut and paste commands use the Emacs kill-ring, which maintains a complete
 
 Copy is known as yank in Emacs terminology.
 
-`y` to yank the currently selected text into the kill-ring, typicaly used with visual select and [motions](speaking-evil.md)
+`y` to yank the currently selected text into the kill-ring, typically used with visual select and [motions](speaking-evil.md)
 
 `y y` to yank the current line
 

@@ -224,7 +224,7 @@ nav:
           - evaluating-clojure/index.md
           - Expressions: evaluating-clojure/expressions.md
           - Inspect Values: evaluating-clojure/inspect.md
-          - Interupt Eval: evaluating-clojure/interupt.md
+          - Interrupt Eval: evaluating-clojure/interrupt.md
           - Remove Eval: evaluating-clojure/undefine.md
           - Intermediate values: evaluating-clojure/enlighten.md
           - Macro Expand: evaluating-clojure/macro-expand.md

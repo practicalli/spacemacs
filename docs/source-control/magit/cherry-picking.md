@@ -88,4 +88,4 @@ Diff 3 presentation of merge conflicts displays a common parent (if one exists) 
 
 ## Errors and Aborts
 
-`$` opens the Magit command log, showing commands run and errors that may have occured, such as if commits are not applied or the Apply process aborts.
+`$` opens the Magit command log, showing commands run and errors that may have occurred, such as if commits are not applied or the Apply process aborts.

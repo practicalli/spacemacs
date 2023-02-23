@@ -1,6 +1,6 @@
 # Install Spacemacs
 
-Emacs version 28 availabe as current package
+Emacs version 28 available as current package
 
 ```
 pkg install emacs

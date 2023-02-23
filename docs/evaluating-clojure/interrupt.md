@@ -1,6 +1,8 @@
-# Interrupting Evaluations
+# interrupt Evaluations
 
-`, e i` (`cider-interupt`) will stop the current evaluation, useful if that evaluation is taking a long time.  This may occur when processing a large data set or stuck in a non-terminating loop.
+++comma++ ++"e"++ ++"i"++ calls `cider-interrupt` which will stop the current evaluation.
+
+A long running evaluation may occur when processing a large data set or in a non-terminating loop.
 
 
 ## REPL status in buffer mini-bar

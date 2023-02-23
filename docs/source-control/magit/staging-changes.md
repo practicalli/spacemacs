@@ -16,7 +16,7 @@ Magit enables very fine grain selection when staging changes.  A file, a hunk or
 
 ++"v"++ to visually select one or more filenames or lines to stage or unstage.
 
-!!! INFO "Visual select withing hunk boundary"
+!!! INFO "Visual select within hunk boundary"
     Selecting lines to stage or unstage only works within the Git hunk boundary.  The action fails if lines are selected from more than one hunk.
 
 
