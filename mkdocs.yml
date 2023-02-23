@@ -1,5 +1,5 @@
 ---
-# Practicalli Neovim
+# Practicalli Spacemacs
 site_name: Practicalli Spacemacs
 site_url: https://practical.li/spacemacs
 site_description: Practical guide to Clojure development with Spacemacs
@@ -18,6 +18,7 @@ theme:
   logo: assets/images/practicalli-logo.png
   favicon: assets/favicon.svg
   features:
+    - announce.dismiss
     - navigation.top
     - content.code.annotate
     - content.tabs.link
@@ -118,25 +119,25 @@ extra:
 
 # Navigation
 nav:
-  - Overview:
+  - Introduction:
       - index.md
       - REPL Workflow: repl-workflow.md
       - Why Spacemacs:
-          - why-spacemacs/index.md
-          - Extensive Languages: why-spacemacs/extensive-language-support.md
-          - Mneomic Menus: why-spacemacs/mnemonic-menu.md
-          - Multi-modal Editing: why-spacemacs/states.md
-          - Layer Configuration: why-spacemacs/layers.md
-          - Clojure Support: why-spacemacs/clojure-layer.md
-          - why-spacemacs/structural-editing.md
-          - Selection Narrowing: why-spacemacs/helm.md
-            # - why-spacemacs/helm-transient-state.md  # TODO: move content to helm.md
-          - why-spacemacs/project-file-navigation.md
-          - why-spacemacs/layouts.md
-          # - why-spacemacs/configuring-spacemacs.md
+          - introduction/why-spacemacs/index.md
+          - Extensive Languages: introduction/why-spacemacs/extensive-language-support.md
+          - Mneomic Menus: introduction/why-spacemacs/mnemonic-menu.md
+          - Multi-modal Editing: introduction/why-spacemacs/states.md
+          - Layer Configuration: introduction/why-spacemacs/layers.md
+          - Clojure Support: introduction/why-spacemacs/clojure-layer.md
+          - Structural Editing: introduction/why-spacemacs/structural-editing.md
+          - Selection Narrowing: introduction/why-spacemacs/helm.md
+            # - introduction/why-spacemacs/helm-transient-state.md  # TODO: move content to helm.md
+          - introduction/why-spacemacs/project-file-navigation.md
+          - introduction/why-spacemacs/layouts.md
+          # - introduction/why-spacemacs/configuring-spacemacs.md
       - Mini-cheatsheet: spacemacs-mini-cheatsheet.md
-      - Contributing: contributing.md
-      - Writing Tips: writing-tips.md
+      - Contributing: introduction/contributing.md
+      - Writing Tips: introduction/writing-tips.md
       - Resources: introduction/additional-resources.md
   - Pre-install: install-spacemacs/pre-install.md
   - Install:
@@ -411,4 +412,4 @@ nav:
       - alternative-tooling/org-easy-templates.md
   - To Review:
       - spacemacs-basics/vim-style/common-evil.md
-      - why-spacemacs/why-evil.md
+      - introduction/why-spacemacs/why-evil.md
