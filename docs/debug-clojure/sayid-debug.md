@@ -1,6 +1,6 @@
 # Sayid debug and profile tool
 
-[Sayid](http://bpiel.github.io/sayid/), pronounced "siy EED", is an extensive debug and profile tool for Clojure projects. To debug or profile code it must be able to compile or sayid will fail to work.
+[Sayid](https://github.com/clojure-emacs/sayid), pronounced "siy EED", is an extensive debug and profile tool for Clojure projects. To debug or profile code it must be able to compile or sayid will fail to work.
 
 !!! HINT "cider-debug - a simpler approach"
     [cider-debug](cider-debug.md) is simpler and quicker approach to debugging.
@@ -23,7 +23,7 @@ Sayid currently has three components:
 
 ## Configure Sayid
 
-[Sayid](http://bpiel.github.io/sayid/){target=_blank} is an optional package in the Clojure layer for Spacemacs.
+[Sayid](https://github.com/clojure-emacs/sayid){target=_blank} is an optional package in the Clojure layer for Spacemacs.
 
 To enable sayid, add the following `:variable` to the `clojure` layer in `.spacemacs`
 
