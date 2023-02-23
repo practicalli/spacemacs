@@ -23,7 +23,9 @@ MD029: false                  # Ordered list item prefix
 MD033: true                   # Allow inline HTML
 MD034: false                  # no bare urls
 MD036: false                  # Emphasis used instead of a heading
+MD038: false                  # No inline html
 MD041: false                  # first line heading should be top level heading
+MD046: false                  # Fenced code block - complains when intended
 
 
 # ------------------------------------------
