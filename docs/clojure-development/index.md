@@ -1,6 +1,6 @@
 # Clojure Development Overview
 
-A [REPL workflow](/spacemacs/repl-workflow/) is supported and highly encouraged for effective Clojure development.
+A [REPL workflow](/spacemacs/introduction/repl-workflow.md) is supported and highly encouraged for effective Clojure development.
 
 === "CIDER jack-in"
     ++comma++ ++single-quote++ (`sesman-start`) and select `cider-jack-in-clj` to start a REPL for the current Clojure project (also works without a project).
@@ -24,13 +24,26 @@ A [REPL workflow](/spacemacs/repl-workflow/) is supported and highly encouraged 
 
 ## Using Project Templates
 
-Clojure projects can be generated from templates using [clj-new](https://github.com/seancorfield/clj-new), [deps-new](https://github.com/seancorfield/clj-new) or Leiningen.
+Clojure projects can be generated from templates using [deps-new](https://github.com/seancorfield/clj-new){target=_blank} for a Clojure CLI specific project.
+
+[clj-new](https://github.com/seancorfield/clj-new){target=_blank} or Leiningen can create a project from a wide range of templates.  Check the template for options and to understand which tooling it supports.
+
 
 `SPC '` opens an Emacs popup buffer containing an shell terminal to run a command to create a Clojure project from a template.  Or you can open a terminal window from your operating system.
 
+=== "Clojure CLI deps-new"
+
+    `:project/create` is an alias for this tool provided by [:fontawesome-brands-github: practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn){target=_blank}, a user level configuration for Clojure CLI
+
+    Create a new project with Clojure CLI, using the `app` template and a project called practicalli/playground
+
+    ```shell
+    clojure -T:project/create :template app :name practicalli/playground
+    ```
+
 === "Clojure CLI clj-new"
 
-    `:project/new` is an alias for this tool provided by [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn){target=_blank}, a user level configuration for Clojure CLI
+    `:project/new` is an alias for this tool provided by [:fontawesome-brands-github: practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn){target=_blank}, a user level configuration for Clojure CLI
 
     Create a new project with Clojure CLI, using the `app` template and a project called practicalli/playground
 
@@ -39,30 +52,17 @@ Clojure projects can be generated from templates using [clj-new](https://github.
     ```
 
 
-=== "Clojure CLI deps-new"
-
-    `:project/deps-new` is an alias for this tool provided by [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn){target=_blank}, a user level configuration for Clojure CLI
-
-    Create a new project with Clojure CLI, using the `app` template and a project called practicalli/playground
-
-    ```shell
-    clojure -T:project/deps-new :template app :name practicalli/playground
-    ```
-
-
 === "Leiningen"
 
-    [Leiningen Install](/alternative-tooling/leiningen.md){ .md-button }
+    [Leiningen Install](/alternative-tooling/leiningen.md){.md-button}
 
     Create a new project with Leiningen called playground, within the practicalli domain. Use the `app` template to create a very simple Clojure application.
 
     ```shell
     lein new app playground
     ```
+    Leiningen can generate a wide range of projects from templates.  To use these projects with Clojure CLI a `deps.edn` file should be added, using the same collection of library dependencies. See [Leiningen](/spacemacs/alternative-tooling/leiningen.md) for details
 
-
-
-    Leiningen can generate a wide range of projects from templates.  To use these projects with Clojure CLI a `deps.edn` file should be added, using the same collection of library dependencies. See [Leiningen](/alternative-tooling/leiningen.md) for details
 
 ## Project files
 
@@ -84,9 +84,10 @@ Clojure projects can be generated from templates using [clj-new](https://github.
 
 Renaming a namespace also renames the filename along with `requires` that include the namespace in other namespaces
 
-Namespaces or `def` / `defn` expressions  it contains should be removed from the running REPL, to prevent inconsistencies between the code and REPL.
+`def` / `defn` expressions a namespace contains should be removed from the running REPL to prevent inconsistencies between the code and REPL.
 
-!!! HINT "Remove define before renaming"
-    Keep the REPL state clean by removing the name of a function to be renamed
+!!! HINT "Remove defined names before renaming"
+    Keep the REPL state clean by removing the name of a function or value before it is renamed
     ++comma++ ++"e"++ ++"u"++ (`cider-undef`) removes the current var from the REPL (uses nREPL undef command)
+
     Alternatively, `, q r` to restart the REPL after names have been changed or deleted.
