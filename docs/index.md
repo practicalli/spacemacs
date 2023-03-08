@@ -1,3 +1,5 @@
+# Practicalli Spacemacs
+
 ![Practicalli Spacemacs book cover](https://raw.githubusercontent.com/practicalli/graphic-design/live/book-covers/practicalli-spacemacs-book-banner.png)
 
 A practical guide to Spacemacs, a community driven Emacs configuration that makes it easy to use all the power of Emacs and Vim.  The guide contains specific sections on Clojure development, although the majority of the content is applicable to any language.
@@ -19,17 +21,17 @@ A practical guide to Spacemacs, a community driven Emacs configuration that make
 
 ## Practicalli Spacemacs configuration
 
-[practicalli/spacemacs.d repository](https://github.com/practicalli/spacemacs-config){target=_blank} contains a rich configuration for Clojure development and supporting tools. [Browse the repository online](https://github.com/practicalli/spacemacs.d){target=_blank} or fork / clone the repository
+[:fontawesome-brands-github: practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config){target=_blank} contains a rich configuration for Clojure development and supporting tools, including support for Clojure LSP with minimally distracting UI elements.
 
 === "Free Desktop XDG Config"
     ```bash
-    git clone https://github.com/practicalli/spacemacs.d.git $XDG_CONFIG_HOME/spacemacs`
+    git clone https://github.com/practicalli/spacemacs-config.git $XDG_CONFIG_HOME/spacemacs`
     ```
     The above command creates the `~/.config/spacemacs/init.el` that contains the configuration used in Practicalli Spacemacs book, all in one place.
 
 === "Classic Config"
     ```bash
-    git clone https://github.com/practicalli/spacemacs.d.git $HOME/.spacemacs.d`
+    git clone https://github.com/practicalli/spacemacs-config.git $HOME/.spacemacs.d`
     ```
     The above command creates the `~/.spacemacs.d/init.el` that contains the configuration used in Practicalli Spacemacs book, all in one place.
 
