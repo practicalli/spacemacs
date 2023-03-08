@@ -121,7 +121,7 @@ extra:
 nav:
   - Introduction:
       - index.md
-      - REPL Workflow: repl-workflow.md
+      - REPL Workflow: introduction/repl-workflow.md
       - Why Spacemacs:
           - introduction/why-spacemacs/index.md
           - Extensive Languages: introduction/why-spacemacs/extensive-language-support.md
