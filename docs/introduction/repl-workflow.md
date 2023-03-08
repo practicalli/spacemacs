@@ -53,7 +53,7 @@ Expressions in rich comment blocks can represent how to use the functions that m
 
 ![Practicalli Clojure Repl Driven Development - Rich comment blocks example](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/practicalli-clojure-repl-driven-development-rich-comment-light.png)
 
-Rich comment blocks are very useful for rapidly iterating over different design decisions by including the same function but with different implementations.  Hide [clj-kondo linter](https://practical.li/clojure/clojure-cli/install/code-analysis.html){target=_blank} warnings for redefined vars (`def`, `defn`) when using this approach.
+Rich comment blocks are very useful for rapidly iterating over different design decisions by including the same function but with different implementations.  Hide [clj-kondo linter](/spacemacs/improving-code/live-linting/) warnings for redefined vars (`def`, `defn`) when using this approach.
 
 ```clojure
 ;; Rich comment block with redefined vars ignored
