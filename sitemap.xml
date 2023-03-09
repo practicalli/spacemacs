@@ -281,32 +281,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://practical.li/spacemacs/improving-code/formatting/</loc>
+         <lastmod>2023-03-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://practical.li/spacemacs/improving-code/idiomatic-code-checking/</loc>
          <lastmod>2023-03-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/improving-code/live-linting/</loc>
-         <lastmod>2023-03-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://practical.li/spacemacs/improving-code/formatting/</loc>
-         <lastmod>2023-03-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://practical.li/spacemacs/improving-code/formatting/aligning-forms-expressions/</loc>
-         <lastmod>2023-03-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://practical.li/spacemacs/improving-code/formatting/automatic-indenting/</loc>
-         <lastmod>2023-03-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://practical.li/spacemacs/improving-code/formatting/clojure/</loc>
          <lastmod>2023-03-09</lastmod>
          <changefreq>daily</changefreq>
     </url>

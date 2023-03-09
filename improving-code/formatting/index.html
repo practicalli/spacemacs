@@ -14,7 +14,7 @@
 <meta content="Practicalli" name="author"/>
 <link href="https://practical.li/spacemacs/improving-code/formatting/" rel="canonical"/>
 <link href="../idiomatic-code-checking/" rel="prev"/>
-<link href="clojure/" rel="next"/>
+<link href="../../source-control/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.1" name="generator"/>
 <title>Formatting Code - Practicalli Spacemacs</title>
@@ -30,7 +30,7 @@
 <meta content="website" property="og:type"/>
 <meta content="Formatting Code - Practicalli Spacemacs" property="og:title"/>
 <meta content="Practical guide to Clojure development with Spacemacs" property="og:description"/>
-<meta content="https://practical.li/spacemacs/assets/images/social/improving-code/formatting/index.png" property="og:image"/>
+<meta content="https://practical.li/spacemacs/assets/images/social/improving-code/formatting.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
@@ -38,7 +38,7 @@
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Formatting Code - Practicalli Spacemacs" name="twitter:title"/>
 <meta content="Practical guide to Clojure development with Spacemacs" name="twitter:description"/>
-<meta content="https://practical.li/spacemacs/assets/images/social/improving-code/formatting/index.png" name="twitter:image"/>
+<meta content="https://practical.li/spacemacs/assets/images/social/improving-code/formatting.png" name="twitter:image"/>
 <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
@@ -1248,23 +1248,18 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
     Clojure LSP
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#command-line-format">
+    Command Line format
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#continuous-integration">
+    Continuous Integration
+  </a>
+</li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="clojure/">
-        Formatting Clojure code
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="aligning-forms-expressions/">
-        Aligning forms and expressions
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="automatic-indenting/">
-        Automatic indenting
-      </a>
 </li>
 </ul>
 </nav>
@@ -1988,6 +1983,16 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
     Clojure LSP
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#command-line-format">
+    Command Line format
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#continuous-integration">
+    Continuous Integration
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -1999,30 +2004,155 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <p>Spacemacs automatically formats code as its written.</p>
 <p><code>, =</code> or <code>M-RET =</code> is the format menu in Spacemacs across all languages</p>
 <p><code>TAB</code> indents the current line of code (or selected region).  Not that <code>TAB</code> may also trigger auto-completion too.</p>
-<p>Clojure code is typically formatted following the <a href="https://github.com/bbatsov/clojure-style-guide">Clojure Style Guide</a>, although this is only a guide.</p>
+<div class="admonition info">
+<p class="admonition-title">Clojure Style Guide</p>
+</div>
+<p><a href="https://guide.clojure.style/" target="_blank">The Clojure Style Guide</a> is a detailed guide to common code styles and idioms.  Adopting a style guide that follows most of these recommentations will help ensure code is easier to read and maintain by future Clojure developers</p>
 <h2 id="cider-format-tools">Cider format tools<a class="headerlink" href="#cider-format-tools" title="Permanent link">λ︎</a></h2>
 <p><code>, = b</code> (<code>cider-format-buffer</code>) - format the Clojure code in the current buffer.</p>
 <p><code>, = l</code> (<code>clojure-align</code>) - vertically align the current line within the context of the top level form or selected area</p>
-<p>For example, vertically align the values in a map</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">(</span><span class="k">def </span><span class="nv">my-map</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="p">{</span><span class="ss">:a-key</span><span class="w"> </span><span class="mi">1</span>
-<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">   </span><span class="ss">:other-key</span><span class="w"> </span><span class="mi">2</span><span class="p">})</span>
-<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">(</span><span class="k">def </span><span class="nv">my-map</span>
-<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="p">{</span><span class="ss">:a-key</span><span class="w">     </span><span class="mi">1</span>
-<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">   </span><span class="ss">:other-key</span><span class="w"> </span><span class="mi">2</span><span class="p">})</span>
+<div class="admonition example">
+<p class="admonition-title">Vertically align the values in a map</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">;; Before aligning arguments</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">(</span><span class="k">def </span><span class="nv">my-map</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="p">{</span><span class="ss">:a-key</span><span class="w"> </span><span class="mi">1</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">   </span><span class="ss">:other-key</span><span class="w"> </span><span class="mi">2</span><span class="p">})</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1">;; After aligning arguments</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">(</span><span class="k">def </span><span class="nv">my-map</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span><span class="p">{</span><span class="ss">:a-key</span><span class="w">     </span><span class="mi">1</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">   </span><span class="ss">:other-key</span><span class="w"> </span><span class="mi">2</span><span class="p">})</span>
 </code></pre></div>
-<blockquote>
-<p>This can also be done automatically (as part of indentation) by turning on clojure-align-forms-automatically. This way it will happen whenever you select some code and hit TAB.</p>
-</blockquote>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Clojure automatic align</p>
+<p><code>clojure-indent-style 'align-arguments</code> clojure layer variable automatically aligns arguments when triggering indentation, i.e. pressing <span class="keys"><kbd class="key-tab">Tab</kbd></span></p>
+<p><a href="https://github.com/practicalli/spacemacs-config" target="_blank"><span class="twemoji"><svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></span>practicalli/spacemacs-config</a> already containes this variable in the clojure layer</p>
+<p><a class="md-button" href="https://github.com/clojure-emacs/clojure-mode#indentation-of-function-forms" target="_blank">Indentation of function forms</a>
+<a class="md-button" href="https://github.com/clojure-emacs/clojure-mode#vertical-alignment" target="_blank">Vertically align s-expressions</a></p>
+</div>
+<details class="warning">
+<summary>Aggressive Indent mode and Clojure LSP clash</summary>
+<p><code>aggressive-indent-mode</code> set as a clojure layer variable will automatically adjust indentation as code is entered into the buffer.</p>
+<p>Aggressive indent mode and Clojure LSP live linting will interact with each others changes and cause very strange side effects.  Either use Clojure LSP live linting or aggressive indent mode, but never both together.</p>
+<p>Enable aggressive indent mode by adding the a hook in the <code>dotspacemacs/user-config</code> section of the Spacemacs user configuration
+<div class="highlight"><span class="filename">dotspacemacs/user-config section of .config/spacemacs/init.el</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="ss">'clojure-mode-hook</span><span class="w"> </span><span class="nf">#'</span><span class="nv">aggressive-indent-mode</span><span class="p">)</span>
+</code></pre></div>
+To <a href="https://clojure-lsp.io/settings/#disable-linter" target="_blank">disable Clojure LSP live linting</a>
+<div class="highlight"><span class="filename">.config/clojure-lsp/config.edn</span><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span><span class="ss">:linters</span><span class="w"> </span><span class="p">{</span><span class="ss">:clj-kondo</span><span class="w"> </span><span class="p">{</span><span class="ss">:level</span><span class="w"> </span><span class="ss">:off</span><span class="p">}</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">           </span><span class="ss">:clj-depend</span><span class="w"> </span><span class="p">{</span><span class="ss">:level</span><span class="w"> </span><span class="ss">:off</span><span class="p">}}}</span>
+</code></pre></div>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/Malabarba/aggressive-indent-mode/master/lisp-example.gif"><img alt="Spacemacs CIDER - aggressive indent" src="https://raw.githubusercontent.com/Malabarba/aggressive-indent-mode/master/lisp-example.gif"/></a>
+<a class="md-button" href="https://emacsredux.com/blog/2016/02/07/auto-indent-your-code-with-aggressive-indent-mode/" target="_blank">Auto-indent code automatically</a></p>
+</details>
 <h2 id="clojure-lsp">Clojure LSP<a class="headerlink" href="#clojure-lsp" title="Permanent link">λ︎</a></h2>
 <p>Clojure LSP uses cljfmt which has a large number of very strict rules, although all rules can be tailored or disabled as required.</p>
+<p>Add format rules to <code>.config/clojure-lsp/cljfmt.edn</code> file, adding <code>:cljfmt-config-path "cljfmt.edn"</code> setting in <code>.config/clojure-lsp/config.edn</code> to make use of those rules.</p>
+<details class="example">
+<summary>cljfmt rules from Practicalli Clojure LSP Config</summary>
+<p><a href="https://github.com/practicalli/clojure-lsp-config" target="_blank"><span class="twemoji"><svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></span> practicalli/clojure-lsp-config</a> provides a cljfmt configuration used by Clojure LSP to automatically format code in the current buffer.</p>
+<p>Several of the more strict cljfmt rules have been disabled to help keep code readable, e.g. allowing more than one blank line between code expressions.
+<div class="highlight"><span class="filename">.config/clojure-lsp/cljfmt.edn</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">{</span><span class="c1">;; Clojure format</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w"> </span><span class="c1">;; https://github.com/weavejester/cljfmt</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w"> </span><span class="ss">:cljfmt</span>
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w"> </span><span class="p">{</span><span class="c1">;; correct indentation - see cljfm indents</span>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">  </span><span class="ss">:indentation?</span><span class="w">                          </span><span class="nv">true</span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a>
+<a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">  </span><span class="c1">;; remove whitespace surrounding inner forms</span>
+<a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">  </span><span class="ss">:remove-surrounding-whitespace?</span><span class="w">        </span><span class="nv">true</span>
+<a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a>
+<a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">  </span><span class="c1">;; remove trailing whitespace in lines</span>
+<a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">  </span><span class="ss">:remove-trailing-whitespace?</span><span class="w">           </span><span class="nv">true</span>
+<a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a>
+<a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">  </span><span class="c1">;; insert whitespace missing from between elements</span>
+<a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">  </span><span class="ss">:insert-missing-whitespace?</span><span class="w">            </span><span class="nv">true</span>
+<a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a>
+<a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">  </span><span class="c1">;; Delete more than one consecutive blank line - annoying</span>
+<a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">  </span><span class="ss">:remove-consecutive-blank-lines?</span><span class="w">       </span><span class="nv">false</span>
+<a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a>
+<a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">  </span><span class="c1">;; Remove spaces not used for indentation</span>
+<a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">  </span><span class="ss">:remove-multiple-non-indenting-spaces?</span><span class="w"> </span><span class="nv">true</span>
+<a href="#__codelineno-3-22" id="__codelineno-3-22" name="__codelineno-3-22"></a>
+<a href="#__codelineno-3-23" id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">  </span><span class="c1">;; break hashmaps onto multiple lines</span>
+<a href="#__codelineno-3-24" id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">  </span><span class="ss">:split-keypairs-over-multiple-lines?</span><span class="w">   </span><span class="nv">true</span>
+<a href="#__codelineno-3-25" id="__codelineno-3-25" name="__codelineno-3-25"></a>
+<a href="#__codelineno-3-26" id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">  </span><span class="c1">;; Use #re for regex indents configuration</span>
+<a href="#__codelineno-3-27" id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">  </span><span class="c1">;; :cljfmt {:indents {#re ".*" ns [[:inner 0] [:inner 1]]}}</span>
+<a href="#__codelineno-3-28" id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">  </span><span class="ss">:indents</span><span class="w"> </span><span class="p">{}}}</span>
+</code></pre></div></p>
+</details>
+<h2 id="command-line-format">Command Line format<a class="headerlink" href="#command-line-format" title="Permanent link">λ︎</a></h2>
+<p><a href="https://practical.li/clojure/clojure-cli/clojure-style/" target="_blank">cljstyle</a> is a binary tool for checking and updating formatting for all Clojure files, following the Clojure style guide and very similar to the format of cljfmt tool from Clojure LSP.</p>
+<p><a href="https://github.com/greglook/cljstyle/releases" target="_blank"><span class="twemoji"><svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></span> cljstyle releases page</a> contains operating system specific binary files.  Download and install the appropriate file in the operating system execution path.</p>
+<details class="hint">
+<summary>Recommended Linux install location</summary>
+<p>Extract the <code>cljstyle</code> binary from <code>cljstyle_xxx_linux.tar.gz</code> archive file to <code>$HOME/.local/bin/</code> which should already be on the operating system path.</p>
+</details>
+<p>Check the format of all clojure files and print a report that includes diff view of recommended format changes
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>cljstyle<span class="w"> </span>check
+</code></pre></div></p>
+<p>Or automatically update all Clojure files with any changes to their formatting (recommend adding or committing changes into version control first, to help identify format changes and roll back any undesirable formatting)</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>cljstyle<span class="w"> </span>fix
+</code></pre></div>
+<p><a class="md-button" href="https://practical.li/clojure/clojure-cli/clojure-style/" target="_blank">Using cljstyle and zprint for clojure formatting</a></p>
+<h2 id="continuous-integration">Continuous Integration<a class="headerlink" href="#continuous-integration" title="Permanent link">λ︎</a></h2>
+<p><a href="https://github.com/DeLaGuardo/setup-clojure" target="_blank"><span class="twemoji"><svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></span> Setup Clojure GitHub Action</a> includes cljstyle and zprint as optional tools to run as part of a continuous integration workflow.</p>
+<div class="admonition example">
+<p class="admonition-title">Example GitHub workflow for code quality</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Test and Package project</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="nt">on</span><span class="p">:</span>
+<a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
+<a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="nt">jobs</span><span class="p">:</span>
+<a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">  </span><span class="nt">clojure</span><span class="p">:</span>
+<a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<a href="#__codelineno-6-11" id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout</span>
+<a href="#__codelineno-6-12" id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+<a href="#__codelineno-6-13" id="__codelineno-6-13" name="__codelineno-6-13"></a>
+<a href="#__codelineno-6-14" id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Cache Clojure Dependencies</span>
+<a href="#__codelineno-6-15" id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/cache@v3</span>
+<a href="#__codelineno-6-16" id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a href="#__codelineno-6-17" id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">          </span><span class="nt">path</span><span class="p">:</span>
+<a href="#__codelineno-6-18" id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">~/.m2</span>
+<a href="#__codelineno-6-19" id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">~/.gitlibs</span>
+<a href="#__codelineno-6-20" id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">          </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cache-${{ hashFiles('**/deps.edn') }}</span>
+<a href="#__codelineno-6-21" id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">          </span><span class="nt">restore-keys</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clojure-deps-</span>
+<a href="#__codelineno-6-22" id="__codelineno-6-22" name="__codelineno-6-22"></a>
+<a href="#__codelineno-6-23" id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Prepare java</span>
+<a href="#__codelineno-6-24" id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-java@v3</span>
+<a href="#__codelineno-6-25" id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a href="#__codelineno-6-26" id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="w">          </span><span class="nt">distribution</span><span class="p">:</span><span class="w"> </span><span class="s">'temurin'</span>
+<a href="#__codelineno-6-27" id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="w">          </span><span class="nt">java-version</span><span class="p">:</span><span class="w"> </span><span class="s">'17'</span>
+<a href="#__codelineno-6-28" id="__codelineno-6-28" name="__codelineno-6-28"></a>
+<a href="#__codelineno-6-29" id="__codelineno-6-29" name="__codelineno-6-29"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install clojure tools</span>
+<a href="#__codelineno-6-30" id="__codelineno-6-30" name="__codelineno-6-30"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DeLaGuardo/setup-clojure@9.5</span>
+<a href="#__codelineno-6-31" id="__codelineno-6-31" name="__codelineno-6-31"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<a href="#__codelineno-6-32" id="__codelineno-6-32" name="__codelineno-6-32"></a><span class="w">          </span><span class="nt">cli</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.11.1.1165</span><span class="w">    </span><span class="c1"># Clojure CLI based on tools.deps</span>
+<a href="#__codelineno-6-33" id="__codelineno-6-33" name="__codelineno-6-33"></a><span class="w">          </span><span class="nt">cljstyle</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.15.0</span><span class="w"> </span><span class="c1"># cljstyle</span>
+<a href="#__codelineno-6-34" id="__codelineno-6-34" name="__codelineno-6-34"></a><span class="w">          </span><span class="nt">clj-kondo</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2022.10.05</span><span class="w"> </span><span class="c1"># Clj-kondo</span>
+<a href="#__codelineno-6-35" id="__codelineno-6-35" name="__codelineno-6-35"></a>
+<a href="#__codelineno-6-36" id="__codelineno-6-36" name="__codelineno-6-36"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Unit tests</span>
+<a href="#__codelineno-6-37" id="__codelineno-6-37" name="__codelineno-6-37"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clojure -X:test/run</span>
+<a href="#__codelineno-6-38" id="__codelineno-6-38" name="__codelineno-6-38"></a>
+<a href="#__codelineno-6-39" id="__codelineno-6-39" name="__codelineno-6-39"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Lint</span><span class="nv"> </span><span class="s">with</span><span class="nv"> </span><span class="s">clj-kondo"</span>
+<a href="#__codelineno-6-40" id="__codelineno-6-40" name="__codelineno-6-40"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clj-kondo --lint deps.edn src resources test --config .clj-kondo/config-ci.edn</span>
+<a href="#__codelineno-6-41" id="__codelineno-6-41" name="__codelineno-6-41"></a>
+<a href="#__codelineno-6-42" id="__codelineno-6-42" name="__codelineno-6-42"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">"Check</span><span class="nv"> </span><span class="s">Clojure</span><span class="nv"> </span><span class="s">Style"</span>
+<a href="#__codelineno-6-43" id="__codelineno-6-43" name="__codelineno-6-43"></a><span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cljstyle check --report</span>
+</code></pre></div>
+</div>
+<p><a class="md-button" href="https://practical.li/clojure/clojure-cli/clojure-style/" target="_blank">Practicalli GitHub Workflow for a Clojure project</a>
+<a class="md-button" href="https://practical.li/blog/posts/build-and-run-clojure-with-multistage-dockerfile/" target="_blank">Build and run Clojure with Multi-stage Dockerfile</a></p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 2, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 9, 2023</span>
 </small>
 </div>
 </article>
