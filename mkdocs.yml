@@ -293,10 +293,7 @@ nav:
           - improving-code/live-linting.md
           - improving-code/batch-linting.md
           - improving-code/idiomatic-code-checking.md
-          - improving-code/formatting/index.md
-          - improving-code/formatting/clojure.md
-          - improving-code/formatting/aligning-forms-expressions.md
-          - improving-code/formatting/automatic-indenting.md
+          - improving-code/formatting.md
   - Source Control:
       - source-control/index.md
       - Git Layer: source-control/configure-layers.md
