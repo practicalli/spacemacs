@@ -16,9 +16,9 @@
 <link href="../" rel="prev"/>
 <link href="../batch-linting/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.14" name="generator"/>
-<title>Live linting with clj-kondo - Practicalli Spacemacs</title>
-<link href="../../assets/stylesheets/main.113286f1.min.css" rel="stylesheet"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.1" name="generator"/>
+<title>Live linting - Practicalli Spacemacs</title>
+<link href="../../assets/stylesheets/main.402914a4.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -28,7 +28,7 @@
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-YBK519HFM6"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-YBK519HFM6",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-YBK519HFM6",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
 <meta content="website" property="og:type"/>
-<meta content="Live linting with clj-kondo - Practicalli Spacemacs" property="og:title"/>
+<meta content="Live linting - Practicalli Spacemacs" property="og:title"/>
 <meta content="Practical guide to Clojure development with Spacemacs" property="og:description"/>
 <meta content="https://practical.li/spacemacs/assets/images/social/improving-code/live-linting.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
@@ -36,7 +36,7 @@
 <meta content="630" property="og:image:height"/>
 <meta content="https://practical.li/spacemacs/improving-code/live-linting/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Live linting with clj-kondo - Practicalli Spacemacs" name="twitter:title"/>
+<meta content="Live linting - Practicalli Spacemacs" name="twitter:title"/>
 <meta content="Practical guide to Clojure development with Spacemacs" name="twitter:description"/>
 <meta content="https://practical.li/spacemacs/assets/images/social/improving-code/live-linting.png" name="twitter:image"/>
 <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
@@ -57,7 +57,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#live-linting-with-clj-kondo">
+<a class="md-skip" href="#live-linting">
           Skip to content
         </a>
 </div>
@@ -78,7 +78,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
 </aside>
 </div>
-<header class="md-header" data-md-component="header">
+<header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="Practicalli Spacemacs" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Practicalli Spacemacs">
 <img alt="logo" src="../../assets/images/practicalli-logo.png"/>
@@ -96,7 +96,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Live linting with clj-kondo
+              Live linting
             
           </span>
 </div>
@@ -193,7 +193,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../repl-workflow.md">
+<a class="md-nav__link" href="../../introduction/repl-workflow/">
         REPL Workflow
       </a>
 </li>
@@ -1211,11 +1211,11 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Live linting with clj-kondo
+          Live linting
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Live linting with clj-kondo
+        Live linting
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -1224,13 +1224,13 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#navigating-linting-errors">
-    Navigating linting errors
+<a class="md-nav__link" href="#navigate-lint-errors">
+    Navigate lint errors
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configure-spacemacs-clojure-layer-with-clj-kondo">
-    Configure Spacemacs Clojure layer with clj-kondo
+<a class="md-nav__link" href="#lsp-peek-errors">
+    LSP Peek Errors
   </a>
 </li>
 </ul>
@@ -1979,13 +1979,13 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#navigating-linting-errors">
-    Navigating linting errors
+<a class="md-nav__link" href="#navigate-lint-errors">
+    Navigate lint errors
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configure-spacemacs-clojure-layer-with-clj-kondo">
-    Configure Spacemacs Clojure layer with clj-kondo
+<a class="md-nav__link" href="#lsp-peek-errors">
+    LSP Peek Errors
   </a>
 </li>
 </ul>
@@ -1995,39 +1995,30 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="live-linting-with-clj-kondo">Live linting with clj-kondo<a class="headerlink" href="#live-linting-with-clj-kondo" title="Permanent link">λ︎</a></h1>
-<p><a href="https://github.com/borkdude/clj-kondo">clj-kondo</a> is a linter that can be called from flycheck, providing live static code analysis on your Clojure code as you type.  Simple open any Clojure file (<code>.clj</code>, <code>.cljs</code>, <code>.cljc</code>, <code>.edn</code>) and start typing.</p>
-<p><a href="https://github.com/borkdude/clj-kondo">clj-kondo</a> does not need a running Clojure REPL to work.</p>
-<p>When errors are detected by the lint tool, a mark appears in the margin showing the line.  A wavy underscore shows where on the line the issue is.  Moving the cursor to the underscore will show a pop-up describing the error.</p>
-<p>The total number of errors and warnings are show in in the Space bar.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-clojure-linting-code-marks-and-flycheck-list-errors.png"><img alt="Spacemacs live lintking - clj-kondo and flycheck errors" src="/images/spacemacs-clojure-linting-code-marks-and-flycheck-list-errors.png"/></a></p>
-<h2 id="navigating-linting-errors">Navigating linting errors<a class="headerlink" href="#navigating-linting-errors" title="Permanent link">λ︎</a></h2>
+<h1 id="live-linting">Live linting<a class="headerlink" href="#live-linting" title="Permanent link">λ︎</a></h1>
+<p>Clojure LSP includes <a href="https://github.com/borkdude/clj-kondo">clj-kondo</a> which provides live static code analysis of Clojure code as its entered into the buffer.</p>
+<p>Linting is supported in all Clojure files (<code>.clj</code>, <code>.cljs</code>, <code>.cljc</code>, <code>.edn</code>).</p>
+<p>A mark appears in the margin showing line contain code that generates a warning or error.  A wavy underscore shows where on the line the issue is.  Moving the cursor to the underscore will show a pop-up describing the error.</p>
+<p>The total number of errors and warnings are show in in the modeline.</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-modeline-lsp-warnings-errors-light.png#only-light"><img alt="Spacemacs live linting - clj-kondo and modeline errors" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-modeline-lsp-warnings-errors-light.png#only-light"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-modeline-lsp-warnings-errors-dark.png#only-dark"><img alt="Spacemacs live linting - clj-kondo and modeline errors" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-modeline-lsp-warnings-errors-dark.png#only-dark"/></a></p>
+<h2 id="navigate-lint-errors">Navigate lint errors<a class="headerlink" href="#navigate-lint-errors" title="Permanent link">λ︎</a></h2>
 <p><code>SPC e L</code> opens a window with a buffer containing the list of linting errors for the current file. Navigate between linting errors using <code>j</code> and <code>k</code>. <code>RET</code> to select an error, focusing the cursor in the other buffer on that error</p>
 <p><code>SPC b x</code> to close the buffer and window when you have finished.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-clojure-linting-flycheck-list-errors.png"><img alt="Spacemacs - Clojure Linting - flycheck list errors" src="/images/spacemacs-clojure-linting-flycheck-list-errors.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-linting-flycheck-list-errors-gameboard-light.png#only-light"><img alt="Spacemacs - Clojure Linting - flycheck list errors" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-linting-flycheck-list-errors-gameboard-light.png#only-light"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-linting-flycheck-list-errors-gameboard-dark.png#only-dark"><img alt="Spacemacs - Clojure Linting - flycheck list errors" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-linting-flycheck-list-errors-gameboard-dark.png#only-dark"/></a></p>
+<p>/home/practicalli/projects/practicalli/graphic-design/editors/spacemacs/screenshots/spacemacs-clojure-modeline-lsp-warnings-errors.png</p>
 <p>Keeping the flycheck buffer open will update as you move to linting errors in the source code buffer.</p>
-<h2 id="configure-spacemacs-clojure-layer-with-clj-kondo">Configure Spacemacs Clojure layer with clj-kondo<a class="headerlink" href="#configure-spacemacs-clojure-layer-with-clj-kondo" title="Permanent link">λ︎</a></h2>
-<p>Requirements for using clj-kondo as a live linter:</p>
-<ol>
-<li><code>syntax-checking</code> layer is present in <code>dotspacemacs-configuration-layers</code>, which provides flycheck.</li>
-<li><code>clj-kondo</code> is available on PATH (see <a href="https://github.com/borkdude/clj-kondo/blob/master/doc/install.md">clj-kondo install instructions</a>).</li>
-<li>Spacemacs <code>develop</code> branch as of September 2019 or later</li>
-</ol>
-<p>Add a variable called <code>clojure-enable-linters</code> to the <code>clojure</code> with the value 'clj-kondo.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">    </span><span class="p">(</span><span class="nv">clojure</span><span class="w"> </span><span class="nb">:variables</span>
-<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">             </span><span class="nv">clojure-enable-linters</span><span class="w"> </span><span class="ss">'clj-kondo</span><span class="p">)</span>
-</code></pre></div>
-<p><code>SPC q r</code> to restart Spacemacs (or simply <code>SPC f e R</code> to reload the configuration)</p>
-<div class="admonition hint">
-<p class="admonition-title">Conflicts</p>
-<p>Using the unofficial <code>clojure-lint</code> layer will cause conflicts and may interfere with clj-kondo live linting.</p>
-</div>
+<h2 id="lsp-peek-errors">LSP Peek Errors<a class="headerlink" href="#lsp-peek-errors" title="Permanent link">λ︎</a></h2>
+<p><code>, G e</code> opens LSP peek popup and shows a full list of errors in the project</p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-lsp-peek-errors-light.png#only-light"><img alt="Spacemacs - Clojure Linting - flycheck list errors" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-lsp-peek-errors-light.png#only-light"/></a>
+<a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-lsp-peek-errors-dark.png#only-dark"><img alt="Spacemacs - Clojure Linting - flycheck list errors" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-lsp-peek-errors-dark.png#only-dark"/></a></p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 25, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 8, 2023</span>
 </small>
 </div>
 </article>
@@ -2078,6 +2069,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+<script src="../../assets/javascripts/bundle.b78d2936.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

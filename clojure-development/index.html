@@ -16,9 +16,9 @@
 <link href="../spacemacs-basics/evil-tools/multiple-cursors/" rel="prev"/>
 <link href="../clojure-repl/" rel="next"/>
 <link href="../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.0.14" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.1" name="generator"/>
 <title>Clojure Development Overview - Practicalli Spacemacs</title>
-<link href="../assets/stylesheets/main.113286f1.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.402914a4.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -78,7 +78,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <script>var content,el=document.querySelector("[data-md-component=announce]");el&&(content=el.querySelector(".md-typeset"),__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0))</script>
 </aside>
 </div>
-<header class="md-header" data-md-component="header">
+<header class="md-header md-header--shadow" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
 <a aria-label="Practicalli Spacemacs" class="md-header__button md-logo" data-md-component="logo" href=".." title="Practicalli Spacemacs">
 <img alt="logo" src="../assets/images/practicalli-logo.png"/>
@@ -193,7 +193,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../repl-workflow.md">
+<a class="md-nav__link" href="../introduction/repl-workflow/">
         REPL Workflow
       </a>
 </li>
@@ -1210,7 +1210,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../improving-code/live-linting/">
-        Live linting with clj-kondo
+        Live linting
       </a>
 </li>
 <li class="md-nav__item">
@@ -1978,7 +1978,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="clojure-development-overview">Clojure Development Overview<a class="headerlink" href="#clojure-development-overview" title="Permanent link">λ︎</a></h1>
-<p>A <a href="/spacemacs/repl-workflow/">REPL workflow</a> is supported and highly encouraged for effective Clojure development.</p>
+<p>A <a href="/spacemacs/introduction/repl-workflow.md">REPL workflow</a> is supported and highly encouraged for effective Clojure development.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">CIDER jack-in</label><label for="__tabbed_1_2">Command Line REPL</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1998,28 +1998,29 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </div>
 <p><a class="md-button" href="/spacemacs/clojure-repl/">REPL Driven Development In Spacemacs</a></p>
 <h2 id="using-project-templates">Using Project Templates<a class="headerlink" href="#using-project-templates" title="Permanent link">λ︎</a></h2>
-<p>Clojure projects can be generated from templates using <a href="https://github.com/seancorfield/clj-new">clj-new</a>, <a href="https://github.com/seancorfield/clj-new">deps-new</a> or Leiningen.</p>
+<p>Clojure projects can be generated from templates using <a href="https://github.com/seancorfield/clj-new" target="_blank">deps-new</a> for a Clojure CLI specific project.</p>
+<p><a href="https://github.com/seancorfield/clj-new" target="_blank">clj-new</a> or Leiningen can create a project from a wide range of templates.  Check the template for options and to understand which tooling it supports.</p>
 <p><code>SPC '</code> opens an Emacs popup buffer containing an shell terminal to run a command to create a Clojure project from a template.  Or you can open a terminal window from your operating system.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Clojure CLI clj-new</label><label for="__tabbed_2_2">Clojure CLI deps-new</label><label for="__tabbed_2_3">Leiningen</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Clojure CLI deps-new</label><label for="__tabbed_2_2">Clojure CLI clj-new</label><label for="__tabbed_2_3">Leiningen</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><code>:project/new</code> is an alias for this tool provided by <a href="https://github.com/practicalli/clojure-deps-edn" target="_blank">practicalli/clojure-deps-edn</a>, a user level configuration for Clojure CLI</p>
+<p><code>:project/create</code> is an alias for this tool provided by <a href="https://github.com/practicalli/clojure-deps-edn" target="_blank"><span class="twemoji"><svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></span> practicalli/clojure-deps-edn</a>, a user level configuration for Clojure CLI</p>
 <p>Create a new project with Clojure CLI, using the <code>app</code> template and a project called practicalli/playground</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>clojure<span class="w"> </span>-M:project/new<span class="w"> </span>app<span class="w"> </span>practicalli/playground
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>clojure<span class="w"> </span>-T:project/create<span class="w"> </span>:template<span class="w"> </span>app<span class="w"> </span>:name<span class="w"> </span>practicalli/playground
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p><code>:project/deps-new</code> is an alias for this tool provided by <a href="https://github.com/practicalli/clojure-deps-edn" target="_blank">practicalli/clojure-deps-edn</a>, a user level configuration for Clojure CLI</p>
+<p><code>:project/new</code> is an alias for this tool provided by <a href="https://github.com/practicalli/clojure-deps-edn" target="_blank"><span class="twemoji"><svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></span> practicalli/clojure-deps-edn</a>, a user level configuration for Clojure CLI</p>
 <p>Create a new project with Clojure CLI, using the <code>app</code> template and a project called practicalli/playground</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>clojure<span class="w"> </span>-T:project/deps-new<span class="w"> </span>:template<span class="w"> </span>app<span class="w"> </span>:name<span class="w"> </span>practicalli/playground
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>clojure<span class="w"> </span>-M:project/new<span class="w"> </span>app<span class="w"> </span>practicalli/playground
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <p><a class="md-button" href="/alternative-tooling/leiningen.md">Leiningen Install</a></p>
 <p>Create a new project with Leiningen called playground, within the practicalli domain. Use the <code>app</code> template to create a very simple Clojure application.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>lein<span class="w"> </span>new<span class="w"> </span>app<span class="w"> </span>playground
+<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>lein<span class="w"> </span>new<span class="w"> </span>app<span class="w"> </span>playground
 </code></pre></div>
-<p>Leiningen can generate a wide range of projects from templates.  To use these projects with Clojure CLI a <code>deps.edn</code> file should be added, using the same collection of library dependencies. See <a href="/alternative-tooling/leiningen.md">Leiningen</a> for details</p>
+Leiningen can generate a wide range of projects from templates.  To use these projects with Clojure CLI a <code>deps.edn</code> file should be added, using the same collection of library dependencies. See <a href="/spacemacs/alternative-tooling/leiningen.md">Leiningen</a> for details</p>
 </div>
 </div>
 </input></input></input></div>
@@ -2035,19 +2036,19 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <h2 id="refactor">Refactor<a class="headerlink" href="#refactor" title="Permanent link">λ︎</a></h2>
 <p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>r</kbd></span> <span class="keys"><kbd>r</kbd></span> (<code>lsp-rename</code>) to rename ns forms, def, defn and local names, updating any references to those names throughout the project.</p>
 <p>Renaming a namespace also renames the filename along with <code>requires</code> that include the namespace in other namespaces</p>
-<p>Namespaces or <code>def</code> / <code>defn</code> expressions  it contains should be removed from the running REPL, to prevent inconsistencies between the code and REPL.</p>
+<p><code>def</code> / <code>defn</code> expressions a namespace contains should be removed from the running REPL to prevent inconsistencies between the code and REPL.</p>
 <div class="admonition hint">
-<p class="admonition-title">Remove define before renaming</p>
-<p>Keep the REPL state clean by removing the name of a function to be renamed
-<span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd>u</kbd></span> (<code>cider-undef</code>) removes the current var from the REPL (uses nREPL undef command)
-Alternatively, <code>, q r</code> to restart the REPL after names have been changed or deleted.</p>
+<p class="admonition-title">Remove defined names before renaming</p>
+<p>Keep the REPL state clean by removing the name of a function or value before it is renamed
+<span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd>u</kbd></span> (<code>cider-undef</code>) removes the current var from the REPL (uses nREPL undef command)</p>
+<p>Alternatively, <code>, q r</code> to restart the REPL after names have been changed or deleted.</p>
 </div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 8, 2023</span>
 </small>
 </div>
 </article>
@@ -2098,6 +2099,6 @@ Alternatively, <code>, q r</code> to restart the REPL after names have been chan
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+<script src="../assets/javascripts/bundle.b78d2936.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
