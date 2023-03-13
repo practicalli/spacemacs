@@ -92,7 +92,7 @@ Clone [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d) conf
 
 ++spc++ ++"q"++ ++"r"++ to restart Spacemacs and see the finished results
 
-![Spacemacs - doom-gruvbox-light theme - home and spacemacs config buffers](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-doom-gruvbox-light-theme-examples-home-spacemacs-config.png)
+![Spacemacs - doom-gruvbox-light theme - home and spacemacs config buffers](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-doom-gruvbox-light-theme-examples-home-spacemacs-config.png)
 
 
 ## Spacemacs is ready for action
