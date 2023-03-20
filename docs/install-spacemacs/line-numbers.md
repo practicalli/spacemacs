@@ -1,6 +1,6 @@
 # Line Numbers
 
-++spc++ ++"t"++ ++"s"++ menu toggles line numbers, showing consecutive (absolute) ++a++, relative ++r++ or visual ++v++ layout.
+++spc++ ++"t"++ ++"n"++ menu toggles line numbers, showing consecutive (absolute) ++a++, relative ++r++ or visual ++v++ layout.
 
 Configure `dotspacemacs-line-numbers` in Spacemacs configuration file to [show line numbers by default](#visual-style-line-number-configuration).
 
