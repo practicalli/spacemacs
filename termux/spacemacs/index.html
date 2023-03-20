@@ -2022,19 +2022,28 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Using SSH
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:practicalli/spacemacs.d.git<span class="w"> </span>~/.config/spacemacs
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:practicalli/spacemacs-config.git<span class="w"> </span>~/.config/spacemacs
 </code></pre></div></p>
 <p>Using HTTPS
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/spacemacs.d<span class="w"> </span>~/.config/spacemacs
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/spacemacs-config<span class="w"> </span>~/.config/spacemacs
 </code></pre></div></p>
 <p><code>~/.config/spacemacs/init.el</code> is the main configuration file, ensure <code>~/.spacemacs</code> file does not exist as that file would take precedence.</p>
+<p>Ensure <code>SPACEMACSDIR</code> environment variable is set to the Practicalli Spacemacs configuration directory in the <code>~/.profile</code> file
+<div class="highlight"><span class="filename">SPACEMACSDIR environment variable in ~/.profile</span><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_CONFIG_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.config
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_DATA_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.local/share
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_STATE_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.local/state
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_CACHE_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.cache
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="c1"># Set XDG location of Emacs Spacemacs configuration</span>
+<a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SPACEMACSDIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$XDG_CONFIG_HOME</span><span class="s2">/spacemacs"</span>
+</code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p>Using SSH
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:practicalli/spacemacs.d.git<span class="w"> </span>~/.spacemacs.d
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:practicalli/spacemacs.d.git<span class="w"> </span>~/.spacemacs.d
 </code></pre></div></p>
 <p>Using HTTP
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/spacemacs.d<span class="w"> </span>~/.spacemacs.d
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/spacemacs.d<span class="w"> </span>~/.spacemacs.d
 </code></pre></div></p>
 <p><code>~/.spacemacs.d/init.el</code> is the main configuration file, ensure <code>~/.spacemacs</code> file does not exist as that file would take precedence.</p>
 </div>
@@ -2042,14 +2051,14 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </input></input></div>
 <h3 id="searching-files">Searching files<a class="headerlink" href="#searching-files" title="Permanent link">λ︎</a></h3>
 <p>Spacemacs uses ripgrep, a highly optimised tool for finding files on the operating system.</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>pkg install ripgrep
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>pkg install ripgrep
 </code></pre></div>
 <hr/>
 <div class="md-source-file">
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 20, 2023</span>
 </small>
 </div>
 </article>
