@@ -36,13 +36,23 @@ Clone [practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-co
     git clone git@github.com:practicalli/spacemacs-config.git ~/.config/spacemacs
     ```
 
-
     Using HTTPS
     ```shell
     git clone https://github.com/practicalli/spacemacs-config ~/.config/spacemacs
     ```
-
     `~/.config/spacemacs/init.el` is the main configuration file, ensure `~/.spacemacs` file does not exist as that file would take precedence.
+
+
+    Set the `SPACEMACSDIR` environment variable to the `~/.config/spacemacs` directory so that Spacemacs will find this location.  Add to `~/.profile` to support launching Emacs from a desktop launcher and the shell configuration, e.g. `~/.bashrc` for bash, `~/.zshenv` for Zshell.
+    ```shell title="SPACEMACSDIR and XDG configurations"
+    export XDG_CONFIG_HOME=$HOME/.config
+    export XDG_DATA_HOME=$HOME/.local/share
+    export XDG_STATE_HOME=$HOME/.local/state
+    export XDG_CACHE_HOME=$HOME/.cache
+
+    # Set XDG location of Emacs Spacemacs configuration
+    export SPACEMACSDIR="$XDG_CONFIG_HOME/spacemacs"
+    ```
 
 
 === "Classic config"
