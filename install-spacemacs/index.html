@@ -16,9 +16,9 @@
 <link href="pre-install/" rel="prev"/>
 <link href="manual-configuration/" rel="next"/>
 <link href="../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.2" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>Install Spacemacs - Practicalli Spacemacs</title>
-<link href="../assets/stylesheets/main.7bf56d0a.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -2004,18 +2004,27 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="tabbed-block">
 <p>Using SSH
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:practicalli/spacemacs-config.git<span class="w"> </span>~/.config/spacemacs
+</code></pre></div>
+Set the <code>SPACEMACSDIR</code> environment variable to the <code>~/.config/spacemacs</code> directory so that Spacemacs will find this location.  Add to <code>~/.profile</code> to support launching Emacs from a desktop launcher and the shell configuration, e.g. <code>~/.bashrc</code> for bash, <code>~/.zshenv</code> for Zshell.
+<div class="highlight"><span class="filename">SPACEMACSDIR and XDG configurations</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_CONFIG_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.config
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_DATA_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.local/share
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_STATE_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.local/state
+<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_CACHE_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.cache
+<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>
+<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="c1"># Set XDG location of Emacs Spacemacs configuration</span>
+<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SPACEMACSDIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$XDG_CONFIG_HOME</span><span class="s2">/spacemacs"</span>
 </code></pre></div></p>
 <p>Using HTTPS
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/spacemacs-config<span class="w"> </span>~/.config/spacemacs
-</code></pre></div></p>
-<p><code>~/.config/spacemacs/init.el</code> is the main configuration file, ensure <code>~/.spacemacs</code> file does not exist as that file would take precedence.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/spacemacs-config<span class="w"> </span>~/.config/spacemacs
+</code></pre></div>
+<code>~/.config/spacemacs/init.el</code> is the main configuration file, ensure <code>~/.spacemacs</code> file does not exist as that file would take precedence.</p>
 </div>
 <div class="tabbed-block">
 <p>Using SSH
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:practicalli/spacemacs-config.git<span class="w"> </span>~/.spacemacs.d
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:practicalli/spacemacs-config.git<span class="w"> </span>~/.spacemacs.d
 </code></pre></div></p>
 <p>Using HTTP
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/spacemacs-config<span class="w"> </span>~/.spacemacs.d
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/spacemacs-config<span class="w"> </span>~/.spacemacs.d
 </code></pre></div></p>
 <p><code>~/.spacemacs.d/init.el</code> is the main configuration file, ensure <code>~/.spacemacs</code> file does not exist as that file would take precedence.</p>
 </div>
@@ -2025,15 +2034,15 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <summary>Emacs custom settings</summary>
 <p><code>init.el</code> configuration separates Emacs custom settings into a <code>emacs-custom-setting</code> file.  <code>emacs-custom-setting</code> should be added to version control if the Emacs <code>customize</code> menu has been used to define settings.
 <code>emacs-custom-file</code> is defined in the <code>dotspacemacs/user-init</code> of the Spacemacs configuration
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="w">  </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">custom-file</span><span class="w"> </span><span class="p">(</span><span class="nv">file-truename</span><span class="w"> </span><span class="p">(</span><span class="nf">concat</span><span class="w"> </span><span class="nv">dotspacemacs-directory</span><span class="w"> </span><span class="s">"emacs-custom-settings.el"</span><span class="p">)))</span>
-<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">  </span><span class="p">(</span><span class="nf">load</span><span class="w"> </span><span class="nv">custom-file</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="w">  </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">custom-file</span><span class="w"> </span><span class="p">(</span><span class="nv">file-truename</span><span class="w"> </span><span class="p">(</span><span class="nf">concat</span><span class="w"> </span><span class="nv">dotspacemacs-directory</span><span class="w"> </span><span class="s">"emacs-custom-settings.el"</span><span class="p">)))</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">  </span><span class="p">(</span><span class="nf">load</span><span class="w"> </span><span class="nv">custom-file</span><span class="p">)</span>
 </code></pre></div>
 A specific path could also be used to define the location of the custom file: <code>(setq custom-file "~/.emacs.d/.cache/custom-settings")</code></p>
 </details>
 <h2 id="install-fira-code-font">Install Fira Code font<a class="headerlink" href="#install-fira-code-font" title="Permanent link">λ︎</a></h2>
 <p><a class="md-button" href="https://github.com/tonsky/FiraCode/wiki/Installing" target="_blank">Install Fira Code</a></p>
 <p><a href="https://github.com/practicalli/spacemacs-config">practicalli/spacemacs-config</a> uses Fira Code, a mono-spaced font designed for source code and includes <a href="https://github.com/tonsky/FiraCode#whats-in-the-box">ligatures</a> and <a href="https://github.com/tonsky/FiraCode#whats-in-the-box">many other features</a>.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/fira-code-font-clojure-ligatures.png"><img alt="Fira Code font - ligatures for Emacs and Clojure code" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/fira-code-font-clojure-ligatures.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/fira-code-font-clojure-ligatures.png"><img alt="Fira Code font - ligatures for Emacs and Clojure code" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/fira-code-font-clojure-ligatures.png"/></a></p>
 <div class="admonition hint">
 <p class="admonition-title">Use a different font with practicalli/spacemacs-config</p>
 <p>To use a different font when using the <a href="https://github.com/practicalli/spacemacs-config">practicalli/spacemacs-config</a>, edit <code>.spacemacs.d/init.el</code> and update the value for <code>dotspacemacs-default-font</code> to a name of a font on your system.</p>
@@ -2042,7 +2051,7 @@ A specific path could also be used to define the location of the custom file: <c
 <p><a href="https://github.com/practicalli/spacemacs-config" target="_blank">practicalli/spacemacs-config</a> configuration uses the modern looking doom modeline theme, which requires a few fonts and icons.</p>
 <p><code>SPC SPC all-the-icons-install-fonts</code> once Spacemacs is running will install the fonts.</p>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>q</kbd></span> <span class="keys"><kbd>r</kbd></span> to restart Spacemacs and see the finished results</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-doom-gruvbox-light-theme-examples-home-spacemacs-config.png"><img alt="Spacemacs - doom-gruvbox-light theme - home and spacemacs config buffers" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-doom-gruvbox-light-theme-examples-home-spacemacs-config.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-doom-gruvbox-light-theme-examples-home-spacemacs-config.png"><img alt="Spacemacs - doom-gruvbox-light theme - home and spacemacs config buffers" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-doom-gruvbox-light-theme-examples-home-spacemacs-config.png"/></a></p>
 <h2 id="spacemacs-is-ready-for-action">Spacemacs is ready for action<a class="headerlink" href="#spacemacs-is-ready-for-action" title="Permanent link">λ︎</a></h2>
 <p>Spacemacs is now up and running and ready to take on the world.</p>
 <p>If you already know how to use Spacemacs, jump to the <a href="/spacemacs/clojure-projects/">Clojure Projects section</a>, otherwise look through the <a href="/spacemacs/spacemacs-basics/">Spacemacs Basics section</a> to learn how to use Vim style editing and work with files, buffers and windows in Spacemacs.</p>
@@ -2051,17 +2060,17 @@ A specific path could also be used to define the location of the custom file: <c
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 20, 2023</span>
 </small>
 </div>
 </article>
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 </div>
-<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
             Back to top
-          </a>
+          </button>
 </main>
 <footer class="md-footer">
 <div class="md-footer-meta md-typeset">
@@ -2102,6 +2111,6 @@ A specific path could also be used to define the location of the custom file: <c
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../assets/javascripts/bundle.fc8c2696.min.js"></script>
+<script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

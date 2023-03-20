@@ -16,9 +16,9 @@
 <link href="../ranger/" rel="prev"/>
 <link href="../tidying-up-buffers/" rel="next"/>
 <link href="../../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.2" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>Searching Projects - Practicalli Spacemacs</title>
-<link href="../../../assets/stylesheets/main.7bf56d0a.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -2092,7 +2092,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <p><code>RET</code> selects the search result and shows the file and line in the current buffer.</p>
 <p><code>SPC s l</code> will repeat the last search</p>
 <p><code>M-n</code> and <code>M-p</code> will scroll through the search patterns whenever the search pop-up window is open</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-pattern-search.png"><img alt="Spacemacs Helm-Ag ripgrep pattern search results" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-pattern-search.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-pattern-search.png"><img alt="Spacemacs Helm-Ag ripgrep pattern search results" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-pattern-search.png"/></a></p>
 <blockquote>
 <h4 id="hintreplacing-text-across-a-project">Hint::Replacing text across a project<a class="headerlink" href="#hintreplacing-text-across-a-project" title="Permanent link">λ︎</a></h4>
 <p>Use search results to <a href="/spacemacs-basics/evil-tools/replacing-text-across-projects.md">replace text across a project</a>.</p>
@@ -2113,19 +2113,19 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <p>Option flags can be passed to the search tool binary to tailor the results returned in the helm-ag pop-up window.  The option flags can be used before or after the search pattern.</p>
 <p><code>SPC h m rg</code> shows the man page for ripgrep which explains the options of that search tool.  Replace <code>rg</code> with the command line name of the search tool binary installed.</p>
 <p>Including options without their correct argument will show a warning, e.g. the <code>-g</code> option without a glob pattern or <code>-A</code> without a number.  Once the option has a valid value the error should be replaced by search results.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-project-wide-search-options-error.png"><img alt="Spacemacs Helm-Ag globbing option error without pattern" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-project-wide-search-options-error.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-project-wide-search-options-error.png"><img alt="Spacemacs Helm-Ag globbing option error without pattern" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-project-wide-search-options-error.png"/></a></p>
 <h3 id="searching-specific-files">Searching specific files<a class="headerlink" href="#searching-specific-files" title="Permanent link">λ︎</a></h3>
 <p>Include or exclude specific files by their names or filename extensions.</p>
 <p>Use the <code>-g</code> option for a filename to search (globbing), or <code>-g!</code> for a filename to ignore.</p>
 <p><code>-g*.clj map</code> shows only results of searching for <code>map</code> from files ending in <code>.clj</code></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-clj.png"><img alt="Spacemacs Helm-Ag ripgrep globbing .clj files" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-clj.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-clj.png"><img alt="Spacemacs Helm-Ag ripgrep globbing .clj files" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-clj.png"/></a></p>
 <p><code>-g!*.md map</code> will search for <code>map</code> for all files except those ending in <code>.md</code></p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-not-md.png"><img alt="Spacemacs Helm-Ag ripgrep globbing not .md files" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-not-md.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-not-md.png"><img alt="Spacemacs Helm-Ag ripgrep globbing not .md files" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-not-md.png"/></a></p>
 <h3 id="showing-more-lines-for-each-match">Showing more lines for each match<a class="headerlink" href="#showing-more-lines-for-each-match" title="Permanent link">λ︎</a></h3>
 <p><code>-A</code> option for ripgrep is used to show a number of lines after each match of the pattern.  <code>-A4</code> will show the 4 additional lines after the line containing a matching pattern.</p>
 <p>If there are multiple pattern matches in the same file within the scope of extra lines, then contiguous lines are shown with 4 lines after the final pattern line.</p>
 <p><code>SPC /</code> with a pattern of <code>-A4 layout</code> will show each line containing the pattern layout and 4 lines after it.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-search-options-additional-lines.png"><img alt="Spacemacs Helm-Ag globbing option error without pattern" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-search-options-additional-lines.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-search-options-additional-lines.png"><img alt="Spacemacs Helm-Ag globbing option error without pattern" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-search-options-additional-lines.png"/></a></p>
 <p>This option can also be combined with the <code>-g</code> option above.</p>
 <h3 id="example-search-patterns">Example search patterns<a class="headerlink" href="#example-search-patterns" title="Permanent link">λ︎</a></h3>
 <p>Additional search patterns that work with <code>ripgrep</code> or <code>ag</code>.</p>
@@ -2203,10 +2203,10 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 </div>
-<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
             Back to top
-          </a>
+          </button>
 </main>
 <footer class="md-footer">
 <div class="md-footer-meta md-typeset">
@@ -2247,6 +2247,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../assets/javascripts/bundle.fc8c2696.min.js"></script>
+<script src="../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

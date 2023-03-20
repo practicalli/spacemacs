@@ -16,9 +16,9 @@
 <link href="../create-local-repository/" rel="prev"/>
 <link href="../status/" rel="next"/>
 <link href="../../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.2" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>List your local Git repositories - Practicalli Spacemacs</title>
-<link href="../../../assets/stylesheets/main.7bf56d0a.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -1990,7 +1990,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <article class="md-content__inner md-typeset">
 <h1 id="list-your-local-git-repositories">List your local Git repositories<a class="headerlink" href="#list-your-local-git-repositories" title="Permanent link">λ︎</a></h1>
 <p><code>SPC g L</code> will list all the repositories along with basic status information (branches, dirty, etc). This is very useful as the number of created or cloned repositories grows on your computer.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-magit-list-repositories.png"><img alt="Magit: List Git repositories on your computer" src="/images/spacemacs-magit-list-repositories.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/images/spacemacs-magit-list-repositories.png"><img alt="Magit: List Git repositories on your computer" src="/images/spacemacs-magit-list-repositories.png"/></a></p>
 <p>You first need to tell Magit where your repositories are on your computer.</p>
 <h2 id="configure-the-location-of-your-git-repositories">Configure the location of your Git repositories<a class="headerlink" href="#configure-the-location-of-your-git-repositories" title="Permanent link">λ︎</a></h2>
 <p><code>magit-repository-directories</code> is used to define which directories Magit should search in to find your Git repositories. This configuration should be added to the <code>dotspacemacs/user-config</code> section of your <code>.spacemacs</code> file.</p>
@@ -2004,7 +2004,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <h4 id="hint-setting-repository-directories-changes-magit-status-behaviour">Hint:: Setting repository directories changes Magit Status behaviour<a class="headerlink" href="#hint-setting-repository-directories-changes-magit-status-behaviour" title="Permanent link">λ︎</a></h4>
 <p><code>SPC g i</code> should be used to initialize a new git repository once <code>magit-repository-directories</code> is set.</p>
 <p>If you use <code>SPC g s</code> on a project that has no git version control, magit will prompt you for a git repository.  Enter <code>.</code> to initialise a new git repository in the current project.  Magit will prompt you in the mini-buffer to confirm you wish to create this git repository.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-magit-git-status-helm-list-of-repositories.png"><img alt="Spacemacs Magit: git status list of existing repositories" src="/images/spacemacs-magit-git-status-helm-list-of-repositories.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/images/spacemacs-magit-git-status-helm-list-of-repositories.png"><img alt="Spacemacs Magit: git status list of existing repositories" src="/images/spacemacs-magit-git-status-helm-list-of-repositories.png"/></a></p>
 </blockquote>
 <hr/>
 <div class="md-source-file">
@@ -2018,10 +2018,10 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 </div>
-<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
             Back to top
-          </a>
+          </button>
 </main>
 <footer class="md-footer">
 <div class="md-footer-meta md-typeset">
@@ -2062,6 +2062,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../assets/javascripts/bundle.fc8c2696.min.js"></script>
+<script src="../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

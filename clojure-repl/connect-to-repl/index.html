@@ -16,9 +16,9 @@
 <link href="../" rel="prev"/>
 <link href="../connect-to-remote-repl/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.2" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>Connect to a Clojure REPL - Practicalli Spacemacs</title>
-<link href="../../assets/stylesheets/main.7bf56d0a.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -2000,7 +2000,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>clojure<span class="w"> </span>-M:repl/headless
 </code></pre></div>
 <p>The REPL will start along with an nREPL server, showing the connection details.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/clojure-repl-terminal-rebel-nrepl.png"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/clojure-repl-terminal-rebel-nrepl.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/images/clojure-repl-terminal-rebel-nrepl.png"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/clojure-repl-terminal-rebel-nrepl.png"/></a></p>
 <p>An <code>.nrepl-port</code> file is created in the root of the Clojure project, containing the port number the nREPL server is listening upon.</p>
 <details class="info">
 <summary>Headless terminal REPL </summary>
@@ -2013,11 +2013,11 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>ssh<span class="w"> </span>remote
 </code></pre></div>
 <p><code>, '</code> to call <code>sesman-start</code> and choose <code>cider-connect-clj</code> which should find the right host and port</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-clojure-cider-connect-clj.png"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/spacemacs-clojure-cider-connect-clj.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/images/spacemacs-clojure-cider-connect-clj.png"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/spacemacs-clojure-cider-connect-clj.png"/></a></p>
 <p>Confirm the host name, typically <code>localhost</code> when running the REPL locally</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-clojure-cider-connect-host.png"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/spacemacs-clojure-cider-connect-host.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/images/spacemacs-clojure-cider-connect-host.png"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/spacemacs-clojure-cider-connect-host.png"/></a></p>
 <p>Confirm the port number the nREPL server is listening too</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-clojure-cider-connect-port.png"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/spacemacs-clojure-cider-connect-port.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/images/spacemacs-clojure-cider-connect-port.png"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/spacemacs-clojure-cider-connect-port.png"/></a></p>
 <p>Spacemacs is now connected to the REPL and Clojure code can be evaluated in the source code buffers.</p>
 <h2 id="common-repl-start-restart-keybindings">Common REPL start / restart keybindings<a class="headerlink" href="#common-repl-start-restart-keybindings" title="Permanent link">λ︎</a></h2>
 <table>
@@ -2070,10 +2070,10 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 </div>
-<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
             Back to top
-          </a>
+          </button>
 </main>
 <footer class="md-footer">
 <div class="md-footer-meta md-typeset">
@@ -2114,6 +2114,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.fc8c2696.min.js"></script>
+<script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

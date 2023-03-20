@@ -16,9 +16,9 @@
 <link href="../interactive-rebasing/" rel="prev"/>
 <link href="../blame/" rel="next"/>
 <link href="../../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.2" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>Cherry Picking commits - Practicalli Spacemacs</title>
-<link href="../../../assets/stylesheets/main.7bf56d0a.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -2039,7 +2039,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <p>Select the <strong>Cherry head</strong> - the branch containing commits (cherries) that are to be copied</p>
 <p>Select the <strong>Cherry upstream</strong> - the branch that would receive the commits (cherries)</p>
 <p>A list of commits, 'cherries', are show to help narrow down which commits could be cherry picked.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-cherries.png"><img alt="Spacemacs Magit Cherry Picking - list of cherries" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-cherries.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-cherries.png"><img alt="Spacemacs Magit Cherry Picking - list of cherries" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-cherries.png"/></a></p>
 <blockquote>
 <p><code>A</code> with the point on one of the cherries, or with one or more cherries selected, will start the Applying of commits</p>
 </blockquote>
@@ -2048,20 +2048,20 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <p>Navigate to the branch and commit (or commits) to cherry pick.  Use visual select state, <code>v</code> to select multiple commits (<code>C-SPC</code> in holy mode)</p>
 <h2 id="applying-commits">Applying commits<a class="headerlink" href="#applying-commits" title="Permanent link">λ︎</a></h2>
 <p><code>A</code> starts the apply menu to start the cherry picking process.  <code>A</code> is also used to open the transient Apply menu, to continue skip or abort the cherry picking.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-apply-menu.png"><img alt="Spacemacs Magit cherry picking - Apply menu and options" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-apply-menu.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-apply-menu.png"><img alt="Spacemacs Magit cherry picking - Apply menu and options" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-apply-menu.png"/></a></p>
 <p><code>d</code> to donate the selected cherry commits to another branch</p>
 <p>Select the <strong>donate branch</strong> - the branch commits are to be copied to</p>
 <p>If there are no conflicts, the commits are added to the branch.  Push the changes, <code>P p</code>, to a remote repository if relevant.</p>
 <h2 id="managing-conflicts">Managing Conflicts<a class="headerlink" href="#managing-conflicts" title="Permanent link">λ︎</a></h2>
 <p>The Magit status buffer shows a cherry-picking progress section if the selected cherries (commits) cannot be automatically merged into the branch,</p>
 <p>Files that contain merge conflicts will be listed under unstaged changes</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-merge-conflict-show-progress-unmerged-files.png"><img alt="Spacemacs Magit cherry picking merge conflict - cherry picking progress" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-merge-conflict-show-progress-unmerged-files.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-merge-conflict-show-progress-unmerged-files.png"><img alt="Spacemacs Magit cherry picking merge conflict - cherry picking progress" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-merge-conflict-show-progress-unmerged-files.png"/></a></p>
 <p><code>RET</code> to open file for editing in a buffer and resolve the conflicting change</p>
 <p><code>SPC f s</code> to save the file</p>
 <p><code>SPC g s</code> to return to the Magit status buffer</p>
 <p><code>s</code> on the file to stage any unstaged changes after editing the conflicting files</p>
 <p><code>A</code> to open the Apply action menu, <code>A</code> to continue with the apply of cherries</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-actions-menu.png"><img alt="Spacemacs Magit cherry picking - Apply actions menu" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-actions-menu.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-actions-menu.png"><img alt="Spacemacs Magit cherry picking - Apply actions menu" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-actions-menu.png"/></a></p>
 <p>Staged changes require committing, so continuing the Apply will open a commit message buffer</p>
 <p><code>, ,</code> to confirm the commit</p>
 <p>The cherry commits will be automatically committed, unless there is a conflict in another commit. Repeat the above steps until there are no further conflicts and all the commits are merged.</p>
@@ -2071,7 +2071,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </blockquote>
 <h3 id="diff-3-configuration">Diff 3 configuration<a class="headerlink" href="#diff-3-configuration" title="Permanent link">λ︎</a></h3>
 <p>Diff 3 presentation of merge conflicts displays a common parent (if one exists) between the two changes in conflict.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png"><img alt="Spacemacs Magit unstaged change with diff3 configuration showing parent of conflicting changes" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png"><img alt="Spacemacs Magit unstaged change with diff3 configuration showing parent of conflicting changes" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png"/></a></p>
 <blockquote>
 <p><a href="/source-control/git-configuration.md">Git configuration</a> details how to add diff3 merge support along with many other useful settings.</p>
 </blockquote>
@@ -2089,10 +2089,10 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 </div>
-<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
             Back to top
-          </a>
+          </button>
 </main>
 <footer class="md-footer">
 <div class="md-footer-meta md-typeset">
@@ -2133,6 +2133,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../../assets/javascripts/bundle.fc8c2696.min.js"></script>
+<script src="../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

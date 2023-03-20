@@ -16,9 +16,9 @@
 <link href="../expressions/" rel="prev"/>
 <link href="../interrupt/" rel="next"/>
 <link href="../../assets/favicon.svg" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-9.1.2" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>Inspect Values - Practicalli Spacemacs</title>
-<link href="../../assets/stylesheets/main.7bf56d0a.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -1997,24 +1997,24 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <p><code>q</code> quits the cider inspector buffer</p>
 <h2 id="inspecting-simple-values">Inspecting simple values<a class="headerlink" href="#inspecting-simple-values" title="Permanent link">λ︎</a></h2>
 <p>Inspecting a number or character shows the underlying type, the value and properties of that type</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemace-clojure-inspect-java-lang-long.png"><img alt="Spacemacs - Clojure - Inspect value - java.lang.Long" src="/images/spacemace-clojure-inspect-java-lang-long.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/images/spacemace-clojure-inspect-java-lang-long.png"><img alt="Spacemacs - Clojure - Inspect value - java.lang.Long" src="/images/spacemace-clojure-inspect-java-lang-long.png"/></a></p>
 <h2 id="inspecting-collections">Inspecting Collections<a class="headerlink" href="#inspecting-collections" title="Permanent link">λ︎</a></h2>
 <p>Inspect a collection shows the underlying type, contents of that collection and index (where applicable).  Only the elements are shown.  The characters of the overall collection itself are not show, only the underlying type of collection (vector, map, lazy sequence, etc.).</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemace-clojure-inspect-java-lang-persistentvector.png"><img alt="Spacemacs - Clojure - Inspect persistent map" src="/images/spacemace-clojure-inspect-java-lang-persistentvector.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/images/spacemace-clojure-inspect-java-lang-persistentvector.png"><img alt="Spacemacs - Clojure - Inspect persistent map" src="/images/spacemace-clojure-inspect-java-lang-persistentvector.png"/></a></p>
 <p>If there are collections within collections then those values can be navigated too.</p>
 <p><code>RET</code> on an nested element in a collection will inspect that element in the same detail (<code>cider-inspector-operate-on-point</code>).</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-clojure-inspect-persistent-map-nested.png"><img alt="Spacemacs - Clojure - Inspect persistent map with vector" src="/images/spacemacs-clojure-inspect-persistent-map-nested.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/images/spacemacs-clojure-inspect-persistent-map-nested.png"><img alt="Spacemacs - Clojure - Inspect persistent map with vector" src="/images/spacemacs-clojure-inspect-persistent-map-nested.png"/></a></p>
 <p><code>L</code> to back to parent of a nested element (<code>cider-inspector-pop</code>).</p>
 <h1 id="inspecting-mutable-values">Inspecting mutable values<a class="headerlink" href="#inspecting-mutable-values" title="Permanent link">λ︎</a></h1>
 <p>Mutable containers, <code>atom</code>, <code>ref</code>, can also be inspected.  The class of the container is shown, along with the class of the value it contains along with its elements.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-clojure-inspect-atom-containing-persistent-vector.png"><img alt="Spacemacs - Clojure - Inspect atom containing a vector" src="/images/spacemacs-clojure-inspect-atom-containing-persistent-vector.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/images/spacemacs-clojure-inspect-atom-containing-persistent-vector.png"><img alt="Spacemacs - Clojure - Inspect atom containing a vector" src="/images/spacemacs-clojure-inspect-atom-containing-persistent-vector.png"/></a></p>
 <p>Inspecting an atom or ref gives the value at the current time.  The inspector does not update if the value of the atom or ref is updated. Use <code>r</code> in the inspector buffer to refresh or restart the inspector with <code>, d v</code> each time you want to check if the value has changed.</p>
 <h2 id="inspecting-var-meta-data">Inspecting Var meta data<a class="headerlink" href="#inspecting-var-meta-data" title="Permanent link">λ︎</a></h2>
 <p><code>cider-inspect-last-result</code> shows the result of the the last expression evaluated.  When this is a var from a <code>def</code> expression then meta information is shown as well as the class type and summary of the value.</p>
 <p>Meta data includes the file and position of the code, the name of the var and which namespace it is defined in.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-clojure-cider-inspect-last-result.png"><img alt="Spacemacs Clojure Cider Inspector - inspect last value - def" src="/images/spacemacs-clojure-cider-inspect-last-result.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/images/spacemacs-clojure-cider-inspect-last-result.png"><img alt="Spacemacs Clojure Cider Inspector - inspect last value - def" src="/images/spacemacs-clojure-cider-inspect-last-result.png"/></a></p>
 <p>Inspecting a <code>defn</code> also shows the argument list as part of the meta data.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="/images/spacemacs-clojure-cider-inspector-inspect-last-value-defn.png"><img alt="Spacemacs Clojure Cider Inspector - inspect last value - defn" src="/images/spacemacs-clojure-cider-inspector-inspect-last-value-defn.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="/images/spacemacs-clojure-cider-inspector-inspect-last-value-defn.png"><img alt="Spacemacs Clojure Cider Inspector - inspect last value - defn" src="/images/spacemacs-clojure-cider-inspector-inspect-last-value-defn.png"/></a></p>
 <hr/>
 <div class="md-source-file">
 <small>
@@ -2027,10 +2027,10 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 </div>
 <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
 </div>
-<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
             Back to top
-          </a>
+          </button>
 </main>
 <footer class="md-footer">
 <div class="md-footer-meta md-typeset">
@@ -2071,6 +2071,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="md-dialog__inner md-typeset"></div>
 </div>
 <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "navigation.top", "content.code.annotate", "content.tabs.link", "navigation.instant", "navigation.tracking", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-<script src="../../assets/javascripts/bundle.fc8c2696.min.js"></script>
+<script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
