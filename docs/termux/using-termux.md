@@ -2,7 +2,7 @@
 
 Start Termux app and a terminal prompt is shown, along with the standard Android software keyboard.  An extended keyboard is provided with common key bindings for the command line interface (Tab, Esc, Ctrl, arrow keys, etc.).
 
-![Termux startup with Software and Extended keyboards](https://raw.githubusercontent.com/practicalli/graphic-design/live/termux/termux-startup-tablet.jpeg)
+![Termux startup with Software and Extended keyboards](https://raw.githubusercontent.com/practicalli/graphic-design/live/termux/termux-startup-tablet.png)
 
 
 ## Keyboards
