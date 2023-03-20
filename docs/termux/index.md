@@ -7,7 +7,7 @@ Termux can be [installed using the F-Droid marketplace](fdroid-install.md){targe
 !!! WARNING "Do not install Termux App from the Google Play store"
     The Termux App in Google Play store is out of date and will simply not work properly and probably not at all
 
-![Ultra-mobile development environment - android with Termux and NeoVim with Keyboardio Atreus keyboard](https://raw.githubusercontent.com/practicalli/graphic-design/live/neovim/ultra-mobile-development--android-termux-neovim-keyboardio-atreus.jpg)
+![Ultra-mobile development environment - android with Termux and NeoVim with Keyboardio Atreus keyboard](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/neovim/ultra-mobile-development--android-termux-neovim-keyboardio-atreus.jpg)
 
 
 ## Running Termux
