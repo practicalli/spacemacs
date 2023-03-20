@@ -2004,20 +2004,20 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="tabbed-block">
 <p>Using SSH
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:practicalli/spacemacs-config.git<span class="w"> </span>~/.config/spacemacs
-</code></pre></div>
-Set the <code>SPACEMACSDIR</code> environment variable to the <code>~/.config/spacemacs</code> directory so that Spacemacs will find this location.  Add to <code>~/.profile</code> to support launching Emacs from a desktop launcher and the shell configuration, e.g. <code>~/.bashrc</code> for bash, <code>~/.zshenv</code> for Zshell.
-<div class="highlight"><span class="filename">SPACEMACSDIR and XDG configurations</span><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_CONFIG_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.config
-<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_DATA_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.local/share
-<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_STATE_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.local/state
-<a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_CACHE_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.cache
-<a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>
-<a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="c1"># Set XDG location of Emacs Spacemacs configuration</span>
-<a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SPACEMACSDIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$XDG_CONFIG_HOME</span><span class="s2">/spacemacs"</span>
 </code></pre></div></p>
 <p>Using HTTPS
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/spacemacs-config<span class="w"> </span>~/.config/spacemacs
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/practicalli/spacemacs-config<span class="w"> </span>~/.config/spacemacs
 </code></pre></div>
 <code>~/.config/spacemacs/init.el</code> is the main configuration file, ensure <code>~/.spacemacs</code> file does not exist as that file would take precedence.</p>
+<p>Set the <code>SPACEMACSDIR</code> environment variable to the <code>~/.config/spacemacs</code> directory so that Spacemacs will find this location.  Add to <code>~/.profile</code> to support launching Emacs from a desktop launcher and the shell configuration, e.g. <code>~/.bashrc</code> for bash, <code>~/.zshenv</code> for Zshell.
+<div class="highlight"><span class="filename">SPACEMACSDIR and XDG configurations</span><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_CONFIG_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.config
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_DATA_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.local/share
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_STATE_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.local/state
+<a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">XDG_CACHE_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.cache
+<a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>
+<a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1"># Set XDG location of Emacs Spacemacs configuration</span>
+<a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="nb">export</span><span class="w"> </span><span class="nv">SPACEMACSDIR</span><span class="o">=</span><span class="s2">"</span><span class="nv">$XDG_CONFIG_HOME</span><span class="s2">/spacemacs"</span>
+</code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p>Using SSH
