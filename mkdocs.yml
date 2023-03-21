@@ -19,12 +19,16 @@ theme:
   favicon: assets/favicon.svg
   features:
     - announce.dismiss
-    - navigation.top
+    - content.action.edit
+    - content.action.view
     - content.code.annotate
+    - content.code.copy
     - content.tabs.link
-    - navigation.instant # Avoid page reloading for internal links
-    - navigation.tracking # Update URL with anchor
+    - navigation.footer
     - navigation.indexes # Nav sections can have files
+    - navigation.instant # Avoid page reloading for internal links
+    - navigation.top
+    - navigation.tracking # Update URL with anchor
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
