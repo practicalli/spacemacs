@@ -22,7 +22,7 @@ With relative numbering, the current line number is shown and all other numbers 
 
 ## Visual style line number configuration
 
-Practicalli recommends using visual line numbers for Vim style editing, which provides relative numbering that does not count hidden or [folded code](/spacemacs-basics/evil-z-menu.md).
+Practicalli recommends using visual line numbers for Vim style editing, which provides relative numbering that does not count hidden or [folded code](/spacemacs/navigating-code/code-folding/).
 
 `SPC f e d` to open the `.spacemacs` file and `SPC s s`dotspacemacs-line-numbers` to jump to the configuration option.
 
