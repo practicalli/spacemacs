@@ -334,20 +334,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
     Highlight lines in code blocks
   </a>
 </li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#content-tabs">
-    Content tabs
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#diagrams">
-    Diagrams
-  </a>
-<nav aria-label="Diagrams" class="md-nav">
-<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#other-diagram-types">
     Other diagram types
@@ -2114,20 +2100,6 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
     Highlight lines in code blocks
   </a>
 </li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#content-tabs">
-    Content tabs
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#diagrams">
-    Diagrams
-  </a>
-<nav aria-label="Diagrams" class="md-nav">
-<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#other-diagram-types">
     Other diagram types
@@ -2213,6 +2185,7 @@ so PR's are of limited value at present. Some page links &amp; images may be tem
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>[<span class="nt">:fontawesome-brands-github: Practicalli Issues</span>](<span class="na">http://practical.li/blog</span>){ .md-button .md-button-primary }
 <a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a>[<span class="nt">:octicons-heart-fill-24: Practicalli Blog</span>](<span class="na">http://practical.li/blog</span>){ .md-button .md-button-primary }
 </code></pre></div>
+<p><a class="md-button" href="https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/" target="_blank">Search all supported icons</a></p>
 <h2 id="youtube-video">YouTube video<a class="headerlink" href="#youtube-video" title="Permanent link">λ︎</a></h2>
 <p>Use an iframe element to include a YouTube video, wrapping in a paragraph tag with center alignment to place the video in a centered horizontal position</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">"text-align:center"</span><span class="p">&gt;</span>
@@ -2343,20 +2316,24 @@ semper lorem quam in massa.</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>clojure linenums="42" title="src/practicalli/gameboard.clj"
 </code></pre></div>
 <h3 id="annotations">Annotations<a class="headerlink" href="#annotations" title="Permanent link">λ︎</a></h3>
-<p>Add an annotation using <code># (1)</code> where 1 is the number of the annotation</p>
+<p>Annotations in a code block help to highlight important aspects.  Use the comment character for the language followed by a space and a number in brackets</p>
+<p>For example, in a shell code block, use <code># (1)</code> where 1 is the number of the annotation</p>
+<p>Use a number after the code block to add the text for the annotation, e.g. <code>1.</code>. Ensure there is a space between the code block and the annotation text.</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a>ls<span class="w"> </span>-la<span class="w"> </span><span class="nv">$HOME</span>/Downloads<span class="w">  </span><span class="c1"># (1)</span>
 </code></pre></div>
 <ol>
 <li><img alt="🙋‍♀️" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f64b-200d-2640-fe0f.svg" title=":woman_raising_hand:"> I'm a code annotation! I can contain <code>code</code>, <strong>formatted text</strong>, images, ... basically anything that can be written in Markdown.</img></li>
 </ol>
 <p>Code blocks with annotation, add <code>!</code> after the annotation number to suppress the <code>#</code> character</p>
-<p><div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">helper-function</span>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">helper-function</span>
 <a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">  </span><span class="s">"Doc-string with description of function purpose"</span><span class="w"> </span><span class="c1">; (1)!</span>
 <a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">data</span><span class="p">]</span>
 <a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">  </span><span class="p">(</span><span class="nb">merge </span><span class="p">{</span><span class="ss">:fish</span><span class="w"> </span><span class="mi">1</span><span class="p">}</span><span class="w"> </span><span class="nv">data</span><span class="p">)</span>
 <a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">  </span><span class="p">)</span>
 </code></pre></div>
-1.  Always include a doc-string in every function to describe the purpose of that function, identifying why it was added and what its value is.</p>
+<ol>
+<li>Always include a doc-string in every function to describe the purpose of that function, identifying why it was added and what its value is.</li>
+</ol>
 <p>GitHub action example with multiple annotations</p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span><span class="w"> </span><span class="c1"># (1)!</span>
 <a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="nt">on</span><span class="p">:</span>
@@ -2396,51 +2373,62 @@ semper lorem quam in massa.</p>
 </li>
 </ol>
 <h3 id="highlight-lines-in-code-blocks">Highlight lines in code blocks<a class="headerlink" href="#highlight-lines-in-code-blocks" title="Permanent link">λ︎</a></h3>
-<p><code>hl_lines="2"</code> where 2 is the line number to highlight</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">my-function</span>
-<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="hll"><span class="w">  </span><span class="s">"With a lovely doc-string"</span>
-</span><a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">arguments</span><span class="p">]</span>
-<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">  </span><span class="p">(</span><span class="nb">map inc </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">]))</span>
-</code></pre></div>
-<h2 id="content-tabs">Content tabs<a class="headerlink" href="#content-tabs" title="Permanent link">λ︎</a></h2>
-<p>Create in page tabs that can also be</p>
-<p>Setting up a project</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Clojure CLI</label><label for="__tabbed_1_2">Leiningen</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>clojure<span class="w"> </span>-T:project/new<span class="w"> </span>:template<span class="w"> </span>app<span class="w"> </span>:name<span class="w"> </span>practicalli/gameboard
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>lein<span class="w"> </span>new<span class="w"> </span>app<span class="w"> </span>practicalli/gameboard
-</code></pre></div>
-</div>
-</div>
-</input></input></div>
-<p>Or nest the content tabs in an admonition</p>
-<div class="admonition info">
-<p class="admonition-title">Run a terminal REPL</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Clojure CLI</label><label for="__tabbed_2_2">Leiningen</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>clojure<span class="w"> </span>-T:repl/rebel
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>lein<span class="w"> </span>repl
-</code></pre></div>
-</div>
-</div>
-</input></input></div>
-</div>
-<h2 id="diagrams">Diagrams<a class="headerlink" href="#diagrams" title="Permanent link">λ︎</a></h2>
-<p>Neat flow diagrams</p>
-<pre class="mermaid"><code>graph LR
-  A[Start] --&gt; B{Error?};
-  B --&gt;|Yes| C[Hmm...];
-  C --&gt; D[Debug];
-  D --&gt; B;
-  B ----&gt;|No| E[Yay!];</code></pre>
+<p>Add highlight line meta data to a code block after the opening backticks and code block language.</p>
+<p><code>hl_lines="2"</code> highlights line 2 in the codeblock</p>
+<p>```clojure hl_lines="2,4"
+(defn my-function
+  "With a lovely doc-string"
+  [arguments]
+  (map
+   inc
+   [1 2 3]))
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>## Content tabs
+<a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a>
+<a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a>Create in page tabs that can also be
+<a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a>
+<a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a>Setting up a project
+<a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a>
+<a href="#__codelineno-13-7" id="__codelineno-13-7" name="__codelineno-13-7"></a>=== "Clojure CLI"
+<a href="#__codelineno-13-8" id="__codelineno-13-8" name="__codelineno-13-8"></a>    ```shell
+<a href="#__codelineno-13-9" id="__codelineno-13-9" name="__codelineno-13-9"></a>    clojure -T:project/new :template app :name practicalli/gameboard
+<a href="#__codelineno-13-10" id="__codelineno-13-10" name="__codelineno-13-10"></a>    ```
+<a href="#__codelineno-13-11" id="__codelineno-13-11" name="__codelineno-13-11"></a>
+<a href="#__codelineno-13-12" id="__codelineno-13-12" name="__codelineno-13-12"></a>
+<a href="#__codelineno-13-13" id="__codelineno-13-13" name="__codelineno-13-13"></a>=== "Leiningen"
+<a href="#__codelineno-13-14" id="__codelineno-13-14" name="__codelineno-13-14"></a>    ```shell
+<a href="#__codelineno-13-15" id="__codelineno-13-15" name="__codelineno-13-15"></a>    lein new app practicalli/gameboard
+<a href="#__codelineno-13-16" id="__codelineno-13-16" name="__codelineno-13-16"></a>    ```
+<a href="#__codelineno-13-17" id="__codelineno-13-17" name="__codelineno-13-17"></a>
+<a href="#__codelineno-13-18" id="__codelineno-13-18" name="__codelineno-13-18"></a>
+<a href="#__codelineno-13-19" id="__codelineno-13-19" name="__codelineno-13-19"></a>Or nest the content tabs in an admonition
+<a href="#__codelineno-13-20" id="__codelineno-13-20" name="__codelineno-13-20"></a>
+<a href="#__codelineno-13-21" id="__codelineno-13-21" name="__codelineno-13-21"></a>
+<a href="#__codelineno-13-22" id="__codelineno-13-22" name="__codelineno-13-22"></a>!!! INFO "Run a terminal REPL"
+<a href="#__codelineno-13-23" id="__codelineno-13-23" name="__codelineno-13-23"></a>
+<a href="#__codelineno-13-24" id="__codelineno-13-24" name="__codelineno-13-24"></a>    === "Clojure CLI"
+<a href="#__codelineno-13-25" id="__codelineno-13-25" name="__codelineno-13-25"></a>        ```shell
+<a href="#__codelineno-13-26" id="__codelineno-13-26" name="__codelineno-13-26"></a>        clojure -T:repl/rebel
+<a href="#__codelineno-13-27" id="__codelineno-13-27" name="__codelineno-13-27"></a>        ```
+<a href="#__codelineno-13-28" id="__codelineno-13-28" name="__codelineno-13-28"></a>
+<a href="#__codelineno-13-29" id="__codelineno-13-29" name="__codelineno-13-29"></a>
+<a href="#__codelineno-13-30" id="__codelineno-13-30" name="__codelineno-13-30"></a>    === "Leiningen"
+<a href="#__codelineno-13-31" id="__codelineno-13-31" name="__codelineno-13-31"></a>        ```shell
+<a href="#__codelineno-13-32" id="__codelineno-13-32" name="__codelineno-13-32"></a>        lein repl
+<a href="#__codelineno-13-33" id="__codelineno-13-33" name="__codelineno-13-33"></a>        ```
+<a href="#__codelineno-13-34" id="__codelineno-13-34" name="__codelineno-13-34"></a>
+<a href="#__codelineno-13-35" id="__codelineno-13-35" name="__codelineno-13-35"></a>
+<a href="#__codelineno-13-36" id="__codelineno-13-36" name="__codelineno-13-36"></a>## Diagrams
+<a href="#__codelineno-13-37" id="__codelineno-13-37" name="__codelineno-13-37"></a>
+<a href="#__codelineno-13-38" id="__codelineno-13-38" name="__codelineno-13-38"></a>Neat flow diagrams
+<a href="#__codelineno-13-39" id="__codelineno-13-39" name="__codelineno-13-39"></a>
+<a href="#__codelineno-13-40" id="__codelineno-13-40" name="__codelineno-13-40"></a>``` mermaid
+<a href="#__codelineno-13-41" id="__codelineno-13-41" name="__codelineno-13-41"></a>graph LR
+<a href="#__codelineno-13-42" id="__codelineno-13-42" name="__codelineno-13-42"></a>  A[Start] --&gt; B{Error?};
+<a href="#__codelineno-13-43" id="__codelineno-13-43" name="__codelineno-13-43"></a>  B --&gt;|Yes| C[Hmm...];
+<a href="#__codelineno-13-44" id="__codelineno-13-44" name="__codelineno-13-44"></a>  C --&gt; D[Debug];
+<a href="#__codelineno-13-45" id="__codelineno-13-45" name="__codelineno-13-45"></a>  D --&gt; B;
+<a href="#__codelineno-13-46" id="__codelineno-13-46" name="__codelineno-13-46"></a>  B ----&gt;|No| E[Yay!];
+</code></pre></div></p>
 <p>UML Sequence Diagrams</p>
 <pre class="mermaid"><code>sequenceDiagram
   Alice-&gt;&gt;John: Hello John, how are you?
@@ -2513,23 +2501,23 @@ we don't consider them a good choice, mostly as they don't work well on mobile.<
 </blockquote>
 <h2 id="images">Images<a class="headerlink" href="#images" title="Permanent link">λ︎</a></h2>
 <p>Markdown images can be appended with material tags to set the size of the image, whether to appear on light or dark theme and support lazy image loading in browsers</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:5"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><input id="__tabbed_3_4" name="__tabbed_3" type="radio"><input id="__tabbed_3_5" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Size</label><label for="__tabbed_3_2">Lazy Loading</label><label for="__tabbed_3_3">Align</label><label for="__tabbed_3_4">Theme Specific</label><label for="__tabbed_3_5">All Image Attributes</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><input id="__tabbed_1_5" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Size</label><label for="__tabbed_1_2">Lazy Loading</label><label for="__tabbed_1_3">Align</label><label for="__tabbed_1_4">Theme Specific</label><label for="__tabbed_1_5">All Image Attributes</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><code>{style="height:150px;width:150px"}</code> specifies the image size
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){style="height:150px;width:150px"}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){style="height:150px;width:150px"}
 </code></pre></div></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark"><img alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark" style="height:150px;width:150px"/></a></p>
 </div>
 <div class="tabbed-block">
 <p><code>{loading=lazy}</code> specifies an image should lazily load in the browser
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png</span>){loading=lazy}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png</span>){loading=lazy}
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
 <p><code>{aligh=left}</code> or <code>{aligh=right}</code> specifies the page alignment of an image.
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){align=right}
-<a href="#__codelineno-20-2" id="__codelineno-20-2" name="__codelineno-20-2"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light</span>){align=right}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){align=right}
+<a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light</span>){align=right}
 </code></pre></div></p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png"><img align="left" alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png" style="height:64px;width:64px"/></a>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png"><img align="right" alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png" style="height:64px;width:64px"/></a>
@@ -2537,8 +2525,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
 </div>
 <div class="tabbed-block">
 <p><code>![Kitty Logo](image/kitty-light.png#only-dark)</code> or <code>![Kitty Logo](image/kitty-light.png#only-light)</code>  specifies the theme the image should be shown, allowing different versions of images to be shown based on the theme.
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){style="height:150px;width:150px"}
-<a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light</span>){style="height:150px;width:150px"}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){style="height:150px;width:150px"}
+<a href="#__codelineno-17-2" id="__codelineno-17-2" name="__codelineno-17-2"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light</span>){style="height:150px;width:150px"}
 </code></pre></div>
 Use the theme toggle in the top nav bar to see the icon change between light and dark.
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark"><img alt="Kitty Logo" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark" style="height:150px;width:150px"/></a>
@@ -2549,8 +2537,8 @@ Use the theme toggle in the top nav bar to see the icon change between light and
 </div>
 <div class="tabbed-block">
 <p>Alight right, lazy load and set image to 150x150</p>
-<div class="highlight"><pre><span></span><code><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){align=right loading=lazy style="height:64px;width:64px"}
-<a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light</span>){align=right loading=lazy style="height:64px;width:64px"}
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark</span>){align=right loading=lazy style="height:64px;width:64px"}
+<a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a>![<span class="nt">Kitty Logo</span>](<span class="na">https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light</span>){align=right loading=lazy style="height:64px;width:64px"}
 </code></pre></div>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark"><img align="right" alt="Kitty Logo" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark" style="height:64px;width:64px"/></a>
 <a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light"><img align="left" alt="Kitty Logo" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light" style="height:64px;width:64px"/></a>
@@ -2570,6 +2558,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
 </li>
 <li class="task-list-item"><label class="task-list-control"><input disabled="" type="checkbox"><span class="task-list-indicator"></span></input></label> Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</li>
 </ul>
+<div class="admonition example">
+<p class="admonition-title">Task List example</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="k">- [x]</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit
+<a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="k">- [ ]</span> Vestibulum convallis sit amet nisi a tincidunt
+<a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">    </span><span class="k">* [x]</span> In hac habitasse platea dictumst
+<a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">    </span><span class="k">* [x]</span> In scelerisque nibh non dolor mollis congue sed et metus
+<a href="#__codelineno-19-5" id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">    </span><span class="k">* [ ]</span> Praesent sed risus massa
+<a href="#__codelineno-19-6" id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="k">- [ ]</span> Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
+</code></pre></div>
+</div>
 <h2 id="tooltips">Tooltips<a class="headerlink" href="#tooltips" title="Permanent link">λ︎</a></h2>
 <p>The humble tool tip</p>
 <p><a href="https://example.com" title="I'm a tooltip!">Hover me</a></p>
@@ -2590,7 +2588,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
 <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 26, 2023</span>
 </small>
 </div>
 </article>
