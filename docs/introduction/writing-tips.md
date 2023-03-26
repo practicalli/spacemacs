@@ -42,6 +42,7 @@ Add an icon to the button
 [:octicons-heart-fill-24: Practicalli Blog](http://practical.li/blog){ .md-button .md-button-primary }
 ```
 
+[Search all supported icons](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/){target=_blank .md-button}
 
 
 ## YouTube video
@@ -194,7 +195,11 @@ clojure linenums="42" title="src/practicalli/gameboard.clj"
 
 ### Annotations
 
-Add an annotation using `# (1)` where 1 is the number of the annotation
+Annotations in a code block help to highlight important aspects.  Use the comment character for the language followed by a space and a number in brackets
+
+For example, in a shell code block, use `# (1)` where 1 is the number of the annotation
+
+Use a number after the code block to add the text for the annotation, e.g. `1.`. Ensure there is a space between the code block and the annotation text.
 
 ```shell
 ls -la $HOME/Downloads  # (1)
@@ -212,6 +217,7 @@ Code blocks with annotation, add `!` after the annotation number to suppress the
   (merge {:fish 1} data)
   )
 ```
+
 1.  Always include a doc-string in every function to describe the purpose of that function, identifying why it was added and what its value is.
 
 
@@ -256,13 +262,17 @@ jobs:
 
 ### Highlight lines in code blocks
 
-`hl_lines="2"` where 2 is the line number to highlight
+Add highlight line meta data to a code block after the opening backticks and code block language.
 
-```clojure hl_lines="2"
+`hl_lines="2"` highlights line 2 in the codeblock
+
+```clojure hl_lines="2,4"
 (defn my-function
   "With a lovely doc-string"
   [arguments]
-  (map inc [1 2 3]))
+  (map
+   inc
+   [1 2 3]))
 ```
 
 
@@ -474,7 +484,6 @@ Markdown images can be appended with material tags to set the size of the image,
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
 
 
-
 ## Lists
 
 Task lists
@@ -486,6 +495,15 @@ Task lists
     * [ ] Praesent sed risus massa
 - [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
 
+!!! EXAMPLE "Task List example"
+    ```markdown
+    - [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    - [ ] Vestibulum convallis sit amet nisi a tincidunt
+        * [x] In hac habitasse platea dictumst
+        * [x] In scelerisque nibh non dolor mollis congue sed et metus
+        * [ ] Praesent sed risus massa
+    - [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
+    ```
 
 ## Tooltips
 
