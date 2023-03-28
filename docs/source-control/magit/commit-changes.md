@@ -21,6 +21,7 @@ Changing a commit generates a new SHA identity, creating a commit in the history
 ++"c"++ ++"c"++ in Magit status buffer, ++spc++ ++"g"++ ++"s"++ creates a new commit that will become the new HEAD in the commit history.
 
 Two new buffers open
+
 * The commit message buffer - to write multi-line commit messages
 * The diff buffer - a visual diff of changes to be included in this commit
 
