@@ -19,6 +19,13 @@ Magit enables very fine grain selection when staging changes.  A file, a hunk or
 !!! INFO "Visual select within hunk boundary"
     Selecting lines to stage or unstage only works within the Git hunk boundary.  The action fails if lines are selected from more than one hunk.
 
+!!! HINT "Hiding white-space in Magit diff"
+    `D` in the Magit Status buffer to change how diffs are rendered
+
+    `-b` ignore whitespace changes
+
+    `-w` to ignore all whitespace
+
 
 ## Renamed files
 
