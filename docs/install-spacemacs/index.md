@@ -2,7 +2,7 @@
 
 [Install prerequisites: Emacs, Java 17, Clojure CLI and Command Line tools ](/spacemacs/install-spacemacs/pre-install/){.md-button}
 
-1. [Clone or download Spacemacs](#clojure-spacemacs), removing `~/.emacs.d` if it already exists
+1. [Clone or download Spacemacs](#clone-spacemacs), removing `~/.emacs.d` if it already exists
 2. [Clone the practicalli/spacemacs-config configuration](#clone-practicalli-spacemacs-configuration) to add common layers for Clojure development.  Or start Emacs and use the Spacemacs install wizard for basic config, follow the [manual configuration section](manual-configuration/) for additional features.
 3. [optional] [Install Fira Code font](#install-fira-code-font) (change `dotspacemacs-default-font` to a name of a font on your operating system in `.spacemacs.d/init.el` in step 4)
 4. [Install All The Icons fonts for doom modeline theme](#all-the-icon-fonts)
