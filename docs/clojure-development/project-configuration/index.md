@@ -15,7 +15,7 @@ An example of setting the Clojure CLI tool as the default Clojure tool (rather t
 
 ```elisp
 ((clojure-mode . ((cider-preferred-build-tool . clojure-cli)
-                  (cider-clojure-cli-aliases . ":env/dev:env/test"))))
+                  (cider-clojure-cli-aliases . ":dev/env:env/test"))))
 ```
 
 An example of a ClojureScript project using figwheel-main, Clojure CLI and hiding the display banner in the REPL browser
