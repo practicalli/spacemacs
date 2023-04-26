@@ -5832,7 +5832,7 @@ so PR's are of limited value at present. Some page links & images may be tempora
 <h2 id="example-configurations">Example configurations<a class="headerlink" href="#example-configurations" title="Permanent link">λ︎</a></h2>
 <p>An example of setting the Clojure CLI tool as the default Clojure tool (rather than Leiningen or Boot). Also configuring several <code>deps.edn</code> aliases to be used when starting the REPL via Clojure CLI.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">((</span><span class="nv">clojure-mode</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="p">((</span><span class="nv">cider-preferred-build-tool</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="nv">clojure-cli</span><span class="p">)</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">                  </span><span class="p">(</span><span class="nv">cider-clojure-cli-aliases</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">&quot;:env/dev:env/test&quot;</span><span class="p">))))</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">                  </span><span class="p">(</span><span class="nv">cider-clojure-cli-aliases</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">&quot;:dev/env:env/test&quot;</span><span class="p">))))</span>
 </code></pre></div>
 <p>An example of a ClojureScript project using figwheel-main, Clojure CLI and hiding the display banner in the REPL browser</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">((</span><span class="nv">clojure-mode</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="p">((</span><span class="nv">cider-preferred-build-tool</span><span class="w">          </span><span class="o">.</span><span class="w"> </span><span class="nv">clojure-cli</span><span class="p">)</span>
@@ -5930,7 +5930,7 @@ Or add tooling configuration to the project documentation.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 22, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 26, 2023</span>
       
     
   </small>
