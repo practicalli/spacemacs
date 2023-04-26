@@ -41,6 +41,21 @@ Practicalli Spacemacs.d configuration uses a light theme and the simplified doom
 ![Spacemacs Practicalli/spacemacs.d configuration - screenshot](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-example-buffers-bank-account-spec.png){ loading=lazy }
 
 
+## Navigate the book
+
+Use the mouse or built-in key bindings to navigate the pages of the book
+
+- ++p++ , ++comma++ : go to previous page
+- ++n++ , ++period++ : go to next page
+
+Use the search box to quickly find a specific topic
+
+- ++f++ , ++s++ , ++slash++ : open search dialog
+- ++arrow-down++ , ++arrow-up++ : select next / previous result
+- ++esc++ , ++tab++ : close search dialog
+- ++enter++ : follow selected result
+
+
 ## Sponsor my work
 
 [![Sponsor practicalli-john](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png){align=left loading=lazy}](https://github.com/sponsors/practicalli-john/){target=_blank}
