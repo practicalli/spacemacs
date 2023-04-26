@@ -70,12 +70,12 @@ Use a `.dir-locals.el` file to set the command that Cider jack-in will use each 
 
 === "Clojure CLI"
     ```
-    ((clojure-mode (cider-preferred-build-tool . lein)))
+    ((clojure-mode (cider-preferred-build-tool . clojure-cli)))
     ```
 
 === "Leiningen"
     ```
-    ((clojure-mode (cider-preferred-build-tool . clojure-cli)))
+    ((clojure-mode (cider-preferred-build-tool . lein)))
     ```
 
 
