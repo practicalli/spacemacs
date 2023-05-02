@@ -29,7 +29,7 @@
         <link rel="next" href="../refresh-restart-repl/">
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.9">
     
     
       
@@ -37,10 +37,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
       
       
 
@@ -1991,8 +1991,29 @@ so PR's are of limited value at present. Some page links & images may be tempora
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#figwheel-main-projects" class="md-nav__link">
-    Figwheel-main projects
+  <a href="#figwheel-main-project" class="md-nav__link">
+    Figwheel-main project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repl-jack-in" class="md-nav__link">
+    REPL jack-in
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restart-or-shutdown" class="md-nav__link">
+    Restart or Shutdown
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-configuration" class="md-nav__link">
+    Project Configuration
   </a>
   
 </li>
@@ -5776,8 +5797,29 @@ so PR's are of limited value at present. Some page links & images may be tempora
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#figwheel-main-projects" class="md-nav__link">
-    Figwheel-main projects
+  <a href="#figwheel-main-project" class="md-nav__link">
+    Figwheel-main project
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repl-jack-in" class="md-nav__link">
+    REPL jack-in
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restart-or-shutdown" class="md-nav__link">
+    Restart or Shutdown
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-configuration" class="md-nav__link">
+    Project Configuration
   </a>
   
 </li>
@@ -5815,32 +5857,72 @@ so PR's are of limited value at present. Some page links & images may be tempora
 
 <h1 id="clojurescript-projects">ClojureScript projects<a class="headerlink" href="#clojurescript-projects" title="Permanent link">λ︎</a></h1>
 <p><a href="https://practicalli.github.io/clojurescript/">Practicalli ClojureScript</a> covers the development of websites and single page apps (SPA) with figwheel-main build tool and the react-style reagent library</p>
-<p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html">practicalli/clojure-deps-edn</a> defines the <code>:middleware/cider-cljs</code> alias which provides the nREPL connection support specifically for a ClojureScript REPL.</p>
-<h2 id="figwheel-main-projects">Figwheel-main projects<a class="headerlink" href="#figwheel-main-projects" title="Permanent link">λ︎</a></h2>
-<p>Create <a href="https://practicalli.github.io/clojurescript/figwheel-main-projects/">ClojureScript projects using <code>figwheel-main</code> template</a>.  Rename the <code>:fig</code> alias to <code>figwheel</code> to clarify the name.</p>
-<p>Run the project with nREPL and CIDER libraries</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>clojure<span class="w"> </span>-M:figwheel:middleware/cider-cljs
+<p>Create a figwheel-main project and use <code>cider-jack-in-cljs</code> to start REPL driven development.</p>
+<details class="info">
+<summary>Rich Terminal REPL &amp; Editor file save rebuild</summary>
+<p>Using an Editor jack-in tool is arguably the easiest approach, as it connects the Editor to the REPL process so code can be evaluated in the Editor.</p>
+<p><code>clojure -M:figwheel/env:build/dev</code> command will run a ClojureScript REPL providing a Rebel rich terminal UI.  An nREPL server will not be running, so the editor is not able to connect to the REPL.  However, when code is saved, Figwheel automatically updates the build and pushes changes to the browser window containing the application being developed.</p>
+<p>It may be possible to use a custom <code>user</code> namesapce to run nREPL and Piggieback to create a server which a Clojure editor can connect too.  A custom nREPL and Piggieback middlware library might also work.  Please get in touch if you have a working configuration for this approach.</p>
+</details>
+<h2 id="figwheel-main-project">Figwheel-main project<a class="headerlink" href="#figwheel-main-project" title="Permanent link">λ︎</a></h2>
+<p><a href="https://practical.li/clojure/clojure-cli/practicalli-config/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Practicalli Clojure CLI Config</a> defines the <code>:project/create</code> alias which provides several templates to start ClojureScript projects using Figwheel-main.</p>
+<ul>
+<li><code>:practicalli/landing-page</code> a simple web page with common content defined in a hash-map and rendered with reagent components, styled by <a href="https://builma.io">Bulma.io CSS</a></li>
+<li><code>:practicalli/single-page-app</code> atom managed app-state with content rendered by reagent components</li>
+</ul>
+<p>In a terminal, create a ClojureScript projects using the <code>practicalli/sigle-page-app</code> template</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>clojure<span class="w"> </span>-T:project/create<span class="w"> </span>:practicalli/single-page-app<span class="w"> </span>:name<span class="w"> </span>practicalli/tictactoe
 </code></pre></div>
-<p>clojurescript-figwheel-main-external-repl-middleware-cider-cljs.png</p>
-<p>Choose <code>cider-connect-cljs</code> when using <code>sesman-start</code></p>
-<p><a class="glightbox" href="/images/clojurescript-figwheel-main-connect-command-cljs.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ClojureScript figwheel-main connect-cljs" src="/images/clojurescript-figwheel-main-connect-command-cljs.png" /></a></p>
-<p>Confirm
-<a class="glightbox" href="/images/clojurescript-figwheel-main-connect-host-localhost.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ClojureScript figwheel-main connect-cljs localhost" src="/images/clojurescript-figwheel-main-connect-host-localhost.png" /></a></p>
-<p>Confirm localhost post for tictactoe project</p>
-<p><a class="glightbox" href="/images/clojurescript-figwheel-main-connect-port-tictactoe.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ClojureScript figwheel-main connect-cljs localhost port" src="/images/clojurescript-figwheel-main-connect-port-tictactoe.png" /></a></p>
-<p>Confirm figwheel-main build tool</p>
-<p><a class="glightbox" href="/images/clojurescript-figwheel-main-connect-repl-type-figwheel-main.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ClojureScript figwheel-main connect-cljs figwheel-main build tool" src="/images/clojurescript-figwheel-main-connect-repl-type-figwheel-main.png" /></a></p>
+<p>A new project is created in the tictactoe directory containing a ClojureScript projects including Reagent libraries and using Figwheel-main REPL driven development.</p>
+<h2 id="repl-jack-in">REPL jack-in<a class="headerlink" href="#repl-jack-in" title="Permanent link">λ︎</a></h2>
+<p>Develop the code and interact with the REPL state using source code buffers in the editor.</p>
+<p><code>SPC f f</code> to open a Clojure file from the project, e.g. <code>tictactoe/deps.edn</code></p>
+<p><code>, m s</code> to launch sesman (session manager) start</p>
+<p>Choose <code>cider-connect-cljs</code> to start the REPL and connect to it from the Editor automatically</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-clojurescript-repl-command-cider-jack-in-light.png#only-light" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ClojureScript figwheel-main cider-jack-in-cljs" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-clojurescript-repl-command-cider-jack-in-light.png#only-light" /></a>
+<a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-clojurescript-repl-command-cider-jack-in-dark.png#only-dark" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ClojureScript figwheel-main cider-jack-in-cljs" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-clojurescript-repl-command-cider-jack-in-dark.png#only-dark" /></a></p>
+<p>Figwheel compiles the ClojureScript code and opens a browser window showing the application.</p>
+<p>Saving changes in the code triggers figwheel to rebuild the project and inject updates into the browser window</p>
+<details class="hint">
+<summary>Modify the Cider jack-in command</summary>
+<p><code>SPC u , m s</code> will show the full command in the mini-buffer once cider-jack-in-cljs is selected.</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-clojurescript-repl-cider-jack-in-mini-buffer-command-light.png#only-light" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure - Clojurescript REPL cider-jack-in mini-buffer command" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-clojurescript-repl-cider-jack-in-mini-buffer-command-light.png#only-light" /></a>
+<a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-clojurescript-repl-cider-jack-in-mini-buffer-command-dark.png#only-dark" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure - Clojurescript REPL cider-jack-in mini-buffer command" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-clojurescript-repl-cider-jack-in-mini-buffer-command-dark.png#only-dark" /></a></p>
+<p>The command can be 'carefully' edited in the mini-buffer, e.g. to change the Clojure CLI aliases used (defined at the end of the command)</p>
+<p>NOTE: do not remove the <code>:cider/nrepl</code> alias otherwise CIDER will fail to work correctly (unless replaced with an alias containing the same configuration)</p>
+</details>
+<h2 id="restart-or-shutdown">Restart or Shutdown<a class="headerlink" href="#restart-or-shutdown" title="Permanent link">λ︎</a></h2>
+<p><code>, m q r</code> to restart Figwheel (<code>sesman-quit</code>)</p>
+<p><code>, m q q</code> to shutdown Figwheel and close the REPL (<code>sesman-quit</code>)</p>
+<h2 id="project-configuration">Project Configuration<a class="headerlink" href="#project-configuration" title="Permanent link">λ︎</a></h2>
+<p>The Practicalli templates contain a <code>.dir-locals.el</code> project configuration for Emacs which sets host, port, REPL typle and build to start.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">((</span><span class="nv">clojurescript-mode</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="p">((</span><span class="nv">cider-preferred-build-tool</span><span class="w">          </span><span class="o">.</span><span class="w"> </span><span class="nv">clojure-cli</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">                        </span><span class="p">(</span><span class="nv">cider-clojure-cli-aliases</span><span class="w">           </span><span class="o">.</span><span class="w"> </span><span class="s">&quot;:figwheel/env&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">                        </span><span class="p">(</span><span class="nv">cider-default-cljs-repl</span><span class="w">             </span><span class="o">.</span><span class="w"> </span><span class="nv">figwheel-main</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">                        </span><span class="p">(</span><span class="nv">cider-figwheel-main-default-options</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">&quot;dev&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">                        </span><span class="p">(</span><span class="nv">cider-repl-display-help-banner</span><span class="w">      </span><span class="o">.</span><span class="w"> </span><span class="no">nil</span><span class="p">))))</span>
+</code></pre></div>
+<details class="info">
+<summary>Manual Configuration Prompts</summary>
+<p>Without the <code>.dir-local.el</code> command the following extra prompts are shown</p>
+<p>Confirm the host name (locahost by default)</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/clojurescript-figwheel-main-connect-host-localhost.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ClojureScript figwheel-main cider-jack-in-cljs localhost" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/clojurescript-figwheel-main-connect-host-localhost.png" /></a></p>
+<p>Confirm the port number for tictactoe project</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/clojurescript-figwheel-main-connect-port-tictactoe.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ClojureScript figwheel-main cider-jack-in-cljs localhost port" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/clojurescript-figwheel-main-connect-port-tictactoe.png" /></a></p>
+<p>Confirm figwheel-main build tool as the REPL type</p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/clojurescript-figwheel-main-connect-repl-type-figwheel-main.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ClojureScript figwheel-main cider-jack-in-cljs figwheel-main build tool" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/clojurescript-figwheel-main-connect-repl-type-figwheel-main.png" /></a></p>
 <p>Confirm dev build configuration</p>
-<p><a class="glightbox" href="/images/clojurescript-figwheel-main-connect-build-dev.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ClojureScript figwheel-main connect-cljs figwheel-main build configuration dev" src="/images/clojurescript-figwheel-main-connect-build-dev.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/clojurescript-figwheel-main-connect-build-dev.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ClojureScript figwheel-main cider-jack-in-cljs figwheel-main build configuration dev" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/clojurescript-figwheel-main-connect-build-dev.png" /></a></p>
 <p><code>SPC b m</code> to open the message buffer which shows the output from nREPL server.</p>
-<p><a class="glightbox" href="/images/clojurescript-figwheel-main-connect-nrepl-output.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ClojureScript figwheel-main connect-cljs nrepl output in message buffer" src="/images/clojurescript-figwheel-main-connect-nrepl-output.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/clojurescript-figwheel-main-connect-nrepl-output.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ClojureScript figwheel-main cider-jack-in-cljs nrepl output in message buffer" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/clojurescript-figwheel-main-connect-nrepl-output.png" /></a></p>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 25, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 2, 2023</span>
       
     
   </small>
@@ -5995,7 +6077,7 @@ so PR's are of limited value at present. Some page links & images may be tempora
     <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../assets/javascripts/bundle.fac441b0.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
