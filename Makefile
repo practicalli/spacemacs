@@ -29,7 +29,7 @@ pre-commit-check: lint
 
 lint:  ## Run MegaLinter with custom configuration
 	$(info --------- MegaLinter Runner ---------)
-	mega-linter-runner --flavor documentation --env 'MEGALINTER_CONFIG=.github/config/mega-linter.yml'
+	mega-linter-runner --flavor documentation --env 'MEGALINTER_CONFIG=.github/config/megalinter.yaml'
 
 lint-clean:  ## Clean MegaLinter report information
 	$(info --------- MegaLinter Clean Reports ---------)
