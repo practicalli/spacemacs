@@ -29,7 +29,7 @@
         <link rel="next" href="../../../../markdown-mode/">
       
       <link rel="icon" href="../../../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
     
     
       
@@ -4279,13 +4279,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#example-pull-request" class="md-nav__link">
-    Example pull request
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -5804,13 +5797,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#example-pull-request" class="md-nav__link">
-    Example pull request
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -5848,18 +5834,23 @@
 <h2 id="create-a-pull-request">Create a pull request<a class="headerlink" href="#create-a-pull-request" title="Permanent link">λ︎</a></h2>
 <p>Assumes you have a fork and original repository as remotes added to the local git repository.</p>
 <p>Create a branch on the fork with a descriptive name of the change you want to submit as a pull request.  Commit changes to that new branch.</p>
-<p><code>P p</code> to push the change to the remote repository for the fork.</p>
-<p><code>@</code> to open the forge menu from the Magit Status buffer.</p>
-<p><code>r</code> to select the repository that the pull request will be created on (eg. the upstream repository, not the fork).</p>
-<p><a class="glightbox" href="/images/spacemacs-magit-forge-create-pull-request-forge-repository.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - create pull request forge repository" src="/images/spacemacs-magit-forge-create-pull-request-forge-repository.png" /></a></p>
-<p><code>c p</code> to create a new pull request.</p>
-<p>For the source repository, select the branch of the local fork repository.</p>
-<p><a class="glightbox" href="/images/spacemacs-magit-forge-create-pull-request-source-branch.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - create pull request source branch" src="/images/spacemacs-magit-forge-create-pull-request-source-branch.png" /></a></p>
-<p>For the target repository, select the upstream repository</p>
-<p><a class="glightbox" href="/images/spacemacs-magit-forge-create-pull-request-target-branch.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - create pull request target branch" src="/images/spacemacs-magit-forge-create-pull-request-target-branch.png" /></a></p>
-<p>The description of the change is show and can be edited for the pull request description.</p>
-<p><code>, ,</code> to confirm the message and create the pull request on the upstream repository. <code>, k</code> to cancel the pull request.</p>
-<p><a class="glightbox" href="/images/spacemacs-magit-forge-create-pull-request-text.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - create pull request text" src="/images/spacemacs-magit-forge-create-pull-request-text.png" /></a></p>
+<p><span class="keys"><kbd>P</kbd></span> <span class="keys"><kbd>p</kbd></span> to push the change to the remote repository for the fork.</p>
+<p><span class="keys"><kbd>@</kbd></span> to open the forge menu from the Magit Status buffer.</p>
+<p><span class="keys"><kbd>r</kbd></span> to select the repository that the pull request will be created on (eg. the upstream repository, not the fork).</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-configure-remote-light.png?raw=true#only-light" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - create pull request forge repository" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-configure-remote-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-configure-remote-dark.png?raw=true#only-dark" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - create pull request forge repository" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-configure-remote-dark.png?raw=true#only-dark" /></a></p>
+<p><span class="keys"><kbd>@</kbd></span> <span class="keys"><kbd>c</kbd></span> <span class="keys"><kbd>p</kbd></span><code>c p</code> to create a new pull request.</p>
+<p>Select the source repository, the branch that contains the changes for the pull request.</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-source-branch-dark.png?raw=true#only-dark" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - create pull request source branch" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-source-branch-dark.png?raw=true#only-dark" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-source-branch-light.png?raw=true#only-light" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - create pull request source branch" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-source-branch-light.png?raw=true#only-light" /></a></p>
+<p>Select the target repository, the remote repository branch that changes will be pulled into (if the PR is merged).</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-target-branch-light.png?raw=true#only-light" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - create pull request target branch" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-target-branch-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-target-branch-dark.png?raw=true#only-dark" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - create pull request target branch" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-target-branch-dark.png?raw=true#only-dark" /></a></p>
+<p>The pull request post opens in a new buffer, using the pull request template if defined for the repository</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-post-light.png?raw=true#only-light" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - create pull request post" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-post-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-post-dark.png?raw=true#only-dark" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - create pull request post" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-post-dark.png?raw=true#only-dark" /></a></p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd class="key-comma">,</kbd></span> or <span class="keys"><kbd>Z</kbd></span> <span class="keys"><kbd>Z</kbd></span> to confirm the message and create the pull request on the upstream repository.</p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>k</kbd></span> or <span class="keys"><kbd>Z</kbd></span> <span class="keys"><kbd>Q</kbd></span> to cancel the pull request.</p>
 <h2 id="create-a-draft-pull-request">Create a draft pull request<a class="headerlink" href="#create-a-draft-pull-request" title="Permanent link">λ︎</a></h2>
 <p>A pull request can be marked as a draft when created by Magit Forge, to communicate that the PR is not ready for review or approval.</p>
 <p>With the pull request buffer opened, add yaml style front matter to the to define the PR as a draft.</p>
@@ -5867,17 +5858,14 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nn">---</span>
 </code></pre></div>
-<h2 id="example-pull-request">Example pull request<a class="headerlink" href="#example-pull-request" title="Permanent link">λ︎</a></h2>
-<p>An example of using Emacs to create a pull request, with a pull request template from the repository.</p>
-<p>A template can be quickly edited using all the Emacs tools you are used to having.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-pull-request-edit.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - example of creating a pull request with template" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-pull-request-edit.png" /></a></p>
+<p><code>, d</code> when viewing the pull request will toggle the draft status of the pull request.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 2, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 16, 2023</span>
       
     
   </small>
@@ -6032,7 +6020,7 @@
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.c2be25ad.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.b4d07000.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
