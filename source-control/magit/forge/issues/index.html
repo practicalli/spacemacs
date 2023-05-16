@@ -4266,6 +4266,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#view-issue" class="md-nav__link">
+    View Issue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#update-an-issue" class="md-nav__link">
     Update an issue
   </a>
@@ -5805,6 +5812,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#view-issue" class="md-nav__link">
+    View Issue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#update-an-issue" class="md-nav__link">
     Update an issue
   </a>
@@ -5845,12 +5859,13 @@
 <h1 id="forge-issue-management">Forge Issue management<a class="headerlink" href="#forge-issue-management" title="Permanent link">λ︎</a></h1>
 <p>Issues can be viewed, created and updated, providing full synchronisation between Emacs and the remote GitHub / GitLab service.</p>
 <h2 id="view-issues-list">View issues list<a class="headerlink" href="#view-issues-list" title="Permanent link">λ︎</a></h2>
-<p><code>@ l i</code> opens a buffer with a list of issues with the most recent at the top.  Issue labels also show in the list using the the color assigned on GitHub.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-issues-status-light.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge Issues list with labels" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-issues-status-light.png" /></a></p>
+<p><span class="keys"><kbd>@</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>i</kbd></span> opens a buffer with a list of issues with the most recent at the top.  Issue labels also show in the list using the the color assigned on GitHub.</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-issue-list-light.png?raw=true#only-light" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge Issues list with labels" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-issue-list-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-issue-list-dark.png?raw=true#only-dark" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge Issues list with labels" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-issue-list-dark.png?raw=true#only-dark" /></a></p>
 <p>In the issue list buffer:</p>
-<p><code>o</code> opens the list in the default browser</p>
-<p><code>j</code> to navigate down, <code>k</code> to navigate up the list</p>
-<p><code>q</code> to quit and close the buffer</p>
+<p><span class="keys"><kbd>o</kbd></span>  opens the list in the default browser</p>
+<p><span class="keys"><kbd>j</kbd></span>  to navigate down, <span class="keys"><kbd>k</kbd></span>  to navigate up the list</p>
+<p><span class="keys"><kbd>q</kbd></span>  to quit and close the buffer</p>
 <details class="hint">
 <summary>Configure number of open and closed items shown</summary>
 <p><code>(setq  forge-topic-list-limit '(100 . 0))</code> added to the <code>dotspacemacs/user-config</code> section of <code>.spacemacs</code> hides all closed issues and pull requests from the list, showing up to 100 open items from each.</p>
@@ -5858,38 +5873,43 @@
 <p><a href="https://github.com/practicalli/spacemacs.d">practicalli/spacemacs.d</a> configuration contains this setting.</p>
 </details>
 <h2 id="create-an-issue">Create an issue<a class="headerlink" href="#create-an-issue" title="Permanent link">λ︎</a></h2>
-<p><code>@ c i</code> to create a new issue on the current repository.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-create-issue-post-light.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - create issue post" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-create-issue-post-light.png" /></a></p>
-<p>The issue is added to the Issues section of Magit status.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-issues-status-list-light.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - Issue added to Issues in Magit Status" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-issues-status-list-light.png" /></a></p>
-<p><code>RET</code> on the issue opens the issue and shows the details.  Related issues are shown as a link, <code>RET</code> on the link opens the related issue in the browser.</p>
-<p><code>, ,</code> to save and create the issue on the remote forge.  <code>, k</code> to cancel.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-issue-details-light.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - Issue details" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-issue-details-light.png" /></a></p>
+<p><span class="keys"><kbd>@</kbd></span> <span class="keys"><kbd>c</kbd></span> <span class="keys"><kbd>i</kbd></span> to create a new issue on the current repository.</p>
+<p>A new buffer is displayed to write the issue details (issue post).</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-issue-create-post-light.png?raw=true#only-light" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - create issue post" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-issue-create-post-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-issue-create-post-dark.png?raw=true#only-dark" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge - create issue post" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-issue-create-post-dark.png?raw=true#only-dark" /></a></p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd class="key-comma">,</kbd></span> or <span class="keys"><kbd>Z</kbd></span> <span class="keys"><kbd>Z</kbd></span> to create the issue and push it to the remote repository.</p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>k</kbd></span> or <span class="keys"><kbd>Z</kbd></span> <span class="keys"><kbd>Q</kbd></span> to cancel the issue.</p>
+<p>A newly created issue is added to the top of the Issues list in the Magit status buffer.</p>
+<h2 id="view-issue">View Issue<a class="headerlink" href="#view-issue" title="Permanent link">λ︎</a></h2>
+<p><code>RET</code> on the issue opens the issue and shows the details.</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-issue-view-dark.png?raw=true" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Magit Forge issue view" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-issue-view-dark.png?raw=true" /></a></p>
+<p>Related issues are shown as a link, <code>RET</code> on the link opens the related issue in the browser.</p>
 <div class="admonition hint">
 <p class="admonition-title">Markdown support</p>
 <p>Pull Request descriptions will use markdown when displayed in GitHub.</p>
-<p><code>code</code> for code / key highlighting, <code>#</code> for headings, <code>----</code> for horizontal lines</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-issue-details-clojure-code-example-dark.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge Topic Issue description with Clojure code block example" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-issue-details-clojure-code-example-dark.png" /></a></p>
+<p>tripple backtic <code>`` for code / key highlighting,</code>#<code>for headings,</code>---<code>for horizontal lines,</code>- [ ]` for list item</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-issue-view-markdown-light.png?raw=true#only-light" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge Topic Issue description with Clojure code block example" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-issue-view-markdown-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-issue-view-markdown-dark.png?raw=true#only-dark" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge Topic Issue description with Clojure code block example" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-issue-view-markdown-dark.png?raw=true#only-dark" /></a></p>
 </div>
 <h2 id="update-an-issue">Update an issue<a class="headerlink" href="#update-an-issue" title="Permanent link">λ︎</a></h2>
-<p><code>@ l i</code> to list the current issues (<code>@ f f</code> to update the topics if the issue is not listed)</p>
-<p>In the issue list buffer, navigate (<code>j</code>, <code>k</code>) to the issue to be edited.</p>
-<p><code>RET</code> to open the issue in its own buffer</p>
-<p><code>j</code> / <code>k</code> to navigate to each section of the issue (title, assignee, label, mark, description, comments)</p>
-<p><code>,e</code> or <code>C-c C-e</code> to edit the current section of the issue.</p>
+<p><span class="keys"><kbd>@</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>i</kbd></span> to list the current issues (<span class="keys"><kbd>@</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>f</kbd></span>  to update the topics if the issue is not listed)</p>
+<p>In the issue list buffer, navigate (<span class="keys"><kbd>j</kbd></span>, <span class="keys"><kbd>k</kbd></span>) to the issue to be edited.</p>
+<p><span class="keys"><kbd class="key-enter">Enter</kbd></span> to open the issue in its own buffer</p>
+<p><span class="keys"><kbd>j</kbd></span>, <span class="keys"><kbd>k</kbd></span>` to navigate to each section of the issue (title, assignee, label, mark, description, comments)</p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> or <code>C-c C-e</code> to edit the current section of the issue.</p>
 <p>For title, assignee, label and mark a prompt shows in the mini-buffer.  Enter a value and press <code>RET</code></p>
 <p>For description and comments a separate buffer opens with editable text.</p>
-<p><code>, ,</code> or <code>C-c C-c</code> to save changes and push them to the remote repository. <code>C-c C-k</code> to cancel changes and return to the issue.</p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd class="key-comma">,</kbd></span> or <span class="keys"><kbd>Z</kbd></span> <span class="keys"><kbd>Z</kbd></span>  to save changes and push them to the remote repository. <span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>k</kbd></span> or <span class="keys"><kbd>Z</kbd></span> <span class="keys"><kbd>Q</kbd></span>  to cancel changes and return to the issue.</p>
 <p>As soon as a value or text is saved, a request is sent to the remote forge to update the issue.</p>
-<p><code>q</code> to close the issue and issue list buffers.</p>
-<p>This approach works for other topics types also.</p>
+<p><span class="keys"><kbd>q</kbd></span> to close the issue and issue list buffers.</p>
+<p>This approach works for other topics types also, e.g. pull requests.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 7, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 16, 2023</span>
       
     
   </small>
