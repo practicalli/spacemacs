@@ -136,7 +136,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create-a-remote-fork" class="md-skip">
+        <a href="#create-a-remote-repository-or-fork" class="md-skip">
           Skip to content
         </a>
       
@@ -4238,8 +4238,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hintconfigure-owned-github-accounts-and-organisations" class="md-nav__link">
-    Hint::Configure owned GitHub accounts and organisations
+  <a href="#fork-a-cloned-repository" class="md-nav__link">
+    Fork a cloned repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-owned-accounts-and-organisations" class="md-nav__link">
+    Configure owned accounts and organisations
   </a>
   
 </li>
@@ -5777,8 +5784,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hintconfigure-owned-github-accounts-and-organisations" class="md-nav__link">
-    Hint::Configure owned GitHub accounts and organisations
+  <a href="#fork-a-cloned-repository" class="md-nav__link">
+    Fork a cloned repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-owned-accounts-and-organisations" class="md-nav__link">
+    Configure owned accounts and organisations
   </a>
   
 </li>
@@ -5814,29 +5828,52 @@
   
 
 
-<h1 id="create-a-remote-fork">Create a remote fork<a class="headerlink" href="#create-a-remote-fork" title="Permanent link">λ︎</a></h1>
-<p>Create or select a local Git repository and run magit status, <code>, g s</code>.</p>
-<p><code>c f</code> to create a remote fork, prompt for the GitHub account or organisation to fork the repository too.</p>
-<p><a class="glightbox" href="/images/spacemacs-magit-forge-create-fork-to.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge create fork - fork to" src="/images/spacemacs-magit-forge-create-fork-to.png" /></a></p>
-<p>Prompt for the name of the new remote repository</p>
-<p><a class="glightbox" href="/images/spacemacs-magit-forge-create-fork-remote-name.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge create fork - remote name" src="/images/spacemacs-magit-forge-create-fork-remote-name.png" /></a></p>
+<h1 id="create-a-remote-repository-or-fork">Create a remote repository or fork<a class="headerlink" href="#create-a-remote-repository-or-fork" title="Permanent link">λ︎</a></h1>
+<p>Fork of a Git project already cloned locally, e.g. to create a pull request and contribute back to an open source project.</p>
+<details class="warning">
+<summary>Only GitHub is supported</summary>
+</details>
+<h2 id="fork-a-cloned-repository">Fork a cloned repository<a class="headerlink" href="#fork-a-cloned-repository" title="Permanent link">λ︎</a></h2>
 <blockquote>
-<h4 id="hintconfigure-owned-github-accounts-and-organisations">Hint::Configure owned GitHub accounts and organisations<a class="headerlink" href="#hintconfigure-owned-github-accounts-and-organisations" title="Permanent link">λ︎</a></h4>
-<p>Add  <code>(setq forge-owned-accounts '(("practicalli" "jr0cket" )))</code> to the <code>dotspacemacs/user-config</code> section of <code>.spacemacs</code> to define GitHub accounts and organisations that can be forked to.</p>
-<p>Add <code>(setq forge-owned-blacklist '(("bad-hacks" "really-bad-hacks")))</code> to define accounts and organisations not to include.  This over-rides the <code>forge-owned-accounts</code> setting.</p>
-<p><a href="https://github.com/practicalli/spacemacs.d">practicalli/spacemacs.d</a> repository contains these settings.</p>
+<p><code>SPC g c</code> will clone a remote repository and prompts for a name or URL</p>
 </blockquote>
-<p>GitHub user and organization accounts owned
- used by @ c f  to create a fork</p>
-<p>To blacklist specific accounts,
- over-riding forge-owned-accounts</p>
+<p><code>SPC g s</code> to open Magit Status</p>
+<p><code>@ c f</code> to create a remote fork,</p>
+<p>Select or type in the name of the GitHub user or organisation account in which the fork of the repository should be created.</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-create-fork-to-light.png?raw=true#only-light" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge create fork - fork to" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-create-fork-to-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-create-fork-to-dark.png?raw=true#only-dark" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Forge create fork - fork to" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-create-fork-to-dark.png?raw=true#only-dark" /></a></p>
+<p>Confirm the name of the alias for the forked repository (the name used as the push/pull default)</p>
+<h2 id="configure-owned-accounts-and-organisations">Configure owned accounts and organisations<a class="headerlink" href="#configure-owned-accounts-and-organisations" title="Permanent link">λ︎</a></h2>
+<p>Include the accounts owned to have the names pre-filled when selecting where to create repositories, i.e. when creating a fork.</p>
+<p>Define accounts and organisations in which a fork can be create using the <code>forge-owned-accounts</code> setting.</p>
+<div class="highlight"><span class="filename">Spacemacs Configuration - dotspacemacs/user-config</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">forge-owned-accounts</span><span class="w"> </span><span class="o">&#39;</span><span class="p">((</span><span class="s">&quot;practicalli&quot;</span><span class="w"> </span><span class="s">&quot;practicalli-john&quot;</span><span class="w"> </span><span class="p">)))</span>
+</code></pre></div>
+<p>Define accounts and organisations that should not be included, overriding matching items in the <code>forge-owned-accounts</code> setting.</p>
+<div class="highlight"><span class="filename">Spacemacs Configuration - dotspacemacs/user-config</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">forge-owned-blacklist</span><span class="w"> </span><span class="o">&#39;</span><span class="p">((</span><span class="s">&quot;bad-hacks&quot;</span><span class="w"> </span><span class="s">&quot;really-bad-hacks&quot;</span><span class="p">)))</span><span class="o">`</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Practicall Spacemacs Config</p>
+<p><a href="https://github.com/practicalli/spacemacs-config">practicalli/spacemacs-config</a> repository contains these settings.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">;; GitHub user and organisation accounts owned</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">;; used by @ c f  to create a fork</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">forge-owned-accounts</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span><span class="o">&#39;</span><span class="p">((</span><span class="s">&quot;practicalli&quot;</span><span class="w"> </span><span class="s">&quot;practicalli-john&quot;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">         </span><span class="s">&quot;ClojureBridgeLondon&quot;</span><span class="w"> </span><span class="s">&quot;ldnclj&quot;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">         </span><span class="s">&quot;clojure-hacks&quot;</span><span class="p">)))</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1">;; Blacklist Forge accounts</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1">;; - over-rides forge-owned-accounts</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1">;; (setq forge-owned-blacklist</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1">;;       &#39;((&quot;bad-hacks&quot; &quot;really-bad-hacks&quot;)))</span>
+</code></pre></div></p>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 26, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 16, 2023</span>
       
     
   </small>
