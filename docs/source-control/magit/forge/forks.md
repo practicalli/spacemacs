@@ -1,25 +1,53 @@
-# Create a remote fork
+# Create a remote repository or fork
 
-Create or select a local Git repository and run magit status, `, g s`.
+Fork of a Git project already cloned locally, e.g. to create a pull request and contribute back to an open source project.
 
-`c f` to create a remote fork, prompt for the GitHub account or organisation to fork the repository too.
-
-![Spacemacs Magit Forge create fork - fork to](/images/spacemacs-magit-forge-create-fork-to.png)
-
-Prompt for the name of the new remote repository
-
-![Spacemacs Magit Forge create fork - remote name](/images/spacemacs-magit-forge-create-fork-remote-name.png)
-
-> #### Hint::Configure owned GitHub accounts and organisations
-> Add  `(setq forge-owned-accounts '(("practicalli" "jr0cket" )))` to the `dotspacemacs/user-config` section of `.spacemacs` to define GitHub accounts and organisations that can be forked to.
->
-> Add `(setq forge-owned-blacklist '(("bad-hacks" "really-bad-hacks")))` to define accounts and organisations not to include.  This over-rides the `forge-owned-accounts` setting.
->
-> [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d) repository contains these settings.
+??? WARNING "Only GitHub is supported"
 
 
- GitHub user and organization accounts owned
- used by @ c f  to create a fork
+## Fork a cloned repository
 
- To blacklist specific accounts,
- over-riding forge-owned-accounts
+> `SPC g c` will clone a remote repository and prompts for a name or URL
+
+`SPC g s` to open Magit Status
+
+`@ c f` to create a remote fork,
+
+Select or type in the name of the GitHub user or organisation account in which the fork of the repository should be created.
+
+![Spacemacs Magit Forge create fork - fork to](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-create-fork-to-light.png?raw=true#only-light)
+![Spacemacs Magit Forge create fork - fork to](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-create-fork-to-dark.png?raw=true#only-dark)
+
+Confirm the name of the alias for the forked repository (the name used as the push/pull default)
+
+## Configure owned accounts and organisations
+
+Include the accounts owned to have the names pre-filled when selecting where to create repositories, i.e. when creating a fork.
+
+Define accounts and organisations in which a fork can be create using the `forge-owned-accounts` setting.
+
+```emacs title="Spacemacs Configuration - dotspacemacs/user-config"
+(setq forge-owned-accounts '(("practicalli" "practicalli-john" )))
+```
+
+Define accounts and organisations that should not be included, overriding matching items in the `forge-owned-accounts` setting.
+
+```emacs title="Spacemacs Configuration - dotspacemacs/user-config"
+(setq forge-owned-blacklist '(("bad-hacks" "really-bad-hacks")))`
+```
+
+!!! EXAMPLE "Practicall Spacemacs Config"
+    [practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config) repository contains these settings.
+    ```emacs
+    ;; GitHub user and organisation accounts owned
+    ;; used by @ c f  to create a fork
+    (setq forge-owned-accounts
+          '(("practicalli" "practicalli-john"
+             "ClojureBridgeLondon" "ldnclj"
+             "clojure-hacks")))
+
+    ;; Blacklist Forge accounts
+    ;; - over-rides forge-owned-accounts
+    ;; (setq forge-owned-blacklist
+    ;;       '(("bad-hacks" "really-bad-hacks")))
+    ```
