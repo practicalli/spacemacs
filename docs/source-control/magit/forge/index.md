@@ -12,7 +12,8 @@ Issues, pull requests and forks can be created on a remote repository, once the 
 
 `@` opens the forge menu from the Magit Status buffer, `, g s`, and therefore requires a local Git repository.
 
-![Spacemacs Magit Forge](/images/spacmacs-magit-forge-menu.png)
+![Spacemacs Magit Forge menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-magit-forge-light.png?raw=true#only-light)
+![Spacemacs Magit Forge menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-magit-forge-dark.png?raw=true#only-dark)
 
-> #### Hint::Requires Forge Configuration
-> [Create an encrypted `.authinfo.gpg` file for connection details of each forge used](/source-control/forge-configuration.md) before using the Magit Forge commands.
+!!! INFO "Forge Configuration required"
+    [Create an encrypted `.authinfo.gpg` file for connection details of each forge used](/source-control/forge-configuration.md) before using the Magit Forge commands.
