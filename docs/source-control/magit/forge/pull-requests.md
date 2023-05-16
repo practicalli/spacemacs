@@ -11,30 +11,36 @@ Assumes you have a fork and original repository as remotes added to the local gi
 
 Create a branch on the fork with a descriptive name of the change you want to submit as a pull request.  Commit changes to that new branch.
 
-`P p` to push the change to the remote repository for the fork.
+++"P"++ ++"p"++ to push the change to the remote repository for the fork.
 
-`@` to open the forge menu from the Magit Status buffer.
+++"@"++ to open the forge menu from the Magit Status buffer.
 
-`r` to select the repository that the pull request will be created on (eg. the upstream repository, not the fork).
+++"r"++ to select the repository that the pull request will be created on (eg. the upstream repository, not the fork).
 
-![Spacemacs Magit Forge - create pull request forge repository](/images/spacemacs-magit-forge-create-pull-request-forge-repository.png)
+![Spacemacs Magit Forge - create pull request forge repository](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-configure-remote-light.png?raw=true#only-light)
+![Spacemacs Magit Forge - create pull request forge repository](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-configure-remote-dark.png?raw=true#only-dark)
 
-`c p` to create a new pull request.
+++"@"++ ++"c"++ ++"p"++`c p` to create a new pull request.
 
-For the source repository, select the branch of the local fork repository.
+Select the source repository, the branch that contains the changes for the pull request.
 
-![Spacemacs Magit Forge - create pull request source branch](/images/spacemacs-magit-forge-create-pull-request-source-branch.png)
+![Spacemacs Magit Forge - create pull request source branch](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-source-branch-dark.png?raw=true#only-dark)
+![Spacemacs Magit Forge - create pull request source branch](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-source-branch-light.png?raw=true#only-light)
 
-For the target repository, select the upstream repository
+Select the target repository, the remote repository branch that changes will be pulled into (if the PR is merged).
 
-![Spacemacs Magit Forge - create pull request target branch](/images/spacemacs-magit-forge-create-pull-request-target-branch.png)
+![Spacemacs Magit Forge - create pull request target branch](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-target-branch-light.png?raw=true#only-light)
+![Spacemacs Magit Forge - create pull request target branch](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-target-branch-dark.png?raw=true#only-dark)
 
-The description of the change is show and can be edited for the pull request description.
+The pull request post opens in a new buffer, using the pull request template if defined for the repository
 
-`, ,` to confirm the message and create the pull request on the upstream repository. `, k` to cancel the pull request.
 
-![Spacemacs Magit Forge - create pull request text](/images/spacemacs-magit-forge-create-pull-request-text.png)
+![Spacemacs Magit Forge - create pull request post](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-post-light.png?raw=true#only-light)
+![Spacemacs Magit Forge - create pull request post](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/magit/spacemacs-magit-forge-pull-request-post-dark.png?raw=true#only-dark)
 
+++comma++ ++comma++ or ++"Z"++ ++"Z"++ to confirm the message and create the pull request on the upstream repository.
+
+++comma++ ++"k"++ or ++"Z"++ ++"Q"++ to cancel the pull request.
 
 ## Create a draft pull request
 
@@ -48,11 +54,4 @@ draft: true
 ---
 ```
 
-
-## Example pull request
-
-An example of using Emacs to create a pull request, with a pull request template from the repository.
-
-A template can be quickly edited using all the Emacs tools you are used to having.
-
-![Spacemacs Magit Forge - example of creating a pull request with template](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-forge-pull-request-edit.png)
+`, d` when viewing the pull request will toggle the draft status of the pull request.
