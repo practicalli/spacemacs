@@ -56,7 +56,7 @@ Use the search box to quickly find a specific topic
 - ++enter++ : follow selected result
 
 
-## Sponsor my work
+## Sponsor Practicalli
 
 [![Sponsor practicalli-john](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png){align=left loading=lazy}](https://github.com/sponsors/practicalli-john/){target=_blank}
 

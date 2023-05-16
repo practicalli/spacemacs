@@ -77,40 +77,41 @@ A review of the change will be carried out by the Practicalli team and the PR me
 
 The Publish Book GitHub action will run when PR's are merged into main (or the Practicalli team pushes changes to the default branch).
 
+Publish book workflow installs Material for MkDocs version 9
+
 
 ## Local development
 
-Install mkdocs using the Operating system package manager
+Install mkdocs version 9 using the Python pip package manager
 
 ```bash
-sudo apt install mkdocs
-```
-
-Or via Python pip
-
-```bash
-pip install mkdocs
+pip install mkdocs-material=="9.*"
 ```
 
 Install the plugins used by the Practicalli site using Pip (these are also installed in the GitHub Action workflow)
 
 ```bash
-pip install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin pillow cairosvg
+pip3 install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects pillow cairosvg
 ```
 
 > pillow and cairosvg python packages are required for [Social Cards](https://squidfunk.github.io/mkdocs-material/setup/setting-up-social-cards/)
 
-Fork the practicalli/spacemacs GitHub repository and clone that fork to your computer,
+Fork the GitHub repository and clone that fork to your computer,
 
 ```bash
-git clone https://github.com/<your-github-account>/spacemacs.git
-
+git clone https://github.com/<your-github-account>/<repository>.git
 ```
 
 Run a local server from the root of the cloned project
 
 ```bash
-mkdocs serve
+make docs
 ```
 
-The website will open at http://localhost:8000
+The website will open at <http://localhost:8000>
+
+If making smaller changes, then only rebuild the content that changes, speeding up the local development process
+```bash
+make docs
+```
+

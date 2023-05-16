@@ -1,6 +1,6 @@
-## Contributing 
+# Contributing to Practicalli
 
-How to contribute to Practicalli Spacemacs and the Spacemacs project itself.
+Practicalli books are written in markdown and use MkDocs to generate the published website via a GitHub workflow.  MkDocs can also run a local server using the `make docs` target from the `Makefile`
 
 [Issues](https://github.com/practicalli/spacemacs-content/issues){target=_blank .md-button}
 [Pull requests](https://github.com/practicalli/spacemacs-content/pulls){target=_blank .md-button}

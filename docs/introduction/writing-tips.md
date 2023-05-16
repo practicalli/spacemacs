@@ -7,7 +7,6 @@ Making the docs more engaging using the [mkdocs-material theme reference guide](
 
     [HSL Color Picker](https://hslpicker.com/) for codes to modify the theme style, overriding colors in `docs/assets/stylesheets/extra.css`
 
-
 ## Hypertext links
 
 Links open in the same browser window/tab by default.
@@ -44,7 +43,6 @@ Add an icon to the button
 
 [Search all supported icons](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/){target=_blank .md-button}
 
-
 ## YouTube video
 
 Use an iframe element to include a YouTube video, wrapping in a paragraph tag with center alignment to place the video in a centered horizontal position
@@ -56,7 +54,6 @@ Use an iframe element to include a YouTube video, wrapping in a paragraph tag wi
 ```
 
 > mkdocs material does not have direct support for adding a YouTube video via markdown.
-
 
 ## Admonitions
 
@@ -105,8 +102,6 @@ Use an iframe element to include a YouTube video, wrapping in a paragraph tag wi
 !!! QUOTE
     Use `!!!` followed by `QUOTE`
 
-
-
 ### Collapsing admonitions
 
 ??? NOTE
@@ -115,10 +110,8 @@ Use an iframe element to include a YouTube video, wrapping in a paragraph tag wi
 ??? NOTE "Replace with a title"
     Use `???` followed by `NOTE` and a `"title in double quotes"`
 
-
 ???+ NOTE "Expanded by default"
      Use `???+`, note the `+` character,  followed by `NOTE` and a `"title in double quotes"`
-
 
 ### Inline blocks
 
@@ -131,7 +124,6 @@ Inline blocks of text to make a very specific callout within text
     Curabitur feugiat, tortor non consequat
     finibus, justo purus auctor massa, nec
     semper lorem quam in massa.
-
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
 
@@ -147,12 +139,9 @@ Adding something to then end of text is probably my favourite
     finibus, justo purus auctor massa, nec
     semper lorem quam in massa.
 
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
-
-
 
 ## Code blocks
 
@@ -168,7 +157,6 @@ Syntax highlighting in code blocks
 ```
 
 Give the code block a title using `title=""` after the backtics and language name
-
 
 ```clojure title="src/practicalli/gameboard.clj"
 (defn my-function
@@ -191,7 +179,6 @@ Add `linenums=42` to start line numbers from 42 onward
 ```
 clojure linenums="42" title="src/practicalli/gameboard.clj"
 ```
-
 
 ### Annotations
 
@@ -219,7 +206,6 @@ Code blocks with annotation, add `!` after the annotation number to suppress the
 ```
 
 1.  Always include a doc-string in every function to describe the purpose of that function, identifying why it was added and what its value is.
-
 
 GitHub action example with multiple annotations
 
@@ -259,14 +245,13 @@ jobs:
       ...
     ```
 
-
 ### Highlight lines in code blocks
 
 Add highlight line meta data to a code block after the opening backticks and code block language.
 
 `hl_lines="2"` highlights line 2 in the codeblock
 
-```clojure hl_lines="2,4"
+```clojure hl_lines="4 5 6"
 (defn my-function
   "With a lovely doc-string"
   [arguments]
@@ -275,6 +260,26 @@ Add highlight line meta data to a code block after the opening backticks and cod
    [1 2 3]))
 ```
 
+### Embed external files
+
+`--8<--` in a code block inserts code from a source code file or other text file
+
+Specify a local file from the root of the book project (the directory containing mkdocs.yml)
+
+??? EXAMPLE "Scheduled Version Check GitHub Workflow from source code file"
+    ```yaml title="scheduled version check"
+    --8<-- ".github/workflows/scheduled-version-check.yaml"
+    ```
+
+??? EXAMPLE "Practicalli Project Templates"
+    ```markdown title="Emacs project configuration - .dir-locals.el"
+    --8<-- "https://raw.githubusercontent.com/practicalli/project-templates/main/.dir-locals.el"
+    ```
+
+!!! HINT "Code example reuse"
+    Use an embedded local or external file (URL) when the same content is required in more than one place in the book.
+
+    An effective way of sharing code and configuration mutliple times in a book or across multiple books.
 
 ## Content tabs
 
@@ -287,15 +292,12 @@ Setting up a project
     clojure -T:project/new :template app :name practicalli/gameboard
     ```
 
-
 === "Leiningen"
     ```shell
     lein new app practicalli/gameboard
     ```
 
-
 Or nest the content tabs in an admonition
-
 
 !!! INFO "Run a terminal REPL"
 
@@ -310,10 +312,11 @@ Or nest the content tabs in an admonition
         lein repl
         ```
 
-
 ## Diagrams
 
 Neat flow diagrams
+
+[Diagrams - Material for MkDocs](https://squidfunk.github.io/mkdocs-material/reference/diagrams/){target=_blank .md-button}
 
 ``` mermaid
 graph LR
@@ -323,7 +326,6 @@ graph LR
   D --> B;
   B ---->|No| E[Yay!];
 ```
-
 
 UML Sequence Diagrams
 
@@ -355,8 +357,7 @@ stateDiagram-v2
     State4 --> [*]
 ```
 
-
-Class diagrams - but dont need them.
+Class diagrams - not needed for Clojure
 
 Entity relationship diagrams are handy though
 
@@ -364,23 +365,12 @@ Entity relationship diagrams are handy though
 erDiagram
   CUSTOMER ||--o{ ORDER : places
   ORDER ||--|{ LINE-ITEM : contains
+  LINE-ITEM {
+    customer-name string
+    unit-price int
+  }
   CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
 ```
-
-### Other diagram types
-
-Besides the diagram types listed above, [Mermaid.js] provides support for
-[pie charts], [gantt charts], [user journeys], [git graphs] and
-[requirement diagrams], all of which are not officially supported by Material
-for MkDocs. Those diagrams should still work as advertised by [Mermaid.js], but
-we don't consider them a good choice, mostly as they don't work well on mobile.
-
-  [pie charts]: https://mermaid-js.github.io/mermaid/#/pie
-  [gantt charts]: https://mermaid-js.github.io/mermaid/#/gantt
-  [user journeys]: https://mermaid-js.github.io/mermaid/#/user-journey
-  [git graphs]: https://mermaid-js.github.io/mermaid/#/gitgraph
-  [requirement diagrams]: https://mermaid-js.github.io/mermaid/#/requirementDiagram
-
 
 ## Keyboard keys
 
@@ -407,23 +397,6 @@ For key combinations, use join they key identifies with a `+`
 
 [MkDocs keyboard keys reference](https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index){target=_blank .md-button}
 
-
-## Grids
-
-Useful for putting button links on the main page as quick links into the key parts of the book
-
-<div class="grid cards" markdown>
-
-- :fontawesome-brands-html5: __HTML__ for content and structure
-- :fontawesome-brands-js: __JavaScript__ for interactivity
-- :fontawesome-brands-css3: __CSS__ for text running out of boxes
-- :fontawesome-brands-internet-explorer: __Internet Explorer__ ... huh?
-
-</div>
-
-> Sponsor only feature
-
-
 ## Images
 
 Markdown images can be appended with material tags to set the size of the image, whether to appear on light or dark theme and support lazy image loading in browsers
@@ -435,7 +408,6 @@ Markdown images can be appended with material tags to set the size of the image,
     ```
 
     ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark){style="height:150px;width:150px"}
-
 
 === "Lazy Loading"
 
@@ -456,7 +428,6 @@ Markdown images can be appended with material tags to set the size of the image,
     ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png){align=right style="height:64px;width:64px"}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
 
-
 === "Theme Specific"
 
     `![Kitty Logo](image/kitty-light.png#only-dark)` or `![Kitty Logo](image/kitty-light.png#only-light)`  specifies the theme the image should be shown, allowing different versions of images to be shown based on the theme.
@@ -470,7 +441,6 @@ Markdown images can be appended with material tags to set the size of the image,
 
     > Requires the [color pallet toggle](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle)
 
-
 === "All Image Attributes"
     Alight right, lazy load and set image to 150x150
 
@@ -482,7 +452,6 @@ Markdown images can be appended with material tags to set the size of the image,
     ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-light.png#only-dark){align=right loading=lazy style="height:64px;width:64px"}
     ![Kitty Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/kitty-dark.png#only-light){align=left loading=lazy style="height:64px;width:64px"}
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
-
 
 ## Lists
 
@@ -517,11 +486,9 @@ with references
 
   [example]: https://example.com "I'm a tooltip!"
 
-
 Icon tool tip with a title
 
 :material-information-outline:{ title="Important information" }
-
 
 ### Abreviations
 
@@ -529,8 +496,6 @@ The HTML specification is maintained by the W3C.
 
 *[HTML]: Hyper Text Markup Language
 *[W3C]: World Wide Web Consortium
-
-
 
 ## Magic links
 
