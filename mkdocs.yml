@@ -334,10 +334,10 @@ nav:
               - source-control/magit/remote-repositories/try-pull-requests.md
           - Forge:
               - source-control/magit/forge/index.md
-              - source-control/magit/forge/add-database.md
               - source-control/magit/forge/forks.md
               - source-control/magit/forge/issues.md
               - source-control/magit/forge/pull-requests.md
+              - Add Repository to Database: source-control/magit/forge/add-repository-to-database.md
   - Markdown:
       - markdown-mode/index.md
   - Org-mode:
