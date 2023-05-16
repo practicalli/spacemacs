@@ -1703,19 +1703,6 @@
     Repeat commands
   </a>
   
-    <nav class="md-nav" aria-label="Repeat commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintinserting-a-comment-border" class="md-nav__link">
-    Hint::Inserting a comment border
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -6029,19 +6016,6 @@
     Repeat commands
   </a>
   
-    <nav class="md-nav" aria-label="Repeat commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintinserting-a-comment-border" class="md-nav__link">
-    Hint::Inserting a comment border
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -6587,14 +6561,14 @@
 </table>
 <p>The <code>.</code> keybinding will repeat the last command in normal mode or the last text edit in insert mode.</p>
 <p>Type a number before a command and that command will run that number of times.</p>
-<blockquote>
-<h4 id="hintinserting-a-comment-border">Hint::Inserting a comment border<a class="headerlink" href="#hintinserting-a-comment-border" title="Permanent link">λ︎</a></h4>
-<p>Use the number repeat to create a border of 42 <code>;</code> characters.
-Type <code>42</code> to repeat the command 42 times
-Press <code>i</code> for insert mode
-Press <code>;</code> as the character to repeat insert
-Press <code>ESC</code> or <code>fd</code> to leave insert mode and insert all 42 <code>;</code> characters</p>
-</blockquote>
+<div class="admonition hint">
+<p class="admonition-title">Inserting a comment border</p>
+<p>Use the number repeat to create a border of 42 <code>;</code> characters.</p>
+<p>Type <code>42</code> to repeat the command 42 times</p>
+<p>Press <code>i</code> for insert mode</p>
+<p>Press <code>;</code> as the character to repeat insert</p>
+<p>Press <code>ESC</code> or <code>fd</code> to leave insert mode and insert all 42 <code>;</code> characters</p>
+</div>
 <h2 id="transposing-swap">Transposing / swap<a class="headerlink" href="#transposing-swap" title="Permanent link">λ︎</a></h2>
 <table>
 <thead>
@@ -6629,7 +6603,7 @@ Press <code>ESC</code> or <code>fd</code> to leave insert mode and insert all 42
 <p>To comment multiple lines you can use the repeat command style, especially useful if you are using relative line numbers.</p>
 <p><code>g c 3 j</code> will comment the current line and the following two lines below.  Comment in reverse using <code>g c 3 k</code>.</p>
 <p>In Visual state, <code>v</code>, select the lines you wish to comment and use <code>g c</code> to comment all the marked lines.  Partially marked lines are not commented.</p>
-<p><a href="http://spacemacs.org/layers/+vim/evil-commentary/README.html">http://spacemacs.org/layers/+vim/evil-commentary/README.html</a></p>
+<p><a class="md-button" href="http://spacemacs.org/layers/+vim/evil-commentary/README.html" target="_blank">Evil Commentary</a></p>
 <h2 id="working-with-buffers">Working with Buffers<a class="headerlink" href="#working-with-buffers" title="Permanent link">λ︎</a></h2>
 <p>To work with files in Emacs, they are first loaded into a <strong>Buffer</strong>.</p>
 <p>So when you open a file with <code>M-x find file</code> or <code>SPC f f</code> a new buffer is created so you can manage that file.</p>
@@ -6729,10 +6703,6 @@ Press <code>ESC</code> or <code>fd</code> to leave insert mode and insert all 42
 <td><code>SPS q R</code></td>
 <td>Restart Spacemacs</td>
 </tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
 </tbody>
 </table>
 <h2 id="spelling-checking">Spelling Checking<a class="headerlink" href="#spelling-checking" title="Permanent link">λ︎</a></h2>
@@ -6751,7 +6721,7 @@ Press <code>ESC</code> or <code>fd</code> to leave insert mode and insert all 42
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 16, 2023</span>
       
     
   </small>
