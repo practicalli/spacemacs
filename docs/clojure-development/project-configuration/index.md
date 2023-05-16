@@ -11,6 +11,7 @@ There are many [CIDER configuration variables](/spacemacs/reference/cider/config
 
 
 ## Example configurations
+
 An example of setting the Clojure CLI tool as the default Clojure tool (rather than Leiningen or Boot). Also configuring several `deps.edn` aliases to be used when starting the REPL via Clojure CLI.
 
 ```elisp
@@ -75,11 +76,13 @@ Practicalli also create [a list of variables](/spacemacs/reference/cider/configu
 Elisp uses a two-element tuples called cons cells, create using the cons function, or with a dotted-pair notation.  This is loosely equivalent to key-value pairs in a Clojure hash-map.
 
 cons cell example
+
 ```elisp
 (cons "config-variable-name" "custom-value")
 ```
 
 dotted-pair example
+
 ```elisp
 '("config-variable-name" . "custom-value")
 ```

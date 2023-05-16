@@ -63,7 +63,6 @@ Saving changes in the code triggers figwheel to rebuild the project and inject u
 `, m q q` to shutdown Figwheel and close the REPL (`sesman-quit`)
 
 
-
 ## Project Configuration
 
 The Practicalli templates contain a `.dir-locals.el` project configuration for Emacs which sets host, port, REPL typle and build to start.

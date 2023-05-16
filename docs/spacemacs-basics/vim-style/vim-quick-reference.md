@@ -39,18 +39,18 @@ In menus such as helm you can move around using `Ctrl` and these keybindings.  S
 
 ### Navigating the current buffer
 
-| Key       | action                                                           |
-|-----------|------------------------------------------------------------------|
-| `gg`      | start of buffer                                                  |
-| `G`       | end of buffer                                                    |
-| `H`       | move cursor to head of buffer                                    |
-| `M`       | move cursor to middle of buffer                                  |
-| `L`       | move cursor to bottom line of buffer                             |
-| `C-u`     | jump up half a page                                              |
-| `C-d`     | jump down half a page                                            |
-| `}`       | move cursor forward by paragraph or block                        |
-| `{`       | move cursor backward by paragraph or block                       |
-| `ma`      | mark a line in a file with marker "a"                            |
+| Key   | action                                     |
+|-------|--------------------------------------------|
+| `gg`  | start of buffer                            |
+| `G`   | end of buffer                              |
+| `H`   | move cursor to head of buffer              |
+| `M`   | move cursor to middle of buffer            |
+| `L`   | move cursor to bottom line of buffer       |
+| `C-u` | jump up half a page                        |
+| `C-d` | jump down half a page                      |
+| `}`   | move cursor forward by paragraph or block  |
+| `{`   | move cursor backward by paragraph or block |
+| `ma`  | mark a line in a file with marker "a"      |
 | ``a`      | after moving around, go back to the exact position of marker "a" |
 | `'a`      | after moving around, go back to line of marker "a"               |
 | `:marks`  | view all the marks                                               |
@@ -179,7 +179,6 @@ Combine d | c | v | r with avy-goto
 | `yib`   | yank inner block contents / expression          |
 
 
-
 ## Repeat commands
 
 | Key              | Action                           |
@@ -191,12 +190,16 @@ The `.` keybinding will repeat the last command in normal mode or the last text 
 
 Type a number before a command and that command will run that number of times.
 
->####Hint::Inserting a comment border
-> Use the number repeat to create a border of 42 `;` characters.
-> Type `42` to repeat the command 42 times
-> Press `i` for insert mode
-> Press `;` as the character to repeat insert
-> Press `ESC` or `fd` to leave insert mode and insert all 42 `;` characters
+!!! HINT "Inserting a comment border"
+    Use the number repeat to create a border of 42 `;` characters.
+
+    Type `42` to repeat the command 42 times
+
+    Press `i` for insert mode
+
+    Press `;` as the character to repeat insert
+
+    Press `ESC` or `fd` to leave insert mode and insert all 42 `;` characters
 
 
 ## Transposing / swap
@@ -207,7 +210,6 @@ Type a number before a command and that command will run that number of times.
 | `SPC x t w`          | transpose the current character with the previous character |
 | `SPC x t l`          | transpose current line with previous line                   |
 | `SPC k tf`           | transpose expression                                        |
-
 
 
 ## Comments - works for all major modes
@@ -224,8 +226,7 @@ To comment multiple lines you can use the repeat command style, especially usefu
 
 In Visual state, `v`, select the lines you wish to comment and use `g c` to comment all the marked lines.  Partially marked lines are not commented.
 
-
-http://spacemacs.org/layers/+vim/evil-commentary/README.html
+[Evil Commentary](http://spacemacs.org/layers/+vim/evil-commentary/README.html){target=_blank .md-button}
 
 
 ## Working with Buffers
@@ -273,7 +274,6 @@ I recommend using the Spacemacs menu from **normal** mode to quit / restart Spac
 | `SPC q q` | Quit Spacemacs                                             |
 | `SPS q r` | Restart Spacemacs keeping current window and buffer layout |
 | `SPS q R` | Restart Spacemacs                                          |
-|           |                                                            |
 
 
 ## Spelling Checking
@@ -289,5 +289,5 @@ Either type in a new spelling or use `C-j` and `C-k` keys to move down and back 
 
 In evil command mode you can scroll just the text using the classic vi bindings.  This does not scroll the cursor unless the cursor hist the top or bottom of the window, in which case the cursor stays at that window boundary.
 
-* `C-y` - scroll down
-* `C-e` - scroll text up
+- `C-y` - scroll down
+- `C-e` - scroll text up

@@ -77,10 +77,10 @@ CIDER Variables can be set via:
 
 ## Inspector
 
-| Variables                          | Default value | Description                                                                       |
-|------------------------------------|---------------|-----------------------------------------------------------------------------------|
-| cider-inspector-page-size          | `32`          | Results per page in paginated inspector view, `s` to interactively change         |
-| cider-inspector-fill-frame         | `nil`         | `t` cider inspector window fills its frame                                        |
+| Variables                  | Default value | Description                                                               |
+|----------------------------|---------------|---------------------------------------------------------------------------|
+| cider-inspector-page-size  | `32`          | Results per page in paginated inspector view, `s` to interactively change |
+| cider-inspector-fill-frame | `nil`         | `t` cider inspector window fills its frame                                |
 | cider-inspector-skip-uninteresting | `t`           | skips values when navigating with `cider-inspector-*-inspectable-object' commands |
 
 
@@ -114,10 +114,10 @@ CIDER Variables can be set via:
 
 ## util
 
-| Variables                  | Default value                         | Description                                                                                                                                                                 |
-|----------------------------|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| cider-font-lock-max-length | `10000`                               | Maxiumum length of strings to fontify in `cider-font-lock-as`. `nil` removes the fontification restriction                                                                  |
-| cider-doc-xref-regexp      |                                       | Regexp to search Clojure vars in doc buffers                                                                                                                                |
+| Variables                  | Default value | Description                                                                                               |
+|----------------------------|---------------|-----------------------------------------------------------------------------------------------------------|
+| cider-font-lock-max-length | `10000`       | Maximum length of strings to fontify in `cider-font-lock-as`. `nil` removes the fontification restriction |
+| cider-doc-xref-regexp      |               | Regexp to search Clojure vars in doc buffers                                                              |
 | cider-jdk-src-paths        | `'("/usr/lib/jvm/openjdk-8/src.zip")` | Source code used by `cider-stacktrace-navigate'. Zip/jar file or extracted directory (recommended). Clojure sources: https://mvnrepository.com/artifact/org.clojure/clojure |
 
 

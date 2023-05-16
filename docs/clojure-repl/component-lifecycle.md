@@ -8,7 +8,6 @@ Clojure has several library to manage the lifecycle of components that make up t
 [system](https://github.com/donut-party/system){target=_blank .md-button}
 
 
-
 ## Reloade Workflow
 
 [Set up a project to work with component lifecycle service](https://practical.li/clojure/clojure-cli/projects/configure-repl-startup.html), for example by adding components to the `dev.clj` file under a `dev` directory.
