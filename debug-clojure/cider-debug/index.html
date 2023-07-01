@@ -3442,6 +3442,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#debug-expressions" class="md-nav__link">
+    Debug expressions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-debug-instrumentation" class="md-nav__link">
+    Remove debug instrumentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conditional-break-points" class="md-nav__link">
     Conditional break points
   </a>
@@ -5815,6 +5829,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#debug-expressions" class="md-nav__link">
+    Debug expressions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-debug-instrumentation" class="md-nav__link">
+    Remove debug instrumentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conditional-break-points" class="md-nav__link">
     Conditional break points
   </a>
@@ -5853,7 +5881,7 @@
 
 
 <h1 id="cider-debug">CIDER Debug<a class="headerlink" href="#cider-debug" title="Permanent link">λ︎</a></h1>
-<p>Instrument one or more function definitions to use the Cider step debug tool, showing intermittant values from evaluating each expression in turn.</p>
+<p>Instrument one or more expressions or function definitions to use the Cider step debug tool, showing intermittent values from evaluating each form in turn.</p>
 <p style="text-align:center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pyIbP4BOGpQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
@@ -5868,9 +5896,21 @@
 <summary>Evil key conflict - switch to Emacs Edit mode for full menu</summary>
 <p><code>C-z</code> after starting cider-debug to <a href="https://github.com/syl20bnr/spacemacs/issues/13594">use <code>c e i p s</code> menu keys</a> as otherwise they call the Evil normal state commands.  <code>C-z</code> to switch back to Evil normal state once debug is complete.</p>
 </details>
+<details class="hint">
+<summary>#dbg tag to debug a form</summary>
+<p><code>#dbg</code> tag before a form is the same as calling <code>, d b</code> to create breakpoints throughout an expression or function definition</p>
+</details>
 <h3 id="skip-over-lazy-functions">Skip over lazy functions<a class="headerlink" href="#skip-over-lazy-functions" title="Permanent link">λ︎</a></h3>
 <p><code>o</code> (out) will jump out of evaluating an expression.</p>
 <p>Use out to jump over evaluating code that has functions generating lazy infinite sequences, such as <code>range</code> or <code>cycle</code>.  Cider debug will then evaluate those functions in their outer expression where it should be safe to do so.</p>
+<h2 id="debug-expressions">Debug expressions<a class="headerlink" href="#debug-expressions" title="Permanent link">λ︎</a></h2>
+<p>Debug an expression in the same way as a function definition.  </p>
+<div class="admonition info">
+<p class="admonition-title">Debug break point scope</p>
+<p>Using <code>, d b</code> on an expression that calls a function will not add break points to the function being called.</p>
+</div>
+<h2 id="remove-debug-instrumentation">Remove debug instrumentation<a class="headerlink" href="#remove-debug-instrumentation" title="Permanent link">λ︎</a></h2>
+<p>Evaluate the function definition or expression to remove the debug instrumentation and all breakpoints.</p>
 <h2 id="conditional-break-points">Conditional break points<a class="headerlink" href="#conditional-break-points" title="Permanent link">λ︎</a></h2>
 <p><code>:break/when</code> metadata on a <code>#dbg</code> directive defines a condition when a breakpoint is triggered, allowing the evaluation to iterate until a desirable point is reached.</p>
 <p>Setting a condition is especially useful when there are many iterations required before reaching a point of issue, for example iterating through a large data set.</p>
