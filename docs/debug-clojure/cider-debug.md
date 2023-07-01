@@ -1,19 +1,32 @@
 # CIDER Debug
 
-`, d b` calls the `cider-debug-defn-breakpoint` command that sets breakpoints on the expression under the cursor.  If the expression is a function definition, then its name is marked as instrumented by the debug along with any calls to that function.
-
-A debug menu appears above the expression, press `n` to step through each expression and see the inline result.
-
-![Spacemacs Clojure cider debug menu](/images/spacemacs-clojure-cider-debug-menu.png)
-
-!!! HINT "Switch to Emacs Edit mode for full menu"
-   `C-z` after starting cider-debug to [use `c e i p s` menu keys](https://github.com/syl20bnr/spacemacs/issues/13594) as otherwise they call the Evil normal state commands.  `C-z` to switch back to Evil normal state.
-
-![Cider debugging](https://docs.cider.mx/cider/0.26/_images/cider_debugger.gif)
+Instrument one or more function definitions to use the Cider step debug tool, showing intermittant values from evaluating each expression in turn.
 
 <p style="text-align:center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pyIbP4BOGpQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
+
+## Debug functions
+
+++comma++ ++"d"++ ++"b"++  with the cursor over a function definition calls the `cider-debug-defn-breakpoint` command, setting breakpoints throughout the function definition. 
+
+Evaluate a call to the function, e.g. `, e f`, to start the cider debug tool.
+
+A debug menu appears above the expression, press `n` to step through each expression and see the inline result.
+
+![Spacemacs Clojure cider debug menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-debug-menu.png?raw=true)
+
+[:globe_with_meridians: Cider debug key bindings](https://docs.cider.mx/cider/debugging/debugger.html#keys){target=_blank .md-button} 
+
+??? HINT "Evil key conflict - switch to Emacs Edit mode for full menu"
+    `C-z` after starting cider-debug to [use `c e i p s` menu keys](https://github.com/syl20bnr/spacemacs/issues/13594) as otherwise they call the Evil normal state commands.  `C-z` to switch back to Evil normal state once debug is complete.
+
+
+### Skip over lazy functions
+
+`o` (out) will jump out of evaluating an expression.
+
+Use out to jump over evaluating code that has functions generating lazy infinite sequences, such as `range` or `cycle`.  Cider debug will then evaluate those functions in their outer expression where it should be safe to do so.
 
 
 ## Conditional break points
@@ -47,12 +60,6 @@ The evaluation will break each time a condition is met, so a break will occur mu
    index)
 ```
 
-
-## Skip over lazy functions
-
-`o` (out) will jump out of evaluating an expression.
-
-Use out to jump over evaluating code that has functions generating lazy infinite sequences, such as `range` or `cycle`.  Cider debug will then evaluate those functions in their outer expression where it should be safe to do so.
 
 # References
 
