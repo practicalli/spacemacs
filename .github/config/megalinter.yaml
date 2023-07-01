@@ -35,7 +35,7 @@ ENABLE:
 CREDENTIALS_SECRETLINT_CONFIG_FILE: ".github/config/secretlintrc.json"
 
 MARKDOWN_MARKDOWNLINT_CONFIG_FILE: ".github/config/markdown-lint.jsonc"
-MARKDOWN_MARKDOWNLINT_FILTER_REGEX_EXCLUDE: ".github/pull_request_template.md|CHANGELOG.md|README.md|GLOSSARY.md|java-17-flags.md|abbreviations.md"
+MARKDOWN_MARKDOWNLINT_FILTER_REGEX_EXCLUDE: ".github/pull_request_template.md|CHANGELOG.md|README.md|GLOSSARY.md|java-17-flags.md|abbreviations.md|SUMMARY.md|draft-docs"
 # MARKDOWN_MARKDOWNLINT_DISABLE_ERRORS: true
 MARKDOWN_MARKDOWN_LINK_CHECK_CONFIG_FILE: ".github/config/markdown-link-check.json"
 # MARKDOWN_MARKDOWN_LINK_CHECK_CLI_LINT_MODE: "project"
