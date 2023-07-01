@@ -1,6 +1,6 @@
 # CIDER Debug
 
-Instrument one or more function definitions to use the Cider step debug tool, showing intermittant values from evaluating each expression in turn.
+Instrument one or more expressions or function definitions to use the Cider step debug tool, showing intermittent values from evaluating each form in turn.
 
 <p style="text-align:center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pyIbP4BOGpQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -22,11 +22,28 @@ A debug menu appears above the expression, press `n` to step through each expres
     `C-z` after starting cider-debug to [use `c e i p s` menu keys](https://github.com/syl20bnr/spacemacs/issues/13594) as otherwise they call the Evil normal state commands.  `C-z` to switch back to Evil normal state once debug is complete.
 
 
+??? HINT "#dbg tag to debug a form"
+    `#dbg` tag before a form is the same as calling `, d b` to create breakpoints throughout an expression or function definition
+
+
 ### Skip over lazy functions
 
 `o` (out) will jump out of evaluating an expression.
 
 Use out to jump over evaluating code that has functions generating lazy infinite sequences, such as `range` or `cycle`.  Cider debug will then evaluate those functions in their outer expression where it should be safe to do so.
+
+
+## Debug expressions
+
+Debug an expression in the same way as a function definition.  
+
+!!! INFO "Debug break point scope"
+    Using `, d b` on an expression that calls a function will not add break points to the function being called.
+
+
+## Remove debug instrumentation
+
+Evaluate the function definition or expression to remove the debug instrumentation and all breakpoints.
 
 
 ## Conditional break points
