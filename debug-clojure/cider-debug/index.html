@@ -29,7 +29,7 @@
         <link rel="next" href="../classpath-issues/">
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.13">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
     
     
       
@@ -37,10 +37,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -3422,15 +3422,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#conditional-break-points" class="md-nav__link">
-    Conditional break points
+  <a href="#debug-functions" class="md-nav__link">
+    Debug functions
   </a>
+  
+    <nav class="md-nav" aria-label="Debug functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skip-over-lazy-functions" class="md-nav__link">
+    Skip over lazy functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#skip-over-lazy-functions" class="md-nav__link">
-    Skip over lazy functions
+  <a href="#conditional-break-points" class="md-nav__link">
+    Conditional break points
   </a>
   
 </li>
@@ -5782,15 +5795,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#conditional-break-points" class="md-nav__link">
-    Conditional break points
+  <a href="#debug-functions" class="md-nav__link">
+    Debug functions
   </a>
+  
+    <nav class="md-nav" aria-label="Debug functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#skip-over-lazy-functions" class="md-nav__link">
+    Skip over lazy functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#skip-over-lazy-functions" class="md-nav__link">
-    Skip over lazy functions
+  <a href="#conditional-break-points" class="md-nav__link">
+    Conditional break points
   </a>
   
 </li>
@@ -5827,18 +5853,24 @@
 
 
 <h1 id="cider-debug">CIDER Debug<a class="headerlink" href="#cider-debug" title="Permanent link">λ︎</a></h1>
-<p><code>, d b</code> calls the <code>cider-debug-defn-breakpoint</code> command that sets breakpoints on the expression under the cursor.  If the expression is a function definition, then its name is marked as instrumented by the debug along with any calls to that function.</p>
-<p>A debug menu appears above the expression, press <code>n</code> to step through each expression and see the inline result.</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-cider-debug-menu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure cider debug menu" src="/images/spacemacs-clojure-cider-debug-menu.png" /></a></p>
-<div class="admonition hint">
-<p class="admonition-title">Switch to Emacs Edit mode for full menu</p>
-</div>
-<p><code>C-z</code> after starting cider-debug to <a href="https://github.com/syl20bnr/spacemacs/issues/13594">use <code>c e i p s</code> menu keys</a> as otherwise they call the Evil normal state commands.  <code>C-z</code> to switch back to Evil normal state.</p>
-<p><a class="glightbox" href="https://docs.cider.mx/cider/0.26/_images/cider_debugger.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Cider debugging" src="https://docs.cider.mx/cider/0.26/_images/cider_debugger.gif" /></a></p>
+<p>Instrument one or more function definitions to use the Cider step debug tool, showing intermittant values from evaluating each expression in turn.</p>
 <p style="text-align:center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pyIbP4BOGpQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
+<h2 id="debug-functions">Debug functions<a class="headerlink" href="#debug-functions" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>d</kbd></span> <span class="keys"><kbd>b</kbd></span>  with the cursor over a function definition calls the <code>cider-debug-defn-breakpoint</code> command, setting breakpoints throughout the function definition. </p>
+<p>Evaluate a call to the function, e.g. <code>, e f</code>, to start the cider debug tool.</p>
+<p>A debug menu appears above the expression, press <code>n</code> to step through each expression and see the inline result.</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-debug-menu.png?raw=true" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure cider debug menu" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-debug-menu.png?raw=true" /></a></p>
+<p><a class="md-button" href="https://docs.cider.mx/cider/debugging/debugger.html#keys" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Cider debug key bindings</a> </p>
+<details class="hint">
+<summary>Evil key conflict - switch to Emacs Edit mode for full menu</summary>
+<p><code>C-z</code> after starting cider-debug to <a href="https://github.com/syl20bnr/spacemacs/issues/13594">use <code>c e i p s</code> menu keys</a> as otherwise they call the Evil normal state commands.  <code>C-z</code> to switch back to Evil normal state once debug is complete.</p>
+</details>
+<h3 id="skip-over-lazy-functions">Skip over lazy functions<a class="headerlink" href="#skip-over-lazy-functions" title="Permanent link">λ︎</a></h3>
+<p><code>o</code> (out) will jump out of evaluating an expression.</p>
+<p>Use out to jump over evaluating code that has functions generating lazy infinite sequences, such as <code>range</code> or <code>cycle</code>.  Cider debug will then evaluate those functions in their outer expression where it should be safe to do so.</p>
 <h2 id="conditional-break-points">Conditional break points<a class="headerlink" href="#conditional-break-points" title="Permanent link">λ︎</a></h2>
 <p><code>:break/when</code> metadata on a <code>#dbg</code> directive defines a condition when a breakpoint is triggered, allowing the evaluation to iterate until a desirable point is reached.</p>
 <p>Setting a condition is especially useful when there are many iterations required before reaching a point of issue, for example iterating through a large data set.</p>
@@ -5857,9 +5889,6 @@
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="o">#</span><span class="nv">dbg</span><span class="w"> </span><span class="o">^</span><span class="p">{</span><span class="ss">:break/when</span><span class="w"> </span><span class="p">(</span><span class="nf">odd?</span><span class="w"> </span><span class="nv">index</span><span class="p">)}</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">   </span><span class="nv">index</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="skip-over-lazy-functions">Skip over lazy functions<a class="headerlink" href="#skip-over-lazy-functions" title="Permanent link">λ︎</a></h2>
-<p><code>o</code> (out) will jump out of evaluating an expression.</p>
-<p>Use out to jump over evaluating code that has functions generating lazy infinite sequences, such as <code>range</code> or <code>cycle</code>.  Cider debug will then evaluate those functions in their outer expression where it should be safe to do so.</p>
 <h1 id="references">References<a class="headerlink" href="#references" title="Permanent link">λ︎</a></h1>
 <ul>
 <li><a href="http://endlessparentheses.com/conditional-breakpoints-in-the-cider-debugger.html">Conditional Breakpoints in the Cider debugger</a></li>
@@ -5870,7 +5899,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 25, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 1, 2023</span>
       
     
   </small>
@@ -6025,7 +6054,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b425cdc4.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
