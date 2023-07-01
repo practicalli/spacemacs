@@ -29,7 +29,7 @@ pre-commit-check: lint
 
 lint:  ## Run MegaLinter with custom configuration (node.js required)
 	$(info --------- MegaLinter Runner ---------)
-	npx mega-linter-runner --flavor documentation --release beta --env "'MEGALINTER_CONFIG=.github/config/megalinter.yaml'" --remove-container
+	npx mega-linter-runner --flavor documentation --env "'MEGALINTER_CONFIG=.github/config/megalinter.yaml'" --remove-container
 
 
 lint-fix:  ## Run MegaLinter with custom configuration (node.js required)
