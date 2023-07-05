@@ -14,7 +14,7 @@ Fira Code is a free mono-spaced font with programming ligatures, with specific l
 
 ![Fira Code font programming ligatures for Clojure](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/fira-code-font-clojure-ligatures.png)
 
-++spc++ ++"f"++ ++"e"++ ++"f"++ to open the Spacemacs configuration file and edit the `dotspacemacs-default-font` values
+++spc++ ++"f"++ ++"e"++ ++"d"++ to open the Spacemacs configuration file and edit the `dotspacemacs-default-font` values
 
 ```lisp
    dotspacemacs-default-font '("Fira Code"
