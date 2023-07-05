@@ -28,7 +28,7 @@ Fira Code is a free mono-spaced font with programming ligatures, with specific l
 
 Ubuntu Mono is also a great font to use for code.  This font is available from the [Ubuntu Font Family](http://font.ubuntu.com/) and on all Ubuntu operating systems (and derivatives).
 
-++spc++ ++"f"++ ++"e"++ ++"f"++ to open the Spacemacs configuration file and edit the `dotspacemacs-default-font` values
+++spc++ ++"f"++ ++"e"++ ++"d"++ to open the Spacemacs configuration file and edit the `dotspacemacs-default-font` values
 
 ```lisp
    dotspacemacs-default-font '("Ubuntu Mono"
