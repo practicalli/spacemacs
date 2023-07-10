@@ -27,6 +27,14 @@ Emacs is available for Linux, MacOSX and Windows.  The [Spacemacs Readme suggest
     sudo apt install emacs
     ```
 
+    !!! INFO "vterm compile packages"
+        vterm is compiled during the package install when first starting Spacemacs with the Practicalli Spacemaca Config.
+        
+        Install packages to support compile of vterm
+        ```shell
+        sudo apt install cmake libvterm-bin libtool-bin
+        ```
+
     Additional versions of Emacs are available via the [Ubuntu Emacs Team Personal Package Archive](https://launchpad.net/~ubuntu-elisp/+archive/ubuntu/ppa).
 
     `sudo apt install emacs-snapshot` package to use the latest nightly build of Emacs, although be aware that some things may break.
