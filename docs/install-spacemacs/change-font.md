@@ -49,10 +49,10 @@ Use the Spacemacs Zoom menu to enter a transient state that will let you zoom te
 | ++spc++ ++"z"++ ++"f"++ | Zoom all Emacs frames, including the which-key and helm pop-up buffers |
 | ++spc++ ++"z"++ ++"x"++ | Scale the font of the current buffer                                   |
 
-[![Spacemacs - Zoom Text Transient State - Font Scaling](/images/spacemacs-zoom-text-transient-state-font-scaling.png)](/images/spacemacs-zoom-text-transient-state-font-scaling.png)
+![Spacemacs - Zoom Text Transient State - Font Scaling](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-zoom-text-transient-state-font-scaling.png)
 
 
-[![Spacemacs - Zoom Frame Transient State](/images/spacemacs-zoom-frame-scale-transient-state.png)](/images/spacemacs-zoom-frame-scale-transient-state.png)
+![Spacemacs - Zoom Frame Transient State](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-zoom-frame-scale-transient-state.png)
 
 !!! TIP "Update font size"
     If font or frame size is often changed, edit your `.spacemacs` configuration, `SPC f e d` and change the `:size` setting in `dotspacemacs-default-font`.

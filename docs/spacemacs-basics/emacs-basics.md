@@ -2,7 +2,7 @@
 
 Understanding the basic terminology will help make the most out of Spacemacs and allow very effective use.
 
-![Emacs Terminology - Structure of Emacs](/images/emacs-terminology-structure.png)
+![Emacs Terminology - Structure of Emacs](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/emacs-terminology-structure.png)
 
 | Terminology | Description                                                                                                                                 |
 |-------------|---------------------------------------------------------------------------------------------------------------------------------------------|

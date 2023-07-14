@@ -9,6 +9,6 @@ Here are some simple tweaks to `org-mode` that you may find useful.
 
 If `truncate-line` is what…`dotspacemacs/user-config` section:  …`(add-hook 'org-mode-hook (lambda () (setq truncate-lines t)))`
 
-[![Truncate lines example](/images/spacemacs-truncate-lines-example.png)](/images/spacemacs-truncate-lines-example.png)
+[![Truncate lines example](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-truncate-lines-example.png)](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-truncate-lines-example.png)
 
 Any lines that are truncated have a return arrow symbol in the right hand margin of that line as a visual clue that the line has been wrapped.

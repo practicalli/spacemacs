@@ -2,14 +2,14 @@
 
 ++spc++ opens the Which-key menu providing access to all Spacemacs commands via a mnemonic menu system
 
-![Spacemacs Whichkey SPC menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-whichkey-spc-menu-light.png#only-light)
-![Spacemacs Whichkey SPC menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-whichkey-spc-menu-dark.png#only-dark)
+![Spacemacs Whichkey SPC menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-whichkey-spc-menu-light.png#only-light)
+![Spacemacs Whichkey SPC menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-whichkey-spc-menu-dark.png#only-dark)
 
 
 ++comma++ a context specific menu for the current major mode, i.e. With a Clojure file in the current buffer a Clojure specific menu is displayed
 
-![Spacemacs Whichkey major mode menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-whichkey-clojure-major-mode-menu-light.png#only-light)
-![Spacemacs Whichkey major mode menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-whichkey-clojure-major-mode-menu-dark.png#only-dark)
+![Spacemacs Whichkey major mode menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-whichkey-clojure-major-mode-menu-light.png#only-light)
+![Spacemacs Whichkey major mode menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-whichkey-clojure-major-mode-menu-dark.png#only-dark)
 
 
 !!! INFO "Key combination guide"

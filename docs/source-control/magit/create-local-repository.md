@@ -2,11 +2,11 @@
 
 `SPC g i` creates a local git repository, prompting for root directory in which to create it.
 
-![Spacemacs Magit - create local repository](/images/spacemacs-magit-init.png)
+![Spacemacs Magit - create local repository](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-init.png)
 
 Once magit created the git repository it automatically opens `magit-status`.
 
-![Spacemacs Magit - status](/images/spacemacs-magit-status.png)
+![Spacemacs Magit - status](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-status.png)
 
 
 ## Using Magit Status to create a local repository
@@ -17,4 +17,4 @@ If [`magit-repository-directories` is configured in `.spacemacs`](https://practi
 
 `SPC g i` is the recommended approach to initialize a new git repository once `magit-repository-directories` is set.
 
-![Spacemacs Magit: git status list of existing repositories](/images/spacemacs-magit-git-status-helm-list-of-repositories.png)
+![Spacemacs Magit: git status list of existing repositories](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-git-status-helm-list-of-repositories.png)

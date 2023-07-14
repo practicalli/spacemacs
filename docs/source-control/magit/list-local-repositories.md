@@ -2,7 +2,7 @@
 
 `SPC g L` will list all the repositories along with basic status information (branches, dirty, etc). This is very useful as the number of created or cloned repositories grows on your computer.
 
-![Magit: List Git repositories on your computer](/images/spacemacs-magit-list-repositories.png)
+![Magit: List Git repositories on your computer](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-list-repositories.png)
 
 You first need to tell Magit where your repositories are on your computer.
 
@@ -24,4 +24,4 @@ The number represents the depth of subdirectories in which magit searches for Gi
 >
 >  If you use `SPC g s` on a project that has no git version control, magit will prompt you for a git repository.  Enter `.` to initialise a new git repository in the current project.  Magit will prompt you in the mini-buffer to confirm you wish to create this git repository.
 >
-![Spacemacs Magit: git status list of existing repositories](/images/spacemacs-magit-git-status-helm-list-of-repositories.png)
+![Spacemacs Magit: git status list of existing repositories](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-git-status-helm-list-of-repositories.png)

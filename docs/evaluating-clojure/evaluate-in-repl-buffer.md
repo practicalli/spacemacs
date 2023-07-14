@@ -31,13 +31,13 @@ Type in expressions at the REPL prompt and press `RET` to evaluate them.
 
 `, s f` will send the current expression to the REPL to be evaluated.
 
-![Spacemacs - Clojure - Send expressions to REPL](/images/spacemacs-clojure-cider-send-expression-to-repl.png)
+![Spacemacs - Clojure - Send expressions to REPL](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-send-expression-to-repl.png)
 
 To call a function, it must be in the namespace the REPL is currently set to.  Or you can send a function definition to the REPL before and then you are able to call that function.
 
 `, s f` will send the current function definition to the REPL.  Then you can either call that function from the REPL buffer or use `, e f` to send an expression that calls the function to the REPL buffer.
 
-![Spacemacs - Clojure - Send function definition then function call to REPL](/images/spacemacs-clojure-cider-send-to-repl-namespace-user.png)
+![Spacemacs - Clojure - Send function definition then function call to REPL](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-send-to-repl-namespace-user.png)
 
 
 ## Changing the namespace in the REPL buffer
@@ -46,24 +46,24 @@ The `in-ns` function will change the REPL namespace to that specified in its arg
 
 `(in-ns 'spacemacs-workshop.core)` in the REPL buffer will change to the `spacemacs-workshop.core` namespace.
 
-![Spacemacs - Clojure REPL - Change to `spacemacs-workshop.core`](/images/spacemacs-clojure-repl-change-namespace-spacemacs-workshop.png)
+![Spacemacs - Clojure REPL - Change to `spacemacs-workshop.core`](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-repl-change-namespace-spacemacs-workshop.png)
 
 
 ## REPL Buffer shortcut menu
 
 `,` at the start of a line in Evil Insert state will open a list of command shortcuts for the REPL.
 
-![Spacemacs - Clojure REPL - shortcut menu](/images/spacemacs-cider-repl-command-shortcuts.png)
+![Spacemacs - Clojure REPL - shortcut menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-cider-repl-command-shortcuts.png)
 
 
 ### Clojure send to REPL menu
 
-![Spacemacs Clojure REPL send to menu](/images/spacemacs-clojure-repl-send-to-menu.png)
+![Spacemacs Clojure REPL send to menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-repl-send-to-menu.png)
 
 
 ### Clojure send to REPL - quit sub menu
 
-![Spacemacs Clojure REPL send to menu](/images/spacemacs-clojure-repl-send-to-menu-quit.png)
+![Spacemacs Clojure REPL send to menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-repl-send-to-menu-quit.png)
 
 !!! HINT "Clojure REPL tools"
     `, s u` adds the REPL utility functions

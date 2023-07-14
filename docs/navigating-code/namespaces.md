@@ -2,7 +2,7 @@
 
 `, g n` (`cider-find-ns`) lists the namespaces currently loaded into the running REPL.  Type a pattern to narrow the list.  `C-j` and `C-k` to navigate the list.  `RET` to open the namespace in the current buffer.
 
-![Spacemacs Clojure - Cider find namespace](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-find-ns.png)
+![Spacemacs Clojure - Cider find namespace](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-find-ns.png)
 
 ## Namespaces via Projectile
 
@@ -19,7 +19,7 @@ Type in a pattern to narrow the list. `C-j` and `C-k` to navigate the list.
 
 `RET` to jump to the symbol, opening the relevant namespace in the current buffer.
 
-![Spacemacs Helm LSP workspace symbols - navigate to symbols across a project](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-lsp-workspace-symbols.png)
+![Spacemacs Helm LSP workspace symbols - navigate to symbols across a project](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-helm-lsp-workspace-symbols.png)
 
 
 ## Browse namespace symbol documentation
@@ -28,7 +28,7 @@ Browse namespace symbols by navigating through the definitions in a namespace (`
 
 `, h n` (`cider-browse-ns`) lists all namespaces loaded into the REPL in the current project.  Namespaces in the project that have not been evaluated, directly or via a require, will not be in the list.
 
-![Clojure - Namespaces - browse-ns](/images/spacemacs-clojure-namespace-browse-ns.png)
+![Clojure - Namespaces - browse-ns](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-namespace-browse-ns.png)
 
 `RET` to show the symbols in the namespace
 
@@ -44,11 +44,11 @@ Browse namespace symbols by navigating through the definitions in a namespace (`
 | `browse-ns` | Browse namespace                             |
 | `ns`        | Switch to namespace (lists known namespaces) |
 
-![Clojure REPL commands - namespace](/images/spacemacs-clojure-repl-command-ns.png)
+![Clojure REPL commands - namespace](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-repl-command-ns.png)
 
 
 ### Using code to change the namespace
 
 [`in-ns`](https://clojuredocs.org/clojure.core/in-ns) function will set the namespace for the REPL.  If that namespace does not exist, then the namespace is created in the current REPL.
 
-![Clojure REPL - change namespace](/images/spacemacs-clojure-repl-change-namespace-spacemacs-workshop.png)
+![Clojure REPL - change namespace](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-repl-change-namespace-spacemacs-workshop.png)

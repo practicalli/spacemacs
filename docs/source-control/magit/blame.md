@@ -7,4 +7,4 @@
 `RET` will open the commit details in a pop-up buffer
 
 
-![Spacemacs Git Blame with Commit details](/images/spacemacs-magit-blame-commit.png)
+![Spacemacs Git Blame with Commit details](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-blame-commit.png)

@@ -10,7 +10,7 @@ Use `C-j` and `C-k` to move down and up through the search results.
 
 `M-n` and `M-p` will scroll through the search patterns whenever the search pop-up window is open
 
-![Spacemacs Helm-Ag ripgrep pattern search results](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-pattern-search.png)
+![Spacemacs Helm-Ag ripgrep pattern search results](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-pattern-search.png)
 
 > #### Hint::Replacing text across a project
 > Use search results to [replace text across a project](/spacemacs-basics/evil-tools/replacing-text-across-projects.md).
@@ -44,7 +44,7 @@ Option flags can be passed to the search tool binary to tailor the results retur
 
 Including options without their correct argument will show a warning, e.g. the `-g` option without a glob pattern or `-A` without a number.  Once the option has a valid value the error should be replaced by search results.
 
-![Spacemacs Helm-Ag globbing option error without pattern](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-project-wide-search-options-error.png)
+![Spacemacs Helm-Ag globbing option error without pattern](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-project-wide-search-options-error.png)
 
 
 ### Searching specific files
@@ -55,11 +55,11 @@ Use the `-g` option for a filename to search (globbing), or `-g!` for a filename
 
 `-g*.clj map` shows only results of searching for `map` from files ending in `.clj`
 
-![Spacemacs Helm-Ag ripgrep globbing .clj files](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-clj.png)
+![Spacemacs Helm-Ag ripgrep globbing .clj files](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-clj.png)
 
 `-g!*.md map` will search for `map` for all files except those ending in `.md`
 
-![Spacemacs Helm-Ag ripgrep globbing not .md files](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-not-md.png)
+![Spacemacs Helm-Ag ripgrep globbing not .md files](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-not-md.png)
 
 
 ### Showing more lines for each match
@@ -70,7 +70,7 @@ If there are multiple pattern matches in the same file within the scope of extra
 
 `SPC /` with a pattern of `-A4 layout` will show each line containing the pattern layout and 4 lines after it.
 
-![Spacemacs Helm-Ag globbing option error without pattern](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-search-options-additional-lines.png)
+![Spacemacs Helm-Ag globbing option error without pattern](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-search-options-additional-lines.png)
 
 This option can also be combined with the `-g` option above.
 

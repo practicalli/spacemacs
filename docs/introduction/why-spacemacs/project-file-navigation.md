@@ -16,7 +16,7 @@ Some of Projectile's features:
 * regenerate project etags or gtags (requires ggtags).
 * browse dirty version controlled projects
 
-[![Spacemacs - Projectile](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-projectile-menu.png)](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-projectile-menu.png)
+[![Spacemacs - Projectile](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/menus/spacemacs-projectile-menu.png)](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/menus/spacemacs-projectile-menu.png)
 
 
 ## Treemacs
@@ -38,7 +38,7 @@ Treemacs is the default visual file browser in Spacemacs, providing a way to vie
 
 Ranger is great for quickly looking through files, thanks to its preview option.
 
-![Spacemacs - Ranger directory and file navigation](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-ranger-navigate-preview.png)
+![Spacemacs - Ranger directory and file navigation](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-ranger-navigate-preview.png)
 
 [Discover more about ranger](/spacemacs-basics/working-with-projects/ranger.md) in the working with projects section.
 

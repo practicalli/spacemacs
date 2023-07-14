@@ -11,7 +11,7 @@ As the popup list can be narrowed by typing part or all of the name of character
 | `SPC i u`   | Loads unicode characters and lists them in a popup window.  Uses helm completion |
 
 
-[![Spacemacs Unicode Characters](/images/spacemacs-unicode-popup.png)](/images/spacemacs-unicode-popup.png)
+![Spacemacs Unicode Characters](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-unicode-characters-heml-ucs.png)
 
 
 ## Classic Emacs Unicode 8

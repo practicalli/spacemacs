@@ -53,4 +53,4 @@ Set the namespace used when starting the REPL in the `project.clj` file by addin
 
 The REPL buffer contains a detailed welcome message describing how to use the basics of the REPL.
 
-![Spacemacs Clojure REPL Buffer](/images/spacemacs-clojure-cider-repl-buffer.png )
+![Spacemacs Clojure REPL Buffer](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-repl-buffer.png )

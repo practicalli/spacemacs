@@ -51,7 +51,7 @@ For each source code file in `src` there should be a corresponding file in test 
 
 For example, code to test the `src/codewars/rock_paper_scissors.clj` is saved in the file `src/codewars/rock_paper_scissors_test.clj` file.
 
-![Clojure project structure - src and test branches](/images/clojure-project-structure-src-test-tree.png)
+![Clojure project structure - src and test branches](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/clojure-project-structure-src-test-tree.png)
 
 !!! HINT "Create Projects from templates"
     Templates typically include a parallel `test` and `src` directory structure.  The `clj-new` tool has build it templates (app, lib) and will create `src` and `test` directories in the projects it creates.

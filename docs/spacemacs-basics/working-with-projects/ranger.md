@@ -4,7 +4,7 @@ Ranger is a very fast and lightweight file manager that is great for previewing 
 
 Ranger is not part of Spacemacs by default, so the simplest way is to add the [ranger layer](http://spacemacs.org/layers/+tools/ranger/README.html).
 
-![Spacemacs - Ranger file manager](/images/spacemacs-ranger-example-book.png)
+![Spacemacs - Ranger file manager](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-ranger-example-book.png)
 
 ## Add ranger layer to Spacemacs
 

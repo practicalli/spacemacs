@@ -10,7 +10,7 @@ When installing Spacemacs you have the choice of editor styles
 | On the planet Emacs in the Holy control tower (Emacs) | Emacs only editing (No Vim states)                                                         |
 
 <!-- TODO: Add background to spacemacs-states-vim-emacs graphic for dark theme readability -->
-![Spacemacs states](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/concepts/spacemacs-states-vim-emacs.png){target=_blank}
+![Spacemacs states](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/concepts/spacemacs-states-vim-emacs.png){target=_blank}
 
 Evil provide Vim style editing across all languages and modes in Emacs, simplifying the editing of files and keyboard shortcuts (keybindings)
 

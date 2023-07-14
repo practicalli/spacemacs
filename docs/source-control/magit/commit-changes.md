@@ -4,7 +4,7 @@
 
 The Magit commit menu can be used to create new commits at the HEAD of the commit history.
 
-![Spacemacs Magit - commit menu](/images/spacemacs-magit-commit-menu.png)
+![Spacemacs Magit - commit menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-commit-menu.png)
 
 Changing a commit generates a new SHA identity, creating a commit in the history, replacing the current HEAD commit.
 
@@ -28,7 +28,7 @@ Two new buffers open
 * ++comma++ ++comma++ to create the commit
 * ++comma++ ++"k"++ to cancel the commit (leaves changes staged)
 
-![Spacemacs Magit - commit or cancel](/images/spacemacs-magit-commit-message-menu.png)
+![Spacemacs Magit - commit or cancel](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-commit-message-menu.png)
 
 
 ### Writing Commit messages
@@ -37,7 +37,7 @@ Type in a suitable commit message that explains the purpose and value of this co
 
 68 characters is the recommended maximum length of the first line of the commit message.  At 69 characters onward they change color to give a visual guide to the maximum length.  In the body, lines are automatically wrapped once a space is typed after a word that the maximum length.
 
-![Spacemacs Magit - message buffer](/images/spacemacs-magit-commit-message-buffer.png)
+![Spacemacs Magit - message buffer](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-commit-message-buffer.png)
 
 
 ### Commit message history
@@ -162,7 +162,7 @@ The top buffer shows the local Git log, listing all the commit history.
 
 The bottom buffer shows the magit-diff output, so you can see all the changes of the current commit.
 
-![Spacemacs Magit - Commit Squash](/images/spacemacs-magit-commit-squash-example.png)
+![Spacemacs Magit - Commit Squash](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-commit-squash-example.png)
 
 Move the cursor to the commit you wish to squash into its previous commit
 

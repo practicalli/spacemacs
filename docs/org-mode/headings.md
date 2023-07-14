@@ -8,7 +8,7 @@ Organise text content with multiple levels of headings.  Focus on sections by ex
 
 ++"o"++ on a heading creates a new line automatically indented for text, to which a list item, `-` or check box list, `- [ ]`, can be added.
 
-![Spacemacs Org-mode headings](/images/spacemacs-orgmode-headings-example.png)
+![Spacemacs Org-mode headings](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-orgmode-headings-example.png)
 
 
 !!! HINT "Toggle checkboxes"

@@ -21,9 +21,9 @@ The default refactor tools are part of the `clojure-mode` package and work even 
 | ++comma++ ++"r"++ ++"i"++          | cycle between `if` and `if-not`                                           |
 | ++comma++ ++"r"++ ++"p"++          | cycle privacy of vars, `defn`/`defn-` & `def`/`def ^:private**            |
 
-<!-- ![Spacemacs Clojure layer - clojure-mode refactor menu](/images/spacemacs-clojure-refactor-menu-clojure-mode.png) -->
-<!-- ![Spacemacs Clojure layer - clojure-mode refactor menu](/images/spacemacs-clojure-refactor-menu-clojure-mode-add.png) -->
-<!-- ![Spacemacs Clojure layer - clojure-mode refactor menu](/images/spacemacs-clojure-refactor-menu-clojure-mode-cycle-clean-convert.png) -->
-<!-- ![Spacemacs Clojure layer - clojure-mode refactor menu](/images/spacemacs-clojure-refactor-menu-clojure-mode-show-sort-stop.png) -->
-<!-- ![Spacemacs Clojure layer - clojure-mode refactor menu](/images/spacemacs-clojure-refactor-menu-clojure-mode-thread.png) -->
-<!-- ![Spacemacs Clojure layer - clojure-mode refactor menu](/images/spacemacs-clojure-refactor-menu-clojure-mode-unwind-update.png) -->
+<!-- ![Spacemacs Clojure layer - clojure-mode refactor menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-refactor-menu-clojure-mode.png) -->
+<!-- ![Spacemacs Clojure layer - clojure-mode refactor menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-refactor-menu-clojure-mode-add.png) -->
+<!-- ![Spacemacs Clojure layer - clojure-mode refactor menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-refactor-menu-clojure-mode-cycle-clean-convert.png) -->
+<!-- ![Spacemacs Clojure layer - clojure-mode refactor menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-refactor-menu-clojure-mode-show-sort-stop.png) -->
+<!-- ![Spacemacs Clojure layer - clojure-mode refactor menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-refactor-menu-clojure-mode-thread.png) -->
+<!-- ![Spacemacs Clojure layer - clojure-mode refactor menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-refactor-menu-clojure-mode-unwind-update.png) -->

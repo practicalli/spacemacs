@@ -15,7 +15,7 @@ Enable strict mode to prevent the deletion of parens that would leave them unbal
 
 ++spc++ ++"f"++ ++"e"++ ++"d"++ to edit the Spacemacs configuration file and update `dotspacemacs-smartparens-strict-mode` to have a value of `t`
 
-![Spacemacs - Configuration - smart parents strict mode](/images/spacemacs-configuration-smart-parens-strict-mode.png)
+![Spacemacs - Configuration - smart parents strict mode](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-configuration-smart-parens-strict-mode.png)
 
 !!! HINT "Smartparens supports all languages"
     Smartparens is a newer implementation of _paredit_ package and provides support for all languages, not just Clojure. [Paredit and smartparens](https://github.com/Fuco1/smartparens/wiki/Paredit-and-smartparens) has a comparison of these two packages.

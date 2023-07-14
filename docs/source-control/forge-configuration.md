@@ -45,7 +45,7 @@ machine api.github.com login practicalli^forge password 01personal02access03toke
 
 ++spc++ ++"a"++ ++y++ ++"e"++ to call `epa-encrypt-file`
 
-![Spacemacs Encryption - eazypg encrypt file - authinfo](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-encryption-eazypg-encript-file-authinfo.png)
+![Spacemacs Encryption - eazypg encrypt file - authinfo](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-encryption-eazypg-encript-file-authinfo.png)
 
 Select recipients for encryption prompt, so select a PGP key to encrypt the file with.
 
@@ -65,7 +65,7 @@ Finally, delete the `~/.authinfo` file, so the token is no longer stored as plai
 !!! INFO "Without a PGP key"
     When the recipients for encryption prompt appears, select `OK` if no keys have been created. At the next prompt, enter the password to encrypt the file.
 
-![Spacemacs - Magit Forge - epa-encrypt-file - select account](/spacemacs/spacemacs/images/spacemacs-magit-forge-pgp-encrypt-authinfo-pgp.png)
+![Spacemacs - Magit Forge - epa-encrypt-file - select account](/spacemacs/spacemacshttps://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-forge-pgp-encrypt-authinfo-pgp.png)
 
 
 #### Encrypt and decrypt via terminal CLI

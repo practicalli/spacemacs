@@ -19,7 +19,7 @@
 
 ++spc++ ++"f"++ ++"s"++ to save the journal entry.
 
-![Spacemacs org journal - example journal entry](/images/spacemacs-org-journal-example-day-entry.png)
+![Spacemacs org journal - example journal entry](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-org-journal-example-day-entry.png)
 
 !!! HINT "Create a check box list"
     `-` is a list and `- [ ]` adds a checkbox to the list. ++comma++ ++t++ ++"c"++ toggles the mark in the checkbox, ticked or empty, for the current line.
@@ -52,7 +52,7 @@ Add a cookie to a header containing tasks to show the number or percentage of ta
 
 ++ctrl+c+ctrl+"c"++ will force an update of the checkbox totals in the cookie for the current heading.
 
-![Spacemacs Org-mode Journal - list checkbox tracking cookies](/images/spacemacs-org-mode-journal-list-checkbox-tracking-cookie.png)
+![Spacemacs Org-mode Journal - list checkbox tracking cookies](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-org-mode-journal-list-checkbox-tracking-cookie.png)
 
 
 ## Configure org-journal

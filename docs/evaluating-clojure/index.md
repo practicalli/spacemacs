@@ -2,7 +2,7 @@
 
 Practicalli recommends evaluating Clojure expressions in the source code buffer, which displays the results next to the expression until you move the cursor.
 
-![Spacemacs - Clojure evaluation in source code buffer](/images/spacemacs-cider-evaluate-source-code-buffer-defun.png)
+![Spacemacs - Clojure evaluation in source code buffer](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-cider-evaluate-source-code-buffer-defun.png)
 
 ++comma++ ++"e"++ ++"f"++ evaluates the top-level expression at cursor.
 
@@ -32,7 +32,7 @@ Pretty Print is a common term for displaying code and evaluation results in an e
 
 ++comma++ ++"e"++ menu provides many different ways of evaluating parts of an expression, or a complete expression.  ++meta+enter++ ++"e"++ in holy mode.
 
-![Spacemacs - Clojure - Evaluate menu](/images/spacemacs-clojure-evaluate-menu.png)
+![Spacemacs - Clojure - Evaluate menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-evaluate-menu.png)
 
 
 | Evil Normal                              | Description                                                       |

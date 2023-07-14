@@ -1,6 +1,6 @@
 # Evil editing states
 
-![Spacemacs States](/images/spacemacs-states-vim.png)
+![Spacemacs States](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-states-vim.png)
 
 Each states allows keys to have different behaviour, helping minimise the cognitive load and quickly building muscle memory for very powerful actions.
 

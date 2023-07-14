@@ -22,14 +22,14 @@ Navigating the recent commits list on the magit status buffer or viewing the log
 
 ++shift+"o"++ to initiate a reset and choose the scope of the reset to carry out (commit, staging, working directory).
 
-![Spacemacs Magit reset via recent commits list](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-reset-via-recent-commits-list.png)
+![Spacemacs Magit reset via recent commits list](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-reset-via-recent-commits-list.png)
 
 
 ## Specifying a commit to reset to
 
 Specify or select where to reset the commit history to
 
-![Spacemacs Magit - revert master to HEAD~1](/images/spacemacs-magit--reset-to-head-1.png)
+![Spacemacs Magit - revert master to HEAD~1](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit--reset-to-head-1.png)
 
 | Reset HEAD to | Description                          |
 |---------------|--------------------------------------|

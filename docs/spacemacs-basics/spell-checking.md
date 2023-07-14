@@ -4,7 +4,7 @@ The `spell-checking` layer provides 'on-the-fly' spell checking, highlighting in
 
 `SPC S` is the spell check menu.
 
-![Spacemacs Spelling menu](/images/spacemacs-spelling-menu.png)
+![Spacemacs Spelling menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-spelling-menu.png)
 
 
 ## Spell check the current word

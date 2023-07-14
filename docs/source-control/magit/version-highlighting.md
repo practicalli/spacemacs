@@ -4,7 +4,7 @@ Fringe markers show the difference between the working copy and the last commit.
 
 `SPC T d` toggles git fringe marks to indicate changes between working copy and latest commit.  Default is off.
 
-![Spacemacs - Magit - Fringe markers](/images/spacemacs-magit-fringe-markers.png)
+![Spacemacs - Magit - Fringe markers](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-fringe-markers.png)
 
 To display fringe marks by default, add the following to the `dotspacemacs-configuration-layers` in your `.spacemacs` file
 
@@ -29,7 +29,7 @@ See [version control layer configuration](https://develop.spacemacs.org/layers/+
 
 `SPC g r` enters Smeargle transient state
 
-![Spacemacs - Versioning - Smeargle transient state menu](/images/spacemacs-versioning-smeargle-transient-state-menu.png)
+![Spacemacs - Versioning - Smeargle transient state menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-versioning-smeargle-transient-state-menu.png)
 
 TODO: describe the benefit of this transient state.
 

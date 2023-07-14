@@ -1,7 +1,7 @@
 # Evil Z menu
 `z` in normal mode opens a menu of convenient utilities
 
-[![Spacemacs Vim Normal - zoom menu](/images/spacemacs-vim-normal-zoom-menu.png)](/images/spacemacs-vim-normal-zoom-menu.png)
+![Spacemacs Vim Normal - zoom menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-vim-normal-zoom-menu.png)
 
 
 ## Folding code, comments and other content

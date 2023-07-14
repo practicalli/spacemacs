@@ -29,4 +29,4 @@ Make the changes to the highlighted text and all instances of that text will cha
 
 For example, if you have used a call to `reduce` instead of `reductions` or other similarly named functions, pressing `TAB` with the cursor on `reduce` will display a popup listing alternative functions
 
-![Spacemacs - refactor function call name using the TAB key](/images/spacemacs-refactor-function-call-tab.png)
+![Spacemacs - refactor function call name using the TAB key](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-refactor-function-call-tab.png)

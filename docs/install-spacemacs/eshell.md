@@ -30,7 +30,7 @@ The shell popup is configured in the `dotspacemacs-configure-layers` section of 
 
 Practicalli created a custom Eshell prompt.  The code can be found in the [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d/blob/master/init.el) configuration, in the `dotspacemacs/user-config` section.
 
-![Spacemacs Eshell custom prompt](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-shell-poppup.png)
+![Spacemacs Eshell custom prompt](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-shell-poppup.png)
 
 
 ## Configure shell to use multi-term

@@ -46,7 +46,7 @@ The most commonly used key bindings for multiple cursors
 
 `g r` shows the full menu
 
-![Spacemacs G menu multiple cursor commands](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-g-menu-multiple-cursors.png)
+![Spacemacs G menu multiple cursor commands](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/menus/spacemacs-g-menu-multiple-cursors.png)
 
 > #### TODO::Add video of most commonly used features
 

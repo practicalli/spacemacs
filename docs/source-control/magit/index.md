@@ -8,13 +8,13 @@ Magit can push and pull changes with [remote repositories](remote-repositories/)
 
 ++spc++ ++"g"++ opens the Git menu.
 
-[Spacemacs Git menu](/images/spacemacs-git-menu.png)
+[Spacemacs Git menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-git-menu.png)
 
 ++spc++  ++"g"++++"s"++ is the equivalent of `git status` and opens the Magit client, providing full control over local and remote Git repositories.
 
 ++question++ shows the top level command menu in the Magit status buffer.
 
-![Spacemacs Magit help menu](/images/spacemacs-magit-help-menu.png)
+![Spacemacs Magit help menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-help-menu.png)
 
 
 ## Magit overview

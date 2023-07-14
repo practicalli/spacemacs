@@ -21,7 +21,7 @@ Select the **Cherry upstream** - the branch that would receive the commits (cher
 
 A list of commits, 'cherries', are show to help narrow down which commits could be cherry picked.
 
-![Spacemacs Magit Cherry Picking - list of cherries](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-cherries.png)
+![Spacemacs Magit Cherry Picking - list of cherries](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-cherry-picking-cherries.png)
 
 > `A` with the point on one of the cherries, or with one or more cherries selected, will start the Applying of commits
 
@@ -37,7 +37,7 @@ Navigate to the branch and commit (or commits) to cherry pick.  Use visual selec
 
 `A` starts the apply menu to start the cherry picking process.  `A` is also used to open the transient Apply menu, to continue skip or abort the cherry picking.
 
-![Spacemacs Magit cherry picking - Apply menu and options](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-apply-menu.png)
+![Spacemacs Magit cherry picking - Apply menu and options](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-cherry-picking-apply-menu.png)
 
 `d` to donate the selected cherry commits to another branch
 
@@ -52,7 +52,7 @@ The Magit status buffer shows a cherry-picking progress section if the selected 
 
 Files that contain merge conflicts will be listed under unstaged changes
 
-![Spacemacs Magit cherry picking merge conflict - cherry picking progress](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-merge-conflict-show-progress-unmerged-files.png)
+![Spacemacs Magit cherry picking merge conflict - cherry picking progress](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-cherry-picking-merge-conflict-show-progress-unmerged-files.png)
 
 `RET` to open file for editing in a buffer and resolve the conflicting change
 
@@ -64,7 +64,7 @@ Files that contain merge conflicts will be listed under unstaged changes
 
 `A` to open the Apply action menu, `A` to continue with the apply of cherries
 
-![Spacemacs Magit cherry picking - Apply actions menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-actions-menu.png)
+![Spacemacs Magit cherry picking - Apply actions menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-cherry-picking-actions-menu.png)
 
 Staged changes require committing, so continuing the Apply will open a commit message buffer
 
@@ -81,7 +81,7 @@ The cherry commits will be automatically committed, unless there is a conflict i
 
 Diff 3 presentation of merge conflicts displays a common parent (if one exists) between the two changes in conflict.
 
-![Spacemacs Magit unstaged change with diff3 configuration showing parent of conflicting changes](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png)
+![Spacemacs Magit unstaged change with diff3 configuration showing parent of conflicting changes](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png)
 
 > [Git configuration](/source-control/git-configuration.md) details how to add diff3 merge support along with many other useful settings.
 

@@ -2,7 +2,7 @@
 
 Narrowing displays just a part of the current buffer you are working with, allowing you to carry out some very specific editing.
 
-[![Spacemacs](/images/spacemacs-narrow-numbers-menu.png)](/images/spacemacs-narrow-numbers-menu.png)
+![Spacemacs](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-narrow-numbers-menu.png)
 
 
 Typical uses are to select a region or a function definition to narrow on.

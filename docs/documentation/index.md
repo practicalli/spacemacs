@@ -8,7 +8,7 @@ View the docstring documentation for Clojure functions (and vars) and Javadoc fo
 
 ++comma++ ++"h"++ ++"j"++ open Java docs in a web browser, `cider-javadoc`
 
-![Spacemacs Clojure documentation](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-doc-defn.png)
+![Spacemacs Clojure documentation](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-doc-defn.png)
 
 
 ## LSP Documentation
@@ -17,4 +17,4 @@ View the docstring documentation for Clojure functions (and vars) and Javadoc fo
 
 When this is a Clojure function then examples of use from [clojuredocs.org](https://clojuredocs.org/) are shown.
 
-![LSP describe and point](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-lsp-clojure-describe-at-point-inc.png)
+![LSP describe and point](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-lsp-clojure-describe-at-point-inc.png)

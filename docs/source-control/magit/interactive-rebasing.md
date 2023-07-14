@@ -5,7 +5,7 @@ During the interactive rebasing you can use other Git commands such as Amend, Wr
 
 > Before rebasing, any uncommitted changes should be stashed or deleted.
 
-![Spacemacs Magit Rebase menu](/images/spacemacs-magit-rebase-menu.png)
+![Spacemacs Magit Rebase menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-rebase-menu.png)
 
 <!-- Editing required for this video -->
 <!-- {% youtube %} -->

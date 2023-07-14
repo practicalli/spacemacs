@@ -38,7 +38,7 @@ A practical guide to Spacemacs, a community driven Emacs configuration that make
 
 Practicalli Spacemacs.d configuration uses a light theme and the simplified doom mode line which again can be easily changed.
 
-![Spacemacs Practicalli/spacemacs.d configuration - screenshot](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-example-buffers-bank-account-spec.png){ loading=lazy }
+![Spacemacs Practicalli/spacemacs.d configuration - screenshot](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-example-buffers-bank-account-spec.png){ loading=lazy }
 
 
 ## Navigate the book

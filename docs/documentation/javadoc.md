@@ -2,7 +2,7 @@
 
 ++comma++ ++"h"++ ++"j"++ shows javadoc information for a Java method or class, opening the relevant page on the Oracle website for Java.
 
-![Spacemacs Clojure - Java docs website](/images/spacemacs-clojure-docs-java-docs-website.png)
+![Spacemacs Clojure - Java docs website](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-docs-java-docs-website.png)
 
 
 ## Include Java Sources
@@ -26,11 +26,11 @@ The alias assumes the sources are located at `/usr/lib/jvm/openjdk-17/lib/src.zi
 
 > Clojure LSP hijacks the `, g g` key binding, so use `SPC SPC clj-find-var` instead.
 
-![Spacemacs Clojure - find Java sources](/images/spacemacs-clojure-java-find-var.png)
+![Spacemacs Clojure - find Java sources](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-java-find-var.png)
 
 Selecting a specific Java package (namespace) will open the  Java source code in a buffer
 
-![Spacemac Clojure - Java source code example](/images/spacemacs-clojure-find-var-java-source-code.png)
+![Spacemac Clojure - Java source code example](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-find-var-java-source-code.png)
 
 
 ## Clojure LSP Java Sources

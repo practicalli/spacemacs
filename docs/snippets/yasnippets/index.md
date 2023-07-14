@@ -23,7 +23,7 @@ The [clojure layer](https://develop.spacemacs.org/layers/+lang/clojure/README.ht
 
 Snippets can be included in the auto-complete pop-up menu.
 
-![Spacemacs - Snippets - Web html link](/images/spacemacs-auto-completion-snippets-html-link.png)
+![Spacemacs - Snippets - Web html link](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-auto-completion-snippets-html-link.png)
 
 ++tab++ to navigate through the list of menu items.
 

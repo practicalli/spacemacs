@@ -134,7 +134,7 @@ Remember to `SPC b R` (`revert-buffer`) on an existing project buffer, or open a
 
 Add `:env/test` directly after the `-M` flag and before the `:cider/nrepl` alias
 
-![Spacemacs CIDER configuration - add Clojure CLI tools alias to cider-jack-in command](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-alias-env-test.png)
+![Spacemacs CIDER configuration - add Clojure CLI tools alias to cider-jack-in command](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-alias-env-test.png)
 
 > `SPC u` is the Spacemacs equivalent of `C-u` in Emacs.
 
@@ -143,4 +143,4 @@ Add `:env/test` directly after the `-M` flag and before the `:cider/nrepl` alias
 
 `SPC b m` opens the messages buffer and the full command should be shown in the messages history.
 
-![Spacemacs Clojure - Cider jack-in command in message buffer](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-jack-in-command-in-message-buffer.png)
+![Spacemacs Clojure - Cider jack-in command in message buffer](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-jack-in-command-in-message-buffer.png)

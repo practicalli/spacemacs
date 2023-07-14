@@ -4,7 +4,7 @@
 
 Easily navigate backwards and forwards through the commit history of a file under Git Version Control. The buffer shows the file as it was in each change you select.
 
-[![Spacemacs Git Timemachine Menu](/images/spacemacs-git-timemachine-menu.png)](/images/spacemacs-git-timemachine-menu.png)
+![Spacemacs Git Timemachine Menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-git-timemachine-menu.png)
 
 !!! HINT "Positioning the buffer content"
     Timemachine seems to work best when you have all the text visible in a buffer or you roughly know where the changes are in the file as you move between commits.
@@ -28,4 +28,4 @@ Use the following keys to navigate through all the commits for the current file
 
 `SPC SPC customize [git-timemachine]`.
 
-[![Spacemacs Git Timemachine - Customize](/images/spacemacs-git-timemachine-customize.png)](/images/spacemacs-git-timemachine-customize.png)
+![Spacemacs Git Timemachine - Customize](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-git-timemachine-customize.png)

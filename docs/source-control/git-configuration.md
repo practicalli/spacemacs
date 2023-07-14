@@ -17,7 +17,7 @@ git config --global user.email ***+github-account@noreploy.github.com
 
 These commands update the `[user]` section of the Git configuration file, automatically creating that file if it does not exist.
 
-![Git Configuration file - user name and email](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-git-configuration-user-private-email.png)
+![Git Configuration file - user name and email](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-git-configuration-user-private-email.png)
 
 ### Using a private email address
 
@@ -123,4 +123,4 @@ This command adds a `conflictstyle` entry in the `[merge]` section of the Git co
 
 Magit supports the Diff3 standard, so a common parent will be shown when this feature is enabled.
 
-![Git Diff3 standard supported by Magit in Spacemacs](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png)
+![Git Diff3 standard supported by Magit in Spacemacs](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png)

@@ -8,7 +8,7 @@ Magit enables very fine grain selection when staging changes.  A file, a hunk or
 
 ++"u"++ to unstage the current file, hunk or selected region in the **staged changes** section. ++u++ to unstage everything (from anywhere in the Magit Status buffer).
 
-![Spacemacs Magit Status - staging files](/images/spacemacs-magit-status-staging-untracked-unstaged-staged-changes.png)
+![Spacemacs Magit Status - staging files](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-status-staging-untracked-unstaged-staged-changes.png)
 
 ++tab++ to expand a section, eg. a file expands to git hunks, hunks expand to lines in the hunk.  ++shift+tab++ to collapse a section.
 

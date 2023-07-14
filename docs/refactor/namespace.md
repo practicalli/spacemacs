@@ -14,7 +14,7 @@ Refactor `ns` forms using `clojure-mode`, meaning these refactor commands work e
 
 When there are more than a few required namespaces, it can be valuable to group namespaces by their purpose rather than alphabetically.
 
-![Spacemacs Clojure - ns namespace required grouped by purpose](/images/spacemacs-clojure-ns-form-requires-grouped-by-purpose.png)
+![Spacemacs Clojure - ns namespace required grouped by purpose](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-ns-form-requires-grouped-by-purpose.png)
 
 
 ## Refactor within a namespace

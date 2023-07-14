@@ -1,7 +1,7 @@
 # Branching in Magit
 Every Git commit is made on a branch, the default branch name is master. A new branch should be created when developing a new feature, especially when working on an pull request. Branches are used to [try pull requests](/source-control/magit/try-pull-requests.md) made by others.
 
-![Spacemacs Magit branching menu](/images/spacemacs-magit-branching-menu.png)
+![Spacemacs Magit branching menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-branching-menu.png)
 
 # Creating a branch
 `SPC g s` opens the Magit Status buffer.

@@ -43,7 +43,7 @@ Keys in Evil Normal mode for moving the cursor around the buffer.
 * Use [avy](https://github.com/abo-abo/avy) for jumping anywhere in your buffers
 > Avy commands are in the jump/join/split menu - `SPC j`
 
-![Spacemacs menu - jump](/images/spacemacs-menu-jump.png)
+![Spacemacs menu - jump](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-menu-jump.png)
 
 > ####Hint::
 > `$` and  `^` for jumping to end and beginning of line is the same syntax as regex

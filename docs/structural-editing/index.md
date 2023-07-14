@@ -35,7 +35,7 @@ The common commands I use are
 | `r`                | raise expression - replace parent expression with current expression |
 
 
-[![Spacemacs - Lisp State for Structural Editing](/images/spacemacs-structural-editing-lisp-state-menu.png)](/images/spacemacs-structural-editing-lisp-state-menu.png)
+![Spacemacs - Lisp State for Structural Editing](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-structural-editing-lisp-state-menu.png)
 
 
 ## Enable Vim support for Structural editing
@@ -45,7 +45,7 @@ The common commands I use are
 Safe Structural editing in Vim normal state respects structural editing, meaning the standard vim commands can be used for cutting and deleting text without breaking Clojure or Lisp code structures.
 `🆂` symbol is displayed in the mode-line when evil safe structural editing is enabled.
 
-![Spacemacs - Clojure - Safe Structural Editing mode enabled](/images/spacemacs-clojure-safe-structural-editing-mode.png)
+![Spacemacs - Clojure - Safe Structural Editing mode enabled](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-safe-structural-editing-mode.png)
 
 Enable for all clojure buffers by adding the following function in `dotspacemacs/user-config`
 

@@ -6,7 +6,7 @@
 
 ++"g"++ ++"r"++ to refresh Magit status buffer
 
-![Spacemacs Magit help menu](/images/spacemacs-magit-help-menu.png)
+![Spacemacs Magit help menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-help-menu.png)
 
 
 ## Navigating Magit Status buffer
@@ -17,7 +17,7 @@
 
 ++tab++ to expand a section
 
-[![Spacemacs Magit Status Example](/images/spacemacs-magit-status-example-full.png)](/images/spacemacs-magit-status-example-full.png)
+![Spacemacs Magit Status Example](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-status-example-full.png)
 
 
 ## Using Magit status directly
@@ -40,7 +40,7 @@ If you run git status from a file that is not currently in a git project, magit 
 
 `SPC g m` calls `magit-dispatch` which opens a transient menu with all the Magit commands found in Magit Status buffer.  Git commands can be run without the need of the Magit status buffer.
 
-![Spacemacs Magit help menu](/images/spacemacs-magit-help-menu.png)
+![Spacemacs Magit help menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-help-menu.png)
 
 
 # Magit Status Fullscreen

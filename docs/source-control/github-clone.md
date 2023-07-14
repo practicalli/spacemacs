@@ -44,7 +44,7 @@ git config --global github.oauth-token 5aa705bda08803e0ed59c39e0a4101c0fea0ec3b
 
 The `~/.gitconfig` file will be updated and should look similar to this example
 
-![Git configuration - user name and email with GitHub user name and oauth token](/images/git-gitconfig-user-name-email-github-oauth-token.png)
+![Git configuration - user name and email with GitHub user name and oauth token](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/git-gitconfig-user-name-email-github-oauth-token.png)
 
 
 ## Move configuration to a .github-private file

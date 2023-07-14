@@ -7,7 +7,7 @@ With the Clojure REPL buffer active, you can use the `,` character (in Vim Inser
 | `,`        | `,`   | Open REPL Command menu |
 
 
-![Spacemacs - Clojure REPL - command menu](/images/spacemacs-cider-repl-command-shortcuts.png)
+![Spacemacs - Clojure REPL - command menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-cider-repl-command-shortcuts.png)
 
 
 > ####HINT::Vim Insert or Emacs state only

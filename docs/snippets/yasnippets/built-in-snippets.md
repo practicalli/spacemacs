@@ -11,7 +11,7 @@ In `web` major mode, typing `link` and pressing `M-/` expands to `<link rel="sty
 
 `TAB` again until the end marker is reached.
 
-![Spacemacs - Snippets - Web html link expanded](/images/spacemacs-auto-completion-snippets-html-link-expanded.png)
+![Spacemacs - Snippets - Web html link expanded](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-auto-completion-snippets-html-link-expanded.png)
 
 
 ## Clojure mode snippets

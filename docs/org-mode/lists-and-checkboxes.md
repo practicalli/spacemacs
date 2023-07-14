@@ -32,4 +32,4 @@ Totals will automatically update when the status of a checkbox updates.
 
 `C-c` when the cursor is on one of the `[x/x]` header totals will update all the totals for all the org-mode buffer.
 
-![Spacemacs org-mode checkboxes and header tracking](/images/spacemacs-org-mode-checkboxes-header-tracking.png)
+![Spacemacs org-mode checkboxes and header tracking](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-org-mode-checkboxes-header-tracking.png)

@@ -4,7 +4,7 @@ The first time you pull changes from a repository, or clone via Magit, a prompt 
 
 `P p` will push changes to the default push remote repository.  A list of remotes is shown if no default remote is set.
 
-![Spacemacs Magit push default upstream](/images/spacemacs-magit-push-remote-default.png)
+![Spacemacs Magit push default upstream](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-push-remote-default.png)
 
 
 ## Changing the default remote
@@ -15,7 +15,7 @@ The default push remote can be selected from remote repositories added as a remo
 
 `C` to open the configuration of the local repository
 
-![Spacemacs Magit Push remote default configuration](/images/spacemacs-magit-remotes-push-default-configure.png)
+![Spacemacs Magit Push remote default configuration](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-remotes-push-default-configure.png)
 
 `P` to toggle the default upstream branch between remotes
 

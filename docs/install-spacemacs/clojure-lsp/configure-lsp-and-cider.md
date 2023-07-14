@@ -22,7 +22,7 @@ LSP UI requires icons provides by the [all-the icons font](https://github.com/do
 
 `SPC SPC all-the-icons-install-fonts` command installs the required icons
 
-![Spacemacs LSP breadcrumbs](/images/spacemacs-lsp-breadcumbs.png)
+![Spacemacs LSP breadcrumbs](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-lsp-breadcumbs.png)
 
 
 ### Disable Live Linting tools
@@ -126,4 +126,4 @@ In this example, the default orange background color is removed and the font wei
          (lsp-face-highlight-read :background nil :weight bold))))
 ```
 
-![doom gruvbox light - bold highlight for lsp](/images/doom-gruvbox-light-bold.png)
+![doom gruvbox light - bold highlight for lsp](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/doom-gruvbox-light-bold.png)

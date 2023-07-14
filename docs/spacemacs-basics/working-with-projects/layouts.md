@@ -12,13 +12,13 @@
 
 `SPC l` enters the layout transient state
 
-![Spacemacs Layouts - transient state](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-layouts-transient-state-practicalli-layouts.png)
+![Spacemacs Layouts - transient state](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-layouts-transient-state-practicalli-layouts.png)
 
 `SPC l l` lists the current layouts with a helm prompt to narrow the list.  Entering a new name will prompt to create a new layout (perspective)
 
 The current layout name appears on the far left of the mode-line.
 
-![Spacemacs layers - practicalli spacemacs](/images/spacemacs-layers-name.png)
+![Spacemacs layers - practicalli spacemacs](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-layers-name.png)
 
 `SPC l s` saves the current layouts to a file, `SPC l L` loads a layout from a file.  Layouts are kept when restarting Spacemacs with `SPC q r` and can be configured to auto-resume when starting Emacs.
 
@@ -30,7 +30,7 @@ dotspacemacs-auto-resume-layouts t
 
 `SPC l ?` will show the help menu
 
-![Spacemacs Layouts - transient state](/images/spacemacs-layouts-help.png)
+![Spacemacs Layouts - transient state](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-layouts-help.png)
 
 
 
@@ -57,7 +57,7 @@ Pressing a workspace number will activate it or create a new one. `Ctrl-<number>
 
 `SPC l w ?` to toggle the full help.
 
-![Spacemacs Layouts - Workspaces help](/images/spacemacs-layouts-workspaces-help.png)
+![Spacemacs Layouts - Workspaces help](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-layouts-workspaces-help.png)
 
 There are also some handy globally available key bindings related to workspaces:
 

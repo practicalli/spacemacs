@@ -4,7 +4,7 @@ Open Magit status using `SPC g s`.
 
 `M` opens the Remotes menu, showing a popup list of actions
 
-[![Spacemacs Magit - Remotes menu](/images/spacemacs-magit-remotes-menu.png)](/images/spacemacs-magit-remotes-menu.png)
+![Spacemacs Magit - Remotes menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-remotes-menu.png)
 
 `a` prompts for the remote name, e.g. origin or the name of the GitHub/GitLab account or organisation
 
@@ -21,7 +21,7 @@ The final prompt asks to set this new remote as the default, saying yes adds thi
 
 The current configuration of the remote is displayed
 
-![Spacemacs Magit Remote Configuration menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-git-magit-remote-configure-menu.png)
+![Spacemacs Magit Remote Configuration menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-git-magit-remote-configure-menu.png)
 
 `u` to change the URL used for the remote (i.e. if the remote has been renamed or a different remote is required)
 

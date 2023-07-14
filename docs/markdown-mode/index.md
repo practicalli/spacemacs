@@ -4,10 +4,10 @@
 
 * [Markdown guide](https://www.markdownguide.org/getting-started/)
 
-![Spacemacs Markdown mode example](/images/spacemacs-markdown-example.png)
+![Spacemacs Markdown mode example](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-markdown-example.png)
 
 
-![Spacemacs Markdown menu](/images/spacemacs-markdown-menu.png)
+![Spacemacs Markdown menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-markdown-menu.png)
 
 
 ## Adding formatting

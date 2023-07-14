@@ -22,4 +22,4 @@ Open or create a new file with a `.org` filename extension to start org-mode maj
 
 For example, if you want to write a guide to your project, you could create an org-mode file called `user-guide.org`.  When you open this file in Spacemacs, org-mode is selected as the major mode for editing.
 
-![Spacemacs org-mode major mode menu](/images/spacemacs-orgmode-menu.png)
+![Spacemacs org-mode major mode menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-orgmode-menu.png)

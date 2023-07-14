@@ -6,7 +6,7 @@ Magit is a graphical Git client in Spacemacs that provides all the features of t
 
 Highlight changes in file buffers and the local Git repository can be shown in the fringe.
 
-![Spacemacs Source Control - full screen and refine-hunks](/images/spacemacs-magit-fullscreen-refine-hunks-example.png)
+![Spacemacs Source Control - full screen and refine-hunks](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-fullscreen-refine-hunks-example.png)
 
 
 ## Configure Spacemacs for Source Control

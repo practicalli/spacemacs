@@ -17,7 +17,7 @@ Changing the local history with a commit amend, extend, reword, rebase or squash
 
 Magit will show `Unpulled from` and `Unpushed to` sections when the local and remote histories are different.
 
-![Spacemacs Magit Push - changed histories](/images/spacemacs-magit-push-changed-history.png)
+![Spacemacs Magit Push - changed histories](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-push-changed-history.png)
 
 The push menu has the `-f` switch to force a push with a lease (the recommended force type).
 

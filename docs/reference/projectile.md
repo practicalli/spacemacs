@@ -51,4 +51,4 @@ Ignore everything except certain sub-directories (not relevant for file names)
 
 `SPC p` opens the projectile menu
 
-![Spacemacs Projectile Menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-projectile-menu.png)
+![Spacemacs Projectile Menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/menus/spacemacs-projectile-menu.png)

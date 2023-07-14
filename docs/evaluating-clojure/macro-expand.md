@@ -15,4 +15,4 @@ In this example we expand a simple `defn` macro
   (println x "Hello, World!"))
 ```
 
-![Spacemacs - Clojure - Evaluate - Macro-expand a defn macro](/images/spacemacs-clojure-macro-expand-defn-expanded.png)
+![Spacemacs - Clojure - Evaluate - Macro-expand a defn macro](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-macro-expand-defn-expanded.png)

@@ -21,7 +21,7 @@ Code folding allows you to collapse a code block onto one line, allowing you to 
 
 ++spc++ ++"z"++ opens a transient state for folding code, most useful when reviewing code.
 
-![Spacemacs - Zoom - Code Fold transient state](/images/spacemacs-zoom-fold-transient-state.png)
+![Spacemacs - Zoom - Code Fold transient state](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-zoom-fold-transient-state.png)
 
 
 # Code folding methods

@@ -23,7 +23,7 @@ If the name of an existing test is changed, the original test will still run whe
 
 `TAB` when typing the symbol name will popup a list of matching symbols available in the REPL.  Select the name you wish to undef
 
-[![Spacemacs Clojure REPL undef symbol helm narrowing](/images/spacemacs-clojure-repl-undef-symbol-helm-narrowing.png)](/images/spacemacs-clojure-repl-undef-symbol-helm-narrowing.png)
+![Spacemacs Clojure REPL undef symbol helm narrowing](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-repl-undef-symbol-helm-narrowing.png)
 
 
 ## Undefine using Clojure

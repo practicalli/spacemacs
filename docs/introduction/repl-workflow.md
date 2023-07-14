@@ -123,7 +123,7 @@ Pretty print shows the structure of results from function calls in a human-frien
 
 ++comma++ ++"d"++ ++"v"++ is the Cider Inspect menu for paging through very large data sets and navigate nested data structures in detail.
 
-![Clojure - viewing large data sets](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemace-clojure-inspect-java-lang-persistentvector.png)
+![Clojure - viewing large data sets](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemace-clojure-inspect-java-lang-persistentvector.png)
 
 ++comma++ ++"d"++ is the Cider debug menu which can inspect view intermediate values and data structures during the debugging of Clojure function calls.
 
@@ -142,8 +142,8 @@ Clojure aware editors should automatically apply formatting that follows the [:g
 
 Live linting with [clj-kondo](:fontawesome-brands-github: <https://github.com/borkdude/clj-kondo){target=_blank>} suggests common idioms and highlights a wide range of syntax errors as code is written, minimizing bugs and therefore speeding up the development process.
 
-![Clojure code static analysis for live linting](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-light.png#only-light)
-![Clojure code static analysis for live linting](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-dark.png#only-dark)
+![Clojure code static analysis for live linting](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-light.png#only-light)
+![Clojure code static analysis for live linting](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-dark.png#only-dark)
 
 !!! INFO "Clojure LSP is build on top of clj-kondo"
     [:fontawesome-solid-book-open: Clojure LSP](https://practical.li/clojure/clojure-editors/clojure-lsp/){target=_blank} uses clj-kondo static analysis to provide a standard set of development tools (format, refactor, auto-complete, syntax highlighting, syntax & idiom warnings, code navigation, etc).

@@ -12,7 +12,7 @@ Safe structural editing is provided by the package [evil-cleverparens](https://g
 
 When enabled the symbol `🆂` is displayed in the mode-line.
 
-![Spacemacs - Clojure - Safe Structural Editing mode enabled](/images/spacemacs-clojure-safe-structural-editing-mode.png)
+![Spacemacs - Clojure - Safe Structural Editing mode enabled](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-safe-structural-editing-mode.png)
 
 Enable for all Clojure buffers by adding the following function in `dotspacemacs/user-config`
 

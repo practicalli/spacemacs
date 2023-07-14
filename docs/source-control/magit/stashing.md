@@ -2,7 +2,7 @@
 
 ++"z"++ opens the Stash menu, allowing you to keep changes in your working directory or staging index without having to commit them.  Stashing your local changes allows you to change to a different branch or pull commits from a remote repository.
 
-![Spacemacs Magit - stashing menu](/images/spacemacs-magit-stash-menu.png)
+![Spacemacs Magit - stashing menu](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-stash-menu.png)
 
 ++"z"++ to stash all the changes in your local working directory and staged changes (index).
 

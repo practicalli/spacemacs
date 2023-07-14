@@ -13,11 +13,11 @@ Jack-in ensures the REPL process is started with the libraries and middleware re
 
 ++spc++ ++"u"++ ++comma++ ++"m"++ ++"s"++ opens the jack-in command in the minibuffer which can be edited to customise how the Clojure REPL process starts, e.g. adding Clojure CLI aliases to include libraries and tools for development.
 
-![Spacemacs Clojure - Edit cider-jack-in command to add Clojure CLI aliases](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit.png)
+![Spacemacs Clojure - Edit cider-jack-in command to add Clojure CLI aliases](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit.png)
 
 Clojure CLI aliases should be added between the `-M` execution flag and the `:cider/nrepl` alias.
 
-![Spacemacs Clojure - Edit cider-jack-in command, adding Clojure aliases](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit-custom-aliases.png)
+![Spacemacs Clojure - Edit cider-jack-in command, adding Clojure aliases](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit-custom-aliases.png)
 
 
 ### Deconstructing the command line

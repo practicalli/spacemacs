@@ -12,7 +12,7 @@ You can connect to a REPL started elsewhere, for example the command line with `
 
 Use the `lein repl` command to run a new REPL on the command line.  Then connect to that REPL using `M-x cider-connect`
 
-![Leiningen REPL on the Command Line](/images/spacemacs-lein-new-spacemacs-workshop.png)
+![Leiningen REPL on the Command Line](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-lein-new-spacemacs-workshop.png)
 
 
 
@@ -28,4 +28,4 @@ If you are going to connect to an external repl from Spacemacs, you will need to
 
 Without this configuration, you will see warning messages in the repl buffer stating that the versions of ... are out of sync.
 
-![Spacemacs - Cider connect - Warning - `cider-repl` & `tools-nrepl` out of sync](/images/spacemacs-cider-connect-warning-versions-out-of-sync.png)
+![Spacemacs - Cider connect - Warning - `cider-repl` & `tools-nrepl` out of sync](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-cider-connect-warning-versions-out-of-sync.png)

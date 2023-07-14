@@ -22,7 +22,7 @@ Magit Status buffer should now show the local branch, e.g. `cli-alaiases-updates
 
 `! !` opens a Git command line in the Magit status buffer
 
-![Spacemacs Magit command line](/images/spacemacs-magit-subcommand.png)
+![Spacemacs Magit command line](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-magit-subcommand.png)
 
 Run the Git `checkout` command using the `--track` option to create a local branch with the same name as the remote branch.
 
