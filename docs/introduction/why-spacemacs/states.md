@@ -60,7 +60,8 @@ Transient state menus make it simple to run commands multiple times, using a sin
 
 For example, Font Scaling transient state menu allows you to repeatedly increase the size of the buffer font just by using the `+` key.  The Font Scaling transient state menu contains the sub-set of commands related to scaling, so you can decrease the font size just with the `-` key and reset the font with `0`.
 
-![Transient State - scaling text](https://github.com/syl20bnr/spacemacs/raw/master/doc/img/spacemacs-scale-transient-state.png)
+![Transient State - scaling text](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-transient-state-scale-font-light.png?raw=true#only-light)
+![Transient State - scaling text](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-transient-state-scale-font-dark.png?raw=true#only-dark)
 
 Transient-states are usually triggered by using a keybinding with the following pattern: `<Leader> <group> .` where group is the category the transient-state falls under.
 
