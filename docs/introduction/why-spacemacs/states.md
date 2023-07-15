@@ -9,8 +9,7 @@ When installing Spacemacs you have the choice of editor styles
 | Among the stars aboard the Evil flagship (Vim)        | Vim multi-model editing (normal, insert, visual, lisp, etc. `C-z` for classic Emacs editor |
 | On the planet Emacs in the Holy control tower (Emacs) | Emacs only editing (No Vim states)                                                         |
 
-<!-- TODO: Add background to spacemacs-states-vim-emacs graphic for dark theme readability -->
-![Spacemacs states](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/concepts/spacemacs-states-vim-emacs.png){target=_blank}
+![Spacemacs states](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/concepts/spacemacs-states-evil.png?raw=true){loading=lazy}
 
 Evil provide Vim style editing across all languages and modes in Emacs, simplifying the editing of files and keyboard shortcuts (keybindings)
 
