@@ -16,10 +16,10 @@ Spacemacs is fast to startup and lightweight thanks to its lazy loading of featu
 
 The rest of this section goes into more details as to why you would choose Spacemacs for your developer life, including:
 
-* simple configuration using [layers](layers.md) removing the need to configure individual packages
-    * Clojure layer provides [CIDER](https://docs.cider.mx/) and clj-kondo support
-* [Consistently discoverable commands with mnemonic menu](mnemonic-menu.md)
-* [narrowing & completion](helm.md) to quickly find files and commands
-* [Effective editing with multiple states](states.md)
-* [Structural editing with Smartparens and Lisp mode](structural-editing.md)
-* [Fast project & file management with Projectile](project-file-navigation.md), simple window & buffer management
+* easy to configuration using [:fontawesome-solid-book-open: layers](layers.md) removing the need to configure individual packages
+    * Clojure layer provides [:globe_with_meridians: CIDER](https://docs.cider.mx/) and clj-kondo support
+* [:fontawesome-solid-book-open: Consistently discoverable commands with mnemonic menu](mnemonic-menu.md)
+* [:fontawesome-solid-book-open: narrowing & completion](helm.md) to quickly find files and commands
+* [:fontawesome-solid-book-open: Effective editing with multiple states](states.md)
+* [:fontawesome-solid-book-open: Structural editing with Smartparens and Lisp mode](structural-editing.md)
+* [:fontawesome-solid-book-open: Fast project & file management with Projectile](project-file-navigation.md), simple window & buffer management
