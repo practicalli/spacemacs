@@ -37,7 +37,7 @@ Treemacs is the default visual file browser in Spacemacs, providing a way to vie
 
 ## Ranger
 
-++spc+a+t+r+r++ runs ranger to navigate directories and view contents of files quickly and easily, using standard Vi keybindings, ++"j"++,++"k"++,++"h"++,++"l"++.
+++spc++ ++"a"++ ++"t"++ ++"r"++ ++"r"++ runs ranger to navigate directories and view contents of files quickly, using standard Vi keybindings, ++"j"++,++"k"++,++"h"++,++"l"++.
 
 Ranger is great for quickly looking through files, thanks to its preview option.
 
