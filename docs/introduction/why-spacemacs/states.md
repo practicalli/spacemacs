@@ -56,7 +56,7 @@ Here is the list of all the possible states, some of which are automatically app
 
 ## Transient State menus
 
-Transient state menus make it simple to run commands multiple times, using a single key press, from a specific sub-set of commands.
+Transient state menus are used to run commands multiple times using a single key press from a specific sub-set of commands.
 
 For example, Font Scaling transient state menu allows you to repeatedly increase the size of the buffer font just by using the `+` key.  The Font Scaling transient state menu contains the sub-set of commands related to scaling, so you can decrease the font size just with the `-` key and reset the font with `0`.
 
