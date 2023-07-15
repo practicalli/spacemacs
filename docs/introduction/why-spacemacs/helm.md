@@ -80,5 +80,5 @@ In this example Helm Transient State menu is used to select and kill multiple bu
 
 Select `a` switches to the actions page, or using `C-z` displays the list off all the available actions for a buffer.
 
-![Spacemacs Buffers - Helm Actions](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-actions-buffer-light.png#only-light)
-![Spacemacs Buffers - Helm Actions](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-actions-buffer-dark.png#only-dark)
+![Spacemacs Buffers - Helm Actions](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-helm-actions-buffer-light.png?raw=true#only-light)
+![Spacemacs Buffers - Helm Actions](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-helm-actions-buffer-dark.png?raw=true#only-dark)
