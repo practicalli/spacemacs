@@ -5869,17 +5869,19 @@
 
 
 <h1 id="simple-layers-and-configuration">Simple Layers and Configuration<a class="headerlink" href="#simple-layers-and-configuration" title="Permanent link">λ︎</a></h1>
-<p>Most language support and many other amazing features can be added to Emacs from many hundreds of packages created by the community. It does seem that there is a package for just about everything you want to do.</p>
-<p>Spacemacs uses Layers that organise these packages and the configuration to make them work seamlessly together.  For example, the Clojure layer is composed of 9 different packages that you would otherwise have to know about and install and then get them to work together with a bit of configuration code.  Layers make things very simple, requiring only one word to be added to the Spacemacs configuration file.</p>
-<p><a href="https://imgs.xkcd.com/comics/real_programmers.png"><img alt="Emacs - butterfly mode" src="https://imgs.xkcd.com/comics/real_programmers.png" /></a></p>
-<div class="admonition hint">
-<p class="admonition-title">Butterfly</p>
+<p>Programming language support and a vast array of tools can be added to Emacs from the many hundreds of packages created by the community. </p>
+<p>Spacemacs uses Layers that organise packages and configuration to make those packages work seamlessly together.  For example, the Clojure layer is composed of 9 different packages that you would otherwise have to be manually installed and configured to work together.  </p>
+<p>Add the name of a layer to the Spacemacs configuration file and Spacemacs will manage everything else.</p>
+<details class="hint">
+<summary>Butterfly</summary>
 <p><code>SPC SPC butterfly</code> to activate in Spacemacs.  Use this great power very carefully.</p>
-</div>
+<p><a href="https://imgs.xkcd.com/comics/real_programmers.png" loading="lazy"><img alt="Emacs - butterfly mode" src="https://imgs.xkcd.com/comics/real_programmers.png" /></a></p>
+</details>
 <h2 id="simple-configuration">Simple Configuration<a class="headerlink" href="#simple-configuration" title="Permanent link">λ︎</a></h2>
-<p>Spacemacs provides a well tested configuration file called <code>~/.spacemacs</code> that provides lots of sensible defaults and makes customising your experience very easy.  This file is created during the Spacemacs installation.</p>
-<p><code>.spacemacs.d/init.el</code> file can be used as an alternative location for <code>.spacemacs</code> and is easier to manage changes via version control.</p>
-<p>The <code>~/.spacemacs</code> configuration file is composed of three important sections</p>
+<p>Spacemacs provides a well tested and comprehensive configuration, provides lots of sensible defaults.</p>
+<p><code>~/.spacemacs</code> file is generated during the Spacemacs installation if a configuration does not already already exist  </p>
+<p><code>~/.spacemacs.d/init.el</code> or <code>SPACEMACSDIR/init.el</code> are valid locations for a Spacemacs configuration and as they are directories they are easier to manage changes via version control.</p>
+<p>The three important sections of the Spacemacs user configuration file:</p>
 <table>
 <thead>
 <tr>
@@ -5898,13 +5900,13 @@
 </tr>
 <tr>
 <td><strong>dotspacemacs/user-config</strong></td>
-<td>Add your own customisation here</td>
+<td>Add your own customisation here using Elisp code</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition info">
 <p class="admonition-title">Spacemacs dotfile configuration</p>
-<p><a href="http://spacemacs.org/doc/DOCUMENTATION.html#dotfile-configuration">dotfile configuration</a> details installation and syncronisation options </p>
+<p><a href="http://develop.spacemacs.org/doc/DOCUMENTATION.html#dotfile-configuration"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> dotfile configuration</a> details installation and syncronisation options </p>
 </div>
 <h2 id="opening-and-reloading-the-configuration-file">Opening and reloading the configuration file<a class="headerlink" href="#opening-and-reloading-the-configuration-file" title="Permanent link">λ︎</a></h2>
 <p>Spacemacs provides specific keybindings for opening and reloading the <code>~/.spacemacs</code> configuration file.</p>
@@ -5920,12 +5922,12 @@
 <tr>
 <td><code>SPC f e d</code></td>
 <td><code>M-m f e d</code></td>
-<td>open the <code>~/.spacemacs</code> file</td>
+<td>open the Spacemacs user configuration file</td>
 </tr>
 <tr>
 <td><code>SPC f e R</code></td>
 <td><code>M-m f e R</code></td>
-<td>reload the configuration from <code>~/.spacemacs</code></td>
+<td>reload the Spacemacs user configuration</td>
 </tr>
 </tbody>
 </table>
@@ -5935,24 +5937,43 @@
 <p><code>SPC F e R</code> to update the Spacemacs configuration without restarting Emacs.</p>
 </div>
 <h2 id="adding-a-layer">Adding a Layer<a class="headerlink" href="#adding-a-layer" title="Permanent link">λ︎</a></h2>
-<p>Simply open the <code>~/.spacemacs</code> file and add the name of the layer you want in the section <code>dotspacemacs-configuration-layers</code>.  Some layers also take additional configuration in the form of variables in the layer definition.</p>
+<p>Open the Spacemacs user configuration file and add the name of the layer required in the section <code>dotspacemacs-configuration-layers</code>.  </p>
+<p>Add Layer variables to change the default configuraiton, wrapping the layer name in a list.</p>
+<div class="highlight"><span class="filename">Spacemacs Configuration - Clojure layer with layer variables</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">(</span><span class="nv">clojure</span><span class="w"> </span><span class="nb">:variables</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">         </span><span class="c1">;; clojure-backend &#39;cider                 ; use cider and disable lsp</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">         </span><span class="nv">clojure-enable-kaocha-runner</span><span class="w"> </span><span class="no">t</span><span class="w">            </span><span class="c1">; enable Kaocha test runner</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">         </span><span class="nv">cider-repl-display-help-banner</span><span class="w"> </span><span class="no">nil</span><span class="w">        </span><span class="c1">; disable help banner</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">         </span><span class="nv">cider-print-fn</span><span class="w"> </span><span class="ss">&#39;puget</span><span class="w">                     </span><span class="c1">; pretty printing with sorted keys / set values</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">         </span><span class="nv">clojure-indent-style</span><span class="w"> </span><span class="ss">&#39;align-arguments</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">         </span><span class="nv">clojure-align-forms-automatically</span><span class="w"> </span><span class="no">t</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">         </span><span class="nv">clojure-toplevel-inside-comment-form</span><span class="w"> </span><span class="no">t</span><span class="w">    </span><span class="c1">; clashes with LSP</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">         </span><span class="c1">;; cider-result-overlay-position &#39;at-point   ; results shown right after expression</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">         </span><span class="c1">;; cider-overlays-use-font-lock t</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">         </span><span class="nv">cider-font-lock-dynamically</span><span class="w"> </span><span class="no">nil</span><span class="w">           </span><span class="c1">; prefer LSP semantic tokens</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">         </span><span class="nv">cider-eldoc-display-for-symbol-at-point</span><span class="w"> </span><span class="no">nil</span><span class="w"> </span><span class="c1">; prefer LSP</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">         </span><span class="nv">cider-prompt-for-symbol</span><span class="w"> </span><span class="no">nil</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">         </span><span class="nv">cider-repl-buffer-size-limit</span><span class="w"> </span><span class="mi">100</span><span class="w">          </span><span class="c1">; limit lines shown in REPL buffer</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">         </span><span class="nv">nrepl-use-ssh-fallback-for-remote-hosts</span><span class="w"> </span><span class="no">t</span><span class="w"> </span><span class="c1">; connect via ssh to remote hosts</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">         </span><span class="p">)</span>
+</code></pre></div>
 <p>See the Spacemacs documentation for a <a href="http://spacemacs.org/layers/LAYERS.html">list of layers</a> or open the help in Spacemacs <code>SPC h SPC</code> to list all the layers, pressing <code>RET</code> on a layer name to read about it.</p>
 <h2 id="available-layers">Available Layers<a class="headerlink" href="#available-layers" title="Permanent link">λ︎</a></h2>
 <p><code>SPC h l</code> (or <code>M-m h l</code> in holy mode) displays a list of all layers available in Spacemacs.  Type the layer name or scroll down (<code>C-j</code>) to a layer name and press <code>TAB</code> to preview the documentation for that layer or <code>RTN</code> to open the docs for that layer in a buffer.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-help-layers-list.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Help layers - Helm list" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-help-layers-list.png" /></a></p>
-<p>Create your own layers with <code>SPC SPC configuration-layer/create-layer</code>.  See the Spacemacs docs and <a href="http://thume.ca/howto/2015/03/07/configuring-spacemacs-a-tutorial/">Configuring Spacemacs, a tutorial</a> for more information.</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-help-layer-list-light.png?raw=true#only-light" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Help layers - Helm list" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-help-layer-list-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-help-layer-list-dark.png?raw=true#only-dark" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Help layers - Helm list" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-help-layer-list-dark.png?raw=true#only-dark" /></a></p>
+<p>Create your own layers with <code>SPC SPC configuration-layer/create-layer</code>.  See the Spacemacs docs and <a href="http://thume.ca/howto/2015/03/07/configuring-spacemacs-a-tutorial/"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Configuring Spacemacs, a tutorial</a> for more information.</p>
 <h2 id="existing-emacs-users">Existing Emacs users<a class="headerlink" href="#existing-emacs-users" title="Permanent link">λ︎</a></h2>
-<p>Consider the <code>.spacemacs</code> configuration file a replacement for the <code>init.el</code> file that would otherwise be use to define an Emacs configuration.</p>
+<p>Consider the Spacemacs user configuration file as a replacement for the <code>init.el</code> file that would otherwise be use to define an Emacs configuration.</p>
 <p>Installing packages via the <code>packages-list-packages</code> method is ignored by Spacemacs.  Any packages installed in this way will be ignored and deleted on Emacs startup.</p>
-<p>If a desired package is not included in any layer, <a href="http://spacemacs.org/doc/DOCUMENTATION.html#without-a-layer">a package can be used without a layer</a>.</p>
-<p><strong>dotspacemacs/user-config</strong> section of the <code>~/.spacemacs</code> configuration file should contain personal Emacs Lisp configuration and is the last section of the Spacemacs configuration to load.</p>
+<p>If a desired package is not included in any layer, <a href="http://spacemacs.org/doc/DOCUMENTATION.html#without-a-layer"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f310.svg" title=":globe_with_meridians:" /> a package can be used without a layer</a>.</p>
+<p><strong>dotspacemacs/user-config</strong> section of the Spacemacs user configuration file should contain personal Emacs Lisp configuration and is the last section of the Spacemacs configuration to load.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 15, 2023</span>
       
     
   </small>
