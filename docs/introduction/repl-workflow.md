@@ -23,6 +23,7 @@ Design decisions and valuable data from REPL experiments can be codified as [spe
 !!! HINT "Practicalli REPL Reloaded Workflow"
     The principles of REPL driven development are implemented in practice using the [Practicalli REPL Reloaded Workflow and supporting tooling](https://practical.li/clojure/clojure-cli/repl-reloaded/){target=_blank}.  This workflow uses Portal to inspect all evaluation results and log events, hot-load libraries into the running REPL process and reloads namespaces to support major refactor changes.
 
+
 ## Evaluating source code
 
 ![Clojure repl driven development using Clojure aware editor](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-repl-driven-development-clojure-aware-editor.png){align=right loading=lazy}
@@ -48,6 +49,7 @@ Source code is automatically evaluated in its respective namespace, removing the
     Entering expressions at the REPL prompt evaluates the expression immediately, returning the result directly underneath
     ![Clojure Terminal UI REPL](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/rebel/clojure-repl-rebel-eval-map-function-dark.png#only-dark){loading=lazy}
     ![Clojure Terminal UI REPL](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/rebel/clojure-repl-rebel-eval-map-function-light.png#only-light){loading=lazy}
+
 
 ## Rich Comment blocks - living documentation
 
@@ -96,6 +98,7 @@ Rich comment blocks are very useful for rapidly iterating over different design 
 
 The "Rich" in the name is an honourary mention to Rich Hickey, the author and benevolent dictator of Clojure design.
 
+
 ## Design Journal
 
 A journal of design decisions makes the code easier to understand and maintain.  Code examples of design decisions and alternative design discussions are captured, reducing the time spent revisiting those discussions.
@@ -115,6 +118,7 @@ The design journal can be used to create meaningful documentation for the projec
 !!! HINT "Example design journal"
     [Design journal for TicTacToe game using Reagent, ClojureScript and Scalable Vector Graphics](https://github.com/practicalli-john/tictactoe-reagent/blob/master/src/tictactoe_reagent/core.cljs#L124){target=_blank}
 
+
 ## Viewing data structures
 
 Pretty print shows the structure of results from function calls in a human-friendly form, making it easier for a developer to parse and more likely to notice incorrect results.
@@ -123,7 +127,7 @@ Pretty print shows the structure of results from function calls in a human-frien
 
 ++comma++ ++"d"++ ++"v"++ is the Cider Inspect menu for paging through very large data sets and navigate nested data structures in detail.
 
-![Clojure - viewing large data sets](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemace-clojure-inspect-java-lang-persistentvector.png)
+![Clojure - viewing large data sets](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemace-clojure-inspect-java-lang-persistentvector.png)
 
 ++comma++ ++"d"++ is the Cider debug menu which can inspect view intermediate values and data structures during the debugging of Clojure function calls.
 
@@ -136,14 +140,15 @@ Tools to view and navigate code
 
 ![Portal - view and navigate Clojure data and event logs](https://raw.githubusercontent.com/practicalli/graphic-design/live/portal/portal-data-browser-example.png)
 
+
 ## Code Style and idiomatic Clojure
 
 Clojure aware editors should automatically apply formatting that follows the [:globe_with_meridians: Clojure Style guide](https://github.com/bbatsov/clojure-style-guide){target=_blank}.
 
 Live linting with [clj-kondo](:fontawesome-brands-github: <https://github.com/borkdude/clj-kondo){target=_blank>} suggests common idioms and highlights a wide range of syntax errors as code is written, minimizing bugs and therefore speeding up the development process.
 
-![Clojure code static analysis for live linting](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-light.png#only-light)
-![Clojure code static analysis for live linting](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-dark.png#only-dark)
+![Clojure code static analysis for live linting](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-banking-on-clojure-light.png?raw=true#only-light)
+![Clojure code static analysis for live linting](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-live-linting-flycheck-errors-banking-on-clojure-dark.png?raw=true#only-dark)
 
 !!! INFO "Clojure LSP is build on top of clj-kondo"
     [:fontawesome-solid-book-open: Clojure LSP](https://practical.li/clojure/clojure-editors/clojure-lsp/){target=_blank} uses clj-kondo static analysis to provide a standard set of development tools (format, refactor, auto-complete, syntax highlighting, syntax & idiom warnings, code navigation, etc).
@@ -214,6 +219,7 @@ Add a [:fontawesome-solid-book-open: continuous integration service](https://pra
 - [:globe_with_meridians: GitLab CI](https://docs.gitlab.com/ee/ci/introduction/index.html){target=_blank}
 
 ![Continuous Integration](https://raw.githubusercontent.com/practicalli/graphic-design/live/continuous-integration/continuous-integration-overview.svg)
+
 
 ## Live Coding with Data - Stuart Halloway
 
