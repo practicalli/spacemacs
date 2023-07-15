@@ -67,15 +67,16 @@ Transient-states are usually triggered by using a keybinding with the following 
 
 When in a transient-state you will see documentation at the bottom of your window. To exit a transient-state press q.
 
-### Examples of transient state menus
+### Example menus
 
-| Keybindings | Transient state description       |
-|-------------|-----------------------------------|
-| `SPC b .`   | buffer management                 |
-| `SPC e .`   | errors                            |
-| `SPC k .`   | lisp state for structured editing |
-| `SPC w .`   | window management                 |
-| `SPC z .`   | code folding                      |
-| `SPC z f`   | zoom frame size                   |
-| `SPC z x`   | Font Scaling (x for text)         |
-| `SPC n +/-` | Change the value of a number      |
+| Keybindings                            | Transient state description           |
+| -------------------------------------- | ------------------------------------- |
+| ++spc++ ++"b"++ ++period++             | buffer management                     |
+| ++spc++ ++"e"++ ++period++             | errors                                |
+| ++spc++ ++"k"++ ++period++             | lisp state for structured editing     |
+| ++spc++ ++"w"++ ++period++             | window management                     |
+| ++spc++ ++"z"++ ++period++             | code folding                          |
+| ++spc++ ++"z"++ ++"f"++                | zoom frame size                       |
+| ++spc++ ++"z"++ ++"x"++                | Font Scaling (x for text)             |
+| ++spc++ ++"n"++ ++plus++ / ++minus++   | Change the value of a number          |
+
