@@ -530,8 +530,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#examples-of-transient-state-menus" class="md-nav__link">
-    Examples of transient state menus
+  <a href="#example-menus" class="md-nav__link">
+    Example menus
   </a>
   
 </li>
@@ -5810,8 +5810,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#examples-of-transient-state-menus" class="md-nav__link">
-    Examples of transient state menus
+  <a href="#example-menus" class="md-nav__link">
+    Example menus
   </a>
   
 </li>
@@ -5873,8 +5873,7 @@
 </tr>
 </tbody>
 </table>
-<!-- TODO: Add background to spacemacs-states-vim-emacs graphic for dark theme readability -->
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/concepts/spacemacs-states-vim-emacs.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs states" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/concepts/spacemacs-states-vim-emacs.png" target="_blank" /></a></p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/concepts/spacemacs-states-evil.png?raw=true" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs states" loading="lazy" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/concepts/spacemacs-states-evil.png?raw=true" /></a></p>
 <p>Evil provide Vim style editing across all languages and modes in Emacs, simplifying the editing of files and keyboard shortcuts (keybindings)</p>
 <p>Vim is a language for manipulating text files that goes far beyond editing files.  Learning this simple language removes cognitive load.  Speak vim and your fingers efficiently make the changes you want.</p>
 <h2 id="evil-states">Evil states<a class="headerlink" href="#evil-states" title="Permanent link">λ︎</a></h2>
@@ -5960,12 +5959,13 @@
 <p>States and other concepts are explained further in the <a href="https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#editing-styles" target="_blank">Spacemacs concepts</a> documentation.</p>
 </div>
 <h2 id="transient-state-menus">Transient State menus<a class="headerlink" href="#transient-state-menus" title="Permanent link">λ︎</a></h2>
-<p>Transient state menus make it simple to run commands multiple times, using a single key press, from a specific sub-set of commands.</p>
+<p>Transient state menus are used to run commands multiple times using a single key press from a specific sub-set of commands.</p>
 <p>For example, Font Scaling transient state menu allows you to repeatedly increase the size of the buffer font just by using the <code>+</code> key.  The Font Scaling transient state menu contains the sub-set of commands related to scaling, so you can decrease the font size just with the <code>-</code> key and reset the font with <code>0</code>.</p>
-<p><a class="glightbox" href="https://github.com/syl20bnr/spacemacs/raw/master/doc/img/spacemacs-scale-transient-state.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Transient State - scaling text" src="https://github.com/syl20bnr/spacemacs/raw/master/doc/img/spacemacs-scale-transient-state.png" /></a></p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-transient-state-scale-font-light.png?raw=true#only-light" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Transient State - scaling text" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-transient-state-scale-font-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-transient-state-scale-font-dark.png?raw=true#only-dark" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Transient State - scaling text" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-transient-state-scale-font-dark.png?raw=true#only-dark" /></a></p>
 <p>Transient-states are usually triggered by using a keybinding with the following pattern: <code>&lt;Leader&gt; &lt;group&gt; .</code> where group is the category the transient-state falls under.</p>
 <p>When in a transient-state you will see documentation at the bottom of your window. To exit a transient-state press q.</p>
-<h3 id="examples-of-transient-state-menus">Examples of transient state menus<a class="headerlink" href="#examples-of-transient-state-menus" title="Permanent link">λ︎</a></h3>
+<h3 id="example-menus">Example menus<a class="headerlink" href="#example-menus" title="Permanent link">λ︎</a></h3>
 <table>
 <thead>
 <tr>
@@ -5975,35 +5975,35 @@
 </thead>
 <tbody>
 <tr>
-<td><code>SPC b .</code></td>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>b</kbd></span> <span class="keys"><kbd class="key-period">.</kbd></span></td>
 <td>buffer management</td>
 </tr>
 <tr>
-<td><code>SPC e .</code></td>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd class="key-period">.</kbd></span></td>
 <td>errors</td>
 </tr>
 <tr>
-<td><code>SPC k .</code></td>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>k</kbd></span> <span class="keys"><kbd class="key-period">.</kbd></span></td>
 <td>lisp state for structured editing</td>
 </tr>
 <tr>
-<td><code>SPC w .</code></td>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>w</kbd></span> <span class="keys"><kbd class="key-period">.</kbd></span></td>
 <td>window management</td>
 </tr>
 <tr>
-<td><code>SPC z .</code></td>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd class="key-period">.</kbd></span></td>
 <td>code folding</td>
 </tr>
 <tr>
-<td><code>SPC z f</code></td>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd>f</kbd></span></td>
 <td>zoom frame size</td>
 </tr>
 <tr>
-<td><code>SPC z x</code></td>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>z</kbd></span> <span class="keys"><kbd>x</kbd></span></td>
 <td>Font Scaling (x for text)</td>
 </tr>
 <tr>
-<td><code>SPC n +/-</code></td>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>n</kbd></span> <span class="keys"><kbd class="key-plus">+</kbd></span> / <span class="keys"><kbd class="key-minus">-</kbd></span></td>
 <td>Change the value of a number</td>
 </tr>
 </tbody>
@@ -6014,7 +6014,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 15, 2023</span>
       
     
   </small>
