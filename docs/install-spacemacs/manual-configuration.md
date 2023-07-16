@@ -15,11 +15,11 @@ Spacemacs prompts how it should configure the fundamentals of Spacemacs operatio
 
 For the preferred style, select *Among the stars aboard the Evil flagship (vim)*
 
-![Spacemacs install wizard - editing style](/images/spacemacs-install-wizard-editing-style.png)
+![Spacemacs install wizard - editing style](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/spacemacs-install-wizard-editing-style.png?raw=true)
 
 For the distribution, select *The Standard Distribution (spacemacs)*
 
-![Spacemacs install wizard - editing style](/images/spacemacs-install-wizard-distribution.png)
+![Spacemacs install wizard - distribution](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/spacemacs-install-wizard-distribution.png?raw=true)
 
 
 Spacemacs will now download all its Emacs packages and this will take several minutes, depending on the speed of your connection to the Internet.
