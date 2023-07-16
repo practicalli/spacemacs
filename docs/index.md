@@ -2,19 +2,19 @@
 
 ![Practicalli Spacemacs book cover](https://raw.githubusercontent.com/practicalli/graphic-design/live/book-covers/practicalli-spacemacs-book-banner.png)
 
-A practical guide to Spacemacs, a community driven Emacs configuration that makes it easy to use all the power of Emacs and Vim.  The guide contains specific sections on Clojure development, although the majority of the content is applicable to any language.
+A practical guide to Spacemacs, a community driven Emacs configuration that provides all the power of Emacs and Vim.  The guide contains a section on Clojure development, the majority of the book is applicable to any language.
 
 <p style="text-align:center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NDrpclY54E0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 [Why Spacemacs](why-spacemacs/){.md-button}
-[Install Spacemacs](install-spacemacs/){.md-button}
-[Clojure Development](clojure-development/){.md-button}
+[Install Spacemacs](/spacemacs/install-spacemacs/){.md-button}
+[Clojure Development](/spacemacs/clojure-development/){.md-button}
 
-[Emacs](https://www.gnu.org/software/emacs/){target=_blank} has been a shining beacon of Free and Open Source software from the early 1970's and has grown to be a versatile set of development tools for all languages.  This long history has given [Emacs](https://www.gnu.org/software/emacs/){target=_blank} the ability to interact with almost every aspect of your digital life.
+[:globe_with_meridians: Emacs](https://www.gnu.org/software/emacs/){target=_blank} has been a shining beacon of Free and Open Source software from the early 1970's and has grown to be a versatile set of development tools for all languages.  This long history has given [:globe_with_meridians: Emacs](https://www.gnu.org/software/emacs/){target=_blank} the ability to interact with almost every aspect of your digital life.
 
-[Spacemacs](http://spacemacs.org/){target=_blank} is a community configuration providing a consistent and simple to learn approach to using all the features and power of [Emacs](https://www.gnu.org/software/emacs/){target=_blank}.  [Spacemacs](https://spacemacs.org){target=_blank} also integrates the raw text manipulation speed of Vim and multi-modal editing into the Emacs experience, enabling you to be even more productive.
+[:globe_with_meridians: Spacemacs](http://spacemacs.org/){target=_blank} is a community configuration providing a consistent and simple to learn approach to using all the features and power of [:globe_with_meridians: Emacs](https://www.gnu.org/software/emacs/){target=_blank}.  [:globe_with_meridians: Spacemacs](https://spacemacs.org){target=_blank} also integrates the raw text manipulation speed of Vim and multi-modal editing into the Emacs experience, enabling you to be even more productive.
 
 [![Built with Spacemacs](https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg)](http://github.com/syl20bnr/spacemacs)
 
@@ -60,9 +60,9 @@ Use the search box to quickly find a specific topic
 
 [![Sponsor practicalli-john](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png){align=left loading=lazy}](https://github.com/sponsors/practicalli-john/){target=_blank}
 
-The majority of my work is now focused on the [Practicalli series of books and videos](https://practical.li/){target=_blank} and an advisory role with several communities
+The majority of my work is now focused on the [:fontawesome-solid-book-open: Practicalli series of books and videos](https://practical.li/){target=_blank} and an advisory role with several communities
 
-Thank you to [Cognitect](https://www.cognitect.com/){target=_blank}, [Nubank](https://nubank.com.br/){target=_blank} and a wide range of other [sponsors](https://github.com/sponsors/practicalli-john#sponsors){target=_blank} from the Clojure community for your continued support
+Thank you to [:globe_with_meridians: Cognitect](https://www.cognitect.com/){target=_blank}, [:globe_with_meridians: Nubank](https://nubank.com.br/){target=_blank} and a wide range of other [:fontawesome-brands-github: sponsors](https://github.com/sponsors/practicalli-john#sponsors){target=_blank} from the Clojure community for your continued support
 
 
 ## Creative commons license
