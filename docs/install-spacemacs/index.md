@@ -2,10 +2,10 @@
 
 [Install prerequisites: Emacs, Java 17, Clojure CLI and Command Line tools ](/spacemacs/install-spacemacs/pre-install/){.md-button}
 
-1. [Clone or download Spacemacs](#clone-spacemacs), removing `~/.emacs.d` if it already exists
-2. [Clone the practicalli/spacemacs-config configuration](#clone-practicalli-spacemacs-configuration) to add common layers for Clojure development.  Or start Emacs and use the Spacemacs install wizard for basic config, follow the [manual configuration section](manual-configuration/) for additional features.
-3. [optional] [Install Fira Code font](#install-fira-code-font) (change `dotspacemacs-default-font` to a name of a font on your operating system in `.spacemacs.d/init.el` in step 4)
-4. [Install All The Icons fonts for doom modeline theme](#all-the-icon-fonts)
+1. [Clone or download Spacemacs](#clone-spacemacs), first removing `~/.emacs.d` if it exists
+2. [Clone practicalli/spacemacs-config user configuration](#clone-practicalli-spacemacs-configuration).  Or start Emacs and use the Spacemacs install wizard, follow the [manual configuration section](manual-configuration/)
+3. [Install Fira Code font](#install-fira-code-font) (or update `dotspacemacs-default-font` to a name of a font on your operating system in the Spacemacs user configuration)
+4. [Install All The Icons fonts ](#all-the-icon-fonts) to support the doom modeline theme
 
 <p style="text-align:center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rZNYLGw1qFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
