@@ -1,6 +1,6 @@
 # Manual Configuration
 
-When not using practicalli/spacemacs.d configuration, use the simple Spacemacs configuration wizzard to set the preferred editing style and Spacemacs distribution.
+When not using [:fontawesome-brands-github: practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config) configuration, use the Spacemacs configuration wizzard to set the preferred editing style and Spacemacs distribution.
 
 `~/.spacemacs` configuration file is created by the Spacemacs Wizard.
 
