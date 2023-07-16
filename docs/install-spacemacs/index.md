@@ -28,7 +28,7 @@ Use your favourite git client or the following command in a terminal window to c
 
 ##  Clone Practicalli Spacemacs configuration
 
-Clone [practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config) configuration or first create a fork and clone that fork
+Clone [:fontawesome-brands-github: practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config) configuration or first create a fork and clone that fork
 
 === "Free Desktop XDG config"
     Using SSH
@@ -81,19 +81,19 @@ Clone [practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-co
 
 ## Install Fira Code font
 
-[Install Fira Code](https://github.com/tonsky/FiraCode/wiki/Installing){target=_blank .md-button}
+[:fontawesome-brands-github: Install Fira Code](https://github.com/tonsky/FiraCode/wiki/Installing){target=_blank .md-button}
 
-[practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config) uses Fira Code, a mono-spaced font designed for source code and includes [ligatures](https://github.com/tonsky/FiraCode#whats-in-the-box) and [many other features](https://github.com/tonsky/FiraCode#whats-in-the-box).
+[:fontawesome-brands-github: practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config) uses Fira Code, a mono-spaced font designed for source code and includes [:fontawesome-brands-github: ligatures](https://github.com/tonsky/FiraCode#whats-in-the-box) and [:fontawesome-brands-github: many other features](https://github.com/tonsky/FiraCode#whats-in-the-box).
 
-![Fira Code font - ligatures for Emacs and Clojure code](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/fira-code-font-clojure-ligatures.png)
+![Fira Code font - ligatures for Emacs and Clojure code](https://github.com/practicalli/graphic-design/blob/live/clojure/fira-code-font-clojure-ligatures.png?raw=true)
 
 !!! HINT "Use a different font with practicalli/spacemacs-config"
-    To use a different font when using the [practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config), edit `.spacemacs.d/init.el` and update the value for `dotspacemacs-default-font` to a name of a font on your system.
+    To use a different font when using the [:fontawesome-brands-github: practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config), edit `init.el` and update the value for `dotspacemacs-default-font` to a name of a font on your system.
 
 
 ## All The Icon Fonts
 
-[practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config){target=_blank} configuration uses the modern looking doom modeline theme, which requires a few fonts and icons.
+[:fontawesome-brands-github: practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config){target=_blank} configuration uses the modern looking doom modeline theme, which requires a few fonts and icons.
 
 `SPC SPC all-the-icons-install-fonts` once Spacemacs is running will install the fonts.
 
@@ -106,4 +106,4 @@ Clone [practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-co
 
 Spacemacs is now up and running and ready to take on the world.
 
-If you already know how to use Spacemacs, jump to the [Clojure Projects section](/spacemacs/clojure-projects/), otherwise look through the [Spacemacs Basics section](/spacemacs/spacemacs-basics/) to learn how to use Vim style editing and work with files, buffers and windows in Spacemacs.
+If you already know how to use Spacemacs, jump to the [:fontawesome-solid-book-open: Clojure Projects section](/spacemacs/clojure-projects/), otherwise look through the [:fontawesome-solid-book-open: Spacemacs Basics section](/spacemacs/spacemacs-basics/) to learn how to use Vim style editing and work with files, buffers and windows in Spacemacs.
