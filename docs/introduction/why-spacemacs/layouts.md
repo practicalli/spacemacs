@@ -22,14 +22,16 @@ Layouts are used to manage projects separately. Each layout keeps its own list o
 
 The layer name shows in the mode line.
 
-![Spacemacs - Layouts - practicalli spacemacs layout](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-modeline-layouts.png)
+![Spacemacs - Layouts - practicalli spacemacs layout](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-layouts-modeline-light.png?raw=true#only-light)
+![Spacemacs - Layouts - practicalli spacemacs layout](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-layouts-modeline-dark.png?raw=true#only-dark)
 
 
 ## Layouts Transient State
 
 ++spc++ ++"l"++ ++question++ opens the layouts transient state to manage layouts with a single character keybinding. The transient state also lists all the current layouts.
 
-![Spacemacs Layers - practicalli example layer list](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-layouts-transient-state-practicalli-layouts.png)
+![Spacemacs Layers - practicalli example layer list](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-layouts-transient-state-light.png?raw=true#only-light)
+![Spacemacs Layers - practicalli example layer list](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-layouts-transient-state-dark.png?raw=true#only-dark)
 
 The most layouts common commands are:
 
@@ -42,9 +44,7 @@ The most layouts common commands are:
 | ++spc++ ++"l"++ ++"n"++ / ++n++        | Next / Previous layout                                              |
 | ++spc++ ++"l"++ ++less++ / ++greater++ | Move layout left or right in the layout list                        |
 
-![Spacemacs - Layouts - transient state menu with help - `SPC l ?` ](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-layouts-transient-state-menu.png)
-
 
 ## Reference
 
-[Layouts - Spacemacs documentation](https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#layouts-and-workspaces){.md-button}
+[:fontawesome-brands-github: Layouts - Spacemacs documentation](https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#layouts-and-workspaces){.md-button}
