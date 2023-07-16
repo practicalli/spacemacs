@@ -37,8 +37,8 @@ The most layouts common commands are:
 
 | Keybindings                            | Action                                                              |
 |----------------------------------------|---------------------------------------------------------------------|
-| ++spc++ ++l++ ++l++                    | Create a new layout or switch to existing layout by typing its name |
-| ++spc++ ++l++ ++d++                    | Delete current layout                                               |
+| ++spc++ ++"l"++ ++"l"++                | Create a new layout or switch to existing layout by typing its name |
+| ++spc++ ++"l"++ ++"d"++                | Delete current layout                                               |
 | ++spc++ ++tab++ ++0++..++9++           | Select layout in position (creates layouts if none exists)          |
 | ++spc++ ++"l"++ ++tab++                | Select previously displayed layout                                  |
 | ++spc++ ++"l"++ ++"n"++ / ++n++        | Next / Previous layout                                              |
