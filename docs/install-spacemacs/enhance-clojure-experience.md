@@ -1,8 +1,9 @@
 # Enhanced Clojure experience
 
-Enhance the **clojure** layer by adding automatic linting (clj-kondo), refactoring (clj-refactor) and recommended CIDER options.  Complement the Clojure layer with general development tools including a git client (Magit), markdown and org-mode support.
+Enhance the **clojure** layer by adding automatic linting and refator tools with Clojure LSP and recommended CIDER options.  Complement the Clojure layer with general development tools including a git client (Magit), markdown and org-mode support.
 
-[practicalli/spacemacs.d](/install-spacemacs/#clone-practicalli-spacemacs-configuration) provides a documented configuration of the layers for Clojure development and many useful customization's for Spacemacs.
+!!! HINT "Practicalli Spacemacs user config"
+    [:fontawesome-brands-github: practicalli/spacemacs-config](/spacemacs/install-spacemacs/#clone-practicalli-spacemacs-configuration) provides a comprehensive configuration for Clojure development
 
 | Layer name         | Description                                                                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
