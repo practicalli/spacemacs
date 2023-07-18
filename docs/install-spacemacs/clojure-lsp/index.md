@@ -6,12 +6,20 @@ Clojure LSP provides a standard set of features for editing and manipulating sou
 
 !!! INFO "LSP and the REPL"
     The REPL is used to design Clojure effectively by providing instant feedback on code expressions as they are written and evaluated.  A REPL based workflow supports the most effective approach to development of Clojure apps and services.
+
     Clojure LSP supports the editing activities to write Clojure code effectively, providing a static analysis of the code base that drives advance editing, navigation and refactor tasks.
 
 
-## Install Clojure CLI
+## Install Clojure LSP
 
-[Install Clojure CLI - Practicall Clojure](https://practical.li/clojure/clojure-cli/install/clojure-lsp.html){target=_blank .md-button}
+Many editors that provide an LSP client also manage an install of Clojure LSP 
+
+- Spacemacs with LSP layer enabled
+- Neovim with Mason Plugin
+
+Otherwise download the relevant file from the [:fontawesome-brands-github: Clojure LSP Releases](https://github.com/clojure-lsp/clojure-lsp/releases){target=_blank}.
+
+[:fontawesome-brands-github: Clojure LSP Releases](https://github.com/clojure-lsp/clojure-lsp/releases){target=_blank .md-button}
 
 
 ## LSP layer configuration

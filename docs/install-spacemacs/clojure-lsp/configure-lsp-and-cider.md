@@ -22,7 +22,8 @@ LSP UI requires icons provides by the [all-the icons font](https://github.com/do
 
 `SPC SPC all-the-icons-install-fonts` command installs the required icons
 
-![Spacemacs LSP breadcrumbs](/images/spacemacs-lsp-breadcumbs.png)
+![Spacemacs LSP breadcrumbs](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-lsp-breadcrumbs-light.png?raw=true#only-light)
+![Spacemacs LSP breadcrumbs](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-lsp-breadcrumbs-dark.png?raw=true#only-dark)
 
 
 ### Disable Live Linting tools
