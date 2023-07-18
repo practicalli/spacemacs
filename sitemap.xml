@@ -301,11 +301,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://practical.li/spacemacs/install-spacemacs/clj-kondo-via-lsp/</loc>
-         <lastmod>2023-07-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/clojure-layer/</loc>
          <lastmod>2023-07-18</lastmod>
          <changefreq>daily</changefreq>
@@ -321,17 +316,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://practical.li/spacemacs/install-spacemacs/enhance-clojure-experience/</loc>
-         <lastmod>2023-07-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/eshell/</loc>
-         <lastmod>2023-07-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://practical.li/spacemacs/install-spacemacs/evil-structural-editing/</loc>
          <lastmod>2023-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -352,11 +337,6 @@
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/pre-install/</loc>
-         <lastmod>2023-07-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://practical.li/spacemacs/install-spacemacs/smartparens/</loc>
          <lastmod>2023-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -392,6 +372,26 @@
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/clojure-lsp/snippets/</loc>
+         <lastmod>2023-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/spacemacs/install-spacemacs/enhance-clojure-experience/</loc>
+         <lastmod>2023-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/spacemacs/install-spacemacs/enhance-clojure-experience/clj-kondo-via-lsp/</loc>
+         <lastmod>2023-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/spacemacs/install-spacemacs/enhance-clojure-experience/evil-structural-editing/</loc>
+         <lastmod>2023-07-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/spacemacs/install-spacemacs/enhance-clojure-experience/smartparens/</loc>
          <lastmod>2023-07-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
