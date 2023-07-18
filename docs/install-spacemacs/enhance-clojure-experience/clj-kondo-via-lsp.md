@@ -13,7 +13,8 @@ Example configuration is provided in [practicalli/spacemacs.d](https://github.co
 
 When opening a Clojure project, a prompt asks if the project should be imported. Every imported project will spawn an LSP process. LSP will remember which projects are imported and spawns an LSP process if Emacs is restarted, adding a few seconds to the startup time.
 
-![Spacemacs Clojure LSP import project prompt](/images/spacemacs-clojure-lsp-project-import-prompt.png)
+![Spacemacs Clojure LSP import project prompt](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-lsp-project-import-prompt-light.png?raw=true#only-light)
+![Spacemacs Clojure LSP import project prompt](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-lsp-project-import-prompt-dark.png?raw=true#only-dark)
 
 `SPC a p` calls the `list-process` command which includes all the `clojure-lsp` processes if you are concerned about resource usage, although this is very low.  `j`/`k` navigates the list of processes, `d` deletes a process and `q` quits the process list browser.
 

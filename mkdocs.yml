@@ -150,10 +150,10 @@ nav:
       - Manual Configuration: install-spacemacs/manual-configuration.md
       - Clojure Layer: install-spacemacs/clojure-layer.md
       - Enhance Clojure:
-          - install-spacemacs/enhance-clojure-experience.md
-          - Smartparens: install-spacemacs/smartparens.md
-          - Evil Structural Editing: install-spacemacs/evil-structural-editing.md
-          - install-spacemacs/clj-kondo-via-lsp.md
+          - install-spacemacs/enhance-clojure-experience/index.md
+          - Smartparens: install-spacemacs/enhance-clojure-experience/smartparens.md
+          - Evil Structural Editing: install-spacemacs/enhance-clojure-experience/evil-structural-editing.md
+          - Clj-kondo server: install-spacemacs/enhance-clojure-experience/clj-kondo-via-lsp.md
       - Clojure LSP:
           - install-spacemacs/clojure-lsp/index.md
           - install-spacemacs/clojure-lsp/configure-lsp-and-cider.md
