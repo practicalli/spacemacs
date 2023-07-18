@@ -54,7 +54,6 @@ Clone [:fontawesome-brands-github: practicalli/spacemacs-config](https://github.
     export SPACEMACSDIR="$XDG_CONFIG_HOME/spacemacs"
     ```
 
-
 === "Classic config"
     Using SSH
     ```shell
@@ -91,19 +90,26 @@ Clone [:fontawesome-brands-github: practicalli/spacemacs-config](https://github.
     To use a different font when using the [:fontawesome-brands-github: practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config), edit `init.el` and update the value for `dotspacemacs-default-font` to a name of a font on your system.
 
 
-## All The Icon Fonts
+## Icon Fonts
 
-[:fontawesome-brands-github: practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config){target=_blank} configuration uses the modern looking doom modeline theme, which requires a few fonts and icons.
+[:fontawesome-brands-github: practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config){target=_blank} configuration uses the modern looking doom modeline theme, which requires fonts icons.
 
-`SPC SPC all-the-icons-install-fonts` once Spacemacs is running will install the fonts.
+Once Spacemacs is running, issue the following commands to install a wide range of fonts.
+
+- `SPC SPC all-the-icons-install-fonts` 
+- `SPC SPC nerd-icons-install-fonts` 
 
 ++spc++ ++"q"++ ++"r"++ to restart Spacemacs and see the finished results
 
-![Spacemacs - doom-gruvbox-light theme - home and spacemacs config buffers](https://raw.githubusercontent.com/practicalli/graphic-design/live/editors/spacemacs/screenshots/spacemacs-doom-gruvbox-light-theme-examples-home-spacemacs-config.png)
+![Spacemacs - doom-gruvbox-light theme example](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-theme-doom-gruvbox-example-light.png?raw=true#only-light)
+![Spacemacs - doom-gruvbox-light theme example](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-theme-doom-gruvbox-example-dark.png?raw=true#only-dark)
 
 
-## Spacemacs is ready for action
+## Spacemacs ready for action
 
 Spacemacs is now up and running and ready to take on the world.
 
-If you already know how to use Spacemacs, jump to the [:fontawesome-solid-book-open: Clojure Projects section](/spacemacs/clojure-projects/), otherwise look through the [:fontawesome-solid-book-open: Spacemacs Basics section](/spacemacs/spacemacs-basics/) to learn how to use Vim style editing and work with files, buffers and windows in Spacemacs.
+Already know how to use Spacemacs? jump to the [:fontawesome-solid-book-open: Clojure Projects section](/spacemacs/clojure-projects/)
+
+Otherwise look through the [:fontawesome-solid-book-open: Spacemacs Basics section](/spacemacs/spacemacs-basics/) to learn how to use Vim style editing and work with files, buffers and windows in Spacemacs.
+
