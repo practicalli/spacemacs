@@ -5983,20 +5983,19 @@ This configuration uses predominately CIDER features.  Minimal LSP UI elements a
 <h2 id="customising-symbol-highlighting">Customising symbol highlighting<a class="headerlink" href="#customising-symbol-highlighting" title="Permanent link">λ︎</a></h2>
 <p>Symbol highlighting can be toggled using the command <code>lsp-toggle-symbol-highlighting</code> and the startup state can be set using the lsp layer configuration variable <code>lsp-enable-symbol-highlighting</code></p>
 <p>The face used for highlighting will vary by theme.  Use the Emacs <code>customize</code> command to configure the <code>lsp-syntax-highlight-read</code> face or add the <code>theming</code> layer to <code>.spacemacs</code> and add a custom face to <code>dotspacemacs/user-init</code> section of <code>.spacemacs</code></p>
-<p>In this example, the default orange background color is removed and the font weigh set to bold.
-<code>emacs title "Spacemacs configuration - dotspacemacs/user-init"
-(setq-default
-    theming-modifications
-      '((doom-gruvbox-light
-         (lsp-face-highlight-read :background nil :weight bold))))</code></p>
-<p><a class="glightbox" href="/images/doom-gruvbox-light-bold.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="doom gruvbox light - bold highlight for lsp" src="/images/doom-gruvbox-light-bold.png" /></a></p>
+<p>In this example, the default orange background color is removed and the font weigh set to bold.</p>
+<div class="highlight"><span class="filename">Spacemacs configuration - dotspacemacs/user-init</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">(</span><span class="k">setq-default</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nv">theming-modifications</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">      </span><span class="o">&#39;</span><span class="p">((</span><span class="nv">doom-gruvbox-light</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">         </span><span class="p">(</span><span class="nv">lsp-face-highlight-read</span><span class="w"> </span><span class="nb">:background</span><span class="w"> </span><span class="no">nil</span><span class="w"> </span><span class="nb">:weight</span><span class="w"> </span><span class="nv">bold</span><span class="p">))))</span>
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 20, 2023</span>
       
     
   </small>
