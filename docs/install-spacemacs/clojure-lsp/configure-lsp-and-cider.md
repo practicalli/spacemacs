@@ -120,11 +120,11 @@ Symbol highlighting can be toggled using the command `lsp-toggle-symbol-highligh
 The face used for highlighting will vary by theme.  Use the Emacs `customize` command to configure the `lsp-syntax-highlight-read` face or add the `theming` layer to `.spacemacs` and add a custom face to `dotspacemacs/user-init` section of `.spacemacs`
 
 In this example, the default orange background color is removed and the font weigh set to bold.
-```emacs title "Spacemacs configuration - dotspacemacs/user-init"
+
+```elisp title="Spacemacs configuration - dotspacemacs/user-init"
 (setq-default
     theming-modifications
       '((doom-gruvbox-light
          (lsp-face-highlight-read :background nil :weight bold))))
 ```
 
-![doom gruvbox light - bold highlight for lsp](/images/doom-gruvbox-light-bold.png)
