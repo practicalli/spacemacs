@@ -853,6 +853,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#manually-managing-structure" class="md-nav__link">
     Manually managing structure
   </a>
@@ -5771,6 +5778,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#manually-managing-structure" class="md-nav__link">
     Manually managing structure
   </a>
@@ -5828,13 +5842,13 @@
 </tr>
 </tbody>
 </table>
-<p>When enabled the symbol <code>🆂</code> is displayed in the mode-line.</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-safe-structural-editing-mode.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Safe Structural Editing mode enabled" src="/images/spacemacs-clojure-safe-structural-editing-mode.png" /></a></p>
+<p><code>🆂</code> is displayed in the mode-line when safe structural editing is enabled.</p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">λ︎</a></h2>
 <p>Enable for all Clojure buffers by adding the following function in <code>dotspacemacs/user-config</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>(spacemacs/toggle-evil-safe-lisp-structural-editing-on-register-hook-clojure-mode)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">(</span><span class="nv">spacemacs/toggle-evil-safe-lisp-structural-editing-on-register-hook-clojure-mode</span><span class="p">)</span>
 </code></pre></div>
 <p>Or to enable evil safe structural editing for all supported major modes, use this function instead:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>(spacemacs/toggle-evil-safe-lisp-structural-editing-on-register-hooks)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">(</span><span class="nv">spacemacs/toggle-evil-safe-lisp-structural-editing-on-register-hooks</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="manually-managing-structure">Manually managing structure<a class="headerlink" href="#manually-managing-structure" title="Permanent link">λ︎</a></h2>
 <p>Although it is not structural editing, in Evil you can delete to a particular character. Clojure code inside of <code>()</code> can be deleted without deleting the closing <code>)</code></p>
@@ -5849,7 +5863,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 20, 2023</span>
       
     
   </small>
