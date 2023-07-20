@@ -1,13 +1,15 @@
 # Clojure LSP snippets
 
-Clojure LSP contains several [built-in snippets](https://clojure-lsp.io/features/#snippets){target=_blank}. The [practicalli/clojure-lsp-config repository](https://github.com/practicalli/clojure-lsp-config){target=_blank} enhances and extends the available snippets, helping create code that documents its purpose clearly.
+Clojure LSP contains several [:globe_with_meridians: built-in snippets](https://clojure-lsp.io/features/#snippets){target=_blank}. 
 
-[Practicalli Snippets for Clojure LSP](https://practical.li/spacemacs/snippets/clojure-lsp/practicalli-snippets.html){ .md-button }
+[:fontawesome-brands-github: practicalli/clojure-lsp-config repository](https://github.com/practicalli/clojure-lsp-config){target=_blank} enhances and extends the available snippets.
+
+[:fontawesome-solid-book-open: Design of Practicalli Clojure LSP Snippets](/spacemacs/snippets/clojure-lsp/practicalli-snippets/){.md-button}
 
 
 ## Install Practicalli Clojure LSP snippets
 
-[practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config) contains a wide range of snippets for Clojure LSP, some of which were contributed to the Clojure LSP project
+[:fontawesome-brands-github: practicalli/clojure-lsp-config](https://github.com/practicalli/clojure-lsp-config) contains a wide range of snippets for Clojure LSP, some of which were contributed to the Clojure LSP project
 
 === "Free Desktop XDG Config"
 
@@ -49,7 +51,6 @@ Start typing the name of the snippet and it should appear in the auto-completion
 ++return++ to expand the highlighted snipped
 
 ++tab++ / ++ctrl+"j"++ & ++ctrl+"k"++ or arrow-keys navigate the auto-completion pop-up list when there are multiple entries.
-
 
 
 ## Adding custom snippets
