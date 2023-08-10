@@ -2,1242 +2,1242 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://practical.li/spacemacs/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-mini-cheatsheet/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/alternative-tooling/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/alternative-tooling/leiningen/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/alternative-tooling/org-easy-templates/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/assets/images/social/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/clojure-development/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/clojure-development/project-configuration/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/clojure-development/project-configuration/monorepo-nested-projects/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/clojure-repl/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/clojure-repl/clear-repl-buffer/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/clojure-repl/clojurescript-repl/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/clojure-repl/component-lifecycle/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/clojure-repl/connect-to-remote-repl/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/clojure-repl/connect-to-repl/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/clojure-repl/jack-in-to-repl/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/clojure-repl/portal-data-visualization/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/clojure-repl/refresh-restart-repl/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/database-access/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/database-access/add-sql-layer-and-lsp/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/database-access/connection-configuration/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/database-access/external-dependencies/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/database-access/using-sql/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/debug-clojure/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/debug-clojure/cider-debug/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/debug-clojure/classpath-issues/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/debug-clojure/core-async/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/debug-clojure/format-error-messages/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/debug-clojure/inspect-values/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/debug-clojure/sayid-debug/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/debug-clojure/understanding-errors/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/documentation/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/documentation/apropos/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/documentation/cider-doc/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/documentation/comments/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/documentation/javadoc/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/emacs-lisp/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/encryption/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/encryption/create-gpg-key/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/evaluating-clojure/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/evaluating-clojure/enlighten/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/evaluating-clojure/evaluate-in-repl-buffer/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/evaluating-clojure/expressions/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/evaluating-clojure/inspect/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/evaluating-clojure/interrupt/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/evaluating-clojure/macro-expand/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/evaluating-clojure/undefine/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/external-repl/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/external-repl/connect-to-running-repl/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/external-repl/repl-command-menu/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/external-repl/repl-history/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/external-repl/show-repl-on-connect/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/external-repl/switching-to-repl/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/improving-code/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/improving-code/batch-linting/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/improving-code/formatting/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/improving-code/idiomatic-code-checking/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/improving-code/live-linting/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/change-font/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/clojure-layer/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/emacsclient-git-commit-messages/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/emacsclient-server/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/eshell/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/line-numbers/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/manual-configuration/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/maximised-full-screen/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/pre-install/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/switch-to-develop/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/themes/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/troubleshooting/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/update/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/clojure-lsp/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/clojure-lsp/configure-lsp-and-cider/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/clojure-lsp/snippets/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/enhance-clojure-experience/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/enhance-clojure-experience/clj-kondo-via-lsp/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/enhance-clojure-experience/evil-structural-editing/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/enhance-clojure-experience/smartparens/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/introduction/additional-resources/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/introduction/contributing/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/introduction/repl-workflow/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/introduction/writing-tips/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/introduction/why-spacemacs/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/introduction/why-spacemacs/clojure-layer/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/introduction/why-spacemacs/extensive-language-support/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/introduction/why-spacemacs/helm/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/introduction/why-spacemacs/layers/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/introduction/why-spacemacs/layouts/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/introduction/why-spacemacs/mnemonic-menu/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/introduction/why-spacemacs/project-file-navigation/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/introduction/why-spacemacs/states/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/introduction/why-spacemacs/structural-editing/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/introduction/why-spacemacs/why-evil/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/markdown-mode/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/misc/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/misc/artist-mode/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/misc/unicode-characters/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/navigating-code/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/navigating-code/code-folding/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/navigating-code/expressions/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/navigating-code/find-usages/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/navigating-code/function-definitions/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/navigating-code/java-definitions/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/navigating-code/markers/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/navigating-code/names-symbols/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/navigating-code/namespaces/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/org-mode/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/org-mode/code-blocks/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/org-mode/headings/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/org-mode/linking/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/org-mode/lists-and-checkboxes/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/org-mode/org-journal/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/org-mode/org-mode-tweaks/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/org-mode/tables/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/org-mode/todo-states/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/org-mode/yasnippets/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/org-mode/literate-programming/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/os-specific-config/macosx/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/refactor/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/refactor/clojure-lsp/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/refactor/clojure-mode/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/refactor/functions/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/refactor/namespace/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/refactor/project/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/emacs-quick-reference/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/hydra-menus/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/projectile/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/spacemacs-conventions/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/cider/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/cider/configuration-variables/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/clojure/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/clojure/control-flow/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/clojure/data-structures/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/clojure/functions/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/clojure/maths/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/clojure/strings/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/clojure-lsp/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/clojure-lsp/lsp-variables-reference/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/keybindings/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/keybindings/cider-keybindings/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/keybindings/vim-keybindings/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/structural-editing/smartparens-cheatsheet/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/vim/getting-comfortable/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/vim/key-bindings/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/snippets/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/snippets/clojure-lsp/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/snippets/clojure-lsp/custom-snippets/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/snippets/clojure-lsp/practicalli-snippets/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/snippets/yasnippets/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/snippets/yasnippets/built-in-snippets/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/snippets/yasnippets/clojure-snippets-reference/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/snippets/yasnippets/create-snippets/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/snippets/yasnippets/practicalli-snippets/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/snippets/yasnippets/writing-snippets/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/configure-layers/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/forge-configuration/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/git-configuration/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/github-clone/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/blame/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/branching/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/cherry-picking/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/clean-up-magit-sessions/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/commit-changes/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/create-local-repository/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/interactive-rebasing/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/list-local-repositories/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/reset-commit-history/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/staging-changes/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/stashing/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/status/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/tag-commit/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/timemachine/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/version-highlighting/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/forge/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/forge/add-repository-to-database/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/forge/forks/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/forge/issues/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/forge/pull-requests/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/remote-repositories/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/remote-repositories/add-remote/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/remote-repositories/checkout-remote-branch/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/remote-repositories/clone/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/remote-repositories/configure-default-push/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/remote-repositories/configure-default-upstream/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/remote-repositories/pull-changes/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/remote-repositories/push-changes/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/source-control/magit/remote-repositories/try-pull-requests/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/emacs-basics/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/evil-g-menu/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/evil-z-menu/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/spell-checking/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/visual-select/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/evil/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/evil/editing-states/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/evil-tools/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/evil-tools/helm-swoop/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/evil-tools/iedit-in-action/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/evil-tools/iedit/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/evil-tools/multiple-cursors/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/evil-tools/narrowing/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/evil-tools/replacing-text-across-projects/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/vim-style/common-evil/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/vim-style/key-binding-reference/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/vim-style/speaking-evil/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/vim-style/vim-quick-reference/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/vim-style/vim-tips-for-developers/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/working-with-projects/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/working-with-projects/dird/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/working-with-projects/layouts/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/working-with-projects/managing-buffers/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/working-with-projects/managing-windows/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/working-with-projects/open-and-create-files/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/working-with-projects/projectile/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/working-with-projects/ranger/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/working-with-projects/searching-projects/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/working-with-projects/tidying-up-buffers/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/spacemacs-basics/working-with-projects/treemacs/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/structural-editing/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/structural-editing/cleverparens/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/structural-editing/smartparens/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/structural-editing/lisp-state/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/structural-editing/lisp-state/deleting/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/structural-editing/lisp-state/raising/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/structural-editing/lisp-state/slurp-barf/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/structural-editing/lisp-state/wrap-unwrap/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/termux/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/termux/clojure-development/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/termux/custom-shell/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/termux/fdroid-install/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/termux/git/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/termux/setup/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/termux/spacemacs/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/termux/using-termux/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/testing/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/testing/kaocha-test-runner/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/testing/unit-testing/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/testing/unit-testing/cider-test-deps-edn-projects/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/testing/unit-testing/configure-cider-test-runner/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/testing/unit-testing/re-run-tests-from-test-report-buffer/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/testing/unit-testing/refactor-unit-tests/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/testing/unit-testing/running-tests/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/testing/unit-testing/writing-unit-tests/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://practical.li/spacemacs/writing-emacs-lisp/</loc>
-         <lastmod>2023-08-01</lastmod>
+         <lastmod>2023-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
