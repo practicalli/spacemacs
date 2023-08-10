@@ -358,7 +358,7 @@ nav:
       - database-access/connection-configuration.md
       - database-access/external-dependencies.md
       - database-access/using-sql.md
-  - Ultra-Mobile Neovim:
+  - Ultra-Mobile Termux:
       - termux/index.md
       - F-Droid: termux/fdroid-install.md
       - Termux Setup: termux/setup.md
