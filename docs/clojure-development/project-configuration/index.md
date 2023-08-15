@@ -123,7 +123,7 @@ The configuration variables are set when a file is open in a specific Emacs majo
 The [chui ClojureScript test runner](https://github.com/lambdaisland/chui/blob/master/.dir-locals.el){target=_blank} project [uses a .dir-locals.el](https://github.com/lambdaisland/chui/blob/master/.dir-locals.el){target=_blank} file with example custom code.  One custom expression ensures nrepl middleware is injected into the environment so CIDER can connect.  The other custom expression sets the indent size.
 
 ```elisp
-((clojure-mode . ((cider-clojure-cli-aliases     . "-M:env/dev:env/test")
+((clojure-mode . ((cider-clojure-cli-aliases     . ":env/dev:env/test")
                   (cider-custom-cljs-repl-init-form     . "(user/cljs-repl)")
                   (cider-default-cljs-repl              . custom)
                   (cider-preferred-build-tool           . clojure-cli)
