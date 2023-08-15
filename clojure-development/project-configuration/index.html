@@ -5895,7 +5895,7 @@ Or add tooling configuration to the project documentation.</p>
 </code></pre></div>
 <h2 id="further-examples">Further examples<a class="headerlink" href="#further-examples" title="Permanent link">λ︎</a></h2>
 <p>The <a href="https://github.com/lambdaisland/chui/blob/master/.dir-locals.el" target="_blank">chui ClojureScript test runner</a> project <a href="https://github.com/lambdaisland/chui/blob/master/.dir-locals.el" target="_blank">uses a .dir-locals.el</a> file with example custom code.  One custom expression ensures nrepl middleware is injected into the environment so CIDER can connect.  The other custom expression sets the indent size.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">((</span><span class="nv">clojure-mode</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="p">((</span><span class="nv">cider-clojure-cli-aliases</span><span class="w">     </span><span class="o">.</span><span class="w"> </span><span class="s">&quot;-M:env/dev:env/test&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">((</span><span class="nv">clojure-mode</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="p">((</span><span class="nv">cider-clojure-cli-aliases</span><span class="w">     </span><span class="o">.</span><span class="w"> </span><span class="s">&quot;:env/dev:env/test&quot;</span><span class="p">)</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">                  </span><span class="p">(</span><span class="nv">cider-custom-cljs-repl-init-form</span><span class="w">     </span><span class="o">.</span><span class="w"> </span><span class="s">&quot;(user/cljs-repl)&quot;</span><span class="p">)</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">                  </span><span class="p">(</span><span class="nv">cider-default-cljs-repl</span><span class="w">              </span><span class="o">.</span><span class="w"> </span><span class="nv">custom</span><span class="p">)</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">                  </span><span class="p">(</span><span class="nv">cider-preferred-build-tool</span><span class="w">           </span><span class="o">.</span><span class="w"> </span><span class="nv">clojure-cli</span><span class="p">)</span>
@@ -5925,7 +5925,7 @@ Or add tooling configuration to the project documentation.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 15, 2023</span>
       
     
   </small>
