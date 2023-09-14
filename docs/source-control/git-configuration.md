@@ -98,7 +98,7 @@ git config --global oauth.token "tokens-in-plain-text-files-are-not-very-secure"
 To provide greater security when using the token, consider using the [Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager).  It is not known if this approach will work with magit (let Practicalli know if it does).
 
 > #### Hint::Magit Forge also uses personal access token
-> [Magit Forge also requires a personal access token](forge-configuration.md), although this can be saved in the encrypted file `~/.authinfo.pgg` for greater security.  The Magit Forge token includes permissions required to access remote repositories over HTTPS
+> [Magit Forge also requires a personal access token](forge-configuration.md), although this can be saved in the encrypted file `~/.authinfo.gpg` for greater security.  The Magit Forge token includes permissions required to access remote repositories over HTTPS
 >
 > For greater security, use separate tokens if placing the HTTPS tokein in a plain text file).
 
