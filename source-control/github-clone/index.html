@@ -138,7 +138,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#github-access-for-github-clone" class="md-skip">
+        <a href="#github-clone-github-access" class="md-skip">
           Skip to content
         </a>
       
@@ -4734,8 +4734,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#move-configuration-to-a-github-private-file" class="md-nav__link">
-    Move configuration to a .github-private file
+  <a href="#move-token-to-config-private" class="md-nav__link">
+    Move token to config-private
   </a>
   
 </li>
@@ -7442,8 +7442,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#move-configuration-to-a-github-private-file" class="md-nav__link">
-    Move configuration to a .github-private file
+  <a href="#move-token-to-config-private" class="md-nav__link">
+    Move token to config-private
   </a>
   
 </li>
@@ -7479,7 +7479,13 @@
   
 
 
-<h1 id="github-access-for-github-clone">GitHub access for github-clone<a class="headerlink" href="#github-access-for-github-clone" title="Permanent link">λ︎</a></h1>
+<h1 id="github-clone-github-access">github-clone GitHub access<a class="headerlink" href="#github-clone-github-access" title="Permanent link">λ︎</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">github-clone is Deprecated</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>c</kbd></span> now calls magit-clone which is a far more secure approach than previously provided by github-clone.</p>
+<p>github-clone was removed as part of the deprecation of the github layer.  Only the <code>git</code> layer is now recommended.</p>
+<p>The content below is kept for posterity and will be moved to the reference section.</p>
+</div>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>c</kbd></span> can clone a remote repository from GitHub / GitLab.</p>
 <p>Using an SSH URL and an SSH key, then no further configuration is required.</p>
 <p>Using an HTTPS URL required the configuration of a developer token.</p>
@@ -7503,28 +7509,26 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>github.user<span class="w"> </span>practicalli
 </code></pre></div>
 <p>Add the personal access token to Git configuration (using your own token)</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>github.oauth-token<span class="w"> </span>5aa705bda08803e0ed59c39e0a4101c0fea0ec3b
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>github.oauth-token<span class="w"> </span>****************************************
 </code></pre></div>
-<p>The <code>~/.gitconfig</code> file will be updated and should look similar to this example</p>
-<p><a class="glightbox" href="/images/git-gitconfig-user-name-email-github-oauth-token.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Git configuration - user name and email with GitHub user name and oauth token" src="/images/git-gitconfig-user-name-email-github-oauth-token.png" /></a></p>
-<h2 id="move-configuration-to-a-github-private-file">Move configuration to a .github-private file<a class="headerlink" href="#move-configuration-to-a-github-private-file" title="Permanent link">λ︎</a></h2>
-<p>To help mistakenly committing the token to a shared repository, move the <code>[github]</code> section from <code>.gitconfig</code> to a file called <code>.gitconfig-private</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">  </span><span class="o">[</span>github<span class="o">]</span>
+<h2 id="move-token-to-config-private">Move token to config-private<a class="headerlink" href="#move-token-to-config-private" title="Permanent link">λ︎</a></h2>
+<p>To help mistakenly committing the token to a shared repository, move the <code>[github]</code> section from the Git Configuration file to a file called <code>config-private</code></p>
+<div class="highlight"><span class="filename">~/.config/git/config-private</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">  </span><span class="o">[</span>github<span class="o">]</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nv">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>&lt;your-github-username&gt;
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span>oauth-token<span class="w"> </span><span class="o">=</span><span class="w"> </span>&lt;01personal02access03token&gt;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="c1"># oauth-token = ***************************</span>
 </code></pre></div>
-<p>Add an <code>[include]</code> section in the <code>.gitconfig</code> fot to include the details from the <code>.gitconfig-private</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">  </span><span class="o">[</span>include<span class="o">]</span>
+<p>Add an <code>[include]</code> section in the Git configuration file to include the details from the <code>.gitconfig-private</code></p>
+<div class="highlight"><span class="filename">~/.config/git/config</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">  </span><span class="o">[</span>include<span class="o">]</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nv">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>~/.gitconfig-private
 </code></pre></div>
-<p>The <code>.gitconfig</code> file can then safely be committed to a shared Git repository without exposing the access token.</p>
+<p>The Git configuration file can then safely be committed to a shared Git repository without exposing the access token.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 26, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2023</span>
       
     
   </small>
