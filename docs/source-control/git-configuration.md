@@ -4,34 +4,32 @@ Git uses either `XDG_CONFIG_HOME/git/config` or `$HOME/.gitconfig` configuration
 
 An identity is required when sharing commits via services such as GitHub/GitLab and so that each commit you make is associated to you.
 
+!!! HINT "Practicalli Dotfiles Git Configuration"
+    [:fontawesome-brands-github: Practicalli Dotfiles](https://github.com/practicalli/dotfiles) contains an example Git user configuration, with separate identity configuration files for commercial and open source work.
+
+    The Git configuration also provides global Git ignore patterns for Clojure and MkDocs projects.
+
 
 ## Add an identity to Git configuration
 
 Define your git identity using the following commands in a terminal window
 
+??? HINT "Use the GitHub Email Mask address"
+    To minimise Email spam, use the [email address provided by GitHub as a mask to your primary email address](https://github.com/settings/emails) on the GitHub account.  The mask address is of the form `***+github-account@noreply.github.com`.
+
+    [Visit the email settings of the GitHub account](https://github.com/settings/emails) and tick **Keep my email addresses private**.
+
+    A new email of the form `******+github-account-name@users.noreply.github.com` is created which must be set as your user email address
+
+    For additional security, select the option **Block command line pushes that expose my email** to prevent commits being pushed to GitHub using your public email address.
+
 ```shell
 git config --global user.name "practicalli"
 
-git config --global user.email ***+github-account@noreploy.github.com
+git config --global user.email ***+github-account@noreply.github.com
 ```
 
-These commands update the `[user]` section of the Git configuration file, automatically creating that file if it does not exist.
-
-![Git Configuration file - user name and email](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-git-configuration-user-private-email.png)
-
-### Using a private email address
-
-To avoid sharing your real email address (to minimise spam), consider using a private email address
-
-In your GitHub account, [visit the email settings](https://github.com/settings/emails) and tick **Keep my email addresses private**.
-
-A new email of the form `250870+practicalli-john@users.noreply.github.com` is created which must be set as your user email address
-
-```shell
-git config --global user.email "******+practicalli-john@users.noreply.github.com"
-```
-
-For additional security, select the option **Block command line pushes that expose my email** to prevent commits being pushed to GitHub using your public email address.
+The `[user]` section of the Git configuration file is updated by these commands, automatically creating the file and section if it does not exist.
 
 
 ## Access remote repositories
