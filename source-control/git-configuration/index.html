@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.5">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
@@ -38,7 +38,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
@@ -4684,19 +4684,6 @@
     Add an identity to Git configuration
   </a>
   
-    <nav class="md-nav" aria-label="Add an identity to Git configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-a-private-email-address" class="md-nav__link">
-    Using a private email address
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -7498,19 +7485,6 @@
     Add an identity to Git configuration
   </a>
   
-    <nav class="md-nav" aria-label="Add an identity to Git configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-a-private-email-address" class="md-nav__link">
-    Using a private email address
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -7614,21 +7588,25 @@
 <h1 id="git-configuration">Git Configuration<a class="headerlink" href="#git-configuration" title="Permanent link">λ︎</a></h1>
 <p>Git uses either <code>XDG_CONFIG_HOME/git/config</code> or <code>$HOME/.gitconfig</code> configuration file for user level settings.</p>
 <p>An identity is required when sharing commits via services such as GitHub/GitLab and so that each commit you make is associated to you.</p>
+<div class="admonition hint">
+<p class="admonition-title">Practicalli Dotfiles Git Configuration</p>
+<p><a href="https://github.com/practicalli/dotfiles"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Practicalli Dotfiles</a> contains an example Git user configuration, with separate identity configuration files for commercial and open source work.</p>
+<p>The Git configuration also provides global Git ignore patterns for Clojure and MkDocs projects.</p>
+</div>
 <h2 id="add-an-identity-to-git-configuration">Add an identity to Git configuration<a class="headerlink" href="#add-an-identity-to-git-configuration" title="Permanent link">λ︎</a></h2>
 <p>Define your git identity using the following commands in a terminal window</p>
+<details class="hint">
+<summary>Use the GitHub Email Mask address</summary>
+<p>To minimise Email spam, use the <a href="https://github.com/settings/emails">email address provided by GitHub as a mask to your primary email address</a> on the GitHub account.  The mask address is of the form <code>***+github-account@noreply.github.com</code>.</p>
+<p><a href="https://github.com/settings/emails">Visit the email settings of the GitHub account</a> and tick <strong>Keep my email addresses private</strong>.</p>
+<p>A new email of the form <code>******+github-account-name@users.noreply.github.com</code> is created which must be set as your user email address</p>
+<p>For additional security, select the option <strong>Block command line pushes that expose my email</strong> to prevent commits being pushed to GitHub using your public email address.</p>
+</details>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;practicalli&quot;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span>***+github-account@noreploy.github.com
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span>***+github-account@noreply.github.com
 </code></pre></div>
-<p>These commands update the <code>[user]</code> section of the Git configuration file, automatically creating that file if it does not exist.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-git-configuration-user-private-email.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Git Configuration file - user name and email" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-git-configuration-user-private-email.png" /></a></p>
-<h3 id="using-a-private-email-address">Using a private email address<a class="headerlink" href="#using-a-private-email-address" title="Permanent link">λ︎</a></h3>
-<p>To avoid sharing your real email address (to minimise spam), consider using a private email address</p>
-<p>In your GitHub account, <a href="https://github.com/settings/emails">visit the email settings</a> and tick <strong>Keep my email addresses private</strong>.</p>
-<p>A new email of the form <code>250870+practicalli-john@users.noreply.github.com</code> is created which must be set as your user email address</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;******+practicalli-john@users.noreply.github.com&quot;</span>
-</code></pre></div>
-<p>For additional security, select the option <strong>Block command line pushes that expose my email</strong> to prevent commits being pushed to GitHub using your public email address.</p>
+<p>The <code>[user]</code> section of the Git configuration file is updated by these commands, automatically creating the file and section if it does not exist.</p>
 <h2 id="access-remote-repositories">Access remote repositories<a class="headerlink" href="#access-remote-repositories" title="Permanent link">λ︎</a></h2>
 <p>GitHub repositories can be accessed via HTTPS or SSH URL.</p>
 <p>SSH approach is typically more secure, especially as the files holding your keys on disk are encrypted.  SSH connections can be tunnelled through HTTPS if connecting to a remote repository via a very restricted firewall.</p>
@@ -7642,7 +7620,7 @@
 <p>Unix systems (Linux / MacOSX) should have the <code>ssh-keygen</code> command.</p>
 <p><code>-t</code> specifies the type of encryption, RSA recommended</p>
 <p><code>-C</code> to add your GitHub email address to the SSH key</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ssh-keygen -t rsa -C &quot;654321+practicalli-john@users.noreply.github.com&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ssh-keygen -t rsa -C &quot;654321+practicalli-john@users.noreply.github.com&quot;
 </code></pre></div>
 <p>Accept the default file or enter a preferred file name</p>
 <p>Enter a passphrase.  A 12 character or greater passphrase should provide adequate security.</p>
@@ -7659,7 +7637,7 @@
 <li><a href="https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html#create-a-personal-access-token">GitLab personal access token documentation</a></li>
 </ul>
 <p>Whilst the token could be added to the <code>~/.gitconfig</code>, as this file is plain text it is not particularly secure (especially if committed into a dotfiles repository and shared).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>oauth.token<span class="w"> </span><span class="s2">&quot;tokens-in-plain-text-files-are-not-very-secure&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>oauth.token<span class="w"> </span><span class="s2">&quot;tokens-in-plain-text-files-are-not-very-secure&quot;</span>
 </code></pre></div>
 <p>To provide greater security when using the token, consider using the <a href="https://github.com/GitCredentialManager/git-credential-manager">Git Credential Manager</a>.  It is not known if this approach will work with magit (let Practicalli know if it does).</p>
 <blockquote>
@@ -7669,22 +7647,22 @@
 </blockquote>
 <h2 id="diff-3-support">Diff 3 Support<a class="headerlink" href="#diff-3-support" title="Permanent link">λ︎</a></h2>
 <p>Diff 3 standard included the parent of two changes in conflict, providing additional context when deciding which change should take precedence</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git config --global merge.conflictstyle diff3
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git config --global merge.conflictstyle diff3
 </code></pre></div>
 <p>This command adds a <code>conflictstyle</code> entry in the <code>[merge]</code> section of the Git configuration file.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>[merge]
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    # Include common parent when merge conflicts arise
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    conflictstyle = diff3
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[merge]
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    # Include common parent when merge conflicts arise
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    conflictstyle = diff3
 </code></pre></div>
 <p>Magit supports the Diff3 standard, so a common parent will be shown when this feature is enabled.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Git Diff3 standard supported by Magit in Spacemacs" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png" /></a></p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-empty.png?raw=true" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Git Diff3 standard supported by Magit in Spacemacs" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-empty.png?raw=true" /></a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 26, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 14, 2023</span>
       
     
   </small>
@@ -7842,7 +7820,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
