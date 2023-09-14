@@ -39,29 +39,26 @@ git config --global github.user practicalli
 Add the personal access token to Git configuration (using your own token)
 
 ```shell
-git config --global github.oauth-token 5aa705bda08803e0ed59c39e0a4101c0fea0ec3b
+git config --global github.oauth-token ****************************************
 ```
 
-The `~/.gitconfig` file will be updated and should look similar to this example
 
-![Git configuration - user name and email with GitHub user name and oauth token](/images/git-gitconfig-user-name-email-github-oauth-token.png)
+## Move token to config-private
+
+To help mistakenly committing the token to a shared repository, move the `[github]` section from the Git Configuration file to a file called `config-private`
 
 
-## Move configuration to a .github-private file
-
-To help mistakenly committing the token to a shared repository, move the `[github]` section from `.gitconfig` to a file called `.gitconfig-private`
-
-```bash
+```shell title="~/.config/git/config-private"
   [github]
     user = <your-github-username>
-    oauth-token = <01personal02access03token>
+    # oauth-token = ***************************
 ```
 
-Add an `[include]` section in the `.gitconfig` fot to include the details from the `.gitconfig-private`
+Add an `[include]` section in the Git configuration file to include the details from the `.gitconfig-private`
 
-```bash
+```shell title="~/.config/git/config"
   [include]
     path = ~/.gitconfig-private
 ```
 
-The `.gitconfig` file can then safely be committed to a shared Git repository without exposing the access token.
+The Git configuration file can then safely be committed to a shared Git repository without exposing the access token.
