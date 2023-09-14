@@ -90,14 +90,25 @@ Clone [:fontawesome-brands-github: practicalli/spacemacs-config](https://github.
     To use a different font when using the [:fontawesome-brands-github: practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config), edit `init.el` and update the value for `dotspacemacs-default-font` to a name of a font on your system.
 
 
+## Emacs Packages
+
+Spacemacs automatically downloads and compiles Emacs packages when Emacs is run.
+
+If Emacs supports native compilation, then the compilation process can take longer, although Emacs should run many tasks faster or more efficiently.
+
+++spc++ ++"a"++ ++"p"++ opens `proced` showing active Emacs processes, such as native compilation
+
+
+
+
 ## Icon Fonts
 
 [:fontawesome-brands-github: practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config){target=_blank} configuration uses the modern looking doom modeline theme, which requires fonts icons.
 
 Once Spacemacs is running, issue the following commands to install a wide range of fonts.
 
-- `SPC SPC all-the-icons-install-fonts` 
-- `SPC SPC nerd-icons-install-fonts` 
+- `SPC SPC all-the-icons-install-fonts`
+- `SPC SPC nerd-icons-install-fonts`
 
 ++spc++ ++"q"++ ++"r"++ to restart Spacemacs and see the finished results
 
@@ -112,4 +123,3 @@ Spacemacs is now up and running and ready to take on the world.
 Already know how to use Spacemacs? jump to the [:fontawesome-solid-book-open: Clojure Projects section](/spacemacs/clojure-projects/)
 
 Otherwise look through the [:fontawesome-solid-book-open: Spacemacs Basics section](/spacemacs/spacemacs-basics/) to learn how to use Vim style editing and work with files, buffers and windows in Spacemacs.
-
