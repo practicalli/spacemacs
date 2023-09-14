@@ -121,4 +121,4 @@ This command adds a `conflictstyle` entry in the `[merge]` section of the Git co
 
 Magit supports the Diff3 standard, so a common parent will be shown when this feature is enabled.
 
-![Git Diff3 standard supported by Magit in Spacemacs](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png)
+![Git Diff3 standard supported by Magit in Spacemacs](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-empty.png?raw=true)
