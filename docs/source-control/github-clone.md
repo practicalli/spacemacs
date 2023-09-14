@@ -1,4 +1,12 @@
-# GitHub access for github-clone
+# github-clone GitHub access
+
+!!! WARNING "github-clone is Deprecated"
+    ++spc++ ++"g"++ ++"c"++ now calls magit-clone which is a far more secure approach than previously provided by github-clone.
+
+    github-clone was removed as part of the deprecation of the github layer.  Only the `git` layer is now recommended.
+
+    The content below is kept for posterity and will be moved to the reference section.
+
 
 ++spc++ ++"g"++ ++"c"++ can clone a remote repository from GitHub / GitLab.
 
