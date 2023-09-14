@@ -4726,19 +4726,6 @@
     HTTPS URLs and personal access token
   </a>
   
-    <nav class="md-nav" aria-label="HTTPS URLs and personal access token">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintmagit-forge-also-uses-personal-access-token" class="md-nav__link">
-    Hint::Magit Forge also uses personal access token
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -7527,19 +7514,6 @@
     HTTPS URLs and personal access token
   </a>
   
-    <nav class="md-nav" aria-label="HTTPS URLs and personal access token">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintmagit-forge-also-uses-personal-access-token" class="md-nav__link">
-    Hint::Magit Forge also uses personal access token
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -7640,11 +7614,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>oauth.token<span class="w"> </span><span class="s2">&quot;tokens-in-plain-text-files-are-not-very-secure&quot;</span>
 </code></pre></div>
 <p>To provide greater security when using the token, consider using the <a href="https://github.com/GitCredentialManager/git-credential-manager">Git Credential Manager</a>.  It is not known if this approach will work with magit (let Practicalli know if it does).</p>
-<blockquote>
-<h4 id="hintmagit-forge-also-uses-personal-access-token">Hint::Magit Forge also uses personal access token<a class="headerlink" href="#hintmagit-forge-also-uses-personal-access-token" title="Permanent link">λ︎</a></h4>
-<p><a href="../forge-configuration/">Magit Forge also requires a personal access token</a>, although this can be saved in the encrypted file <code>~/.authinfo.pgg</code> for greater security.  The Magit Forge token includes permissions required to access remote repositories over HTTPS</p>
-<p>For greater security, use separate tokens if placing the HTTPS tokein in a plain text file).</p>
-</blockquote>
+<details>
+<summary>Magit Forge also uses personal access token</summary>
+<p><a href="../forge-configuration/">Magit Forge also requires a personal access token</a>, although this can be saved in the encrypted file <code>~/.authinfo.gpg</code> for greater security.  The Magit Forge token includes permissions required to access remote repositories over HTTPS</p>
+</details>
 <h2 id="diff-3-support">Diff 3 Support<a class="headerlink" href="#diff-3-support" title="Permanent link">λ︎</a></h2>
 <p>Diff 3 standard included the parent of two changes in conflict, providing additional context when deciding which change should take precedence</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git config --global merge.conflictstyle diff3
