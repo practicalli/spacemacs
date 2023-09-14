@@ -14,8 +14,6 @@ Magit can push and pull changes with [remote repositories](remote-repositories/)
 
 ++question++ shows the top level command menu in the Magit status buffer.
 
-![Spacemacs Magit help menu](/images/spacemacs-magit-help-menu.png)
-
 
 ## Magit overview
 
