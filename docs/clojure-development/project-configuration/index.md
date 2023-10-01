@@ -1,53 +1,110 @@
 # Emacs Project configuration
 
-`.dir-locals.el` files provide project level configuration where the default aliases, build tool and other CIDER actions can be defined.
+`.dir-locals.el` file can be used to configure how Emacs interacts with a project for a specific mode, e.g. `clojure-mode`.
 
-There are many [CIDER configuration variables](/spacemacs/reference/cider/configuration-variables.md) that can be added to `.dir-locals.el`
+Configure which Clojure CLI aliases to include during Cider Jack-in and set values for CIDER variables and other tool used with a Clojure project, e.g. Figwheel-main, Shadow-cljs.
 
-`SPC p e` to create or edit a `.dir-locals.el` file in the current project.
+!!! INFO "Reference: CIDER configuration variables"
+    [CIDER configuration variables](/spacemacs/reference/cider/configuration-variables.md) list show the extent in which CIDER can be added configured within Emacs Init script or via `.dir-locals.el`
+
+    [CIDER documentation - basic configuration](https://docs.cider.mx/cider/) describes many of the configuration variables available.
+
+
+## Create Configuration
+
+++spc++ ++"p"++ ++"e"++ to create or edit a `.dir-locals.el` file in the current project or open a `.dir-locals.el` file, e.g. via ++spc++ ++"f"++ ++"f"++
+
+Create a list containing a list of mode-specific configurations 
+
+```elisp
+((clojure-mode . ((emacs-variable . value))))
+```
+
+[:fontawesome-solid-book-open: Syntax Explained](#syntax-explained){.md-button} 
+
+Each mode-specific configuration is a list of lists, usually setting a variable used in Emacs or one of its packages.
+
+!!! EXAMPLE "Clojure Mode - Use Clojure CLI"
+    Configure CIDER to use the Clojure CLI tool to run the REPL process during Jack-in.
+    ```elisp
+    ((clojure-mode . ((cider-preferred-build-tool . clojure-cli))))
+    ```
+
+Save the `.dir-locals.el` file and open a Clojure file to make the configuration available to the buffer displaying the file.
 
 ??? HINT "Force loading the .dir-locals.el configuration"
-    The definitions in a `.dir-locals.el` are only ready when opening a file from the current project, so a file must be opened or reloaded, ++spc++ ++"b"++ ++r++ (`revert-buffer`).  Switching to another buffer that has not been reverted (or re-opened) may not pick up the changes to the `.dir-locals.el` file.
+    The definitions in a `.dir-locals.el` are only ready when opening a file from the current project, so a file must be opened,  ++spc++ ++"f"++ ++"f"++, or reloaded, ++spc++ ++"b"++ ++r++ (`revert-buffer`).  Switching to another buffer that has not been reverted (or re-opened) may not pick up the changes to the `.dir-locals.el` file.
 
 
-## Example configurations
+## Clojure CLI Config
 
-An example of setting the Clojure CLI tool as the default Clojure tool (rather than Leiningen or Boot). Also configuring several `deps.edn` aliases to be used when starting the REPL via Clojure CLI.
+Example of setting the Clojure CLI tool as the default Clojure tool (rather than Leiningen). 
 
-```elisp
-((clojure-mode . ((cider-preferred-build-tool . clojure-cli)
-                  (cider-clojure-cli-aliases . ":dev/env:env/test"))))
-```
+Configure Clojure CLI aliases from project or user `deps.edn` file to be included when starting the REPL via Cider Jack-in.
 
-An example of a ClojureScript project using figwheel-main, Clojure CLI and hiding the display banner in the REPL browser
+!!! EXAMPLE "Clojure mode - default tool with dev & test aliases"
+    ```elisp
+    ((clojure-mode . ((cider-preferred-build-tool . clojure-cli)
+                      (cider-clojure-cli-aliases . ":dev/env:env/test"))))
+    ```
 
-```elisp
-((clojure-mode . ((cider-preferred-build-tool          . clojure-cli)
-                  (cider-clojure-cli-aliases           . ":fig:dev")
-                  (cider-default-cljs-repl             . figwheel-main)
-                  (cider-figwheel-main-default-options . "dev")
-                  (cider-repl-display-help-banner      . nil))))
-```
+!!! INFO "Clojure CLI Aliases by Practicalli"
+    [Practicalli Clojure CLI Config](https://practical.li/clojure/clojure-cli/practicalli-config/) contains a wide range of aliases to use with Clojure CLI.
 
-## Only Clojure CLI tools alias
-
-The `cider-jack-in` command injects dependencies via the `--deps` command line argument and includes the `--middleware` option for nrepl.  This auto-injected configuration can affect project or user level aliases used with jack-in.
-
-Use the following `.dir-locals.el` configuration to just use the configuration defined in the named alias
-
-```elisp
-((clojure-mode . ((cider-preferred-build-tool . clojure-cli)
-                  (cider-clojure-cli-aliases . ":alias/name")
-                  (cider-jack-in-dependencies . nil)
-                  (cider-jack-in-nrepl-middlewares . nil)
-                  (cider-jack-in-lein-plugins . nil)
-                  (cider-clojure-cli-parameters . ""))))
-```
-
-> `cider-clojure-cli-aliases` replaces `cider-clojure-cli-global-options` variable
+??? WARNING "DEPRECATED: cider-clojure-cli-global-options"
+    `cider-clojure-cli-aliases` replaced `cider-clojure-cli-global-options` variable
 
 
-## Shared and local configurations
+!!! EXAMPLE "Clojure mode - Practicalli Reloaded REPL aliases"
+    ```elisp
+    ((clojure-mode . ((cider-preferred-build-tool . clojure-cli)
+                      (cider-clojure-cli-aliases . ":test/env:dev/reloaded"))))
+    ```
+
+!!! EXAMPLE "Clojure mode - Figwheel-main configuration"
+    A ClojureScript project using figwheel-main, Clojure CLI and hiding the display banner in the REPL browser
+    ```elisp
+    ((clojure-mode . ((cider-preferred-build-tool          . clojure-cli)
+                      (cider-clojure-cli-aliases           . ":fig:dev")
+                      (cider-default-cljs-repl             . figwheel-main)
+                      (cider-figwheel-main-default-options . "dev")
+                      (cider-repl-display-help-banner      . nil))))
+    ```
+
+??? INFO "Disable CIDER Jack-in dependencies"
+
+    The `cider-jack-in` command injects dependencies via the `--deps` command line argument and includes the `--middleware` option for nrepl.  
+
+    Cider Jack-in auto-injected configuration should work with a large majority of configurations, however, the CIDER configuration can be disabled if it affects desired project or user level aliases used with jack-in.
+
+    Use the following `.dir-locals.el` configuration to only use the configuration defined in the `cider-clojure-cli-aliases` 
+
+    !!! EXAMPLE "Disable Cider jack-in auto-injected configuration"
+        ```elisp
+        ((clojure-mode . ((cider-preferred-build-tool . clojure-cli)
+                          (cider-clojure-cli-aliases . ":alias/name")
+                          (cider-jack-in-dependencies . nil)
+                          (cider-jack-in-nrepl-middlewares . nil)
+                          (cider-jack-in-lein-plugins . nil)
+                          (cider-clojure-cli-parameters . ""))))
+        ```
+    
+    NOTE: The aliases included via `cider-clojure-cli-aliases` must include the dependencies and middleware configuration reqiured to connect Cider to the REPL process, i.e. nrepl and cider-nrepl
+
+    !!! EXAMPLE "Clojure CLI Alias to start nREPL server & Cider middleware"
+        ```elisp
+          ;; Headless REPL with nREPL server for Clojure Editor support
+          :repl/headless
+          {:extra-deps {nrepl/nrepl       {:mvn/version "1.0.0"}
+                        cider/cider-nrepl {:mvn/version "0.37.0"}}
+           :main-opts  ["--main" "nrepl.cmdline"
+                        "--middleware" "[cider.nrepl/cider-middleware]"]}
+        ```
+
+    > [Practicalli Clojure CLI Config](https://practical.li/clojure/clojure-cli/practicalli-config/) contains a wide range of aliases to use with Clojure CLI.
+
+
+## Shared and local config
 
 Assuming a team agrees to keep a shared `.dir-locals.el` configuration in a project repository, each developer can [add their own configuration in a `.dir-locals-2.el` file](https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html).
 
@@ -58,11 +115,7 @@ The `.dir-locals-2.el` will be loaded in addition to `.dir-locals.el`.
     Or add tooling configuration to the project documentation.
 
 
-## Common configurations
-
-[CIDER documentation - basic configuration](https://docs.cider.mx/cider/) describes many of the configuration variables available.
-
-Practicalli also create [a list of variables](/spacemacs/reference/cider/configuration-variables.md) extracted from the [clojure-emacs/cider](/spacemacs/reference/cider/configuration-variables.md) project.
+## Projectile 
 
 `.dir-locals.el` is also useful for setting Projectile configuration, e.g. the project-type.  This is especially useful for [monorepo or nested projects](monorepo-nested-projects.md).
 
@@ -71,7 +124,7 @@ Practicalli also create [a list of variables](/spacemacs/reference/cider/configu
     `(setq (cider-preferred-build-tool 'clojure-cli))`
 
 
-## Understanding the syntax
+## Syntax Explained
 
 Elisp uses a two-element tuples called cons cells, create using the cons function, or with a dotted-pair notation.  This is loosely equivalent to key-value pairs in a Clojure hash-map.
 
@@ -150,3 +203,4 @@ Also review directory variables in the Emacs the info pages
 ```elisp
 (info "(emacs) Directory Variables").
 ```
+
