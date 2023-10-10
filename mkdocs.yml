@@ -4,6 +4,7 @@ site_name: Practicalli Spacemacs
 site_url: https://practical.li/spacemacs
 site_description: Practical guide to Clojure development with Spacemacs
 site_author: Practicalli
+site_org: https://practical.li
 copyright: Copyright &copy 2023  Practicali <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 repo_url: https://github.com/practicalli/spacemacs/
 edit_uri: https://github.com/practicalli/spacemacs/edit/main/docs/
