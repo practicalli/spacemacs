@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
       
@@ -38,7 +38,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -8093,52 +8093,7 @@ semper lorem quam in massa.</p>
 <p>Specify a local file from the root of the book project (the directory containing mkdocs.yml)</p>
 <details class="example">
 <summary>Scheduled Version Check GitHub Workflow from source code file</summary>
-<div class="highlight"><span class="filename">scheduled version check</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nn">---</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="c1"># ------------------------------------------</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="c1"># Scheduled check of versions</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># - use as non-urgent report on versions</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="c1"># - Uses POSIX Cron syntax</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="c1">#   - Minute [0,59]</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="c1">#   - Hour [0,23]</span>
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="c1">#   - Day of the month [1,31]</span>
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="c1">#   - Month of the year [1,12]</span>
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="c1">#   - Day of the week ([0,6] with 0=Sunday)</span>
-<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="c1">#</span>
-<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="c1"># Using liquidz/anta to check:</span>
-<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="c1"># - GitHub workflows</span>
-<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="c1"># - deps.edn</span>
-<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="c1"># ------------------------------------------</span>
-<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>
-<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Scheduled</span><span class="nv"> </span><span class="s">Version</span><span class="nv"> </span><span class="s">Check&quot;</span>
-<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="nt">on</span><span class="p">:</span>
-<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">  </span><span class="nt">schedule</span><span class="p">:</span>
-<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="w">    </span><span class="c1"># - cron: &quot;0 4 * * *&quot; # at 04:04:04 ever day</span>
-<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="w">    </span><span class="c1"># - cron: &quot;0 4 * * 5&quot; # at 04:04:04 ever Friday</span>
-<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">cron</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;0</span><span class="nv"> </span><span class="s">4</span><span class="nv"> </span><span class="s">1</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&quot;</span><span class="w"> </span><span class="c1"># at 04:04:04 on first day of month</span>
-<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="w">  </span><span class="nt">workflow_dispatch</span><span class="p">:</span><span class="w"> </span><span class="c1"># Run manually via GitHub Actions Workflow page</span>
-<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>
-<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="nt">jobs</span><span class="p">:</span>
-<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a><span class="w">  </span><span class="nt">scheduled-version-check</span><span class="p">:</span>
-<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Scheduled</span><span class="nv"> </span><span class="s">Version</span><span class="nv"> </span><span class="s">Check&quot;</span>
-<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a><span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;🚀 Job automatically triggered by ${{ github.event_name }}&quot;</span>
-<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;🐧 Job running on ${{ runner.os }} server&quot;</span>
-<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository&quot;</span>
-<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>
-<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Checkout</span><span class="nv"> </span><span class="s">code&quot;</span>
-<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
-<a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;🐙 ${{ github.repository }} repository was cloned to the runner.&quot;</span>
-<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a>
-<a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Antq</span><span class="nv"> </span><span class="s">Check</span><span class="nv"> </span><span class="s">versions&quot;</span>
-<a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a><span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">liquidz/antq-action@main</span>
-<a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a><span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a><span class="w">          </span><span class="nt">excludes</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
-<a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a><span class="w">          </span><span class="nt">skips</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;boot</span><span class="nv"> </span><span class="s">clojure-cli</span><span class="nv"> </span><span class="s">pom</span><span class="nv"> </span><span class="s">shadow-cljs</span><span class="nv"> </span><span class="s">leiningen&quot;</span>
-<a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a>
-<a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a><span class="w">      </span><span class="c1"># Summary</span>
-<a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;🎨 library versions checked with liquidz/antq&quot;</span>
-<a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;🍏 Job status is ${{ job.status }}.&quot;</span>
+<div class="highlight"><span class="filename">scheduled version check</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>
 </code></pre></div>
 </details>
 <details class="example">
