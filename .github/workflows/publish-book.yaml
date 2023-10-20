@@ -24,9 +24,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          sparse-checkout: |
+            docs
+            overrides
+      - run: echo "🐙 Sparse Checkout of ${{ github.repository }} repository to the CI runner."
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
