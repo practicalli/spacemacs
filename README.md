@@ -86,7 +86,7 @@ Publish book workflow installs Material for MkDocs version 9
 Install mkdocs version 9 using the Python pip package manager
 
 ```bash
-pip install mkdocs-material=="9.*"
+pip3 install mkdocs-material=="9.4"
 ```
 
 Install the plugins used by the Practicalli site using Pip (these are also installed in the GitHub Action workflow)
