@@ -8,10 +8,11 @@ on:
   workflow_run:
     workflows:
       - "MegaLinter"
-    paths-ignore:
-      - README.md
-      - CHANGELOG.md
-      - .gitignore
+    paths:
+      - "docs/**"
+      - "includes/**"
+      - "overrides/**"
+      - "mkdocs.yaml"
     branches:
       - main
     types:
@@ -21,9 +22,14 @@ permissions:
   contents: write
 
 jobs:
-  deploy:
+  publish-book:
+    name: MkDocs Publish
     runs-on: ubuntu-latest
     steps:
+      - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
+      - run: echo "🐧 Job running on ${{ runner.os }} server"
+      - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
+
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
@@ -31,13 +37,22 @@ jobs:
           sparse-checkout: |
             docs
             overrides
-      - run: echo "🐙 Sparse Checkout of ${{ github.repository }} repository to the CI runner."
-      - uses: actions/setup-python@v4
+      - run: echo "🐙 ${{ github.repository }} repository sparse-checkout to the CI runner."
+      - name: Setup Python
+        uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - uses: actions/cache@v3
+
+      - name: Cache
+        uses: actions/cache@v3
         with:
           key: ${{ github.ref }}
           path: .cache
+
       - run: pip install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects pillow cairosvg
       - run: mkdocs gh-deploy --force
+      - run: echo "🐙 ."
+
+      # Summary and status
+      - run: echo "🎨 MkDocs Publish Book workflow completed"
+      - run: echo "🍏 Job status is ${{ job.status }}."
