@@ -26,7 +26,7 @@ Define your git identity using the following commands in a terminal window
 ```shell
 git config --global user.name "practicalli"
 
-git config --global user.email ***+github-account@noreply.github.com
+git config --global user.email ***+github-primary-email-address@noreply.github.com
 ```
 
 The `[user]` section of the Git configuration file is updated by these commands, automatically creating the file and section if it does not exist.
@@ -56,13 +56,19 @@ Practicalli recommends setting a passphrase when generating an SSH key.
 
 Unix systems (Linux / MacOSX) should have the `ssh-keygen` command.
 
-`-t` specifies the type of encryption, RSA recommended
+`-t` specifies the type of encryption, ed25519 recommended by GitHub
 
 `-C` to add your GitHub email address to the SSH key
 
 ```
-ssh-keygen -t rsa -C "654321+practicalli-john@users.noreply.github.com"
+ssh-keygen -t ed25519 -C "github-primary-email-address@noreply.github.com"
 ```
+
+??? INFO "Create key with RSA if Ed25519 not supported"
+    ```
+    ssh-keygen -t rsa -b 4096 -C "github-primary-email-address@noreply.github.com"
+    ```
+
 
 Accept the default file or enter a preferred file name
 
