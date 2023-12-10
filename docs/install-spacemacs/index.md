@@ -26,6 +26,12 @@ Use your favourite git client or the following command in a terminal window to c
     git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
     ```
 
+Please make sure, that when we use not default directory for emacs configuration (for example to `~/.config/emacs/`), put this line into `~/.emacs` file:
+    ```
+    (setq spacemacs-start-directory "~/.config/emacs/")
+    (load-file (concat spacemacs-start-directory "init.el"))
+    ```
+
 ##  Clone Practicalli Spacemacs configuration
 
 Clone [:fontawesome-brands-github: practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config) configuration or first create a fork and clone that fork
