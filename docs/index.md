@@ -29,12 +29,16 @@ A practical guide to Spacemacs, a community driven Emacs configuration that prov
     ```
     The above command creates the `~/.config/spacemacs/init.el` that contains the configuration used in Practicalli Spacemacs book, all in one place.
 
+    Set `SPACEMACSDIR` environment variable to the location of the configuration in the shell,  e.g. zsh, bash
+    ```shell
+    export SPACEMACSDIR=$XDG_CONFIG_HOME/spacemacs
+    ```
+    
 === "Classic Config"
     ```bash
     git clone https://github.com/practicalli/spacemacs-config.git $HOME/.spacemacs.d`
     ```
     The above command creates the `~/.spacemacs.d/init.el` that contains the configuration used in Practicalli Spacemacs book, all in one place.
-
 
 [:fontawesome-brands-github: Practicalli Spacemacs config](https://github.com/practicalli/spacemacs-config){target=_blank} uses a Gruvbox Light theme and the simplified Doom mode line theme, which can be readily changed.
 
