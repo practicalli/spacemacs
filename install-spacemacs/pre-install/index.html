@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
@@ -38,7 +38,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.45e1311d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -7970,9 +7970,8 @@
 <p>Emacs 28 is recommended as it includes native compilation support and optomised JSON support which is valuable for Language Server Protocol servers.</p>
 <p>Emacs is available for Linux, MacOSX and Windows.  The <a href="https://github.com/syl20bnr/spacemacs/tree/develop#emacs">Spacemacs Readme suggested ways to install Emacs</a></p>
 <details class="info">
-<summary>Emacs Version 28 recommended</summary>
-<p>Emacs 28 is recommended with native compilation of Elisp, which can have a significant improvement on Emacs package performance.
-Emacs 27.1 is the minimum version supported by Practicalli Spacemacs</p>
+<summary>Emacs Version 29 recommended</summary>
+<p>Emacs 29 is recommended, optionally with native compilation of Elisp which can have a significant improvement on Emacs package performance (although is still quite new).</p>
 </details>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Ubuntu / Debian</label><label for="__tabbed_1_2">Homebrew / MacOSX</label><label for="__tabbed_1_3">Windows</label><label for="__tabbed_1_4">Msys2</label></div>
 <div class="tabbed-content">
@@ -7990,27 +7989,31 @@ Emacs 27.1 is the minimum version supported by Practicalli Spacemacs</p>
 <p>Additional versions of Emacs are available via the <a href="https://launchpad.net/~ubuntu-elisp/+archive/ubuntu/ppa">Ubuntu Emacs Team Personal Package Archive</a>.</p>
 <p><code>sudo apt install emacs-snapshot</code> package to use the latest nightly build of Emacs, although be aware that some things may break.</p>
 <details class="hint">
-<summary>Build Emacs 28 from source</summary>
-<p><a href="https://practical.li/blog/posts/build-emacs-28-on-ubuntu/">Building Emacs 28 from source code on Ubuntu</a> is relatively straight forward task, although it will take a little time to compile.  Building Emacs allows customisation of some features, such as native compilatin of elisp to enhance the performance of Emacs.</p>
+<summary>Build Emacs 29 from source</summary>
+<p><a href="https://practical.li/blog/posts/build-emacs-from-source-on-ubuntu-linux/">Building Emacs 29 from source code on Ubuntu</a> is relatively straight forward task, although it will take a little time to compile.  Building Emacs allows customisation of some features, such as native compilatin of elisp to enhance the performance of Emacs.</p>
 </details>
 </div>
 <div class="tabbed-block">
 <p><a href="https://github.com/d12frosted/homebrew-emacs-plus">Emacs Plus</a> from Homebrew provides many options, including native compilation and Spacemacs Icon for application launchers.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>brew tap d12frosted/emacs-plus
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>brew install emacs-plus@28 --with-native-comp --with-spacemacs-icon
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>brew tap d12frosted/emacs-plus
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>brew install emacs-plus@29 --with-spacemacs-icon
 </code></pre></div>
+Or install with native compilation support
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>brew tap d12frosted/emacs-plus
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>brew install emacs-plus@29 --with-native-comp --with-spacemacs-icon
+</code></pre></div></p>
 <p>Emacs.app is installed to: <code>/usr/local/opt/emacs-plus@28</code></p>
 <p>Optionally run Emacs plus as a service
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>brew services start d12frosted/emacs-plus/emacs-plus@28
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>brew services start d12frosted/emacs-plus/emacs-plus@28
 </code></pre></div></p>
 <p>Run <code>emacs</code></p>
-<p>Get a hot cup of something as Emacs native compilation compiles all the things.</p>
 <blockquote>
+<p>If Ntative Compilation option was included, take a break whilst Emacs compiles all the things.</p>
 <p>The <a href="https://github.com/syl20bnr/spacemacs#macos">Spacemacs README lists other options for MacOSX</a>.</p>
 </blockquote>
 </div>
 <div class="tabbed-block">
-<p>Download Emacs-28.2 from the <a href="http://ftp.gnu.org/gnu/emacs/windows/emacs-26">GNU repository</a> and extract the zip file to <code>%AppData%/local/Programs/emacs</code>.</p>
+<p><a href="http://ftp.gnu.org/gnu/emacs/windows/emacs-29/">Download Emacs 29 zip</a> archive from the <a href="http://ftp.gnu.org/gnu/emacs/windows/">GNU repository for Windows</a> and extract the zip file to <code>%AppData%/local/Programs/emacs</code>.</p>
 <p>Alternatively, if you are using the <a href="https://chocolatey.org/" target="_blank">Chocolatey package manager</a> then install <a href="https://chocolatey.org/packages/emacs" target="_blank">Emacs version 28</a></p>
 <p>Add the Emacs directory to the <code>PATH</code> variable in your user account environment variables.</p>
 <p>To start Emacs run the command <code>runemacs.exe</code>.  You can also pin this to the start menu or task bar.</p>
@@ -8021,7 +8024,7 @@ Emacs 27.1 is the minimum version supported by Practicalli Spacemacs</p>
 </div>
 <div class="tabbed-block">
 <p>Install Emacs (64bits build) with the following:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pacman -S mingw-w64-x86_64-emacs
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pacman -S mingw-w64-x86_64-emacs
 </code></pre></div>
 </div>
 </div>
@@ -8071,12 +8074,12 @@ Emacs 27.1 is the minimum version supported by Practicalli Spacemacs</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Ubuntu / Debian</label><label for="__tabbed_3_2">Homebrew / MacOSX</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>locate
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>locate
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <p><a class="md-button" href="https://formulae.brew.sh/formula/findutils" target="_blank">findutils Homebrew findutils</a>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>brew<span class="w"> </span>install<span class="w"> </span>findutils
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>brew<span class="w"> </span>install<span class="w"> </span>findutils
 </code></pre></div></p>
 </div>
 </div>
@@ -8101,7 +8104,7 @@ Emacs 27.1 is the minimum version supported by Practicalli Spacemacs</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 8, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 22, 2023</span>
   </span>
 
     
