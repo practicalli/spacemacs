@@ -15,9 +15,8 @@ Emacs 28 is recommended as it includes native compilation support and optomised 
 
 Emacs is available for Linux, MacOSX and Windows.  The [Spacemacs Readme suggested ways to install Emacs](https://github.com/syl20bnr/spacemacs/tree/develop#emacs)
 
-??? INFO "Emacs Version 28 recommended"
-    Emacs 28 is recommended with native compilation of Elisp, which can have a significant improvement on Emacs package performance.
-    Emacs 27.1 is the minimum version supported by Practicalli Spacemacs
+??? INFO "Emacs Version 29 recommended"
+    Emacs 29 is recommended, optionally with native compilation of Elisp which can have a significant improvement on Emacs package performance (although is still quite new).
 
 
 === "Ubuntu / Debian"
@@ -40,8 +39,8 @@ Emacs is available for Linux, MacOSX and Windows.  The [Spacemacs Readme suggest
     `sudo apt install emacs-snapshot` package to use the latest nightly build of Emacs, although be aware that some things may break.
 
 
-    ??? HINT "Build Emacs 28 from source"
-        [Building Emacs 28 from source code on Ubuntu](https://practical.li/blog/posts/build-emacs-28-on-ubuntu/) is relatively straight forward task, although it will take a little time to compile.  Building Emacs allows customisation of some features, such as native compilatin of elisp to enhance the performance of Emacs.
+    ??? HINT "Build Emacs 29 from source"
+        [Building Emacs 29 from source code on Ubuntu](https://practical.li/blog/posts/build-emacs-from-source-on-ubuntu-linux/) is relatively straight forward task, although it will take a little time to compile.  Building Emacs allows customisation of some features, such as native compilatin of elisp to enhance the performance of Emacs.
 
 
 === "Homebrew / MacOSX"
@@ -49,7 +48,12 @@ Emacs is available for Linux, MacOSX and Windows.  The [Spacemacs Readme suggest
 
     ```
     brew tap d12frosted/emacs-plus
-    brew install emacs-plus@28 --with-native-comp --with-spacemacs-icon
+    brew install emacs-plus@29 --with-spacemacs-icon
+    ```
+    Or install with native compilation support
+    ```
+    brew tap d12frosted/emacs-plus
+    brew install emacs-plus@29 --with-native-comp --with-spacemacs-icon
     ```
 
     Emacs.app is installed to: `/usr/local/opt/emacs-plus@28`
@@ -61,14 +65,13 @@ Emacs is available for Linux, MacOSX and Windows.  The [Spacemacs Readme suggest
 
     Run `emacs`
 
-    Get a hot cup of something as Emacs native compilation compiles all the things.
-
+    > If Ntative Compilation option was included, take a break whilst Emacs compiles all the things.
 
     > The [Spacemacs README lists other options for MacOSX](https://github.com/syl20bnr/spacemacs#macos).
 
 
 === "Windows"
-    Download Emacs-28.2 from the [GNU repository](http://ftp.gnu.org/gnu/emacs/windows/emacs-26) and extract the zip file to `%AppData%/local/Programs/emacs`.
+    [Download Emacs 29 zip](http://ftp.gnu.org/gnu/emacs/windows/emacs-29/) archive from the [GNU repository for Windows](http://ftp.gnu.org/gnu/emacs/windows/) and extract the zip file to `%AppData%/local/Programs/emacs`.
 
     Alternatively, if you are using the [Chocolatey package manager](https://chocolatey.org/){target=_blank} then install [Emacs version 28](https://chocolatey.org/packages/emacs){target=_blank}
 
