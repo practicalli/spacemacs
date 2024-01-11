@@ -28,38 +28,38 @@ Use the Helm transient state to navigate the Helm results using Vim keybindings 
 
 Enter this transient state with `M-SPC` or `S-M-SPC` while in a Helm buffer, for example, when navigating the results such as file find `SPC f f`, buffer list `SPC b b`, or Emacs commands list `SPC SPC`.
 
-![Spacemacs - Helm Transient State menu - light](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-buffers-helm-transient-state-light.png#only-light)
-![Spacemacs - Helm Transient State menu - dark](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-buffers-helm-transient-state-dark.png#only-dark)
+![Spacemacs - Helm Transient State menu - light](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-buffers-helm-transient-state-light.png?raw=true#only-light)
+![Spacemacs - Helm Transient State menu - dark](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-buffers-helm-transient-state-dark.png?raw=true#only-dark)
 
 !!! WARNING "Gnome desktop binding clash"
     `M-SPC` is used by the Gnome desktop for the window menu, so recommend you change the Gnome keyboard settings to use a different binding, i.e. `Super w`.
 
 
-| Key Binding  | Description                                          |
-|--------------|------------------------------------------------------|
-| ++meta+spc++ | initiate the transient state                         |
-| ++q++        | quit transient state                                 |
-| ++tab++      | switch to actions page and leave the transient state |
-| ++1++        | execute action 0                                     |
-| ++2++        | execute action 1                                     |
-| ++3++        | execute action 2                                     |
-| ++4++        | execute action 3                                     |
-| ++5++        | execute action 4                                     |
-| ++6++        | execute action 5                                     |
-| ++7++        | execute action 6                                     |
-| ++8++        | execute action 7                                     |
-| ++9++        | execute action 8                                     |
-| ++0++        | execute action 9                                     |
-| ++a++        | switch to actions page                               |
-| ++"g"++      | go to first candidate                                |
-| ++G++        | go to last candidate                                 |
-| ++h++        | go to previous source                                |
-| ++"j"++      | select next candidate                                |
-| ++"k"++      | select previous candidate                            |
-| ++"l"++      | go to next source                                    |
-| ++"t"++      | mark current candidate                               |
-| ++T++        | mark all candidates                                  |
-| ++"v"++      | execute persistent action                            |
+| Key Binding   | Description                                          |
+| ------------- | ---------------------------------------------------- |
+| ++meta+spc++  | initiate the transient state                         |
+| ++"q"++       | quit transient state                                 |
+| ++tab++       | switch to actions page and leave the transient state |
+| ++1++         | execute action 0                                     |
+| ++2++         | execute action 1                                     |
+| ++3++         | execute action 2                                     |
+| ++4++         | execute action 3                                     |
+| ++5++         | execute action 4                                     |
+| ++6++         | execute action 5                                     |
+| ++7++         | execute action 6                                     |
+| ++8++         | execute action 7                                     |
+| ++9++         | execute action 8                                     |
+| ++0++         | execute action 9                                     |
+| ++"a"++       | switch to actions page                               |
+| ++"g"++       | go to first candidate                                |
+| ++"G"++       | go to last candidate                                 |
+| ++"h"++       | go to previous source                                |
+| ++"j"++       | select next candidate                                |
+| ++"k"++       | select previous candidate                            |
+| ++"l"++       | go to next source                                    |
+| ++"t"++       | mark current candidate                               |
+| ++"T"++       | mark all candidates                                  |
+| ++"v"++       | execute persistent action                            |
 
 
 ## Helm actions for Buffer list
