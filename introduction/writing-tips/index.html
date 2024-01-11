@@ -8221,7 +8221,7 @@
 <p>mkdocs material does not have direct support for adding a YouTube video via markdown.</p>
 </blockquote>
 <h2 id="admonitions">Admonitions<a class="headerlink" href="#admonitions" title="Permanent link">λ︎</a></h2>
-<p><a href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types">Supported admonition types</a></p>
+<p><a class="md-button" href="https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types" target="_blank">Supported admonition types</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Use <code>!!!</code> followed by <code>NOTE</code></p>
@@ -8350,6 +8350,8 @@ semper lorem quam in massa.</p>
 <li><img alt="🙋‍♀️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f64b-200d-2640-fe0f.svg" title=":woman_raising_hand:" /> I'm a code annotation! I can contain <code>code</code>, <strong>formatted text</strong>, images, ... basically anything that can be written in Markdown.</li>
 </ol>
 <p>Code blocks with annotation, add <code>!</code> after the annotation number to suppress the <code>#</code> character</p>
+<div class="admonition example">
+<p class="admonition-title">Code block with suppressed comment character</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">helper-function</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="s">&quot;Doc-string with description of function purpose&quot;</span><span class="w"> </span><span class="c1">; (1)!</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">data</span><span class="p">]</span>
@@ -8359,7 +8361,9 @@ semper lorem quam in massa.</p>
 <ol>
 <li>Always include a doc-string in every function to describe the purpose of that function, identifying why it was added and what its value is.</li>
 </ol>
-<p>GitHub action example with multiple annotations</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">GitHub action example with multiple annotations</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ci</span><span class="w"> </span><span class="c1"># (1)!</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nt">on</span><span class="p">:</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nt">push</span><span class="p">:</span>
@@ -8397,9 +8401,12 @@ semper lorem quam in massa.</p>
 </code></pre></div>
 </li>
 </ol>
+</div>
 <h3 id="highlight-lines-in-code-blocks">Highlight lines in code blocks<a class="headerlink" href="#highlight-lines-in-code-blocks" title="Permanent link">λ︎</a></h3>
 <p>Add highlight line meta data to a code block after the opening backticks and code block language.</p>
 <p><code>hl_lines="2"</code> highlights line 2 in the codeblock</p>
+<div class="admonition example">
+<p class="admonition-title">Code block with highlighted lines</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">(</span><span class="kd">defn </span><span class="nv">my-function</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="s">&quot;With a lovely doc-string&quot;</span>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span><span class="p">[</span><span class="nv">arguments</span><span class="p">]</span>
@@ -8407,6 +8414,7 @@ semper lorem quam in massa.</p>
 </span><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="hll"><span class="w">   </span><span class="nv">inc</span>
 </span><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="hll"><span class="w">   </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">]))</span>
 </span></code></pre></div>
+</div>
 <h3 id="embed-external-files">Embed external files<a class="headerlink" href="#embed-external-files" title="Permanent link">λ︎</a></h3>
 <p><code>--8&lt;--</code> in a code block inserts code from a source code file or other text file</p>
 <p>Specify a local file from the root of the book project (the directory containing mkdocs.yml)</p>
@@ -8625,7 +8633,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla.
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 16, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 11, 2024</span>
   </span>
 
     
