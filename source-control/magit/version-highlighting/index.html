@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -7878,7 +7878,7 @@
 <h1 id="highlight-version-control-changes">Highlight Version Control Changes<a class="headerlink" href="#highlight-version-control-changes" title="Permanent link">λ︎</a></h1>
 <p>Fringe markers show the difference between the working copy and the last commit.  As you add code or refactor, the lines that you change are marked in the fringe.</p>
 <p><code>SPC T d</code> toggles git fringe marks to indicate changes between working copy and latest commit.  Default is off.</p>
-<p><a class="glightbox" href="/images/spacemacs-magit-fringe-markers.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Magit - Fringe markers" src="/images/spacemacs-magit-fringe-markers.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-magit-fringe-markers.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Magit - Fringe markers" src="/images/spacemacs-magit-fringe-markers.png" /></a></p>
 <p>To display fringe marks by default, add the following to the <code>dotspacemacs-configuration-layers</code> in your <code>.spacemacs</code> file</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">     </span><span class="p">(</span><span class="nv">version-control</span><span class="w"> </span><span class="nb">:variables</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">                      </span><span class="nv">version-control-diff-tool</span><span class="w"> </span><span class="ss">&#39;diff-hl</span>
@@ -7888,10 +7888,10 @@
 <h2 id="highlighting-with-smeargle">Highlighting with Smeargle<a class="headerlink" href="#highlighting-with-smeargle" title="Permanent link">λ︎</a></h2>
 <p><code>SPC g H</code> toggle smeargle overlays showing historic changes based on time, with the oldest unchanged lines greyed out the most.  Default is off.</p>
 <p><a href="https://github.com/syohex/emacs-smeargle">Smeargle</a> is a package that provides highlighting regions by last updated time. Older changes have a opaque white background and newer regions have a darker background.  This is supposed to help you just focus on newer changes, as older changes are subtly faded into the background.</p>
-<p><a class="glightbox" href="https://github.com/syohex/emacs-smeargle/blob/master/image/smeargle.png?raw=true" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Smeargle example" src="https://github.com/syohex/emacs-smeargle/blob/master/image/smeargle.png?raw=true" /></a></p>
+<p><a class="glightbox" href="https://github.com/syohex/emacs-smeargle/blob/master/image/smeargle.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Smeargle example" src="https://github.com/syohex/emacs-smeargle/blob/master/image/smeargle.png?raw=true" /></a></p>
 <h3 id="smeargle-transient-state">Smeargle Transient State<a class="headerlink" href="#smeargle-transient-state" title="Permanent link">λ︎</a></h3>
 <p><code>SPC g r</code> enters Smeargle transient state</p>
-<p><a class="glightbox" href="/images/spacemacs-versioning-smeargle-transient-state-menu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Versioning - Smeargle transient state menu" src="/images/spacemacs-versioning-smeargle-transient-state-menu.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-versioning-smeargle-transient-state-menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Versioning - Smeargle transient state menu" src="/images/spacemacs-versioning-smeargle-transient-state-menu.png" /></a></p>
 <p>TODO: describe the benefit of this transient state.</p>
 <p><a href="https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Bsource-control/version-control#smerge-mode-transient-state">https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Bsource-control/version-control#smerge-mode-transient-state</a></p>
 

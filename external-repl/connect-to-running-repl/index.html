@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -7872,7 +7872,7 @@
 </tbody>
 </table>
 <p>Use the <code>lein repl</code> command to run a new REPL on the command line.  Then connect to that REPL using <code>M-x cider-connect</code></p>
-<p><a class="glightbox" href="/images/spacemacs-lein-new-spacemacs-workshop.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Leiningen REPL on the Command Line" src="/images/spacemacs-lein-new-spacemacs-workshop.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-lein-new-spacemacs-workshop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Leiningen REPL on the Command Line" src="/images/spacemacs-lein-new-spacemacs-workshop.png" /></a></p>
 <h2 id="configuration-required">Configuration Required<a class="headerlink" href="#configuration-required" title="Permanent link">λ︎</a></h2>
 <p>If you are going to connect to an external repl from Spacemacs, you will need to add the Leiningen plugin called <code>cider-nrepl</code> and the Clojure <code>tools.nrepl</code> library.  Rather than add this to all projects, you add these to your Leiningen configuration <code>~/.lein/profiles.clj</code> file.  The versions of each library also had to be kept in sync with updates in the Spacemacs Clojure layer.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span><span class="ss">:dev</span><span class="w"> </span><span class="p">{</span><span class="ss">:plugins</span><span class="w">      </span><span class="p">[[</span><span class="nv">cider/cider-nrepl</span><span class="w"> </span><span class="s">&quot;0.15.0-SNAPSHOT&quot;</span><span class="p">]</span>
@@ -7880,7 +7880,7 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="ss">:dependencies</span><span class="w"> </span><span class="p">[[</span><span class="nv">org.clojure/tools.nrepl</span><span class="w"> </span><span class="s">&quot;0.2.12&quot;</span><span class="p">]]}}</span>
 </code></pre></div>
 <p>Without this configuration, you will see warning messages in the repl buffer stating that the versions of ... are out of sync.</p>
-<p><a class="glightbox" href="/images/spacemacs-cider-connect-warning-versions-out-of-sync.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Cider connect - Warning - cider-repl &amp; tools-nrepl out of sync" src="/images/spacemacs-cider-connect-warning-versions-out-of-sync.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-cider-connect-warning-versions-out-of-sync.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Cider connect - Warning - cider-repl &amp; tools-nrepl out of sync" src="/images/spacemacs-cider-connect-warning-versions-out-of-sync.png" /></a></p>
 
 
 

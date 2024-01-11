@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -7891,8 +7891,8 @@
 </div>
 <h2 id="a-process-for-each-project">A process for each project<a class="headerlink" href="#a-process-for-each-project" title="Permanent link">λ︎</a></h2>
 <p>When opening a Clojure project, a prompt asks if the project should be imported. Every imported project will spawn an LSP process. LSP will remember which projects are imported and spawns an LSP process if Emacs is restarted, adding a few seconds to the startup time.</p>
-<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-lsp-project-import-prompt-light.png?raw=true#only-light" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure LSP import project prompt" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-lsp-project-import-prompt-light.png?raw=true#only-light" /></a>
-<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-lsp-project-import-prompt-dark.png?raw=true#only-dark" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure LSP import project prompt" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-lsp-project-import-prompt-dark.png?raw=true#only-dark" /></a></p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-lsp-project-import-prompt-light.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure LSP import project prompt" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-lsp-project-import-prompt-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-lsp-project-import-prompt-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure LSP import project prompt" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-lsp-project-import-prompt-dark.png?raw=true#only-dark" /></a></p>
 <p><code>SPC a p</code> calls the <code>list-process</code> command which includes all the <code>clojure-lsp</code> processes if you are concerned about resource usage, although this is very low.  <code>j</code>/<code>k</code> navigates the list of processes, <code>d</code> deletes a process and <code>q</code> quits the process list browser.</p>
 <h2 id="ui-differences">UI differences<a class="headerlink" href="#ui-differences" title="Permanent link">λ︎</a></h2>
 <p>Using clj-kondo via LSP shows the text of its messages on the right hand side of the buffer when you move the cursor over an error. When using clj-kondo as a linter, the messages are shown in a popup.</p>

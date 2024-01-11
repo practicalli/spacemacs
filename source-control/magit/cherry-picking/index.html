@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -7958,7 +7958,7 @@
 <p>Select the <strong>Cherry head</strong> - the branch containing commits (cherries) that are to be copied</p>
 <p>Select the <strong>Cherry upstream</strong> - the branch that would receive the commits (cherries)</p>
 <p>A list of commits, 'cherries', are show to help narrow down which commits could be cherry picked.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-cherries.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Cherry Picking - list of cherries" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-cherries.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-cherries.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Cherry Picking - list of cherries" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-cherries.png" /></a></p>
 <blockquote>
 <p><code>A</code> with the point on one of the cherries, or with one or more cherries selected, will start the Applying of commits</p>
 </blockquote>
@@ -7967,20 +7967,20 @@
 <p>Navigate to the branch and commit (or commits) to cherry pick.  Use visual select state, <code>v</code> to select multiple commits (<code>C-SPC</code> in holy mode)</p>
 <h2 id="applying-commits">Applying commits<a class="headerlink" href="#applying-commits" title="Permanent link">λ︎</a></h2>
 <p><code>A</code> starts the apply menu to start the cherry picking process.  <code>A</code> is also used to open the transient Apply menu, to continue skip or abort the cherry picking.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-apply-menu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit cherry picking - Apply menu and options" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-apply-menu.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-apply-menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit cherry picking - Apply menu and options" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-apply-menu.png" /></a></p>
 <p><code>d</code> to donate the selected cherry commits to another branch</p>
 <p>Select the <strong>donate branch</strong> - the branch commits are to be copied to</p>
 <p>If there are no conflicts, the commits are added to the branch.  Push the changes, <code>P p</code>, to a remote repository if relevant.</p>
 <h2 id="managing-conflicts">Managing Conflicts<a class="headerlink" href="#managing-conflicts" title="Permanent link">λ︎</a></h2>
 <p>The Magit status buffer shows a cherry-picking progress section if the selected cherries (commits) cannot be automatically merged into the branch,</p>
 <p>Files that contain merge conflicts will be listed under unstaged changes</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-merge-conflict-show-progress-unmerged-files.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit cherry picking merge conflict - cherry picking progress" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-merge-conflict-show-progress-unmerged-files.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-merge-conflict-show-progress-unmerged-files.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit cherry picking merge conflict - cherry picking progress" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-merge-conflict-show-progress-unmerged-files.png" /></a></p>
 <p><code>RET</code> to open file for editing in a buffer and resolve the conflicting change</p>
 <p><code>SPC f s</code> to save the file</p>
 <p><code>SPC g s</code> to return to the Magit status buffer</p>
 <p><code>s</code> on the file to stage any unstaged changes after editing the conflicting files</p>
 <p><code>A</code> to open the Apply action menu, <code>A</code> to continue with the apply of cherries</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-actions-menu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit cherry picking - Apply actions menu" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-actions-menu.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-actions-menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit cherry picking - Apply actions menu" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-actions-menu.png" /></a></p>
 <p>Staged changes require committing, so continuing the Apply will open a commit message buffer</p>
 <p><code>, ,</code> to confirm the commit</p>
 <p>The cherry commits will be automatically committed, unless there is a conflict in another commit. Repeat the above steps until there are no further conflicts and all the commits are merged.</p>
@@ -7990,7 +7990,7 @@
 </blockquote>
 <h3 id="diff-3-configuration">Diff 3 configuration<a class="headerlink" href="#diff-3-configuration" title="Permanent link">λ︎</a></h3>
 <p>Diff 3 presentation of merge conflicts displays a common parent (if one exists) between the two changes in conflict.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit unstaged change with diff3 configuration showing parent of conflicting changes" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit unstaged change with diff3 configuration showing parent of conflicting changes" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png" /></a></p>
 <blockquote>
 <p><a href="/source-control/git-configuration.md">Git configuration</a> details how to add diff3 merge support along with many other useful settings.</p>
 </blockquote>

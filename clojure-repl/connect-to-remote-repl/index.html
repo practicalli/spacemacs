@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -7921,7 +7921,7 @@
 <p>Using a remote REPL can provide a collaborative coding environment as well as a means for working within remote environments (docker images, cloud servers, etc).</p>
 <p>Running a remote REPL can also provide longevity to the process, as many clients (editors, ssh terminals) can connect to the REPL over time, disconnecting from the running process without interrupting the process.  This provides a very resilient way of running a REPL.</p>
 <p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html">practicalli/clojure-deps-edn</a> provides many aliases to configure a REPL to work with other community tools.  These aliases are easier to manage when running a REPL outside of an editor which automatically injects its own configuration.  This configuration can be installed into the remote environment and ideally added into the server build process.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-remote-repl-terminal-editor.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Connecting to a remote REPL with a Clojure aware editor" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-remote-repl-terminal-editor.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-remote-repl-terminal-editor.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Connecting to a remote REPL with a Clojure aware editor" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-remote-repl-terminal-editor.png" /></a></p>
 <h2 id="establish-a-remote-environment">Establish a remote environment<a class="headerlink" href="#establish-a-remote-environment" title="Permanent link">λ︎</a></h2>
 <p>A small Virtual Private Server (VPS) is enough for a remote Clojure environment.</p>
 <details class="info">
@@ -8020,7 +8020,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>clojure<span class="w"> </span>-M:middleware/cider-clj<span class="w"> </span>-p<span class="w"> </span><span class="m">7888</span>
 </code></pre></div>
 <p>The REPL will start along with an nREPL server, showing the connection details.</p>
-<p><a class="glightbox" href="/images/clojure-repl-terminal-rebel-nrepl.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/clojure-repl-terminal-rebel-nrepl.png" /></a></p>
+<p><a class="glightbox" href="/images/clojure-repl-terminal-rebel-nrepl.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/clojure-repl-terminal-rebel-nrepl.png" /></a></p>
 <p>An <code>.nrepl-port</code> file is created in the root of the Clojure project, containing the port number the nREPL server is listening upon.</p>
 <div class="admonition hint">
 <p class="admonition-title">Using a REPL terminal UI</p>
@@ -8034,11 +8034,11 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/ssh:username@remote-server-name:~/project/deps.edn
 </code></pre></div>
 <p><code>, '</code> to call <code>sesman-start</code> and choose <code>cider-connect-clj</code> which should find the remote host and port</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-cider-connect-clj.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/spacemacs-clojure-cider-connect-clj.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-clojure-cider-connect-clj.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/spacemacs-clojure-cider-connect-clj.png" /></a></p>
 <p>Confirm the host name, typically <code>localhost</code> when running the REPL locally</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-cider-connect-host.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/spacemacs-clojure-cider-connect-host.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-clojure-cider-connect-host.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/spacemacs-clojure-cider-connect-host.png" /></a></p>
 <p>Confirm the port number the nREPL server is listening too</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-cider-connect-port.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/spacemacs-clojure-cider-connect-port.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-clojure-cider-connect-port.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure Terminal REPL UI with Rebel readline" src="/images/spacemacs-clojure-cider-connect-port.png" /></a></p>
 <p>Spacemacs is now connected to the REPL and Clojure code can be evaluated in the source code buffers.</p>
 
 

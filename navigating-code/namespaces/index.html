@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -7931,7 +7931,7 @@
 
 <h1 id="navigating-clojure-namespaces">Navigating Clojure Namespaces<a class="headerlink" href="#navigating-clojure-namespaces" title="Permanent link">λ︎</a></h1>
 <p><code>, g n</code> (<code>cider-find-ns</code>) lists the namespaces currently loaded into the running REPL.  Type a pattern to narrow the list.  <code>C-j</code> and <code>C-k</code> to navigate the list.  <code>RET</code> to open the namespace in the current buffer.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-find-ns.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure - Cider find namespace" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-find-ns.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-find-ns.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure - Cider find namespace" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-find-ns.png" /></a></p>
 <h2 id="namespaces-via-projectile">Namespaces via Projectile<a class="headerlink" href="#namespaces-via-projectile" title="Permanent link">λ︎</a></h2>
 <p><code>SPC p f</code> (<code>helm-projectile-find-file</code>) is an effective way to switch between files in the project.  Helm uses fuzzy matching, so <code>_</code> characters can be skipped when narrowing the helm list with a pattern, so searching for a file is the same as searching for a namespace.</p>
 <blockquote>
@@ -7941,11 +7941,11 @@
 <p><code>, g s</code> (<code>helm-lsp-workspace-symbols</code>) lists all the symbols found in the current project, including <code>ns</code>, <code>def</code> and <code>defn</code> forms.</p>
 <p>Type in a pattern to narrow the list. <code>C-j</code> and <code>C-k</code> to navigate the list.</p>
 <p><code>RET</code> to jump to the symbol, opening the relevant namespace in the current buffer.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-lsp-workspace-symbols.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Helm LSP workspace symbols - navigate to symbols across a project" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-lsp-workspace-symbols.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-lsp-workspace-symbols.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Helm LSP workspace symbols - navigate to symbols across a project" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-lsp-workspace-symbols.png" /></a></p>
 <h2 id="browse-namespace-symbol-documentation">Browse namespace symbol documentation<a class="headerlink" href="#browse-namespace-symbol-documentation" title="Permanent link">λ︎</a></h2>
 <p>Browse namespace symbols by navigating through the definitions in a namespace (<code>def</code>, <code>defn</code>) and view their documentation (doc strings).</p>
 <p><code>, h n</code> (<code>cider-browse-ns</code>) lists all namespaces loaded into the REPL in the current project.  Namespaces in the project that have not been evaluated, directly or via a require, will not be in the list.</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-namespace-browse-ns.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure - Namespaces - browse-ns" src="/images/spacemacs-clojure-namespace-browse-ns.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-clojure-namespace-browse-ns.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure - Namespaces - browse-ns" src="/images/spacemacs-clojure-namespace-browse-ns.png" /></a></p>
 <p><code>RET</code> to show the symbols in the namespace</p>
 <p><code>RET</code> on a namespace symbol to see the documention in a pop-up wondow.  Use the link to the source code file in the documentation to open the namespace in the buffer.</p>
 <h2 id="repl-buffer-cider-commands">REPL buffer cider commands<a class="headerlink" href="#repl-buffer-cider-commands" title="Permanent link">λ︎</a></h2>
@@ -7968,10 +7968,10 @@
 </tr>
 </tbody>
 </table>
-<p><a class="glightbox" href="/images/spacemacs-clojure-repl-command-ns.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure REPL commands - namespace" src="/images/spacemacs-clojure-repl-command-ns.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-clojure-repl-command-ns.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure REPL commands - namespace" src="/images/spacemacs-clojure-repl-command-ns.png" /></a></p>
 <h3 id="using-code-to-change-the-namespace">Using code to change the namespace<a class="headerlink" href="#using-code-to-change-the-namespace" title="Permanent link">λ︎</a></h3>
 <p><a href="https://clojuredocs.org/clojure.core/in-ns"><code>in-ns</code></a> function will set the namespace for the REPL.  If that namespace does not exist, then the namespace is created in the current REPL.</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-repl-change-namespace-spacemacs-workshop.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure REPL - change namespace" src="/images/spacemacs-clojure-repl-change-namespace-spacemacs-workshop.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-clojure-repl-change-namespace-spacemacs-workshop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure REPL - change namespace" src="/images/spacemacs-clojure-repl-change-namespace-spacemacs-workshop.png" /></a></p>
 
 
 

@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -8055,7 +8055,7 @@
 <p><code>RET</code> selects the search result and shows the file and line in the current buffer.</p>
 <p><code>SPC s l</code> will repeat the last search</p>
 <p><code>M-n</code> and <code>M-p</code> will scroll through the search patterns whenever the search pop-up window is open</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-pattern-search.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Helm-Ag ripgrep pattern search results" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-pattern-search.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-pattern-search.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Helm-Ag ripgrep pattern search results" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-pattern-search.png" /></a></p>
 <blockquote>
 <h4 id="hintreplacing-text-across-a-project">Hint::Replacing text across a project<a class="headerlink" href="#hintreplacing-text-across-a-project" title="Permanent link">λ︎</a></h4>
 <p>Use search results to <a href="/spacemacs-basics/evil-tools/replacing-text-across-projects.md">replace text across a project</a>.</p>
@@ -8076,19 +8076,19 @@
 <p>Option flags can be passed to the search tool binary to tailor the results returned in the helm-ag pop-up window.  The option flags can be used before or after the search pattern.</p>
 <p><code>SPC h m rg</code> shows the man page for ripgrep which explains the options of that search tool.  Replace <code>rg</code> with the command line name of the search tool binary installed.</p>
 <p>Including options without their correct argument will show a warning, e.g. the <code>-g</code> option without a glob pattern or <code>-A</code> without a number.  Once the option has a valid value the error should be replaced by search results.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-project-wide-search-options-error.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Helm-Ag globbing option error without pattern" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-project-wide-search-options-error.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-project-wide-search-options-error.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Helm-Ag globbing option error without pattern" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-project-wide-search-options-error.png" /></a></p>
 <h3 id="searching-specific-files">Searching specific files<a class="headerlink" href="#searching-specific-files" title="Permanent link">λ︎</a></h3>
 <p>Include or exclude specific files by their names or filename extensions.</p>
 <p>Use the <code>-g</code> option for a filename to search (globbing), or <code>-g!</code> for a filename to ignore.</p>
 <p><code>-g*.clj map</code> shows only results of searching for <code>map</code> from files ending in <code>.clj</code></p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-clj.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Helm-Ag ripgrep globbing .clj files" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-clj.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-clj.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Helm-Ag ripgrep globbing .clj files" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-clj.png" /></a></p>
 <p><code>-g!*.md map</code> will search for <code>map</code> for all files except those ending in <code>.md</code></p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-not-md.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Helm-Ag ripgrep globbing not .md files" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-not-md.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-not-md.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Helm-Ag ripgrep globbing not .md files" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-globbing-not-md.png" /></a></p>
 <h3 id="showing-more-lines-for-each-match">Showing more lines for each match<a class="headerlink" href="#showing-more-lines-for-each-match" title="Permanent link">λ︎</a></h3>
 <p><code>-A</code> option for ripgrep is used to show a number of lines after each match of the pattern.  <code>-A4</code> will show the 4 additional lines after the line containing a matching pattern.</p>
 <p>If there are multiple pattern matches in the same file within the scope of extra lines, then contiguous lines are shown with 4 lines after the final pattern line.</p>
 <p><code>SPC /</code> with a pattern of <code>-A4 layout</code> will show each line containing the pattern layout and 4 lines after it.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-search-options-additional-lines.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Helm-Ag globbing option error without pattern" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-search-options-additional-lines.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-search-options-additional-lines.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Helm-Ag globbing option error without pattern" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-search-options-additional-lines.png" /></a></p>
 <p>This option can also be combined with the <code>-g</code> option above.</p>
 <h3 id="example-search-patterns">Example search patterns<a class="headerlink" href="#example-search-patterns" title="Permanent link">λ︎</a></h3>
 <p>Additional search patterns that work with <code>ripgrep</code> or <code>ag</code>.</p>

@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -7880,24 +7880,24 @@
 <p><code>q</code> quits the cider inspector buffer</p>
 <h2 id="inspecting-simple-values">Inspecting simple values<a class="headerlink" href="#inspecting-simple-values" title="Permanent link">λ︎</a></h2>
 <p>Inspecting a number or character shows the underlying type, the value and properties of that type</p>
-<p><a class="glightbox" href="/images/spacemace-clojure-inspect-java-lang-long.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Inspect value - java.lang.Long" src="/images/spacemace-clojure-inspect-java-lang-long.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemace-clojure-inspect-java-lang-long.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Inspect value - java.lang.Long" src="/images/spacemace-clojure-inspect-java-lang-long.png" /></a></p>
 <h2 id="inspecting-collections">Inspecting Collections<a class="headerlink" href="#inspecting-collections" title="Permanent link">λ︎</a></h2>
 <p>Inspect a collection shows the underlying type, contents of that collection and index (where applicable).  Only the elements are shown.  The characters of the overall collection itself are not show, only the underlying type of collection (vector, map, lazy sequence, etc.).</p>
-<p><a class="glightbox" href="/images/spacemace-clojure-inspect-java-lang-persistentvector.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Inspect persistent map" src="/images/spacemace-clojure-inspect-java-lang-persistentvector.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemace-clojure-inspect-java-lang-persistentvector.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Inspect persistent map" src="/images/spacemace-clojure-inspect-java-lang-persistentvector.png" /></a></p>
 <p>If there are collections within collections then those values can be navigated too.</p>
 <p><code>RET</code> on an nested element in a collection will inspect that element in the same detail (<code>cider-inspector-operate-on-point</code>).</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-inspect-persistent-map-nested.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Inspect persistent map with vector" src="/images/spacemacs-clojure-inspect-persistent-map-nested.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-clojure-inspect-persistent-map-nested.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Inspect persistent map with vector" src="/images/spacemacs-clojure-inspect-persistent-map-nested.png" /></a></p>
 <p><code>L</code> to back to parent of a nested element (<code>cider-inspector-pop</code>).</p>
 <h1 id="inspecting-mutable-values">Inspecting mutable values<a class="headerlink" href="#inspecting-mutable-values" title="Permanent link">λ︎</a></h1>
 <p>Mutable containers, <code>atom</code>, <code>ref</code>, can also be inspected.  The class of the container is shown, along with the class of the value it contains along with its elements.</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-inspect-atom-containing-persistent-vector.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Inspect atom containing a vector" src="/images/spacemacs-clojure-inspect-atom-containing-persistent-vector.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-clojure-inspect-atom-containing-persistent-vector.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Inspect atom containing a vector" src="/images/spacemacs-clojure-inspect-atom-containing-persistent-vector.png" /></a></p>
 <p>Inspecting an atom or ref gives the value at the current time.  The inspector does not update if the value of the atom or ref is updated. Use <code>r</code> in the inspector buffer to refresh or restart the inspector with <code>, d v</code> each time you want to check if the value has changed.</p>
 <h2 id="inspecting-var-meta-data">Inspecting Var meta data<a class="headerlink" href="#inspecting-var-meta-data" title="Permanent link">λ︎</a></h2>
 <p><code>cider-inspect-last-result</code> shows the result of the the last expression evaluated.  When this is a var from a <code>def</code> expression then meta information is shown as well as the class type and summary of the value.</p>
 <p>Meta data includes the file and position of the code, the name of the var and which namespace it is defined in.</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-cider-inspect-last-result.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure Cider Inspector - inspect last value - def" src="/images/spacemacs-clojure-cider-inspect-last-result.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-clojure-cider-inspect-last-result.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure Cider Inspector - inspect last value - def" src="/images/spacemacs-clojure-cider-inspect-last-result.png" /></a></p>
 <p>Inspecting a <code>defn</code> also shows the argument list as part of the meta data.</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-cider-inspector-inspect-last-value-defn.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure Cider Inspector - inspect last value - defn" src="/images/spacemacs-clojure-cider-inspector-inspect-last-value-defn.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-clojure-cider-inspector-inspect-last-value-defn.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure Cider Inspector - inspect last value - defn" src="/images/spacemacs-clojure-cider-inspector-inspect-last-value-defn.png" /></a></p>
 
 
 

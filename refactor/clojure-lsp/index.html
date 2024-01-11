@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -8063,13 +8063,13 @@
 
 <h1 id="refactor-code-with-clojure-lsp">Refactor Code with Clojure LSP<a class="headerlink" href="#refactor-code-with-clojure-lsp" title="Permanent link">λ︎</a></h1>
 <p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>r</kbd></span> opens Clojure LSP refactor menu</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-refactor-clojure-lsp-menu-light.png#only-light" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure Refactor menu with Clojure LSP refactor menu - light" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-refactor-clojure-lsp-menu-light.png#only-light" /></a>
-<a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-refactor-clojure-lsp-menu-dark.png#only-dark" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure Refactor menu with Clojure LSP refactor menu - dark" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-refactor-clojure-lsp-menu-dark.png#only-dark" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-refactor-clojure-lsp-menu-light.png#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure Refactor menu with Clojure LSP refactor menu - light" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-refactor-clojure-lsp-menu-light.png#only-light" /></a>
+<a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-refactor-clojure-lsp-menu-dark.png#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure Refactor menu with Clojure LSP refactor menu - dark" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-refactor-clojure-lsp-menu-dark.png#only-dark" /></a></p>
 <p>The majority of refactor tools from Clojure LSP are code actions, providing context specific tools that are only available when relevant.</p>
 <h2 id="renaming">Renaming<a class="headerlink" href="#renaming" title="Permanent link">λ︎</a></h2>
 <p>Symbols such as namespace names, function definitions, names bound to values and keywords can be renamed across a whole project</p>
 <p><code>, r r</code> to rename symbol at point</p>
-<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/rename.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP Refactor - Rename symbol" src="https://clojure-lsp.io/spacemacs/images/features/rename.gif" /></a></p>
+<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/rename.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP Refactor - Rename symbol" src="https://clojure-lsp.io/spacemacs/images/features/rename.gif" /></a></p>
 <h3 id="refactor-namespace">Refactor namespace<a class="headerlink" href="#refactor-namespace" title="Permanent link">λ︎</a></h3>
 <p><span class="keys"><kbd class="key-comma">,</kbd></span>  <span class="keys"><kbd>r</kbd></span><span class="keys"><kbd>r</kbd></span>  (<code>lsp-rename</code>) with the cursor on a namespace will prompt for changes to that namespace.</p>
 <p><span class="keys"><kbd class="key-enter">Enter</kbd></span> to save the change to the namespace, updating</p>
@@ -8087,32 +8087,32 @@
 <p>Clojure LSP features includes <a href="https://clojure-lsp.io/features/#code-actions">examples of code actions</a>.</p>
 <h3 id="converting-parens">Converting Parens<a class="headerlink" href="#converting-parens" title="Permanent link">λ︎</a></h3>
 <p>Convert between literal hash-map <code>{}</code>, vector <code>[]</code>, set <code>#{}</code> and list <code>()</code> forms</p>
-<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/change-coll.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP Refactor - Convert between literal hash-map vector set and list forms" src="https://clojure-lsp.io/spacemacs/images/features/change-coll.gif" /></a></p>
+<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/change-coll.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP Refactor - Convert between literal hash-map vector set and list forms" src="https://clojure-lsp.io/spacemacs/images/features/change-coll.gif" /></a></p>
 <h2 id="add-library-namespace-to-current-namespace">Add library namespace to current namespace<a class="headerlink" href="#add-library-namespace-to-current-namespace" title="Permanent link">λ︎</a></h2>
 <p>Add the suggested library to the ns namespace definition using a require form with an alias</p>
-<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/add-alias-suggestion.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - require suggested library with an alias in the ns definition" src="https://clojure-lsp.io/spacemacs/images/features/add-alias-suggestion.gif" /></a></p>
+<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/add-alias-suggestion.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - require suggested library with an alias in the ns definition" src="https://clojure-lsp.io/spacemacs/images/features/add-alias-suggestion.gif" /></a></p>
 <p>Add import form for known Java methods and classes</p>
-<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/add-common-import.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - add Java library import form" src="https://clojure-lsp.io/spacemacs/images/features/add-common-import.gif" /></a></p>
+<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/add-common-import.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - add Java library import form" src="https://clojure-lsp.io/spacemacs/images/features/add-common-import.gif" /></a></p>
 <h3 id="move-to-let-binding">Move to let binding<a class="headerlink" href="#move-to-let-binding" title="Permanent link">λ︎</a></h3>
 <p>Move an expression to be a value of a new local name in an existing <code>let</code> form</p>
-<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/move-to-let.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - move expression to new let binding name" src="https://clojure-lsp.io/spacemacs/images/features/move-to-let.gif" /></a></p>
+<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/move-to-let.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - move expression to new let binding name" src="https://clojure-lsp.io/spacemacs/images/features/move-to-let.gif" /></a></p>
 <p>Move a value to a new local name in an existing let binding (inline symbol)</p>
-<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/inline-symbol.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - inline symbol" src="https://clojure-lsp.io/spacemacs/images/features/inline-symbol.gif" /></a></p>
+<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/inline-symbol.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - inline symbol" src="https://clojure-lsp.io/spacemacs/images/features/inline-symbol.gif" /></a></p>
 <h3 id="extract-expression-to-new-function">Extract expression to new function<a class="headerlink" href="#extract-expression-to-new-function" title="Permanent link">λ︎</a></h3>
 <p>Create a new public function definition with the expression at point the body of that new function.</p>
 <p>Replace the expression at point with a call to the new function with arguments extracted from the expression at point where relevant.</p>
-<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/extract-function.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - extract current expression to a new public function definition" src="https://clojure-lsp.io/spacemacs/images/features/extract-function.gif" /></a></p>
+<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/extract-function.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - extract current expression to a new public function definition" src="https://clojure-lsp.io/spacemacs/images/features/extract-function.gif" /></a></p>
 <h3 id="convert-to-thread-macro">Convert to thread macro<a class="headerlink" href="#convert-to-thread-macro" title="Permanent link">λ︎</a></h3>
 <p>Convert (nested) expression to a thread first or thread last form</p>
-<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/thread-first-all.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - convert expression to thread macro" src="https://clojure-lsp.io/spacemacs/images/features/thread-first-all.gif" /></a></p>
+<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/thread-first-all.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - convert expression to thread macro" src="https://clojure-lsp.io/spacemacs/images/features/thread-first-all.gif" /></a></p>
 <h3 id="convert-function-definition-to-private">Convert function definition to private<a class="headerlink" href="#convert-function-definition-to-private" title="Permanent link">λ︎</a></h3>
-<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/create-private-function.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - convert function to private" src="https://clojure-lsp.io/spacemacs/images/features/create-private-function.gif" /></a></p>
+<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/create-private-function.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - convert function to private" src="https://clojure-lsp.io/spacemacs/images/features/create-private-function.gif" /></a></p>
 <h3 id="toggle-function-form">Toggle function form<a class="headerlink" href="#toggle-function-form" title="Permanent link">λ︎</a></h3>
 <p>Toggle between short and normal forms of a function definition</p>
-<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/cycle-fn-literal.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - toggle function definition form between short and normal" src="https://clojure-lsp.io/spacemacs/images/features/cycle-fn-literal.gif" /></a></p>
+<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/cycle-fn-literal.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP refactor - toggle function definition form between short and normal" src="https://clojure-lsp.io/spacemacs/images/features/cycle-fn-literal.gif" /></a></p>
 <h2 id="re-order-data-structures">Re-order data structures<a class="headerlink" href="#re-order-data-structures" title="Permanent link">λ︎</a></h2>
 <p>Move elements of a data structure using <code>lsp-clojure-coll-move-entry-up</code> and <code>lsp-clojure-coll-move-entry-up</code>, which have no key binding in Spacemacs by default (Doom Emacs uses Meta up/down arrow keys)</p>
-<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/move-coll-entry.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP - move elements in data structures" src="https://clojure-lsp.io/spacemacs/images/features/move-coll-entry.gif" /></a></p>
+<p><a class="glightbox" href="https://clojure-lsp.io/spacemacs/images/features/move-coll-entry.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Clojure LSP - move elements in data structures" src="https://clojure-lsp.io/spacemacs/images/features/move-coll-entry.gif" /></a></p>
 <blockquote>
 <p>WARNING: does not seem to work and does not show as a code action</p>
 </blockquote>

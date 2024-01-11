@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -7954,9 +7954,9 @@
 <p>Jack-in ensures the REPL process is started with the libraries and middleware required by CIDER.  Then the rest of the jack-in process is the same as connect, but done so automatically.</p>
 <h2 id="jack-in-configuration">Jack-in Configuration<a class="headerlink" href="#jack-in-configuration" title="Permanent link">λ︎</a></h2>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>u</kbd></span> <span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>m</kbd></span> <span class="keys"><kbd>s</kbd></span> opens the jack-in command in the minibuffer which can be edited to customise how the Clojure REPL process starts, e.g. adding Clojure CLI aliases to include libraries and tools for development.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure - Edit cider-jack-in command to add Clojure CLI aliases" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure - Edit cider-jack-in command to add Clojure CLI aliases" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit.png" /></a></p>
 <p>Clojure CLI aliases should be added between the <code>-M</code> execution flag and the <code>:cider/nrepl</code> alias.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit-custom-aliases.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure - Edit cider-jack-in command, adding Clojure aliases" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit-custom-aliases.png" /></a></p>
+<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit-custom-aliases.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure - Edit cider-jack-in command, adding Clojure aliases" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit-custom-aliases.png" /></a></p>
 <h3 id="deconstructing-the-command-line">Deconstructing the command line<a class="headerlink" href="#deconstructing-the-command-line" title="Permanent link">λ︎</a></h3>
 <p><code>cider-jack-in</code> commands include the dependencies to start a REPL process which the Emacs Cider process can connect to, using nREPL.</p>
 <p><code>-Sdeps</code> adds the required library dependencies to start an nREPL server (<code>nrepl/nrepl</code>) and connect to that nREPL server from Cider (<code>cider/cider-nrepl</code>).</p>

@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -7983,21 +7983,21 @@
 <p><code>C-j</code> and <code>C-k</code> in Evil normal state cycle through the history of expressions entered in the REPL buffer.</p>
 <h2 id="send-expressions-to-the-repl-buffer">Send expressions to the REPL buffer<a class="headerlink" href="#send-expressions-to-the-repl-buffer" title="Permanent link">λ︎</a></h2>
 <p><code>, s f</code> will send the current expression to the REPL to be evaluated.</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-cider-send-expression-to-repl.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Send expressions to REPL" src="/images/spacemacs-clojure-cider-send-expression-to-repl.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-clojure-cider-send-expression-to-repl.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Send expressions to REPL" src="/images/spacemacs-clojure-cider-send-expression-to-repl.png" /></a></p>
 <p>To call a function, it must be in the namespace the REPL is currently set to.  Or you can send a function definition to the REPL before and then you are able to call that function.</p>
 <p><code>, s f</code> will send the current function definition to the REPL.  Then you can either call that function from the REPL buffer or use <code>, e f</code> to send an expression that calls the function to the REPL buffer.</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-cider-send-to-repl-namespace-user.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Send function definition then function call to REPL" src="/images/spacemacs-clojure-cider-send-to-repl-namespace-user.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-clojure-cider-send-to-repl-namespace-user.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Send function definition then function call to REPL" src="/images/spacemacs-clojure-cider-send-to-repl-namespace-user.png" /></a></p>
 <h2 id="changing-the-namespace-in-the-repl-buffer">Changing the namespace in the REPL buffer<a class="headerlink" href="#changing-the-namespace-in-the-repl-buffer" title="Permanent link">λ︎</a></h2>
 <p>The <code>in-ns</code> function will change the REPL namespace to that specified in its argument.  For example:</p>
 <p><code>(in-ns 'spacemacs-workshop.core)</code> in the REPL buffer will change to the <code>spacemacs-workshop.core</code> namespace.</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-repl-change-namespace-spacemacs-workshop.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure REPL - Change to spacemacs-workshop.core" src="/images/spacemacs-clojure-repl-change-namespace-spacemacs-workshop.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-clojure-repl-change-namespace-spacemacs-workshop.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure REPL - Change to spacemacs-workshop.core" src="/images/spacemacs-clojure-repl-change-namespace-spacemacs-workshop.png" /></a></p>
 <h2 id="repl-buffer-shortcut-menu">REPL Buffer shortcut menu<a class="headerlink" href="#repl-buffer-shortcut-menu" title="Permanent link">λ︎</a></h2>
 <p><code>,</code> at the start of a line in Evil Insert state will open a list of command shortcuts for the REPL.</p>
-<p><a class="glightbox" href="/images/spacemacs-cider-repl-command-shortcuts.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure REPL - shortcut menu" src="/images/spacemacs-cider-repl-command-shortcuts.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-cider-repl-command-shortcuts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure REPL - shortcut menu" src="/images/spacemacs-cider-repl-command-shortcuts.png" /></a></p>
 <h3 id="clojure-send-to-repl-menu">Clojure send to REPL menu<a class="headerlink" href="#clojure-send-to-repl-menu" title="Permanent link">λ︎</a></h3>
-<p><a class="glightbox" href="/images/spacemacs-clojure-repl-send-to-menu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure REPL send to menu" src="/images/spacemacs-clojure-repl-send-to-menu.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-clojure-repl-send-to-menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure REPL send to menu" src="/images/spacemacs-clojure-repl-send-to-menu.png" /></a></p>
 <h3 id="clojure-send-to-repl-quit-sub-menu">Clojure send to REPL - quit sub menu<a class="headerlink" href="#clojure-send-to-repl-quit-sub-menu" title="Permanent link">λ︎</a></h3>
-<p><a class="glightbox" href="/images/spacemacs-clojure-repl-send-to-menu-quit.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure REPL send to menu" src="/images/spacemacs-clojure-repl-send-to-menu-quit.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-clojure-repl-send-to-menu-quit.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure REPL send to menu" src="/images/spacemacs-clojure-repl-send-to-menu-quit.png" /></a></p>
 <div class="admonition hint">
 <p class="admonition-title">Clojure REPL tools</p>
 <p><code>, s u</code> adds the REPL utility functions

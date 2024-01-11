@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
@@ -8124,7 +8124,7 @@
 <h1 id="committing-changes">Committing changes<a class="headerlink" href="#committing-changes" title="Permanent link">λ︎</a></h1>
 <p><span class="keys"><kbd>c</kbd></span> opens the commit menu in the Magit status buffer, allowing you to create, <a href="#amend-commit">amend</a>, <a href="#extend-commit">extend</a>, <a href="#reword-commit">reword</a>, <a href="#reword-commit">squash</a> commits.</p>
 <p>The Magit commit menu can be used to create new commits at the HEAD of the commit history.</p>
-<p><a class="glightbox" href="/images/spacemacs-magit-commit-menu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit - commit menu" src="/images/spacemacs-magit-commit-menu.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-magit-commit-menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit - commit menu" src="/images/spacemacs-magit-commit-menu.png" /></a></p>
 <p>Changing a commit generates a new SHA identity, creating a commit in the history, replacing the current HEAD commit.</p>
 <table>
 <thead>
@@ -8170,11 +8170,11 @@
 </li>
 <li><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>k</kbd></span> to cancel the commit (leaves changes staged)</li>
 </ul>
-<p><a class="glightbox" href="/images/spacemacs-magit-commit-message-menu.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit - commit or cancel" src="/images/spacemacs-magit-commit-message-menu.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-magit-commit-message-menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit - commit or cancel" src="/images/spacemacs-magit-commit-message-menu.png" /></a></p>
 <h3 id="writing-commit-messages">Writing Commit messages<a class="headerlink" href="#writing-commit-messages" title="Permanent link">λ︎</a></h3>
 <p>Type in a suitable commit message that explains the purpose and value of this commit. The first line should be a succinct summary of the purpose of the change.</p>
 <p>68 characters is the recommended maximum length of the first line of the commit message.  At 69 characters onward they change color to give a visual guide to the maximum length.  In the body, lines are automatically wrapped once a space is typed after a word that the maximum length.</p>
-<p><a class="glightbox" href="/images/spacemacs-magit-commit-message-buffer.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit - message buffer" src="/images/spacemacs-magit-commit-message-buffer.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-magit-commit-message-buffer.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit - message buffer" src="/images/spacemacs-magit-commit-message-buffer.png" /></a></p>
 <h3 id="commit-message-history">Commit message history<a class="headerlink" href="#commit-message-history" title="Permanent link">λ︎</a></h3>
 <p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>k</kbd></span> will paste the previous commit message in the commit message buffer when creating a commit in Magit. Further <span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>k</kbd></span>  key presses will cycle backwards through the previous commit messages</p>
 <p><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>j</kbd></span> will cycle forwards through commit messages</p>
@@ -8239,7 +8239,7 @@
 <p><code>s</code> in the commit menu to amend a commit</p>
 <p>The top buffer shows the local Git log, listing all the commit history.</p>
 <p>The bottom buffer shows the magit-diff output, so you can see all the changes of the current commit.</p>
-<p><a class="glightbox" href="/images/spacemacs-magit-commit-squash-example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit - Commit Squash" src="/images/spacemacs-magit-commit-squash-example.png" /></a></p>
+<p><a class="glightbox" href="/images/spacemacs-magit-commit-squash-example.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit - Commit Squash" src="/images/spacemacs-magit-commit-squash-example.png" /></a></p>
 <p>Move the cursor to the commit you wish to squash into its previous commit</p>
 <p><code>, ,</code> or <code>C-c C-c</code> to confirm the commit(s) should be squashed.</p>
 <p><code>, k</code> or <code>C-c C-k</code> to cancel changes and leave the commit history unchanged.</p>
