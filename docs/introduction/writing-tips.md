@@ -57,7 +57,7 @@ Use an iframe element to include a YouTube video, wrapping in a paragraph tag wi
 
 ## Admonitions
 
-[Supported admonition types](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types)
+[Supported admonition types](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types){target=_blank .md-button}
 
 !!! NOTE
     Use `!!!` followed by `NOTE`
@@ -197,53 +197,55 @@ ls -la $HOME/Downloads  # (1)
 
 Code blocks with annotation, add `!` after the annotation number to suppress the `#` character
 
-```clojure
-(defn helper-function
-  "Doc-string with description of function purpose" ; (1)!
-  [data]
-  (merge {:fish 1} data)
-  )
-```
-
-1.  Always include a doc-string in every function to describe the purpose of that function, identifying why it was added and what its value is.
-
-GitHub action example with multiple annotations
-
-``` yaml
-name: ci # (1)!
-on:
-  push:
-    branches:
-      - master # (2)!
-      - main
-permissions:
-  contents: write
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 3.x
-      - run: pip install mkdocs-material # (3)!
-      - run: mkdocs gh-deploy --force
-```
-
-1.  You can change the name to your liking.
-
-2.  At some point, GitHub renamed `master` to `main`. If your default branch
-    is named `master`, you can safely remove `main`, vice versa.
-
-3.  This is the place to install further [MkDocs plugins] or Markdown
-    extensions with `pip` to be used during the build:
-
-    ``` sh
-    pip install \
-      mkdocs-material \
-      mkdocs-awesome-pages-plugin \
-      ...
+!!! EXAMPLE "Code block with suppressed comment character"
+    ```clojure
+    (defn helper-function
+      "Doc-string with description of function purpose" ; (1)!
+      [data]
+      (merge {:fish 1} data)
+      )
     ```
+
+    1.  Always include a doc-string in every function to describe the purpose of that function, identifying why it was added and what its value is.
+
+
+
+!!! EXAMPLE "GitHub action example with multiple annotations"
+    ``` yaml
+    name: ci # (1)!
+    on:
+      push:
+        branches:
+          - master # (2)!
+          - main
+    permissions:
+      contents: write
+    jobs:
+      deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v3
+          - uses: actions/setup-python@v4
+            with:
+              python-version: 3.x
+          - run: pip install mkdocs-material # (3)!
+          - run: mkdocs gh-deploy --force
+    ```
+
+    1.  You can change the name to your liking.
+
+    2.  At some point, GitHub renamed `master` to `main`. If your default branch
+        is named `master`, you can safely remove `main`, vice versa.
+
+    3.  This is the place to install further [MkDocs plugins] or Markdown
+        extensions with `pip` to be used during the build:
+
+        ``` sh
+        pip install \
+          mkdocs-material \
+          mkdocs-awesome-pages-plugin \
+          ...
+        ```
 
 ### Highlight lines in code blocks
 
@@ -251,14 +253,15 @@ Add highlight line meta data to a code block after the opening backticks and cod
 
 `hl_lines="2"` highlights line 2 in the codeblock
 
-```clojure hl_lines="4 5 6"
-(defn my-function
-  "With a lovely doc-string"
-  [arguments]
-  (map
-   inc
-   [1 2 3]))
-```
+!!! EXAMPLE "Code block with highlighted lines"
+    ```clojure hl_lines="4 5 6"
+    (defn my-function
+      "With a lovely doc-string"
+      [arguments]
+      (map
+       inc
+       [1 2 3]))
+    ```
 
 ### Embed external files
 
