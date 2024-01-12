@@ -7967,34 +7967,37 @@
 <p><a href="#command-line-tools">Command Line Tools</a> support searching for files and spell checking.</p>
 <h2 id="install-emacs">Install Emacs<a class="headerlink" href="#install-emacs" title="Permanent link">λ︎</a></h2>
 <p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/emacs-icon.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="GNU Emacs logo" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/emacs-icon.svg" style="height:64px;width:64px" /></a></p>
-<p>Emacs 28 is recommended as it includes native compilation support and optomised JSON support which is valuable for Language Server Protocol servers.</p>
 <p>Emacs is available for Linux, MacOSX and Windows.  The <a href="https://github.com/syl20bnr/spacemacs/tree/develop#emacs">Spacemacs Readme suggested ways to install Emacs</a></p>
 <details class="info">
 <summary>Emacs Version 29 recommended</summary>
-<p>Emacs 29 is recommended, optionally with native compilation of Elisp which can have a significant improvement on Emacs package performance (although is still quite new).</p>
+<p>Emacs 29.x is the current stable release and includes optomised JSON support which is valuable for Language Server Protocol servers.  Native compilation is also supported, although this is still a relatively new approach so there may be issues.</p>
 </details>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Ubuntu / Debian</label><label for="__tabbed_1_2">Homebrew / MacOSX</label><label for="__tabbed_1_3">Windows</label><label for="__tabbed_1_4">Msys2</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Debian Packages</label><label for="__tabbed_1_2">Homebrew</label><label for="__tabbed_1_3">Windows</label><label for="__tabbed_1_4">Msys2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><code>apt-cache show emacs</code> to check available versions of Emacs in the Ubuntu package manager. If version 28 is available, install Emacs using the Ubuntu package manager.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>emacs
+<p><code>apt-cache show emacs</code> to check available versions of Emacs in the Ubuntu package manager. If version 29 is available, install Emacs using the Ubuntu package manager.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>apt<span class="w"> </span>install<span class="w"> </span>emacs
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">vterm compile packages</p>
 <p>vterm is compiled during the package install when first starting Spacemacs with the Practicalli Spacemaca Config.</p>
 <p>Install packages to support compile of vterm
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>cmake<span class="w"> </span>libvterm-bin<span class="w"> </span>libtool-bin
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>apt<span class="w"> </span>install<span class="w"> </span>cmake<span class="w"> </span>libvterm-bin<span class="w"> </span>libtool-bin
 </code></pre></div></p>
 </div>
-<p>Additional versions of Emacs are available via the <a href="https://launchpad.net/~ubuntu-elisp/+archive/ubuntu/ppa">Ubuntu Emacs Team Personal Package Archive</a>.</p>
-<p><code>sudo apt install emacs-snapshot</code> package to use the latest nightly build of Emacs, although be aware that some things may break.</p>
+<details class="hint">
+<summary>Emacs snapshot packages built from source</summary>
+<p><a href="https://launchpad.net/~ubuntu-elisp/+archive/ubuntu/ppa" target="_blank">Ubuntu Emacs Lisp team Personal Package Archive</a> provides daily snapshot Emacs packages build from the latest changes commited to the Emacs source code repository.  </p>
+<p>Installing a snapshot package essentially installs the unreleased version of Emacs, e.g. Emacs 30.</p>
+<p><code>apt install emacs-snapshot</code> package to use the latest nightly build of Emacs, although be aware that some things may break.</p>
+</details>
 <details class="hint">
 <summary>Build Emacs 29 from source</summary>
-<p><a href="https://practical.li/blog/posts/build-emacs-from-source-on-ubuntu-linux/">Building Emacs 29 from source code on Ubuntu</a> is relatively straight forward task, although it will take a little time to compile.  Building Emacs allows customisation of some features, such as native compilatin of elisp to enhance the performance of Emacs.</p>
+<p><a href="https://practical.li/blog/posts/build-emacs-from-source-on-ubuntu-linux/" target="_blank">Building Emacs 29 from source code on Ubuntu</a> is relatively straight forward task, although it will take a little time to compile.  Building Emacs allows customisation of some features, such as native compilatin of elisp to enhance the performance of Emacs.</p>
 </details>
 </div>
 <div class="tabbed-block">
-<p><a href="https://github.com/d12frosted/homebrew-emacs-plus">Emacs Plus</a> from Homebrew provides many options, including native compilation and Spacemacs Icon for application launchers.</p>
+<p><a href="https://github.com/d12frosted/homebrew-emacs-plus" target="_blank">Emacs Plus</a> from Homebrew provides many options, including native compilation and Spacemacs Icon for application launchers.</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>brew tap d12frosted/emacs-plus
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>brew install emacs-plus@29 --with-spacemacs-icon
 </code></pre></div>
@@ -8009,11 +8012,11 @@ Or install with native compilation support
 <p>Run <code>emacs</code></p>
 <blockquote>
 <p>If Ntative Compilation option was included, take a break whilst Emacs compiles all the things.</p>
-<p>The <a href="https://github.com/syl20bnr/spacemacs#macos">Spacemacs README lists other options for MacOSX</a>.</p>
+<p>The <a href="https://github.com/syl20bnr/spacemacs#macos" target="_blank">Spacemacs README lists other options for MacOSX</a>.</p>
 </blockquote>
 </div>
 <div class="tabbed-block">
-<p><a href="http://ftp.gnu.org/gnu/emacs/windows/emacs-29/">Download Emacs 29 zip</a> archive from the <a href="http://ftp.gnu.org/gnu/emacs/windows/">GNU repository for Windows</a> and extract the zip file to <code>%AppData%/local/Programs/emacs</code>.</p>
+<p><a href="http://ftp.gnu.org/gnu/emacs/windows/emacs-29/" target="_blank">Download Emacs 29 zip</a> archive from the <a href="http://ftp.gnu.org/gnu/emacs/windows/" target="_blank">GNU repository for Windows</a> and extract the zip file to <code>%AppData%/local/Programs/emacs</code>.</p>
 <p>Alternatively, if you are using the <a href="https://chocolatey.org/" target="_blank">Chocolatey package manager</a> then install <a href="https://chocolatey.org/packages/emacs" target="_blank">Emacs version 28</a></p>
 <p>Add the Emacs directory to the <code>PATH</code> variable in your user account environment variables.</p>
 <p>To start Emacs run the command <code>runemacs.exe</code>.  You can also pin this to the start menu or task bar.</p>
@@ -8035,21 +8038,21 @@ Or install with native compilation support
 <p>Clojure CLI provide a simple and configurable way to:</p>
 <ul>
 <li>Run Clojure programs and tools</li>
-<li>Run an interactive REPL (Read-Eval-Print Loop) and evaluate Clojure expressions, usually with a <a href="https://practical.li/clojure/clojure-editors/">Clojure aware editor</a></li>
+<li>Run an interactive REPL (Read-Eval-Print Loop) and evaluate Clojure expressions, usually with a <a href="https://practical.li/clojure/clojure-editors/" target="_blank">Clojure aware editor</a></li>
 <li>Managing dependencies (via tools.deps) from Maven and Git repositories</li>
 </ul>
 <p>Using community tools on top of Clojure CLI tools provides tasks to create, develop, build and deploy Clojure applications and services</p>
-<p>Follow the <a href="https://practical.li/clojure/install/">Practicalli Clojure Install Guide</a> to install Clojure and supporting tools.</p>
+<p>Follow the <a href="https://practical.li/clojure/install/" target="_blank">Practicalli Clojure Install Guide</a> to install Clojure and supporting tools.</p>
 <h2 id="command-line-tools">Command Line Tools<a class="headerlink" href="#command-line-tools" title="Permanent link">λ︎</a></h2>
 <p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/terminal-emulator-green-screen.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img align="right" alt="Command Line icon" loading="lazy" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/icons/terminal-emulator-green-screen.svg" /></a></p>
 <p>Emacs uses several external command line tools.  There are some very efficient search tools that are recommended (ripgrep, silver searcher).</p>
 <p>Consider installing these tools to enhance your Spacemacs experience.</p>
 <h3 id="spell-check">spell check<a class="headerlink" href="#spell-check" title="Permanent link">λ︎</a></h3>
-<p><a href="https://develop.spacemacs.org/layers/+checkers/spell-checking/README.html">spell-checking layer</a> in Spacemacs supports ispell, hunspell, and aspell command line tools. Aspell is the recommended spell checking tool.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Ubuntu / Debian</label><label for="__tabbed_2_2">Homebrew</label><label for="__tabbed_2_3">Manual</label></div>
+<p><a href="https://develop.spacemacs.org/layers/+checkers/spell-checking/README.html" target="_blank">spell-checking layer</a> in Spacemacs supports ispell, hunspell, and aspell command line tools. Aspell is the recommended spell checking tool.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Debian Packages</label><label for="__tabbed_2_2">Homebrew</label><label for="__tabbed_2_3">Manual</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Aspell binary is usually installed on Unix systems by default.  Use <code>sudo apt instal aspell</code> if not already present.</p>
+<p>Aspell binary is usually installed on Unix systems by default.  Use <code>apt instal aspell</code> if not already present.</p>
 </div>
 <div class="tabbed-block">
 <p><code>brew install aspell</code></p>
@@ -8065,16 +8068,17 @@ Or install with native compilation support
 <p><a class="md-button" href="https://github.com/BurntSushi/ripgrep" target="_blank">ripgrep (rg)</a>
 <a class="md-button" href="https://github.com/ggreer/the_silver_searcher" target="_blank">Silver Searcher (ag)</a></p>
 <h3 id="find-files">Find files<a class="headerlink" href="#find-files" title="Permanent link">λ︎</a></h3>
-<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> opens the projectile menu for finding files relative to the current project.  Projectile uses the external command line tool <code>find</code> to index files that are not part of a version controlled project (using <code>git</code> for projects versioned with Git).</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> opens the projectile menu for finding files relative to the current project.</p>
+<p>Projectile uses the external command line tool <code>find</code> to index files that are not part of a version controlled project (using <code>git</code> for projects versioned with Git).</p>
 <p><code>fd</code> is an external command line binary that is faster than the <code>find</code> command.  If installed, projectile will automatically use <code>fd</code> instead of <code>find</code></p>
 <p><a class="md-button" href="https://github.com/sharkdp/fd#installation" target="_blank">fd install instructions by operating system </a></p>
 <h3 id="helm-locate">helm-locate<a class="headerlink" href="#helm-locate" title="Permanent link">λ︎</a></h3>
 <p>The <code>locate</code> binary is used by <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd class="key-l">L</kbd></span> (<code>helm-locate</code>) to find files and directories on the operating system file space.</p>
-<p><code>helm-locate</code> is the fastest way to search for files across the whole file space on your computer as it uses the updatedb database.  If a file was very recently added to the file system, run <code>sudo updatedb</code> to ensure all files are in the database.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Ubuntu / Debian</label><label for="__tabbed_3_2">Homebrew / MacOSX</label></div>
+<p><code>helm-locate</code> is the fastest way to search for files across the whole file space on your computer as it uses the updatedb database.  Run <code>updatedb</code> to ensure all files are in the database, especially very recent changes.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Debian Packages</label><label for="__tabbed_3_2">Homebrew</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>locate
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>apt<span class="w"> </span>install<span class="w"> </span>locate
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -8104,7 +8108,7 @@ Or install with native compilation support
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 22, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 12, 2024</span>
   </span>
 
     
