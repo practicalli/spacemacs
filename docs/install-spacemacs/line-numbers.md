@@ -4,29 +4,29 @@
 
 Configure `dotspacemacs-line-numbers` in Spacemacs configuration file to [show line numbers by default](#visual-style-line-number-configuration).
 
-![Spacemacs - Toggle menu](https://raw.githubusercontent.com/practicalli/graphic-design/master/spacemacs/spacemacs-line-numbers-comparison-labelled.png)
+![Spacemacs - Toggle menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/spacemacs-line-numbers-comparison-labelled.png?raw=true)
 
 
 ## Relative line numbers for Evil
 
 A relative numbering style (`visual`, `relative`) is highly recommended for [vim-style editing](/spacemacs-basics/vim-basics.md) as it provides an effective way to apply actions to multiple lines
 
-`10 j` in **Evil normal** mode will jump 10 lines forward
+++1++ ++0++ ++"j"++ jumps 10 lines forward
 
-`g c 9 j` will comment 9 lines from current, downwards
+++"g"++  ++"c"++ ++9++ ++"j"++ comments 9 lines from current, downwards
 
-`24 g r j` will select multiple cursors for the next 24 lines
+++2++ ++4++ ++"g"++ ++"r"++ ++"j"++ selects multiple cursors for the next 24 lines
 
-With relative numbering, the current line number is shown and all other numbers are relative to the number of lines away they are from the current line.  Relative numbering is useful for jumping to different parts of your file or running commands on a number of lines, eg. delete, indent, multiple cursors (`g r`)
+Relative line numbering shows the current line number with all other numbers the relative number of lines away from the current line.  Relative numbering is useful for jumping to different parts of your file or running commands on a number of lines, eg. delete, indent, multiple cursors (++"g"++ ++"r"++)
 
 
 ## Visual style line number configuration
 
 Practicalli recommends using visual line numbers for Vim style editing, which provides relative numbering that does not count hidden or [folded code](/spacemacs/navigating-code/code-folding/).
 
-`SPC f e d` to open the `.spacemacs` file and `SPC s s`dotspacemacs-line-numbers` to jump to the configuration option.
+++spc++ ++"f"++ ++"e"++ ++"d"++ open the Spacemacs user configuration file. ++spc++ ++"s"++ ++"s"++ `dotspacemacs-line-numbers` to jump to the configuration option.
 
-Add this configuration and `SPC f s` to save the file.  `SPC f e R` to reload the configuration (or `SPC q r` to restart Spacemacs).
+Change the `dotspacemacs-line-numbers` configuration to the preferred method. ++spc++ ++"f"++ ++"s"++ to save the file.   ++spc++ ++"f"++ ++"e"++ ++"R"++ reloads the configuration (or ++spc++ ++"q"++ ++"r"++ to restart Spacemacs).
 
 ```elisp
 dotspacemacs-line-numbers '(:visual t
