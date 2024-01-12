@@ -33,12 +33,15 @@ This workshop will cover the following topics:
 
 ## Book status
 
-[![Publish Book](https://github.com/practicalli/spacemacs/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/spacemacs/actions/workflows/publish-book.yaml)
-[![MegaLinter](https://github.com/practicalli/spacemacs/actions/workflows/megalinter.yml/badge.svg)](https://github.com/practicalli/spacemacs/actions/workflows/megalinter.yml)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/spacemacs?label=commits&logo=github)
+[![GitHub issues](https://img.shields.io/github/issues/practicalli/spacemacs?label=content%20ideas&logo=github)](https://img.shields.io/github/issues/practicalli/spacemacs?label=content%20ideas&logo=github){target=_blank}
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/y/practicalli/spacemacs?label=commits&logo=github)](https://img.shields.io/github/commit-activity/y/practicalli/spacemacs?label=commits&logo=github){target=_blank}
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/spacemacs?label=pull%20requests&logo=github)](https://img.shields.io/github/issues-pr-raw/practicalli/spacemacs?label=pull%20requests&logo=github){target=_blank}
 
-![Ideas & issues](https://img.shields.io/github/issues/practicalli/spacemacs?label=content%20ideas&logo=github)
-![Pull requests](https://img.shields.io/github/issues-pr-raw/practicalli/spacemacs?label=pull%20requests&logo=github)
+[![MegaLinter](https://github.com/practicalli/spacemacs/actions/workflows/megalinter.yaml/badge.svg)](https://github.com/practicalli/spacemacs/actions/workflows/megalinter.yaml){target=_blank}
+[![Publish Book](https://github.com/practicalli/spacemacs/actions/workflows/publish-book.yaml/badge.svg)](https://github.com/practicalli/spacemacs/actions/workflows/publish-book.yaml){target=_blank}
+[![pages-build-deployment](https://github.com/practicalli/spacemacs/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/practicalli/spacemacs/actions/workflows/pages/pages-build-deployment){target=_blank}
+
+![GitHub contributors](https://img.shields.io/github/contributors/practicalli/spacemacs?style=for-the-badge&label=github%20contributors)
 
 
 ## Creative commons license
