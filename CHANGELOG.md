@@ -12,3 +12,4 @@
 - dev: action/checkout@v4 and sparse-checkout for publish-book workflow
 - dev: action/checkout@v4 and sparse-checkout for scheduled-version-check workflow
 - dev: action/checkout@v4 and sparse-checkout for changelog-check workflow
+- dev: update license to creative commons share-alike
