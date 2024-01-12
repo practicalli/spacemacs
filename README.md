@@ -30,8 +30,6 @@ This workshop will cover the following topics:
 * Clojurescript development, figwheel-main and reagent
 * Org-mode for project documentation, literate programming & presentations
 
-> This is not a guide to customising Emacs for Clojure development, except were there are useful additions to be made to Spacemacs and the Clojure layer.
-
 
 ## Book status
 
@@ -53,7 +51,7 @@ This workshop will cover the following topics:
 
 ## Contributing
 
-Please [read the contributing section of the book](https://practical.li/spacemacs/introduction/contributing.html) before raising an issue or pull request
+Please [read the contributing section of the book](https://practical.li/spacemacs/introduction/contributing/) before raising an issue or pull request
 
 * [Current Issues](https://github.com/practicalli/spacemacs/issues)
 * [Current pull requests](https://github.com/practicalli/spacemacs/pulls)
