@@ -1305,15 +1305,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#example-themes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example themes
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -7821,15 +7812,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#example-themes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example themes
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -7890,7 +7872,8 @@
 </tr>
 </tbody>
 </table>
-<p><a href="/images/spacemacs-themes-menu.png"><img alt="Spacemacs Themes menu" src="/images/spacemacs-themes-menu.png" /></a></p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-themes-menu-light.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Themes menu" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-themes-menu-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-themes-menu-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Themes menu" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-themes-menu-dark.png?raw=true#only-dark" /></a></p>
 <h2 id="adding-themes-to-spacemacs">Adding Themes to Spacemacs<a class="headerlink" href="#adding-themes-to-spacemacs" title="Permanent link">λ︎</a></h2>
 <p>Themes are set by adding the theme name to the <code>dotspacemacs-themes</code> list.  The first theme in the list is loaded when Spacemacs starts.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">dotspacemacs-themes</span><span class="w"> </span><span class="o">&#39;</span><span class="p">(</span><span class="nv">doom-gruvbox-light</span>
@@ -7900,28 +7883,14 @@
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">                      </span><span class="nv">cyberpunk</span><span class="p">)</span>
 </code></pre></div>
 <p>The order of the themes in the list is the order Spacemacs will cycle through those themes, <code>SPC T n</code> for the next theme and <code>SPC T p</code> for the previous theme.</p>
-<p>The first time you select a theme it will be automatically downloaded, installed and used.  This may take a few seconds to load.</p>
-<div class="admonition hint">
-<p class="admonition-title">Doom Gruvbox Themes used for this guide</p>
-<p>This guide uses the <code>doom-gruvbox-light</code> theme for screenshots and videos, some older screenshots are <code>doom-solarized-light</code> or <code>spacemacs-dark</code>.</p>
-</div>
-<h2 id="example-themes">Example themes<a class="headerlink" href="#example-themes" title="Permanent link">λ︎</a></h2>
-<p>There are many <a href="http://themegallery.robdor.com/" target="_blank">themes available</a> for Spacemacs that will change the colours of text, background, etc.</p>
+<p>The first time you select a theme it will be automatically downloaded, installed and used.  This may take a few seconds to load. There are many <a href="http://themegallery.robdor.com/" target="_blank">themes available</a> for Spacemacs that will change the colours of text, background, etc.</p>
+<p><code>doom-gruvbox</code> and <code>doom-gruvbox-light</code> themes are used for the screenshots in this guide and doom-modeline theme provides an uncluttered Emacs modeline theme.</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-theme-doom-gruvbox-example-light.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs theme - doom gruvbox light" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-theme-doom-gruvbox-example-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-theme-doom-gruvbox-example-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs theme - doom gruvbox dark" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-theme-doom-gruvbox-example-dark.png?raw=true#only-dark" /></a></p>
 <details class="hint">
 <summary>Original Emacs theme</summary>
 <p>Add <code>(disable-theme)</code> to <code>dotspacemacs/user-config</code> section of <code>.spacemacs</code> to remove any custom theme and use the Emacs default colors.  Or set <code>(dotspacemacs-themes '(default))</code> in <code>.spacemacs</code> to use a theme similar to the Emacs colors.</p>
 </details>
-<p>This guide uses the minimal theme provided by doom modeline and doom-gruvbox-light theme.</p>
-<p><a class="glightbox" href="/images/spacemacs-doom-gruvbox-light-theme-example-clojure-spec.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs theme - doom solarized light" src="/images/spacemacs-doom-gruvbox-light-theme-example-clojure-spec.png" /></a></p>
-<p>Doom Solarized Light is also an excellent theme for working during the day, as well as presentations and videos due to a lighter color set having a better contrast.</p>
-<p><a class="glightbox" href="/images/spacemacs-themes-doom-solarized-light.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs theme - doom solarized light" src="/images/spacemacs-themes-doom-solarized-light.png" /></a></p>
-<p>Doom Solarized Dark is a good theme for darker environments.</p>
-<p><a class="glightbox" href="/images/spacemacs-themes-doom-solarized-dark.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs theme - doom solarized dark" src="/images/spacemacs-themes-doom-solarized-dark.png" /></a></p>
-<p>Spacemacs has two default themes included, one light and one dark.  There are also many <a href="http://themegallery.robdor.com/" target="_blank">themes available</a> that you can select and load on demand, <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-t">T</kbd></span> <span class="keys"><kbd>s</kbd></span></p>
-<p><a class="glightbox" href="/images/spacemacs-theme-dark.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs theme - spacemacs-dark" src="/images/spacemacs-theme-dark.png" /></a></p>
-<p><a class="glightbox" href="/images/spacemacs-theme-light.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs theme - spacemacs-light" src="/images/spacemacs-theme-light.png" /></a></p>
-<p>The cyberpunk theme used a very striking color palette, familiar to those who use to use Emacs Live distribution (now deceased).</p>
-<p><a class="glightbox" href="/images/spacemacs-theme-cyberpunk.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs theme - spacemacs-cyberpunk" src="/images/spacemacs-theme-cyberpunk.png" /></a></p>
 
 
 
@@ -7942,7 +7911,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 25, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 12, 2024</span>
   </span>
 
     
