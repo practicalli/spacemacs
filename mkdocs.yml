@@ -163,12 +163,9 @@ nav:
       - Full Screen: install-spacemacs/maximised-full-screen.md
       - Themes: install-spacemacs/themes.md
       - Line Numbers: install-spacemacs/line-numbers.md
-      - Start Emacs Instantly:
-          - install-spacemacs/emacsclient-server.md
-          - Git Commit Message: install-spacemacs/emacsclient-git-commit-messages.md
-      - Update Spacemacs:
-          - install-spacemacs/update.md
-          - Switch to develop: install-spacemacs/switch-to-develop.md
+      - Start Emacs Instantly: install-spacemacs/emacsclient-server.md
+      - Git Editor: install-spacemacs/emacsclient-git-commit-messages.md
+      - Update Spacemacs: install-spacemacs/update.md
       - Troubleshoot: install-spacemacs/troubleshooting.md
   - Spacemacs Basics:
       - spacemacs-basics/index.md
@@ -373,6 +370,7 @@ nav:
       - misc/unicode-characters.md
   - Reference:
       - reference/index.md
+      - Switch to Spacemacs develop: reference/switch-to-develop.md
       - reference/emacs-quick-reference.md
       - reference/spacemacs-conventions.md
       - reference/hydra-menus.md

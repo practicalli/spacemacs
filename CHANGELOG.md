@@ -14,3 +14,4 @@
 - dev: action/checkout@v4 and sparse-checkout for changelog-check workflow
 - dev: update license to creative commons share-alike
 - emacs: move eshell configuration from install to emacs-lisp section
+- reference: move switch to develop to reference section (develop long been default branch)
