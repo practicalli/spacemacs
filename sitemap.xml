@@ -341,11 +341,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://practical.li/spacemacs/install-spacemacs/switch-to-develop/</loc>
-         <lastmod>2024-01-13</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://practical.li/spacemacs/install-spacemacs/themes/</loc>
          <lastmod>2024-01-13</lastmod>
          <changefreq>daily</changefreq>
@@ -647,6 +642,11 @@
     </url>
     <url>
          <loc>https://practical.li/spacemacs/reference/spacemacs-conventions/</loc>
+         <lastmod>2024-01-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://practical.li/spacemacs/reference/switch-to-develop/</loc>
          <lastmod>2024-01-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
