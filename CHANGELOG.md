@@ -16,3 +16,4 @@
 - emacs: move eshell configuration from install to emacs-lisp section
 - reference: move switch to develop to reference section (develop long been default branch)
 - basics: update space and comma menu screenshots
+- basics: emacs structure and golden ratio images, format tables
