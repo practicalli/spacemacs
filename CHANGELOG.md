@@ -13,3 +13,4 @@
 - dev: action/checkout@v4 and sparse-checkout for scheduled-version-check workflow
 - dev: action/checkout@v4 and sparse-checkout for changelog-check workflow
 - dev: update license to creative commons share-alike
+- emacs: move eshell configuration from install to emacs-lisp section
