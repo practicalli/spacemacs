@@ -1,53 +1,61 @@
 # Buffer management
 
-Buffers manage the display of files and other information. Opening a file replaces the content in the current buffer.
+Buffers manage the display of files and other information, e.g. REPL, terminal, etc. 
 
-[![Spacemacs Buffer menu](/images/spacemacs-buffer-menu.png)](/images/spacemacs-buffer-menu.png)
+Opening a file replaces the content in the current buffer.
+
+![Spacemacs - Buffer menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-buffer-light.png?raw=true#only-light)
+![Spacemacs - Buffer menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-buffer-dark.png?raw=true#only-dark)
+
 
 ## Listing open buffers
 
-`SPC b b` to select a buffer from a list of buffers
+++spc++ ++"b"++ ++"b"++ to select a buffer from a list of buffers
 
 A helm pop-up window appears at the bottom listing all open buffers.  The helm popup window also shows recently opened buffers.
 
-![Spacemacs - Buffer menu - List Buffers - Helm Mini buffer](/images/spacemacs-buffer-menu-list-buffers-helm-mini.png)
+++enter++ to open the highlighted buffer.
 
-Using the buffer menu, `SPC b b` you can switch to any buffer currently open, especially useful for those buffers that are not currently being shown in a window.
+++alt+"D"++ closes the currently selected buffer and remains in the buffer list.
 
-You can also delete any of the currently open buffers when you no longer need them.
+![Spacemacs - Buffer menu - List Buffers](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-buffer-list-light.png?raw=true#only-light)
+![Spacemacs - Buffer menu - List Buffers](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-buffer-list-dark.png?raw=true#only-dark)
 
 
 ## Buffer Transient State
 
-`SPC b .` launches buffer transient state to manage buffers using single character keybindings.
+++spc++ ++"b"++ ++period++ launches buffer transient state to manage buffers using single character keybindings.
 
-With a single key you can cycle quickly through all open buffers, forward with `n` or backwards with either `N` or `p`.
+++"n"++ and ++"N"++ to cycyle forward and backward through open buffers.
 
-Use `d` to kill the current buffer.
+++"d"++ to close the current buffer.
 
-![Spacemacs - Buffer Transient State](/images/spacemacs-buffers-transient-state-menu.png)
+![Spacemacs - Buffer Transient State](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-buffers-helm-transient-state-light.png?raw=true#only-light)
+![Spacemacs - Buffer Transient State](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-buffers-helm-transient-state-dark.png?raw=true#only-dark)
+
+
+## Close buffers using buffer menu
+
+Use helm-mini menu when you have a large number of buffers to delete.
+
+++spc++ ++"b"++ ++"b"++ to open the buffer helm-mini menu
+
+++ctrl++ ++"j"++ and ++ctrl++ ++"k"++ to navigate buffer names in the list of open buffers
+
+++ctrl++ ++spc++ to mark a buffer for deletion
+
+++meta++ ++"D"++ deletes all marked buffers
 
 
 ### Commonly used keybindings
 
-| Vim Normal | Description                     |
-|------------|---------------------------------|
-| `SPC b .`  | Enter buffer transient state    |
-| `b`        | list open buffers               |
-| `h`        | switch to home buffer           |
-| `m`        | switch to home message          |
-| `n`        | Show next buffer                |
-| `N` or `p` | Show previous buffer            |
-| `q`        | Quit the buffer transient state |
+| Vim Normal                 | Description                       |
+| ------------               | --------------------------------- |
+| ++spc++ ++"b"++ ++period++ | Enter buffer transient state      |
+| ++"b"++                    | list open buffers                 |
+| ++"h"++                    | switch to home buffer             |
+| ++"m"++                    | switch to home message            |
+| ++"n"++                    | Show next buffer                  |
+| ++"N"++ or ++"p"++         | Show previous buffer              |
+| ++"q"++                    | Quit the buffer transient state   |
 
-
-## Kill buffers using buffer menu
-Use helm-mini menu when you have a large number of buffers to delete.
-
-`SPC b b` to open the buffer helm-mini menu
-
-`C-j` and `C-k` to navigate buffer names in the list of open buffers
-
-`C-SPC` to mark a buffer for deletion
-
-`M-D` deletes all the marked buffers.
