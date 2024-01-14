@@ -18,3 +18,4 @@
 - basics: update space and comma menu screenshots
 - basics: emacs structure and golden ratio images, format tables
 - basics: file buffer project layout treemacs and ranger screenshots
+- basics: dird key bindings update
