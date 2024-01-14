@@ -1606,35 +1606,11 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hintsmall-changes-often" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Small changes often
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#emacs-macro-for-multiple-file-renames" class="md-nav__link">
     <span class="md-ellipsis">
       Emacs macro for multiple file renames
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Emacs macro for multiple file renames">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintreset-cursor-position-at-end-of-macro" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Reset cursor position at end of macro
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -7775,35 +7751,11 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hintsmall-changes-often" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Small changes often
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#emacs-macro-for-multiple-file-renames" class="md-nav__link">
     <span class="md-ellipsis">
       Emacs macro for multiple file renames
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Emacs macro for multiple file renames">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintreset-cursor-position-at-end-of-macro" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Reset cursor position at end of macro
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -7846,12 +7798,12 @@
 <h1 id="dired-emacs-directory-editor">dired Emacs directory editor<a class="headerlink" href="#dired-emacs-directory-editor" title="Permanent link">λ︎</a></h1>
 <p>A Dired buffer displays the contents of a single directory or listings of one or more sub-directories. A Dired buffer can display an arbitrary set of files and directories from any file systems.</p>
 <p><code>dired</code> mode is built-in to Emacs (version 23 onward)</p>
-<p><code>SPC f f</code> and select the <code>.</code> root of a directory to open a directory listing in dired</p>
-<p><code>SPC f j</code> or <code>SPC j d</code> to jump to the current buffer in a dired buffer.  <code>SPC j D</code> opens dired buffer in a different window.</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>f</kbd></span> and select the <code>.</code> root of a directory to open a directory listing in dired</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>j</kbd></span> or <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>j</kbd></span> <span class="keys"><kbd>d</kbd></span> to jump to the current buffer in a dired buffer.  <span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>j</kbd></span> <span class="keys"><kbd>D</kbd></span> opens dired buffer in a different window.</p>
 <p>Use Evil style navigation and editing with the dired buffer</p>
-<p><code>SPC SPC wdired-change-to-wdired-mode</code> WDired mode (writable dired) enables editing of the dired buffer. Names of the files in the buffer, the target of symbolic links and the permission bits of the files can be changed.</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-space">Space</kbd></span> <code>wdired-change-to-wdired-mode</code> WDired mode (writable dired) enables editing of the dired buffer. Names of the files in the buffer, the target of symbolic links and the permission bits of the files can be changed.</p>
 <h2 id="dired-commands">Dired commands<a class="headerlink" href="#dired-commands" title="Permanent link">λ︎</a></h2>
-<p><code>m</code> mark files to run an action across multiple files in the listing</p>
+<p><span class="keys"><kbd>m</kbd></span> mark files to run an action across multiple files in the listing</p>
 <table>
 <thead>
 <tr>
@@ -7861,72 +7813,72 @@
 </thead>
 <tbody>
 <tr>
-<td><code>*</code></td>
+<td><span class="keys"><kbd>*</kbd></span></td>
 <td>mark / unmark meun</td>
 </tr>
 <tr>
-<td><code>R</code></td>
+<td><span class="keys"><kbd>R</kbd></span></td>
 <td>rename a file</td>
 </tr>
 <tr>
-<td><code>C</code></td>
+<td><span class="keys"><kbd>C</kbd></span></td>
 <td>copy file</td>
 </tr>
 <tr>
-<td><code>+</code></td>
+<td><span class="keys"><kbd class="key-plus">+</kbd></span></td>
 <td>make directory</td>
 </tr>
 <tr>
-<td><code>m</code></td>
+<td><span class="keys"><kbd>m</kbd></span></td>
 <td>mark files</td>
 </tr>
 <tr>
-<td><code>u</code></td>
+<td><span class="keys"><kbd>u</kbd></span></td>
 <td>unmark</td>
 </tr>
 <tr>
-<td><code>d</code></td>
+<td><span class="keys"><kbd>d</kbd></span></td>
 <td>flag for deletion</td>
 </tr>
 <tr>
-<td><code>s</code></td>
+<td><span class="keys"><kbd>s</kbd></span></td>
 <td>sort menu</td>
 </tr>
 <tr>
-<td><code>x</code></td>
+<td><span class="keys"><kbd>x</kbd></span></td>
 <td>execute deletions</td>
 </tr>
 <tr>
-<td><code>^ or -</code></td>
+<td><span class="keys"><kbd>^</kbd></span> or <span class="keys"><kbd class="key-minus">-</kbd></span></td>
 <td>move up a directory</td>
 </tr>
 </tbody>
 </table>
 <h2 id="rename-files-with-wdired-mode">Rename files with WDired mode<a class="headerlink" href="#rename-files-with-wdired-mode" title="Permanent link">λ︎</a></h2>
 <p>The names in a dired directory listing can be renamed by editing the file names in the dired buffer and committing the changes.</p>
-<p><code>SPC f f</code> and select the <code>.</code> root of a directory to open a directory listing in dired (or switch to an open dired buffer).</p>
-<p><code>SPC SPC wdired-change-to-wdired-mode</code> to make the dired buffer writable.  The cursor enters insert mode and is placed on the top entry of the directory listing.</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>f</kbd></span> and select the <span class="keys"><kbd class="key-period">.</kbd></span> root of a directory to open a directory listing in dired (or switch to an open dired buffer).</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-space">Space</kbd></span> <code>wdired-change-to-wdired-mode</code> to make the dired buffer writable.  The cursor enters insert mode and is placed on the top entry of the directory listing.</p>
 <p>Use <a href="/spacemacs-basics/evil/">Evil style editing</a> to manage changes to the file names.  Some Evil tools and Multiple cursors are not available in the WDired mode, so <a href="/spacemacs-basics/evil/">experience with Evil basics</a> can be very useful.</p>
-<p><code>C-c C-c</code> to commit the changes and update all the affected files.</p>
-<p><code>C-c Esc</code> to cancel all changes.</p>
-<blockquote>
-<h4 id="hintsmall-changes-often">Hint::Small changes often<a class="headerlink" href="#hintsmall-changes-often" title="Permanent link">λ︎</a></h4>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd></span> <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd></span> to commit the changes and update all the affected files.</p>
+<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd>c</kbd></span> <span class="keys"><kbd class="key-escape">Esc</kbd></span> to cancel all changes.</p>
+<div class="admonition hint">
+<p class="admonition-title">Small changes often</p>
 <p>Undo is not available in this mode, so make simple changes and save the results as soon as possible.</p>
-</blockquote>
+</div>
 <h3 id="emacs-macro-for-multiple-file-renames">Emacs macro for multiple file renames<a class="headerlink" href="#emacs-macro-for-multiple-file-renames" title="Permanent link">λ︎</a></h3>
 <p>Record a macro to rename a file and run the macro over multiple lines in the dired buffer in WDired mode.</p>
-<p><code>q a</code> in normal mode will start recording all following key bindings</p>
-<p><code>q</code> again to stop recording and save all the key bindings as a macro bound to the <code>a</code> character.</p>
+<p><span class="keys"><kbd>q</kbd></span> <span class="keys"><kbd>a</kbd></span> in normal mode will start recording all following key bindings</p>
+<p><span class="keys"><kbd>q</kbd></span> again to stop recording and save all the key bindings as a macro bound to the <span class="keys"><kbd>a</kbd></span> character.</p>
 <blockquote>
-<p>Any character other than <code>q</code> can be used as the macro name and Practicalli finds <code>a</code>, <code>z</code> and <code>x</code> as convenient characters for macros.</p>
+<p>Any character other than <span class="keys"><kbd>q</kbd></span> can be used as the macro name and Practicalli finds <span class="keys"><kbd>a</kbd></span>, <span class="keys"><kbd>z</kbd></span> and <span class="keys"><kbd>x</kbd></span> as convenient characters for macros.</p>
 </blockquote>
-<p><code>@ a</code> to run the macro and repeat the same change</p>
-<p><code>24 @ a</code> to run the macro on  the next 24 lines including the current line,  repeating the same change on multiple file names in the dired buffer.</p>
-<blockquote>
-<h4 id="hintreset-cursor-position-at-end-of-macro">Hint::Reset cursor position at end of macro<a class="headerlink" href="#hintreset-cursor-position-at-end-of-macro" title="Permanent link">λ︎</a></h4>
+<p><span class="keys"><kbd>@</kbd></span> <span class="keys"><kbd>a</kbd></span> to run the macro and repeat the same change</p>
+<p><span class="keys"><kbd class="key-2">2</kbd></span> <span class="keys"><kbd class="key-4">4</kbd></span> <span class="keys"><kbd>@</kbd></span> <span class="keys"><kbd>a</kbd></span> to run the macro on  the next 24 lines including the current line,  repeating the same change on multiple file names in the dired buffer.</p>
+<div class="admonition hint">
+<p class="admonition-title">Reset cursor position at end of macro</p>
 <p>If using positional aspects for changes made by the macro ensure the cursor is moved back to the correct starting place just before ending the macro recording.</p>
-<p>Reference: <a href="https://www.masteringemacs.org/article/keyboard-macros-are-misunderstood">Mastering Emacs: Macros</a></p>
-</blockquote>
+<p><a class="md-button" href="https://www.masteringemacs.org/article/keyboard-macros-are-misunderstood" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Mastering Emacs: Macros</a></p>
+</div>
 <!--
 TODO: Check Multiple cursors in WDired mode
 
@@ -7956,7 +7908,7 @@ TODO: Check Multiple cursors in WDired mode
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 2, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 14, 2024</span>
   </span>
 
     
