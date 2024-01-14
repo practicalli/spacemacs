@@ -7820,35 +7820,46 @@
 
 
 <h1 id="layouts-and-workspaces">Layouts and Workspaces<a class="headerlink" href="#layouts-and-workspaces" title="Permanent link">λ︎</a></h1>
-<p><a href="http://develop.spacemacs.org/doc/DOCUMENTATION.html#layouts-and-workspaces">Layouts</a> provide an easy way to group buffers for a project or any arbitrary buffer grouping you wish.  Workspaces define window arrangements within a particular layout.</p>
+<p><a href="http://develop.spacemacs.org/doc/DOCUMENTATION.html#layouts-and-workspaces" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Layouts</a> provide a way to group buffers for a project or any arbitrary buffer grouping you wish.  </p>
+<p>Workspaces define window arrangements within a particular layout.</p>
 <h2 id="working-with-buffers-in-a-layout">Working with buffers in a layout<a class="headerlink" href="#working-with-buffers-in-a-layout" title="Permanent link">λ︎</a></h2>
-<p><code>SPC b b</code> shows only the buffers for the current layout, making it easy to switch between them.  <code>SPC b B</code> will show all buffers.</p>
-<p><code>SPC TAB</code> will toggle between the previous buffer and current buffer, regardless of layout the previous buffer is in.  Add <code>(spacemacs-layouts :variables spacemacs-layouts-restrict-spc-tab t)</code> to the <code>dotspacemacs-configuration-layers</code> in your <code>.spacemacs</code> file to limit <code>SPC TAB</code> to buffers of the current layout.</p>
-<h2 id="managing-layouts">Managing Layouts<a class="headerlink" href="#managing-layouts" title="Permanent link">λ︎</a></h2>
-<p><code>SPC l TAB</code> switches to the previous layout, providing a quick way to jump between two projects actively being worked on.</p>
-<p><code>SPC l</code> enters the layout transient state</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-layouts-transient-state-practicalli-layouts.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Layouts - transient state" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-layouts-transient-state-practicalli-layouts.png" /></a></p>
-<p><code>SPC l l</code> lists the current layouts with a helm prompt to narrow the list.  Entering a new name will prompt to create a new layout (perspective)</p>
-<p>The current layout name appears on the far left of the mode-line.</p>
-<p><a class="glightbox" href="/images/spacemacs-layers-name.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs layers - practicalli spacemacs" src="/images/spacemacs-layers-name.png" /></a></p>
-<p><code>SPC l s</code> saves the current layouts to a file, <code>SPC l L</code> loads a layout from a file.  Layouts are kept when restarting Spacemacs with <code>SPC q r</code> and can be configured to auto-resume when starting Emacs.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">dotspacemacs-auto-resume-layouts</span><span class="w"> </span><span class="no">t</span>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>b</kbd></span> <span class="keys"><kbd>b</kbd></span> lists buffers for the current layout, quickly switching between them.  </p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>b</kbd></span> <span class="keys"><kbd>B</kbd></span> will show all buffers.</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd class="key-tab">Tab</kbd></span> toggles between the previous buffer and current buffer, regardless of layout the previous buffer is in.  </p>
+<p>Constrain last buffer toggle to the curren layout by adding a configuration to the <code>dotspacemacs-configuration-layers</code> Spacemacs user configuration </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">(</span><span class="nv">spacemacs-layouts</span><span class="w"> </span><span class="ss">:variables</span><span class="w"> </span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">                   </span><span class="nv">spacemacs-layouts-restrict-spc-tab</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
 </code></pre></div>
-<p><code>SPC l x</code>  kill current layout with its buffers, <code>SPC l d</code> deletes the layout and keeps the buffers available</p>
-<p><code>SPC l ?</code> will show the help menu</p>
-<p><a class="glightbox" href="/images/spacemacs-layouts-help.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Layouts - transient state" src="/images/spacemacs-layouts-help.png" /></a></p>
+<h2 id="managing-layouts">Managing Layouts<a class="headerlink" href="#managing-layouts" title="Permanent link">λ︎</a></h2>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd class="key-tab">Tab</kbd></span> toggles to the previous layout, providing a quick way to jump between two projects actively being worked on.</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> enters the layout transient state</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-layouts-transient-state-light.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Layouts - transient state" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-layouts-transient-state-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-layouts-transient-state-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Layouts - transient state" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-layouts-transient-state-dark.png?raw=true#only-dark" /></a></p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>l</kbd></span> lists the current layouts with a helm prompt to narrow the list.  Entering a new name will prompt to create a new layout (perspective)</p>
+<p>The current layout name appears on the far left of the mode-line.</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-layouts-modeline-light.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs layers - practicalli spacemacs" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-layouts-modeline-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-layouts-modeline-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs layers - practicalli spacemacs" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-layouts-modeline-dark.png?raw=true#only-dark" /></a></p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>s</kbd></span> saves all layouts to a file</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>L</kbd></span> loads a layout from a file.  Layouts are kept when restarting Spacemacs with </p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>q</kbd></span> <span class="keys"><kbd>r</kbd></span> and can be configured to auto-resume when starting Emacs.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">dotspacemacs-auto-resume-layouts</span><span class="w"> </span><span class="no">t</span>
+</code></pre></div>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>x</kbd></span> close current layout and its buffers </p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>d</kbd></span> deletes the layout and keeps the buffers available</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd class="key-question">?</kbd></span> shows the layouts help menu</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-transient-state-layouts-light.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Layouts - transient state" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-transient-state-layouts-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-transient-state-layouts-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Layouts - transient state" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-transient-state-layouts-dark.png?raw=true#only-dark" /></a></p>
 <h2 id="global-layout">Global layout<a class="headerlink" href="#global-layout" title="Permanent link">λ︎</a></h2>
-<p><code>SPC b b</code> in the <code>default</code> layout shows all open buffers as this layout has global scope.</p>
-<p>This layout is useful to check if there are unsaved files or for killing unwanted or temporary buffers.</p>
-<p><code>M-SPC</code> when helm popup is active opens the <a href="/why-spacemacs/helm-transient-state.md">helm transient state</a>.  <code>t</code> will mark (tag) an item in the list, <code>T</code> will mark all items.  <code>M-D</code> will kill all marked buffers.</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>b</kbd></span> <span class="keys"><kbd>b</kbd></span> in the <code>default</code> layout shows all open buffers as this layout has global scope.</p>
+<p>This layout is useful to check if there are unsaved files or for closing unwanted or temporary buffers.</p>
+<p><span class="keys"><kbd class="key-meta">Meta</kbd><span>+</span><kbd class="key-space">Space</kbd></span> in helm popup opens <a href="/spacemacs/introduction/why-spacemacs/helm/#helm-transient-state">helm transient state</a>.  <span class="keys"><kbd>t</kbd></span> will mark (tag) an item in the list, <span class="keys"><kbd>T</kbd></span> will mark all items.  <span class="keys"><kbd class="key-meta">Meta</kbd><span>+</span><kbd>D</kbd></span> will close all marked buffers.</p>
 <h2 id="workspaces">Workspaces<a class="headerlink" href="#workspaces" title="Permanent link">λ︎</a></h2>
-<p>Workspaces define multiple window arrangements in a given layout. The active workspace number is placed before the window number, i.e ➊|➍, the fourth window of the first workspace. Any new layout comes with a default workspace, ➊|➊.  Switching to a workspace that does not exist in the current layout will create a new one.</p>
-<p><code>SPC l w R</code> gives a name to the current workspace.</p>
+<p>Workspaces define multiple window arrangements in a given layout.</p>
+<p>The active workspace number is placed before the window number, i.e ➊|➍, the fourth window of the first workspace. A new layout comes with a default workspace, ➊|➊.  Switching to a workspace that does not exist in the current layout will create a new one.</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>w</kbd></span> <span class="keys"><kbd>R</kbd></span> gives a name to the current workspace.</p>
 <p>Pressing a workspace number will activate it or create a new one. <code>Ctrl-&lt;number&gt;</code> will preview a workspace.</p>
-<p><code>TAB</code> makes the previous workspace activate.</p>
-<p><code>SPC l w ?</code> to toggle the full help.</p>
-<p><a class="glightbox" href="/images/spacemacs-layouts-workspaces-help.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Layouts - Workspaces help" src="/images/spacemacs-layouts-workspaces-help.png" /></a></p>
-<p>There are also some handy globally available key bindings related to workspaces:</p>
+<p><span class="keys"><kbd class="key-tab">Tab</kbd></span> makes the previous workspace activate.</p>
+<p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>l</kbd></span> <span class="keys"><kbd>w</kbd></span> <span class="keys"><kbd class="key-question">?</kbd></span> to toggle the full help.</p>
 <table>
 <thead>
 <tr>
@@ -7858,26 +7869,24 @@
 </thead>
 <tbody>
 <tr>
-<td><code>gt</code></td>
+<td><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>t</kbd></span></td>
 <td>go to next workspace</td>
 </tr>
 <tr>
-<td><code>gT</code></td>
+<td><span class="keys"><kbd>g</kbd></span> <span class="keys"><kbd>T</kbd></span></td>
 <td>go to previous workspace</td>
 </tr>
 <tr>
-<td><code>SPC b W</code></td>
+<td><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>b</kbd></span> <span class="keys"><kbd>W</kbd></span></td>
 <td>go to workspace and window by buffer</td>
 </tr>
 </tbody>
 </table>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">λ︎</a></h2>
-<ul>
-<li><a href="https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Bspacemacs/spacemacs-layouts">spacemacs-layout layer on GitHub</a></li>
-<li><a href="https://develop.spacemacs.org/layers/+spacemacs/spacemacs-layouts/README.html">develop.spacemacs.org layer description</a></li>
-<li><a href="http://develop.spacemacs.org/doc/DOCUMENTATION.html#layouts-and-workspaces">Spacemacs documentation</a></li>
-<li><a href="https://github.com/wasamasa/eyebrowse">Eyebrowse GitHub repository</a></li>
-</ul>
+<p><a class="md-button" href="https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Bspacemacs/spacemacs-layouts" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> spacemacs-layout layer on GitHub</a></p>
+<p><a class="md-button" href="https://develop.spacemacs.org/layers/+spacemacs/spacemacs-layouts/README.html" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> develop.spacemacs.org layer description</a></p>
+<p><a class="md-button" href="http://develop.spacemacs.org/doc/DOCUMENTATION.html#layouts-and-workspaces" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Spacemacs documentation</a></p>
+<p><a class="md-button" href="https://github.com/wasamasa/eyebrowse" target="_blank"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Eyebrowse GitHub repository</a></p>
 
 
 
@@ -7898,7 +7907,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 25, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 14, 2024</span>
   </span>
 
     
