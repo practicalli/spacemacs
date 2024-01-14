@@ -19,3 +19,4 @@
 - basics: emacs structure and golden ratio images, format tables
 - basics: file buffer project layout treemacs and ranger screenshots
 - basics: dird key bindings update
+- basics: layouts and workspaces key bindings and button links update
