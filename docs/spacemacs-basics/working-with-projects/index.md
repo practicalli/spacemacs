@@ -9,42 +9,52 @@ Spacemacs gives you several options for managing the files in your project and y
 
 Find, copy, delete, rename, sudo-edit, bookmark and browse files.
 
-![Spacemacs - File menu](/images/spacemacs-file-menu.png)
+![Spacemacs - Buffer menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-file-light.png?raw=true#only-light)
+![Spacemacs - Buffer menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-file-dark.png?raw=true#only-dark)
 
-Read [Open and Create files](open-and-create-files.md) section for more details.
+[:fontawesome-solid-book-open: Open and Create files](./open-and-create-files.md){.md-button}
 
 
 ## Buffer menu
 
 list, show and delete buffers.  A buffer is a container for file content and any other text and images (if images support is included in your Emacs install)
 
-![Spacemacs - Buffer menu](/images/spacemacs-buffer-menu.png)
+![Spacemacs - Buffer menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-buffer-light.png?raw=true#only-light)
+![Spacemacs - Buffer menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-buffer-dark.png?raw=true#only-dark)
 
-Read the [Managing Buffers](managing-buffers.md) section for more details.
+[:fontawesome-solid-book-open: Managing Buffers](./managing-buffers.md){.md-button}
 
 
 ## Project (Projectile) menu
 
 find files and search/replace text in the current project (e.g. local git project or arbitrary `.projectile` defined project) and many other project specific functions.
 
-![Spacemacs - Project menu](/images/spacemacs-project-menu.png)
+![Spacemacs - Project menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-project-light.png?raw=true#only-light)
+![Spacemacs - Project menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-project-dark.png?raw=true#only-dark)
 
-Read the [Projectile](projectile.md) section for more details.
-
+[:fontawesome-solid-book-open: Projectile](./projectile.md){.md-button}
 
 ## Layouts
 
-Layouts providing an easy way to group buffers together, for projects or any arbitrary grouping you decide.
+Layouts group buffers together for projects or any arbitrary grouping you decide.
 
-![Spacemacs - Project menu](/images/spacemacs-layouts-help.png)
+![Spacemacs - Layouts transient state menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-transient-state-layouts-light.png?raw=true#only-light)
+![Spacemacs - Layouts transient state menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-transient-state-layouts-dark.png?raw=true#only-dark)
 
-Read the [Layouts and Workspaces](layouts.md) section for more details.
+[:fontawesome-solid-book-open: Layouts and Workspaces](./layouts.md){.md-button}
 
 
 ## File browsers / managers
 
-[Treemacs](treemacs.md) and [Ranger](ranger.md) are file managers that help you browse through files and directories.
+[Treemacs](./treemacs.md) and [Ranger](./ranger.md) are file managers that help you browse through files and directories.
 
-![Treemacs](/images/spacemacs-treemacs-project-example.png)
+![Spacemacs - Treemacs](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-treemacs-clojure-project-light.png?raw=true#only-light)
+![Spacemacs - Treemacs](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-treemacs-clojure-project-dark.png?raw=true#only-dark)
 
-![Spacemacs - Ranger file manager](/images/spacemacs-ranger-example-book.png)
+[:fontawesome-solid-book-open: Treemacs](./treemacs.md){.md-button}
+
+![Spacemacs - Ranger file manager](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-file-management-ranger-light.png?raw=true#only-light)
+![Spacemacs - Ranger file manager](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-file-management-ranger-dark.png?raw=true#only-dark)
+
+[:fontawesome-solid-book-open: Ranger](./ranger.md){.md-button}
+

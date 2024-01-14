@@ -17,3 +17,4 @@
 - reference: move switch to develop to reference section (develop long been default branch)
 - basics: update space and comma menu screenshots
 - basics: emacs structure and golden ratio images, format tables
+- basics: file buffer project layout treemacs and ranger screenshots
