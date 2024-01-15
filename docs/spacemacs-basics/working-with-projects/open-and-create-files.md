@@ -1,63 +1,32 @@
-# Open and creating Files (and directories)
+# Open and create Files & directories
 
-{% youtube %}
-https://www.youtube.com/embed/oOzzkUjtgZc?autoplay=1loop=1
-{% endyoutube %}
+Open files or directories from anywhere on the file space.  New files and directories can also be created by supplying unique names.
+
+<p style="text-align:center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/oOzzkUjtgZc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p> 
 
 
 ## Opening a File
 
-Using the **File** menu you can open files from anywhere on your file space.  New files and directories can also be created.
+++spc++ ++"f"++ ++"f"++ runs the `spacemacs/helm-find-file` command which opens list of files and directories in the current directory.  Typing a patter narrows the items in the list to those that fuzzy match.
 
-![Spacemacs - File menu](/images/spacemacs-file-menu.png)
+++enter++ on a list item to open the file or navigate through to the directory contents.
 
-**Find File**, `SPC f f` will open a file from anywhere on the file system.  A **helm** pop-up window appears at the bottom listing directories and files from the current directory.
+Key bindings for curor movement on the find file path
 
-![Spacemacs - File menu - Find File helm popup](/images/spacemacs-file-menu-find-helm-popup.png)
-
-As you type the name you are looking for, the list of matching directory and file names narrows to just those that match.
-
-| Keybindings | Description                                      |
-|-------------|--------------------------------------------------|
-| `TAB`       | select highlighted directory / complete filename |
-| `C-h`       | navigate to parent directory                     |
-| `C-y`       | paste kill ring into file path                   |
-| `C-j`       | Move cursor down list of directories & filenames |
-| `C-k`       | Move cursor up list of directories & filenames   |
+| Key binding   | Description                                        |
+| ------------- | -------------------------------------------------- |
+| ++tab++       | select highlighted directory / complete filename   |
+| ++ctrl+"h"++  | navigate to parent directory                       |
+| ++ctrl+"y"++  | paste kill ring into file path                     |
+| ++ctrl+"j"++  | Move cursor down list of directories & filenames   |
+| ++ctrl+"k"++  | Move cursor up list of directories & filenames     |
 
 
-## Create a new file (and directory)
+## Create a new file
 
-A new file (and directories) can also be created using `SPC f f`. Simply enter the full path and name of the new file.  You are prompted to confirm that you want a new file created.
+++spc++ ++"f"++ ++"f"++ can also create a new file by typing full path and name of the new file.  A prompt confirms that a new want a new file created.
 
-When you save the file, `SPC f s` you are prompted to create any directories required.
+`SPC f s` to save the new file and a prompt asks if any intermediary directories should be created (if they do not already exist).
 
-
-### Auto-renaming Files for kebab-case namespace
-
-When you create a new file for a namespace that has multiple words, then convention is to use **kebab-case** to separate the words.
-
-However, due to a limitation with the Java Virtual Machine class loader, filenames should not include dashes, rather they should use underscore characters instead.
-
-So when you create a new file for a kebab-case namespace, Spacemacs will ask if you want to change the filename to use underscores for the dashes in the name.  Say yes to keep the Java class loader happy.
-
-> TODO: gif of creating a new file - use kebab-case filename to show auto-renaming.
-
-
-
-## Reference
-
-| Vim Normal | Emacs     | Command                    |
-|------------|-----------|----------------------------|
-| `SPC f f`  | `M-m f f` | `spacemacs/helm-find-file` |
-
-In find file, the following key bindings are available
-
-* `TAB` - complete or narrow the name of the file or open a matching directory
-* `C-h` - navigate to parent directory
-* `C-j` - move down list of files & directories
-* `C-k` - move up list of files & directories
-* `RET` - open a file (or dired if a directory)
-
-> ####Hint::Creating files and directories
-> When creating a new file in a new directory, you can simply type in the full path and file name and Spacemacs will prompt you to confirm the creation of the new directory and the file name.

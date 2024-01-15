@@ -21,3 +21,4 @@
 - basics: dird key bindings update
 - basics: layouts and workspaces key bindings and button links update
 - basics: managing buffers key bindings and screenshots
+- basics: managing windows video, key bindings and screenshots
