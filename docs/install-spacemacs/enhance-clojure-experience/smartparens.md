@@ -2,13 +2,13 @@
 
 Clojure and other lisp languages are defined as data structures, so expressions always start with parentheses, `( )`.  If there is an imbalanced pairing of open and closing parentheses, then the code fails to work and causes an error.
 
-[smartparens](https://github.com/Fuco1/smartparens/wiki#getting-started) in strict mode ensures balanced parentheses by adding a closing parentheses when you type an open parentheses.  This works for `()`, `[]`, `{}` and `""`.
+[smartparens](https://github.com/Fuco1/smartparens/wiki#getting-started){target=_blank} in strict mode ensures balanced parentheses by adding a closing parentheses when you type an open parentheses.  This works for `()`, `[]`, `{}` and `""`.
 
 ## Configure Smartparens
 
 Smartparens is part of the standard distribution of Spacemacs, so no install is necessary.
 
-I recommend enabling smartparens strict mode, so structure cannot be deleted without the content of that structure being deleted first.
+Enable smartparens global strict mode to maintain the structure of Clojure and Emacs Lisp code, ensuring that a closing paren cannot be deleted without the content of that structure being deleted first.
 
 Smart closing parentheses means you can jump over closing structure characters by typing `)`
 
