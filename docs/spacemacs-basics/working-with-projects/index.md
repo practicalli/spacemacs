@@ -24,6 +24,19 @@ list, show and delete buffers.  A buffer is a container for file content and any
 
 [:fontawesome-solid-book-open: Managing Buffers](./managing-buffers.md){.md-button}
 
+## Windows
+
+Organise the number and location of buffers displayed, splitting horizontally and vertically with multiple rows and columns.  
+
+Windows can be moved around and resized without resorting to using the mouse.
+
+++spc++ ++"w"++ is the windows menu.
+
+![Spacemacs - window menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-window-light.png?raw=true#only-light)
+![Spacemacs - window menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-window-dark.png?raw=true#only-dark)
+
+[:fontawesome-solid-book-open: Managing Windows](./managing-Windows.md){.md-button}
+
 
 ## Project (Projectile) menu
 
