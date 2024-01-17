@@ -2921,6 +2921,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#use-inspector-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Inspector buffer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#inspecting-simple-values" class="md-nav__link">
     <span class="md-ellipsis">
       Inspecting simple values
@@ -7717,6 +7726,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#use-inspector-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Inspector buffer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#inspecting-simple-values" class="md-nav__link">
     <span class="md-ellipsis">
       Inspecting simple values
@@ -7766,14 +7784,23 @@
 
 
 <h1 id="inspect-clojure-values">Inspect Clojure values<a class="headerlink" href="#inspect-clojure-values" title="Permanent link">λ︎</a></h1>
-<p><code>, d v</code> is the Cider Inspector menu used to efficiently page through large data sets and easily navigate through nested data structures.</p>
-<p>The Cider Inspector opens in a new buffer that shows the underlying type of the value and all of its details. of the current symbol under the cursor.  This provides a very readable way to understand the value and browse through larger data sets.</p>
-<p>The Cider Inspector is used in the <a href="https://youtu.be/NDrpclY54E0">REPL driven development with Spacemacs video</a>.</p>
+<p><code>, d v</code> is the Cider Inspector menu used to efficiently page through very large data sets and navigate through nested data structures.</p>
+<p><code>, d v l</code> shows the last evaluation in the inspector</p>
+<p><code>, d v f</code> evaluates the top level expression under the cursor and displays the result in the inspector</p>
+<p><code>, d v e</code> evaluates the previous expression before the cursor and displays the result in the inspector</p>
 <div class="admonition hint">
 <p class="admonition-title">Following evaluation results in Cider Inspector</p>
-<p>The Cider Inspector will show the results of any evaluation, from <code>, e</code> or <code>, d v</code> menus, whilst the buffer is visible.</p>
+<p>Keep the Cider Inspector buffer open to update with the result of the latest expression evaluation, from <code>, e</code> or <code>, d v</code> menus.</p>
 </div>
-<p><code>, d v f</code> to evaluate a top level expression and show the results in the Cider Inspector.</p>
+<details class="info">
+<summary>Inspector in action</summary>
+<p>Clojure REPL workflow video includes using the Cider Inspector, 20 minutes into the video</p>
+<p><p style="text-align:center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NDrpclY54E0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p></p>
+</details>
+<h2 id="use-inspector-buffer">Use Inspector buffer<a class="headerlink" href="#use-inspector-buffer" title="Permanent link">λ︎</a></h2>
+<p>Once Cider Inspector buffer is open:</p>
 <p><code>n</code>  and <code>p</code> page through the data if the number of elements in the data set is greater than the page size (default 32), (<code>cider-inspector-next-page</code>, <code>cider-inspector-prev-page</code>)</p>
 <p><code>TAB</code> and <code>S-TAB</code> to navigate forward and backward through the elements that can be further inspected, (<code>cider-inspector-next-inspectable-object</code>, <code>cider-inspector-previous-inspectable-object</code>).</p>
 <p><code>RET</code> to inspect the current value under the cursor (<code>cider-inspector-operate-on-point</code>)</p>
@@ -7781,25 +7808,33 @@
 <p><code>s</code> interactively sets the page size, updating how many elements are shown in one page of the cider inspector buffer, (<code>cider-inspector-set-page-size</code>).</p>
 <p><code>q</code> quits the cider inspector buffer</p>
 <h2 id="inspecting-simple-values">Inspecting simple values<a class="headerlink" href="#inspecting-simple-values" title="Permanent link">λ︎</a></h2>
+<p>Inspecting a dynamic var shows its value along with the datafy view</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-dynamic-var-light.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure Cider Inspector - OpenAPI docs example" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-dynamic-var-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-dynamic-var-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure Cider Inspector - OpenAPI docs example" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-dynamic-var-dark.png?raw=true#only-dark" /></a></p>
+<p>Inspect a system property shows </p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-system-property-light.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure Cider Inspector - OpenAPI docs example" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-system-property-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-system-property-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure Cider Inspector - OpenAPI docs example" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-system-property-dark.png?raw=true#only-dark" /></a></p>
 <p>Inspecting a number or character shows the underlying type, the value and properties of that type</p>
 <p><a class="glightbox" href="/images/spacemace-clojure-inspect-java-lang-long.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Inspect value - java.lang.Long" src="/images/spacemace-clojure-inspect-java-lang-long.png" /></a></p>
 <h2 id="inspecting-collections">Inspecting Collections<a class="headerlink" href="#inspecting-collections" title="Permanent link">λ︎</a></h2>
 <p>Inspect a collection shows the underlying type, contents of that collection and index (where applicable).  Only the elements are shown.  The characters of the overall collection itself are not show, only the underlying type of collection (vector, map, lazy sequence, etc.).</p>
-<p><a class="glightbox" href="/images/spacemace-clojure-inspect-java-lang-persistentvector.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Inspect persistent map" src="/images/spacemace-clojure-inspect-java-lang-persistentvector.png" /></a></p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-vector-light.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Inspect persistent map" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-vector-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-vector-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Inspect persistent map" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-vector-dark.png?raw=true#only-dark" /></a></p>
 <p>If there are collections within collections then those values can be navigated too.</p>
 <p><code>RET</code> on an nested element in a collection will inspect that element in the same detail (<code>cider-inspector-operate-on-point</code>).</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-inspect-persistent-map-nested.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Inspect persistent map with vector" src="/images/spacemacs-clojure-inspect-persistent-map-nested.png" /></a></p>
 <p><code>L</code> to back to parent of a nested element (<code>cider-inspector-pop</code>).</p>
 <h1 id="inspecting-mutable-values">Inspecting mutable values<a class="headerlink" href="#inspecting-mutable-values" title="Permanent link">λ︎</a></h1>
 <p>Mutable containers, <code>atom</code>, <code>ref</code>, can also be inspected.  The class of the container is shown, along with the class of the value it contains along with its elements.</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-inspect-atom-containing-persistent-vector.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Inspect atom containing a vector" src="/images/spacemacs-clojure-inspect-atom-containing-persistent-vector.png" /></a></p>
 <p>Inspecting an atom or ref gives the value at the current time.  The inspector does not update if the value of the atom or ref is updated. Use <code>r</code> in the inspector buffer to refresh or restart the inspector with <code>, d v</code> each time you want to check if the value has changed.</p>
 <h2 id="inspecting-var-meta-data">Inspecting Var meta data<a class="headerlink" href="#inspecting-var-meta-data" title="Permanent link">λ︎</a></h2>
-<p><code>cider-inspect-last-result</code> shows the result of the the last expression evaluated.  When this is a var from a <code>def</code> expression then meta information is shown as well as the class type and summary of the value.</p>
-<p>Meta data includes the file and position of the code, the name of the var and which namespace it is defined in.</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-cider-inspect-last-result.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure Cider Inspector - inspect last value - def" src="/images/spacemacs-clojure-cider-inspect-last-result.png" /></a></p>
+<p>Inspecting a var from a <code>def</code> expression shows meta information, the class type and summary of the value. Meta data can include the file and position of the code, the name of the var and which namespace it is defined in.</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-var-def-light.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure Cider Inspector - inspect last value - def" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-var-def-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-var-def-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure Cider Inspector - inspect last value - def" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-var-def-dark.png?raw=true#only-dark" /></a></p>
 <p>Inspecting a <code>defn</code> also shows the argument list as part of the meta data.</p>
 <p><a class="glightbox" href="/images/spacemacs-clojure-cider-inspector-inspect-last-value-defn.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure Cider Inspector - inspect last value - defn" src="/images/spacemacs-clojure-cider-inspector-inspect-last-value-defn.png" /></a></p>
+<p>Open API docs data structure example shows class, value, meta information and datafy data</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-var-openapi-docs-light.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure Cider Inspector - OpenAPI docs example" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-var-openapi-docs-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-var-openapi-docs-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure Cider Inspector - OpenAPI docs example" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-cider-inspector-var-openapi-docs-dark.png?raw=true#only-dark" /></a></p>
 
 
 
@@ -7820,7 +7855,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 25, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 17, 2024</span>
   </span>
 
     
