@@ -7683,24 +7683,24 @@
 
 <h1 id="evaluating-clojure">Evaluating Clojure<a class="headerlink" href="#evaluating-clojure" title="Permanent link">λ︎</a></h1>
 <p>Practicalli recommends evaluating Clojure expressions in the source code buffer, which displays the results next to the expression until you move the cursor.</p>
-<p><a class="glightbox" href="/images/spacemacs-cider-evaluate-source-code-buffer-defun.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure evaluation in source code buffer" src="/images/spacemacs-cider-evaluate-source-code-buffer-defun.png" /></a></p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-evaluate-source-code-inline-result-light.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure evaluation in source code buffer" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-evaluate-source-code-inline-result-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-evaluate-source-code-inline-result-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure evaluation in source code buffer" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-evaluate-source-code-inline-result-dark.png?raw=true#only-dark" /></a></p>
 <p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd>f</kbd></span> evaluates the top-level expression at cursor.</p>
 <p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>f</kbd></span> evaluates the top-level expression at cursor and pretty prints the result in a separate buffer. Useful for results that are collections and nested collections.  Use the <a href="inspect/">cider inspector</a> for large data sets.</p>
-<p><span class="keys"><kbd class="key-comma">,</kbd></span> ++semi-colon++ evaluates the top-level expression at cursor and add the result as a comment. Useful for a design journal and when exploring a code base.</p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> ++semi-colon++ evaluates the top-level expression at cursor and add the result as a comment. Useful for a design journal and when exploring a code base.</p>
 <p>Review the <a href="expressions/">evaluating expressions</a> page for more examples and a deeper explanation.</p>
 <h1 id="pretty-print-results">Pretty Print results<a class="headerlink" href="#pretty-print-results" title="Permanent link">λ︎</a></h1>
-<p>Pretty Print is a common term for displaying code and evaluation results in an expanded structure that is easier to read. Nested data structures and other larger results from evaluation may not be so easily read by a human.</p>
+<p>Pretty Print displays evaluation results in an expanded structure which is more human readable.</p>
 <p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>e</kbd></span> displays the evaluation result from evaluating the last s-expression in a separate popup buffer window</p>
 <p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>f</kbd></span> is the same, but for the top level expression</p>
 <p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd>p</kbd></span> ++semi-colon++ and <span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd>p</kbd></span> ++semi-colon++ pretty print results as a comment under the evaluated form.</p>
-<div class="admonition hint">
-<p class="admonition-title">Displaying large results</p>
+<details class="hint">
+<summary>Displaying large results</summary>
 <p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>f</kbd></span> or <span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>e</kbd></span> pretty prints the results into a new buffer.  This is excellent for evaluating expressions that return a large result, eg. a large map. Keep the Cider Inspector buffer open to see the results of further evaluation commands, until the inspector buffer is closed.</p>
 <p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>d</kbd></span> <span class="keys"><kbd>v</kbd></span> the <a href="inspect/"><code>cider-inspector</code></a> is a great way to navigate through a large data structure, especially if it is nested.</p>
-</div>
+</details>
 <h2 id="quick-reference">Quick reference<a class="headerlink" href="#quick-reference" title="Permanent link">λ︎</a></h2>
-<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> menu provides many different ways of evaluating parts of an expression, or a complete expression.  <span class="keys"><kbd class="key-meta">Meta</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> <span class="keys"><kbd>e</kbd></span> in holy mode.</p>
-<p><a class="glightbox" href="/images/spacemacs-clojure-evaluate-menu.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs - Clojure - Evaluate menu" src="/images/spacemacs-clojure-evaluate-menu.png" /></a></p>
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> menu provides many different ways of evaluating parts of an expression, or a complete expression.</p>
 <table>
 <thead>
 <tr>
@@ -7775,7 +7775,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 25, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 17, 2024</span>
   </span>
 
     
