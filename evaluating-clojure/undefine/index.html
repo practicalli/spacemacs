@@ -135,7 +135,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#un-define-expressions" class="md-skip">
+        <a href="#un-define-vars" class="md-skip">
           Skip to content
         </a>
       
@@ -2963,55 +2963,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hintcider-refresh-or-restart-for-multiple-changes" class="md-nav__link">
+  <a href="#tests" class="md-nav__link">
     <span class="md-ellipsis">
-      Hint::Cider refresh or restart for multiple changes
+      Tests
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#undefine-tests-before-refactor" class="md-nav__link">
+  <a href="#repl-buffer" class="md-nav__link">
     <span class="md-ellipsis">
-      Undefine tests before refactor
+      REPL buffer
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#undefine-in-the-repl-buffer" class="md-nav__link">
+  <a href="#clojure-core-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Undefine in the REPL buffer
+      Clojure core functions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#undefine-using-clojure" class="md-nav__link">
+  <a href="#clojure-toolsnamespace" class="md-nav__link">
     <span class="md-ellipsis">
-      Undefine using Clojure
+      Clojure tools.namespace
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clojuretoolsnamespace" class="md-nav__link">
-    <span class="md-ellipsis">
-      clojure.tools.namespace
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="clojure.tools.namespace">
+    <nav class="md-nav" aria-label="Clojure tools.namespace">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#use-refresh-in-a-rich-comment-block" class="md-nav__link">
+  <a href="#refresh-in-rich-comment" class="md-nav__link">
     <span class="md-ellipsis">
-      Use refresh in a rich comment block
+      refresh in rich comment
     </span>
   </a>
   
@@ -7759,55 +7750,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hintcider-refresh-or-restart-for-multiple-changes" class="md-nav__link">
+  <a href="#tests" class="md-nav__link">
     <span class="md-ellipsis">
-      Hint::Cider refresh or restart for multiple changes
+      Tests
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#undefine-tests-before-refactor" class="md-nav__link">
+  <a href="#repl-buffer" class="md-nav__link">
     <span class="md-ellipsis">
-      Undefine tests before refactor
+      REPL buffer
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#undefine-in-the-repl-buffer" class="md-nav__link">
+  <a href="#clojure-core-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Undefine in the REPL buffer
+      Clojure core functions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#undefine-using-clojure" class="md-nav__link">
+  <a href="#clojure-toolsnamespace" class="md-nav__link">
     <span class="md-ellipsis">
-      Undefine using Clojure
+      Clojure tools.namespace
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clojuretoolsnamespace" class="md-nav__link">
-    <span class="md-ellipsis">
-      clojure.tools.namespace
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="clojure.tools.namespace">
+    <nav class="md-nav" aria-label="Clojure tools.namespace">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#use-refresh-in-a-rich-comment-block" class="md-nav__link">
+  <a href="#refresh-in-rich-comment" class="md-nav__link">
     <span class="md-ellipsis">
-      Use refresh in a rich comment block
+      refresh in rich comment
     </span>
   </a>
   
@@ -7849,22 +7831,25 @@
   
 
 
-<h1 id="un-define-expressions">Un-define expressions<a class="headerlink" href="#un-define-expressions" title="Permanent link">λ︎</a></h1>
-<p><code>def</code>, <code>defn</code> names change during development, especially when code is refactored.  Un-define removes unwanted vars and keeps the REPL clean and avoids the need to restart the REPL.</p>
+<h1 id="un-define-vars">Un-define vars<a class="headerlink" href="#un-define-vars" title="Permanent link">λ︎</a></h1>
+<p>Keeping the REPL state clean, free from stale var definitions (symbols), minimises the need to restart the REPL process.</p>
+<p><code>def</code>, <code>defn</code> names can change during development as code is refactored.  Un-define removes unwanted vars and keeps the REPL state clean, avoiding the need to restart the REPL.</p>
 <p><code>, e u</code>  (<code>cider-undef</code>) un-defines the current function name or var, e.g. <code>defn</code>/<code>def</code> / <code>deftest</code>, removing it from the running REPL.</p>
 <p>When cursor is not on a function name or any var, the mini-buffer prompts for the name to undefine.</p>
-<h3 id="hintcider-refresh-or-restart-for-multiple-changes">Hint::Cider refresh or restart for multiple changes<a class="headerlink" href="#hintcider-refresh-or-restart-for-multiple-changes" title="Permanent link">λ︎</a></h3>
-<blockquote>
-<p><a href="https://practical.li/spacemacs/clojure-repl/refresh-restart-repl.html">Refresh or restart the REPL</a> when there are multiple changes made to a namespace or across multiple namespaces.</p>
-</blockquote>
-<h2 id="undefine-tests-before-refactor">Undefine tests before refactor<a class="headerlink" href="#undefine-tests-before-refactor" title="Permanent link">λ︎</a></h2>
-<p>If the name of an existing test is changed, the original test will still run when calling the cider test commands.  This can lead to confusing test results.</p>
-<p><code>, e u</code> on the <code>deftest</code> expression before changing its name will ensure that the existing test is removed from the REPL and no longer run.</p>
-<h2 id="undefine-in-the-repl-buffer">Undefine in the REPL buffer<a class="headerlink" href="#undefine-in-the-repl-buffer" title="Permanent link">λ︎</a></h2>
-<p><code>, undef</code> in the REPL buffer (Vim Insert / Emacs state) prompts for a symbol to undefine.</p>
+<details class="hint">
+<summary>Cider refresh or restart for multiple changes</summary>
+<p><a href="/spacemacs/clojure-repl/refresh-restart-repl/">Refresh or restart the REPL</a> when there are multiple changes made to a namespace or across multiple namespaces.</p>
+</details>
+<h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">λ︎</a></h2>
+<p>If the name of an existing test is changed, the original test will still run when calling the CIDER test runner commands (or other REPL based test runners).  </p>
+<p>Having stale test definitions leads to confusing test results.</p>
+<p><code>, e u</code> on a <code>deftest</code> expression before changing its name to ensure that the existing test is removed from the REPL state and no longer run.</p>
+<h2 id="repl-buffer">REPL buffer<a class="headerlink" href="#repl-buffer" title="Permanent link">λ︎</a></h2>
+<p><code>, undef</code> in the REPL buffer (Evil Insert / Emacs state) prompts for a symbol to undefine.</p>
 <p><code>TAB</code> when typing the symbol name will popup a list of matching symbols available in the REPL.  Select the name you wish to undef</p>
-<p><a href="/images/spacemacs-clojure-repl-undef-symbol-helm-narrowing.png"><img alt="Spacemacs Clojure REPL undef symbol helm narrowing" src="/images/spacemacs-clojure-repl-undef-symbol-helm-narrowing.png" /></a></p>
-<h2 id="undefine-using-clojure">Undefine using Clojure<a class="headerlink" href="#undefine-using-clojure" title="Permanent link">λ︎</a></h2>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-undef-repl-buffer-light.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure REPL undef symbol helm narrowing" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-undef-repl-buffer-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-undef-repl-buffer-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure REPL undef symbol helm narrowing" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-undef-repl-buffer-dark.png?raw=true#only-dark" /></a></p>
+<h2 id="clojure-core-functions">Clojure core functions<a class="headerlink" href="#clojure-core-functions" title="Permanent link">λ︎</a></h2>
 <p><code>ns-unmap</code> will remove a symbol from the running REPL.  Use <code>*ns*</code> dynamic variable to represent the current namespace.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">(</span><span class="nb">ns-unmap </span><span class="nv">*ns*</span><span class="w"> </span><span class="ss">&#39;name-before-refactor</span><span class="p">)</span>
 </code></pre></div>
@@ -7882,12 +7867,13 @@
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">(</span><span class="nf">ns-unalias</span><span class="w"> </span><span class="nv">*ns*</span><span class="w"> </span><span class="ss">&#39;service</span><span class="p">)</span>
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1">;; =&gt; nil</span>
 </code></pre></div>
-<h2 id="clojuretoolsnamespace">clojure.tools.namespace<a class="headerlink" href="#clojuretoolsnamespace" title="Permanent link">λ︎</a></h2>
+<h2 id="clojure-toolsnamespace">Clojure tools.namespace<a class="headerlink" href="#clojure-toolsnamespace" title="Permanent link">λ︎</a></h2>
+<p><a href="https://clojure.github.io/tools.namespace/#clojure.tools.namespace.repl">Clojure tools.namespace.repl</a> provides utilities to manage namespaces.</p>
 <p><code>refresh</code> function scans all directories on the classpath for source files, read their ns forms, builds a graph of their dependencies and load them in dependency order. <code>set-refresh-dirs</code> defines directories that should be scanned.</p>
 <p>Add the library as a dependency to the project file</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">org.clojure/tools.namespace</span><span class="w"> </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">&quot;1.2.0&quot;</span><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">org.clojure/tools.namespace</span><span class="w"> </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">&quot;1.4.5&quot;</span><span class="p">}</span>
 </code></pre></div>
-<p>Require the namespace and refer the function (refresh is the only public function in the namespace)</p>
+<p>Require the namespace and refer the function </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">(</span><span class="nf">require</span><span class="w"> </span><span class="o">&#39;</span><span class="p">[</span><span class="nv">clojure.tools.namespace.repl</span><span class="w"> </span><span class="ss">:refer</span><span class="w"> </span><span class="p">[</span><span class="nv">refresh</span><span class="p">]])</span>
 </code></pre></div>
 <p>Refresh the current namespace</p>
@@ -7897,12 +7883,18 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="ss">:reloading</span><span class="w"> </span><span class="p">(</span><span class="nf">com.example.util</span><span class="w"> </span><span class="nv">com.example.app</span><span class="w"> </span><span class="nv">com.example.app-test</span><span class="p">)</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="ss">:ok</span>
 </code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">All Code must be loadable</p>
-<p>If there are errors in one or more namespaces that prevent them from successfully loading, then reresh will error, showing which namespaces had issues to resolve.</p>
+<div class="admonition hint">
+<p class="admonition-title">Set directories to include</p>
+<p>Use <code>set-refresh-dirs</code> to only reload code from specific paths, e.g. <code>src</code>, <code>resources</code>, <code>test</code>.</p>
+<p><code>refresh</code> will not act on namespaces that are defined on other paths, e.g. <code>dev</code>, avoiding reloading code for REPL workflows (launching portal, log publishers, etc.)</p>
 </div>
-<h3 id="use-refresh-in-a-rich-comment-block">Use refresh in a rich comment block<a class="headerlink" href="#use-refresh-in-a-rich-comment-block" title="Permanent link">λ︎</a></h3>
-<p>Use a rich comment block to ensure the refresh function is only called when directly evaluated.</p>
+<details class="warning">
+<summary>All Code must be reloadable</summary>
+<p>If there are errors in one or more namespaces that prevent them from successfully loading, then reresh will error, showing which namespaces had issues to resolve.</p>
+<p>Either refactor the troublesome code or move the code to a path that is not defined by <code>set-refresh-dirs</code>.</p>
+</details>
+<h3 id="refresh-in-rich-comment">refresh in rich comment<a class="headerlink" href="#refresh-in-rich-comment" title="Permanent link">λ︎</a></h3>
+<p>Use a rich comment to ensure the refresh function is only called when directly evaluated.</p>
 <p>Code inside the rich comment block will not be evaluated when evaluating the current buffer or loading the namespace.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">(</span><span class="nf">comment</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
@@ -7911,6 +7903,12 @@
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="p">(</span><span class="nf">refresh</span><span class="p">)</span>
 <a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">)</span>
 </code></pre></div>
+<div class="admonition hint">
+<p class="admonition-title">Custom user namespace</p>
+<p>Include clojure.tools.namespace.repl in a custom user namespace and call from the REPL prompt or by switching to the <code>user.clj</code> file in the editor and calling <code>refresh</code></p>
+<p><a class="md-button" href="https://practical.li/clojure/clojure-cli/repl-startup/#reload-namespaces" target="_blank">Custom Starup - Reload Namespace: Practicalli Clojure</a> </p>
+<p><a class="md-button" href="https://practical.li/clojure/clojure-cli/projects/templates/practicalli/#custom-user-namespace" target="_blank">Custom user namespace - Practicalli Project Templates</a> </p>
+</div>
 
 
 
@@ -7931,7 +7929,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 25, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 18, 2024</span>
   </span>
 
     
