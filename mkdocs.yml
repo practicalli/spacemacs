@@ -210,7 +210,7 @@ nav:
           - clojure-repl/jack-in-to-repl.md
           - clojure-repl/portal-data-visualization.md
           - clojure-repl/clojurescript-repl.md
-          - clojure-repl/refresh-restart-repl.md
+          - Refresh REPL State: clojure-repl/refresh-repl-state.md
           - clojure-repl/component-lifecycle.md
           - clojure-repl/clear-repl-buffer.md
       - Project Config:

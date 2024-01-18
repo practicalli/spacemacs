@@ -9,7 +9,7 @@ Keeping the REPL state clean, free from stale var definitions (symbols), minimis
 When cursor is not on a function name or any var, the mini-buffer prompts for the name to undefine.
 
 ??? HINT "Cider refresh or restart for multiple changes"
-    [Refresh or restart the REPL](/spacemacs/clojure-repl/refresh-restart-repl/) when there are multiple changes made to a namespace or across multiple namespaces.
+    [Refresh or restart the REPL](/spacemacs/clojure-repl/refresh-repl-state/) when there are multiple changes made to a namespace or across multiple namespaces.
 
 
 ## Tests

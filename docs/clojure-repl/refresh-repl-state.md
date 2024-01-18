@@ -1,21 +1,31 @@
-# Refresh or Restart the REPL
-A REPL can be kept open for days or weeks for the same project, especially the vars in the REPL are kept clean by [un-defining a var, `, e u`, before changing its name]([undefine](/evaluating-clojure/undefine.md)  (e.g. `def`, `defn`, `deftest`, etc.).  Code that changes within a var can be refreshed by [evaluating the var expression]([undefine](/evaluating-clojure/) again.
+# Refresh REPL State
 
-Projects may use [Component lifecycle libraries](component-lifecycle.md) such as mount, integrant or component, to provide ways to start and stop the major components of an application without restarting the REPL.
+A REPL can be kept open indefinately so long as the state is kept clean and free from stale definitions.   
 
-Occasionally you want to start from scratch and remove all of the evaluated code from the REPL.  This is usually a good idea where major refactoring has taken place or before deployment to test and production environments.
+[Clojure tools.namespace.repl library](https://cljdoc.org/d/org.clojure/tools.namespace/1.4.4/api/clojure.tools.namespace.repl) provides functions to refresh the REPL state without the need to restart the REPL.
 
-## Restarting the REPL
-`, m q r` calls the `sesman-restart` which kills the current REPL and starts a new REPL, establishing a connection to that REPL from Cider. It is the same as doing `, s q q` (`cider-quit`) followed by `, '` (`cider-jack-in-*`).
+[Component lifecycle libraries](./component-lifecycle.md), e.g. mount, integrant, system or component, define the components of an application and can start & stop them without restarting the REPL.
 
-> #### Hint::Restart the REPL when adding library dependencies
-> Use `, m q r` to restart the REPL to make newly added libraries available to the project.
+Restarting (stop/start) the REPL process will wipe the REPL state clean and start with an empty state.
 
-`, s q r` (`cider-restart`) only restarts the Cider connection to the running REPL process and does not affect the REPL itself.  There seems little value in this command.
+??? INFO "Avoiding stale REPL state"
+    Use [`, e u`  (`cider-undef`)](/spacemacs/evaluating-clojure/undefine/) before changing the name of a var (e.g. `def`, `defn`, `deftest`, etc.). 
+
+    Code that changes within a var can be refreshed by [evaluating the var expression]([undefine](/evaluating-clojure/) again.
 
 
-## Refreshing the contents of the REPL
-You can remove all the stale vars (def and defn expressions that are no longer in the source code) from the REPL without having to restart
+## Restart the REPL
+
+Restart the REPL process to start again with a clean REPL state.  Use this approach afer a major refactor of code has taken place.
+
+`, m q r` (`sesman-restart`) to shutdown the current REPL process and start a new REPL repl process with a clean state.  The editor is automatically connected to the new REPL process.  A restart is the same as `cider-quit` followed by `cider-jack-in-*`.
+
+> `cider-restart` only restarts the Cider connection to the running REPL process and does not affect the REPL process itself.
+
+
+## Refresh REPL State
+
+Remove all stale vars (def and defn expressions no longer in the source code) from the REPL without having to restart
 
 `, e n` calls `cider-ns-refresh` which reloads any modified and unloaded namespaces on the classpath.
 
@@ -25,10 +35,12 @@ You can remove all the stale vars (def and defn expressions that are no longer i
 
 `SPC u SPC u , e n` clears the state of the namespace tracker before reloading, if for example circular dependencies are preventing successful reload.
 
-> #### Hint::Hooking into component lifecycle libraries
-> `cider-ns-refresh` can [call component lifecycle functions](/clojure-repl/component-lifecycle.md) to stop and start services as part of the refresh process.
+??? HINT "CIDER refresh hook for component lifecycle libraries"
+    `cider-ns-refresh` can [call component lifecycle functions](/spacemacs/clojure-repl/component-lifecycle/) to stop and start services as part of the refresh process.
 
-## Force reload namespace approach
+
+## Force reload namespace
+
 If there are issues using `cider-ns-refresh` then use a unconditional reloading of the namespace.
 
 `, e N` calls `cider-ns-reload` which reloads the namespace of the current source code buffer.  This is the same as evaluating `(require 'namespace.name :reload)` in the REPL.
@@ -36,7 +48,8 @@ If there are issues using `cider-ns-refresh` then use a unconditional reloading 
 `SPC u , e N` prompts for a namespace name to reload a different namespace than that of the current buffer.
 
 
-## Issues with Clojure reload
+### Issues with Clojure reload
+
 When modifying two namespaces that depend on each other, the namespaces must be reload in the correct order to avoid compilation errors.
 
 Removing definitions from a source file does not remove those stale definitions from a running REPL.  Code that uses those stale definitions will continue to work, but will break the next time you restart the REPL.
