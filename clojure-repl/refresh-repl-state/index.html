@@ -20,7 +20,7 @@
         <meta name="author" content="Practicalli">
       
       
-        <link rel="canonical" href="https://practical.li/spacemacs/clojure-repl/refresh-restart-repl/">
+        <link rel="canonical" href="https://practical.li/spacemacs/clojure-repl/refresh-repl-state/">
       
       
         <link rel="prev" href="../clojurescript-repl/">
@@ -34,7 +34,7 @@
     
     
       
-        <title>Refresh or Restart the REPL - Practicalli Spacemacs</title>
+        <title>Refresh REPL State - Practicalli Spacemacs</title>
       
     
     
@@ -81,11 +81,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Refresh or Restart the REPL - Practicalli Spacemacs" >
+        <meta  property="og:title"  content="Refresh REPL State - Practicalli Spacemacs" >
       
         <meta  property="og:description"  content="Practical guide to Clojure development with Spacemacs" >
       
-        <meta  property="og:image"  content="https://practical.li/spacemacs/assets/images/social/clojure-repl/refresh-restart-repl.png" >
+        <meta  property="og:image"  content="https://practical.li/spacemacs/assets/images/social/clojure-repl/refresh-repl-state.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -93,15 +93,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://practical.li/spacemacs/clojure-repl/refresh-restart-repl/" >
+        <meta  property="og:url"  content="https://practical.li/spacemacs/clojure-repl/refresh-repl-state/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Refresh or Restart the REPL - Practicalli Spacemacs" >
+        <meta  name="twitter:title"  content="Refresh REPL State - Practicalli Spacemacs" >
       
         <meta  name="twitter:description"  content="Practical guide to Clojure development with Spacemacs" >
       
-        <meta  name="twitter:image"  content="https://practical.li/spacemacs/assets/images/social/clojure-repl/refresh-restart-repl.png" >
+        <meta  name="twitter:image"  content="https://practical.li/spacemacs/assets/images/social/clojure-repl/refresh-repl-state.png" >
       
     
     
@@ -135,7 +135,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#refresh-or-restart-the-repl" class="md-skip">
+        <a href="#refresh-repl-state" class="md-skip">
           Skip to content
         </a>
       
@@ -205,7 +205,7 @@
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
-             Refresh or Restart the REPL 
+             Refresh REPL State 
           </span>
         </div>
       </div>
@@ -2492,7 +2492,7 @@
           
   
   <span class="md-ellipsis">
-    Refresh or Restart the REPL
+    Refresh REPL State
   </span>
   
 
@@ -2503,7 +2503,7 @@
         
   
   <span class="md-ellipsis">
-    Refresh or Restart the REPL
+    Refresh REPL State
   </span>
   
 
@@ -2525,68 +2525,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#restarting-the-repl" class="md-nav__link">
+  <a href="#restart-the-repl" class="md-nav__link">
     <span class="md-ellipsis">
-      Restarting the REPL
+      Restart the REPL
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Restarting the REPL">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refresh-repl-state_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refresh REPL State
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force-reload-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Force reload namespace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Force reload namespace">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hintrestart-the-repl-when-adding-library-dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Restart the REPL when adding library dependencies
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#refreshing-the-contents-of-the-repl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Refreshing the contents of the REPL
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Refreshing the contents of the REPL">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hinthooking-into-component-lifecycle-libraries" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Hooking into component lifecycle libraries
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#force-reload-namespace-approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      Force reload namespace approach
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#issues-with-clojure-reload" class="md-nav__link">
     <span class="md-ellipsis">
       Issues with Clojure reload
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7774,68 +7750,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#restarting-the-repl" class="md-nav__link">
+  <a href="#restart-the-repl" class="md-nav__link">
     <span class="md-ellipsis">
-      Restarting the REPL
+      Restart the REPL
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Restarting the REPL">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refresh-repl-state_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refresh REPL State
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force-reload-namespace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Force reload namespace
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Force reload namespace">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hintrestart-the-repl-when-adding-library-dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Restart the REPL when adding library dependencies
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#refreshing-the-contents-of-the-repl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Refreshing the contents of the REPL
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Refreshing the contents of the REPL">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hinthooking-into-component-lifecycle-libraries" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Hooking into component lifecycle libraries
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#force-reload-namespace-approach" class="md-nav__link">
-    <span class="md-ellipsis">
-      Force reload namespace approach
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#issues-with-clojure-reload" class="md-nav__link">
     <span class="md-ellipsis">
       Issues with Clojure reload
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -7863,7 +7815,7 @@
                   
 
   
-    <a href="https://github.com/practicalli/spacemacs/edit/main/docs/clojure-repl/refresh-restart-repl.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/spacemacs/edit/main/docs/clojure-repl/refresh-repl-state.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -7872,39 +7824,44 @@
     
       
     
-    <a href="https://github.com/practicalli/spacemacs/raw/main/docs/clojure-repl/refresh-restart-repl.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/practicalli/spacemacs/raw/main/docs/clojure-repl/refresh-repl-state.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-<h1 id="refresh-or-restart-the-repl">Refresh or Restart the REPL<a class="headerlink" href="#refresh-or-restart-the-repl" title="Permanent link">λ︎</a></h1>
-<p>A REPL can be kept open for days or weeks for the same project, especially the vars in the REPL are kept clean by [un-defining a var, <code>, e u</code>, before changing its name](<a href="/evaluating-clojure/undefine.md">undefine</a>  (e.g. <code>def</code>, <code>defn</code>, <code>deftest</code>, etc.).  Code that changes within a var can be refreshed by [evaluating the var expression](<a href="/evaluating-clojure/">undefine</a> again.</p>
-<p>Projects may use <a href="../component-lifecycle/">Component lifecycle libraries</a> such as mount, integrant or component, to provide ways to start and stop the major components of an application without restarting the REPL.</p>
-<p>Occasionally you want to start from scratch and remove all of the evaluated code from the REPL.  This is usually a good idea where major refactoring has taken place or before deployment to test and production environments.</p>
-<h2 id="restarting-the-repl">Restarting the REPL<a class="headerlink" href="#restarting-the-repl" title="Permanent link">λ︎</a></h2>
-<p><code>, m q r</code> calls the <code>sesman-restart</code> which kills the current REPL and starts a new REPL, establishing a connection to that REPL from Cider. It is the same as doing <code>, s q q</code> (<code>cider-quit</code>) followed by <code>, '</code> (<code>cider-jack-in-*</code>).</p>
+<h1 id="refresh-repl-state">Refresh REPL State<a class="headerlink" href="#refresh-repl-state" title="Permanent link">λ︎</a></h1>
+<p>A REPL can be kept open indefinately so long as the state is kept clean and free from stale definitions.   </p>
+<p><a href="https://cljdoc.org/d/org.clojure/tools.namespace/1.4.4/api/clojure.tools.namespace.repl">Clojure tools.namespace.repl library</a> provides functions to refresh the REPL state without the need to restart the REPL.</p>
+<p><a href="../component-lifecycle/">Component lifecycle libraries</a>, e.g. mount, integrant, system or component, define the components of an application and can start &amp; stop them without restarting the REPL.</p>
+<p>Restarting (stop/start) the REPL process will wipe the REPL state clean and start with an empty state.</p>
+<details class="info">
+<summary>Avoiding stale REPL state</summary>
+<p>Use <a href="/spacemacs/evaluating-clojure/undefine/"><code>, e u</code>  (<code>cider-undef</code>)</a> before changing the name of a var (e.g. <code>def</code>, <code>defn</code>, <code>deftest</code>, etc.). </p>
+<p>Code that changes within a var can be refreshed by [evaluating the var expression](<a href="/evaluating-clojure/">undefine</a> again.</p>
+</details>
+<h2 id="restart-the-repl">Restart the REPL<a class="headerlink" href="#restart-the-repl" title="Permanent link">λ︎</a></h2>
+<p>Restart the REPL process to start again with a clean REPL state.  Use this approach afer a major refactor of code has taken place.</p>
+<p><code>, m q r</code> (<code>sesman-restart</code>) to shutdown the current REPL process and start a new REPL repl process with a clean state.  The editor is automatically connected to the new REPL process.  A restart is the same as <code>cider-quit</code> followed by <code>cider-jack-in-*</code>.</p>
 <blockquote>
-<h4 id="hintrestart-the-repl-when-adding-library-dependencies">Hint::Restart the REPL when adding library dependencies<a class="headerlink" href="#hintrestart-the-repl-when-adding-library-dependencies" title="Permanent link">λ︎</a></h4>
-<p>Use <code>, m q r</code> to restart the REPL to make newly added libraries available to the project.</p>
+<p><code>cider-restart</code> only restarts the Cider connection to the running REPL process and does not affect the REPL process itself.</p>
 </blockquote>
-<p><code>, s q r</code> (<code>cider-restart</code>) only restarts the Cider connection to the running REPL process and does not affect the REPL itself.  There seems little value in this command.</p>
-<h2 id="refreshing-the-contents-of-the-repl">Refreshing the contents of the REPL<a class="headerlink" href="#refreshing-the-contents-of-the-repl" title="Permanent link">λ︎</a></h2>
-<p>You can remove all the stale vars (def and defn expressions that are no longer in the source code) from the REPL without having to restart</p>
+<h2 id="refresh-repl-state_1">Refresh REPL State<a class="headerlink" href="#refresh-repl-state_1" title="Permanent link">λ︎</a></h2>
+<p>Remove all stale vars (def and defn expressions no longer in the source code) from the REPL without having to restart</p>
 <p><code>, e n</code> calls <code>cider-ns-refresh</code> which reloads any modified and unloaded namespaces on the classpath.</p>
 <p><code>cider-ns-refresh</code> uses <a href="https://github.com/clojure/tools.namespace"><code>clojure.tools.namespace.repl</code></a> which will load and reload code based on the namespace dependency graph. Existing definitions that have not changed will be kept, so any state managed in this way will be kept.</p>
 <p><code>SPC u , e n</code> will unconditionally refresh all namespaces, refreshing all the code in the project.</p>
 <p><code>SPC u SPC u , e n</code> clears the state of the namespace tracker before reloading, if for example circular dependencies are preventing successful reload.</p>
-<blockquote>
-<h4 id="hinthooking-into-component-lifecycle-libraries">Hint::Hooking into component lifecycle libraries<a class="headerlink" href="#hinthooking-into-component-lifecycle-libraries" title="Permanent link">λ︎</a></h4>
-<p><code>cider-ns-refresh</code> can <a href="/clojure-repl/component-lifecycle.md">call component lifecycle functions</a> to stop and start services as part of the refresh process.</p>
-</blockquote>
-<h2 id="force-reload-namespace-approach">Force reload namespace approach<a class="headerlink" href="#force-reload-namespace-approach" title="Permanent link">λ︎</a></h2>
+<details class="hint">
+<summary>CIDER refresh hook for component lifecycle libraries</summary>
+<p><code>cider-ns-refresh</code> can <a href="/spacemacs/clojure-repl/component-lifecycle/">call component lifecycle functions</a> to stop and start services as part of the refresh process.</p>
+</details>
+<h2 id="force-reload-namespace">Force reload namespace<a class="headerlink" href="#force-reload-namespace" title="Permanent link">λ︎</a></h2>
 <p>If there are issues using <code>cider-ns-refresh</code> then use a unconditional reloading of the namespace.</p>
 <p><code>, e N</code> calls <code>cider-ns-reload</code> which reloads the namespace of the current source code buffer.  This is the same as evaluating <code>(require 'namespace.name :reload)</code> in the REPL.</p>
 <p><code>SPC u , e N</code> prompts for a namespace name to reload a different namespace than that of the current buffer.</p>
-<h2 id="issues-with-clojure-reload">Issues with Clojure reload<a class="headerlink" href="#issues-with-clojure-reload" title="Permanent link">λ︎</a></h2>
+<h3 id="issues-with-clojure-reload">Issues with Clojure reload<a class="headerlink" href="#issues-with-clojure-reload" title="Permanent link">λ︎</a></h3>
 <p>When modifying two namespaces that depend on each other, the namespaces must be reload in the correct order to avoid compilation errors.</p>
 <p>Removing definitions from a source file does not remove those stale definitions from a running REPL.  Code that uses those stale definitions will continue to work, but will break the next time you restart the REPL.</p>
 <p>A reloaded namespace containing <code>defmulti</code> must reload all of the associated <code>defmethod</code> expressions.</p>
@@ -7937,7 +7894,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 2, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 18, 2024</span>
   </span>
 
     

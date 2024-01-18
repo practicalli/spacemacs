@@ -86,7 +86,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://practical.li/spacemacs/clojure-repl/refresh-restart-repl/</loc>
+         <loc>https://practical.li/spacemacs/clojure-repl/refresh-repl-state/</loc>
          <lastmod>2024-01-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
