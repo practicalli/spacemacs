@@ -1,32 +1,37 @@
-# Un-define expressions
+# Un-define vars
 
-`def`, `defn` names change during development, especially when code is refactored.  Un-define removes unwanted vars and keeps the REPL clean and avoids the need to restart the REPL.
+Keeping the REPL state clean, free from stale var definitions (symbols), minimises the need to restart the REPL process.
+
+`def`, `defn` names can change during development as code is refactored.  Un-define removes unwanted vars and keeps the REPL state clean, avoiding the need to restart the REPL.
 
 `, e u`  (`cider-undef`) un-defines the current function name or var, e.g. `defn`/`def` / `deftest`, removing it from the running REPL.
 
 When cursor is not on a function name or any var, the mini-buffer prompts for the name to undefine.
 
-### Hint::Cider refresh or restart for multiple changes
-> [Refresh or restart the REPL](https://practical.li/spacemacs/clojure-repl/refresh-restart-repl.html) when there are multiple changes made to a namespace or across multiple namespaces.
+??? HINT "Cider refresh or restart for multiple changes"
+    [Refresh or restart the REPL](/spacemacs/clojure-repl/refresh-restart-repl/) when there are multiple changes made to a namespace or across multiple namespaces.
 
 
-## Undefine tests before refactor
+## Tests
 
-If the name of an existing test is changed, the original test will still run when calling the cider test commands.  This can lead to confusing test results.
+If the name of an existing test is changed, the original test will still run when calling the CIDER test runner commands (or other REPL based test runners).  
 
-`, e u` on the `deftest` expression before changing its name will ensure that the existing test is removed from the REPL and no longer run.
+Having stale test definitions leads to confusing test results.
+
+`, e u` on a `deftest` expression before changing its name to ensure that the existing test is removed from the REPL state and no longer run.
 
 
-## Undefine in the REPL buffer
+## REPL buffer
 
-`, undef` in the REPL buffer (Vim Insert / Emacs state) prompts for a symbol to undefine.
+`, undef` in the REPL buffer (Evil Insert / Emacs state) prompts for a symbol to undefine.
 
 `TAB` when typing the symbol name will popup a list of matching symbols available in the REPL.  Select the name you wish to undef
 
-[![Spacemacs Clojure REPL undef symbol helm narrowing](/images/spacemacs-clojure-repl-undef-symbol-helm-narrowing.png)](/images/spacemacs-clojure-repl-undef-symbol-helm-narrowing.png)
+![Spacemacs Clojure REPL undef symbol helm narrowing](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-undef-repl-buffer-light.png?raw=true#only-light)
+![Spacemacs Clojure REPL undef symbol helm narrowing](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-undef-repl-buffer-dark.png?raw=true#only-dark)
 
 
-## Undefine using Clojure
+## Clojure core functions
 
 `ns-unmap` will remove a symbol from the running REPL.  Use `*ns*` dynamic variable to represent the current namespace.
 
@@ -54,17 +59,19 @@ Or specify the namespace if the symbol is not in the current namespace
 ;; => nil
 ```
 
-## clojure.tools.namespace
+## Clojure tools.namespace
+
+[Clojure tools.namespace.repl](https://clojure.github.io/tools.namespace/#clojure.tools.namespace.repl) provides utilities to manage namespaces.
 
 `refresh` function scans all directories on the classpath for source files, read their ns forms, builds a graph of their dependencies and load them in dependency order. `set-refresh-dirs` defines directories that should be scanned.
 
 Add the library as a dependency to the project file
 
 ```clojure
-org.clojure/tools.namespace {:mvn/version "1.2.0"}
+org.clojure/tools.namespace {:mvn/version "1.4.5"}
 ```
 
-Require the namespace and refer the function (refresh is the only public function in the namespace)
+Require the namespace and refer the function 
 
 ```clojure
 (require '[clojure.tools.namespace.repl :refer [refresh]])
@@ -83,13 +90,20 @@ The refresh function will load all namespaces found and list them as the output.
 :ok
 ```
 
-!!! WARNING "All Code must be loadable"
+!!! HINT "Set directories to include"
+    Use `set-refresh-dirs` to only reload code from specific paths, e.g. `src`, `resources`, `test`.
+
+    `refresh` will not act on namespaces that are defined on other paths, e.g. `dev`, avoiding reloading code for REPL workflows (launching portal, log publishers, etc.)
+
+??? WARNING "All Code must be reloadable"
     If there are errors in one or more namespaces that prevent them from successfully loading, then reresh will error, showing which namespaces had issues to resolve.
 
+    Either refactor the troublesome code or move the code to a path that is not defined by `set-refresh-dirs`.
 
-### Use refresh in a rich comment block
 
-Use a rich comment block to ensure the refresh function is only called when directly evaluated.
+### refresh in rich comment
+
+Use a rich comment to ensure the refresh function is only called when directly evaluated.
 
 Code inside the rich comment block will not be evaluated when evaluating the current buffer or loading the namespace.
 
@@ -101,3 +115,11 @@ Code inside the rich comment block will not be evaluated when evaluating the cur
   (refresh)
 )
 ```
+
+!!! HINT "Custom user namespace"
+    Include clojure.tools.namespace.repl in a custom user namespace and call from the REPL prompt or by switching to the `user.clj` file in the editor and calling `refresh`
+
+    [Custom Starup - Reload Namespace: Practicalli Clojure](https://practical.li/clojure/clojure-cli/repl-startup/#reload-namespaces){target=_blank .md-button} 
+
+    [Custom user namespace - Practicalli Project Templates](https://practical.li/clojure/clojure-cli/projects/templates/practicalli/#custom-user-namespace){target=_blank .md-button} 
+

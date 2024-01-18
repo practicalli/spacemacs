@@ -23,3 +23,4 @@
 - basics: managing buffers key bindings and screenshots
 - basics: managing windows video, key bindings and screenshots
 - clojure: evaluating screenshots
+- clojure: undef vars (symbols) update wording and screenshots
