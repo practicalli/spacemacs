@@ -13,14 +13,13 @@ Jack-in ensures the REPL process is started with the libraries and middleware re
 
 ++spc++ ++"u"++ ++comma++ ++"m"++ ++"s"++ opens the jack-in command in the minibuffer which can be edited to customise how the Clojure REPL process starts, e.g. adding Clojure CLI aliases to include libraries and tools for development.
 
-![Spacemacs Clojure - Edit cider-jack-in command to add Clojure CLI aliases](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit.png)
+Clojure CLI aliases are added between the `-M` execution flag and the `:cider/nrepl` alias name.
 
-Clojure CLI aliases should be added between the `-M` execution flag and the `:cider/nrepl` alias.
+![Spacemacs Clojure - Edit cider-jack-in command to add Clojure CLI aliases](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-repl-jack-in-command-aliases-light.png?raw=true#only-light)
+![Spacemacs Clojure - Edit cider-jack-in command to add Clojure CLI aliases](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-repl-jack-in-command-aliases-dark.png?raw=true#only-dark)
 
-![Spacemacs Clojure - Edit cider-jack-in command, adding Clojure aliases](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit-custom-aliases.png)
 
-
-### Deconstructing the command line
+### Deconstruct jack-in command
 
 `cider-jack-in` commands include the dependencies to start a REPL process which the Emacs Cider process can connect to, using nREPL.
 
@@ -31,7 +30,7 @@ Clojure CLI aliases should be added between the `-M` execution flag and the `:ci
 
 ### Adding aliases
 
-Aliases can be used from the project `deps.edn` file or the user `deps.edn` file, e.g [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn)
+Aliases can be used from the project or the user `deps.edn` file, e.g [:fontawesome-solid-book-open: Practicalli CLI Config](https://practical.li/clojure/clojure-cli/practicalli-config/)
 
 `:extra-paths` and `:extra-deps` configuration in aliases is used by the Cider jack-in command line.
 
@@ -41,7 +40,7 @@ Aliases can be used from the project `deps.edn` file or the user `deps.edn` file
     Placing aliases after `:cider/nrepl` will prevent cider-jack-in working correctly (or at all), unless the last alias in the chain also includes the same libraries and configuration as the `:cider/nrepl` alias
 
 
-## .dir-locals.el to configure REPL startup
+## Configure REPL startup
 
 Cider variables can be used to customize the REPL startup via a `.dir-locals.el` file in the root of the Clojure project.
 
