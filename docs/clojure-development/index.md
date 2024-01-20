@@ -1,70 +1,48 @@
 # Clojure Development Overview
 
-A [REPL workflow](/spacemacs/introduction/repl-workflow.md) is supported and highly encouraged for effective Clojure development.
+A [:fontawesome-solid-book-open: REPL workflow](/spacemacs/introduction/repl-workflow.md) is highly encouraged for effective Clojure development.
 
-=== "CIDER jack-in"
-    ++comma++ ++single-quote++ (`sesman-start`) and select `cider-jack-in-clj` to start a REPL for the current Clojure project (also works without a project).
+Start a REPL process for a Clojure project and connect an editor to the REPL, allowing code to be evaluated and results returned instantly. 
 
-=== "Command Line REPL"
-
-    Run a rich terminal UI using the `:repl/rebel` alias from [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn){target=_blank}
-
-    ```shell
-    clojure -M:repl/rebel
-    ```
-
-!!! TIP "Simplest Clojure CLI project"
+??? TIP "Simplest Clojure CLI project"
     A `deps.edn` file containing an empty hash-map `{}` is the simplest Clojure CLI project recognised by Spacemacs Clojure layer (CIDER).
 
-    The Clojure library is automatically included as a dependency and the `src` directory added to the class path, so Clojure `.clj` files under the `src` directory can be used with the REPL.
+    The CLI install configuration includes the Clojure library as a dependency and the `src` directory added to the class path, so Clojure `.clj` files under the `src` directory can be used with the REPL.
 
 
-[REPL Driven Development In Spacemacs](/spacemacs/clojure-repl/){.md-button}
+## Project Templates
+
+[Create a Clojure project from a template](https://practical.li/clojure/clojure-cli/projects/templates/){target=_blank} to include common libraries and code.  A template can be simple configuration with a single namespace or highly detailed and functional service.
+
+[:fontawesome-solid-book-open: Practicalli Project Templates](https://practical.li/clojure/clojure-cli/projects/templates/practicalli/){target=_blank} provide production-ready templates to build web services and APIs upon.
+
+[:fontawesome-solid-book-open: Practicalli Project Templates](https://practical.li/clojure/clojure-cli/projects/templates/practicalli/){target=_blank .md-button}
+
+??? HINT "Emacs shell or Command Line terminal"
+    `SPC '` opens an Emacs popup buffer containing an shell terminal to run a command to create a Clojure project from a template.  
+
+    Or open a terminal window from your operating system for a command line shell.
 
 
-## Using Project Templates
+### Create Project from Template
 
-Clojure projects can be generated from templates using [deps-new](https://github.com/seancorfield/clj-new){target=_blank} for a Clojure CLI specific project.
+Create a minimal project with Clojure CLI using the `practicalli/minimal` template and a project called practicalli/playground
 
-[clj-new](https://github.com/seancorfield/clj-new){target=_blank} or Leiningen can create a project from a wide range of templates.  Check the template for options and to understand which tooling it supports.
-
-
-`SPC '` opens an Emacs popup buffer containing an shell terminal to run a command to create a Clojure project from a template.  Or you can open a terminal window from your operating system.
-
-=== "Clojure CLI deps-new"
-
-    `:project/create` is an alias for this tool provided by [:fontawesome-brands-github: practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn){target=_blank}, a user level configuration for Clojure CLI
-
-    Create a new project with Clojure CLI, using the `app` template and a project called practicalli/playground
-
+!!! NOTE "Create a minimal project"
     ```shell
-    clojure -T:project/create :template app :name practicalli/playground
+    clojure -T:project/create :template practicalli/minimal :name practicalli/playground
     ```
 
-=== "Clojure CLI clj-new"
+Create a new project that provides the structure of a production ready web service with example API.
 
-    `:project/new` is an alias for this tool provided by [:fontawesome-brands-github: practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn){target=_blank}, a user level configuration for Clojure CLI
-
-    Create a new project with Clojure CLI, using the `app` template and a project called practicalli/playground
-
+!!! NOTE "Create a project for a Web Service with API"
     ```shell
-    clojure -M:project/new app practicalli/playground
+    clojure -T:project/create :template practicalli/service :component donut :name practicalli/playground
     ```
 
+## Open Project files
 
-=== "Leiningen"
-
-    [Leiningen Install](/alternative-tooling/leiningen.md){.md-button}
-
-    Create a new project with Leiningen called playground, within the practicalli domain. Use the `app` template to create a very simple Clojure application.
-
-    ```shell
-    lein new app playground
-    ```
-    Leiningen can generate a wide range of projects from templates.  To use these projects with Clojure CLI a `deps.edn` file should be added, using the same collection of library dependencies. See [Leiningen](/spacemacs/alternative-tooling/leiningen.md) for details
-
-
-## Project files
+Use Spacemacs menu to open files from the Clojure project
 
 ++spc++ ++"p"++ ++"f"++ lists all project files, type characters to narrow the list, ++enter++ to select and open the file
 
@@ -75,7 +53,42 @@ Clojure projects can be generated from templates using [deps-new](https://github
 ++spc++ ++"f"++ ++d++ to permanently delete a file.
 
 !!! HINT Automatically add a namespace
-    [Clojure LSP]() and [clj-refactor]() automatically add an `ns` form to define the namespace when creating a new Clojure file.
+    [:fontawesome-solid-book-open: Clojure LSP](/spacemacs/refactor/clojure-lsp/){target=_blank} automatically adds an `ns` form to define the namespace when creating a new Clojure file.
+
+
+## Start a REPL
+
+Use the editor to start a REPL process, `cider-jack-in`.  Or start a REPl in a command line terminal and connect to that process from the editor, `cider-connect`.
+
+=== "CIDER jack-in"
+    ++comma++ ++single-quote++ (`sesman-start`) and select `cider-jack-in-clj` to start a REPL for the current Clojure project (also works without a project).
+
+=== "Command Line REPL"
+
+    Run a rich terminal UI using the `:repl/rebel` alias from [:fontawesome-solid-book-open: Practicalli Clojure-Cli-Config](https://practical.li/clojure/clojure-cli/practicalli-config/){target=_blank}
+
+    The `:repl/rebel` alias also runs an nREPL server for an editor to connect to.
+
+    ```shell
+    clojure -M:repl/rebel
+    ```
+
+[:fontawesome-solid-book-open: REPL Driven Development In Spacemacs](/spacemacs/clojure-repl/){.md-button}
+
+
+## Evaluate code
+
+Use the buffers containing source code files to effectively evaluate Clojure expressions.
+
+Results are returned instantly and shown in-line with the code.
+
+`, e b` (`cider-eval-buffer`) to evaluate the the source code file in the current buffer.  Required namespaces are also loaded into the REPL.
+
+`, e f` (`cider-eval-defun-at-point`) to evaluate the current expression from its top level (root).
+
+`, e p f` as above with results pretty printed for human readability, opened in a new buffer.
+
+[:fontawesome-solid-book-open: Evaluate Clojure Code](/spacemacs/evaluating-clojure/){target=_blank .md-button}
 
 
 ## Refactor
@@ -91,3 +104,6 @@ Renaming a namespace also renames the filename along with `requires` that includ
     ++comma++ ++"e"++ ++"u"++ (`cider-undef`) removes the current var from the REPL (uses nREPL undef command)
 
     Alternatively, `, q r` to restart the REPL after names have been changed or deleted.
+
+    [Remove Evaluated Vars](/spacemacs/evaluating-clojure/undefine/){target=_blank .md-button} 
+

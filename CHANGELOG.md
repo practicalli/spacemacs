@@ -26,3 +26,4 @@
 - clojure: undef vars (symbols) update wording and screenshots
 - clojure: update wording and links on refresh repl state page
 - clojure: cider jack-in edit command screenshot
+- clojure: significant refactor of development workflow overview page
