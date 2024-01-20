@@ -2472,9 +2472,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#deconstructing-the-command-line" class="md-nav__link">
+  <a href="#deconstruct-jack-in-command" class="md-nav__link">
     <span class="md-ellipsis">
-      Deconstructing the command line
+      Deconstruct jack-in command
     </span>
   </a>
   
@@ -2495,9 +2495,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dir-localsel-to-configure-repl-startup" class="md-nav__link">
+  <a href="#configure-repl-startup" class="md-nav__link">
     <span class="md-ellipsis">
-      .dir-locals.el to configure REPL startup
+      Configure REPL startup
     </span>
   </a>
   
@@ -7769,9 +7769,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#deconstructing-the-command-line" class="md-nav__link">
+  <a href="#deconstruct-jack-in-command" class="md-nav__link">
     <span class="md-ellipsis">
-      Deconstructing the command line
+      Deconstruct jack-in command
     </span>
   </a>
   
@@ -7792,9 +7792,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dir-localsel-to-configure-repl-startup" class="md-nav__link">
+  <a href="#configure-repl-startup" class="md-nav__link">
     <span class="md-ellipsis">
-      .dir-locals.el to configure REPL startup
+      Configure REPL startup
     </span>
   </a>
   
@@ -7856,22 +7856,22 @@
 <p>Jack-in ensures the REPL process is started with the libraries and middleware required by CIDER.  Then the rest of the jack-in process is the same as connect, but done so automatically.</p>
 <h2 id="jack-in-configuration">Jack-in Configuration<a class="headerlink" href="#jack-in-configuration" title="Permanent link">λ︎</a></h2>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>u</kbd></span> <span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>m</kbd></span> <span class="keys"><kbd>s</kbd></span> opens the jack-in command in the minibuffer which can be edited to customise how the Clojure REPL process starts, e.g. adding Clojure CLI aliases to include libraries and tools for development.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure - Edit cider-jack-in command to add Clojure CLI aliases" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit.png" /></a></p>
-<p>Clojure CLI aliases should be added between the <code>-M</code> execution flag and the <code>:cider/nrepl</code> alias.</p>
-<p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit-custom-aliases.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure - Edit cider-jack-in command, adding Clojure aliases" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-command-line-edit-custom-aliases.png" /></a></p>
-<h3 id="deconstructing-the-command-line">Deconstructing the command line<a class="headerlink" href="#deconstructing-the-command-line" title="Permanent link">λ︎</a></h3>
+<p>Clojure CLI aliases are added between the <code>-M</code> execution flag and the <code>:cider/nrepl</code> alias name.</p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-repl-jack-in-command-aliases-light.png?raw=true#only-light" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure - Edit cider-jack-in command to add Clojure CLI aliases" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-repl-jack-in-command-aliases-light.png?raw=true#only-light" /></a>
+<a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-repl-jack-in-command-aliases-dark.png?raw=true#only-dark" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Clojure - Edit cider-jack-in command to add Clojure CLI aliases" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-clojure-repl-jack-in-command-aliases-dark.png?raw=true#only-dark" /></a></p>
+<h3 id="deconstruct-jack-in-command">Deconstruct jack-in command<a class="headerlink" href="#deconstruct-jack-in-command" title="Permanent link">λ︎</a></h3>
 <p><code>cider-jack-in</code> commands include the dependencies to start a REPL process which the Emacs Cider process can connect to, using nREPL.</p>
 <p><code>-Sdeps</code> adds the required library dependencies to start an nREPL server (<code>nrepl/nrepl</code>) and connect to that nREPL server from Cider (<code>cider/cider-nrepl</code>).</p>
 <p><code>:aliases</code> defines the <code>:cider/nrepl</code> alias, defining that the <code>clojure</code> command should run <code>nrepl.commandline/-main</code> to start an nREPL server process, along with the Cider middleware to connect to that nREPL server process</p>
 <h3 id="adding-aliases">Adding aliases<a class="headerlink" href="#adding-aliases" title="Permanent link">λ︎</a></h3>
-<p>Aliases can be used from the project <code>deps.edn</code> file or the user <code>deps.edn</code> file, e.g <a href="https://github.com/practicalli/clojure-deps-edn">practicalli/clojure-deps-edn</a></p>
+<p>Aliases can be used from the project or the user <code>deps.edn</code> file, e.g <a href="https://practical.li/clojure/clojure-cli/practicalli-config/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Practicalli CLI Config</a></p>
 <p><code>:extra-paths</code> and <code>:extra-deps</code> configuration in aliases is used by the Cider jack-in command line.</p>
 <p><code>:main-opts</code> entries in aliases are ignored when <code>:cider/nrepl</code> is kept as last alias in the chain.</p>
 <details class="warning">
 <summary>No aliases after :cider/nrepl</summary>
 <p>Placing aliases after <code>:cider/nrepl</code> will prevent cider-jack-in working correctly (or at all), unless the last alias in the chain also includes the same libraries and configuration as the <code>:cider/nrepl</code> alias</p>
 </details>
-<h2 id="dir-localsel-to-configure-repl-startup">.dir-locals.el to configure REPL startup<a class="headerlink" href="#dir-localsel-to-configure-repl-startup" title="Permanent link">λ︎</a></h2>
+<h2 id="configure-repl-startup">Configure REPL startup<a class="headerlink" href="#configure-repl-startup" title="Permanent link">λ︎</a></h2>
 <p>Cider variables can be used to customize the REPL startup via a <code>.dir-locals.el</code> file in the root of the Clojure project.</p>
 <p><code>SPC p e</code> creates or opens a <code>.dir-locals.el</code> file in the root of the project.  A helm prompt also allows for adding entries into the file.</p>
 <p>Add the <code>:env/test</code> alias to <code>cider-clojure-cli-aliases</code> and the paths and libraries defined aliases will always be included when running a REPL from Spacemacs</p>
@@ -7960,7 +7960,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 26, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 19, 2024</span>
   </span>
 
     

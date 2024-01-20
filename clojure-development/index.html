@@ -7657,18 +7657,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#using-project-templates" class="md-nav__link">
+  <a href="#project-templates" class="md-nav__link">
     <span class="md-ellipsis">
-      Using Project Templates
+      Project Templates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-project-from-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Project from Template
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-project-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open Project files
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-files" class="md-nav__link">
+  <a href="#start-a-repl" class="md-nav__link">
     <span class="md-ellipsis">
-      Project files
+      Start a REPL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluate-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluate code
     </span>
   </a>
   
@@ -7715,61 +7748,68 @@
 
 
 <h1 id="clojure-development-overview">Clojure Development Overview<a class="headerlink" href="#clojure-development-overview" title="Permanent link">λ︎</a></h1>
-<p>A <a href="/spacemacs/introduction/repl-workflow.md">REPL workflow</a> is supported and highly encouraged for effective Clojure development.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">CIDER jack-in</label><label for="__tabbed_1_2">Command Line REPL</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd class="key-single-quote">'</kbd></span> (<code>sesman-start</code>) and select <code>cider-jack-in-clj</code> to start a REPL for the current Clojure project (also works without a project).</p>
-</div>
-<div class="tabbed-block">
-<p>Run a rich terminal UI using the <code>:repl/rebel</code> alias from <a href="https://github.com/practicalli/clojure-deps-edn" target="_blank">practicalli/clojure-deps-edn</a></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>clojure<span class="w"> </span>-M:repl/rebel
-</code></pre></div>
-</div>
-</div>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Simplest Clojure CLI project</p>
+<p>A <a href="/spacemacs/introduction/repl-workflow.md"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> REPL workflow</a> is highly encouraged for effective Clojure development.</p>
+<p>Start a REPL process for a Clojure project and connect an editor to the REPL, allowing code to be evaluated and results returned instantly. </p>
+<details class="tip">
+<summary>Simplest Clojure CLI project</summary>
 <p>A <code>deps.edn</code> file containing an empty hash-map <code>{}</code> is the simplest Clojure CLI project recognised by Spacemacs Clojure layer (CIDER).</p>
-<p>The Clojure library is automatically included as a dependency and the <code>src</code> directory added to the class path, so Clojure <code>.clj</code> files under the <code>src</code> directory can be used with the REPL.</p>
-</div>
-<p><a class="md-button" href="/spacemacs/clojure-repl/">REPL Driven Development In Spacemacs</a></p>
-<h2 id="using-project-templates">Using Project Templates<a class="headerlink" href="#using-project-templates" title="Permanent link">λ︎</a></h2>
-<p>Clojure projects can be generated from templates using <a href="https://github.com/seancorfield/clj-new" target="_blank">deps-new</a> for a Clojure CLI specific project.</p>
-<p><a href="https://github.com/seancorfield/clj-new" target="_blank">clj-new</a> or Leiningen can create a project from a wide range of templates.  Check the template for options and to understand which tooling it supports.</p>
-<p><code>SPC '</code> opens an Emacs popup buffer containing an shell terminal to run a command to create a Clojure project from a template.  Or you can open a terminal window from your operating system.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Clojure CLI deps-new</label><label for="__tabbed_2_2">Clojure CLI clj-new</label><label for="__tabbed_2_3">Leiningen</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><code>:project/create</code> is an alias for this tool provided by <a href="https://github.com/practicalli/clojure-deps-edn" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> practicalli/clojure-deps-edn</a>, a user level configuration for Clojure CLI</p>
-<p>Create a new project with Clojure CLI, using the <code>app</code> template and a project called practicalli/playground</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>clojure<span class="w"> </span>-T:project/create<span class="w"> </span>:template<span class="w"> </span>app<span class="w"> </span>:name<span class="w"> </span>practicalli/playground
+<p>The CLI install configuration includes the Clojure library as a dependency and the <code>src</code> directory added to the class path, so Clojure <code>.clj</code> files under the <code>src</code> directory can be used with the REPL.</p>
+</details>
+<h2 id="project-templates">Project Templates<a class="headerlink" href="#project-templates" title="Permanent link">λ︎</a></h2>
+<p><a href="https://practical.li/clojure/clojure-cli/projects/templates/" target="_blank">Create a Clojure project from a template</a> to include common libraries and code.  A template can be simple configuration with a single namespace or highly detailed and functional service.</p>
+<p><a href="https://practical.li/clojure/clojure-cli/projects/templates/practicalli/" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Practicalli Project Templates</a> provide production-ready templates to build web services and APIs upon.</p>
+<p><a class="md-button" href="https://practical.li/clojure/clojure-cli/projects/templates/practicalli/" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Practicalli Project Templates</a></p>
+<details class="hint">
+<summary>Emacs shell or Command Line terminal</summary>
+<p><code>SPC '</code> opens an Emacs popup buffer containing an shell terminal to run a command to create a Clojure project from a template.  </p>
+<p>Or open a terminal window from your operating system for a command line shell.</p>
+</details>
+<h3 id="create-project-from-template">Create Project from Template<a class="headerlink" href="#create-project-from-template" title="Permanent link">λ︎</a></h3>
+<p>Create a minimal project with Clojure CLI using the <code>practicalli/minimal</code> template and a project called practicalli/playground</p>
+<div class="admonition note">
+<p class="admonition-title">Create a minimal project</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>clojure<span class="w"> </span>-T:project/create<span class="w"> </span>:template<span class="w"> </span>practicalli/minimal<span class="w"> </span>:name<span class="w"> </span>practicalli/playground
 </code></pre></div>
 </div>
-<div class="tabbed-block">
-<p><code>:project/new</code> is an alias for this tool provided by <a href="https://github.com/practicalli/clojure-deps-edn" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> practicalli/clojure-deps-edn</a>, a user level configuration for Clojure CLI</p>
-<p>Create a new project with Clojure CLI, using the <code>app</code> template and a project called practicalli/playground</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>clojure<span class="w"> </span>-M:project/new<span class="w"> </span>app<span class="w"> </span>practicalli/playground
+<p>Create a new project that provides the structure of a production ready web service with example API.</p>
+<div class="admonition note">
+<p class="admonition-title">Create a project for a Web Service with API</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>clojure<span class="w"> </span>-T:project/create<span class="w"> </span>:template<span class="w"> </span>practicalli/service<span class="w"> </span>:component<span class="w"> </span>donut<span class="w"> </span>:name<span class="w"> </span>practicalli/playground
 </code></pre></div>
 </div>
-<div class="tabbed-block">
-<p><a class="md-button" href="/alternative-tooling/leiningen.md">Leiningen Install</a></p>
-<p>Create a new project with Leiningen called playground, within the practicalli domain. Use the <code>app</code> template to create a very simple Clojure application.</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>lein<span class="w"> </span>new<span class="w"> </span>app<span class="w"> </span>playground
-</code></pre></div>
-Leiningen can generate a wide range of projects from templates.  To use these projects with Clojure CLI a <code>deps.edn</code> file should be added, using the same collection of library dependencies. See <a href="/spacemacs/alternative-tooling/leiningen.md">Leiningen</a> for details</p>
-</div>
-</div>
-</div>
-<h2 id="project-files">Project files<a class="headerlink" href="#project-files" title="Permanent link">λ︎</a></h2>
+<h2 id="open-project-files">Open Project files<a class="headerlink" href="#open-project-files" title="Permanent link">λ︎</a></h2>
+<p>Use Spacemacs menu to open files from the Clojure project</p>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>f</kbd></span> lists all project files, type characters to narrow the list, <span class="keys"><kbd class="key-enter">Enter</kbd></span> to select and open the file</p>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>p</kbd></span> <span class="keys"><kbd>q</kbd></span> toggles between source code namespace and its related test namespace</p>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd>f</kbd></span> to navigate the file directory, <span class="keys"><kbd class="key-tab">Tab</kbd></span> to complete file and directory names, <span class="keys"><kbd class="key-enter">Enter</kbd></span> to open the selected file.  Create a new file by typing its name and pressing return, the file and any intermediate directory path will be created</p>
 <p><span class="keys"><kbd class="key-space">Space</kbd></span> <span class="keys"><kbd>f</kbd></span> <span class="keys"><kbd class="key-d">D</kbd></span> to permanently delete a file.</p>
 <div class="admonition hint automatically add a namespace">
 <p class="admonition-title">Hint</p>
-<p><a href="">Clojure LSP</a> and <a href="">clj-refactor</a> automatically add an <code>ns</code> form to define the namespace when creating a new Clojure file.</p>
+<p><a href="/spacemacs/refactor/clojure-lsp/" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Clojure LSP</a> automatically adds an <code>ns</code> form to define the namespace when creating a new Clojure file.</p>
 </div>
+<h2 id="start-a-repl">Start a REPL<a class="headerlink" href="#start-a-repl" title="Permanent link">λ︎</a></h2>
+<p>Use the editor to start a REPL process, <code>cider-jack-in</code>.  Or start a REPl in a command line terminal and connect to that process from the editor, <code>cider-connect</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">CIDER jack-in</label><label for="__tabbed_1_2">Command Line REPL</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd class="key-single-quote">'</kbd></span> (<code>sesman-start</code>) and select <code>cider-jack-in-clj</code> to start a REPL for the current Clojure project (also works without a project).</p>
+</div>
+<div class="tabbed-block">
+<p>Run a rich terminal UI using the <code>:repl/rebel</code> alias from <a href="https://practical.li/clojure/clojure-cli/practicalli-config/" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Practicalli Clojure-Cli-Config</a></p>
+<p>The <code>:repl/rebel</code> alias also runs an nREPL server for an editor to connect to.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>clojure<span class="w"> </span>-M:repl/rebel
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><a class="md-button" href="/spacemacs/clojure-repl/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> REPL Driven Development In Spacemacs</a></p>
+<h2 id="evaluate-code">Evaluate code<a class="headerlink" href="#evaluate-code" title="Permanent link">λ︎</a></h2>
+<p>Use the buffers containing source code files to effectively evaluate Clojure expressions.</p>
+<p>Results are returned instantly and shown in-line with the code.</p>
+<p><code>, e b</code> (<code>cider-eval-buffer</code>) to evaluate the the source code file in the current buffer.  Required namespaces are also loaded into the REPL.</p>
+<p><code>, e f</code> (<code>cider-eval-defun-at-point</code>) to evaluate the current expression from its top level (root).</p>
+<p><code>, e p f</code> as above with results pretty printed for human readability, opened in a new buffer.</p>
+<p><a class="md-button" href="/spacemacs/evaluating-clojure/" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></svg></span> Evaluate Clojure Code</a></p>
 <h2 id="refactor">Refactor<a class="headerlink" href="#refactor" title="Permanent link">λ︎</a></h2>
 <p><span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>r</kbd></span> <span class="keys"><kbd>r</kbd></span> (<code>lsp-rename</code>) to rename ns forms, def, defn and local names, updating any references to those names throughout the project.</p>
 <p>Renaming a namespace also renames the filename along with <code>requires</code> that include the namespace in other namespaces</p>
@@ -7779,6 +7819,7 @@ Leiningen can generate a wide range of projects from templates.  To use these pr
 <p>Keep the REPL state clean by removing the name of a function or value before it is renamed
 <span class="keys"><kbd class="key-comma">,</kbd></span> <span class="keys"><kbd>e</kbd></span> <span class="keys"><kbd>u</kbd></span> (<code>cider-undef</code>) removes the current var from the REPL (uses nREPL undef command)</p>
 <p>Alternatively, <code>, q r</code> to restart the REPL after names have been changed or deleted.</p>
+<p><a class="md-button" href="/spacemacs/evaluating-clojure/undefine/" target="_blank">Remove Evaluated Vars</a> </p>
 </div>
 
 
@@ -7800,7 +7841,7 @@ Leiningen can generate a wide range of projects from templates.  To use these pr
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 8, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 20, 2024</span>
   </span>
 
     
