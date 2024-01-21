@@ -66,9 +66,9 @@ By submitting content ideas and corrections you are agreeing they can be used in
 
 [![Sponsor Practicalli via GitHub](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png)](https://github.com/sponsors/practicalli-johnny/)
 
-The sponsorship funds are used solely for the continued development of [Practicalli series of books and videos](https://practical.li/)
+All sponsorship funds are used to support the continued development of [Practicalli series of books and videos](https://practical.li/), although most of the work is still done at personal cost and time.
 
-Thank you to [Cognitect](https://www.cognitect.com/), [Nubank](https://nubank.com.br/) and a wide range of other [sponsors](https://github.com/sponsors/practicalli-johnny#sponsors) for your continued support
+Thanks to [Cognitect](https://www.cognitect.com/), [Nubank](https://nubank.com.br/) and a wide range of other [sponsors](https://github.com/sponsors/practicalli-johnny#sponsors) for your continued support
 
 
 
