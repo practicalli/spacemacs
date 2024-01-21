@@ -64,11 +64,12 @@ By submitting content ideas and corrections you are agreeing they can be used in
 
 ## Sponsor Practicalli
 
-[![Sponsor practicalli-john](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png)](https://github.com/sponsors/practicalli-john/)
+[![Sponsor Practicalli via GitHub](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png)](https://github.com/sponsors/practicalli-johnny/)
 
-The majority of my work is focused on the [Practicalli series of books and videos](https://practical.li/) and an advisory role with several communities
+The sponsorship funds are used solely for the continued development of [Practicalli series of books and videos](https://practical.li/)
 
-Thank you to [Cognitect](https://www.cognitect.com/), [Nubank](https://nubank.com.br/) and a wide range of other [sponsors](https://github.com/sponsors/practicalli-john#sponsors) for your continued support
+Thank you to [Cognitect](https://www.cognitect.com/), [Nubank](https://nubank.com.br/) and a wide range of other [sponsors](https://github.com/sponsors/practicalli-johnny#sponsors) for your continued support
+
 
 
 ## GitHub Actions
