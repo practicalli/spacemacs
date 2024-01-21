@@ -7842,9 +7842,15 @@
 </ul>
 <p>For small issues or if a discussion is required, post a message on <a href="https://clojurians.slack.com/messages/practicalli"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> #practicalli channel of the Clojurians Slack community</a>.</p>
 <h2 id="considering-a-pull-request">Considering a Pull request?<a class="headerlink" href="#considering-a-pull-request" title="Permanent link">λ︎</a></h2>
-<p>Before investing any time in a pull request, please raise a new issue explaining the situation.  This can save you and the maintainer time and avoid rejected pull requests.</p>
+<div class="admonition info">
+<p class="admonition-title">Pull Request Commits must be cryptographically signed</p>
+<p>All commits contributed to Practicalli must be signed via a legitimate SSH or GPG key to avoid the risk of commit spoofing.</p>
+<p><a class="md-button" href="https://practical.li/engineering-playbook/source-control/git-configuration/#commit-signing-with-ssh-key" target="_blank">Configure commit signing with SSH key - Practicalli Engineering</a></p>
+</div>
+<p>All pull requests must include an entry in CHANGELOG.md or will not be merged.  A changelog entry allows the community to follow the changes to the book.</p>
+<p>Each pull request will have a number of CI workflows run against the contribution, checking the format of the content and if a changelog entry has been provided.</p>
 <p>Please keep pull requests small and focused, as they are much quicker to review and easier to accept.  Ideally PR's should be for a specific page or at most a section.</p>
-<p>A PR with a list of changes across different sections will not be merged, although it may be reviewed at some point with changes cherry picked.</p>
+<p>A PR with a list of changes across different sections will be closed without merging as these take considerable time to review.</p>
 <p>Issues such as grammar improvements are typically a sign of a rushed section that requires a rewrite, so a pull request to fix a typeographic error will probably not be merged.  Raise an issue, or post a thread in the <a href="https://clojurians.slack.com/messages/practicalli"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Clojurians Slack #practicall channel</a></p>
 <h2 id="contributing-to-spacemacs">Contributing to Spacemacs<a class="headerlink" href="#contributing-to-spacemacs" title="Permanent link">λ︎</a></h2>
 <p>The <a href="https://github.com/syl20bnr/spacemacs/blob/develop/CONTRIBUTING.org" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span> Spacemacs contribution guidelines</a> details how to get help, report issues and contribute to the project.</p>
@@ -7899,7 +7905,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 21, 2024</span>
   </span>
 
     
