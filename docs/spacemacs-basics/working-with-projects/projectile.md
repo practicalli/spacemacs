@@ -62,5 +62,5 @@ Each buffer containing a matching search text will be opened in turn and each ma
 
 `n` to skip replacement of the current match and jump to the next match.
 
-> #### Hint::Helm-ag and iedit more effective for larger changes
-> Use [Evil tools to replace text across projects](/evil-tools/replacing-text-across-projects.md) (refactor), especially for large numbers of changes.  Only matching lines are displayed so it is easier to see how many places you are making the change in.
+!!! Hint "Helm-ag and iedit more effective for larger changes"
+    Use [Evil tools to replace text across projects](spacemacs-basics/evil-tools/replacing-text-across-projects.md) (refactor), especially for large numbers of changes.  Only matching lines are displayed so it is easier to see how many places you are making the change in.
