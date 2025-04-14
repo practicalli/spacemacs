@@ -7,11 +7,13 @@
 ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝
 ```
 
-# Clojure development with Spacemacs
+# Practicali Spacemacs
 
 ![Spacemacs Practicalli - interactive development with Clojure and Emacs, using CIDER](https://github.com/practicalli/graphic-design/blob/live/book-covers/practicalli-spacemacs-book-banner.png)
 
-This is an introduction to developing Clojure applications using Emacs, specifically based on the Spacemacs configuration for Emacs and CIDER.  The aim is to help you be productive with those tools as quickly as possible.
+Software enginering with Emacs and Spacemacs community configuration, with a focus on  the Clojure programming language, using the Clojure REPL driven development workflow.
+
+The aim is to help you be productive with software engineering tools as quickly as possible.
 
 Spacemacs is a community-driven project that provides a simple way to add lots of extra functionality to Emacs, without having to manage packages yourself or spend time writing common configuration code.
 
@@ -51,25 +53,31 @@ This workshop will cover the following topics:
   This work is licensed under a Creative Commons Attribution 4.0 ShareAlike License (including images & stylesheets).
 </div>
 
-
 ## Contributing
 
-Please [read the contributing section of the book](https://practical.li/spacemacs/introduction/contributing/) before raising an issue or pull request
+Issues and pull requests are most welcome although it is the maintainers discression as to if they are applicable.  Please detail issues as much as you can.  Pull requests are simpler to work with when they are specific to a page or at most a section.  The smaller the change the quicker it is to review and merge.
+
+Please read the [detailed Practicalli contributing page](https://practical.li/contributing/) before raising an issue or pull request to avoid disapointment.
+
 
 * [Current Issues](https://github.com/practicalli/spacemacs/issues)
 * [Current pull requests](https://github.com/practicalli/spacemacs/pulls)
 
-By submitting content ideas and corrections you are agreeing they can be used in this workshop under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/neovim/graphs/contributors).
+By submitting content ideas and corrections you are agreeing they can be used in any work by Practicalli under the [Creative Commons Attribution ShareAlike 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  Attribution will be detailed via [GitHub contributors](https://github.com/practicalli/clojure/graphs/contributors).
 
 
 ## Sponsor Practicalli
 
 [![Sponsor Practicalli via GitHub](https://raw.githubusercontent.com/practicalli/graphic-design/live/buttons/practicalli-github-sponsors-button.png)](https://github.com/sponsors/practicalli-johnny/)
 
-All sponsorship funds are used to support the continued development of [Practicalli series of books and videos](https://practical.li/), although most of the work is still done at personal cost and time.
+All sponsorship funds are used to support the continued development of [Practicalli series of books and videos](https://practical.li/), although most work is done at personal cost and time.
 
 Thanks to [Cognitect](https://www.cognitect.com/), [Nubank](https://nubank.com.br/) and a wide range of other [sponsors](https://github.com/sponsors/practicalli-johnny#sponsors) for your continued support
 
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=practicalli/spacemacs&type=Date)](https://star-history.com/#practicalli/spacemacs&Date)
 
 
 ## GitHub Actions
@@ -87,13 +95,13 @@ Publish book workflow installs Material for MkDocs version 9
 
 Install mkdocs version 9 using the Python pip package manager
 
-```bash
-pip3 install mkdocs-material=="9.4"
+```shell
+pip install mkdocs-material=="9.5"
 ```
 
 Install the plugins used by the Practicalli site using Pip (these are also installed in the GitHub Action workflow)
 
-```bash
+```shell
 pip3 install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects pillow cairosvg
 ```
 
@@ -101,20 +109,23 @@ pip3 install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revisio
 
 Fork the GitHub repository and clone that fork to your computer,
 
-```bash
+```shell
 git clone https://github.com/<your-github-account>/<repository>.git
 ```
 
 Run a local server from the root of the cloned project
 
-```bash
+```shell
 make docs
 ```
 
 The website will open at <http://localhost:8000>
 
 If making smaller changes, then only rebuild the content that changes, speeding up the local development process
-```bash
-make docs
+
+```shell
+make docs-changed
 ```
+
+> NOTE: navigation changes may not be correctly reflected without reloading the page in the web browser or carrying out a full `make docs` build
 
