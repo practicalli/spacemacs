@@ -29,7 +29,7 @@ theme:
     - navigation.indexes # Nav sections can have files
     - navigation.instant # Avoid page reloading for internal links
     - navigation.top
-    - navigation.tracking # Update URL with anchor
+    - navigation.tracking # Update URL with sub-heading anchor names
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
@@ -112,6 +112,8 @@ extra:
     provider: google
     property: G-YBK519HFM6
   social:
+    - icon: material/web
+      link: https://practical.li/
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/jr0cket/
     - icon: fontawesome/brands/slack
