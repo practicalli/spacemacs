@@ -4,6 +4,8 @@
 name: Changelog Check
 on:
   pull_request:
+    paths-ignore:
+      - "README.md"
     types: [opened, synchronize, reopened, ready_for_review, labeled, unlabeled]
 
 jobs:
@@ -15,14 +17,19 @@ jobs:
       - run: echo "🐧 Job running on ${{ runner.os }} server"
       - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
 
+      # Git Checkout
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           sparse-checkout: |
+            docs
+            overrides
+            .github
             CHANGELOG.md
-      - run: echo "🐙 ${{ github.repository }} repository sparse-checkout to the CI runner."
+      - run: echo "🐙 Sparse Checkout of ${{ github.repository }} repository to the CI runner."
 
+      # Changelog Enforcer
       - name: Changelog Enforcer
         uses: dangoslen/changelog-enforcer@v3
         with:

@@ -179,7 +179,7 @@
   // MD033/no-inline-html - Inline HTML
   "MD033": {
     // Allowed elements
-    "allowed_elements": ["iframe", "p", "div"]
+    "allowed_elements": ["a", "iframe", "img", "p", "div"]
   },
 
   // MD034/no-bare-urls - Bare URL used
@@ -226,9 +226,7 @@
   "MD042": true,
 
   // MD043/required-headings/required-headers - Required heading structure
-  "MD043": {
-
-  },
+  "MD043": {},
 
   // MD044/proper-names - Proper names should have the correct capitalization
   "MD044": {
@@ -244,13 +242,19 @@
   "MD045": true,
 
   // MD046/code-block-style - Code block style
-  "MD046": false,
+  "MD046": {
+    // Block style
+    "style": "consistent"
+  },
 
   // MD047/single-trailing-newline - Files should end with a single newline character
   "MD047": true,
 
   // MD048/code-fence-style - Code fence style
-  "MD048": false,
+  "MD048": {
+    // Code fence style
+    "style": "consistent"
+  },
 
   // MD049/emphasis-style - Emphasis style should be consistent
   "MD049": {
@@ -273,8 +277,6 @@
   // MD053/link-image-reference-definitions - Link and image reference definitions should be needed
   "MD053": {
     // Ignored definitions
-    "ignored_definitions": [
-      "//"
-    ]
+    "ignored_definitions": ["//"]
   }
 }

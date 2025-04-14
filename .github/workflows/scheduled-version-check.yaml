@@ -31,10 +31,13 @@ jobs:
       - run: echo "🐧 Job running on ${{ runner.os }} server"
       - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
 
-      - name: "Checkout code"
+      - name: Checkout Code
         uses: actions/checkout@v4
-      - run: echo "🐙 ${{ github.repository }} repository was cloned to the runner."
-
+        with:
+          fetch-depth: 0
+          sparse-checkout: |
+            .github
+      - run: echo "🐙 ${{ github.repository }} repository sparse-checkout to the CI runner."
       - name: "Antq Check versions"
         uses: liquidz/antq-action@main
         with:
@@ -44,4 +47,3 @@ jobs:
       # Summary
       - run: echo "🎨 library versions checked with liquidz/antq"
       - run: echo "🍏 Job status is ${{ job.status }}."
-

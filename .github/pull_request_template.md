@@ -1,3 +1,13 @@
+:memo: Description
+
+
+:white_check_mark: Checklist
+
+- [ ] Commits should be cryptographically signed (SSH or GPG)
+
+
+## Practicalli Guidelines
+
 Please follow these guidelines when submitting a pull request
 
 - refer to all relevant issues, using `#` followed by the issue number (or paste full link to the issue)
@@ -20,4 +30,4 @@ Please raise an issue so we can discuss changes first, especially changes relate
 
 ## Review process
 
-All pull requests are reviewed by @practicalli-john and feedback provided, usually the same day but please be patient.
+All pull requests are reviewed by @practicalli-johnny and feedback provided, usually the same day but please be patient.

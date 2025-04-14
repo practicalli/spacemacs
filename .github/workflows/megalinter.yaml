@@ -1,7 +1,7 @@
 ---
 # MegaLinter GitHub Action configuration file
-# More info at https://megalinter.github.io
-# All variables described in https://megalinter.github.io/configuration/
+# More info at https://megalinter.io
+# All variables described in https://megalinter.io/latest/configuration/
 
 name: MegaLinter
 on:
@@ -30,7 +30,6 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          token: "${{ secrets.PAT || secrets.GITHUB_TOKEN }}"
           fetch-depth: 0
           sparse-checkout: |
             docs
@@ -42,7 +41,7 @@ jobs:
       - name: MegaLinter Run
         id: ml
         ## latest release of major version
-        uses: oxsecurity/megalinter/flavors/documentation@v7
+        uses: oxsecurity/megalinter/flavors/documentation@v8
         env:
           # ADD CUSTOM ENV VARIABLES OR DEFINE IN MEGALINTER_CONFIG file
           MEGALINTER_CONFIG: .github/config/megalinter.yaml
@@ -55,7 +54,7 @@ jobs:
       # Upload MegaLinter artifacts
       - name: Archive production artifacts
         if: ${{ success() }} || ${{ failure() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: MegaLinter reports
           path: |
