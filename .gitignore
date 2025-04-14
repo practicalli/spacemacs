@@ -1,3 +1,26 @@
-*.log
-.cache
-**/site
+# Exclude all files from root directory
+/*
+
+# ------------------------
+# Common project files
+!CHANGELOG.md
+!README.md
+!LICENSE
+
+# ------------------------
+# Include MkDocs files
+!docs/
+!includes/
+!overrides/
+!mkdocs.yml
+
+# ------------------------
+# Project automation
+!Makefile
+
+# ------------------------
+# Version Control
+!.gitignore
+!.gitattributes
+!.github/
+
