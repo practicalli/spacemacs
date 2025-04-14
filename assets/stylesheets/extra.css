@@ -6,3 +6,114 @@
   --md-typeset-kbd-color: hsla(72, 100%, 92%, 0.92); 
 }
 
+/* Custom Admonitions */
+
+
+:root {
+/* Clojure Idiom*/
+  --md-admonition-icon--clojure-idiom: url(https://raw.githubusercontent.com/practicalli/graphic-design/c40cc063cc5bb07525b524d8a3d638e2f42bc38a/logos/clojure-logo-bullet.svg);
+
+/* Round corners */
+  --base-border-radius: 0.5rem;
+}
+
+/*Admonitions colors*/
+.md-typeset .admonition.clojure-idiom,
+.md-typeset details.clojure-idiom {
+  border-color: rgb(43, 155, 70);
+}
+.md-typeset .clojure-idiom > .admonition-title,
+.md-typeset .clojure-idiom > summary {
+  background-color: rgba(43, 155, 70, 0.1);
+}
+.md-typeset .clojure-idiom > .admonition-title::before,
+.md-typeset .clojure-idiom > summary::before {
+  background-color: rgb(250, 250, 250);
+  background-image: var(--md-admonition-icon--clojure-idiom);
+  -webkit-mask-image: var(--md-admonition-icon--clojure-idiom);
+  mask-image: var(--md-admonition-icon--clojure-idiom);
+}
+
+
+/* Change font family of filename present on top of code block. */
+.highlight span.filename {
+  border-bottom: none;
+  border-radius: var(--base-border-radius);
+  display: inline;
+  font-family: var(--md-code-font-family);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.highlight span.filename + pre > code {
+  border-radius: var(--base-border-radius);
+  border-top-left-radius: 0;
+}
+.md-typeset pre > code {
+  border-radius: var(--base-border-radius);
+}
+
+/* Grid Cards */
+.md-typeset .grid.cards > ul > li {
+  border-radius: var(--base-border-radius);
+}
+.md-typeset .grid.cards > ul > li:hover {
+  box-shadow: 0 0 0.2rem #ffffff40;
+}
+
+/* Markdown Button */
+.md-typeset .md-button {
+  border-radius: var(--base-border-radius);
+}
+
+/* Critic, Mark */
+ins.critic,
+del.critic {
+  text-decoration: none;
+}
+
+.md-typeset .critic,
+.md-typeset mark {
+  border-radius: 0.2rem;
+  padding: 0 0.2rem;
+}
+
+.md-typeset mark {
+  box-shadow: 0 0 0 0.1rem var(--md-typeset-mark-color);
+}
+
+.md-typeset ins.critic {
+  box-shadow: 0 0 0 0.1rem var(--md-typeset-ins-color);
+}
+
+.md-typeset del.critic {
+  box-shadow: 0 0 0 0.1rem var(--md-typeset-del-color);
+}
+
+/* Forms */
+.md-search__form {
+  border-radius: var(--base-border-radius);
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+  border-top-right-radius: var(--base-border-radius);
+  border-top-left-radius: var(--base-border-radius);
+}
+
+[dir="ltr"] .md-search__output {
+  border-bottom-right-radius: var(--base-border-radius);
+  border-bottom-left-radius: var(--base-border-radius);
+}
+
+/* Blog - index.md */
+.md-post--excerpt {
+  background-color: var(--md-accent-fg-color--transparent);
+  box-shadow: 0 0 0 1rem var(--md-accent-fg-color--transparent);
+  border-radius: var(--base-border-radius);
+}
+
+/* Table */
+.md-typeset table:not([class]) {
+  border-radius: var(--base-border-radius);
+}
