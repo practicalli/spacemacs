@@ -1,9 +1,11 @@
 # Changelog
 
-## Unreleased
+# Unreleased
+
+## Added
+- dev: add scheduled stale issue & pull request check (monthly)
 
 ### Changed
-
 - Fixed key combination in `docs/install-spacemacs/change-font.md`
 - ci: spell lychee & repository trufflehog linters warn only (false positives)
 - clojure: update project configuration & examples
