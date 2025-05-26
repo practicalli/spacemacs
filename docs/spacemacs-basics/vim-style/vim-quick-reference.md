@@ -1,6 +1,6 @@
 # Evil Quick Reference
 
-A reference of the most common keybindings available in Evil Normal mode. [Spacemacs DOCUMENTATION key bindings section](https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#key-bindings) contains full details
+A reference of the most common keybindings available in Evil Normal mode. [:fontawesome-brands-github: Spacemacs DOCUMENTATION key bindings section](https://github.com/syl20bnr/spacemacs/blob/develop/doc/DOCUMENTATION.org#key-bindings) contains full details
 
 ++period++ repeats the last keybinding sequence used in Vim Normal mode or a change made within a complete Vim Insert session.
 
@@ -114,7 +114,7 @@ Switching from **insert** to **normal** state:
 `ESC` or press `f d` keys in extremely quick succession.
 
 
-!!! HINT
+!!! HINT "Better Escape key binding"
     Using `f d` together is low risk as if you dont get it right it will either add the characters or try find the next `d` character (as `f` moves to the next character).
 
     Keep trying this key combination as once in normal state you can use `u` to undo any `f d` characters inserted.
@@ -135,8 +135,8 @@ Switching from **insert** to **normal** state:
 | `u`      | undo                                               |
 | `Ctrl-r` | redo                                               |
 
-> ####Hint:: Undo tips
-> Undo will revert the last action in normal mode or all the changes you made in **insert** state
+!!! HINT "Undo tips"
+    Undo will revert the last action in normal mode or all the changes you made in **insert** state
 
 
 ## Replace and changing text
@@ -157,8 +157,8 @@ Switching from **insert** to **normal** state:
 
 Combine d | c | v | r with avy-goto
 
-> #### Hint::Search and replace
->
+!!! HINT "Search and replace with Helm"
+    Spacemacs includes Helm which can be used to [:fontawesome-solid-book-open: search and replace text across projects](/spacemacs/spacemacs-basics/evil-tools/replacing-text-across-projects/)
 
 ## Delete commands
 

@@ -1,7 +1,8 @@
 # Evil G menu
+
 `g` in normal mode opens a menu of convenient utilities.  Practicalli uses this menu to comment existing lines, edit with multiple cursors, jumping to top or bottom of the buffer and joining lines together.
 
-[![Spacemacs Vim Normal - g menu](/images/spacemacs-vim-normal-g-menu.png)](/images/spacemacs-vim-normal-g-menu.png)
+![Spacemacs Vim Normal - g menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-vim-normal-g-menu.png?raw=true)
 
 
 ## Comment lines and regions
@@ -11,7 +12,7 @@
 
 
 ## Multiple cursors
-`g r` is the menu for [multiple cursors](/spacemacs-basics/evil-tools/multiple-cursors.md), allowing simultaneous editing at multiple points
+`g r` is the menu for [:fontawesome-solid-book-open: multiple cursors](/spacemacs/spacemacs-basics/evil-tools/multiple-cursors/), allowing simultaneous editing at multiple points
 
 `12 gr j` will add a cursor to the 12 lines below the current cursor, using the same position in the line.  Any edits are applied to all cursors.
 
@@ -29,11 +30,11 @@
 
 
 ## Workspaces
-`g t` to switch to next [workspace](working-with-projects/layouts.md), `g T` to switch to previous.
+`g t` to switch to next [:fontawesome-solid-book-open: workspace](/spacemacs-basics/working-with-projects/layouts/), `g T` to switch to previous.
 
 
 ## Changing text case
 `g u` to change the current character or selection to lowercase, `g U` for uppercase.
 
-> #### Hint::Toggle case with `~`
-> `~` will toggle the case of the current character or selected region.
+!!! HINT "Toggle case with `~`"
+    `~` will toggle the case of the current character or selected region.

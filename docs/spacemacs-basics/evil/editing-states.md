@@ -1,6 +1,6 @@
 # Evil editing states
 
-![Spacemacs States](/images/spacemacs-states-vim.png)
+![Spacemacs - Evil states](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/concepts/spacemacs-states-evil.png?raw=true)
 
 Each states allows keys to have different behaviour, helping minimise the cognitive load and quickly building muscle memory for very powerful actions.
 
@@ -14,22 +14,24 @@ Each states allows keys to have different behaviour, helping minimise the cognit
 
 First get familiar with **normal**, **insert** and **visual** states.  Then when you are comfortable, move on to **iedit** and **lisp** states.
 
-> #### Hint::Normal state by default
-> Evil normal state should be used most of the time, unless you are writing code or creating lots of text.
+!!! TIP "Normal state by default"
+    Evil normal state should be used most of the time, unless you are writing code or creating lots of text.
 
 
 ## Important key bindings
 
-`,` menu contains the major mode (e.g. Clojure) specific commands, organised mnemonically
+++"v"++ opens the visual state and allows you to selects text
 
-`v` opens the visual state and allows you to selects text
+++"i"++, ++"I"++, ++"a"++, ++"A"++, ++"o"++ , ++"O"++ all open insert state and allows you to type new text
 
-`i`, `a`, `o`, `O` opens insert state and allows you to create type text
+++esc++ or ++"f"++ ++"d"++ returns to Normal mode for text manipulation and leader / local leader commands
 
-`SPC s e` opens iedit and selects all matching instances of the highlighted text for editing
+++coma++ menu contains the major mode (e.g. Clojure) specific commands, organised mnemonically
 
-`SPC k` opens Lisp state, allowing you to do [structural editing](structural-editing/)
+++spc++ ++"s"++ ++"e"++ opens iedit and selects all matching instances of the highlighted text for editing
+
+++spc++ ++"k"++ opens Lisp state, allowing you to do [:fontawesome-solid-book-open: structural editing](/spacemacs/structural-editing/)
 
 
-> #### Hint::Refactor code tools
-> The [Refactor section](/refactor/) has further editing techniques and Clojure specific refactoring tools.
+!!! TIP "Refactor code tools"
+    The [:fontawesome-solid-book-open: Refactor section](/spacemacs/refactor/) has further editing techniques and Clojure specific refactoring tools.

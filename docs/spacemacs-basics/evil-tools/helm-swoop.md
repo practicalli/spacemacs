@@ -8,7 +8,7 @@ Search a buffer (Clojure namespace) or project and use the results to navigate t
 
 `SPC s S` assumes word under cursor is the symbol you wish to search for.
 
-helm-swoop is also available in the [symbol highlight transient menu](/navigating-code/names-symbols.md).
+helm-swoop is also available in the [:fontawesome-solid-book-open: symbol highlight transient menu](/spacemacs/navigating-code/names-symbols/).
 
 
 | Keybindings | Description                  |
@@ -22,5 +22,5 @@ For example, navigate to a function definition and all the places that function 
 
 ![Helm multi-swoop](https://raw.githubusercontent.com/ShingoFukuyama/spacemacs/images/master/helm-multi-swoop.gif)
 
-> #### Hint::Refactor code
-> [Refactor section](/refactor/) provides examples of using helm-ag, helm-swoop, iedit, narrowing and clj-refactor.
+!!! HINT "Refactor code"
+    [:fontawesome-solid-book-open: Refactor section](/spacemacs/refactor/) provides examples of using helm-ag, helm-swoop, iedit, narrowing and clj-refactor.

@@ -6,10 +6,11 @@ Multiple cursors is especially useful where lines are not entirely identical, i.
 
 Multiple cursors allows you to call all Emacs named functions and have the results output to each cursor you have created.
 
-> #### Hint::iedit or multiple cursors
-> iedit is excellent for all kinds of search and replace actions where the text to change is the same.  iedit finds all matches in a buffer or the scope created by [narrowing](narrowing.md).
->
-> Where text lines do not match but have a similar form, multiple cursors allow for more irregular changes
+!!! HINT "iedit or multiple cursors"
+    iedit is excellent for all kinds of search and replace actions where the text to change is the same.  iedit finds all matches in a buffer or the scope created by [:fontawesome-solid-book-open: narrowing](narrowing.md).
+
+    Where text lines do not match but have a similar form, multiple cursors allow for more irregular changes
+
 
 ## Common usage
 
@@ -21,12 +22,14 @@ Multiple cursors allows you to call all Emacs named functions and have the resul
 
 `g r I` adds cursors to visual selection lines, `S-v` and arrow keys, or `v 20 j` to select the next 24 lines
 
-> #### Hint::Using Narrowing to constrain where cursors are created
-> `SPC n` menu allows you to narrow the view on the current buffer
-> `SPC n f` narrows to the current function definition
-> `SPC n r` narrows to a selected range of text
->
-> See the section on [Spacemacs - Narrowing](narrowing.md)
+
+!!! HINT "Using Narrowing to constrain where cursors are created"
+    `SPC n` menu allows you to narrow the view on the current buffer
+    `SPC n f` narrows to the current function definition
+    `SPC n r` narrows to a selected range of text
+
+    See the section on [:fontawesome-solid-book-open: Narrowing](narrowing.md)
+
 
 ## Keybindings
 
@@ -46,9 +49,11 @@ The most commonly used key bindings for multiple cursors
 
 `g r` shows the full menu
 
-![Spacemacs G menu multiple cursor commands](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/menus/spacemacs-g-menu-multiple-cursors.png)
+![Spacemacs G menu multiple cursor commands](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-vim-normal-g-menu.png?raw=true)
 
-> #### TODO::Add video of most commonly used features
+
+!!! TODO "Add video of most commonly used features"
+
 
 ## Known issues
 
@@ -59,6 +64,6 @@ The most commonly used key bindings for multiple cursors
 
 ## Reference
 
-* [multiple cursors layer - Spacemacs develop documentation](http://develop.spacemacs.org/layers/+misc/multiple-cursors/README.html)
-* [evil-mc](https://github.com/gabesoft/evil-mc) - default backend for multiple cursors layer
-* [evil-multiedit](https://github.com/hlissner/evil-multiedit) - used in Doom Emacs
+- [:globe_with_meridians: multiple cursors layer - Spacemacs develop documentation](http://spacemacs.org/layers/+misc/multiple-cursors/README.html)
+- [:fontawesome-brands-github: evil-mc](https://github.com/gabesoft/evil-mc) - default backend for multiple cursors layer
+- [:fontawesome-brands-github: evil-multiedit](https://github.com/hlissner/evil-multiedit) - used in Doom Emacs

@@ -2,7 +2,9 @@
 
 Make multiple matching edits within a buffer
 
-`SPC s e` to start [`evil-iedit-state`](https://github.com/syl20bnr/evil-iedit-state){target=_blank} to quickly edit multiple occurrences of a symbol within a buffer or selection. Use iedit with helm-ag to [make multiple matching edits across a project](replacing-text-across-projects.md).
+`SPC s e` to start [:globe_with_meridians: `evil-iedit-state`](https://github.com/syl20bnr/evil-iedit-state){target=_blank} to quickly edit multiple occurrences of a symbol within a buffer or selection.
+
+Use iedit with helm-ag to [:fontawesome-solid-book-open: make multiple matching edits across a project](replacing-text-across-projects.md).
 
 `e` within visual state and symbol highlight transient state also enables iedit.
 
@@ -57,10 +59,10 @@ Narrowing, `SPC n`, limits the scope of iedit so only the relevant occurrences a
 | `C-U` | down-case the occurrences                                                           |
 
 !!! Hint
-> `0`, `$`, `A` and `I` have the default Vim behavior when used outside of an `occurrence`.
+    `0`, `$`, `A` and `I` have the default Vim behavior when used outside of an `occurrence`.
 
 
 ## Reference
 
-* [iedit GitHub project](https://github.com/victorhge/iedit){target=_blank}
-* [evil-iedit-state](https://github.com/syl20bnr/evil-iedit-state){target=_blank}
+- [iedit GitHub project](https://github.com/victorhge/iedit){target=_blank}
+- [evil-iedit-state](https://github.com/syl20bnr/evil-iedit-state){target=_blank}
