@@ -30,7 +30,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -38,7 +38,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -2174,21 +2174,6 @@
       Changing text case
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Changing text case">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hinttoggle-case-with" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Toggle case with ~
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -8222,21 +8207,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Changing text case">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hinttoggle-case-with" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Toggle case with ~
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -8273,12 +8243,12 @@
 
 <h1 id="evil-g-menu">Evil G menu<a class="headerlink" href="#evil-g-menu" title="Permanent link">λ︎</a></h1>
 <p><code>g</code> in normal mode opens a menu of convenient utilities.  Practicalli uses this menu to comment existing lines, edit with multiple cursors, jumping to top or bottom of the buffer and joining lines together.</p>
-<p><a href="/images/spacemacs-vim-normal-g-menu.png"><img alt="Spacemacs Vim Normal - g menu" src="/images/spacemacs-vim-normal-g-menu.png" /></a></p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-vim-normal-g-menu.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Vim Normal - g menu" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-vim-normal-g-menu.png?raw=true" /></a></p>
 <h2 id="comment-lines-and-regions">Comment lines and regions<a class="headerlink" href="#comment-lines-and-regions" title="Permanent link">λ︎</a></h2>
 <p><code>g c c</code> will comment the current line using the buffer major mode comment character(s).  A prompt will ask if no comment character is set for the major mode.</p>
 <p><code>g c</code> with a selected region will comment all lines with the major mode comment character(s)</p>
 <h2 id="multiple-cursors">Multiple cursors<a class="headerlink" href="#multiple-cursors" title="Permanent link">λ︎</a></h2>
-<p><code>g r</code> is the menu for <a href="/spacemacs-basics/evil-tools/multiple-cursors.md">multiple cursors</a>, allowing simultaneous editing at multiple points</p>
+<p><code>g r</code> is the menu for <a href="/spacemacs/spacemacs-basics/evil-tools/multiple-cursors/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5m76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5"/></svg></span> multiple cursors</a>, allowing simultaneous editing at multiple points</p>
 <p><code>12 gr j</code> will add a cursor to the 12 lines below the current cursor, using the same position in the line.  Any edits are applied to all cursors.</p>
 <p><code>g r q</code> will quit multiple cursors, returning to just one cursor.</p>
 <h2 id="jumping-around">Jumping around<a class="headerlink" href="#jumping-around" title="Permanent link">λ︎</a></h2>
@@ -8287,13 +8257,13 @@
 <h2 id="moving-text-around">Moving text around<a class="headerlink" href="#moving-text-around" title="Permanent link">λ︎</a></h2>
 <p><code>g J</code> joins the next line to the current line.</p>
 <h2 id="workspaces">Workspaces<a class="headerlink" href="#workspaces" title="Permanent link">λ︎</a></h2>
-<p><code>g t</code> to switch to next <a href="../working-with-projects/layouts/">workspace</a>, <code>g T</code> to switch to previous.</p>
+<p><code>g t</code> to switch to next <a href="/spacemacs-basics/working-with-projects/layouts/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5m76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5"/></svg></span> workspace</a>, <code>g T</code> to switch to previous.</p>
 <h2 id="changing-text-case">Changing text case<a class="headerlink" href="#changing-text-case" title="Permanent link">λ︎</a></h2>
 <p><code>g u</code> to change the current character or selection to lowercase, <code>g U</code> for uppercase.</p>
-<blockquote>
-<h4 id="hinttoggle-case-with">Hint::Toggle case with <code>~</code><a class="headerlink" href="#hinttoggle-case-with" title="Permanent link">λ︎</a></h4>
+<div class="admonition hint">
+<p class="admonition-title">Toggle case with <code>~</code></p>
 <p><code>~</code> will toggle the case of the current character or selected region.</p>
-</blockquote>
+</div>
 
 
 
@@ -8314,7 +8284,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 25, 2022 01:07:53">December 25, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 26, 2025 23:45:10 UTC">May 26, 2025</span>
   </span>
 
     
@@ -8487,10 +8457,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tabs.link", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
