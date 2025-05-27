@@ -9,7 +9,7 @@ Portal is a web browser data inspector that can be configured as the `tap>` sour
 
 Portal is simple to add to a REPL as it only requires the Portal library to be added as a dependency.
 
-practicalli/clojure-deps-edn includes several aliases for portal, depending on the type of Clojure project used.
+practicalli/clojure-cli-config includes several aliases for portal, depending on the type of Clojure project used.
 
 | Command                          | Description                                           |
 |----------------------------------|-------------------------------------------------------|
@@ -70,7 +70,7 @@ Create a `user` namespace in the file `dev/user.clj`. Require the portal library
 (inspect/tap)
 ```
 
-The `:env/dev` alias from [`practicalli/clojure-deps-edn`](https://practical.li/clojure/clojure-cli/install/community-tools.html) adds `dev` directory to the classpath, so the `user` namespace in `dev/user.clj` is loaded when starting the REPL.
+The `:env/dev` alias from [`practicalli/clojure-cli-config`](https://practical.li/clojure/clojure-cli/install/community-tools.html) adds `dev` directory to the classpath, so the `user` namespace in `dev/user.clj` is loaded when starting the REPL.
 
 
 ```shell

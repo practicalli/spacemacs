@@ -4,7 +4,7 @@ Using a remote REPL can provide a collaborative coding environment as well as a 
 
 Running a remote REPL can also provide longevity to the process, as many clients (editors, ssh terminals) can connect to the REPL over time, disconnecting from the running process without interrupting the process.  This provides a very resilient way of running a REPL.
 
-[practicalli/clojure-deps-edn](https://practical.li/clojure/clojure-cli/install/community-tools.html) provides many aliases to configure a REPL to work with other community tools.  These aliases are easier to manage when running a REPL outside of an editor which automatically injects its own configuration.  This configuration can be installed into the remote environment and ideally added into the server build process.
+[practicalli/clojure-cli-config](https://practical.li/clojure/clojure-cli/install/community-tools.html) provides many aliases to configure a REPL to work with other community tools.  These aliases are easier to manage when running a REPL outside of an editor which automatically injects its own configuration.  This configuration can be installed into the remote environment and ideally added into the server build process.
 
 ![Connecting to a remote REPL with a Clojure aware editor](https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-remote-repl-terminal-editor.png)
 
@@ -16,7 +16,7 @@ A small Virtual Private Server (VPS) is enough for a remote Clojure environment.
 ??? INFO "Micro VPS on Google Cloud"
     [How to set up a f1-micro VPS on Google Cloud](https://medium.com/@hbmy289/how-to-set-up-a-free-micro-vps-on-google-cloud-platform-bddee893ac09)
 
-* Install [Clojure CLI tools](https://practical.li/clojure/clojure-cli/install/) and [practicalli/clojure-deps-edn configuration](https://practical.li/clojure/clojure-cli/install/community-tools.html)
+* Install [Clojure CLI tools](https://practical.li/clojure/clojure-cli/install/) and [practicalli/clojure-cli-config configuration](https://practical.li/clojure/clojure-cli/install/community-tools.html)
 * Git Client
 * SSH server
 * Set up user account
@@ -53,7 +53,7 @@ Host remote-clojure-server
 
 ## Configure Emacs to listen to nREPL port
 
-Connect to a Clojure REPL that was started with nREPL and Cider middleware, e.g. `:middleware/cider-clj` from [`practicalli/clojure-deps-edn`](http://practical.li/clojure/clojure-cli/install/community-tools.html){target=_blank}
+Connect to a Clojure REPL that was started with nREPL and Cider middleware, e.g. `:middleware/cider-clj` from [`practicalli/clojure-cli-config`](http://practical.li/clojure/clojure-cli/install/community-tools.html){target=_blank}
 
 === "Spacemacs"
     ++spc++ ++"f"++ ++"e"++ ++"d"++ to open the Spacemacs configuration and add the following code to the `dotspacemacs/user-config` section
@@ -73,7 +73,7 @@ Connect to a Clojure REPL that was started with nREPL and Cider middleware, e.g.
 
 The majority of [Clojure aware editors](https://practical.li/clojure/clojure-editors/){target=_blank} can connect to an external REPL using the nREPL protocol.  Emacs CIDER, VSCode Calva and NeoVim Conjure all use nREPL and the Cider middleware.
 
-[practicalli/clojure-deps-edn](https://practical.li/clojure/clojure-cli/install/community-tools.html){target=_blank} defines the `:middleware/clj` alias that includes several libraries required for the nREPL connection between CIDER and the REPL.
+[practicalli/clojure-cli-config](https://practical.li/clojure/clojure-cli/install/community-tools.html){target=_blank} defines the `:middleware/clj` alias that includes several libraries required for the nREPL connection between CIDER and the REPL.
 
 SSH into the remote server.
 

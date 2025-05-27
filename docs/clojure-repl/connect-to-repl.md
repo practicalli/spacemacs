@@ -2,14 +2,14 @@
 
 Starting a REPL in a terminal is the most resilient way of running a REPL, as if the editor has to be restarted or crashes, the REPL is not affected.
 
-[practicalli/clojure-deps-edn](https://practical.li/clojure/clojure-cli/install/community-tools.html) provides many aliases to configure a REPL to work with other community tools (e.g. data ).  These aliases are easier to manage when running a REPL outside of an editor which automatically injects its own configuration.
+[practicalli/clojure-cli-config](https://practical.li/clojure/clojure-cli/install/community-tools.html) provides many aliases to configure a REPL to work with other community tools (e.g. data ).  These aliases are easier to manage when running a REPL outside of an editor which automatically injects its own configuration.
 
 
 ## Start a REPL in the terminal
 
 The `clojure` command and `clj` wrapper both start a REPL with a basic terminal interface, `clj` also provides command history.
 
-`:repl/headless` alias from [practicalli/clojure-deps-edn](https://practical.li/clojure/clojure-cli/install/community-tools.html){target=_blank} provides a rich terminal UI and libraries required for editors to connect via nREPL (network REPL protocol).
+`:repl/headless` alias from [practicalli/clojure-cli-config](https://practical.li/clojure/clojure-cli/install/community-tools.html){target=_blank} provides a rich terminal UI and libraries required for editors to connect via nREPL (network REPL protocol).
 
 Open a terminal in the root directory of a Clojure project and run a non-interactive REPL process
 
@@ -25,7 +25,7 @@ An `.nrepl-port` file is created in the root of the Clojure project, containing 
 
 
 ??? INFO "Headless terminal REPL "
-    `:repl/headless` alias from [practicalli/clojure-deps-edn](https://practical.li/clojure/clojure-cli/install/community-tools.html){target=_blank} includes libraries required for the nREPL connection between CIDER and the REPL.  A headless session is useful for remote REPL processes on other servers or when interaction is only done via the editor.
+    `:repl/headless` alias from [practicalli/clojure-cli-config](https://practical.li/clojure/clojure-cli/install/community-tools.html){target=_blank} includes libraries required for the nREPL connection between CIDER and the REPL.  A headless session is useful for remote REPL processes on other servers or when interaction is only done via the editor.
     ```
     clojure -M:repl/rebel-nrepl
     ```

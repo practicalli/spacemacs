@@ -36,7 +36,7 @@ To enable sayid, add the following `:variable` to the `clojure` layer in `.space
 ??? "Cider Jack-in approach problematic"
     Clojure CLI projects require the sayid middleware to be included in the `:main-opts` configuration.  Including an alias with the cider-jack-in approach will ignore any `:main-opts` configuration and use its own `:main-opts` injected into the cider-jack-in command
 
-    [Practicalli Clojure CLI Config](https://github.com/practicalli/clojure-deps-edn) contains several aliases that can be used with cider-connect
+    [Practicalli Clojure CLI Config](https://github.com/practicalli/clojure-cli-config) contains several aliases that can be used with cider-connect
 
     > For a Leiningen project, sayid can be run from cider-jack-in although the sayid library should be added as a dev-dependency and the Leiningen plugin `{:user {:plugins [[com.billpiel/sayid "0.1.0"]]}}`
 

@@ -13,7 +13,7 @@ Kaocha can also be run as an alternative to the cider-test runner as the Spacema
 
 Start a REPL process that includes the kaocha library
 
-`:lib/kaocha` alias in [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn){target=_blank} includes Kaocha as a library
+`:lib/kaocha` alias in [practicalli/clojure-cli-config](https://github.com/practicalli/clojure-cli-config){target=_blank} includes Kaocha as a library
 
 ```bash
 clojure -M:lib/kaocha:repl/rebel
@@ -39,7 +39,7 @@ clojure -M:lib/kaocha:repl/rebel
 
 Kaocha on the command line will run tests from the saved code files, so is very useful to run before committing files as well as during a Continuous Integration workflow.
 
-[practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn){target=_blank} defines aliases to run Kaocha from the `clojure` command:
+[practicalli/clojure-cli-config](https://github.com/practicalli/clojure-cli-config){target=_blank} defines aliases to run Kaocha from the `clojure` command:
 
 `clojure -X:test/run` will run all tests found in the project, unless there is a failing test which will end the test run.
 
@@ -50,7 +50,7 @@ Kaocha on the command line will run tests from the saved code files, so is very 
 
 [Kaocha install guide](https://cljdoc.org/d/lambdaisland/kaocha/1.60.977/doc/2-installing){target=_blank} recommends creating an executable shell script file, i.e. `bin/kaocha`
 
-Use the `:test/run` alias from [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn){target=_blank} (or create an alias in the project `deps.edn` file)
+Use the `:test/run` alias from [practicalli/clojure-cli-config](https://github.com/practicalli/clojure-cli-config){target=_blank} (or create an alias in the project `deps.edn` file)
 
 ```bash
 #!/usr/bin/env bash
@@ -70,7 +70,7 @@ To continually watch a function, pass the watch argument `:watch? true`
 bin/kaocha :watch? true
 ```
 
-Or define a binary that always watches, e.g. `bin/kaocha-watch` using the `:test/watch` alias from [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn)
+Or define a binary that always watches, e.g. `bin/kaocha-watch` using the `:test/watch` alias from [practicalli/clojure-cli-config](https://github.com/practicalli/clojure-cli-config)
 
 ```bash
 #!/usr/bin/env bash

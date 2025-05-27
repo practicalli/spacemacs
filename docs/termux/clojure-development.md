@@ -16,10 +16,10 @@ pkg install openjdk-17
 
 ## Install Clojure
 
-Clone practicalli/clojure-deps-edn to add a wide range of community tools to the Clojure CLI
+Clone practicalli/clojure-cli-config to add a wide range of community tools to the Clojure CLI
 
 ```bash
-git clone git@github.com:practicalli/clojure-deps-edn.git ~/.config/clojure
+git clone git@github.com:practicalli/clojure-cli-config.git ~/.config/clojure
 ```
 
 

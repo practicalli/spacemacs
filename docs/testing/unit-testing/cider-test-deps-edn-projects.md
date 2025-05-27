@@ -9,13 +9,13 @@ An alias should be used to include the `test` directory.  The `test` path should
 A `.dir-locals.el` file can include any number of aliases when using Cider jack-in.
 
 
-{% tabs practicalli="practicalli/clojure-deps-edn", deps="Manual deps.edn projects" %}
+{% tabs practicalli="practicalli/clojure-cli-config", deps="Manual deps.edn projects" %}
 
 {% content "practicalli" %}
 
 ## Practicalli user level aliases
 
-[practicalli/clojure-deps-edn](https://practical.li/clojure/clojure-cli/install/community-tools.html) user-level configuration contains several aliases for running tests within the CIDER jack-in REPL.
+[practicalli/clojure-cli-config](https://practical.li/clojure/clojure-cli/install/community-tools.html) user-level configuration contains several aliases for running tests within the CIDER jack-in REPL.
 
 `:env/test` adds the `test` directory to the class path and enables CIDER test runner to find the test code.  This is the only alias required if using Cider test runner.
 
@@ -90,8 +90,8 @@ Rebel readline provides a rich terminal UI with nrepl server , enabling CIDER to
                 "-f" "rebel-readline.main/-main"]}
 ```
 
-> #### Hint:: practicalli/clojure-deps-edn contains common tools and aliases
-> [practicalli/clojure-deps-edn](https://practical.li/clojure/clojure-cli/install/community-tools.html) contains aliases for all aspects of Clojure development with the CLI tools.
+> #### Hint:: practicalli/clojure-cli-config contains common tools and aliases
+> [practicalli/clojure-cli-config](https://practical.li/clojure/clojure-cli/install/community-tools.html) contains aliases for all aspects of Clojure development with the CLI tools.
 
 {% endtabs %}
 

@@ -18,7 +18,7 @@ Using an alias is the recommended way to include Java sources for Clojure CLI pr
    {org.clojure/source {:local/root "~/projects/community/clojure.org/clojure"}}}
 ```
 
-[practicalli/example deps.edn includes example aliases for java sources](https://github.com/practicalli/clojure-deps-edn#java-sources){target=_blank}
+[practicalli/example deps.edn includes example aliases for java sources](https://github.com/practicalli/clojure-cli-config#java-sources){target=_blank}
 
 !!! HINT "Location of Sources"
     The location of the Java src.zip file may differ on your operating system.  You can also extract the `src.zip` file and use the extracted sources.

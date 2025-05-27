@@ -33,7 +33,7 @@ Tests are only as good as the thought that goes into them.  Generative testing c
 
 Continuous Integration (CI) services CircleCI, GitHub and GitLabs all support Clojure projects.
 
-Clojure has several test runners that can be used with CI servers and [practicalli/clojure-deps.edn defines a range of aliases for Clojure test runners](https://github.com/practicalli/clojure-deps-edn/#test-runners-and-test-coverage-tools){target=_blank}.
+Clojure has several test runners that can be used with CI servers and [practicalli/clojure-deps.edn defines a range of aliases for Clojure test runners](https://github.com/practicalli/clojure-cli-config/#test-runners-and-test-coverage-tools){target=_blank}.
 
 * `:test/run` to run [lambdaisland/kaocha](https://github.com/lambdaisland/kaocha){target=_blank} test runner, which is configured to stop immediately if any tests fail, minimising the time the CI workflow is running.
 * `test/cognitect` to run [cognitect-labs/test-runner](https://github.com/cognitect-labs/test-runner){target=_blank}, a light-weight test runner
