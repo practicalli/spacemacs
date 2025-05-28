@@ -1,10 +1,10 @@
 # Install Spacemacs
 
-[Install prerequisites: Emacs, Java 17, Clojure CLI and Command Line tools ](/spacemacs/install-spacemacs/pre-install/){.md-button}
+[Install prerequisites: Emacs, Java & Clojure](/spacemacs/install-spacemacs/pre-install/){.md-button}
 
-1. [Clone or download Spacemacs](#clone-spacemacs), first removing `~/.emacs.d` if it exists
+1. [Clone or download Spacemacs](#clone-spacemacs)
 2. [Clone practicalli/spacemacs-config user configuration](#clone-practicalli-spacemacs-configuration).  Or start Emacs and use the Spacemacs install wizard, follow the [manual configuration section](manual-configuration/)
-3. [Install Fira Code font](#install-fira-code-font) (or update `dotspacemacs-default-font` to a name of a font on your operating system in the Spacemacs user configuration)
+3. [Install Fira Code font](#install-fira-code-font) (or update `dotspacemacs-default-font` in the Spacemacs user configuration to a preferred font name)
 4. [Install All The Icons fonts ](#all-the-icon-fonts) to support the doom modeline theme
 
 <p style="text-align:center">
@@ -13,6 +13,8 @@
 
 
 ## Clone Spacemacs
+
+Move or remove `~/.emacs.d` directory if it exists.
 
 Use your favourite git client or the following command in a terminal window to clone Spacemacs:
 
@@ -28,7 +30,7 @@ Use your favourite git client or the following command in a terminal window to c
 
 ##  Clone Practicalli Spacemacs configuration
 
-Clone [:fontawesome-brands-github: practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config) configuration or first create a fork and clone that fork
+Clone [:fontawesome-brands-github: practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config) configuration. Create a fork of this config first if you wish to significantly modify your setup.
 
 === "Free Desktop XDG config"
     Using SSH
@@ -60,7 +62,7 @@ Clone [:fontawesome-brands-github: practicalli/spacemacs-config](https://github.
     git clone git@github.com:practicalli/spacemacs-config.git ~/.spacemacs.d
     ```
 
-    Using HTTP
+    Using HTTPS
     ```shell
     git clone https://github.com/practicalli/spacemacs-config ~/.spacemacs.d
     ```
@@ -86,13 +88,13 @@ Clone [:fontawesome-brands-github: practicalli/spacemacs-config](https://github.
 
 ![Fira Code font - ligatures for Emacs and Clojure code](https://github.com/practicalli/graphic-design/blob/live/clojure/fira-code-font-clojure-ligatures.png?raw=true)
 
-!!! HINT "Use a different font with practicalli/spacemacs-config"
+??? HINT "Use a different font with practicalli/spacemacs-config"
     To use a different font when using the [:fontawesome-brands-github: practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config), edit `init.el` and update the value for `dotspacemacs-default-font` to a name of a font on your system.
 
 
 ## Emacs Packages
 
-Spacemacs automatically downloads and compiles Emacs packages when Emacs is run.
+Spacemacs automatically downloads Emacs packages when Emacs is run, creating a compiled `.elc` file for each Emacs lisp file.
 
 If Emacs supports native compilation, then the compilation process can take longer, although Emacs should run many tasks faster or more efficiently.
 
