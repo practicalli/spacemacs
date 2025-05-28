@@ -32,5 +32,5 @@ There are a range of actions you can run from the Helm transient state or even w
 [![Spacemacs - Helm Transient State menu](/images/spacemacs-helm-transient-state-menu.png)](/images/spacemacs-helm-transient-state-menu.png)
 
 
-> #### Hint::Gnome Desktop keybinding conflict
-> `M-SPC` is used by the Gnome desktop for the window menu, so recommend you change the Gnome keyboard settings to use a different binding, i.e. `Super w`.
+!!! HINT "Gnome Desktop keybinding conflict"
+    `M-SPC` is used by the Gnome desktop for the window menu, so recommend you change the Gnome keyboard settings to use a different binding, i.e. `Super w`.

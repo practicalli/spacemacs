@@ -1,7 +1,7 @@
 # Show REPL Buffer
 
-> #### Hint::Minimise use of REPL buffer
-> When developing code it is more effective to evaluate in the source code buffers.
+!!! HINT "Minimise use of REPL buffer"
+    When developing code it is more effective to evaluate in the source code buffers.
 
 Spacemacs does not automatically show the Clojure REPL buffer when connecting to a REPL (`cider-jack-in-clj`).
 
@@ -42,4 +42,4 @@ The REPL buffer will open as an additional window in the current frame.
 
 `SPC SPC fundamental-mode` will switch off the text formatting and help the REPL buffer should be faster to respond.
 
-However, fundamental-mode should be a last resource as it limits the usefulness of the REPL buffer.
+`fundamental-mode` should be considered a last resource as it limits the usefulness of the REPL buffer.

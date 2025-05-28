@@ -23,8 +23,8 @@ The remote repository is cloned to the specified location.
 `y` at the final prompt will set the remote repository as the default push destination (shown when using `P` from Magit Status).
 
 
-> #### Hint::Create and Fork repositories
-> [Magit forge](../forge/) can be used to create and fork repositories on GitHub and GitLab
+!!! HINT "Create and Fork repositories"
+    [Magit forge](../forge/) can be used to create and fork repositories on GitHub and GitLab
 
 
 ## Update the remote name

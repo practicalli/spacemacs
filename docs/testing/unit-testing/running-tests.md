@@ -10,8 +10,8 @@ The results of running the tests are displayed in the mini-buffer, showing the n
 
 ![Spacemacs Cider tests - results in mini-buffer](/images/spacemacs-cider-test-run-tests-results-mini-buffer.png)
 
-> #### Hint::Spacemacs loads current buffer before running tests
-> Run unit tests from the buffer that has changes or new tests.  Otherwise, ensure all buffers with changes have been evaluated to ensure the tests run with the right src and test code.
+!!! HINT "Spacemacs loads current buffer before running tests"
+    Run unit tests from the buffer that has changes or new tests.  Otherwise, ensure all buffers with changes have been evaluated to ensure the tests run with the right src and test code.
 
 
 ## Using Test Selectors to run specific tests
@@ -46,9 +46,10 @@ Then prompts for the test selectors to exclude.  A warning displays in the power
 <kbd>, e b</kbd> will evaluate the current buffer and automatically run all tests.
 
 
-> #### Hint::CIDER test report only created on test failure
-> To show a test report each time tests are run, add the variable `cider-test-show-report-on-success t` in the `clojure` layer list of the `.spacemacs` file.
-```lisp
-     (clojure :variables
-              cider-test-show-report-on-success t)
-```
+!!! HINT "CIDER test report only created on test failure"
+    To show a test report each time tests are run, add the variable `cider-test-show-report-on-success t` in the `clojure` layer list of the `.spacemacs` file.
+
+    ```lisp
+    (clojure :variables
+             cider-test-show-report-on-success t)
+    ```

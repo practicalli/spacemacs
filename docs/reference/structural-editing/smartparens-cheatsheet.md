@@ -2,12 +2,12 @@
 
 `SPC SPC sp-cheat-sheet`  lists all the smartparens commands available
 
-> #### Hint::Animated cheatsheet
-> [Animated Smartparens cheatsheet](https://gist.github.com/pvik/8eb5755cc34da0226e3fc23a320a3c95) - update to use Spacemacs keybindings
+!!! HINT "Animated cheatsheet"
+    [Animated Smartparens cheatsheet](https://gist.github.com/pvik/8eb5755cc34da0226e3fc23a320a3c95) - update to use Spacemacs keybindings
 
 ---
 
-> ####TODO::Break out common commands into their own sections with examples
+<!--- TODO::Break out common commands into their own sections with examples --->
 
 
     (sp-cheat-sheet &optional ARG)

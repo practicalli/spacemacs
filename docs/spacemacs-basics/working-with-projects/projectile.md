@@ -2,7 +2,6 @@
 
 `SPC p` opens the projectile menu allowing you to run commands relative to the project of the active buffer.
 
-[![Spacemacs Projectile menu](/images/spacemacs-projectile-menu.png)](/images/spacemacs-projectile-menu.png)
 
 ## What is a Projectile project
 
@@ -12,16 +11,14 @@ A project can be one or more of the following things
 * Language specific - e.g. a Clojure Leiningen project
 * Projectile - any directory with a `.projectile` file
 
-> #### Hint::Searching across multiple projects
-> Create an empty file called `.projectile` in the root of the directory that contains all your projects.  `SPC /` in any project will now search through all files in all your projects.  Remove the `.projectile` file when finished, to search through just the current project.
+!!! HINT "Searching across multiple projects"
+    Create an empty file called `.projectile` in the root of the directory that contains all your projects.  `SPC /` in any project will now search through all files in all your projects.  Remove the `.projectile` file when finished, to search through just the current project.
 
 ## Opening Files from the same project
 
 `SPC p f` to open a file in the current project that you know the name of. All project files are listed and as you type the file name the list of names is narrowed. Use `C-k` and `C-j` keybindings to move up and down the list respectively.
 
 This is a good approach if you know the name but not the directory path of the file.  Use `SPC f f` if you know the directory but not the name of the file you want.
-
-[![Spacemacs Projectile File - new file](/images/spacemacs-projectile-file-new-file--light.png)](/images/spacemacs-projectile-file-new-file--light.png)
 
 
 ## Switching between buffers
@@ -35,7 +32,7 @@ This is a good approach if you know the name but not the directory path of the f
 
 In Clojure this is based on the corresponding namespaces, so `SPC p a` would toggle between these two files.
 
-```
+```shell
 src/project-name/component/clojure-code.clj
 test/project-name/component/clojure-code.clj
 ```

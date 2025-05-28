@@ -6,23 +6,23 @@ Variables are grouped by the files they are defined in throughout the [clojure-e
 
 CIDER Variables can be set via:
 
-* `.dir-locals.el` files for [project specific configuration](/clojure-projects/project-configuration.md)
-* `(clojure :variables variable-name value)` in .spacemacs layers list
-* `(setq variable-name value)` in `dotspacemacs/user-config` section of `.spacemacs`
+- `.dir-locals.el` files for [project specific configuration](/spacemacs/clojure-projects/project-configuration.md)
+- `(clojure :variables variable-name value)` in .spacemacs layers list
+- `(setq variable-name value)` in `dotspacemacs/user-config` section of `.spacemacs`
 
-> #### Hint::Clojure Project Configuration
-> Examples of using `.dir-locals.el` for Clojure projects are covered in the [project level configuration page](/clojure-projects/project-configuration.md)
+!!! HINT "Clojure Project Configuration"
+    Examples of using `.dir-locals.el` for Clojure projects are covered in the [project level configuration page](/spacemacs/clojure-projects/project-configuration.md)
 
 
 ## Completion
 
-| Variables                               | Default value | Description                                                                                                                                                              |
-|-----------------------------------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| cider-completion-use-context            |               | `true` - use context at point to improve completion suggestions                                                                                                          |
-| cider-annotate-completion-candidates    |               | `true` - annotate completion candidates                                                                                                                                  |
-| cider-annotate-completion-function      |               | function to format annotations for completion candidates - takes 2 arguments: abbreviation candidate type (`cider-completion-annotations-alist`) and candidate namespace |
-| cider-completion-annotations-alist      |               | Annotation abbreviation for completion candidates (TYPE . ABBREVIATION). TYPE is that returned from the completion backend.ABBREVIATION is a short form of that type.    |
-| cider-completion-annotations-include-ns |               | Pass namespace to `cider-annotate-completion-function`, `'always` passed if namespace is available. `'unqualified` only pass namespace if not namespace-qualified.       |
+| Variables                               | Description                                                                                                                                                              |
+|-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| cider-completion-use-context            | `true` - use context at point to improve completion suggestions                                                                                                          |
+| cider-annotate-completion-candidates    | `true` - annotate completion candidates                                                                                                                                  |
+| cider-annotate-completion-function      | function to format annotations for completion candidates - takes 2 arguments: abbreviation candidate type (`cider-completion-annotations-alist`) and candidate namespace |
+| cider-completion-annotations-alist      | Annotation abbreviation for completion candidates (TYPE . ABBREVIATION). TYPE is that returned from the completion backend.ABBREVIATION is a short form of that type.    |
+| cider-completion-annotations-include-ns | Pass namespace to `cider-annotate-completion-function`, `'always` passed if namespace is available. `'unqualified` only pass namespace if not namespace-qualified.       |
 
 
 ## Client

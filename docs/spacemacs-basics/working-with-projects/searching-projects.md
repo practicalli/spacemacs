@@ -12,8 +12,8 @@ Use `C-j` and `C-k` to move down and up through the search results.
 
 ![Spacemacs Helm-Ag ripgrep pattern search results](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-pattern-search.png)
 
-> #### Hint::Replacing text across a project
-> Use search results to [replace text across a project](/spacemacs-basics/evil-tools/replacing-text-across-projects.md).
+!!! HINT "Replacing text across a project"
+    Use search results to [replace text across a project](/spacemacs/spacemacs-basics/evil-tools/replacing-text-across-projects.md).
 
 
 ## Open files from search results
@@ -30,10 +30,10 @@ Set `helm-follow-mode-persistent` to true in `.spacemacs` to remember the use of
 
 ## Search tool binary
 
-Searching requires an external tool to be available on your system PATH. [Ripgrep](https://github.com/BurntSushi/ripgrep) is the recommended search tool, although [silver searcher (ag)](/alternative-tooling/silversearcher-ag.md) is a viable alternative.  Using `grep` is noticeably slower and has fewer options for searching.
+Searching requires an external tool to be available on your system PATH. [:globe_with_meridians: Ripgrep](https://github.com/BurntSushi/ripgrep) is the recommended search tool, although [silver searcher (ag)](/spacemacs/alternative-tooling/silversearcher-ag.md) is a viable alternative.  Using `grep` is noticeably slower and has fewer options for searching.
 
-* [Ripgrep install instructions](https://github.com/BurntSushi/ripgrep#installation)
-* [silver searcher (ag)](/alternative-tooling/silversearcher-ag.md)
+- [:globe_with_meridians: Ripgrep install instructions](https://github.com/BurntSushi/ripgrep#installation)
+- [:globe_with_meridians: silver searcher (ag)](/alternative-tooling/silversearcher-ag.md)
 
 
 ## Ripgrep search tool options
@@ -106,7 +106,7 @@ For example, to search for the pattern `scissors`
 scissors -- --hidden
 ```
 
-> #### Hint::Searching hidden files may slow searching
+!!! HINT "Searching hidden files may slow search results"
 
 
 ### Ripgrep configuration and arguments
@@ -126,10 +126,10 @@ export RIPGREP_CONFIG_PATH=~/.config/ripgrep.config
 | `--glob=!git/*` | glob patters, `!` excluded                         |
 | `--smart-case`  | Ignore case                                        |
 
-* [Ripgrep configuration file](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#configuration-file)
+- [Ripgrep configuration file](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#configuration-file)
 
 
 ## References
 
-* https://github.com/BurntSushi/ripgrep
-* https://blog.burntsushi.net/ripgrep/
+- https://github.com/BurntSushi/ripgrep
+- https://blog.burntsushi.net/ripgrep/

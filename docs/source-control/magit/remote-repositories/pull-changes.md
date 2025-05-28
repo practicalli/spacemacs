@@ -10,9 +10,10 @@ Commits can be pulled or fetched from remote repositories.
 
 Use `e` to pull from a different repository.
 
-> #### Hint::Ensure you are on the correct local branch
-> The current local branch is shown at the top of the Magit Status buffer.
-> `b b` displays a popup to select a different branch if you are not on the correct branch to pull changes into.
+!!! HINT "Ensure you are on the correct local branch"
+    The current local branch is shown at the top of the Magit Status buffer.
+
+    `b b` displays a popup to select a different branch if you are not on the correct branch to pull changes into.
 
 
 ## Rebase when pull
