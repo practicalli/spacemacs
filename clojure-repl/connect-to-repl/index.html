@@ -3348,7 +3348,7 @@
   
   
   <span class="md-ellipsis">
-    Cider test deps edn projects
+    Configure Cider Test runner
     
   </span>
   
@@ -8191,10 +8191,10 @@
 
 <h1 id="connect-to-a-clojure-repl">Connect to a Clojure REPL<a class="headerlink" href="#connect-to-a-clojure-repl" title="Permanent link">λ︎</a></h1>
 <p>Starting a REPL in a terminal is the most resilient way of running a REPL, as if the editor has to be restarted or crashes, the REPL is not affected.</p>
-<p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html">practicalli/clojure-deps-edn</a> provides many aliases to configure a REPL to work with other community tools (e.g. data ).  These aliases are easier to manage when running a REPL outside of an editor which automatically injects its own configuration.</p>
+<p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html">practicalli/clojure-cli-config</a> provides many aliases to configure a REPL to work with other community tools (e.g. data ).  These aliases are easier to manage when running a REPL outside of an editor which automatically injects its own configuration.</p>
 <h2 id="start-a-repl-in-the-terminal">Start a REPL in the terminal<a class="headerlink" href="#start-a-repl-in-the-terminal" title="Permanent link">λ︎</a></h2>
 <p>The <code>clojure</code> command and <code>clj</code> wrapper both start a REPL with a basic terminal interface, <code>clj</code> also provides command history.</p>
-<p><code>:repl/headless</code> alias from <a href="https://practical.li/clojure/clojure-cli/install/community-tools.html" target="_blank">practicalli/clojure-deps-edn</a> provides a rich terminal UI and libraries required for editors to connect via nREPL (network REPL protocol).</p>
+<p><code>:repl/headless</code> alias from <a href="https://practical.li/clojure/clojure-cli/install/community-tools.html" target="_blank">practicalli/clojure-cli-config</a> provides a rich terminal UI and libraries required for editors to connect via nREPL (network REPL protocol).</p>
 <p>Open a terminal in the root directory of a Clojure project and run a non-interactive REPL process</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>clojure<span class="w"> </span>-M:repl/headless
 </code></pre></div>
@@ -8203,7 +8203,7 @@
 <p>An <code>.nrepl-port</code> file is created in the root of the Clojure project, containing the port number the nREPL server is listening upon.</p>
 <details class="info">
 <summary>Headless terminal REPL </summary>
-<p><code>:repl/headless</code> alias from <a href="https://practical.li/clojure/clojure-cli/install/community-tools.html" target="_blank">practicalli/clojure-deps-edn</a> includes libraries required for the nREPL connection between CIDER and the REPL.  A headless session is useful for remote REPL processes on other servers or when interaction is only done via the editor.
+<p><code>:repl/headless</code> alias from <a href="https://practical.li/clojure/clojure-cli/install/community-tools.html" target="_blank">practicalli/clojure-cli-config</a> includes libraries required for the nREPL connection between CIDER and the REPL.  A headless session is useful for remote REPL processes on other servers or when interaction is only done via the editor.
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>clojure -M:repl/rebel-nrepl
 </code></pre></div></p>
 </details>
@@ -8277,7 +8277,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 25, 2022 01:07:53 UTC">December 25, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 27, 2025 14:07:53 UTC">May 27, 2025</span>
   </span>
 
     

@@ -34,7 +34,7 @@
     
     
       
-        <title>Cider test deps edn projects - Practicalli Spacemacs</title>
+        <title>Configure Cider Test runner - Practicalli Spacemacs</title>
       
     
     
@@ -81,7 +81,7 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Cider test deps edn projects - Practicalli Spacemacs" >
+        <meta  property="og:title"  content="Configure Cider Test runner - Practicalli Spacemacs" >
       
         <meta  property="og:description"  content="Practical guide to Clojure development with Spacemacs" >
       
@@ -97,7 +97,7 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Cider test deps edn projects - Practicalli Spacemacs" >
+        <meta  name="twitter:title"  content="Configure Cider Test runner - Practicalli Spacemacs" >
       
         <meta  name="twitter:description"  content="Practical guide to Clojure development with Spacemacs" >
       
@@ -133,7 +133,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configure-unit-testing-for-depsedn-projects" class="md-skip">
+        <a href="#configure-cider-test-runner" class="md-skip">
           Skip to content
         </a>
       
@@ -203,7 +203,7 @@
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
-             Cider test deps edn projects 
+             Configure Cider Test runner 
           </span>
         </div>
       </div>
@@ -3280,13 +3280,15 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   
   <span class="md-ellipsis">
-    Cider test deps edn projects
+    Configure Cider Test runner
     
   </span>
   
@@ -3299,7 +3301,7 @@
   
   
   <span class="md-ellipsis">
-    Cider test deps edn projects
+    Configure Cider Test runner
     
   </span>
   
@@ -3312,6 +3314,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -3320,36 +3324,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configure-unit-testing-for-depsedn-projects" class="md-nav__link">
+  <a href="#aliases" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure Unit Testing for deps.edn projects
+      Aliases
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#practicalli-user-level-aliases" class="md-nav__link">
+  <a href="#cider-connect" class="md-nav__link">
     <span class="md-ellipsis">
-      Practicalli user level aliases
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-test-directory" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add test directory
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#terminal-repl-uis-with-nrepl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Terminal REPL UIs with nREPL
+      CIDER connect
     </span>
   </a>
   
@@ -3362,21 +3348,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Alias to run a simple Terminal UI REPL with nREPL support">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintheadless-repl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Headless REPL
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3385,21 +3356,6 @@
       Alias to run a Rebel REPL with nREPL support
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Alias to run a Rebel REPL with nREPL support">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hint-practicalliclojure-deps-edn-contains-common-tools-and-aliases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint:: practicalli/clojure-deps-edn contains common tools and aliases
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3421,15 +3377,6 @@
   
     <nav class="md-nav" aria-label="Using CIDER jack-in">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintproject-configuration-with-dir-localsel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Project configuration with .dir-locals.el
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#edit-the-jack-in-command" class="md-nav__link">
@@ -8225,6 +8172,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -8233,36 +8182,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configure-unit-testing-for-depsedn-projects" class="md-nav__link">
+  <a href="#aliases" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure Unit Testing for deps.edn projects
+      Aliases
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#practicalli-user-level-aliases" class="md-nav__link">
+  <a href="#cider-connect" class="md-nav__link">
     <span class="md-ellipsis">
-      Practicalli user level aliases
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#add-test-directory" class="md-nav__link">
-    <span class="md-ellipsis">
-      Add test directory
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#terminal-repl-uis-with-nrepl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Terminal REPL UIs with nREPL
+      CIDER connect
     </span>
   </a>
   
@@ -8275,21 +8206,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Alias to run a simple Terminal UI REPL with nREPL support">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintheadless-repl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Headless REPL
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -8298,21 +8214,6 @@
       Alias to run a Rebel REPL with nREPL support
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Alias to run a Rebel REPL with nREPL support">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hint-practicalliclojure-deps-edn-contains-common-tools-and-aliases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint:: practicalli/clojure-deps-edn contains common tools and aliases
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -8334,15 +8235,6 @@
   
     <nav class="md-nav" aria-label="Using CIDER jack-in">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintproject-configuration-with-dir-localsel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Project configuration with .dir-locals.el
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#edit-the-jack-in-command" class="md-nav__link">
@@ -8399,88 +8291,102 @@
   
 
 
-  <h1>Cider test deps edn projects</h1>
-
-<h2 id="configure-unit-testing-for-depsedn-projects">Configure Unit Testing for deps.edn projects<a class="headerlink" href="#configure-unit-testing-for-depsedn-projects" title="Permanent link">λ︎</a></h2>
-<p>Cider test runner is a convenient way to run Clojure unit tests, using the same REPL for evaluating source code.</p>
-<p>The <code>test</code> directory must be included in the classpath when running the REPL, as test code is evaluated in the running REPL.</p>
-<p>An alias should be used to include the <code>test</code> directory.  The <code>test</code> path should not be part of the main <code>:paths</code> configuration, otherwise test code would be included in the jar or uberjar package and deployment.</p>
-<p>A <code>.dir-locals.el</code> file can include any number of aliases when using Cider jack-in.</p>
-<p>{% tabs practicalli="practicalli/clojure-deps-edn", deps="Manual deps.edn projects" %}</p>
-<p>{% content "practicalli" %}</p>
-<h2 id="practicalli-user-level-aliases">Practicalli user level aliases<a class="headerlink" href="#practicalli-user-level-aliases" title="Permanent link">λ︎</a></h2>
-<p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html">practicalli/clojure-deps-edn</a> user-level configuration contains several aliases for running tests within the CIDER jack-in REPL.</p>
-<p><code>:env/test</code> adds the <code>test</code> directory to the class path and enables CIDER test runner to find the test code.  This is the only alias required if using Cider test runner.</p>
-<p><code>:lib/kaocha</code> add the kaocha library to the class path, so <a href="/testing/kaocha-test-runner.md">kaocha can be used instead of CIDER test runner</a>.</p>
-<p>Other aliases can be used with the <code>:env/test</code> alias to support cider-connect approach:</p>
+<h1 id="configure-cider-test-runner">Configure Cider Test runner<a class="headerlink" href="#configure-cider-test-runner" title="Permanent link">λ︎</a></h1>
+<p>Cider test runner provides a convenient way to run Clojure unit tests from within Emacs.</p>
+<p>Source and test code is evaluated and the Cider test runner calls the <code>deftest</code> functions to run all the tests.  The results of the test run are shown in Emacs, along with a failure report if appropriate.</p>
+<p>The <code>test</code> directory must be included in the classpath when running the REPL, otherwise the CIDER test runner will not find the <code>deftest</code> definitions.</p>
+<details class="info">
+<summary>Test directory should only added via an alias</summary>
+<p>The <code>test</code> path should not be part of the main <code>:paths</code> configuration, otherwise test code would be included in the jar or uberjar package and deployment.</p>
+</details>
+<details class="hint">
+<summary>Use .dir-locals.el to set default aliases when starting the REPL</summary>
+<p>A <code>.dir-locals.el</code> is an <a href="/spacemacs/clojure-development/project-configuration/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5m76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5"/></svg></span> Emacs project configuration file</a> which can set any number of aliases that are automatically included when calling the Cider jack-in command.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">((</span><span class="nv">clojure-mode</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="p">((</span><span class="nv">cider-preferred-build-tool</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="nv">clojure-cli</span><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">                  </span><span class="p">(</span><span class="nv">cider-clojure-cli-aliases</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">&quot;:env/test&quot;</span><span class="p">))))</span>
+</code></pre></div>
+</details>
+<h2 id="aliases">Aliases<a class="headerlink" href="#aliases" title="Permanent link">λ︎</a></h2>
+<p>Use an alias to include the <code>test</code> directory and libraries that support testing.</p>
+<p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32 93.5 32 46.3 45.3 18.1 56.1 6.8 60.5 0 71.7 0 83.8v370.3c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5m76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6 11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5"/></svg></span> Practicalli Clojure CLI Config</a> contains several aliases to support the running of tests with the CIDER test runner.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Practicalli Clojure CLI aliases</label><label for="__tabbed_1_2">Alias definition</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><code>:test/env</code> adds the <code>test</code> directory to the class path and enables CIDER test runner to find the test code.  This is the only alias required if using Cider test runner.</p>
+<p><code>:lib/kaocha</code> add the kaocha test runner library to the class path, so <a href="/testing/kaocha-test-runner.md">kaocha can be used instead of CIDER test runner</a>.</p>
+<p>Other aliases can be used with the <code>:test/env</code> alias to support cider-connect approach:</p>
 <p><code>:repl/cider</code> include the nrepl and cider-nrepl libraries and starts an nREPL server connected to the REPL</p>
 <p><code>:repl/rebel</code> run Rebel Readline, providing a rich terminal UI for the REPL</p>
-<p>{% content "deps" %}</p>
-<h2 id="add-test-directory">Add test directory<a class="headerlink" href="#add-test-directory" title="Permanent link">λ︎</a></h2>
-<p>Add the <code>:env/dev</code> alias to the project <code>deps.edn</code> file or user level configuration.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ss">:aliases</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="ss">:env/test</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p">{</span><span class="ss">:extra-paths</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;test&quot;</span><span class="p">]}</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
+</div>
+<div class="tabbed-block">
+<p>Add the <code>test</code> directory to the classpath when starting the REPL using a <code>:test/env</code> alias added to the project <code>deps.edn</code> file.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="ss">:aliases</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="ss">:test/env</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="p">{</span><span class="ss">:extra-paths</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;test&quot;</span><span class="p">]}</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
 </code></pre></div>
-<h2 id="terminal-repl-uis-with-nrepl">Terminal REPL UIs with nREPL<a class="headerlink" href="#terminal-repl-uis-with-nrepl" title="Permanent link">λ︎</a></h2>
-<p>Use <code>cider-connect</code> to connect to the Clojure REPL process started in a terminal window with the following command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>clojure<span class="w"> </span>-M:env/test:repl/cider-clj
+</div>
+</div>
+</div>
+<h2 id="cider-connect">CIDER connect<a class="headerlink" href="#cider-connect" title="Permanent link">λ︎</a></h2>
+<p>Use <code>cider-connect</code> to connect Emacs CIDER to the Clojure REPL process via its nREPL server, started in a terminal window with the following command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>clojure<span class="w"> </span>-M:test/env:repl/basic
 </code></pre></div>
-<p>Use the <code>:repl/rebel-nrepl</code> alias to also run a Rebel UI for the REPL in the terminal.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>clojure<span class="w"> </span>-M:env/test:repl/rebel-nrepl
+<p>Or for a richer terminal UI experience, use the <code>:repl/rebel</code> alias to start a REPL &amp; nREPL server:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>clojure<span class="w"> </span>-M:test/env:repl/rebel-nrepl
 </code></pre></div>
 <h2 id="alias-to-run-a-simple-terminal-ui-repl-with-nrepl-support">Alias to run a simple Terminal UI REPL with nREPL support<a class="headerlink" href="#alias-to-run-a-simple-terminal-ui-repl-with-nrepl-support" title="Permanent link">λ︎</a></h2>
 <p>Run a REPL using nREPL server that starts an nREPL server, enabling CIDER to connect via <code>cider-connect-clj</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w"> </span><span class="ss">:repl/cider</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="p">{</span><span class="ss">:extra-deps</span><span class="w"> </span><span class="p">{</span><span class="nv">nrepl/nrepl</span><span class="w">                </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">&quot;0.9.0&quot;</span><span class="p">}</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">                </span><span class="nv">cider/cider-nrepl</span><span class="w">          </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">&quot;0.27.4&quot;</span><span class="p">}}</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">   </span><span class="ss">:main-opts</span><span class="w">  </span><span class="p">[</span><span class="s">&quot;-m&quot;</span><span class="w"> </span><span class="s">&quot;nrepl.cmdline&quot;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">                </span><span class="s">&quot;--middleware&quot;</span><span class="w"> </span><span class="s">&quot;[cider.nrepl/cider-middleware]&quot;</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">                </span><span class="s">&quot;-i&quot;</span><span class="p">]}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">  </span><span class="ss">:repl/basic</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="p">{</span><span class="ss">:extra-deps</span><span class="w"> </span><span class="p">{</span><span class="nv">nrepl/nrepl</span><span class="w">       </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">&quot;1.3.1&quot;</span><span class="p">}</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">                </span><span class="nv">cider/cider-nrepl</span><span class="w"> </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">&quot;0.55.7&quot;</span><span class="p">}}</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">   </span><span class="ss">:main-opts</span><span class="w">  </span><span class="p">[</span><span class="s">&quot;--main&quot;</span><span class="w"> </span><span class="s">&quot;nrepl.cmdline&quot;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">                </span><span class="s">&quot;--middleware&quot;</span><span class="w"> </span><span class="s">&quot;[cider.nrepl/cider-middleware]&quot;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">                </span><span class="s">&quot;--interactive&quot;</span><span class="p">]}</span>
 </code></pre></div>
-<blockquote>
-<h4 id="hintheadless-repl">Hint::Headless REPL<a class="headerlink" href="#hintheadless-repl" title="Permanent link">λ︎</a></h4>
+<div class="admonition hint">
+<p class="admonition-title">Headless REPL</p>
 <p>Remove the <code>"-i"</code> if a headless (non-interactive) REPL is required, useful if only interacting with Clojure code via the nREPL connected editor.</p>
-</blockquote>
+</div>
 <h2 id="alias-to-run-a-rebel-repl-with-nrepl-support">Alias to run a Rebel REPL with nREPL support<a class="headerlink" href="#alias-to-run-a-rebel-repl-with-nrepl-support" title="Permanent link">λ︎</a></h2>
 <p>Rebel readline provides a rich terminal UI with nrepl server , enabling CIDER to connect via <code>cider-connect-clj</code></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">  </span><span class="ss">:repl/rebel</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="p">{</span><span class="ss">:extra-deps</span><span class="w"> </span><span class="p">{</span><span class="nv">nrepl/nrepl</span><span class="w">                </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">&quot;0.9.0&quot;</span><span class="p">}</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">                </span><span class="nv">cider/cider-nrepl</span><span class="w">          </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">&quot;0.27.4&quot;</span><span class="p">}</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">                </span><span class="nv">com.bhauman/rebel-readline</span><span class="w"> </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">&quot;0.1.4&quot;</span><span class="p">}}</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">   </span><span class="ss">:main-opts</span><span class="w">  </span><span class="p">[</span><span class="s">&quot;-m&quot;</span><span class="w"> </span><span class="s">&quot;nrepl.cmdline&quot;</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">                </span><span class="s">&quot;--middleware&quot;</span><span class="w"> </span><span class="s">&quot;[cider.nrepl/cider-middleware]&quot;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">                </span><span class="s">&quot;-i&quot;</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">                </span><span class="s">&quot;-f&quot;</span><span class="w"> </span><span class="s">&quot;rebel-readline.main/-main&quot;</span><span class="p">]}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">  </span><span class="ss">:repl/rebel</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="p">{</span><span class="ss">:extra-deps</span><span class="w"> </span><span class="p">{</span><span class="nv">nrepl/nrepl</span><span class="w">                </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">&quot;1.3.1&quot;</span><span class="p">}</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">                </span><span class="nv">cider/cider-nrepl</span><span class="w">          </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">&quot;0.55.7&quot;</span><span class="p">}</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">                </span><span class="nv">com.bhauman/rebel-readline</span><span class="w"> </span><span class="p">{</span><span class="ss">:mvn/version</span><span class="w"> </span><span class="s">&quot;0.1.5&quot;</span><span class="p">}}</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">   </span><span class="ss">:main-opts</span><span class="w">  </span><span class="p">[</span><span class="s">&quot;--eval&quot;</span><span class="w"> </span><span class="s">&quot;(apply require clojure.main/repl-requires)&quot;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">                </span><span class="s">&quot;--main&quot;</span><span class="w"> </span><span class="s">&quot;nrepl.cmdline&quot;</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">                </span><span class="s">&quot;--middleware&quot;</span><span class="w"> </span><span class="s">&quot;[cider.nrepl/cider-middleware]&quot;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">                </span><span class="s">&quot;--interactive&quot;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">                </span><span class="s">&quot;-f&quot;</span><span class="w"> </span><span class="s">&quot;rebel-readline.main/-main&quot;</span><span class="p">]}</span>
 </code></pre></div>
-<blockquote>
-<h4 id="hint-practicalliclojure-deps-edn-contains-common-tools-and-aliases">Hint:: practicalli/clojure-deps-edn contains common tools and aliases<a class="headerlink" href="#hint-practicalliclojure-deps-edn-contains-common-tools-and-aliases" title="Permanent link">λ︎</a></h4>
-<p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html">practicalli/clojure-deps-edn</a> contains aliases for all aspects of Clojure development with the CLI tools.</p>
-</blockquote>
-<p>{% endtabs %}</p>
+<div class="admonition hint">
+<p class="admonition-title">practicalli/clojure-cli-config contains common tools and aliases</p>
+<p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html">practicalli/clojure-cli-config</a> contains aliases for all aspects of Clojure development with the CLI tools.</p>
+</div>
 <h2 id="using-cider-connect">Using Cider Connect<a class="headerlink" href="#using-cider-connect" title="Permanent link">λ︎</a></h2>
 <p>Start the REPL in a terminal including the <code>test</code> directory and starting an nREPL server for CIDER to connect too.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>clojure<span class="w"> </span>-M:env/test:repl/cider
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>clojure<span class="w"> </span>-M:env/test:repl/cider
 </code></pre></div>
 <p>Alternatively, use a rich terminal UI for the REPL using Rebel Readline which will also start an nREPL server for Cider to connect too.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>clojure<span class="w"> </span>-M:env/test:repl/rebel
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>clojure<span class="w"> </span>-M:env/test:repl/rebel
 </code></pre></div>
 <h2 id="using-cider-jack-in">Using CIDER jack-in<a class="headerlink" href="#using-cider-jack-in" title="Permanent link">λ︎</a></h2>
 <p><code>.dir-locals.el</code> file can define aliases which are always included during <code>cider-jack-in</code>.</p>
 <p>Add the variable <code>cider-clojure-cli-aliases</code> with a names of one or more alias names, which are from either the project <code>deps.edn</code> file or the user level <code>deps.edn</code> configuration.</p>
 <p><code>SPC p e</code> creates or opens an existing <code>.dir-locals.el</code> file for the current project.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">((</span><span class="nv">clojure-mode</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="p">((</span><span class="nv">cider-clojure-cli-aliases</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">&quot;:env/test&quot;</span><span class="p">))))</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">((</span><span class="nv">clojure-mode</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="p">((</span><span class="nv">cider-clojure-cli-aliases</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="s">&quot;:env/test&quot;</span><span class="p">))))</span>
 </code></pre></div>
 <p>Remember to <code>SPC b R</code> (<code>revert-buffer</code>) on an existing project buffer, or open a file from the current project, to force Emacs to load in any changes to a <code>.dir-locals.el</code> file.</p>
-<blockquote>
-<h4 id="hintproject-configuration-with-dir-localsel">Hint::Project configuration with <code>.dir-locals.el</code><a class="headerlink" href="#hintproject-configuration-with-dir-localsel" title="Permanent link">λ︎</a></h4>
-<p><a href="/clojure-projects/project-configuration.md">Project level configuration</a> section contains many example configurations that can be set via <code>.dir-locals.el</code> file.  Remember to <code>revert-buffer</code> an existing project buffer or open a new buffer to load in changes from the <code>.dir-locals.el</code> file.</p>
-</blockquote>
+<div class="admonition hint">
+<p class="admonition-title">Project configuration with <code>.dir-locals.el</code></p>
+<p><a href="/spacemacs/clojure-projects/project-configuration.md">Project level configuration</a> section contains many example configurations that can be set via <code>.dir-locals.el</code> file.</p>
+<p>Remember to <code>revert-buffer</code> an existing project buffer or open a new buffer to load in changes from the <code>.dir-locals.el</code> file.</p>
+</div>
 <h3 id="edit-the-jack-in-command">Edit the jack-in command<a class="headerlink" href="#edit-the-jack-in-command" title="Permanent link">λ︎</a></h3>
 <p><code>SPU u , '</code> uses the Emacs universal argument with <code>sesman-start</code> and displays the command line to be run.</p>
-<p>Add <code>:env/test</code> directly after the <code>-M</code> flag and before the <code>:cider/nrepl</code> alias</p>
+<p>Add <code>:test/env</code> directly after the <code>-M</code> flag and before the <code>:cider/nrepl</code> alias</p>
 <p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-alias-env-test.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs CIDER configuration - add Clojure CLI tools alias to cider-jack-in command" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-clojure-cider-jack-in-alias-env-test.png" /></a></p>
 <blockquote>
 <p><code>SPC u</code> is the Spacemacs equivalent of <code>C-u</code> in Emacs.</p>
@@ -8508,7 +8414,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 23, 2022 10:14:05 UTC">December 23, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 22:51:31 UTC">May 28, 2025</span>
   </span>
 
     

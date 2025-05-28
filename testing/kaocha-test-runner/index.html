@@ -3378,7 +3378,7 @@
   
   
   <span class="md-ellipsis">
-    Cider test deps edn projects
+    Configure Cider Test runner
     
   </span>
   
@@ -8256,7 +8256,7 @@
 <h2 id="using-kaocha-from-emacs-cider">Using Kaocha from Emacs Cider<a class="headerlink" href="#using-kaocha-from-emacs-cider" title="Permanent link">λ︎</a></h2>
 <p><code>SPC f e d</code> to edit the Spacemacs configuration file, adding <code>clojure-enable-kaocha-runner t</code> as a variable to the Clojure layer.</p>
 <p>Start a REPL process that includes the kaocha library</p>
-<p><code>:lib/kaocha</code> alias in <a href="https://github.com/practicalli/clojure-deps-edn" target="_blank">practicalli/clojure-deps-edn</a> includes Kaocha as a library</p>
+<p><code>:lib/kaocha</code> alias in <a href="https://github.com/practicalli/clojure-cli-config" target="_blank">practicalli/clojure-cli-config</a> includes Kaocha as a library</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>clojure<span class="w"> </span>-M:lib/kaocha:repl/rebel
 </code></pre></div>
 <h3 id="key-bindings">Key bindings<a class="headerlink" href="#key-bindings" title="Permanent link">λ︎</a></h3>
@@ -8271,12 +8271,12 @@
 </div>
 <h2 id="using-kaocha-from-command-line">Using Kaocha from Command Line<a class="headerlink" href="#using-kaocha-from-command-line" title="Permanent link">λ︎</a></h2>
 <p>Kaocha on the command line will run tests from the saved code files, so is very useful to run before committing files as well as during a Continuous Integration workflow.</p>
-<p><a href="https://github.com/practicalli/clojure-deps-edn" target="_blank">practicalli/clojure-deps-edn</a> defines aliases to run Kaocha from the <code>clojure</code> command:</p>
+<p><a href="https://github.com/practicalli/clojure-cli-config" target="_blank">practicalli/clojure-cli-config</a> defines aliases to run Kaocha from the <code>clojure</code> command:</p>
 <p><code>clojure -X:test/run</code> will run all tests found in the project, unless there is a failing test which will end the test run.</p>
 <p><code>clojure -X:test/watch</code> runs all test and then watches for changes to the test code, running again if a change is detected.</p>
 <h3 id="kaocha-shell-script">Kaocha shell script<a class="headerlink" href="#kaocha-shell-script" title="Permanent link">λ︎</a></h3>
 <p><a href="https://cljdoc.org/d/lambdaisland/kaocha/1.60.977/doc/2-installing" target="_blank">Kaocha install guide</a> recommends creating an executable shell script file, i.e. <code>bin/kaocha</code></p>
-<p>Use the <code>:test/run</code> alias from <a href="https://github.com/practicalli/clojure-deps-edn" target="_blank">practicalli/clojure-deps-edn</a> (or create an alias in the project <code>deps.edn</code> file)</p>
+<p>Use the <code>:test/run</code> alias from <a href="https://github.com/practicalli/clojure-cli-config" target="_blank">practicalli/clojure-cli-config</a> (or create an alias in the project <code>deps.edn</code> file)</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="ch">#!/usr/bin/env bash</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>clojure<span class="w"> </span>-X:test/run<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
@@ -8287,7 +8287,7 @@
 <p>To continually watch a function, pass the watch argument <code>:watch? true</code></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>bin/kaocha<span class="w"> </span>:watch?<span class="w"> </span><span class="nb">true</span>
 </code></pre></div>
-<p>Or define a binary that always watches, e.g. <code>bin/kaocha-watch</code> using the <code>:test/watch</code> alias from <a href="https://github.com/practicalli/clojure-deps-edn">practicalli/clojure-deps-edn</a></p>
+<p>Or define a binary that always watches, e.g. <code>bin/kaocha-watch</code> using the <code>:test/watch</code> alias from <a href="https://github.com/practicalli/clojure-cli-config">practicalli/clojure-cli-config</a></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="ch">#!/usr/bin/env bash</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>clojure<span class="w"> </span>-X:test/watch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
@@ -8322,7 +8322,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 23, 2023 20:53:08 UTC">February 23, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 27, 2025 14:07:53 UTC">May 27, 2025</span>
   </span>
 
     

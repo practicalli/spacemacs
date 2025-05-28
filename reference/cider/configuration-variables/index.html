@@ -3275,7 +3275,7 @@
   
   
   <span class="md-ellipsis">
-    Cider test deps edn projects
+    Configure Cider Test runner
     
   </span>
   
@@ -7074,15 +7074,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hintclojure-project-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Clojure Project Configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#completion" class="md-nav__link">
     <span class="md-ellipsis">
       Completion
@@ -8318,15 +8309,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hintclojure-project-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Clojure Project Configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#completion" class="md-nav__link">
     <span class="md-ellipsis">
       Completion
@@ -8570,47 +8552,41 @@
 <p>Variables are grouped by the files they are defined in throughout the <a href="https://github.com/clojure-emacs/cider">clojure-emacs/cider</a> project.</p>
 <p>CIDER Variables can be set via:</p>
 <ul>
-<li><code>.dir-locals.el</code> files for <a href="/clojure-projects/project-configuration.md">project specific configuration</a></li>
+<li><code>.dir-locals.el</code> files for <a href="/spacemacs/clojure-projects/project-configuration.md">project specific configuration</a></li>
 <li><code>(clojure :variables variable-name value)</code> in .spacemacs layers list</li>
 <li><code>(setq variable-name value)</code> in <code>dotspacemacs/user-config</code> section of <code>.spacemacs</code></li>
 </ul>
-<blockquote>
-<h4 id="hintclojure-project-configuration">Hint::Clojure Project Configuration<a class="headerlink" href="#hintclojure-project-configuration" title="Permanent link">λ︎</a></h4>
-<p>Examples of using <code>.dir-locals.el</code> for Clojure projects are covered in the <a href="/clojure-projects/project-configuration.md">project level configuration page</a></p>
-</blockquote>
+<div class="admonition hint">
+<p class="admonition-title">Clojure Project Configuration</p>
+<p>Examples of using <code>.dir-locals.el</code> for Clojure projects are covered in the <a href="/spacemacs/clojure-projects/project-configuration.md">project level configuration page</a></p>
+</div>
 <h2 id="completion">Completion<a class="headerlink" href="#completion" title="Permanent link">λ︎</a></h2>
 <table>
 <thead>
 <tr>
 <th>Variables</th>
-<th>Default value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>cider-completion-use-context</td>
-<td></td>
 <td><code>true</code> - use context at point to improve completion suggestions</td>
 </tr>
 <tr>
 <td>cider-annotate-completion-candidates</td>
-<td></td>
 <td><code>true</code> - annotate completion candidates</td>
 </tr>
 <tr>
 <td>cider-annotate-completion-function</td>
-<td></td>
 <td>function to format annotations for completion candidates - takes 2 arguments: abbreviation candidate type (<code>cider-completion-annotations-alist</code>) and candidate namespace</td>
 </tr>
 <tr>
 <td>cider-completion-annotations-alist</td>
-<td></td>
 <td>Annotation abbreviation for completion candidates (TYPE . ABBREVIATION). TYPE is that returned from the completion backend.ABBREVIATION is a short form of that type.</td>
 </tr>
 <tr>
 <td>cider-completion-annotations-include-ns</td>
-<td></td>
 <td>Pass namespace to <code>cider-annotate-completion-function</code>, <code>'always</code> passed if namespace is available. <code>'unqualified</code> only pass namespace if not namespace-qualified.</td>
 </tr>
 </tbody>
@@ -9664,7 +9640,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 16, 2023 19:31:26 UTC">May 16, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 22:51:31 UTC">May 28, 2025</span>
   </span>
 
     

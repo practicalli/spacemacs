@@ -3366,7 +3366,7 @@
   
   
   <span class="md-ellipsis">
-    Cider test deps edn projects
+    Configure Cider Test runner
     
   </span>
   
@@ -8228,7 +8228,7 @@
 <h1 id="connect-to-remote-repl">Connect to Remote REPL<a class="headerlink" href="#connect-to-remote-repl" title="Permanent link">λ︎</a></h1>
 <p>Using a remote REPL can provide a collaborative coding environment as well as a means for working within remote environments (docker images, cloud servers, etc).</p>
 <p>Running a remote REPL can also provide longevity to the process, as many clients (editors, ssh terminals) can connect to the REPL over time, disconnecting from the running process without interrupting the process.  This provides a very resilient way of running a REPL.</p>
-<p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html">practicalli/clojure-deps-edn</a> provides many aliases to configure a REPL to work with other community tools.  These aliases are easier to manage when running a REPL outside of an editor which automatically injects its own configuration.  This configuration can be installed into the remote environment and ideally added into the server build process.</p>
+<p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html">practicalli/clojure-cli-config</a> provides many aliases to configure a REPL to work with other community tools.  These aliases are easier to manage when running a REPL outside of an editor which automatically injects its own configuration.  This configuration can be installed into the remote environment and ideally added into the server build process.</p>
 <p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-remote-repl-terminal-editor.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Connecting to a remote REPL with a Clojure aware editor" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/clojure/clojure-remote-repl-terminal-editor.png" /></a></p>
 <h2 id="establish-a-remote-environment">Establish a remote environment<a class="headerlink" href="#establish-a-remote-environment" title="Permanent link">λ︎</a></h2>
 <p>A small Virtual Private Server (VPS) is enough for a remote Clojure environment.</p>
@@ -8237,7 +8237,7 @@
 <p><a href="https://medium.com/@hbmy289/how-to-set-up-a-free-micro-vps-on-google-cloud-platform-bddee893ac09">How to set up a f1-micro VPS on Google Cloud</a></p>
 </details>
 <ul>
-<li>Install <a href="https://practical.li/clojure/clojure-cli/install/">Clojure CLI tools</a> and <a href="https://practical.li/clojure/clojure-cli/install/community-tools.html">practicalli/clojure-deps-edn configuration</a></li>
+<li>Install <a href="https://practical.li/clojure/clojure-cli/install/">Clojure CLI tools</a> and <a href="https://practical.li/clojure/clojure-cli/install/community-tools.html">practicalli/clojure-cli-config configuration</a></li>
 <li>Git Client</li>
 <li>SSH server</li>
 <li>Set up user account</li>
@@ -8303,7 +8303,7 @@
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  Port 22
 </code></pre></div>
 <h2 id="configure-emacs-to-listen-to-nrepl-port">Configure Emacs to listen to nREPL port<a class="headerlink" href="#configure-emacs-to-listen-to-nrepl-port" title="Permanent link">λ︎</a></h2>
-<p>Connect to a Clojure REPL that was started with nREPL and Cider middleware, e.g. <code>:middleware/cider-clj</code> from <a href="http://practical.li/clojure/clojure-cli/install/community-tools.html" target="_blank"><code>practicalli/clojure-deps-edn</code></a></p>
+<p>Connect to a Clojure REPL that was started with nREPL and Cider middleware, e.g. <code>:middleware/cider-clj</code> from <a href="http://practical.li/clojure/clojure-cli/install/community-tools.html" target="_blank"><code>practicalli/clojure-cli-config</code></a></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Spacemacs</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -8319,7 +8319,7 @@
 </code></pre></div>
 <h2 id="start-repl-on-remote-server">Start REPL on remote server<a class="headerlink" href="#start-repl-on-remote-server" title="Permanent link">λ︎</a></h2>
 <p>The majority of <a href="https://practical.li/clojure/clojure-editors/" target="_blank">Clojure aware editors</a> can connect to an external REPL using the nREPL protocol.  Emacs CIDER, VSCode Calva and NeoVim Conjure all use nREPL and the Cider middleware.</p>
-<p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html" target="_blank">practicalli/clojure-deps-edn</a> defines the <code>:middleware/clj</code> alias that includes several libraries required for the nREPL connection between CIDER and the REPL.</p>
+<p><a href="https://practical.li/clojure/clojure-cli/install/community-tools.html" target="_blank">practicalli/clojure-cli-config</a> defines the <code>:middleware/clj</code> alias that includes several libraries required for the nREPL connection between CIDER and the REPL.</p>
 <p>SSH into the remote server.</p>
 <p>Clone an existing project with Git, or create a new project with <code>:project/new</code> alias</p>
 <p>Change to a Clojure project</p>
@@ -8368,7 +8368,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 25, 2022 01:07:53 UTC">December 25, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 27, 2025 14:07:53 UTC">May 27, 2025</span>
   </span>
 
     

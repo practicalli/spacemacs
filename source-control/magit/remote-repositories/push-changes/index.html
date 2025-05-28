@@ -3275,7 +3275,7 @@
   
   
   <span class="md-ellipsis">
-    Cider test deps edn projects
+    Configure Cider Test runner
     
   </span>
   
@@ -5753,35 +5753,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hintensure-you-are-on-the-correct-local-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Ensure you are on the correct local branch
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#push-options" class="md-nav__link">
     <span class="md-ellipsis">
       Push options
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Push options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintfix-rather-than-force" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Fix rather than Force
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -8148,35 +8124,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hintensure-you-are-on-the-correct-local-branch" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Ensure you are on the correct local branch
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#push-options" class="md-nav__link">
     <span class="md-ellipsis">
       Push options
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Push options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintfix-rather-than-force" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Fix rather than Force
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -8223,27 +8175,27 @@
 
 <h1 id="push-changes">Push Changes<a class="headerlink" href="#push-changes" title="Permanent link">λ︎</a></h1>
 <p>Commits can be pushed to a remote repository using Magit Status buffer.</p>
-<blockquote>
-<h4 id="hintensure-you-are-on-the-correct-local-branch">Hint::Ensure you are on the correct local branch<a class="headerlink" href="#hintensure-you-are-on-the-correct-local-branch" title="Permanent link">λ︎</a></h4>
-<p>The current local branch is shown at the top of the Magit Status buffer.
-<code>b b</code> displays a popup to select a different branch if you are not on the correct branch to pull changes into.</p>
-</blockquote>
+<div class="admonition hint">
+<p class="admonition-title">Ensure you are on the correct local branch</p>
+<p>The current local branch is shown at the top of the Magit Status buffer.</p>
+<p><code>b b</code> displays a popup to select a different branch if you are not on the correct branch to pull changes into.</p>
+</div>
 <p><code>SPC g s</code> to open Magit Status buffer</p>
 <p><code>P</code> to open the pull menu</p>
 <p><code>u</code> to pull from the upstream remote repository.  If this is not currently set, then a prompt appears to select the default upstream.</p>
 <h2 id="push-options">Push options<a class="headerlink" href="#push-options" title="Permanent link">λ︎</a></h2>
 <p>Changing the local history with a commit amend, extend, reword, rebase or squash will prevent changes being pushed to a remote repository that has the original history unchanged.</p>
 <p>Magit will show <code>Unpulled from</code> and <code>Unpushed to</code> sections when the local and remote histories are different.</p>
-<p><a class="glightbox" href="/images/spacemacs-magit-push-changed-history.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit Push - changed histories" src="/images/spacemacs-magit-push-changed-history.png" /></a></p>
 <p>The push menu has the <code>-f</code> switch to force a push with a lease (the recommended force type).</p>
-<blockquote>
-<h4 id="hintfix-rather-than-force">Hint::Fix rather than Force<a class="headerlink" href="#hintfix-rather-than-force" title="Permanent link">λ︎</a></h4>
+<div class="admonition hint">
+<p class="admonition-title">Fix rather than Force</p>
 <p>Pushing a new commit that fixes an issue is usually preferable than re-writing history and forcing a push when working on a shared repository.</p>
 <p>Communicate clearly in advance and get agreement from other contributors if a force is the only option.</p>
-</blockquote>
+</div>
 <h2 id="pushing-changes-to-an-open-pull-request">Pushing changes to an open pull request<a class="headerlink" href="#pushing-changes-to-an-open-pull-request" title="Permanent link">λ︎</a></h2>
-<p _="%" endyoutube="endyoutube">{% youtube %}
-<a href="https://youtu.be/gwFGSVtFrgQ">https://youtu.be/gwFGSVtFrgQ</a></p>
+<p style="text-align:center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/gwFGSVtFrgQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 
 
@@ -8264,7 +8216,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2022 23:52:40 UTC">December 2, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 22:51:31 UTC">May 28, 2025</span>
   </span>
 
     

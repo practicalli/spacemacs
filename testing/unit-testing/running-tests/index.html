@@ -3279,7 +3279,7 @@
   
   
   <span class="md-ellipsis">
-    Cider test deps edn projects
+    Configure Cider Test runner
     
   </span>
   
@@ -3370,15 +3370,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hintspacemacs-loads-current-buffer-before-running-tests" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Spacemacs loads current buffer before running tests
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#using-test-selectors-to-run-specific-tests" class="md-nav__link">
     <span class="md-ellipsis">
       Using Test Selectors to run specific tests
@@ -3402,21 +3393,6 @@
       Auto Unit Test Mode
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Auto Unit Test Mode">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintcider-test-report-only-created-on-test-failure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::CIDER test report only created on test failure
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -8155,15 +8131,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hintspacemacs-loads-current-buffer-before-running-tests" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Spacemacs loads current buffer before running tests
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#using-test-selectors-to-run-specific-tests" class="md-nav__link">
     <span class="md-ellipsis">
       Using Test Selectors to run specific tests
@@ -8187,21 +8154,6 @@
       Auto Unit Test Mode
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Auto Unit Test Mode">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintcider-test-report-only-created-on-test-failure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::CIDER test report only created on test failure
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -8243,10 +8195,10 @@
 <p><kbd>, t a</kbd> run all tests.  If tests are changed or added, <kbd>, e f</kbd> to evaluate those tests to add them to the REPL or <kbd>, e b</kbd> on any test buffers that have changed.</p>
 <p>The results of running the tests are displayed in the mini-buffer, showing the number of tests run and how many passed and failed.</p>
 <p><a class="glightbox" href="/images/spacemacs-cider-test-run-tests-results-mini-buffer.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Cider tests - results in mini-buffer" src="/images/spacemacs-cider-test-run-tests-results-mini-buffer.png" /></a></p>
-<blockquote>
-<h4 id="hintspacemacs-loads-current-buffer-before-running-tests">Hint::Spacemacs loads current buffer before running tests<a class="headerlink" href="#hintspacemacs-loads-current-buffer-before-running-tests" title="Permanent link">λ︎</a></h4>
+<div class="admonition hint">
+<p class="admonition-title">Spacemacs loads current buffer before running tests</p>
 <p>Run unit tests from the buffer that has changes or new tests.  Otherwise, ensure all buffers with changes have been evaluated to ensure the tests run with the right src and test code.</p>
-</blockquote>
+</div>
 <h2 id="using-test-selectors-to-run-specific-tests">Using Test Selectors to run specific tests<a class="headerlink" href="#using-test-selectors-to-run-specific-tests" title="Permanent link">λ︎</a></h2>
 <p>Using the universal argument before calling CIDER test runner will prompt for test selector filters, running only those tests that match the selector inclusions/exclusions.</p>
 <p><kbd>SPC t a</kbd> runs all the tests in a project.</p>
@@ -8262,13 +8214,13 @@
 <h2 id="auto-unit-test-mode">Auto Unit Test Mode<a class="headerlink" href="#auto-unit-test-mode" title="Permanent link">λ︎</a></h2>
 <p><kbd>, T t</kbd> to toggle auto test mode</p>
 <p><kbd>, e b</kbd> will evaluate the current buffer and automatically run all tests.</p>
-<blockquote>
-<h4 id="hintcider-test-report-only-created-on-test-failure">Hint::CIDER test report only created on test failure<a class="headerlink" href="#hintcider-test-report-only-created-on-test-failure" title="Permanent link">λ︎</a></h4>
-<p>To show a test report each time tests are run, add the variable <code>cider-test-show-report-on-success t</code> in the <code>clojure</code> layer list of the <code>.spacemacs</code> file.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">     </span><span class="p">(</span><span class="nv">clojure</span><span class="w"> </span><span class="ss">:variables</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">              </span><span class="nv">cider-test-show-report-on-success</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
-</code></pre></div></p>
-</blockquote>
+<div class="admonition hint">
+<p class="admonition-title">CIDER test report only created on test failure</p>
+<p>To show a test report each time tests are run, add the variable <code>cider-test-show-report-on-success t</code> in the <code>clojure</code> layer list of the <code>.spacemacs</code> file.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">(</span><span class="nv">clojure</span><span class="w"> </span><span class="ss">:variables</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">         </span><span class="nv">cider-test-show-report-on-success</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
+</code></pre></div>
+</div>
 
 
 
@@ -8289,7 +8241,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 25, 2022 01:07:53 UTC">December 25, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 22:51:31 UTC">May 28, 2025</span>
   </span>
 
     

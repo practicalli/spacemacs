@@ -1772,21 +1772,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What is a Projectile project">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintsearching-across-multiple-projects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Searching across multiple projects
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -3381,7 +3366,7 @@
   
   
   <span class="md-ellipsis">
-    Cider test deps edn projects
+    Configure Cider Test runner
     
   </span>
   
@@ -8170,21 +8155,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What is a Projectile project">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintsearching-across-multiple-projects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Searching across multiple projects
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -8257,7 +8227,6 @@
 
 <h1 id="projectile-project-specific-commands">Projectile - project specific commands<a class="headerlink" href="#projectile-project-specific-commands" title="Permanent link">λ︎</a></h1>
 <p><code>SPC p</code> opens the projectile menu allowing you to run commands relative to the project of the active buffer.</p>
-<p><a href="/images/spacemacs-projectile-menu.png"><img alt="Spacemacs Projectile menu" src="/images/spacemacs-projectile-menu.png" /></a></p>
 <h2 id="what-is-a-projectile-project">What is a Projectile project<a class="headerlink" href="#what-is-a-projectile-project" title="Permanent link">λ︎</a></h2>
 <p>A project can be one or more of the following things</p>
 <ul>
@@ -8265,14 +8234,13 @@
 <li>Language specific - e.g. a Clojure Leiningen project</li>
 <li>Projectile - any directory with a <code>.projectile</code> file</li>
 </ul>
-<blockquote>
-<h4 id="hintsearching-across-multiple-projects">Hint::Searching across multiple projects<a class="headerlink" href="#hintsearching-across-multiple-projects" title="Permanent link">λ︎</a></h4>
+<div class="admonition hint">
+<p class="admonition-title">Searching across multiple projects</p>
 <p>Create an empty file called <code>.projectile</code> in the root of the directory that contains all your projects.  <code>SPC /</code> in any project will now search through all files in all your projects.  Remove the <code>.projectile</code> file when finished, to search through just the current project.</p>
-</blockquote>
+</div>
 <h2 id="opening-files-from-the-same-project">Opening Files from the same project<a class="headerlink" href="#opening-files-from-the-same-project" title="Permanent link">λ︎</a></h2>
 <p><code>SPC p f</code> to open a file in the current project that you know the name of. All project files are listed and as you type the file name the list of names is narrowed. Use <code>C-k</code> and <code>C-j</code> keybindings to move up and down the list respectively.</p>
 <p>This is a good approach if you know the name but not the directory path of the file.  Use <code>SPC f f</code> if you know the directory but not the name of the file you want.</p>
-<p><a href="/images/spacemacs-projectile-file-new-file--light.png"><img alt="Spacemacs Projectile File - new file" src="/images/spacemacs-projectile-file-new-file--light.png" /></a></p>
 <h2 id="switching-between-buffers">Switching between buffers<a class="headerlink" href="#switching-between-buffers" title="Permanent link">λ︎</a></h2>
 <p><code>SPC p b</code> gives a helm popup list of currently open buffers for the current project.  Entering a buffer name pattern narrows that list and <code>C-k</code> and <code>C-j</code> keybindings move up and down the list respectively.</p>
 <h2 id="toggling-between-test-and-code-files">Toggling between test and code files<a class="headerlink" href="#toggling-between-test-and-code-files" title="Permanent link">λ︎</a></h2>
@@ -8315,7 +8283,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 25, 2024 08:41:33 UTC">September 25, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 22:51:31 UTC">May 28, 2025</span>
   </span>
 
     

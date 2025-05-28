@@ -1812,15 +1812,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hintreplacing-text-across-a-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Replacing text across a project
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#open-files-from-search-results" class="md-nav__link">
     <span class="md-ellipsis">
       Open files from search results
@@ -1881,21 +1872,6 @@
       Searching hidden files
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Searching hidden files">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintsearching-hidden-files-may-slow-searching" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Searching hidden files may slow searching
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -3432,7 +3408,7 @@
   
   
   <span class="md-ellipsis">
-    Cider test deps edn projects
+    Configure Cider Test runner
     
   </span>
   
@@ -8215,15 +8191,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#hintreplacing-text-across-a-project" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Replacing text across a project
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#open-files-from-search-results" class="md-nav__link">
     <span class="md-ellipsis">
       Open files from search results
@@ -8284,21 +8251,6 @@
       Searching hidden files
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Searching hidden files">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintsearching-hidden-files-may-slow-searching" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Searching hidden files may slow searching
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -8364,10 +8316,10 @@
 <p><code>SPC s l</code> will repeat the last search</p>
 <p><code>M-n</code> and <code>M-p</code> will scroll through the search patterns whenever the search pop-up window is open</p>
 <p><a class="glightbox" href="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-pattern-search.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Helm-Ag ripgrep pattern search results" src="https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-pattern-search.png" /></a></p>
-<blockquote>
-<h4 id="hintreplacing-text-across-a-project">Hint::Replacing text across a project<a class="headerlink" href="#hintreplacing-text-across-a-project" title="Permanent link">λ︎</a></h4>
-<p>Use search results to <a href="/spacemacs-basics/evil-tools/replacing-text-across-projects.md">replace text across a project</a>.</p>
-</blockquote>
+<div class="admonition hint">
+<p class="admonition-title">Replacing text across a project</p>
+<p>Use search results to <a href="/spacemacs/spacemacs-basics/evil-tools/replacing-text-across-projects.md">replace text across a project</a>.</p>
+</div>
 <h2 id="open-files-from-search-results">Open files from search results<a class="headerlink" href="#open-files-from-search-results" title="Permanent link">λ︎</a></h2>
 <p>With a search open, <code>C-c C-f</code> enables <code>helm-follow</code>.  When moving through results with <code>C-j</code> and <code>C-k</code> the corresponding file is opened in the current buffer.</p>
 <p>Set <code>helm-follow-mode-persistent</code> to true in <code>.spacemacs</code> to remember the use of <code>C-c C-f</code> follow mode for helm actions.</p>
@@ -8375,10 +8327,10 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">           </span><span class="nv">helm-follow-mode-persistent</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="search-tool-binary">Search tool binary<a class="headerlink" href="#search-tool-binary" title="Permanent link">λ︎</a></h2>
-<p>Searching requires an external tool to be available on your system PATH. <a href="https://github.com/BurntSushi/ripgrep">Ripgrep</a> is the recommended search tool, although <a href="/alternative-tooling/silversearcher-ag.md">silver searcher (ag)</a> is a viable alternative.  Using <code>grep</code> is noticeably slower and has fewer options for searching.</p>
+<p>Searching requires an external tool to be available on your system PATH. <a href="https://github.com/BurntSushi/ripgrep"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Ripgrep</a> is the recommended search tool, although <a href="/spacemacs/alternative-tooling/silversearcher-ag.md">silver searcher (ag)</a> is a viable alternative.  Using <code>grep</code> is noticeably slower and has fewer options for searching.</p>
 <ul>
-<li><a href="https://github.com/BurntSushi/ripgrep#installation">Ripgrep install instructions</a></li>
-<li><a href="/alternative-tooling/silversearcher-ag.md">silver searcher (ag)</a></li>
+<li><a href="https://github.com/BurntSushi/ripgrep#installation"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> Ripgrep install instructions</a></li>
+<li><a href="/alternative-tooling/silversearcher-ag.md"><img alt="🌐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f310.svg" title=":globe_with_meridians:" /> silver searcher (ag)</a></li>
 </ul>
 <h2 id="ripgrep-search-tool-options">Ripgrep search tool options<a class="headerlink" href="#ripgrep-search-tool-options" title="Permanent link">λ︎</a></h2>
 <p>Option flags can be passed to the search tool binary to tailor the results returned in the helm-ag pop-up window.  The option flags can be used before or after the search pattern.</p>
@@ -8413,9 +8365,9 @@
 <p>For example, to search for the pattern <code>scissors</code></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>scissors -- --hidden
 </code></pre></div>
-<blockquote>
-<h4 id="hintsearching-hidden-files-may-slow-searching">Hint::Searching hidden files may slow searching<a class="headerlink" href="#hintsearching-hidden-files-may-slow-searching" title="Permanent link">λ︎</a></h4>
-</blockquote>
+<div class="admonition hint">
+<p class="admonition-title">Searching hidden files may slow search results</p>
+</div>
 <h3 id="ripgrep-configuration-and-arguments">Ripgrep configuration and arguments<a class="headerlink" href="#ripgrep-configuration-and-arguments" title="Permanent link">λ︎</a></h3>
 <p>Define an environment variable called <code>RIPGREP_CONFIG_PATH</code> set to the file name and path</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>export RIPGREP_CONFIG_PATH=~/.config/ripgrep.config
@@ -8482,7 +8434,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="December 2, 2022 23:52:40 UTC">December 2, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 22:51:31 UTC">May 28, 2025</span>
   </span>
 
     

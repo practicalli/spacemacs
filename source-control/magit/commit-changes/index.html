@@ -3275,7 +3275,7 @@
   
   
   <span class="md-ellipsis">
-    Cider test deps edn projects
+    Configure Cider Test runner
     
   </span>
   
@@ -5460,21 +5460,6 @@
       Why Squash commits
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Why Squash commits">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintavoid-squashing-shared-commits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Avoid squashing shared commits
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -8375,21 +8360,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Why Squash commits">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hintavoid-squashing-shared-commits" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hint::Avoid squashing shared commits
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -8547,19 +8517,20 @@
 <p><code>s</code> in the commit menu to amend a commit</p>
 <p>The top buffer shows the local Git log, listing all the commit history.</p>
 <p>The bottom buffer shows the magit-diff output, so you can see all the changes of the current commit.</p>
-<p><a class="glightbox" href="/images/spacemacs-magit-commit-squash-example.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit - Commit Squash" src="/images/spacemacs-magit-commit-squash-example.png" /></a></p>
+<p><a class="glightbox" href="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-magit-commit-squash-example.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Spacemacs Magit - Commit Squash" src="https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-magit-commit-squash-example.png?raw=true" /></a></p>
 <p>Move the cursor to the commit you wish to squash into its previous commit</p>
 <p><code>, ,</code> or <code>C-c C-c</code> to confirm the commit(s) should be squashed.</p>
 <p><code>, k</code> or <code>C-c C-k</code> to cancel changes and leave the commit history unchanged.</p>
 <h3 id="why-squash-commits">Why Squash commits<a class="headerlink" href="#why-squash-commits" title="Permanent link">λ︎</a></h3>
 <p>The commit history should help the development team understand the reasons for changes as well as what has actually changed.</p>
 <p>Squashing commits is useful for joining together commits that form a logical change.  If a change is spread over several commits, then squashing those commits together can improve the commit history.</p>
-<blockquote>
-<h4 id="hintavoid-squashing-shared-commits">Hint::Avoid squashing shared commits<a class="headerlink" href="#hintavoid-squashing-shared-commits" title="Permanent link">λ︎</a></h4>
-<p>Squashing a commit will change the commit reference number (the SHA hash code) as this is based in part on the time of commit as well as the contents.  If you need to squash a commit history that has already been shared you should tell everyone before doing so as they will have to pull the new commit history.</p>
+<div class="admonition hint">
+<p class="admonition-title">Avoid squashing shared commits</p>
+<p>Squashing a commit will change the commit reference number (the SHA hash code) as this is based in part on the time of commit as well as the contents.</p>
+<p>If you need to squash a commit history that has already been shared you should tell everyone before doing so as they will have to pull the new commit history.</p>
 <p>Use the <code>-f</code> force flag to push a squashed commit to a shared repository (e.g. GitHub or GitLab).</p>
 <p><code>P -f p</code> to force push to the remote repository.</p>
-</blockquote>
+</div>
 
 
 
@@ -8580,7 +8551,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 28, 2023 21:39:55 UTC">March 28, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2025 22:51:31 UTC">May 28, 2025</span>
   </span>
 
     
