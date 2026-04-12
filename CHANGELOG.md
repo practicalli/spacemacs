@@ -2,6 +2,22 @@
 
 # Unreleased
 
+### Changed
+
+-dev: update GitHub actions with `make dependencies-update`
+
+| :file                                          | :name                                       | :current | :latest |
+|------------------------------------------------|---------------------------------------------|----------|---------|
+| .github/workflows/changelog-check.yaml         | actions/checkout                            | v4       | v6.0.2  |
+| .github/workflows/megalinter.yaml              | actions/checkout                            | v4       | v6.0.2  |
+|                                                | actions/upload-artifact                     | v4       | v7.0.1  |
+|                                                | oxsecurity/megalinter/flavors/documentation | v8       | v9.4.0  |
+| .github/workflows/publish-book.yaml            | actions/cache                               | v4       | v5.0.4  |
+|                                                | actions/checkout                            | v4       | v6.0.2  |
+|                                                | actions/setup-python                        | v5       | v6.2.0  |
+| .github/workflows/scheduled-stale-check.yaml   | actions/stale                               | v9       | v10.2.0 |
+| .github/workflows/scheduled-version-check.yaml | actions/checkout                            | v4       | v6.0.2  |
+
 
 ## 2026-04-12
 

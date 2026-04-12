@@ -28,7 +28,7 @@ jobs:
 
       # Git Checkout
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           sparse-checkout: |
@@ -41,7 +41,7 @@ jobs:
       - name: MegaLinter Run
         id: ml
         ## latest release of major version
-        uses: oxsecurity/megalinter/flavors/documentation@v8
+        uses: oxsecurity/megalinter/flavors/documentation@v9
         env:
           # ADD CUSTOM ENV VARIABLES OR DEFINE IN MEGALINTER_CONFIG file
           MEGALINTER_CONFIG: .github/config/megalinter.yaml
@@ -54,7 +54,7 @@ jobs:
       # Upload MegaLinter artifacts
       - name: Archive production artifacts
         if: ${{ success() }} || ${{ failure() }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: MegaLinter reports
           path: |
