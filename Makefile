@@ -1,31 +1,41 @@
-# -------------------------------------- #
+# ------------------------------------------------ #
 # Practicalli Makefile
 #
-# Consistent set of targets to support local book development
-# -------------------------------------- #
+# Consistent set of targets to support local development of Clojure
+# and build the Clojure service during CI deployment
+#
+# `-` before a command ignores any errors returned
 
-# -- Makefile task config -------------- #
+# Requirements
+# - python
+# - uv
+# - clojure & practicalli cli config (dependency check)
+# - docker
+# - mega-linter-runner
+# ------------------------------------------------ #
+
+# -- Makefile task config ------------------------ #
 # .PHONY: ensures target used rather than matching file name
 # https://makefiletutorial.com/#phony
-.PHONY: all clean docs lint pre-commit-check test
-# -------------------------------------- #
+.PHONY: all clean dist docs lint pre-commit-check
+# ------------------------------------------------ #
 
-# -- Makefile Variables ---------------- #
+# -- Makefile Variables -------------------------- #
 # run help if no target specified
 .DEFAULT_GOAL := help
 # Column the target description is printed from
 HELP-DESCRIPTION-SPACING := 24
 
-SHELL := /usr/bin/zsh
+# SHELL := /usr/bin/zsh
 
-# Tool Commands
-MEGALINTER_RUNNER := npx mega-linter-runner --flavor documentation --env "'MEGALINTER_CONFIG=.github/config/megalinter.yaml'" --env "'VALIDATE_ALL_CODEBASE=true'"  --remove-container
-MKDOCS_SERVER := mkdocs serve --dev-addr localhost:7777
+# Tool variables
+MEGALINTER_RUNNER := npx mega-linter-runner --flavor documentation --env "'MEGALINTER_CONFIG=.github/config/megalinter.yaml'" --remove-container
+DOCS_SERVER := zensical serve --dev-addr localhost:7777
 OUTDATED_FILE := outdated-$(shell date +%y-%m-%d-%T).md
-# -------------------------------------- #
+# ------------------------------------------------ #
 
-# --  Quality Checks  ------------------ #
-pre-commit-check: lint
+# -- Code Quality -------------------------------- #
+pre-commit-check: lint ## Run format, lint and test targets
 
 lint:  ## Run MegaLinter with custom configuration (node.js required)
 	$(info -- MegaLinter Runner ---------------------)
@@ -50,43 +60,30 @@ dependencies-outdated: ## Report new versions of library dependencies and GitHub
 dependencies-update: ## Update all library dependencies and GitHub action
 	$(info -- Search for outdated libraries ---------)
 	- clojure -T:update/dependency-versions > $(OUTDATED_FILE)
-# -------------------------------------- #
+# ------------------------------------------------ #
 
-# --- Documentation Generation  -------- #
-python-venv:  ## Create Python Virtual Environment
-	$(info -- Create Python Virtual Environment -----)
-	python3 -m venv ~/.local/venv
+# --- Documentation Generation  ------------------ #
+docs-install:  ## Install or upgrade Zensical in Python virtual environment
+	uv tool install zensical --upgrade
 
-python-activate:  ## Activate Python Virtual Environment for MkDocs
-	$(info -- Mkdocs Local Server -------------------)
-	source ~/.local/venv/bin/activate
+docs:  ## Build and run docs in local server
+	$(info -- Local Server --------------------------)
+	$(DOCS_SERVER)
 
-mkdocs-install:
-	$(info -- Install Material for MkDocs -----------)
-	source ~/.local/venv/bin/activate && pip install mkdocs-material mkdocs-callouts mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-redirects mkdocs-rss-plugin pillow cairosvg --upgrade
+docs-open:  ## Build docs, run server & open browser
+	$(info -- Local Server & Browser ----------------)
+	$(DOCS_SERVER) --open
 
-docs: ## Build and run mkdocs in local server (python venv)
-	$(info -- MkDocs Local Server -------------------)
-	source ~/.local/venv/bin/activate && $(MKDOCS_SERVER)
+docs-build:  ## Build docs locally
+	$(info -- Build Docs Website --------------------)
+	zensical build
 
-docs-changed:  ## Build only changed files and run mkdocs in local server (python venv)
-	$(info -- Mkdocs Local Server -------------------)
-	source ~/.local/venv/bin/activate && $(MKDOCS_SERVER) --dirtyreload
+docs-debug:  ## Run local server in debug mode
+	$(info -- Local Server Debug --------------------)
+	$(DOCS_SERVER) -v
+# ------------------------------------------------ #
 
-docs-build:  ## Build mkdocs (python venv)
-	$(info -- Mkdocs Build Website ------------------)
-	source ~/.local/venv/bin/activate && mkdocs build
-
-docs-debug:  ## Run mkdocs local server in debug mode (python venv)
-	$(info -- Mkdocs Local Server Debug -------------)
-	. ~/.local/venv/bin/activate; $(MKDOCS_SERVER) -v
-
-docs-staging:  ## Deploy to staging repository
-	$(info -- Mkdocs Staging Deploy -----------------)
-	source ~/.local/venv/bin/activate && mkdocs gh-deploy --force --no-history --config-file mkdocs-staging.yml
-# -------------------------------------- #
-
-# ------- Version Control -------------- #
+# ------- Version Control ------------------------ #
 git-sr:  ## status list of git repos under current directory
 	$(info -- Multiple Git Repo Status --------------)
 	mgitstatus -e --flatten
@@ -94,15 +91,13 @@ git-sr:  ## status list of git repos under current directory
 git-status:  ## status details of git repos under current directory
 	$(info -- Multiple Git Status -------------------)
 	mgitstatus
-# -------------------------------------- #
+# ------------------------------------------------ #
 
-# ------------ Help -------------------- #
+# -- Help ---------------------------------------- #
 # Source: https://nedbatchelder.com/blog/201804/makefile_help_target.html
 
 help:  ## Describe available tasks in Makefile
 	@grep '^[a-zA-Z]' $(MAKEFILE_LIST) | \
 	sort | \
 	awk -F ':.*?## ' 'NF==2 {printf "\033[36m  %-$(HELP-DESCRIPTION-SPACING)s\033[0m %s\n", $$1, $$2}'
-# -------------------------------------- #
-
-dist: deps-build ## Build mkdocs website
+# ------------------------------------------------ #
