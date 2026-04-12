@@ -2,7 +2,10 @@
 
 # Unreleased
 
-## Added
+
+## 2026-04-12
+
+### Added
 - dev: add scheduled stale issue & pull request check (monthly)
 
 ### Changed
