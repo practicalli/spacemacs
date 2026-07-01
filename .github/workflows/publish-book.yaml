@@ -31,7 +31,7 @@ jobs:
       - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
 
       - name: Checkout Code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           sparse-checkout: |
@@ -46,7 +46,7 @@ jobs:
           python-version: 3.x
 
       - name: Cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           key: ${{ github.ref }}
           path: .cache
