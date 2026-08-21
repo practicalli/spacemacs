@@ -1,16 +1,16 @@
 # ------------------------------------------------ #
 # Practicalli Makefile
 #
-# Consistent set of targets to support local development of Clojure
-# and build the Clojure service during CI deployment
+# Consistent set of targets to support local book development
 #
 # `-` before a command ignores any errors returned
+# ------------------------------------------------ #
 
 # Requirements
 # - python
 # - uv
 # - clojure & practicalli cli config (dependency check)
-# - docker
+# - docker (run megalinter locally)
 # - mega-linter-runner
 # ------------------------------------------------ #
 
@@ -29,13 +29,13 @@ HELP-DESCRIPTION-SPACING := 24
 # SHELL := /usr/bin/zsh
 
 # Tool variables
-MEGALINTER_RUNNER := npx mega-linter-runner --flavor documentation --env "'MEGALINTER_CONFIG=.github/config/megalinter.yaml'" --remove-container
+MEGALINTER_RUNNER := npx mega-linter-runner --flavor documentation --env "'MEGALINTER_CONFIG=.github/config/megalinter.yaml'" --env "'VALIDATE_ALL_CODEBASE=true'" --remove-container
 DOCS_SERVER := zensical serve --dev-addr localhost:7777
 OUTDATED_FILE := outdated-$(shell date +%y-%m-%d-%T).md
 # ------------------------------------------------ #
 
 # -- Code Quality -------------------------------- #
-pre-commit-check: lint ## Run format, lint and test targets
+pre-commit-check: lint ## Format and lint with Megalinter
 
 lint:  ## Run MegaLinter with custom configuration (node.js required)
 	$(info -- MegaLinter Runner ---------------------)
@@ -63,8 +63,8 @@ dependencies-update: ## Update all library dependencies and GitHub action
 # ------------------------------------------------ #
 
 # --- Documentation Generation  ------------------ #
-docs-install:  ## Install or upgrade Zensical in Python virtual environment
-	uv tool install zensical --upgrade
+docs-install:  ## Install or upgrade Zensical with Catppuccin theme plugin
+	uv tool install zensical --with catppuccin-zensical --upgrade
 
 docs:  ## Build and run docs in local server
 	$(info -- Local Server --------------------------)
@@ -81,9 +81,11 @@ docs-build:  ## Build docs locally
 docs-debug:  ## Run local server in debug mode
 	$(info -- Local Server Debug --------------------)
 	$(DOCS_SERVER) -v
+
+dist: docs-build ## Build Zensical website
 # ------------------------------------------------ #
 
-# ------- Version Control ------------------------ #
+# -- Version Control ----------------------------- #
 git-sr:  ## status list of git repos under current directory
 	$(info -- Multiple Git Repo Status --------------)
 	mgitstatus -e --flatten
