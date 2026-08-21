@@ -19,6 +19,7 @@
 | .github/workflows/scheduled-version-check.yaml | actions/checkout                            | v4       | v6.0.2  |
 - ci(github): 🔧 practicalli workflows for zensical static site generator
 - build(make): 🔧 practicalli tasks for zensical
+- build(overrides): 💄 update no page found and announcement for zensical migration
 
 
 ## 2026-04-12
