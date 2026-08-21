@@ -20,6 +20,7 @@
 - ci(github): 🔧 practicalli workflows for zensical static site generator
 - build(make): 🔧 practicalli tasks for zensical
 - build(overrides): 💄 update no page found and announcement for zensical migration
+- build(mkdocs): 🔧 palette based on OS preferences
 
 
 ## 2026-04-12
