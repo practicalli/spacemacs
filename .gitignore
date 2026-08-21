@@ -8,11 +8,12 @@
 !LICENSE
 
 # ------------------------
-# Include MkDocs files
+# Include Zensical files
 !docs/
 !includes/
 !overrides/
 !mkdocs.yml
+!zensical.toml
 
 # ------------------------
 # Project automation
@@ -23,4 +24,3 @@
 !.gitignore
 !.gitattributes
 !.github/
-

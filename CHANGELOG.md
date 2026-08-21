@@ -17,6 +17,7 @@
 |                                                | actions/setup-python                        | v5       | v6.2.0  |
 | .github/workflows/scheduled-stale-check.yaml   | actions/stale                               | v9       | v10.2.0 |
 | .github/workflows/scheduled-version-check.yaml | actions/checkout                            | v4       | v6.0.2  |
+- ci(github): 🔧 practicalli workflows for zensical static site generator
 
 
 ## 2026-04-12
