@@ -2,6 +2,10 @@
 
 # Unreleased
 
+### Added
+
+- build(marksman): 🔧 define docs directory as root to correctly identify links
+
 ### Changed
 
 -dev: update GitHub actions with `make dependencies-update`
