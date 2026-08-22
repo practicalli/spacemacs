@@ -1,6 +1,8 @@
 # Changelog
 
-# Unreleased
+## Unreleased
+
+## 2026-08-22
 
 ### Added
 
@@ -8,7 +10,12 @@
 
 ### Changed
 
--dev: update GitHub actions with `make dependencies-update`
+- ci(github): 🔧 practicalli workflows for zensical static site generator
+- build(make): 🔧 practicalli tasks for zensical
+- build(overrides): 💄 update no page found and announcement for zensical migration
+- build(mkdocs): 🔧 palette based on OS preferences
+- docs(format): ✏️ update to relative links and resolve page not existing issues
+- ci(github): update GitHub actions with `make dependencies-update`
 
 | :file                                          | :name                                       | :current | :latest |
 |------------------------------------------------|---------------------------------------------|----------|---------|
@@ -21,12 +28,6 @@
 |                                                | actions/setup-python                        | v5       | v6.2.0  |
 | .github/workflows/scheduled-stale-check.yaml   | actions/stale                               | v9       | v10.2.0 |
 | .github/workflows/scheduled-version-check.yaml | actions/checkout                            | v4       | v6.0.2  |
-- ci(github): 🔧 practicalli workflows for zensical static site generator
-- build(make): 🔧 practicalli tasks for zensical
-- build(overrides): 💄 update no page found and announcement for zensical migration
-- build(mkdocs): 🔧 palette based on OS preferences
-- dev: update GitHub actions with `make dependencies-update`
-- docs(format): ✏️ update to relative links and resolve page not existing issues
 
 
 ## 2026-04-12
