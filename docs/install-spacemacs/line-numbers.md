@@ -9,7 +9,9 @@ Configure `dotspacemacs-line-numbers` in Spacemacs configuration file to [show l
 
 ## Relative line numbers for Evil
 
-A relative numbering style (`visual`, `relative`) is highly recommended for [vim-style editing](/spacemacs-basics/vim-basics.md) as it provides an effective way to apply actions to multiple lines
+Relative line numbering shows the current line number with all other numbers the relative number of lines away from the current line.
+
+Relative numbering is useful for jumping to different parts of your file or running commands on a number of lines, eg. delete, indent, multiple cursors (++"g"++ ++"r"++)
 
 ++1++ ++0++ ++"j"++ jumps 10 lines forward
 
@@ -17,12 +19,10 @@ A relative numbering style (`visual`, `relative`) is highly recommended for [vim
 
 ++2++ ++4++ ++"g"++ ++"r"++ ++"j"++ selects multiple cursors for the next 24 lines
 
-Relative line numbering shows the current line number with all other numbers the relative number of lines away from the current line.  Relative numbering is useful for jumping to different parts of your file or running commands on a number of lines, eg. delete, indent, multiple cursors (++"g"++ ++"r"++)
-
 
 ## Visual style line number configuration
 
-Practicalli recommends using visual line numbers for Vim style editing, which provides relative numbering that does not count hidden or [folded code](/spacemacs/navigating-code/code-folding/).
+Practicalli recommends using visual line numbers for Vim style editing, which provides relative numbering that does not count hidden or [folded code](../navigating-code/code-folding/).
 
 ++spc++ ++"f"++ ++"e"++ ++"d"++ open the Spacemacs user configuration file. ++spc++ ++"s"++ ++"s"++ `dotspacemacs-line-numbers` to jump to the configuration option.
 

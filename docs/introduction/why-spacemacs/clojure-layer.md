@@ -1,4 +1,4 @@
-# Spacemacs Clojure Layer Overview
+# Spacemacs Clojure Layer
 
 ![Spacemacs Clojure Layer](https://raw.githubusercontent.com/practicalli/graphic-design/live/banners/practicalli-banner-spacemacs-clojure-layer.png){loading=lazy}
 
@@ -9,10 +9,10 @@ Projects managed by [Leiningen](https://leiningen.org){target=_blank}, [Boot](ht
 !!! HINT "CIDER is provided by the Clojure layer"
     [CIDER](https://github.com/clojure-emacs/cider){target=_blank} is the predominant package for Clojure development with Emacs and includes a range of supporting Emacs packages, curated to ensure those packages work well together.
 
-    The [Clojure layer](/spacemacs/install-spacemacs/manually-add-clojure-layer.md) uses the [latest version of CIDER on Melpa](https://melpa.org/#/cider), either release or latest snapshot.
+    The [Clojure layer](../../install-spacemacs/enhance-clojure-experience/index.md) uses the [latest version of CIDER on Melpa](https://melpa.org/#/cider), either release or latest snapshot.
 
 
-## Features of the Clojure layer
+## Features
 
 ![Practicalli Cider Logo](https://raw.githubusercontent.com/practicalli/graphic-design/live/logos/practicalli-cider-logo.png){align=right loading=lazy}
 

@@ -2,9 +2,15 @@
 
 ++spc++ ++"q"++ ++"r"++ (`restart-emacs`) is a quick way to resolve some issues, especially when installing multiple packages.  Some Emacs packages depend on others being present, which may not be the case when first installing.
 
-++spc++ ++"f"++ ++"e"++ ++d++ (`ediff`) to compare your Spacemacs configuration with the default Spacemacs configuration. ++"j"++ and ++"k"++ to navigate the differences, ++"b"++ to copy a change from the Spacemacs configuration to your own.  ++"q"++ to quit comparing, ++question++ for more help.
+++spc++ ++"f"++ ++"e"++ ++d++ (`ediff`) to compare your Spacemacs configuration with the default Spacemacs configuration.
 
-[Switch to the Spacemacs develop branch](switch-to-develop.md) to get the latest fixes and features (until version 0.300 is release to master).
+++"j"++ and ++"k"++ to navigate the differences.
+
+++"b"++ to copy a change from the Spacemacs configuration to your own.
+
+++"q"++ to quit comparing, ++question++ for more help.
+
+[Switch to the Spacemacs develop branch](../reference/switch-to-develop.md) to get the latest fixes and features.
 
 Read the latest docs at [develop.spacemacs.org](https://develop.spacemacs.org/) or the [layer specific README.org files on GitHub](https://github.com/syl20bnr/spacemacs/tree/develop/layers)
 
@@ -20,7 +26,7 @@ Also review the GitHub issues for a specific package that may be causing issues.
 
 ## Ask the community
 
-If you are unsure if you have found an issue, or do not understand why some behavior is happening, then ask the Spacemacs community, they are very helpful and friendly.
+If you are unsure if you have found an issue, or do not understand why some behavior is happening, then ask the Spacemacs community, they are helpful and friendly.
 
 * [Spacemacs Gitter chat](https://gitter.im/syl20bnr/spacemacs) - any aspects of Spacemacs
 * [#Spacemacs on Clojurians Slack community](clojurians.slack.com/messages/spacemacs) - Clojure specific discussions ([create a free account](http://clojurians.net/))
@@ -84,12 +90,12 @@ As there are 100's of packages, the scorched earth approach of just deleting the
 
 ## Debugging Spacemacs
 
-The [Spacemacs debugging page](https://github.com/syl20bnr/spacemacs/wiki/Debugging) explains concepts needed to debug Spacemacs and to report issues in an useful way.
+[Spacemacs debugging page](https://github.com/syl20bnr/spacemacs/wiki/Debugging) explains concepts needed to debug Spacemacs and to report issues in an useful way.
 
 * [Debugging memory issues](https://www.emacswiki.org/emacs/EmacsMemoryDebugging)
 
 
-## Issues with spawned processes
+## Spawned processes
 
 `SPC a p` (`list-processes`) lists the processes started by or from within Spacemacs, eg. for Clojure its `nrepl-server` and `nrepl-connection` processes when running `cider-jack-in`. Use `SPC a P` (`proced`) to see all operating system processes.
 

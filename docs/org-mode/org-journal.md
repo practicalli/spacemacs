@@ -27,7 +27,7 @@
 
 ## Tracking progress with TODO states
 
-Any Heading level can be assigned a [TODO state](/org-mode/todo-states.md) to demonstrate progress and use the journal to manage tasks for the day.
+Any Heading level can be assigned a [TODO state](./todo-states.md) to demonstrate progress and use the journal to manage tasks for the day.
 
 ++comma++ ++l++ or ++shift+arrow-right++ (`org-shiftright`) cycles through the states, which are `TODO` `DOING` and `DONE` by default.  ++comma++ ++h++ or ++shift+arrow-left++ to cycle the states in reverse.
 
@@ -57,7 +57,7 @@ Add a cookie to a header containing tasks to show the number or percentage of ta
 
 ## Configure org-journal
 
-[practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d){target=_blank} includes the configuration below
+[practicalli/spacemacs-config](https://github.com/practicalli/spacemacs-config){target=_blank} includes the configuration below
 
 To manually add org-journal, edit `.spacemacs` and add these org layer variable with suggested settings from [Spacemacs org layer documentation](https://develop.spacemacs.org/layers/+emacs/org/README.html#org-journal-support){target=_blank}
 

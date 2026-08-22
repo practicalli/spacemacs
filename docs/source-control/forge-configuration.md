@@ -3,9 +3,9 @@
 Magit can retrieve issues and pull request for a project and even create a new pull request, when connect to services provided by GitHub, GitLab and your own hosted environments.  Magit uses Forge to talk to these services and refers to these services collectively as forges.
 
 !!! Hint "Configure Git identity and create a GPG key first"
-    [Configure a Git identity](git-configuration.md) to repositories on these services before configuring Forge
+    [Configure a Git identity](./git-configuration.md) to repositories on these services before configuring Forge
 
-    [Create a gpg key](/encryption/create-gpg-key.md) (Pretty Good Privacy) to encrypt your GitHub/GitLab personal access token in a file called `.authinfo.gpg`.
+    [Create a gpg key](../encryption/create-gpg-key.md) (Pretty Good Privacy) to encrypt your GitHub/GitLab personal access token in a file called `.authinfo.gpg`.
 
 
 ## Set username for the Forge service
@@ -35,7 +35,7 @@ Personal Access tokens can be revoked and recreated at any time, so are a safer 
 
 ### Encrypted forge connection in .authinfo.gpg
 
-++spc++ ++"f"++ ++"f"++ and open a file called `~/.authinfo`.  If the file does not exist it will be created when saving the file.
+++spc++ ++"f"++ ++"f"++ and open a file called `~/.authinfo`. If the file does not exist it will be created when saving the file.
 
 Add the Auth Source line to the file, using your GitHub or GitLab name and associated personal access token. For example, the GitHub account name is practicalli and the personal access token is the password (this is not a real token or account, do not share your token publicly)
 
@@ -85,7 +85,7 @@ gpg --output ~/.authinfo --decrypt ~/.authinfo.gpg
 
 ## Configure Spacemacs to use authentication
 
-Add the preferred file in which to store your token, by default this is `.authinfo`.  It is recommended to store this in `~/.authinfo.gpg`
+Add the preferred file in which to store your token, by default this is `.authinfo`. It is recommended to store this in `~/.authinfo.gpg`
 
 Add `auth-sources` to specify the location of the encrypted token file in the `dotspacemacs/user-config` section of your `.spacemacs` file
 
@@ -95,7 +95,7 @@ Add `auth-sources` to specify the location of the encrypted token file in the `d
   (setq auth-sources '("~/.authinfo.gpg"))
 ```
 
-If using `XDG_CONFIG_HOME` for the location of the `authinfo.gpg` file.  The default location in `HOME` can also be included and the first file found will be used.
+If using `XDG_CONFIG_HOME` for the location of the `authinfo.gpg` file. The default location in `HOME` can also be included and the first file found will be used.
 
 ```elisp
   (setq auth-sources (list
@@ -134,9 +134,9 @@ The first number is the open items to be displayed, the second number is the clo
 
 ## Hosted environments
 
-For GitHub enterprise or GitLab self-hosted service, [specify the user and API](https://magit.vc/manual/ghub/Setting-the-Username.html#Setting-the-Username){target=_blank} that Forge should use to connect for the hosted service service
+For GitHub enterprise or GitLab self-hosted service, [specify the user and API](https://magit.vc/manual/ghub/Setting-the-Username.html#Setting-the-Username){target=_blank} that Forge should use to connect for the hosted service.
 
-For example, if the API is available at https://practical.li/api/v3
+For example, if the API is available at https://example.com/api/v3
 
 Set the username for the specific service in the `~/.gitconfig` file:
 

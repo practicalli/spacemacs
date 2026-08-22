@@ -1,10 +1,10 @@
 # Structural Editing
 
-Structural editing is an invaluable tool when working with Lisp languages (elisp, lisp, clojure, etc) as it enables you to easily move code around without breaking the structural syntax of the language.
+An invaluable tool to ensure the correctness of structure (parens) for Lisp languages (elisp, lisp, clojure, etc)
 
-Clojure has very precise syntax as everything is contained in a list or similar structure.  It is very simple to navigate the structure of Clojure code by jumping from expression to expression.
+Code can be created and manipulated without breaking the structural syntax of the language, providing an effective way to refactor code.
 
-This well defined structure also makes it trivial to move expressions around, giving you a simple way to develop and refactor your code.
+Navigate the structure of Clojure code by jumping from expression to expression and form to form.
 
 <p style="text-align:center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PmSPKvlJk74?start=433" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -14,14 +14,14 @@ This well defined structure also makes it trivial to move expressions around, gi
    [Structural editing section](/spacemacs/structural-editing/) provides a detailed guide to using Lisp mode, Smartparens, Paredit and Evil mode to manage your Clojure (and elsip) code.
 
 
-## Smartparens For Writing Structural Text
+## Smartparens
 
-Spacemacs uses [smartparens](https://github.com/Fuco1/smartparens){target=_blank} to help you write structural code really fast and also move expressions around.  Smartparens is a newer implementation of the classic _paredit_ package.
+Spacemacs uses [smartparens](https://github.com/Fuco1/smartparens){target=_blank} to help you write structural code really fast and also move expressions around. Smartparens is a newer implementation of the classic _paredit_ package.
 
 !!! HINT "Evil-cleverparens"
     [Evil-cleverparens](https://github.com/luxbock/evil-cleverparens){target=_blank} configures Vim states to respect smartparens rules. This ensures that you do not accidentally delete parenthesis and keeps the structure of your Clojure intact.
 
-  See the section on [Evil Clojure Editing](/spacemacs/install-spacemacs/evil-structural-editing.md).
+  See the section on [Evil Clojure Editing](../../install-spacemacs/enhance-clojure-experience/evil-structural-editing.md).
 
 ## Lisp State For Manipulating Structural Text
 

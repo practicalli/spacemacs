@@ -1,6 +1,6 @@
 # Committing changes
 
-++"c"++ opens the commit menu in the Magit status buffer, allowing you to create, [amend](#amend-commit), [extend](#extend-commit), [reword](#reword-commit), [squash](#reword-commit) commits.
+++"c"++ opens the commit menu in the Magit status buffer, allowing you to create, [amend](#amend-commit), [extend](#extend-commit), [reword](#reword-commit-message), [squash](#squash-commits) commits.
 
 The Magit commit menu can be used to create new commits at the HEAD of the commit history.
 
@@ -35,7 +35,9 @@ Two new buffers open
 
 Type in a suitable commit message that explains the purpose and value of this commit. The first line should be a succinct summary of the purpose of the change.
 
-68 characters is the recommended maximum length of the first line of the commit message.  At 69 characters onward they change color to give a visual guide to the maximum length.  In the body, lines are automatically wrapped once a space is typed after a word that the maximum length.
+68 characters is the recommended maximum length of the first line of the commit message. At 69 characters onward they change color to give a visual guide to the maximum length.
+
+In the body, lines are automatically wrapped once a space is typed after a word that the maximum length.
 
 ![Spacemacs Magit - message buffer](/images/spacemacs-magit-commit-message-buffer.png)
 
@@ -50,7 +52,9 @@ Scrolling through the commit history is a simple way to create consistent style 
 
 Commit messages are remembered even after a reset (tested with soft reset)
 
-Previous messages are only available once a commit is made. If a change is cancelled, ++comma++ ++"k"++ before the commit then the message is not saved. Instead, select the message and yank, `y`, into the kill ring before killing the commit.
+Previous messages are only available once a commit is made.
+
+If a change is cancelled, e.g. ++comma++ ++"k"++, before the commit then the message is not saved. Instead, select the message and yank, `y`, into the kill ring before killing the commit.
 
 
 ### Linking GitHub issues and Git commits
@@ -85,13 +89,17 @@ Edit the commit message and review the diffs for all the files added to the comm
 
 
 ??? HINT "Force push a shared commit"
-    If a commit is changed after it is pushed to a remote repository, then a force push will be required.  Please confirm with other maintainers of the code if a force push is acceptable as it could interrupt their development.  A more suitable practice can be to create a new commit and push that rather than rewrite history.
+    If a commit is changed after it is pushed to a remote repository, then a force push will be required.
+
+    Please confirm with other maintainers of the code if a force push is acceptable as it could interrupt their development.
 
     `P` opens the Push menu in Magit status buffer (`SPC g s`).
 
     `-f` sets the force-with-lease option to rewrite the shared history in the remote repository
 
     `p` pushes to the new commit to the remote repository and replaces the HEAD commit in that repository.
+
+    A preferred practice is to create a new commit and push that rather than rewrite history.
 
 
 ### Why amend a commit

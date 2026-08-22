@@ -1,6 +1,6 @@
 # Evil Cleverparens safe structural editing
 
-[With `evil-cleverparens` enabled](/install-spacemacs/evil-structural-editing.md), editing in Evil Normal state respects the structure of your code.
+[With `evil-cleverparens` enabled](../install-spacemacs/enhance-clojure-experience/evil-structural-editing.md), editing in Evil Normal state respects the structure of your code.
 
 | Spacemacs   | Evil    | Description                                                |
 |-------------|---------|------------------------------------------------------------|

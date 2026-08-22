@@ -131,7 +131,7 @@ Pretty print shows the structure of results from function calls in a human-frien
 
 ++comma++ ++"d"++ is the Cider debug menu which can inspect view intermediate values and data structures during the debugging of Clojure function calls.
 
-[Cider inspector](evaluating-clojure/inspect.md) is an effective way to navigate nested data and page through large data sets.
+[Cider inspector](../evaluating-clojure/inspect.md) is an effective way to navigate nested data and page through large data sets.
 
 Tools to view and navigate code
 
@@ -194,15 +194,15 @@ Test Driven Development (TDD) and REPL Driven Development (RDD) complement each 
 > Test Driven Development fits well with Hammock Time, as good design comes from deep thought
 
 * RDD enables rapid design experiments so different approaches can easily and quickly be evaluated .
-* TDD focuses the results of the REPL experiments into design decisions, codified as unit tests.  These tests guide the correctness of specific implementations and provide critical feedback when changes break that design.
+* TDD focuses the results of the REPL experiments into design decisions, codified as unit tests. These tests guide the correctness of specific implementations and provide critical feedback when changes break that design.
 
-[:fontawesome-solid-book-open: Unit tests](https://practical.li/clojure/testing/unit-testing/){target=_blank} should support the public API of each namespace in a project to help prevent regressions in the code.  Its far more efficient in terms of thinking time to define unit tests as the design starts to stabilize than as an after thought.
+[:fontawesome-solid-book-open: Unit tests](https://practical.li/clojure/testing/unit-testing/){target=_blank} should support the public API of each namespace in a project to help prevent regressions in the code. Its far more efficient in terms of thinking time to define unit tests as the design starts to stabilize than as an after thought.
 
 `clojure.test` library is part of the Clojure standard library that provides a simple way to start writing unit tests.
 
-[:fontawesome-solid-book-open: Clojure spec](https://practical.li/clojure/clojure-spec/){target=_blank} can also be used for generative testing, providing far greater scope in values used when running unit tests.  Specifications can be defined for values and functions.
+[:fontawesome-solid-book-open: Clojure spec](https://practical.li/clojure/clojure-spec/){target=_blank} can also be used for generative testing, providing far greater scope in values used when running unit tests. Specifications can be defined for values and functions.
 
-Clojure has a number of [:fontawesome-solid-book-open: test runners](https://practical.li/clojure/testing/test-runners/){target=_blank} available.  Kaocha is a test runner that will run unit tests and function specification checks.
+Clojure has a number of [:fontawesome-solid-book-open: test runners](https://practical.li/clojure/testing/test-runners/){target=_blank} available. Kaocha is a test runner that will run unit tests and function specification checks.
 
 !!! Hint "Automate local test runner"
     Use [:fontawesome-solid-book-open: kaocha test runner](https://practical.li/clojure/testing/test-runners/kaocha-test-runner/){target=_blank} in watch mode to run tests and specification check automatically (when changes are saved)

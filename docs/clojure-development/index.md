@@ -1,8 +1,8 @@
 # Clojure Development Overview
 
-A [:fontawesome-solid-book-open: REPL workflow](/spacemacs/introduction/repl-workflow.md) is highly encouraged for effective Clojure development.
+A [:fontawesome-solid-book-open: REPL workflow](../introduction/repl-workflow.md) is highly encouraged for effective Clojure development.
 
-Start a REPL process for a Clojure project and connect an editor to the REPL, allowing code to be evaluated and results returned instantly. 
+Start a REPL process for a Clojure project and connect an editor to the REPL, allowing code to be evaluated and results returned instantly.
 
 ??? TIP "Simplest Clojure CLI project"
     A `deps.edn` file containing an empty hash-map `{}` is the simplest Clojure CLI project recognised by Spacemacs Clojure layer (CIDER).
@@ -19,7 +19,7 @@ Start a REPL process for a Clojure project and connect an editor to the REPL, al
 [:fontawesome-solid-book-open: Practicalli Project Templates](https://practical.li/clojure/clojure-cli/projects/templates/practicalli/){target=_blank .md-button}
 
 ??? HINT "Emacs shell or Command Line terminal"
-    `SPC '` opens an Emacs popup buffer containing an shell terminal to run a command to create a Clojure project from a template.  
+    `SPC '` opens an Emacs popup buffer containing an shell terminal to run a command to create a Clojure project from a template.
 
     Or open a terminal window from your operating system for a command line shell.
 
@@ -105,5 +105,4 @@ Renaming a namespace also renames the filename along with `requires` that includ
 
     Alternatively, `, q r` to restart the REPL after names have been changed or deleted.
 
-    [Remove Evaluated Vars](/spacemacs/evaluating-clojure/undefine/){target=_blank .md-button} 
-
+    [Remove Evaluated Vars](/spacemacs/evaluating-clojure/undefine/){target=_blank .md-button}

@@ -1,6 +1,6 @@
 # clj-kondo Server
 
-**For environments where the `clj-kondo` binary does not run**, configure clj-kondo-lsp-server as an language server protocol (LSP) server.  This provides the same features as [using clj-kondo as a linter](/install-spacemacs/enhance-clojure-experience.md).
+**For environments where the `clj-kondo` binary does not run**, configure clj-kondo-lsp-server as an language server protocol (LSP) server. This provides the same features as [using clj-kondo as a linter](./index.md).
 
 Example configuration is provided in [practicalli/spacemacs.d](https://github.com/practicalli/spacemacs.d)
 

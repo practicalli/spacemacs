@@ -13,12 +13,12 @@ Use `C-j` and `C-k` to move down and up through the search results.
 ![Spacemacs Helm-Ag ripgrep pattern search results](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-helm-ag-ripgrep-pattern-search.png)
 
 !!! HINT "Replacing text across a project"
-    Use search results to [replace text across a project](/spacemacs/spacemacs-basics/evil-tools/replacing-text-across-projects.md).
+    Use search results to [replace text across a project](../../spacemacs-basics/evil-tools/replacing-text-across-projects.md).
 
 
 ## Open files from search results
 
-With a search open, `C-c C-f` enables `helm-follow`.  When moving through results with `C-j` and `C-k` the corresponding file is opened in the current buffer.
+With a search open, `C-c C-f` enables `helm-follow`. When moving through results with `C-j` and `C-k` the corresponding file is opened in the current buffer.
 
 Set `helm-follow-mode-persistent` to true in `.spacemacs` to remember the use of `C-c C-f` follow mode for helm actions.
 
@@ -30,10 +30,11 @@ Set `helm-follow-mode-persistent` to true in `.spacemacs` to remember the use of
 
 ## Search tool binary
 
-Searching requires an external tool to be available on your system PATH. [:globe_with_meridians: Ripgrep](https://github.com/BurntSushi/ripgrep) is the recommended search tool, although [silver searcher (ag)](/spacemacs/alternative-tooling/silversearcher-ag.md) is a viable alternative.  Using `grep` is noticeably slower and has fewer options for searching.
+Searching requires an external tool to be available on your system PATH.
+
+[:globe_with_meridians: Ripgrep](https://github.com/BurntSushi/ripgrep) is the recommended search tool. Using `grep` is noticeably slower with fewer options for searching.
 
 - [:globe_with_meridians: Ripgrep install instructions](https://github.com/BurntSushi/ripgrep#installation)
-- [:globe_with_meridians: silver searcher (ag)](/alternative-tooling/silversearcher-ag.md)
 
 
 ## Ripgrep search tool options

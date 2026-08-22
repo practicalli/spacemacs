@@ -13,7 +13,7 @@ Sayid is a comprehensive debug and profile tool, useful when debugging needs are
 |-------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | [cider debug](cider-debug.md)                                                             | add breakpoints and step through values and expressions         |
 | [sayid debug](sayid-debug.md)                                                             | debug the whole project (code must compile) and profile project |
-| [cider inspector](/evaluating-clojure/inspect.md)                                         | navigate through data structures, paging through large data     |
+| [cider inspector](../evaluating-clojure/inspect.md))                                      | navigate through data structures, paging through large data     |
 | [data inspector: portal](http://practical.li/clojure/clojure-cli/data-browsers/portal.md) | visualize and navigate through data structures                  |
 
 <p style="text-align:center">

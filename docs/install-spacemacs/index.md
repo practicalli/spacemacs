@@ -3,9 +3,9 @@
 [Install prerequisites: Emacs, Java & Clojure](/spacemacs/install-spacemacs/pre-install/){.md-button}
 
 1. [Clone or download Spacemacs](#clone-spacemacs)
-2. [Clone practicalli/spacemacs-config user configuration](#clone-practicalli-spacemacs-configuration).  Or start Emacs and use the Spacemacs install wizard, follow the [manual configuration section](manual-configuration/)
+2. [Clone `practicalli/spacemacs-config` user configuration](#clone-practicalli-spacemacs-configuration), or start Emacs and follow the [manual configuration section](./manual-configuration.md)
 3. [Install Fira Code font](#install-fira-code-font) (or update `dotspacemacs-default-font` in the Spacemacs user configuration to a preferred font name)
-4. [Install All The Icons fonts ](#all-the-icon-fonts) to support the doom modeline theme
+4. [Install All The Icons fonts ](#icon-fonts) to support the doom modeline theme
 
 <p style="text-align:center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rZNYLGw1qFk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

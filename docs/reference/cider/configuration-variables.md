@@ -6,12 +6,12 @@ Variables are grouped by the files they are defined in throughout the [clojure-e
 
 CIDER Variables can be set via:
 
-- `.dir-locals.el` files for [project specific configuration](/spacemacs/clojure-projects/project-configuration.md)
+- `.dir-locals.el` files for [project specific configuration](../../clojure-development/project-configuration/index.md)
 - `(clojure :variables variable-name value)` in .spacemacs layers list
 - `(setq variable-name value)` in `dotspacemacs/user-config` section of `.spacemacs`
 
 !!! HINT "Clojure Project Configuration"
-    Examples of using `.dir-locals.el` for Clojure projects are covered in the [project level configuration page](/spacemacs/clojure-projects/project-configuration.md)
+    Examples of using `.dir-locals.el` for Clojure projects are covered in the [project level configuration page](../../clojure-development/project-configuration/index.md)
 
 
 ## Completion

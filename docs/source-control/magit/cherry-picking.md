@@ -1,6 +1,6 @@
 # Cherry Picking commits
 
-Cherry Picking is a way to be specific about which commits from a branch are incorporated into another branch.  Where as merging a branch into another would take the full commit history.
+Cherry Picking is a way to be specific about which commits from a branch are incorporated into another branch. Where as merging a branch into another would take the full commit history.
 
 `SPC g s` to open magit status provides the `A` Apply menu.
 
@@ -30,12 +30,12 @@ A list of commits, 'cherries', are show to help narrow down which commits could 
 
 `l o` in Magit Status will list the other branches.
 
-Navigate to the branch and commit (or commits) to cherry pick.  Use visual select state, `v` to select multiple commits (`C-SPC` in holy mode)
+Navigate to the branch and commit (or commits) to cherry pick. Use visual select state, `v` to select multiple commits (`C-SPC` in holy mode)
 
 
 ## Applying commits
 
-`A` starts the apply menu to start the cherry picking process.  `A` is also used to open the transient Apply menu, to continue skip or abort the cherry picking.
+`A` starts the apply menu to start the cherry picking process. `A` is also used to open the transient Apply menu, to continue skip or abort the cherry picking.
 
 ![Spacemacs Magit cherry picking - Apply menu and options](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-cherry-picking-apply-menu.png)
 
@@ -43,7 +43,7 @@ Navigate to the branch and commit (or commits) to cherry pick.  Use visual selec
 
 Select the **donate branch** - the branch commits are to be copied to
 
-If there are no conflicts, the commits are added to the branch.  Push the changes, `P p`, to a remote repository if relevant.
+If there are no conflicts, the commits are added to the branch. Push the changes, `P p`, to a remote repository if relevant.
 
 
 ## Managing Conflicts
@@ -83,7 +83,7 @@ Diff 3 presentation of merge conflicts displays a common parent (if one exists) 
 
 ![Spacemacs Magit unstaged change with diff3 configuration showing parent of conflicting changes](https://raw.githubusercontent.com/practicalli/graphic-design/live/spacemacs/screenshots/spacemacs-magit-diff3-merge-parent-example.png)
 
-> [Git configuration](/source-control/git-configuration.md) details how to add diff3 merge support along with many other useful settings.
+> [Git configuration](../git-configuration.md) details how to add diff3 merge support along with many other useful settings.
 
 
 ## Errors and Aborts

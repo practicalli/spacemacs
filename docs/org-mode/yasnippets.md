@@ -1,4 +1,4 @@
-# Yasnippets for Org-mode
+# Yasnippets
 
 Snippets provide a way to add common code or text.
 
@@ -48,4 +48,4 @@ The current snippets for org-mode from the [yasnippet official snippet collectio
 
 ## Reference
 
-* [Create your own snippets](/spacemacs/snippets/add-your-own-snippets.md)
+* [Create your own snippets](../snippets/yasnippets/writing-snippets.md)

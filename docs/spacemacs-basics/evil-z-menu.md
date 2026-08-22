@@ -7,7 +7,7 @@
 
 ## Folding code, comments and other content
 
-Code folding is very useful for hiding different levels of detail, for example you could hide everything but the function names in a namespace, showing just the API for that namespace.
+Code folding for hiding different levels of detail, e.g. hide everything but the function names in a namespace, showing just the API for that namespace.
 
 Comments and documentation can be folded to help you focus on a specific part of the content.
 
@@ -19,7 +19,7 @@ Comments and documentation can be folded to help you focus on a specific part of
 | `z O`      | open fold recursive (capital o)             |
 | `z r`      | open folds                                  |
 
-See [:fontawesome-solid-book-open: narrowing](/spacemacs/spacemacs-basics/evil-tools/narrowing.md) for a focused approach to editing.
+See [:fontawesome-solid-book-open: narrowing](./evil-tools/narrowing.md) for a focused approach to editing.
 
 
 ## Scrolling

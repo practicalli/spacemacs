@@ -25,6 +25,8 @@
 - build(make): 🔧 practicalli tasks for zensical
 - build(overrides): 💄 update no page found and announcement for zensical migration
 - build(mkdocs): 🔧 palette based on OS preferences
+- dev: update GitHub actions with `make dependencies-update`
+- docs(format): ✏️ update to relative links and resolve page not existing issues
 
 
 ## 2026-04-12

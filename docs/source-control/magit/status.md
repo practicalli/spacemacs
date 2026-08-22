@@ -38,7 +38,7 @@ If you run git status from a file that is not currently in a git project, magit 
 
 ## Magit Dispatch
 
-`SPC g m` calls `magit-dispatch` which opens a transient menu with all the Magit commands found in Magit Status buffer.  Git commands can be run without the need of the Magit status buffer.
+`SPC g m` calls `magit-dispatch` which opens a transient menu with all the Magit commands found in Magit Status buffer. Git commands can be run without the need of the Magit status buffer.
 
 ![Spacemacs Magit help menu](/images/spacemacs-magit-help-menu.png)
 
@@ -54,7 +54,7 @@ Magit status in fullscreen mode provides lots of space to work with changes, loo
 
 
 !!! HINT "Magit fullscreen configured in Enhanced Clojure experience"
-    Magit fullscreen is already configured if you followed the [Enhance Clojure experience](/install-spacemacs/enhance-clojure-experience.md).
+    Magit fullscreen is already configured if you followed the [Enhance Clojure experience](../../install-spacemacs/enhance-clojure-experience/evil-structural-editing.md)
 
 
 ## Configure fullscreen for Magit Status

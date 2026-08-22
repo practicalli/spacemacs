@@ -1,7 +1,7 @@
 # Navigating Expressions
 Jumping between symbols and expressions is an effective way to navigate your Clojure code, especially where you have nested expressions.
 
-`SPC k .` enters [Lisp State](/structural-editing/lisp-state.md) transient state, where you can easily navigate around symbols and expressions.
+`SPC k .` enters [Lisp State](../structural-editing/lisp-state/index.md) transient state, where you can easily navigate around symbols and expressions.
 
 | Key bindings | Description                                 |
 |--------------|---------------------------------------------|
@@ -16,4 +16,4 @@ Jumping between symbols and expressions is an effective way to navigate your Clo
 | `W`          | unwrap expression                           |
 | `y`          | copy expression                             |
 
-[Lisp state](/structural-editing/lisp-state.md) has many more examples of structural editing.
+[Lisp state](../structural-editing/lisp-state/index.md) has many more examples of structural editing.

@@ -17,7 +17,7 @@ Find, copy, delete, rename, sudo-edit, bookmark and browse files.
 
 ## Buffer menu
 
-list, show and delete buffers.  A buffer is a container for file content and any other text and images (if images support is included in your Emacs install)
+list, show and delete buffers. A buffer is a container for file content and any other text and images (if images support is included in your Emacs install)
 
 ![Spacemacs - Buffer menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-buffer-light.png?raw=true#only-light)
 ![Spacemacs - Buffer menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-buffer-dark.png?raw=true#only-dark)
@@ -26,7 +26,7 @@ list, show and delete buffers.  A buffer is a container for file content and any
 
 ## Windows
 
-Organise the number and location of buffers displayed, splitting horizontally and vertically with multiple rows and columns.  
+Organise the number and location of buffers displayed, splitting horizontally and vertically with multiple rows and columns.
 
 Windows can be moved around and resized without resorting to using the mouse.
 
@@ -35,7 +35,7 @@ Windows can be moved around and resized without resorting to using the mouse.
 ![Spacemacs - window menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-window-light.png?raw=true#only-light)
 ![Spacemacs - window menu](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/menus/spacemacs-menu-window-dark.png?raw=true#only-dark)
 
-[:fontawesome-solid-book-open: Managing Windows](./managing-Windows.md){.md-button}
+[:fontawesome-solid-book-open: Managing Windows](./managing-windows.md){.md-button}
 
 
 ## Project (Projectile) menu
@@ -70,4 +70,3 @@ Layouts group buffers together for projects or any arbitrary grouping you decide
 ![Spacemacs - Ranger file manager](https://github.com/practicalli/graphic-design/blob/live/editors/spacemacs/screenshots/spacemacs-file-management-ranger-dark.png?raw=true#only-dark)
 
 [:fontawesome-solid-book-open: Ranger](./ranger.md){.md-button}
-
