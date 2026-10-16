@@ -6,6 +6,9 @@
 ### Added
 - docs(docs): 📝 added a docs top level section to group markdown and org-mode
 
+### Updated
+- build(zensical): 🔧 switch to zensical.toml configuration
+
 
 ## 2026-08-22
 

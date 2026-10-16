@@ -1,0 +1,604 @@
+# ----------------------------------------------------------------------------
+# Practicalli Configuration for Zensical Static Site Generator
+# ----------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------
+[project]
+
+# The site_name is shown in the page header and the browser window title
+site_name = "Practicalli Spacemacs"
+
+# The site_description is included in the HTML head and should contain a
+# meaningful description of the site content for use by search engines.
+site_description = "Practical guides to install, configure and use Emacs for software development with the Spacemacs community configuration, including support for the Clojure programming language"
+
+# The site_author attribute is used in the HTML head element.
+site_author = "Practicalli Johnny"
+
+# The site_url is the canonical URL for your site
+site_url = "https://practical.li/spacemacs"
+
+# The copyright notice appears in the page footer and can contain an HTML fragment.
+copyright = """
+Copyright &copy; 2026 Practicalli
+"""
+
+# Explicitly defined navigation (comment for Implicit navigation)
+nav = [
+  { "Introduction" = [
+    "index.md",
+    { "Why Spacemacs" = [
+      "introduction/why-spacemacs/index.md",
+      { "Extensive Languages" = "introduction/why-spacemacs/extensive-language-support.md" },
+      { "Mneomic Menus" = "introduction/why-spacemacs/mnemonic-menu.md" },
+      { "Multi-modal Editing" = "introduction/why-spacemacs/states.md" },
+      { "Layer Configuration" = "introduction/why-spacemacs/layers.md" },
+      { "Clojure Support" = "introduction/why-spacemacs/clojure-layer.md" },
+      { "Structural Editing" = "introduction/why-spacemacs/structural-editing.md" },
+      { "Selection Narrowing" = "introduction/why-spacemacs/helm.md" },
+      "introduction/why-spacemacs/project-file-navigation.md",
+      "introduction/why-spacemacs/layouts.md",
+    ] },
+    { "Mini-cheatsheet" = "spacemacs-mini-cheatsheet.md" },
+    { "Resources" = "introduction/additional-resources.md" },
+    { "Install" = [
+      "install-spacemacs/index.md",
+      { "Pre-install" = "install-spacemacs/pre-install.md" },
+      { "Manual Configuration" = "install-spacemacs/manual-configuration.md" },
+      { "Clojure Layer" = "install-spacemacs/clojure-layer.md" },
+      { "Enhance Clojure" = [
+        "install-spacemacs/enhance-clojure-experience/index.md",
+        { "Smartparens" = "install-spacemacs/enhance-clojure-experience/smartparens.md" },
+        { "Evil Structural Editing" = "install-spacemacs/enhance-clojure-experience/evil-structural-editing.md" },
+        { "Clj-kondo server" = "install-spacemacs/enhance-clojure-experience/clj-kondo-via-lsp.md" },
+      ] },
+      { "Clojure LSP" = [
+        "install-spacemacs/clojure-lsp/index.md",
+        "install-spacemacs/clojure-lsp/configure-lsp-and-cider.md",
+        "install-spacemacs/clojure-lsp/snippets.md",
+      ] },
+      { "Font" = "install-spacemacs/change-font.md" },
+      { "Full Screen" = "install-spacemacs/maximised-full-screen.md" },
+      { "Themes" = "install-spacemacs/themes.md" },
+      { "Line Numbers" = "install-spacemacs/line-numbers.md" },
+      { "Start Emacs Instantly" = "install-spacemacs/emacsclient-server.md" },
+      { "Git Editor" = "install-spacemacs/emacsclient-git-commit-messages.md" },
+      { "Update Spacemacs" = "install-spacemacs/update.md" },
+      { "Troubleshoot" = "install-spacemacs/troubleshooting.md" },
+    ] },
+  ] },
+  { "Using Emacs" = [
+    "spacemacs-basics/index.md",
+    "spacemacs-basics/emacs-basics.md",
+    "spacemacs-basics/visual-select.md",
+    "spacemacs-basics/spell-checking.md",
+    { "Evil Basics" = [
+      "spacemacs-basics/evil/index.md",
+      "spacemacs-basics/evil/editing-states.md",
+      "spacemacs-basics/vim-style/key-binding-reference.md",
+      "spacemacs-basics/vim-style/speaking-evil.md",
+      "spacemacs-basics/vim-style/vim-quick-reference.md",
+      "spacemacs-basics/vim-style/vim-tips-for-developers.md",
+      "spacemacs-basics/evil-g-menu.md",
+      "spacemacs-basics/evil-z-menu.md",
+      { "Evil Tools" = [
+        "spacemacs-basics/evil-tools/index.md",
+        "spacemacs-basics/evil-tools/helm-swoop.md",
+        "spacemacs-basics/evil-tools/iedit.md",
+        "spacemacs-basics/evil-tools/iedit-in-action.md",
+        "spacemacs-basics/evil-tools/narrowing.md",
+        "spacemacs-basics/evil-tools/replacing-text-across-projects.md",
+        "spacemacs-basics/evil-tools/multiple-cursors.md",
+      ] },
+    ] },
+    { "Projects" = [
+      "spacemacs-basics/working-with-projects/index.md",
+      "spacemacs-basics/working-with-projects/dird.md",
+      "spacemacs-basics/working-with-projects/layouts.md",
+      "spacemacs-basics/working-with-projects/managing-buffers.md",
+      "spacemacs-basics/working-with-projects/managing-windows.md",
+      "spacemacs-basics/working-with-projects/open-and-create-files.md",
+      "spacemacs-basics/working-with-projects/projectile.md",
+      "spacemacs-basics/working-with-projects/ranger.md",
+      "spacemacs-basics/working-with-projects/searching-projects.md",
+      "spacemacs-basics/working-with-projects/tidying-up-buffers.md",
+      "spacemacs-basics/working-with-projects/treemacs.md",
+    ] },
+    { "Emacs Tools" = [
+      "emacs-lisp/index.md",
+      { "Emacs Shell" = "emacs-lisp/eshell.md" },
+      "encryption/index.md",
+      "encryption/create-gpg-key.md",
+      "writing-emacs-lisp/index.md",
+    ] },
+    { "Misc" = [
+      "misc/index.md",
+      "misc/artist-mode.md",
+      "misc/unicode-characters.md",
+    ] },
+  ] },
+  { "Clojure" = [
+    "clojure-development/index.md",
+    { "REPL Workflow" = "introduction/repl-workflow.md" },
+    { "REPL" = [
+      "clojure-repl/index.md",
+      "clojure-repl/connect-to-repl.md",
+      "clojure-repl/connect-to-remote-repl.md",
+      "clojure-repl/jack-in-to-repl.md",
+      "clojure-repl/portal-data-visualization.md",
+      "clojure-repl/clojurescript-repl.md",
+      { "Refresh REPL State" = "clojure-repl/refresh-repl-state.md" },
+      "clojure-repl/component-lifecycle.md",
+      "clojure-repl/clear-repl-buffer.md",
+    ] },
+    { "Project Config" = [
+      "clojure-development/project-configuration/index.md",
+      { "Monorepo" = "clojure-development/project-configuration/monorepo-nested-projects.md" },
+    ] },
+    { "Documentation" = [
+      "documentation/index.md",
+      { "Comments" = "documentation/comments.md" },
+      { "Apropos" = "documentation/apropos.md" },
+      { "Cider-doc" = "documentation/cider-doc.md" },
+      { "Javadoc" = "documentation/javadoc.md" },
+    ] },
+    { "Evaluate Clojure" = [
+      "evaluating-clojure/index.md",
+      { "Expressions" = "evaluating-clojure/expressions.md" },
+      { "Inspect Values" = "evaluating-clojure/inspect.md" },
+      { "Interrupt Eval" = "evaluating-clojure/interrupt.md" },
+      { "Remove Eval" = "evaluating-clojure/undefine.md" },
+      { "Intermediate values" = "evaluating-clojure/enlighten.md" },
+      { "Macro Expand" = "evaluating-clojure/macro-expand.md" },
+      "evaluating-clojure/evaluate-in-repl-buffer.md",
+    ] },
+    { "Testing" = [
+      "testing/index.md",
+      "testing/kaocha-test-runner.md",
+      "testing/unit-testing/index.md",
+      "testing/unit-testing/cider-test-deps-edn-projects.md",
+      "testing/unit-testing/writing-unit-tests.md",
+      "testing/unit-testing/running-tests.md",
+      "testing/unit-testing/re-run-tests-from-test-report-buffer.md",
+      "testing/unit-testing/refactor-unit-tests.md",
+      "testing/unit-testing/configure-cider-test-runner.md",
+    ] },
+    { "Navigating Code" = [
+      "navigating-code/index.md",
+      { "Expressions" = "navigating-code/expressions.md" },
+      { "Markers" = "navigating-code/markers.md" },
+      { "Namespaces" = "navigating-code/namespaces.md" },
+      { "Symbols" = "navigating-code/names-symbols.md" },
+      { "Functions" = "navigating-code/function-definitions.md" },
+      { "Java" = "navigating-code/java-definitions.md" },
+      { "Code Folding" = "navigating-code/code-folding.md" },
+      { "Find Uses" = "navigating-code/find-usages.md" },
+    ] },
+    { "Structural Editing" = [
+      "structural-editing/index.md",
+      { "Smartparens" = "structural-editing/smartparens.md" },
+      { "Evil Cleverparens" = "structural-editing/cleverparens.md" },
+      { "Lisp State" = [
+        "structural-editing/lisp-state/index.md",
+        { "Wrap Unrap" = "structural-editing/lisp-state/wrap-unwrap.md" },
+        { "Slurp Barf" = "structural-editing/lisp-state/slurp-barf.md" },
+        { "Deleting" = "structural-editing/lisp-state/deleting.md" },
+        { "Raising" = "structural-editing/lisp-state/raising.md" },
+      ] },
+    ] },
+    { "Snippets" = [
+      "snippets/index.md",
+      { "Clojure LSP" = [
+        "snippets/clojure-lsp/index.md",
+        "snippets/clojure-lsp/custom-snippets.md",
+        "snippets/clojure-lsp/practicalli-snippets.md",
+      ] },
+      { "Yasnippets" = [
+        "snippets/yasnippets/index.md",
+        "snippets/yasnippets/built-in-snippets.md",
+        "snippets/yasnippets/clojure-snippets-reference.md",
+        "snippets/yasnippets/create-snippets.md",
+        "snippets/yasnippets/practicalli-snippets.md",
+        "snippets/yasnippets/writing-snippets.md",
+      ] },
+    ] },
+    { "Refactor" = [
+      "refactor/index.md",
+      { "Function" = "refactor/functions.md" },
+      { "Namespace" = "refactor/namespace.md" },
+      { "Project" = "refactor/project.md" },
+      { "Clojure Mode" = "refactor/clojure-mode.md" },
+      { "Clojure LSP" = "refactor/clojure-lsp.md" },
+    ] },
+    { "Debug" = [
+      "debug-clojure/index.md",
+      { "Understand Errors" = "debug-clojure/understanding-errors.md" },
+      { "Format Errors" = "debug-clojure/format-error-messages.md" },
+      { "Inspect values" = "debug-clojure/inspect-values.md" },
+      { "Cider debug" = "debug-clojure/cider-debug.md" },
+      { "Classpath Issues" = "debug-clojure/classpath-issues.md" },
+      { "core-async" = "debug-clojure/core-async.md" },
+      { "Sayid Debug" = "debug-clojure/sayid-debug.md" },
+    ] },
+    { "Code Quality" = [
+      "improving-code/index.md",
+      "improving-code/live-linting.md",
+      "improving-code/batch-linting.md",
+      "improving-code/idiomatic-code-checking.md",
+      "improving-code/formatting.md",
+    ] },
+  ] },
+  { "Source Control" = [
+    "source-control/index.md",
+    { "Git Layer" = "source-control/configure-layers.md" },
+    { "Git Config" = "source-control/git-configuration.md" },
+    { "Forge Config" = "source-control/forge-configuration.md" },
+    { "GitHub Clone" = "source-control/github-clone.md" },
+    { "Magit Git Client" = [
+      "source-control/magit/index.md",
+      "source-control/magit/create-local-repository.md",
+      "source-control/magit/list-local-repositories.md",
+      "source-control/magit/status.md",
+      "source-control/magit/branching.md",
+      "source-control/magit/staging-changes.md",
+      "source-control/magit/stashing.md",
+      "source-control/magit/commit-changes.md",
+      "source-control/magit/tag-commit.md",
+      "source-control/magit/timemachine.md",
+      "source-control/magit/reset-commit-history.md",
+      "source-control/magit/interactive-rebasing.md",
+      "source-control/magit/cherry-picking.md",
+      "source-control/magit/blame.md",
+      "source-control/magit/clean-up-magit-sessions.md",
+      "source-control/magit/version-highlighting.md",
+      { "Remote Repository" = [
+        "source-control/magit/remote-repositories/index.md",
+        "source-control/magit/remote-repositories/add-remote.md",
+        "source-control/magit/remote-repositories/checkout-remote-branch.md",
+        "source-control/magit/remote-repositories/clone.md",
+        "source-control/magit/remote-repositories/configure-default-push.md",
+        "source-control/magit/remote-repositories/configure-default-upstream.md",
+        "source-control/magit/remote-repositories/pull-changes.md",
+        "source-control/magit/remote-repositories/push-changes.md",
+        "source-control/magit/remote-repositories/try-pull-requests.md",
+      ] },
+      { "Magit Forge" = [
+        "source-control/magit/forge/index.md",
+        { "Add Repository to Database" = "source-control/magit/forge/add-repository-to-database.md" },
+        { "Remote Fork" = "source-control/magit/forge/forks.md" },
+        { "Manage Issues" = "source-control/magit/forge/issues.md" },
+        { "Manage Pull Requests" = "source-control/magit/forge/pull-requests.md" },
+      ] },
+    ] },
+  ] },
+
+  { "Docs" = [
+    "docs.md",
+    { "Markdown" = [
+      "markdown-mode/index.md",
+    ] },
+    { "Org-mode" = [
+      "org-mode/index.md",
+      "org-mode/headings.md",
+      "org-mode/lists-and-checkboxes.md",
+      "org-mode/linking.md",
+      "org-mode/todo-states.md",
+      "org-mode/tables.md",
+      "org-mode/code-blocks.md",
+      "org-mode/org-mode-tweaks.md",
+      "org-mode/org-journal.md",
+      "org-mode/yasnippets.md",
+      "org-mode/literate-programming/index.md",
+    ] },
+  ] },
+
+  { "Database" = [
+    "database-access/index.md",
+    "database-access/add-sql-layer-and-lsp.md",
+    "database-access/connection-configuration.md",
+    "database-access/external-dependencies.md",
+    "database-access/using-sql.md",
+  ] },
+  { "Ultra-Mobile Termux" = [
+    "termux/index.md",
+    { "F-Droid" = "termux/fdroid-install.md" },
+    { "Termux Setup" = "termux/setup.md" },
+    { "Using Termux" = "termux/using-termux.md" },
+    { "Git" = "termux/git.md" },
+    { "Zsh" = "termux/custom-shell.md" },
+    { "Clojure" = "termux/clojure-development.md" },
+    { "Spacemacs" = "termux/spacemacs.md" },
+  ] },
+  { "Reference" = [
+    "reference/index.md",
+    { "Switch to Spacemacs develop" = "reference/switch-to-develop.md" },
+    "reference/emacs-quick-reference.md",
+    "reference/spacemacs-conventions.md",
+    "reference/hydra-menus.md",
+    "reference/projectile.md",
+    "reference/cider/index.md",
+    "reference/cider/configuration-variables.md",
+    { "Clojure REPL" = [
+      "external-repl/index.md",
+      "external-repl/connect-to-running-repl.md",
+      "external-repl/switching-to-repl.md",
+      "external-repl/show-repl-on-connect.md",
+      "external-repl/repl-command-menu.md",
+      "external-repl/repl-history.md",
+    ] },
+    { "Clojure Standard Library" = [
+      "reference/clojure/index.md",
+      "reference/clojure/control-flow.md",
+      "reference/clojure/data-structures.md",
+      "reference/clojure/functions.md",
+      "reference/clojure/maths.md",
+      "reference/clojure/strings.md",
+    ] },
+    { "Clojure LSP" = [
+      "reference/clojure-lsp/index.md",
+      { "LSP Variables" = "reference/clojure-lsp/lsp-variables-reference.md" },
+    ] },
+    "reference/structural-editing/smartparens-cheatsheet.md",
+    "reference/keybindings/index.md",
+    "reference/keybindings/cider-keybindings.md",
+    "reference/keybindings/vim-keybindings.md",
+    "reference/vim/getting-comfortable.md",
+    "reference/vim/key-bindings.md",
+    "os-specific-config/macosx.md",
+  ] },
+  # { "Alternative Tools" = [
+  #   "alternative-tooling/index.md",
+  #   "alternative-tooling/leiningen.md",
+  #   "alternative-tooling/org-easy-templates.md",
+  # ] },
+  # { "To Review" = [
+  #   "spacemacs-basics/vim-style/common-evil.md",
+  #   "introduction/why-spacemacs/why-evil.md",
+  # ] },
+]
+
+
+# Add custom CSS styling to customize the Zensical theme
+# The path is relative to the "docs_dir".
+#extra_css = ["assets/stylesheets/extra.css"]
+
+# Add custom JavaScript to customize site behavior
+# The path is relative to the "docs_dir".
+#extra_javascript = ["assets/javascript/extra.js"]
+
+# ----------------------------------------------------------------------------
+# Theme options
+# ----------------------------------------------------------------------------
+[project.theme]
+# https://jonathan343.github.io/catppuccin-zensical/
+name = "catppuccin"
+
+# Use the traditional Material for MkDocs look.
+# variant = "classic"
+
+# Override specific blocks, partials, or whole templates.
+# - https://zensical.org/docs/customization/#extending-the-theme
+#custom_dir = "overrides"
+
+# Set image to use as the icon browsers use in their title bar or tab bar.
+# The path is relative to the "docs_dir".
+# - https://zensical.org/docs/setup/logo-and-icons/#favicon
+# - https://developer.mozilla.org/en-US/docs/Glossary/Favicon
+favicon = "assets/images/practicalli-logo.png"
+
+# The default language is "en" (English). It is possible to create
+# sites with multiple languages and configure a language selector. See
+# the documentation for details.
+# - https://zensical.org/docs/setup/language/
+language = "en"
+
+# Zensical feature toggles to change the behavior of the documentation site.
+features = [
+    # Allow user to dismiss the Zensical announcement bar.
+    "announce.dismiss",
+
+    # If you have a repository configured and turn on this feature, Zensical
+    # will generate an edit button for the page. This works for common
+    # repository hosting services.
+    # https://zensical.org/docs/setup/repository/#content-actions
+    #"content.action.edit",
+
+    # If you have a repository configured and turn on this feature, Zensical
+    # will generate a button that allows the user to view the Markdown
+    # code for the current page.
+    # https://zensical.org/docs/setup/repository/#content-actions
+    #"content.action.view",
+
+    # Code annotations adds an icon with a tooltip to your
+    # code blocks to provide explanations at crucial points.
+    # https://zensical.org/docs/authoring/code-blocks/#code-annotations
+    "content.code.annotate",
+
+    # Add a button in code blocks that allow users to copy the content
+    # to their clipboard without first selecting it.
+    # https://zensical.org/docs/authoring/code-blocks/#code-copy-button
+    "content.code.copy",
+
+    # Code blocks can include a button to allow for the selection of line
+    # ranges by the user.
+    # https://zensical.org/docs/authoring/code-blocks/#code-selection-button
+    "content.code.select",
+
+    # Zensical can render footnotes as inline tooltips, so the user can read
+    # the footnote without leaving the context of the document.
+    # https://zensical.org/docs/authoring/footnotes/#footnote-tooltips
+    "content.footnote.tooltips",
+
+    # If you have many content tabs that have the same titles (e.g., "Python",
+    # "JavaScript", "Cobol"), this feature causes all of them to switch to
+    # at the same time when the user chooses their language in one.
+    # https://zensical.org/docs/authoring/content-tabs/#linked-content-tabs
+    "content.tabs.link",
+
+    # With this feature enabled users can add tooltips to links that will be
+    # displayed when the mouse pointer hovers the link.
+    # https://zensical.org/docs/authoring/tooltips/#improved-tooltips
+    "content.tooltips",
+
+    # With this feature enabled, Zensical will automatically hide parts
+    # of the header when the user scrolls past a certain point.
+    # https://zensical.org/docs/setup/header/#automatic-hiding
+    # "header.autohide",
+
+    # Turn on this feature to expand all collapsible sections in the
+    # navigation sidebar by default.
+    # https://zensical.org/docs/setup/navigation/#navigation-expansion
+    # "navigation.expand",
+
+    # This feature turns on navigation elements in the footer that allow the
+    # user to navigate to a next or previous page.
+    # https://zensical.org/docs/setup/footer/#navigation
+    "navigation.footer",
+
+    # When section index pages are enabled, documents can be directly attached
+    # to sections, which is particularly useful for providing overview pages.
+    # https://zensical.org/docs/setup/navigation/#section-index-pages
+    "navigation.indexes",
+
+    # When instant navigation is enabled, clicks on all internal links will be
+    # intercepted and dispatched via XHR without fully reloading the page.
+    # https://zensical.org/docs/setup/navigation/#instant-navigation
+    "navigation.instant",
+
+    # With instant prefetching, your site will start to fetch a page once the
+    # user hovers over a link. This will reduce the perceived loading time
+    # for the user.
+    # https://zensical.org/docs/setup/navigation/#instant-prefetching
+    "navigation.instant.prefetch",
+
+    # In order to provide a better user experience on slow connections when
+    # using instant navigation, a progress indicator can be enabled.
+    # https://zensical.org/docs/setup/navigation/#progress-indicator
+    #"navigation.instant.progress",
+
+    # When navigation paths are activated, a breadcrumb navigation is rendered
+    # above the title of each page
+    # https://zensical.org/docs/setup/navigation/#navigation-path
+    "navigation.path",
+
+    # When pruning is enabled, only the visible navigation items are included
+    # in the rendered HTML, reducing the size of the built site by 33% or more.
+    # https://zensical.org/docs/setup/navigation/#navigation-pruning
+    #"navigation.prune",
+
+    # When sections are enabled, top-level sections are rendered as groups in
+    # the sidebar for viewports above 1220px, but remain as-is on mobile.
+    # https://zensical.org/docs/setup/navigation/#navigation-sections
+    # "navigation.sections",
+
+    # When tabs are enabled, top-level sections are rendered in a menu layer
+    # below the header for viewports above 1220px, but remain as-is on mobile.
+    # https://zensical.org/docs/setup/navigation/#navigation-tabs
+    "navigation.tabs",
+
+    # When sticky tabs are enabled, navigation tabs will lock below the header
+    # and always remain visible when scrolling down.
+    # https://zensical.org/docs/setup/navigation/#sticky-navigation-tabs
+    "navigation.tabs.sticky",
+
+    # A back-to-top button can be shown when the user, after scrolling down,
+    # starts to scroll up again.
+    # https://zensical.org/docs/setup/navigation/#back-to-top-button
+    "navigation.top",
+
+    # When anchor tracking is enabled, the URL in the address bar is
+    # automatically updated with the active anchor as highlighted in the table
+    # of contents.
+    # https://zensical.org/docs/setup/navigation/#anchor-tracking
+    "navigation.tracking",
+
+    # When search highlighting is enabled and a user clicks on a search result,
+    # Zensical will highlight all occurrences after following the link.
+    # https://zensical.org/docs/setup/search/#search-highlighting
+    "search.highlight",
+
+    # When anchor following for the table of contents is enabled, the sidebar
+    # is automatically scrolled so that the active anchor is always visible.
+    # https://zensical.org/docs/setup/navigation/#anchor-following
+    # "toc.follow",
+
+    # When navigation integration for the table of contents is enabled, it is
+    # always rendered as part of the navigation sidebar on the left.
+    # https://zensical.org/docs/setup/navigation/#navigation-integration
+    #"toc.integrate",
+]
+
+# ----------------------------------------------------------------------------
+# Light and dark palette from the Catppuccin theme
+[[project.theme.palette]]
+scheme = "catppuccin-mocha"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to Latte"
+
+[[project.theme.palette]]
+scheme = "catppuccin-latte"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to Mocha"
+
+[project.theme.icon]
+logo = "lucide/book-open-text"
+repo = "lucide/book-open-text"
+
+# ----------------------------------------------------------------------------
+# Font Family to use when generating the website
+# Fonts are loaded from Google Fonts by default
+[project.theme.font]
+text = "Ubuntu"
+code = "Ubuntu Mono"
+
+# Custom Admonition icons
+[project.theme.icon.admonition]
+note = "fontawesome/solid/pencil"
+abstract = "fontawesome/solid/book"
+info = "fontawesome/solid/circle-info"
+tip = "fontawesome/solid/bullhorn"
+success = "fontawesome/solid/check"
+question = "fontawesome/solid/circle-question"
+warning = "fontawesome/solid/triangle-exclamation"
+failure = "fontawesome/solid/bomb"
+danger = "fontawesome/solid/skull"
+bug = "fontawesome/solid/robot"
+example = "fontawesome/solid/flask"
+quote = "fontawesome/solid/quote-left"
+# exercise = "fontawesome/solid/pencil"
+
+# ----------------------------------------------------------------------------
+# Social Icons and links in footer of website
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/practicalli/spacemacs"
+[[project.extra.social]]
+icon = "material/web"
+link = "https://practical.li/"
+[[project.extra.social]]
+icon = "fontawesome/brands/linkedin"
+link = "https://www.linkedin.com/in/jr0cket/"
+[[project.extra.social]]
+icon = "fontawesome/brands/slack"
+link = "https://clojurians.slack.com/messages/practicalli"
+[[project.extra.social]]
+icon = "fontawesome/brands/mastodon"
+link = "https://mastodon.social/@practicalli_johnny"
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/practicalli"
+[[project.extra.social]]
+icon = "fontawesome/brands/docker"
+link = "https://hub.docker.com/u/practicalli"
+# ----------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------
+# Website Analytics Tracking
+[project.extra.analytics]
+provider = "google"
+property = "G-YBK519HFM6"
+# ----------------------------------------------------------------------------
