@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+
+### Added
+- docs(docs): 📝 added a docs top level section to group markdown and org-mode
+
+
 ## 2026-08-22
 
 ### Added
