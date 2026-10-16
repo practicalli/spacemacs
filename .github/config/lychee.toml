@@ -9,7 +9,7 @@ base = "https://practical.li/spacemacs"
 user_agent = "Mozilla/5.0 (X11; Linux x86_64; rv:153.0) Gecko/20100101 Firefox/153.0"
 
 # "Accept: */*"
-header = { "accept" = "text/html", "accept" = "application/json" }
+header = { "accept" = "text/html, application/json" }
 
 # Only test links with the given schemes (e.g. http, https, file, and mailto.
 scheme = ["https"]
@@ -17,7 +17,7 @@ scheme = ["https"]
 # Website timeout from connect to response finished.
 timeout = 10
 
- File to read and write cookies
+# File to read and write cookies
 # cookie_jar = "cookie-jar"
 
 # Number of threads to utilize.
@@ -72,5 +72,3 @@ include_mail = false
 # Search and suggest link replacements for all broken links
 suggest = true
 # ----------------------------------------
-
-

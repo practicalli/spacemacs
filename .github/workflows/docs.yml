@@ -1,7 +1,5 @@
 # Workflow to conditionally publish a Zensical project
-#
-# Manual trigger
-
+---
 name: Publish Zensical Docs
 
 on:
@@ -31,16 +29,29 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
-      - uses: actions/configure-pages@v6
+      - run: echo "🚀 Job automatically triggered by ${{ github.event_name }}"
+      - run: echo "🐧 Job running on ${{ runner.os }} server"
+      - run: echo "🐙 Using ${{ github.ref }} branch from ${{ github.repository }} repository"
+
       - uses: actions/checkout@v7
-      - uses: actions/setup-python@v7
+      - run: echo "🐙 ${{ github.repository }} repository sparse-checkout to the CI runner."
+      - uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
         with:
-          python-version: 3.x
-      - run: pip install zensical catppuccin-zensical
-      - run: zensical build --clean
+          version: "latest"
+          activate-environment: "false"
+          github-token: ${{ github.token }}
+          enable-cache: "auto"
+      - name: "Python version to the logs"
+        run: echo "Version of Python available $(python --version)"
+      - run: echo "Running Zensical Static Site Generator with Catppuccin theme"
+      - run: uvx --with catppuccin-zensical zensical build
       - uses: actions/upload-pages-artifact@v5
         with:
           path: site
       - uses: actions/deploy-pages@v5
+
+      # Summary
+      - run: echo "🎨 built and published Zensical website"
+      - run: echo "🍏 Job status is ${{ job.status }}."

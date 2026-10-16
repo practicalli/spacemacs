@@ -18,6 +18,7 @@
 
 
 PARALLEL: true  # Run linters in parallel
+SECURITY_SUGGESTIONS: false  # Skip megalinter update notices
 
 EXCLUDED_DIRECTORIES: ".github/|CHANGELOG.md|README.md|overrides/|docs/assets/"
 
