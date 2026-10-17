@@ -597,6 +597,12 @@ link = "https://hub.docker.com/u/practicalli"
 # ----------------------------------------------------------------------------
 
 # ----------------------------------------------------------------------------
+# Social Cards
+[project.plugins.social]
+# cards_layout_options = { font_family = "Ubuntu" } # uses site font by default
+# ----------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------
 # Website Analytics Tracking
 [project.extra.analytics]
 provider = "google"

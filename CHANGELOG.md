@@ -5,6 +5,7 @@
 
 ### Added
 - docs(docs): 📝 added a docs top level section to group markdown and org-mode
+- build(zensical): 🔧 enable social cards plugin for more engaging links
 
 ### Updated
 - build(zensical): 🔧 switch to zensical.toml configuration
