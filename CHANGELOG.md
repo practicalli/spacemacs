@@ -9,6 +9,7 @@
 
 ### Updated
 - build(zensical): 🔧 switch to zensical.toml configuration
+- docs(intro): ✏️ update navigation keys information
 
 
 ## 2026-08-22
